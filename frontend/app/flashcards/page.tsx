@@ -1,295 +1,456 @@
 "use client";
+
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { api } from "@/lib/api";
 import Link from "next/link";
-import { ArrowLeft, Plus, Trash2, BookOpen, Layers, ArrowRight, Play, Award, Loader2 } from "lucide-react";
+import {
+  ArrowLeft,
+  Plus,
+  Trash2,
+  BookOpen,
+  Play,
+  Loader2,
+  Edit2,
+  Search,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import EditFlashCardModal, {
+  EditFlashCardData,
+} from "@/components/EditFlashCardModal";
 
 interface FlashCard {
   flashCardId: number;
-  itemType: string;
-  itemId: number;
-  status: number;
+  frontText: string;
+  hiraganaText?: string;
+  backText: string;
+  example?: string;
+  audioUrl?: string;
+  status: string;
+  nextReviewDate?: string;
   reviewCount: number;
-  nextReviewDate: string;
-  lastReviewedAt: string | null;
-  createdAt: string;
 }
 
+interface Deck {
+  deckId: number;
+  title: string;
+  description?: string;
+}
+
+type StatusFilter = "All" | "New" | "Learning" | "Review" | "Mastered";
+
 export default function FlashcardDashboard() {
+  const router = useRouter();
   const [cards, setCards] = useState<FlashCard[]>([]);
+  const [filteredCards, setFilteredCards] = useState<FlashCard[]>([]);
+  const [deck, setDeck] = useState<Deck | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  
-  // Modal State
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-  const [newItemType, setNewItemType] = useState("Vocabulary");
-  const [newItemId, setNewItemId] = useState("");
+
+  // Modal states
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState<FlashCard | null>(null);
+  const [isEditLoading, setIsEditLoading] = useState(false);
+
+  // Filter & Search
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("All");
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetchCards();
+    const deckIdStr = new URLSearchParams(window.location.search).get("deckId");
+    if (deckIdStr) {
+      loadCards(parseInt(deckIdStr));
+    } else {
+      router.push("/decks");
+    }
   }, []);
 
-  const fetchCards = async () => {
+  useEffect(() => {
+    applyFilters();
+  }, [statusFilter, searchQuery, cards]);
+
+  const loadCards = async (deckId: number) => {
     try {
-      const data = await api("/flashcards");
-      setCards(data || []);
-    } catch (err) {
-      console.error(err);
+      setIsLoading(true);
+      const response = await api(`/flashcards/deck/${deckId}`);
+      setCards(Array.isArray(response) ? response : []);
+
+      // Load deck info
+      try {
+        const deckResponse = await api(`/decks/${deckId}`);
+        setDeck(deckResponse);
+      } catch {
+        // Deck info not available, continue with cards
+      }
+    } catch (error) {
+      console.error("Error loading cards:", error);
+      alert("Failed to load flashcards");
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleDelete = async (id: number) => {
-    if (!window.confirm("Bạn có chắc chắn muốn xoá thẻ này không?")) return;
+  const applyFilters = () => {
+    let filtered = cards;
+
+    // Apply status filter
+    if (statusFilter !== "All") {
+      filtered = filtered.filter((c) => c.status === statusFilter);
+    }
+
+    // Apply search filter
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(
+        (c) =>
+          c.frontText.toLowerCase().includes(query) ||
+          c.backText.toLowerCase().includes(query) ||
+          (c.hiraganaText?.toLowerCase().includes(query) ?? false)
+      );
+    }
+
+    setFilteredCards(filtered);
+  };
+
+  const handleDeleteCard = async (cardId: number) => {
+    if (!window.confirm("Delete this flashcard?")) return;
+
     try {
-      await api(`/flashcards/${id}`, "DELETE");
-      setCards(cards.filter(c => c.flashCardId !== id));
-    } catch (err) {
-      console.error(err);
-      alert("Lỗi khi xoá thẻ.");
+      await api(`/flashcards/${cardId}`, "DELETE");
+      setCards(cards.filter((c) => c.flashCardId !== cardId));
+    } catch (error) {
+      console.error("Error deleting card:", error);
+      alert("Failed to delete flashcard");
     }
   };
 
-  const handleAddCard = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newItemId) return;
+  const handleEditCard = (card: FlashCard) => {
+    setSelectedCard(card);
+    setIsEditModalOpen(true);
+  };
+
+  const handleSaveEdit = async (data: EditFlashCardData) => {
+    if (!selectedCard) return;
+
+    setIsEditLoading(true);
     try {
-      await api("/flashcards", "POST", {
-        itemType: newItemType,
-        itemId: parseInt(newItemId),
+      await api(`/flashcards/${selectedCard.flashCardId}`, "PUT", data);
+
+      const updatedCard: FlashCard = {
+        ...selectedCard,
+        ...data,
+      };
+      setCards(
+        cards.map((c) =>
+          c.flashCardId === selectedCard.flashCardId ? updatedCard : c
+        )
+      );
+
+      alert("Flashcard updated successfully!");
+    } catch (error) {
+      console.error("Error updating card:", error);
+      throw error;
+    } finally {
+      setIsEditLoading(false);
+    }
+  };
+
+  const handleCreateCard = async (data: EditFlashCardData) => {
+    const deckIdStr = new URLSearchParams(window.location.search).get("deckId");
+    const deckId = parseInt(deckIdStr || "0");
+
+    setIsEditLoading(true);
+    try {
+      const response = await api("/flashcards", "POST", {
+        ...data,
+        deckId,
       });
-      setIsAddModalOpen(false);
-      setNewItemId("");
-      fetchCards(); // Refresh list
-    } catch (err) {
-      console.error(err);
-      alert("Lỗi thêm thẻ. Có thể thẻ đã tồn tại.");
+
+      setCards([...cards, response]);
+      alert("Flashcard created successfully!");
+    } catch (error) {
+      console.error("Error creating card:", error);
+      throw error;
+    } finally {
+      setIsEditLoading(false);
     }
   };
 
-  const getStatusDisplay = (status: number) => {
+  const getStatusBadgeStyle = (status: string) => {
     switch (status) {
-      case 0: return { label: "MỚI", color: "text-blue-600", bg: "bg-blue-50" };
-      case 1: return { label: "ĐANG HỌC", color: "text-[#f5a623]", bg: "bg-[#f5a623]/10" };
-      case 2: return { label: "ÔN TẬP", color: "text-purple-600", bg: "bg-purple-50" };
-      case 3: return { label: "ĐÃ THUỘC", color: "text-[#4CAF50]", bg: "bg-[#4CAF50]/10" };
-      default: return { label: "UNKNOWN", color: "text-neutral-500", bg: "bg-neutral-100" };
+      case "New":
+        return "bg-blue-100 text-blue-700";
+      case "Learning":
+        return "bg-yellow-100 text-yellow-700";
+      case "Review":
+        return "bg-orange-100 text-orange-700";
+      case "Mastered":
+        return "bg-green-100 text-green-700";
+      default:
+        return "bg-gray-100 text-gray-700";
     }
   };
 
-  // Đếm danh mục
-  const masteredCount = cards.filter(c => c.status === 3).length;
-  const learningCount = cards.length - masteredCount;
+  const stats = {
+    total: cards.length,
+    due: cards.filter((c) => {
+      if (!c.nextReviewDate) return false;
+      return new Date(c.nextReviewDate) < new Date();
+    }).length,
+    learning: cards.filter((c) => c.status === "Learning").length,
+    mastered: cards.filter((c) => c.status === "Mastered").length,
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-jp-washi flex items-center justify-center">
+        <div className="space-y-4 text-center">
+          <Loader2 className="w-12 h-12 animate-spin mx-auto text-jp-indigo" />
+          <p className="text-jp-indigo font-semibold">Loading flashcards...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen flex flex-col bg-jp-washi font-sans text-jp-ink">
-      
-      {/* HEADER NAVBAR */}
-      <header className="bg-white shadow-sm sticky top-0 z-40">
-         <div className="px-6 md:px-12 py-5 flex items-center justify-between">
-            <div className="flex items-center gap-4">
-               <Link href="/dashboard" className="text-neutral-400 hover:text-jp-red transition-colors flex items-center gap-2">
-                  <ArrowLeft size={20} />
-                  <span className="text-xs font-bold tracking-widest uppercase hidden md:block">Bảng điều khiển</span>
-               </Link>
-            </div>
-            
-            <h1 className="text-lg font-bold tracking-[0.2em] font-serif uppercase text-jp-indigo">
-               BỘ SƯU TẬP THẺ
-            </h1>
+    <div className="min-h-screen bg-jp-washi text-jp-ink">
+      {/* Header */}
+      <header className="sticky top-0 z-30 bg-white/50 backdrop-blur-md border-b border-black/10 px-6 py-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <button
+            onClick={() => router.back()}
+            className="flex items-center gap-2 text-jp-indigo hover:text-jp-red transition-colors font-medium"
+          >
+            <ArrowLeft size={20} />
+            Back
+          </button>
 
-            <button 
-              onClick={() => setIsAddModalOpen(true)}
-              className="bg-jp-indigo text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-jp-red transition-colors flex items-center gap-2 shadow-sm"
-            >
-               <Plus size={16} /> Thêm Thẻ
-            </button>
-         </div>
+          <div className="flex-1 text-center">
+            <h1 className="text-2xl font-bold font-serif text-jp-indigo">
+              {deck?.title || "Flashcards"}
+            </h1>
+            {deck?.description && (
+              <p className="text-sm text-neutral-500 mt-1">
+                {deck.description}
+              </p>
+            )}
+          </div>
+
+          <button
+            onClick={() => {
+              setIsCreateModalOpen(true);
+              setSelectedCard(null);
+            }}
+            className="flex items-center gap-2 px-4 py-2 bg-jp-indigo text-white rounded-lg hover:bg-jp-red transition-colors font-semibold text-sm"
+          >
+            <Plus size={18} />
+            New Card
+          </button>
+        </div>
       </header>
 
-      {/* HIỆU ỨNG TẢI */}
-      {isLoading ? (
-        <div className="flex-1 flex items-center justify-center">
-            <Loader2 className="animate-spin text-jp-red" size={32} />
+      {/* Main Content */}
+      <main className="max-w-6xl mx-auto p-6">
+        {/* Statistics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="bg-white rounded-lg p-4 border border-black/10">
+            <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide">
+              Total
+            </p>
+            <p className="text-3xl font-bold text-jp-indigo mt-2">
+              {stats.total}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border border-black/10">
+            <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide">
+              Due Today
+            </p>
+            <p className="text-3xl font-bold text-orange-600 mt-2">
+              {stats.due}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border border-black/10">
+            <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide">
+              Learning
+            </p>
+            <p className="text-3xl font-bold text-yellow-600 mt-2">
+              {stats.learning}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border border-black/10">
+            <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide">
+              Mastered
+            </p>
+            <p className="text-3xl font-bold text-green-600 mt-2">
+              {stats.mastered}
+            </p>
+          </div>
         </div>
-      ) : (
-        <main className="flex-1 max-w-7xl w-full mx-auto p-6 md:p-12">
-            
-            {/* VÙNG THỐNG KÊ (HERO) */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-                <div className="col-span-1 border border-black/5 bg-white p-8 rounded-3xl shadow-sm flex flex-col justify-center items-center relative overflow-hidden group">
-                   <div className="absolute top-0 right-0 w-24 h-24 bg-jp-sakura/30 rounded-bl-full -z-0"></div>
-                   <h3 className="text-[10px] font-bold tracking-widest uppercase text-neutral-400 mb-2 relative z-10">Tổng Số Thẻ</h3>
-                   <p className="text-5xl font-serif text-jp-indigo relative z-10">{cards.length}</p>
-                </div>
 
-                <div className="md:col-span-2 border border-black/5 bg-jp-indigo p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between relative overflow-hidden text-white gap-6">
-                   <div className="absolute -left-10 -top-10 w-40 h-40 bg-white/5 rounded-full pointer-events-none blur-xl"></div>
-                   
-                   <div>
-                       <h2 className="text-3xl font-serif mb-4 flex items-center gap-3">
-                         <BookOpen className="text-jp-red" />
-                         Hành Trình Ôn Tập
-                       </h2>
-                       <div className="flex items-center gap-6">
-                          <div>
-                            <p className="text-3xl font-bold text-[#f5a623]">{learningCardsCount()}</p>
-                            <p className="text-[10px] tracking-widest uppercase text-white/50 mt-1">Đang học</p>
-                          </div>
-                          <div className="w-[1px] h-8 bg-white/20"></div>
-                          <div>
-                            <p className="text-3xl font-bold text-[#4CAF50] flex items-center gap-2">{masteredCount} <Award size={20} className="text-[#4CAF50]" /></p>
-                            <p className="text-[10px] tracking-widest uppercase text-white/50 mt-1">Thông thạo</p>
-                          </div>
-                       </div>
-                   </div>
+        {/* Study Button */}
+        {cards.length > 0 && (
+          <Link
+            href={`/learn/${
+              new URLSearchParams(window.location.search).get("deckId") || "0"
+            }`}
+            className="w-full mb-8 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-jp-indigo to-jp-red text-white rounded-lg hover:shadow-lg transition-shadow font-semibold"
+          >
+            <Play size={20} />
+            Start Learning
+          </Link>
+        )}
 
-                   <Link href="/flashcards/learn" className="bg-jp-red text-white px-8 py-5 rounded-2xl text-xs font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-jp-red transition-all shadow-lg flex items-center gap-3 group w-full sm:w-auto text-center justify-center">
-                      <Play size={18} className="fill-current" />
-                      HỌC HÔM NAY
-                   </Link>
-                </div>
-            </div>
-
-            {/* DANH SÁCH THẺ (GRID) */}
-            <div className="flex items-center gap-3 mb-6">
-                <Layers className="text-jp-red" size={24} />
-                <h3 className="text-xl font-bold font-serif text-jp-indigo">Tất cả thẻ của bạn</h3>
-            </div>
-
-            {cards.length === 0 ? (
-               <div className="w-full py-20 flex flex-col items-center justify-center border-2 border-dashed border-black/10 rounded-3xl bg-black/5">
-                  <BookOpen size={48} className="text-neutral-300 mb-4" />
-                  <p className="text-neutral-500 font-medium mb-6">Bạn chưa có thẻ flashcard nào.</p>
-                  <button 
-                    onClick={() => setIsAddModalOpen(true)}
-                    className="bg-white border border-jp-indigo text-jp-indigo px-8 py-3 rounded-full text-xs font-bold tracking-[0.2em] uppercase hover:bg-jp-indigo hover:text-white transition-colors"
-                  >
-                     Thêm thẻ ngay
-                  </button>
-               </div>
-            ) : (
-               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  <AnimatePresence>
-                    {cards.map((card, idx) => {
-                      const { label, color, bg } = getStatusDisplay(card.status);
-                      return (
-                         <motion.div 
-                           key={card.flashCardId}
-                           initial={{ opacity: 0, y: 20 }}
-                           animate={{ opacity: 1, y: 0 }}
-                           exit={{ opacity: 0, scale: 0.9 }}
-                           transition={{ delay: idx * 0.05 }}
-                           className="bg-white rounded-2xl p-6 border border-black/5 shadow-sm hover:shadow-lg transition-all group relative"
-                         >
-                            <button 
-                              onClick={() => handleDelete(card.flashCardId)}
-                              className="absolute top-4 right-4 text-neutral-300 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity p-2"
-                              title="Xóa thẻ"
-                            >
-                               <Trash2 size={16} />
-                            </button>
-
-                            <div className="mb-4 flex items-center gap-2">
-                               <span className={`text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm ${bg} ${color}`}>
-                                  {label}
-                               </span>
-                               <span className="text-xs text-neutral-400 border border-neutral-200 px-2 rounded-sm">{card.itemType}</span>
-                            </div>
-
-                            <h4 className="text-3xl font-serif text-jp-indigo mb-6 break-words">
-                               #{card.itemId}
-                            </h4>
-
-                            <div className="border-t border-black/5 pt-4 text-[10px] tracking-widest uppercase text-neutral-400 flex flex-col gap-1.5">
-                                <div className="flex justify-between">
-                                   <span>ÔN TẬP:</span>
-                                   <span className="text-jp-indigo font-bold">{new Date(card.nextReviewDate).toLocaleDateString("vi-VN")}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                   <span>LẦN LẶP:</span>
-                                   <span className="text-jp-indigo font-bold">{card.reviewCount} lần</span>
-                                </div>
-                            </div>
-                         </motion.div>
-                      );
-                    })}
-                  </AnimatePresence>
-               </div>
+        {/* Filters */}
+        <div className="mb-8 space-y-4">
+          <div className="flex flex-wrap gap-2">
+            {(["All", "New", "Learning", "Review", "Mastered"] as StatusFilter[]).map(
+              (filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setStatusFilter(filter)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    statusFilter === filter
+                      ? "bg-jp-indigo text-white"
+                      : "bg-white border border-black/10 text-jp-indigo hover:bg-black/5"
+                  }`}
+                >
+                  {filter}
+                </button>
+              )
             )}
-        </main>
-      )}
+          </div>
 
-      {/* MODAL THÊM THẺ */}
-      <AnimatePresence>
-         {isAddModalOpen && (
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-jp-indigo/40 backdrop-blur-sm"
-              onClick={() => setIsAddModalOpen(false)}
-            >
-               <motion.div 
-                 initial={{ scale: 0.95, y: 20 }}
-                 animate={{ scale: 1, y: 0 }}
-                 exit={{ scale: 0.95, y: 20 }}
-                 onClick={e => e.stopPropagation()}
-                 className="bg-white w-full max-w-md rounded-3xl p-8 shadow-2xl border border-white/20 relative"
-               >
-                  <button 
-                     onClick={() => setIsAddModalOpen(false)}
-                     className="absolute top-6 right-6 text-neutral-400 hover:text-jp-red transition-colors"
-                  >
-                     <ArrowLeft className="rotate-45" size={20} style={{ transform: "rotate(45deg)"}} /> 
-                     {/* Using rotate arrow inside plus like a cross, or just wait, actually Lucide has X icon, but ArrowLeft is easy to just not use, wait I can just use text 'ĐÓNG' */}
-                  </button>
-                  <div className="absolute top-6 right-6" onClick={() => setIsAddModalOpen(false)}>
-                    <span className="text-xs font-bold text-neutral-400 hover:text-jp-red cursor-pointer uppercase tracking-widest border border-neutral-200 px-3 py-1 rounded-full">Đóng</span>
+          {/* Search */}
+          <div className="relative">
+            <Search
+              size={18}
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400"
+            />
+            <input
+              type="text"
+              placeholder="Search by front, back, or hiragana..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-jp-indigo"
+            />
+          </div>
+        </div>
+
+        {/* Cards Grid */}
+        {filteredCards.length === 0 ? (
+          <div className="text-center py-12">
+            <BookOpen className="w-16 h-16 mx-auto text-neutral-300 mb-4" />
+            <p className="text-neutral-500 font-medium mb-4">
+              {cards.length === 0 ? "No flashcards yet" : "No cards match your filters"}
+            </p>
+            {cards.length === 0 && (
+              <button
+                onClick={() => {
+                  setIsCreateModalOpen(true);
+                  setSelectedCard(null);
+                }}
+                className="px-4 py-2 bg-jp-indigo text-white rounded-lg hover:bg-jp-red transition-colors font-semibold"
+              >
+                Create Your First Card
+              </button>
+            )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AnimatePresence>
+              {filteredCards.map((card, idx) => (
+                <motion.div
+                  key={card.flashCardId}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="group bg-white rounded-xl border border-black/10 overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  {/* Card Content */}
+                  <div className="p-4 space-y-3">
+                    {/* Status Badge */}
+                    <div className="flex items-center justify-between">
+                      <span
+                        className={`text-xs font-semibold px-2 py-1 rounded ${getStatusBadgeStyle(
+                          card.status
+                        )}`}
+                      >
+                        {card.status}
+                      </span>
+                      <span className="text-xs text-neutral-500">
+                        {card.reviewCount} reviews
+                      </span>
+                    </div>
+
+                    {/* Front Text */}
+                    <div className="border-b border-black/10 pb-3">
+                      <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide mb-1">
+                        Front
+                      </p>
+                      <p className="text-xl font-serif text-jp-indigo font-bold break-words">
+                        {card.frontText}
+                      </p>
+                    </div>
+
+                    {/* Hiragana */}
+                    {card.hiraganaText && (
+                      <div className="border-b border-black/10 pb-3">
+                        <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide mb-1">
+                          Reading
+                        </p>
+                        <p className="text-sm font-serif text-jp-indigo italic">
+                          {card.hiraganaText}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Back Text */}
+                    <div>
+                      <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wide mb-1">
+                        Meaning
+                      </p>
+                      <p className="text-sm text-neutral-700 line-clamp-2">
+                        {card.backText}
+                      </p>
+                    </div>
                   </div>
-                  
-                  <h3 className="text-2xl font-serif text-jp-indigo mb-6">Thêm Thẻ Mới</h3>
-                  
-                  <form onSubmit={handleAddCard} className="flex flex-col gap-5">
-                     <div>
-                        <label className="block text-[10px] font-bold tracking-widest uppercase text-neutral-500 mb-2">Loại Dữ Liệu</label>
-                        <select 
-                          value={newItemType} 
-                          onChange={(e) => setNewItemType(e.target.value)}
-                          className="w-full bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3 text-sm text-jp-indigo focus:outline-none focus:border-jp-red focus:ring-1 focus:ring-jp-red transition-all"
-                        >
-                           <option value="Vocabulary">Từ vựng (Vocabulary)</option>
-                           <option value="Grammar">Ngữ pháp (Grammar)</option>
-                           <option value="Kanji">Kanji</option>
-                        </select>
-                     </div>
 
-                     <div>
-                        <label className="block text-[10px] font-bold tracking-widest uppercase text-neutral-500 mb-2">ID Bài Học / Từ vựng</label>
-                        <input 
-                          type="number" 
-                          required
-                          value={newItemId}
-                          onChange={(e) => setNewItemId(e.target.value)}
-                          placeholder="Ví dụ: 12"
-                          className="w-full bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3 text-sm text-jp-indigo focus:outline-none focus:border-jp-red focus:ring-1 focus:ring-jp-red transition-all"
-                        />
-                     </div>
+                  {/* Actions */}
+                  <div className="border-t border-black/10 px-4 py-3 bg-neutral-50 flex gap-2">
+                    <button
+                      onClick={() => handleEditCard(card)}
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-jp-indigo text-white text-sm rounded hover:bg-jp-red transition-colors font-semibold"
+                    >
+                      <Edit2 size={16} />
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => handleDeleteCard(card.flashCardId)}
+                      className="flex items-center justify-center px-3 py-2 bg-red-100 text-red-600 text-sm rounded hover:bg-red-200 transition-colors font-semibold"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        )}
+      </main>
 
-                     <button type="submit" className="mt-4 bg-jp-indigo text-white py-4 rounded-xl font-bold tracking-widest uppercase text-xs hover:bg-jp-red transition-colors shadow-md">
-                        Tạo Thẻ Flashcard
-                     </button>
-                  </form>
-               </motion.div>
-            </motion.div>
-         )}
-      </AnimatePresence>
-
+      {/* Modals */}
+      <EditFlashCardModal
+        isOpen={isEditModalOpen || isCreateModalOpen}
+        onClose={() => {
+          setIsEditModalOpen(false);
+          setIsCreateModalOpen(false);
+          setSelectedCard(null);
+        }}
+        onSave={selectedCard ? handleSaveEdit : handleCreateCard}
+        initialData={selectedCard || undefined}
+        isLoading={isEditLoading}
+      />
     </div>
   );
-
-  function learningCardsCount() {
-    return cards.length - masteredCount;
-  }
 }
