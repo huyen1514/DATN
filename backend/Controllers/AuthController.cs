@@ -69,6 +69,7 @@ namespace Controllers
                 {
                     user.UserId,
                     user.UserName,
+                    user.FullName,
                     user.Email,
                     user.Role
                 }
