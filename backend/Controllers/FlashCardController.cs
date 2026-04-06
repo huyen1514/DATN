@@ -4,8 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Models;
 using DTOs;
-using System.Linq;
 using System.Security.Claims;
+using DTOs.FlashCard;
 
 namespace Controllers
 {
@@ -21,92 +21,118 @@ namespace Controllers
             _context = context;
         }
 
-        //Lấy userId từ token
-        private int GetUserId()
-        {
-            return int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-        }
+        private int GetUserId() =>
+            int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
-        // CREATE FLASHCARD
-        
+        // ================= CREATE =================
         [HttpPost]
         public async Task<IActionResult> Create(CreateFlashCardRequest dto)
         {
             var userId = GetUserId();
 
-            var exists = await _context.Set<FlashCard>().AnyAsync(x =>
-                x.UserId == userId &&
-                x.ItemType == dto.ItemType &&
-                x.ItemId == dto.ItemId
-            );
-
-            if (exists)
-                return BadRequest("Flashcard đã tồn tại");
-
-            var flashcard = new FlashCard
+            var card = new FlashCard
             {
-                UserId = userId,
-                ItemType = dto.ItemType,
-                ItemId = dto.ItemId,
+                DeckId = dto.DeckId,
+                FrontText = dto.FrontText,
+                BackText = dto.BackText,
+                Example = dto.Example,
+                AudioUrl = dto.AudioUrl,
                 Status = FlashCardStatus.New,
-                NextReviewDate = DateTime.UtcNow,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow,
+                NextReviewDate = DateTime.UtcNow
             };
 
-            _context.Set<FlashCard>().Add(flashcard);
+            _context.FlashCards.Add(card);
             await _context.SaveChangesAsync();
 
-            return Ok(flashcard);
+            return Ok(new FlashCardResponse
+            {
+                FlashCardId = card.FlashCardId,
+                FrontText = card.FrontText,
+                BackText = card.BackText,
+                Status = card.Status.ToString()
+            });
         }
 
-        // GET ALL (user)
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        // ================= GET BY DECK =================
+        [HttpGet("deck/{deckId}")]
+        public async Task<IActionResult> GetByDeck(int deckId)
         {
             var userId = GetUserId();
 
-            var list = await _context.Set<FlashCard>()
-                .Where(x => x.UserId == userId)
-                .OrderBy(x => x.NextReviewDate)
+            var cards = await _context.FlashCards
+                .Where(x => x.DeckId == deckId && x.Deck.UserId == userId)
+                .OrderBy(x => x.CreatedAt)
+                .Select(x => new FlashCardResponse
+                {
+                    FlashCardId = x.FlashCardId,
+                    FrontText = x.FrontText,
+                    BackText = x.BackText,
+                    Status = x.Status.ToString()
+                })
                 .ToListAsync();
 
-            return Ok(list);
+            return Ok(cards);
         }
 
-        // GET TODAY (để học)
-        [HttpGet("today")]
-        public async Task<IActionResult> GetToday()
+        // ================= UPDATE =================
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, UpdateFlashCardRequest dto)
         {
             var userId = GetUserId();
 
-            var now = DateTime.UtcNow;
+            var card = await _context.FlashCards
+                .FirstOrDefaultAsync(x => x.FlashCardId == id && x.Deck.UserId == userId);
 
-            var list = await _context.Set<FlashCard>()
-                .Where(x => x.UserId == userId && x.NextReviewDate <= now)
-                .OrderBy(x => x.NextReviewDate)
-                .Take(20)
-                .ToListAsync();
+            if (card == null) return NotFound();
 
-            return Ok(list);
+            card.FrontText = dto.FrontText;
+            card.BackText = dto.BackText;
+            card.Example = dto.Example;
+            card.AudioUrl = dto.AudioUrl;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new FlashCardResponse
+            {
+                FlashCardId = card.FlashCardId,
+                FrontText = card.FrontText,
+                BackText = card.BackText,
+                Status = card.Status.ToString()
+            });
         }
 
-        //  REVIEW
+        // ================= DELETE =================
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var userId = GetUserId();
+
+            var card = await _context.FlashCards
+                .FirstOrDefaultAsync(x => x.FlashCardId == id && x.Deck.UserId == userId);
+
+            if (card == null) return NotFound();
+
+            _context.FlashCards.Remove(card);
+            await _context.SaveChangesAsync();
+
+            return Ok("Đã xoá flashcard");
+        }
+
+        // ================= REVIEW =================
         [HttpPost("review")]
         public async Task<IActionResult> Review(ReviewFlashCardRequest dto)
         {
             var userId = GetUserId();
 
-            var card = await _context.Set<FlashCard>()
-                .FirstOrDefaultAsync(x => x.FlashCardId == dto.FlashCardId && x.UserId == userId);
+            var card = await _context.FlashCards
+                .FirstOrDefaultAsync(x => x.FlashCardId == dto.FlashCardId && x.Deck.UserId == userId);
 
-            if (card == null)
-                return NotFound();
+            if (card == null) return NotFound();
 
-            //  update trạng thái
             card.ReviewCount++;
             card.LastReviewedAt = DateTime.UtcNow;
 
-            // thuật toán đơn giản (giống Anki lite)
             if (dto.Score >= 4)
             {
                 card.Status = FlashCardStatus.Mastered;
@@ -125,37 +151,13 @@ namespace Controllers
 
             await _context.SaveChangesAsync();
 
-            return Ok(card);
+            return Ok(new FlashCardResponse
+            {
+                FlashCardId = card.FlashCardId,
+                FrontText = card.FrontText,
+                BackText = card.BackText,
+                Status = card.Status.ToString()
+            });
         }
-
-        // DELETE
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var userId = GetUserId();
-
-            var card = await _context.Set<FlashCard>()
-                .FirstOrDefaultAsync(x => x.FlashCardId == id && x.UserId == userId);
-
-            if (card == null)
-                return NotFound();
-
-            _context.Set<FlashCard>().Remove(card);
-            await _context.SaveChangesAsync();
-
-            return Ok("Đã xoá");
-        }
-    }
-
-    public class ReviewFlashCardRequest
-    {
-        public int FlashCardId { get; set; }
-        public int Score { get; set; }
-    }
-
-    public class CreateFlashCardRequest
-    {
-        public string ItemType { get; set; }
-        public int ItemId { get; set; }
     }
 }

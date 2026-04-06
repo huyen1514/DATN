@@ -19,20 +19,20 @@ namespace Models
         public int FlashCardId { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public int DeckId { get; set; }
 
-        [ForeignKey("UserId")]
-        public User User { get; set; }
-
-        //Loại nội dung (Vocabulary, Kanji)
+        [ForeignKey("DeckId")]
+        public Deck Deck { get; set; }
         [Required]
-        [StringLength(50)]
-        [Column(TypeName = "nvarchar(50)")]
-        public string ItemType { get; set; }
-
-        //ID của item tương ứng
+        [Column(TypeName = "nvarchar(max)")]
+        public string FrontText { get; set; } // mặt trước
         [Required]
-        public int ItemId { get; set; }
+        [Column(TypeName = "nvarchar(max)")]
+        public string BackText { get; set; } // mặt sau
+
+        public string? Example { get; set; }
+
+        public string? AudioUrl { get; set; }
 
         [Required]
         public FlashCardStatus Status { get; set; }
