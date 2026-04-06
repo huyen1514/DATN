@@ -38,6 +38,9 @@ export default function Register() {
          setError(res.error || "Đăng ký thất bại. Vui lòng thử lại.");
       } else {
          setSuccess(true);
+         setTimeout(() => {
+           window.location.href = "/login";
+         }, 800);
       }
     } catch (err: any) {
       setError(err.message || "Đã xảy ra lỗi kết nối. Vui lòng kiểm tra lại email hoặc tên đăng nhập.");
@@ -123,7 +126,7 @@ export default function Register() {
             >
               <CheckCircle2 size={48} className="text-green-500 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-jp-indigo mb-2">Đăng ký thành công!</h3>
-              <p className="text-neutral-500 text-sm mb-6">Tài khoản của bạn đã được tạo thành công. Bạn hiện có thể đăng nhập vào hệ thống.</p>
+              <p className="text-neutral-500 text-sm mb-6">Tài khoản của bạn đã được tạo thành công. Trình duyệt sẽ tự động chuyển về trang đăng nhập trong giây lát...</p>
               <Link href="/login" className="inline-flex items-center justify-center w-full py-4 bg-jp-indigo text-white rounded-xl font-bold tracking-[0.1em] text-xs hover:bg-black transition-colors">
                 TỚI TRANG ĐĂNG NHẬP
               </Link>
@@ -145,14 +148,14 @@ export default function Register() {
                   <div>
                     <label className="block text-[11px] font-bold tracking-[0.1em] text-jp-indigo uppercase mb-2">Họ và tên</label>
                     <div className="relative group">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
+                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
                         <User size={16} />
                       </div>
                       <input 
                         type="text" 
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="w-full pl-9 pr-3 py-3.5 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light text-sm"
+                        className="w-full px-10 py-3.5 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light text-sm"
                         placeholder="Nguyễn Văn A"
                       />
                     </div>
@@ -161,14 +164,14 @@ export default function Register() {
                   <div>
                     <label className="block text-[11px] font-bold tracking-[0.1em] text-jp-indigo uppercase mb-2">Tên đăng nhập</label>
                     <div className="relative group">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
+                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
                         <User size={16} />
                       </div>
                       <input 
                         type="text" 
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
-                        className="w-full pl-9 pr-3 py-3.5 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light text-sm"
+                        className="w-full px-10 py-3.5 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light text-sm"
                         placeholder="nguyenvana123"
                       />
                     </div>
@@ -178,14 +181,14 @@ export default function Register() {
                 <div>
                   <label className="block text-[11px] font-bold tracking-[0.1em] text-jp-indigo uppercase mb-2">Email</label>
                   <div className="relative group">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
                       <Mail size={18} />
                     </div>
                     <input 
                       type="email" 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-12 pr-4 py-4 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light"
+                      className="w-full px-10 py-3.5 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light"
                       placeholder="name@example.com"
                     />
                   </div>
@@ -194,14 +197,14 @@ export default function Register() {
                 <div>
                   <label className="block text-[11px] font-bold tracking-[0.1em] text-jp-indigo uppercase mb-2">Mật khẩu</label>
                   <div className="relative group">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">
                       <Lock size={18} />
                     </div>
                     <input 
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className="w-full pl-12 pr-4 py-4 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light"
+                      className="w-full px-10 py-3.5 bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light"
                       placeholder="••••••••"
                     />
                   </div>
