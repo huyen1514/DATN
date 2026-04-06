@@ -26,15 +26,21 @@ export default function HomePage() {
           </h1>
         </div>
 
-        <nav className="hidden lg:flex flex-1 justify-center items-center gap-10 text-[11px] font-bold tracking-[0.25em]">
+        <nav className="hidden lg:flex flex-1 justify-center items-center gap-6 xl:gap-8 text-[11px] font-bold tracking-[0.25em]">
           <Link href="/courses" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
             KHÓA HỌC
           </Link>
+          <Link href="/folders" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
+            KHÔNG GIAN HỌC
+          </Link>
+          <Link href="/dashboard" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
+            BỘ THẺ TỪ
+          </Link>
+          <Link href="/flashcards" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
+            THẺ GHI NHỚ
+          </Link>
           <Link href="/methodology" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
             PHƯƠNG PHÁP
-          </Link>
-          <Link href="/about" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
-            VỀ CHÚNG TÔI
           </Link>
         </nav>
 
