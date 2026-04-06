@@ -22,13 +22,17 @@ namespace Models
         public int DeckId { get; set; }
 
         [ForeignKey("DeckId")]
-        public Deck Deck { get; set; }
+        public Deck? Deck { get; set; }
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string FrontText { get; set; } // mặt trước
+        public required string FrontText { get; set; } // mặt trước (Kanji)
+        
+        [Column(TypeName = "nvarchar(500)")]
+        public string? HiraganaText { get; set; } // hiragana/romaji
+        
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string BackText { get; set; } // mặt sau
+        public required string BackText { get; set; } // mặt sau (Vietnamese meaning)
 
         public string? Example { get; set; }
 

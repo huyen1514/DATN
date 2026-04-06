@@ -21,8 +21,13 @@ namespace Controllers
             _context = context;
         }
 
-        private int GetUserId() =>
-            int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+        private int GetUserId()
+        {
+            var nameClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameClaim?.Value == null)
+                throw new UnauthorizedAccessException("User ID not found in token");
+            return int.Parse(nameClaim.Value);
+        }
 
         // ================= CREATE =================
         [HttpPost]
@@ -34,6 +39,7 @@ namespace Controllers
             {
                 DeckId = dto.DeckId,
                 FrontText = dto.FrontText,
+                HiraganaText = dto.HiraganaText,
                 BackText = dto.BackText,
                 Example = dto.Example,
                 AudioUrl = dto.AudioUrl,
@@ -49,6 +55,7 @@ namespace Controllers
             {
                 FlashCardId = card.FlashCardId,
                 FrontText = card.FrontText,
+                HiraganaText = card.HiraganaText,
                 BackText = card.BackText,
                 Status = card.Status.ToString()
             });
@@ -67,6 +74,7 @@ namespace Controllers
                 {
                     FlashCardId = x.FlashCardId,
                     FrontText = x.FrontText,
+                    HiraganaText = x.HiraganaText,
                     BackText = x.BackText,
                     Status = x.Status.ToString()
                 })
@@ -87,6 +95,7 @@ namespace Controllers
             if (card == null) return NotFound();
 
             card.FrontText = dto.FrontText;
+            card.HiraganaText = dto.HiraganaText;
             card.BackText = dto.BackText;
             card.Example = dto.Example;
             card.AudioUrl = dto.AudioUrl;
@@ -97,6 +106,7 @@ namespace Controllers
             {
                 FlashCardId = card.FlashCardId,
                 FrontText = card.FrontText,
+                HiraganaText = card.HiraganaText,
                 BackText = card.BackText,
                 Status = card.Status.ToString()
             });
@@ -155,6 +165,7 @@ namespace Controllers
             {
                 FlashCardId = card.FlashCardId,
                 FrontText = card.FrontText,
+                HiraganaText = card.HiraganaText,
                 BackText = card.BackText,
                 Status = card.Status.ToString()
             });
