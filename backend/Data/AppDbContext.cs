@@ -9,8 +9,8 @@ namespace Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Folder> Folders { get; set; }
-public DbSet<Deck> Decks { get; set; }
-public DbSet<FlashCard> FlashCards { get; set; }
-        
+        public DbSet<Deck> Decks { get; set; }
+        public DbSet<FlashCard> FlashCards { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
     }
 }
