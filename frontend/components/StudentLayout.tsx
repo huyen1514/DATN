@@ -3,19 +3,20 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  Folder, 
-  Layers, 
-  LayoutDashboard, 
-  LogOut, 
-  User, 
-  Settings, 
-  ChevronLeft 
+import {
+  Folder,
+  LayoutDashboard,
+  LogOut,
+  User,
+  ChevronLeft,
+  GraduationCap,
+  ClipboardList,
+  UserCircle,
 } from "lucide-react";
 
 export default function StudentLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [user, setUser] = useState<{fullName?: string, userName?: string} | null>(null);
+  const [user, setUser] = useState<{fullName?: string, userName?: string, role?: string} | null>(null);
 
   useEffect(() => {
     const userStr = localStorage.getItem("user");
@@ -33,8 +34,11 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
   };
 
   const navItems = [
-    { label: "Bảng điều khiển", icon: LayoutDashboard, href: "/dashboard" },
-    { label: "Không gian học", icon: Folder, href: "/folders" }
+    { label: "Tổng quan", icon: LayoutDashboard, href: "/overview" },
+    { label: "Khóa học", icon: GraduationCap, href: "/courses" },
+    { label: "Không gian học", icon: Folder, href: "/folders" },
+    { label: "Luyện thi", icon: ClipboardList, href: "/exams" },
+    { label: "Hồ sơ", icon: UserCircle, href: "/profile" },
   ];
 
   if (!user) return null; // Wait for auth
@@ -59,7 +63,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
           <p className="text-[10px] font-bold text-neutral-400 mb-4 tracking-[0.2em] uppercase px-2">Menu</p>
           <nav className="space-y-1">
             {navItems.map((item) => {
-              const isActive = pathname.startsWith(item.href);
+              const isActive = pathname === item.href || (item.href !== "/overview" && pathname.startsWith(item.href));
               return (
                 <Link
                   key={item.href}
@@ -77,6 +81,20 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
               );
             })}
           </nav>
+
+          {/* Admin Link */}
+          {user.role === "Admin" && (
+            <div className="mt-6 pt-4 border-t border-black/5">
+              <p className="text-[10px] font-bold text-neutral-400 mb-3 tracking-[0.2em] uppercase px-2">Quản trị</p>
+              <Link
+                href="/dashboard"
+                className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-neutral-500 hover:bg-jp-red/10 hover:text-jp-red transition-all"
+              >
+                <LayoutDashboard size={18} />
+                Admin Dashboard
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className="p-4 border-t border-black/5">
@@ -95,7 +113,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
         {/* Header */}
         <header className="h-16 px-8 flex items-center justify-between bg-white/50 backdrop-blur-md sticky top-0 z-10 border-b border-black/5">
           <div className="flex items-center">
-            {pathname !== "/dashboard" && pathname !== "/folders" && (
+            {pathname !== "/overview" && pathname !== "/courses" && pathname !== "/folders" && pathname !== "/exams" && pathname !== "/profile" && (
                 <button 
                   onClick={() => window.history.back()}
                   className="flex items-center gap-1 text-sm text-neutral-500 hover:text-jp-indigo transition-colors"

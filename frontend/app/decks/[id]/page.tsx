@@ -20,8 +20,13 @@ export default function DeckDetailPage() {
     const [frontText, setFrontText] = useState("");
     const [backText, setBackText] = useState("");
     const [isSavingCard, setIsSavingCard] = useState(false);
+    const [user, setUser] = useState<any>(null);
 
     useEffect(() => {
+        const userStr = localStorage.getItem("user");
+        if (userStr) {
+            try { setUser(JSON.parse(userStr)); } catch (e) {}
+        }
         loadDeckDetails();
     }, [params.id]);
 
@@ -134,12 +139,14 @@ export default function DeckDetailPage() {
                         {/* Flashcards Section */}
                         <div className="flex items-center justify-between mb-8">
                             <h2 className="text-2xl font-serif text-jp-indigo">Danh sách từ vựng</h2>
-                            <button
-                                onClick={openCreateCardModal}
-                                className="flex items-center gap-2 px-6 py-3 bg-white text-jp-indigo border border-black/10 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase hover:bg-neutral-50 hover:border-jp-red/30 transition-all shadow-sm"
-                            >
-                                <Plus size={16} /> Thêm Thẻ
-                            </button>
+                            {user?.role === "Admin" && (
+                                <button
+                                    onClick={openCreateCardModal}
+                                    className="flex items-center gap-2 px-6 py-3 bg-white text-jp-indigo border border-black/10 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase hover:bg-neutral-50 hover:border-jp-red/30 transition-all shadow-sm"
+                                >
+                                    <Plus size={16} /> Thêm Thẻ
+                                </button>
+                            )}
                         </div>
 
                         {/* Cards Grid */}
@@ -164,14 +171,16 @@ export default function DeckDetailPage() {
                                                 <p className="text-lg text-neutral-700">{card.backText}</p>
                                             </div>
                                             
-                                            <div className="flex items-center justify-end gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                                <button onClick={() => openEditCardModal(card)} className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-50 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">
-                                                    <Edit2 size={12} />
-                                                </button>
-                                                <button onClick={() => handleDeleteCard(card.flashCardId)} className="w-8 h-8 flex items-center justify-center rounded-full bg-red-50 text-red-500 hover:bg-red-500 hover:text-white transition-colors">
-                                                    <Trash2 size={12} />
-                                                </button>
-                                            </div>
+                                            {user?.role === "Admin" && (
+                                                <div className="flex items-center justify-end gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                    <button onClick={() => openEditCardModal(card)} className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-50 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">
+                                                        <Edit2 size={12} />
+                                                    </button>
+                                                    <button onClick={() => handleDeleteCard(card.flashCardId)} className="w-8 h-8 flex items-center justify-center rounded-full bg-red-50 text-red-500 hover:bg-red-500 hover:text-white transition-colors">
+                                                        <Trash2 size={12} />
+                                                    </button>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 ))}

@@ -19,3 +19,24 @@ export const api = async (url: string, method = "GET", body?: any) => {
     return res.ok ? { message: text } : { error: text };
   }
 };
+
+export const uploadAudio = async (file: File) => {
+  const token = localStorage.getItem("token");
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const res = await fetch(API_URL + "/upload/audio", {
+    method: "POST",
+    headers: {
+      Authorization: token ? `Bearer ${token}` : ""
+    },
+    body: formData
+  });
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(errorText || "Upload failed");
+  }
+
+  return await res.json();
+};

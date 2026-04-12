@@ -1,16 +1,32 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { api } from "@/lib/api";
 import { ArrowRight, BookOpen, Mic, PenTool, Sparkles, Target, Settings, Info, User } from "lucide-react";
 
 export default function HomePage() {
-  const [user, setUser] = useState<{fullName?: string, userName?: string} | null>(null);
+  const [user, setUser] = useState<{fullName?: string, userName?: string, role?: string} | null>(null);
+  const [levels, setLevels] = useState<any[]>([]);
 
   useEffect(() => {
     const userStr = localStorage.getItem("user");
     if (userStr) {
       try { setUser(JSON.parse(userStr)); } catch (e) {}
     }
+    
+    // Fetch levels from API
+    const loadLevels = async () => {
+        try {
+            const result = await api("/levels");
+            if (Array.isArray(result)) {
+                // Sắp xếp level nếu cần (N5 -> N1)
+                setLevels(result);
+            }
+        } catch (e) {
+            console.error("Failed to fetch levels:", e);
+        }
+    };
+    loadLevels();
   }, []);
 
   const handleLogout = () => {
@@ -32,22 +48,30 @@ export default function HomePage() {
           </h1>
         </div>
 
-        <nav className="hidden lg:flex flex-1 justify-center items-center gap-6 xl:gap-8 text-[11px] font-bold tracking-[0.25em]">
-          <Link href="/courses" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
-            KHÓA HỌC
-          </Link>
-          <Link href="/folders" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
-            KHÔNG GIAN HỌC
-          </Link>
-          <Link href="/dashboard" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
-            BỘ THẺ TỪ
-          </Link>
-          <Link href="/dashboard" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
-            THẺ GHI NHỚ
-          </Link>
-          <Link href="/methodology" className="hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red hover:after:w-full after:transition-all">
-            PHƯƠNG PHÁP
-          </Link>
+        <nav className="hidden lg:flex flex-1 justify-center items-center gap-6 xl:gap-8 text-[11px] font-bold tracking-[0.25em] z-50">
+          {[
+            { label: "TỪ VỰNG", path: "/vocabulary" },
+            { label: "NGỮ PHÁP", path: "/grammar" },
+            { label: "KANJI", path: "/kanji" },
+            { label: "ĐỌC HIỂU", path: "/reading" },
+            { label: "NGHE HIỂU", path: "/listening" },
+            { label: "FLASHCARD", path: "/flashcards" }
+          ].map((menu) => (
+            <div key={menu.label} className="relative group py-2">
+              <span className="cursor-pointer hover:text-jp-red transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-jp-red group-hover:after:w-full after:transition-all flex items-center gap-1">
+                {menu.label}
+              </span>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-28 bg-white border border-black/5 shadow-xl rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all flex flex-col overflow-hidden transform translate-y-2 group-hover:translate-y-0">
+                {levels.length > 0 ? levels.map(lvl => (
+                  <Link key={lvl.levelId} href={`${menu.path}/${lvl.levelName}`} className="px-5 py-3 text-center text-jp-indigo hover:bg-jp-red hover:text-white transition-colors border-b border-black/5 last:border-0 hover:font-bold">
+                    {lvl.levelName}
+                  </Link>
+                )) : (
+                  <span className="px-5 py-3 text-center text-neutral-400 text-[10px]">Đang tải...</span>
+                )}
+              </div>
+            </div>
+          ))}
         </nav>
 
         <div className="hidden md:flex lg:w-1/4 justify-end items-center gap-6">
@@ -68,7 +92,7 @@ export default function HomePage() {
                 ĐĂNG XUẤT
               </button>
               <Link
-                href="/dashboard"
+                href={user.role === "Admin" ? "/dashboard" : "/overview"}
                 className="bg-jp-indigo text-white px-6 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] shadow-md hover:bg-jp-red hover:-translate-y-0.5 transition-all outline-none"
               >
                 WORKSPACE
