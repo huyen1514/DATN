@@ -77,6 +77,7 @@ namespace Controllers
 
             lesson.LessonName = model.LessonName;
             lesson.LevelId = model.LevelId;
+            lesson.SkillType = model.SkillType;
 
             await _context.SaveChangesAsync();
 

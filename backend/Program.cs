@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 builder.Services.AddScoped<JwtService>();
+builder.Services.AddHttpContextAccessor();
 
 // Add Authentication with JWT Bearer
 var jwtKey = builder.Configuration["Jwt:Key"];
