@@ -25,7 +25,7 @@ namespace Models
         [Required]
         [ForeignKey("LessonId")]
         public int LessonId { get; set; }
-        public Lesson Lesson { get; set; }
+        public Lesson? Lesson { get; set; }
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

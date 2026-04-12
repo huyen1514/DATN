@@ -21,7 +21,7 @@ namespace Models
         [Required]
         [ForeignKey("LevelId")]
         public int LevelId { get; set; }
-        public Level Level { get; set; }
+        public Level? Level { get; set; }
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

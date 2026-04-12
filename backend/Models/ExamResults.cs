@@ -28,12 +28,12 @@ namespace Models
         [Required]
         [ForeignKey("UserId")]
         public int UserId { get; set; }
-        public User User { get; set; }
+        public User? User { get; set; }
 
         [Required]
         [ForeignKey("ExamId")]
         public int ExamId { get; set; }
-        public Exam Exam { get; set; }
+        public Exam? Exam { get; set; }
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

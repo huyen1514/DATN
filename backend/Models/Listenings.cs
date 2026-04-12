@@ -9,13 +9,13 @@ namespace Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ListeningId { get; set; }
-        [Required]
         [StringLength(255)]
         [Column(TypeName = "nvarchar(255)")]
-        public string AudioUrl { get; set; }
-        [Required]
+        public string? AudioUrl { get; set; }
+
         [Column(TypeName = "nvarchar(max)")]
-        public string Transcript { get; set; }
+        public string? Transcript { get; set; }
+        
         [Required]
         [Column(TypeName = "nvarchar(max)")]
         public string Question { get; set; }
@@ -43,7 +43,7 @@ namespace Models
         [Required]
         [ForeignKey("LessonId")]
         public int LessonId { get; set; }
-        public Lesson Lesson { get; set; }
+        public Lesson? Lesson { get; set; }
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
