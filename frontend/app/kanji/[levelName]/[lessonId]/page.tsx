@@ -63,32 +63,34 @@ export default function KanjiDetailPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {kanjis.map(k => (
-              <div key={k.kanjiId} className="bg-white rounded-3xl border border-black/5 p-8 hover:shadow-xl transition-shadow group relative overflow-hidden">
+              <div key={k.kanjiId} className="bg-white rounded-2xl border border-black/5 p-8 hover:shadow-xl hover:border-rose-500/20 transition-all duration-300 group relative overflow-hidden flex flex-col h-full">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="flex items-start gap-6 relative z-10">
-                  <div className="w-24 h-24 bg-rose-50 group-hover:bg-rose-100 rounded-2xl flex items-center justify-center flex-shrink-0 transition-colors border border-rose-100">
-                    <span className="text-6xl font-serif text-rose-600 group-hover:scale-110 transition-transform">{k.character}</span>
+                  <div className="w-24 h-24 bg-rose-50 group-hover:bg-rose-100 rounded-2xl flex items-center justify-center flex-shrink-0 transition-colors border border-rose-100/50 shadow-sm">
+                    <span className="text-6xl font-serif text-rose-600 group-hover:scale-110 transition-transform drop-shadow-sm">{k.character}</span>
                   </div>
-                  <div className="flex-1 min-w-0 pt-2">
-                    <h3 className="text-xl font-bold text-jp-indigo mb-3 border-b border-black/5 pb-2">{k.meaning}</h3>
-                    <div className="space-y-2 text-sm">
-                      <p className="flex justify-between">
-                        <span className="text-neutral-400 font-bold text-xs uppercase w-20">Onyomi</span> 
-                        <span className="text-neutral-700 font-medium flex-1 bg-neutral-50 px-2 py-0.5 rounded">{k.onyomi}</span>
-                      </p>
-                      {k.kunyomi && (
-                        <p className="flex justify-between">
-                          <span className="text-neutral-400 font-bold text-xs uppercase w-20">Kunyomi</span> 
-                          <span className="text-neutral-700 font-medium flex-1 bg-neutral-50 px-2 py-0.5 rounded">{k.kunyomi}</span>
-                        </p>
-                      )}
-                      <div className="pt-3 mt-3 border-t border-black/5">
-                        <span className="text-xs font-bold text-neutral-400 uppercase block mb-1">Ví dụ:</span>
-                        <p className="text-neutral-600 text-sm leading-relaxed">{k.example}</p>
+                  <div className="flex-1 min-w-0 pt-1">
+                    <h3 className="text-xl font-bold text-jp-indigo mb-4 pb-3 border-b border-black/5 group-hover:text-rose-700 transition-colors">{k.meaning}</h3>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex items-center">
+                        <span className="text-neutral-400 font-bold text-[10px] tracking-widest uppercase w-20 flex-shrink-0">Onyomi</span> 
+                        <span className="text-neutral-700 font-bold tracking-wider flex-1 bg-neutral-50 border border-black/5 px-2.5 py-1 rounded inline-block">{k.onyomi}</span>
                       </div>
+                      {k.kunyomi && (
+                        <div className="flex items-center">
+                          <span className="text-neutral-400 font-bold text-[10px] tracking-widest uppercase w-20 flex-shrink-0">Kunyomi</span> 
+                          <span className="text-neutral-700 font-bold tracking-wider flex-1 bg-neutral-50 border border-black/5 px-2.5 py-1 rounded inline-block">{k.kunyomi}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
+                {k.example && (
+                  <div className="mt-6 pt-5 border-t border-black/5 relative z-10 flex-1 flex flex-col justify-end">
+                    <span className="text-[10px] font-bold text-rose-400/80 tracking-widest uppercase block mb-2">Ví dụ minh hoạ</span>
+                    <p className="text-neutral-600 text-sm leading-relaxed italic">{k.example}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

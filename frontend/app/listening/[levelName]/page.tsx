@@ -87,7 +87,7 @@ export default function ListeningLessonsPage() {
                   <span className="text-xs font-bold text-cyan-600 bg-cyan-50 px-3 py-1 rounded-full mb-4 inline-block tracking-widest uppercase">
                     Bài học
                   </span>
-                  <h3 className="text-xl font-bold text-jp-indigo mb-2 group-hover:text-cyan-600 transition-colors">{lesson.LessonName || `Bài ${lesson.lessonId}`}</h3>
+                  <h3 className="text-xl font-bold text-jp-indigo mb-2 group-hover:text-cyan-600 transition-colors">{lesson.lessonName || `Bài ${lesson.lessonId}`}</h3>
                   
                   <div className="mt-8 flex items-center justify-between text-sm">
                     <span className="font-bold text-neutral-400">{listeningCounts[lesson.lessonId] || 0} Đoạn hội thoại</span>

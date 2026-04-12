@@ -61,40 +61,42 @@ export default function VocabularyDetailPage() {
             <p className="text-neutral-500">Bài học này hiện chưa được thêm từ vựng.</p>
           </div>
         ) : (
-          <div className="bg-white rounded-3xl border border-black/5 overflow-hidden shadow-sm">
-            <div className="p-0 overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-black/5 bg-emerald-50/30">
-                    <th className="text-left px-8 py-4 text-[11px] font-bold text-emerald-600 tracking-wider uppercase">Từ vựng</th>
-                    <th className="text-left px-8 py-4 text-[11px] font-bold text-emerald-600 tracking-wider uppercase">Cách đọc</th>
-                    <th className="text-left px-8 py-4 text-[11px] font-bold text-emerald-600 tracking-wider uppercase">Ý nghĩa</th>
-                    <th className="text-left px-8 py-4 text-[11px] font-bold text-emerald-600 tracking-wider uppercase">Loại từ</th>
-                    <th className="text-left px-8 py-4 text-[11px] font-bold text-emerald-600 tracking-wider uppercase">Ví dụ</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-black/5">
-                  {vocabs.map(v => (
-                    <tr key={v.vocabularyId} className="hover:bg-neutral-50 transition-colors group">
-                      <td className="px-8 py-6">
-                        <div className="flex items-center gap-3">
-                          <span className="text-xl font-serif font-bold text-jp-indigo">{v.word}</span>
-                          {v.audioUrl && (
-                            <button onClick={() => new Audio(v.audioUrl).play()} className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-emerald-500 hover:text-white transition-all">
-                              <Volume2 size={14} />
-                            </button>
-                          )}
-                        </div>
-                      </td>
-                      <td className="px-8 py-6 text-sm text-jp-red font-medium">{v.reading}</td>
-                      <td className="px-8 py-6 text-sm text-neutral-700">{v.meaning}</td>
-                      <td className="px-8 py-6 text-xs font-bold text-neutral-400 bg-neutral-50 px-2 py-1 rounded inline-block mt-4 ml-6">{v.partOfSpeech || "—"}</td>
-                      <td className="px-8 py-6 text-xs text-neutral-500 max-w-[200px] leading-relaxed">{v.example || "—"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          <div className="space-y-4">
+            {vocabs.map((v, i) => (
+              <div key={v.vocabularyId} className="bg-white rounded-2xl border border-black/5 p-6 md:p-8 hover:shadow-xl hover:border-emerald-500/20 transition-all duration-300 group flex flex-col md:flex-row md:items-center gap-6 md:gap-12 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="flex-shrink-0 min-w-[280px] flex items-start gap-5">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50/50 flex items-center justify-center text-emerald-600/50 font-bold text-sm border border-emerald-100/50 group-hover:bg-emerald-100 group-hover:text-emerald-700 transition-colors">
+                    {(i + 1).toString().padStart(2, '0')}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-1.5">
+                      <span className="text-3xl font-serif font-bold text-jp-indigo group-hover:text-emerald-700 transition-colors">{v.word}</span>
+                      {v.audioUrl && (
+                        <button onClick={() => new Audio(v.audioUrl).play()} className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all cursor-pointer opacity-40 group-hover:opacity-100 shadow-sm border border-emerald-200/50">
+                          <Volume2 size={14} />
+                        </button>
+                      )}
+                    </div>
+                    <span className="text-sm font-bold text-jp-red tracking-widest">{v.reading}</span>
+                  </div>
+                </div>
+
+                <div className="flex-1 flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                     <span className="text-[10px] font-bold text-neutral-400 bg-neutral-100/80 border border-black/5 px-2.5 py-1 rounded-md uppercase tracking-wider whitespace-nowrap">{v.partOfSpeech || "Từ vựng"}</span>
+                     <span className="text-base font-semibold text-neutral-700 leading-relaxed">{v.meaning}</span>
+                  </div>
+                  
+                  {v.example && (
+                    <div className="mt-2 pl-4 border-l-[3px] border-emerald-100">
+                      <p className="text-sm text-neutral-500 italic leading-relaxed">{v.example}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>

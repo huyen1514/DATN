@@ -63,24 +63,25 @@ export default function GrammarDetailPage() {
         ) : (
           <div className="space-y-6">
             {grammars.map(g => (
-              <div key={g.grammarId} className="bg-white rounded-3xl border border-black/5 p-8 hover:shadow-lg transition-shadow">
+              <div key={g.grammarId} className="bg-white rounded-2xl border border-black/5 p-8 hover:shadow-xl hover:border-amber-500/20 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="px-5 py-2.5 bg-amber-50 text-amber-700 rounded-xl font-bold text-xl font-serif">{g.grammarName}</span>
+                  <span className="px-5 py-2.5 bg-amber-50 text-amber-700 rounded-xl font-bold text-xl font-serif border border-amber-100 shadow-sm">{g.grammarName}</span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <div className="bg-neutral-50 rounded-xl p-5 mb-4 border border-black/5">
-                      <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-2">Cấu trúc</p>
-                      <p className="text-jp-indigo font-mono font-bold text-lg">{g.structure}</p>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                  <div className="lg:col-span-7 flex flex-col">
+                    <div className="bg-neutral-50 rounded-xl p-6 mb-5 border border-black/5 flex-shrink-0">
+                      <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-3">Cấu trúc</p>
+                      <p className="text-jp-indigo font-mono font-bold text-lg leading-relaxed">{g.structure}</p>
                     </div>
-                    <div className="p-2">
-                      <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-2">Ý nghĩa & Cách dùng</p>
-                      <p className="text-neutral-700 leading-relaxed">{g.meaning}</p>
+                    <div className="p-2 flex-1">
+                      <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-3">Ý nghĩa & Cách dùng</p>
+                      <p className="text-neutral-700 leading-loose text-justify">{g.meaning}</p>
                     </div>
                   </div>
-                  <div className="bg-blue-50/50 rounded-2xl p-6 border border-blue-100 flex flex-col justify-center">
-                    <p className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3">Ví dụ minh hoạ</p>
-                    <p className="text-blue-900 italic text-lg leading-relaxed">{g.example}</p>
+                  <div className="lg:col-span-5 bg-blue-50/40 rounded-2xl p-8 border border-blue-100/50 flex flex-col justify-center relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-2 h-full bg-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <p className="text-[10px] font-bold text-blue-400/80 uppercase tracking-widest mb-4">Ví dụ minh hoạ</p>
+                    <p className="text-blue-900 italic text-lg leading-loose">{g.example}</p>
                   </div>
                 </div>
               </div>

@@ -87,7 +87,7 @@ export default function KanjiLessonsPage() {
                   <span className="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full mb-4 inline-block tracking-widest uppercase">
                     Bài học
                   </span>
-                  <h3 className="text-xl font-bold text-jp-indigo mb-2 group-hover:text-rose-600 transition-colors">{lesson.LessonName || `Bài ${lesson.lessonId}`}</h3>
+                  <h3 className="text-xl font-bold text-jp-indigo mb-2 group-hover:text-rose-600 transition-colors">{lesson.lessonName || `Bài ${lesson.lessonId}`}</h3>
                   
                   <div className="mt-8 flex items-center justify-between text-sm">
                     <span className="font-bold text-neutral-400">{kanjiCounts[lesson.lessonId] || 0} Chữ Hán</span>

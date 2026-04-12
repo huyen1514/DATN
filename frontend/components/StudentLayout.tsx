@@ -113,14 +113,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
         {/* Header */}
         <header className="h-16 px-8 flex items-center justify-between bg-white/50 backdrop-blur-md sticky top-0 z-10 border-b border-black/5">
           <div className="flex items-center">
-            {pathname !== "/overview" && pathname !== "/courses" && pathname !== "/folders" && pathname !== "/exams" && pathname !== "/profile" && (
-                <button 
-                  onClick={() => window.history.back()}
-                  className="flex items-center gap-1 text-sm text-neutral-500 hover:text-jp-indigo transition-colors"
-                >
-                  <ChevronLeft size={16} /> Quay lại
-                </button>
-            )}
+            {/* The global back-button has been removed in favor of page-specific navigation */}
           </div>
           
           <div className="flex items-center gap-4">

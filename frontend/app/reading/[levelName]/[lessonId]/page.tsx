@@ -61,21 +61,25 @@ export default function ReadingDetailPage() {
             <p className="text-neutral-500">Bài học này hiện chưa được thêm bài đọc hiểu.</p>
           </div>
         ) : (
-          <div className="space-y-8">
+          <div className="space-y-10">
             {readings.map((item, idx) => (
-              <div key={item.readingId} className="bg-white rounded-3xl border border-black/5 p-8 shadow-sm">
-                <span className="text-xs font-bold bg-indigo-50 text-indigo-600 px-5 py-2.5 rounded-full mb-6 inline-block tracking-widest uppercase">
-                  Đoạn văn {idx + 1}
-                </span>
+              <div key={item.readingId} className="bg-white rounded-2xl border border-black/5 p-8 md:p-12 shadow-sm hover:shadow-xl hover:border-indigo-500/20 transition-all duration-300">
+                <div className="flex items-center gap-4 mb-8 border-b border-black/5 pb-6">
+                  <span className="text-sm font-bold bg-indigo-50 text-indigo-600 px-6 py-2 rounded-full tracking-widest uppercase">
+                    Đoạn văn {idx + 1}
+                  </span>
+                </div>
                 
-                <div className="bg-amber-50/50 rounded-2xl p-8 mb-8 border border-amber-200/50">
-                  <p className="text-lg text-jp-indigo leading-loose whitespace-pre-wrap font-serif text-justify">
+                <div className="bg-stone-50/50 rounded-2xl p-8 md:p-10 mb-10 border border-stone-200/60 shadow-inner">
+                  <p className="text-xl text-jp-indigo leading-loose whitespace-pre-wrap font-serif text-justify">
                     {item.content}
                   </p>
                 </div>
                 
-                <div className="bg-neutral-50 rounded-2xl p-6 border border-black/5">
-                  <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-3">Câu hỏi tham khảo</p>
+                <div className="bg-blue-50/30 rounded-2xl p-8 border border-blue-100/50">
+                  <p className="text-[10px] font-bold text-blue-500/80 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-blue-500"></span> Câu hỏi tham khảo
+                  </p>
                   <p className="text-neutral-700 font-medium text-lg leading-relaxed">{item.question}</p>
                 </div>
               </div>

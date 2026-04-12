@@ -81,24 +81,24 @@ export default function ListeningDetailPage() {
               const isCorrect = selected === item.correctAnswer;
               
               return (
-                <div key={item.listeningId} className="bg-white rounded-3xl border border-black/5 p-8 shadow-sm">
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="text-sm font-bold bg-cyan-50 text-cyan-600 px-5 py-2.5 rounded-full uppercase tracking-widest">
+                <div key={item.listeningId} className="bg-white rounded-2xl border border-black/5 p-8 md:p-10 hover:shadow-xl hover:border-cyan-500/20 transition-all duration-300">
+                  <div className="flex flex-wrap items-center gap-4 mb-8 border-b border-black/5 pb-6">
+                    <span className="text-sm font-bold bg-cyan-50 text-cyan-700 px-6 py-2 rounded-full uppercase tracking-widest border border-cyan-100">
                       Câu {idx + 1}
                     </span>
                     {item.audioUrl && (
                       <button
                         onClick={() => new Audio(item.audioUrl).play()}
-                        className="flex items-center gap-2 text-sm font-bold text-white bg-cyan-600 hover:bg-cyan-700 px-6 py-2.5 rounded-full transition-colors shadow-md"
+                        className="flex items-center gap-2 text-sm font-bold text-white bg-cyan-600 hover:bg-cyan-500 px-6 py-2 rounded-full transition-all shadow-md hover:shadow-lg focus:ring-4 focus:ring-cyan-500/20 active:scale-95"
                       >
                         <Volume2 size={16} /> Nghe Audio
                       </button>
                     )}
                   </div>
                   
-                  <p className="text-xl font-bold text-jp-indigo mb-8">{item.question}</p>
+                  <p className="text-2xl font-bold text-jp-indigo mb-10 leading-snug">{item.question}</p>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
                     {["A", "B", "C", "D"].map(opt => {
                       const optionText = item[`option${opt}`];
                       const isSelected = selected === opt;
@@ -110,36 +110,43 @@ export default function ListeningDetailPage() {
                           key={opt}
                           onClick={() => handleAnswer(item.listeningId, opt)}
                           disabled={checked}
-                          className={`text-left p-5 rounded-2xl border-2 transition-all text-base font-medium flex items-center gap-4
-                            ${isRight ? "border-green-500 bg-green-50 text-green-700" : 
-                              isWrong ? "border-red-400 bg-red-50 text-red-600" :
-                              isSelected ? "border-jp-indigo bg-jp-indigo/5 text-jp-indigo shadow-md" : 
-                              "border-neutral-200 hover:border-neutral-300 text-neutral-700 bg-white"
+                          className={`text-left p-6 rounded-2xl border-2 transition-all text-base font-medium flex items-center gap-5 group
+                            ${isRight ? "border-emerald-500 bg-emerald-50/50 text-emerald-800 shadow-sm" : 
+                              isWrong ? "border-red-400 bg-red-50/50 text-red-700 shadow-sm" :
+                              isSelected ? "border-cyan-500 bg-cyan-50/30 text-cyan-800 shadow-md ring-4 ring-cyan-500/10" : 
+                              "border-neutral-100 hover:border-cyan-300 hover:bg-cyan-50/10 text-neutral-700 bg-white shadow-sm hover:shadow-md"
                             }
-                            ${checked ? "cursor-default" : "cursor-pointer hover:shadow-sm"}
+                            ${checked ? "cursor-default opacity-90" : "cursor-pointer active:scale-[0.98]"}
                           `}
                         >
-                          <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0
-                            ${isRight ? "bg-green-500 text-white" : isWrong ? "bg-red-400 text-white" : isSelected ? "bg-jp-indigo text-white" : "bg-neutral-100 text-neutral-500"}
+                          <span className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 transition-colors
+                            ${isRight ? "bg-emerald-500 text-white" : 
+                              isWrong ? "bg-red-400 text-white" : 
+                              isSelected ? "bg-cyan-500 text-white shadow-sm" : 
+                              "bg-neutral-100 text-neutral-500 group-hover:bg-cyan-100 group-hover:text-cyan-700"}
                           `}>{opt}</span>
-                          {optionText}
-                          {isRight && <CheckCircle2 size={20} className="ml-auto text-green-500" />}
-                          {isWrong && <XCircle size={20} className="ml-auto text-red-400" />}
+                          <span className="flex-1 leading-relaxed">{optionText}</span>
+                          {isRight && <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center animate-bounce-short"><CheckCircle2 size={18} className="text-emerald-600" /></div>}
+                          {isWrong && <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center animate-shake"><XCircle size={18} className="text-red-500" /></div>}
                         </button>
                       );
                     })}
                   </div>
 
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                     {selected && !checked && (
-                      <button onClick={() => checkAnswer(item.listeningId)} className="px-8 py-3 bg-jp-indigo text-white rounded-xl text-sm font-bold tracking-wider hover:bg-jp-red transition-colors shadow-md uppercase">
+                      <button onClick={() => checkAnswer(item.listeningId)} className="px-8 py-4 bg-jp-indigo text-white rounded-xl text-sm font-bold tracking-[0.1em] hover:bg-jp-red transition-colors shadow-lg uppercase active:scale-95 text-center">
                         Kiểm tra đáp án
                       </button>
                     )}
 
                     {checked && (
-                      <div className={`flex-1 p-5 rounded-xl text-md font-bold flex items-center gap-3 ${isCorrect ? "bg-green-50 text-green-700 border border-green-200" : "bg-red-50 text-red-600 border border-red-200"}`}>
-                        {isCorrect ? <><CheckCircle2 size={20} /> Chính xác!</> : <><XCircle size={20} /> Sai rồi! Đáp án đúng là {item.correctAnswer}</>}
+                      <div className={`p-5 rounded-2xl text-md font-bold flex items-center gap-4 flex-1 shadow-sm ${isCorrect ? "bg-emerald-50 text-emerald-800 border border-emerald-200" : "bg-red-50 text-red-800 border border-red-200"}`}>
+                        {isCorrect ? (
+                          <><div className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center flex-shrink-0"><CheckCircle2 size={24} /></div> <span className="text-lg">Chính xác tuyệt đối!</span></>
+                        ) : (
+                          <><div className="w-10 h-10 rounded-full bg-red-400 text-white flex items-center justify-center flex-shrink-0"><XCircle size={24} /></div> <span className="text-lg">Rất tiếc! Đáp án đúng là {item.correctAnswer}</span></>
+                        )}
                       </div>
                     )}
                   </div>

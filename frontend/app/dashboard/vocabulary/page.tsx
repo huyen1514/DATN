@@ -5,7 +5,7 @@ import { uploadAudio, api } from "@/lib/api";
 import AdminLayout from "@/components/AdminLayout";
 import { BookA, Plus, Edit2, Trash2, Search, X, Upload, AudioLines } from "lucide-react";
 
-interface Lesson { lessonId: number; lessonName: string; }
+interface Lesson { lessonId: number; lessonName: string; level?: { levelName: string }; skillType?: string; }
 interface Vocabulary {
   vocabularyId: number;
   word: string;
@@ -119,7 +119,7 @@ export default function AdminVocabulary() {
           <select value={filterLesson} onChange={(e) => setFilterLesson(e.target.value === "all" ? "all" : parseInt(e.target.value))}
             className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm min-w-[200px]">
             <option value="all">Tất cả bài học</option>
-            {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName}</option>)}
+            {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.level ? `(${l.level.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
           </select>
         </div>
 
@@ -197,7 +197,7 @@ export default function AdminVocabulary() {
                   <select value={form.lessonId} onChange={(e) => setForm({...form, lessonId: parseInt(e.target.value)})}
                     className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm">
                     <option value={0}>-- Chọn --</option>
-                    {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName}</option>)}
+                    {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.level ? `(${l.level.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
                   </select>
                 </div>
               </div>
