@@ -95,6 +95,15 @@ export default function ListeningDetailPage() {
                       </button>
                     )}
                   </div>
+                  {item.imageUrl && (
+                    <div className="mb-6 flex justify-center">
+                      <img
+                        src={item.imageUrl}
+                        alt="Hình minh họa"
+                        className="max-h-56 rounded-2xl object-contain border border-black/5 shadow-sm"
+                      />
+                    </div>
+                  )}
                   
                   <p className="text-2xl font-bold text-jp-indigo mb-10 leading-snug">{item.question}</p>
                   

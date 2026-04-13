@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { uploadAudio, api } from "@/lib/api";
+import { uploadAudio, uploadImage, api } from "@/lib/api";
 import AdminLayout from "@/components/AdminLayout";
 import { Headphones, Plus, Edit2, Trash2, Search, X, Upload } from "lucide-react";
 
@@ -9,6 +9,7 @@ interface Lesson { lessonId: number; lessonName: string; level?: { levelName: st
 interface Listening {
   listeningId: number;
   audioUrl: string;
+  imageUrl?: string;
   transcript: string;
   question: string;
   optionA: string;
@@ -30,8 +31,9 @@ export default function AdminListening() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState<"create" | "edit">("create");
   const [editId, setEditId] = useState<number | null>(null);
-  const [form, setForm] = useState({ audioUrl: "", transcript: "", question: "", optionA: "", optionB: "", optionC: "", optionD: "", correctAnswer: "A", lessonId: 0 });
+  const [form, setForm] = useState({ audioUrl: "", imageUrl: "", transcript: "", question: "", optionA: "", optionB: "", optionC: "", optionD: "", correctAnswer: "A", lessonId: 0 });
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedImageFile, setSelectedImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -48,15 +50,17 @@ export default function AdminListening() {
 
   const openCreate = () => {
     setModalMode("create");
-    setForm({ audioUrl: "", transcript: "", question: "", optionA: "", optionB: "", optionC: "", optionD: "", correctAnswer: "A", lessonId: lessons[0]?.lessonId || 0 });
+    setForm({ audioUrl: "", imageUrl: "", transcript: "", question: "", optionA: "", optionB: "", optionC: "", optionD: "", correctAnswer: "A", lessonId: lessons[0]?.lessonId || 0 });
     setSelectedFile(null);
+    setSelectedImageFile(null);
     setEditId(null); setError(""); setIsModalOpen(true);
   };
 
   const openEdit = (item: Listening) => {
     setModalMode("edit");
-    setForm({ audioUrl: item.audioUrl, transcript: item.transcript, question: item.question, optionA: item.optionA, optionB: item.optionB, optionC: item.optionC, optionD: item.optionD, correctAnswer: item.correctAnswer, lessonId: item.lessonId });
+    setForm({ audioUrl: item.audioUrl, imageUrl: item.imageUrl || "", transcript: item.transcript, question: item.question, optionA: item.optionA, optionB: item.optionB, optionC: item.optionC, optionD: item.optionD, correctAnswer: item.correctAnswer, lessonId: item.lessonId });
     setSelectedFile(null);
+    setSelectedImageFile(null);
     setEditId(item.listeningId); setError(""); setIsModalOpen(true);
   };
 
@@ -65,6 +69,7 @@ export default function AdminListening() {
     setIsSaving(true); setError("");
     try {
       let finalAudioUrl = form.audioUrl;
+      let finalImageUrl = form.imageUrl;
 
       if (selectedFile) {
         try {
@@ -77,7 +82,18 @@ export default function AdminListening() {
         }
       }
 
-      const postBody = { ...form, audioUrl: finalAudioUrl };
+      if (selectedImageFile) {
+        try {
+          const uploadRes = await uploadImage(selectedImageFile);
+          finalImageUrl = uploadRes.url;
+        } catch (e: any) {
+          setError("Lỗi khi tải ảnh: " + e.message);
+          setIsSaving(false);
+          return;
+        }
+      }
+
+      const postBody = { ...form, audioUrl: finalAudioUrl, imageUrl: finalImageUrl };
       const res = modalMode === "create" ? await api("/listenings", "POST", postBody) : await api(`/listenings/${editId}`, "PUT", postBody);
       if (res?.error || res?.title) { setError(res.error || res.title); setIsSaving(false); return; }
       setIsModalOpen(false); loadData();
@@ -190,6 +206,35 @@ export default function AdminListening() {
                 </div>
                 {form.audioUrl && (
                   <p className="mt-2 text-[10px] text-neutral-400 truncate">Link hiện tại: {form.audioUrl}</p>
+                )}
+              </div>
+              <div>
+                <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Ảnh minh họa (tuỳ chọn)</label>
+                <div className="relative flex-1">
+                  <input 
+                    type="file" 
+                    accept="image/*" 
+                    onChange={(e) => setSelectedImageFile(e.target.files?.[0] || null)}
+                    className="hidden" 
+                    id="listening-image-upload"
+                  />
+                  <label 
+                    htmlFor="listening-image-upload"
+                    className="flex items-center gap-3 px-4 py-3 border-2 border-dashed border-neutral-200 rounded-xl text-sm text-neutral-500 cursor-pointer hover:border-jp-indigo/30 hover:bg-jp-indigo/5 transition-all w-full"
+                  >
+                    <Upload size={16} className="text-neutral-400" />
+                    {selectedImageFile ? (
+                      <span className="text-jp-indigo font-medium truncate">{selectedImageFile.name}</span>
+                    ) : (
+                      <span>{form.imageUrl ? "Chọn ảnh khác để thay thế" : "Nhấn để chọn ảnh (jpg, png...)"}</span>
+                    )}
+                  </label>
+                </div>
+                {selectedImageFile && (
+                  <img src={URL.createObjectURL(selectedImageFile)} alt="preview" className="mt-2 rounded-lg max-h-32 object-contain border border-neutral-100" />
+                )}
+                {!selectedImageFile && form.imageUrl && (
+                  <img src={form.imageUrl} alt="current" className="mt-2 rounded-lg max-h-32 object-contain border border-neutral-100" />
                 )}
               </div>
               <div>

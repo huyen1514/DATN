@@ -40,3 +40,24 @@ export const uploadAudio = async (file: File) => {
 
   return await res.json();
 };
+
+export const uploadImage = async (file: File) => {
+  const token = localStorage.getItem("token");
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const res = await fetch(API_URL + "/upload/image", {
+    method: "POST",
+    headers: {
+      Authorization: token ? `Bearer ${token}` : ""
+    },
+    body: formData
+  });
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(errorText || "Upload failed");
+  }
+
+  return await res.json();
+};
