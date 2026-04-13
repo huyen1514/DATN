@@ -13,6 +13,10 @@ namespace Models
         [Column(TypeName = "nvarchar(255)")]
         public string? AudioUrl { get; set; }
 
+        [StringLength(255)]
+        [Column(TypeName = "nvarchar(255)")]
+        public string? ImageUrl { get; set; }
+
         [Column(TypeName = "nvarchar(max)")]
         public string? Transcript { get; set; }
         

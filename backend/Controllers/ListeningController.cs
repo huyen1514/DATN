@@ -72,6 +72,7 @@ namespace Controllers
                 return BadRequest("Lesson không tồn tại");
 
             listening.AudioUrl = model.AudioUrl;
+            listening.ImageUrl = model.ImageUrl;
             listening.Transcript = model.Transcript;
             listening.Question = model.Question;
             listening.OptionA = model.OptionA;

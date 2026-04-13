@@ -59,5 +59,46 @@ namespace Controllers
                 return StatusCode(500, $"Lỗi server: {ex.Message}");
             }
         }
+        [HttpPost("image")]
+        public async Task<IActionResult> UploadImage(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("Không có file nào được tải lên.");
+
+            try
+            {
+                string webRootPath = _environment.WebRootPath;
+                if (string.IsNullOrWhiteSpace(webRootPath))
+                {
+                    webRootPath = Path.Combine(_environment.ContentRootPath, "wwwroot");
+                }
+
+                string uploadsFolder = Path.Combine(webRootPath, "uploads", "images");
+                
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
+
+                var request = _httpContextAccessor.HttpContext?.Request;
+                string baseUrl = $"{request?.Scheme}://{request?.Host}";
+                
+                string fileUrl = $"{baseUrl}/uploads/images/{uniqueFileName}";
+
+                return Ok(new { url = fileUrl });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Lỗi server: {ex.Message}");
+            }
+        }
     }
 }
