@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf8f5; /* Washi paper background */
+  --background: #ffffff;
   --foreground: #2d2d2d;
 }
 
@@ -11,13 +11,14 @@
   --font-sans: var(--font-geist-sans), sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
   --font-serif: var(--font-noto-serif-jp), serif;
+  --font-japanese: var(--font-noto-serif-japanese), serif;
 
   /* Custom Japanese colors */
   --color-jp-red: #bc002d;
   --color-jp-indigo: #131b23;
   --color-jp-gold: #d4af37;
   --color-jp-sakura: #fde8e9;
-  --color-jp-washi: #faf8f5;
+  --color-jp-washi: #ffffff;
   --color-jp-ink: #2d2d2d;
 }
 
@@ -44,4 +45,8 @@ html {
 /* Custom class for beautiful text-balancing in headings */
 .text-balance {
   text-wrap: balance;
+}
+
+.font-jp {
+  font-family: var(--font-japanese);
 }

@@ -1,100 +1,154 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
 import StudentLayout from "@/components/StudentLayout";
 import { BookA, CopyPlus, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+interface Level {
+  levelId: number;
+  levelName: string;
+}
+
+interface Lesson {
+  lessonId: number;
+  lessonName?: string;
+  skillType?: string;
+}
+
+interface VocabularyItem {
+  lessonId: number;
+}
+
 export default function VocabularyLessonsPage() {
   const params = useParams();
-  const levelName = params.levelName as string; 
-  const router = useRouter();
+  const levelName = params.levelName as string;
 
-  const [lessons, setLessons] = useState<any[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
   const [vocabCounts, setVocabCounts] = useState<Record<number, number>>({});
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { loadData(); }, [levelName]);
+  const isVocabularySkill = (skillType?: string) => {
+    if (!skillType) return true;
 
-  const loadData = async () => {
+    const raw = skillType.trim().toLowerCase();
+    const normalized = raw
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    return (
+      normalized === "tu vung" ||
+      normalized === "tu do" ||
+      normalized === "tu-vung" ||
+      normalized === "tu-do" ||
+      normalized === "vocabulary" ||
+      normalized === "free" ||
+      raw === "tá»« vá»±ng" ||
+      raw === "tá»± do"
+    );
+  };
+
+  const loadData = useCallback(async () => {
     try {
-      const levels = await api("/levels");
-      const targetLevel = Array.isArray(levels) ? levels.find((l: any) => l.levelName.toUpperCase() === levelName.toUpperCase()) : null;
-      
-      if (!targetLevel) { setIsLoading(false); return; }
+      const levelsData = await api("/levels");
+      const levels: Level[] = Array.isArray(levelsData) ? (levelsData as Level[]) : [];
+      const targetLevel = levels.find((l) => l.levelName.toUpperCase() === levelName.toUpperCase());
 
-      const [levelLessons, allVocabs] = await Promise.all([
+      if (!targetLevel) {
+        setLessons([]);
+        setVocabCounts({});
+        return;
+      }
+
+      const [levelLessonsData, allVocabsData] = await Promise.all([
         api(`/lessons/level/${targetLevel.levelId}`),
         api("/vocabularies"),
       ]);
 
-      if (Array.isArray(levelLessons) && Array.isArray(allVocabs)) {
-        const counts: Record<number, number> = {};
-        allVocabs.forEach((v: any) => {
-          counts[v.lessonId] = (counts[v.lessonId] || 0) + 1;
-        });
-        setVocabCounts(counts);
-
-        // Filter lessons that actually have vocabulary AND match the skill type
-        const validLessons = levelLessons.filter((l: any) => 
-          (l.skillType === "Từ vựng" || l.skillType === "Tự do" || !l.skillType) && 
-          counts[l.lessonId] && counts[l.lessonId] > 0
-        );
-        setLessons(validLessons);
+      if (!Array.isArray(levelLessonsData) || !Array.isArray(allVocabsData)) {
+        setLessons([]);
+        setVocabCounts({});
+        return;
       }
+
+      const levelLessons = levelLessonsData as Lesson[];
+      const allVocabs = allVocabsData as VocabularyItem[];
+
+      const counts: Record<number, number> = {};
+      allVocabs.forEach((v) => {
+        counts[v.lessonId] = (counts[v.lessonId] || 0) + 1;
+      });
+      setVocabCounts(counts);
+
+      const validLessons = levelLessons.filter(
+        (l) => isVocabularySkill(l.skillType) && (counts[l.lessonId] || 0) > 0
+      );
+      setLessons(validLessons);
     } catch (e) {
       console.error(e);
+      setLessons([]);
+      setVocabCounts({});
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [levelName]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    void loadData();
+  }, [loadData]);
 
   return (
     <StudentLayout>
-      <div className="max-w-5xl mx-auto">
-        <div className="mb-10">
-          <h1 className="text-3xl font-serif text-jp-indigo mb-2 flex items-center gap-3 uppercase">
-            <BookA size={28} className="text-emerald-600" />
-            TỪ VỰNG - {levelName}
+      <div className="mx-auto max-w-4xl space-y-6">
+        <div>
+          <h1 className="mb-2 flex items-center gap-2 text-2xl font-semibold text-jp-indigo">
+            <BookA size={22} className="text-emerald-600" />
+            Vocabulary - {levelName}
           </h1>
-          <p className="text-neutral-500 font-light">Chọn bài học để bắt đầu ôn tập số từ vựng thuộc trình độ {levelName.toUpperCase()}</p>
+          <p className="text-sm text-neutral-600">
+            Choose a lesson to start reviewing vocabulary for level {levelName.toUpperCase()}.
+          </p>
         </div>
 
         {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map(i => <div key={i} className="h-40 bg-white/50 border border-black/5 rounded-3xl animate-pulse" />)}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="h-28 animate-pulse rounded-2xl border border-neutral-200 bg-white" />
+            ))}
           </div>
         ) : lessons.length === 0 ? (
-          <div className="bg-white p-16 rounded-3xl border border-black/5 text-center">
-            <CopyPlus size={48} className="mx-auto text-neutral-200 mb-6" />
-            <h3 className="text-xl font-bold text-jp-indigo mb-2">Chưa có bài học nào</h3>
-            <p className="text-neutral-500">Nội dung trình độ {levelName} đang được cập nhật thêm từ vựng.</p>
+          <div className="rounded-2xl border border-neutral-200 bg-white px-6 py-12 text-center">
+            <CopyPlus size={40} className="mx-auto mb-4 text-neutral-300" />
+            <h3 className="mb-2 text-lg font-semibold text-jp-indigo">No lessons yet</h3>
+            <p className="text-sm text-neutral-600">
+              Vocabulary content for level {levelName} is being updated.
+            </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {lessons.map(lesson => (
-              <Link 
-                key={lesson.lessonId} 
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {lessons.map((lesson) => (
+              <Link
+                key={lesson.lessonId}
                 href={`/vocabulary/${levelName}/${lesson.lessonId}`}
-                className="group bg-white rounded-3xl border border-black/5 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-emerald-500/20 transition-all duration-300 block relative overflow-hidden"
+                className="group block rounded-2xl border border-neutral-200 bg-white p-5 transition-colors hover:bg-neutral-50"
               >
-                <div className="absolute -right-4 -bottom-4 text-emerald-500/5 group-hover:text-emerald-500/10 transition-colors">
-                  <BookA size={120} />
-                </div>
-                
-                <div className="relative z-10">
-                  <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full mb-4 inline-block tracking-widest uppercase">
-                    Bài học
-                  </span>
-                  <h3 className="text-xl font-bold text-jp-indigo mb-2 group-hover:text-emerald-600 transition-colors">{lesson.lessonName || `Bài ${lesson.lessonId}`}</h3>
-                  
-                  <div className="mt-8 flex items-center justify-between text-sm">
-                    <span className="font-bold text-neutral-400">{vocabCounts[lesson.lessonId] || 0} từ vựng</span>
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-                      <ArrowRight size={16} />
-                    </div>
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <span className="mb-3 inline-flex rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-600">
+                      Lesson
+                    </span>
+                    <h3 className="truncate text-base font-semibold text-jp-indigo">
+                      {lesson.lessonName || `Lesson ${lesson.lessonId}`}
+                    </h3>
+                    <p className="mt-2 text-sm text-neutral-500">{vocabCounts[lesson.lessonId] || 0} words</p>
+                  </div>
+                  <div className="mt-1 text-neutral-400 transition-colors group-hover:text-neutral-700">
+                    <ArrowRight size={18} />
                   </div>
                 </div>
               </Link>

@@ -29,7 +29,16 @@ export default function Login() {
 
       if (res.token) {
         localStorage.setItem("token", res.token);
-        if (res.user) localStorage.setItem("user", JSON.stringify(res.user));
+        if (res.user) {
+          const normalizedUser = {
+            userId: res.user.userId ?? res.user.UserId,
+            userName: res.user.userName ?? res.user.UserName,
+            fullName: res.user.fullName ?? res.user.FullName,
+            email: res.user.email ?? res.user.Email,
+            role: res.user.role ?? res.user.Role,
+          };
+          localStorage.setItem("user", JSON.stringify(normalizedUser));
+        }
         window.location.href = "/";
       } else {
         setError(res.message || "Đăng nhập thất bại. Vui lòng thử lại.");

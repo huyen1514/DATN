@@ -1,34 +1,65 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useCallback, useEffect, useState, useMemo } from "react";
+import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
-import StudentLayout from "@/components/StudentLayout";
-import { Languages, ChevronLeft, BookOpen } from "lucide-react";
 import Link from "next/link";
+import MainNavbar from "@/components/MainNavbar";
+import KanjiStroke from "@/components/KanjiStroke";
+import { BookOpen, Lightbulb, Compass } from "lucide-react";
+
+interface Level {
+  levelId: number;
+  levelName: string;
+}
+
+interface Lesson {
+  lessonId: number;
+  lessonName?: string;
+  level?: Level;
+  skillType?: string;
+}
+
+interface KanjiItem {
+  kanjiId: number;
+  lessonId: number;
+  character: string;
+  meaning: string;
+  onyomi: string;
+  kunyomi?: string;
+  example: string;
+}
 
 export default function KanjiDetailPage() {
   const params = useParams();
-  const levelName = params.levelName as string; 
-  const lessonIdStr = params.lessonId as string;
-  const lessonId = parseInt(lessonIdStr);
+  const levelName = params.levelName as string;
+  const lessonId = Number(params.lessonId as string);
 
-  const [kanjis, setKanjis] = useState<any[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [kanjis, setKanjis] = useState<KanjiItem[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { loadData(); }, [lessonId]);
-
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     try {
-      const [lessonData, allKanjis] = await Promise.all([
+      const [lessonsData, lessonData, allKanjisData] = await Promise.all([
+        api("/lessons"),
         api(`/lessons/${lessonId}`),
         api("/kanjis"),
       ]);
 
-      if (lessonData) setLessonName(lessonData.lessonName || `Bài ${lessonId}`);
-      if (Array.isArray(allKanjis)) {
-        const filtered = allKanjis.filter((k: any) => k.lessonId === lessonId);
+      if (Array.isArray(lessonsData)) {
+        const filtered = lessonsData.filter((l: Lesson) =>
+          l.level?.levelName.toLowerCase() === levelName.toLowerCase() &&
+          (!l.skillType || l.skillType === "Kanji" || l.skillType === "Tự do")
+        );
+        setLessons(filtered);
+      }
+
+      if (lessonData?.lessonName) setLessonName(lessonData.lessonName);
+
+      if (Array.isArray(allKanjisData)) {
+        const filtered = allKanjisData.filter((k: KanjiItem) => k.lessonId === lessonId);
         setKanjis(filtered);
       }
     } catch (e) {
@@ -36,66 +67,222 @@ export default function KanjiDetailPage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [lessonId, levelName]);
+
+  useEffect(() => {
+    void loadData();
+  }, [loadData]);
+
+  const sortedLessons = useMemo(
+    () => [...lessons].sort((a, b) => a.lessonId - b.lessonId),
+    [lessons]
+  );
+
+  const currentLessonIndex = useMemo(
+    () => sortedLessons.findIndex((l) => l.lessonId === lessonId),
+    [sortedLessons, lessonId]
+  );
+
+  const progressPercentage = useMemo(() => {
+    if (sortedLessons.length === 0) return 0;
+    return Math.round(((currentLessonIndex + 1) / sortedLessons.length) * 100);
+  }, [currentLessonIndex, sortedLessons.length]);
 
   return (
-    <StudentLayout>
-      <div className="max-w-5xl mx-auto">
-        <Link href={`/kanji/${levelName}`} className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-jp-indigo transition-colors mb-6 uppercase tracking-widest">
-            <ChevronLeft size={16} /> Quay lại danh sách bài học
-        </Link>
-        <div className="mb-10">
-          <h1 className="text-3xl font-serif text-jp-indigo mb-2 flex items-center gap-3">
-            <Languages size={28} className="text-rose-600" />
-            {lessonName}
-          </h1>
-          <p className="text-neutral-500 font-light">Danh sách chữ Hán (Kanji) thuộc {lessonName}</p>
-        </div>
+    <div className="min-h-screen bg-white text-slate-800">
+      <MainNavbar />
 
-        {isLoading ? (
-          <div className="text-center p-12 text-neutral-400">Đang tải dữ liệu...</div>
-        ) : kanjis.length === 0 ? (
-          <div className="bg-white p-16 rounded-3xl border border-black/5 text-center">
-            <BookOpen size={48} className="mx-auto text-neutral-200 mb-6" />
-            <h3 className="text-xl font-bold text-jp-indigo mb-2">Chưa có Kanji nào</h3>
-            <p className="text-neutral-500">Bài học này hiện chưa được thêm chữ Hán.</p>
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:px-8">
+        {/* SIDEBAR */}
+        <aside className="h-fit rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sticky top-24">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-rose-100 text-[#a71f48]">
+              <Compass size={24} />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold tracking-tight text-slate-900">Tiến độ học tập</h2>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{levelName}</p>
+            </div>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {kanjis.map(k => (
-              <div key={k.kanjiId} className="bg-white rounded-2xl border border-black/5 p-8 hover:shadow-xl hover:border-rose-500/20 transition-all duration-300 group relative overflow-hidden flex flex-col h-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="flex items-start gap-6 relative z-10">
-                  <div className="w-24 h-24 bg-rose-50 group-hover:bg-rose-100 rounded-2xl flex items-center justify-center flex-shrink-0 transition-colors border border-rose-100/50 shadow-sm">
-                    <span className="text-6xl font-serif text-rose-600 group-hover:scale-110 transition-transform drop-shadow-sm">{k.character}</span>
-                  </div>
-                  <div className="flex-1 min-w-0 pt-1">
-                    <h3 className="text-xl font-bold text-jp-indigo mb-4 pb-3 border-b border-black/5 group-hover:text-rose-700 transition-colors">{k.meaning}</h3>
-                    <div className="space-y-3 text-sm">
-                      <div className="flex items-center">
-                        <span className="text-neutral-400 font-bold text-[10px] tracking-widest uppercase w-20 flex-shrink-0">Onyomi</span> 
-                        <span className="text-neutral-700 font-bold tracking-wider flex-1 bg-neutral-50 border border-black/5 px-2.5 py-1 rounded inline-block">{k.onyomi}</span>
-                      </div>
-                      {k.kunyomi && (
-                        <div className="flex items-center">
-                          <span className="text-neutral-400 font-bold text-[10px] tracking-widest uppercase w-20 flex-shrink-0">Kunyomi</span> 
-                          <span className="text-neutral-700 font-bold tracking-wider flex-1 bg-neutral-50 border border-black/5 px-2.5 py-1 rounded inline-block">{k.kunyomi}</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                {k.example && (
-                  <div className="mt-6 pt-5 border-t border-black/5 relative z-10 flex-1 flex flex-col justify-end">
-                    <span className="text-[10px] font-bold text-rose-400/80 tracking-widest uppercase block mb-2">Ví dụ minh hoạ</span>
-                    <p className="text-neutral-600 text-sm leading-relaxed italic">{k.example}</p>
-                  </div>
-                )}
+
+          {/* Progress Bar */}
+          <div className="mb-8">
+            <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-700">
+              <span>Đã hoàn thành</span>
+              <span className="text-[#a71f48]">{progressPercentage}%</span>
+            </div>
+            <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-[#a71f48] to-rose-400 transition-all duration-500 ease-out"
+                style={{ width: `${progressPercentage}%` }}
+              ></div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <div className="mb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-slate-700">
+                <BookOpen size={16} className="text-[#a71f48]" />
+                <span>Danh sách học Kanji</span>
               </div>
-            ))}
+
+              <div className="flex flex-col gap-1 text-sm font-medium">
+                {sortedLessons.map((lesson) => {
+                  const isActive = lesson.lessonId === lessonId;
+                  return (
+                    <Link
+                      key={lesson.lessonId}
+                      href={`/kanji/${levelName}/${lesson.lessonId}`}
+                      className={`rounded-xl px-3 py-2.5 transition-all ${isActive
+                          ? "bg-rose-100/50 text-[#a71f48] shadow-sm ring-1 ring-rose-200"
+                          : "text-slate-600 hover:bg-white hover:text-slate-900 hover:shadow-sm hover:ring-1 hover:ring-slate-200"
+                        }`}
+                    >
+                      {lesson.lessonName || `Bài ${lesson.lessonId}`}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="rounded-2xl bg-amber-50 p-4 border border-amber-100/60">
+              <div className="flex items-center gap-2 mb-2 text-amber-800 font-bold text-sm">
+                <Lightbulb size={16} />
+                <span>Mẹo học tốt</span>
+              </div>
+              <p className="text-xs text-amber-700/80 leading-relaxed font-medium">
+                Hãy dùng tính năng "Mẫu viết" để xem cách viết và kết hợp với "Tự tập viết" để não bộ ghi nhớ qua vận động nhé.
+              </p>
+            </div>
           </div>
-        )}
+        </aside>
+
+        {/* MAIN CONTENT */}
+        <main className="flex flex-col gap-8">
+          {/* Header */}
+          <div className="flex flex-col gap-2 border-b border-slate-200 pb-6">
+            <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">
+              Học chữ Kanji
+            </h1>
+            <div className="flex items-center gap-3 text-sm font-medium text-slate-500">
+              <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#a71f48]">
+                {levelName}
+              </span>
+              <span className="h-1.5 w-1.5 rounded-full bg-slate-300"></span>
+              <span className="text-base text-slate-600">{lessonName || `Bài ${lessonId}`}</span>
+            </div>
+          </div>
+
+          {/* Grid Kanji */}
+          <div className="flex flex-col gap-10 pb-12">
+            {isLoading ? (
+              <div className="flex flex-col items-center justify-center rounded-3xl border border-slate-200 bg-white py-24 shadow-sm">
+                <div className="h-10 w-10 animate-spin rounded-full border-4 border-slate-100 border-t-[#a71f48]"></div>
+                <p className="mt-4 text-sm font-medium text-slate-500">Đang tải chữ Hán...</p>
+              </div>
+            ) : kanjis.length === 0 ? (
+              <div className="rounded-3xl border border-slate-200 bg-white py-24 text-center text-slate-500 shadow-sm font-medium">
+                Chưa có chữ Kanji nào cho bài học này.
+              </div>
+            ) : (
+              kanjis.map((k, idx) => (
+                <article
+                  key={k.kanjiId}
+                  className="bg-white rounded-3xl border border-slate-200 shadow-sm transition-all hover:shadow-md"
+                >
+                  <div className="p-6 md:p-8">
+                     {/* Top Header */}
+                     <div className="flex items-start justify-between border-b border-slate-100 pb-6">
+                        <div>
+                           <h2 className="text-5xl md:text-6xl font-normal text-blue-600 mb-3">{k.character}</h2>
+                           <div className="flex items-center text-sm font-semibold text-slate-500 relative px-2.5 py-0.5">
+                              {/* Biểu diễn dấu ngoặc vuông nhạt như trong thiết kế */}
+                              <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-slate-300"></span>
+                              <span className="absolute left-0 top-0 w-1.5 h-[2px] bg-slate-300"></span>
+                              <span className="absolute left-0 bottom-0 w-1.5 h-[2px] bg-slate-300"></span>
+                              <span className="uppercase tracking-widest">{k.meaning}</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     {/* Middle Body */}
+                     <div className="flex flex-col lg:flex-row gap-8 py-8 border-b border-slate-100">
+                        {/* Left: Info */}
+                        <div className="flex-1 flex flex-col justify-between">
+                           <div>
+                             <h3 className="text-xl font-bold text-slate-800 mb-5">Phát âm</h3>
+                             
+                             <div className="space-y-6">
+                                {/* Kunyomi */}
+                                <div>
+                                   <div className="flex items-center gap-2 mb-2">
+                                      <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                                      <span className="text-sm font-semibold text-slate-700">Kunyomi</span>
+                                   </div>
+                                   <div className="pl-4 border-l-[2px] border-slate-100 ml-[3px]">
+                                      <p className="text-blue-600 text-base leading-relaxed tracking-wider font-medium">
+                                         {k.kunyomi || "Không có"}
+                                      </p>
+                                   </div>
+                                </div>
+                                
+                                {/* Onyomi */}
+                                <div>
+                                   <div className="flex items-center gap-2 mb-2">
+                                      <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                                      <span className="text-sm font-semibold text-slate-700">Onyomi</span>
+                                   </div>
+                                   <div className="pl-4 border-l-[2px] border-slate-100 ml-[3px]">
+                                      <p className="text-red-500 text-base leading-relaxed tracking-wider font-medium">
+                                         {k.onyomi || "Không có"}
+                                      </p>
+                                   </div>
+                                </div>
+                             </div>
+                           </div>
+
+                           {/* Mock Stats */}
+                           <div className="flex flex-wrap gap-4 mt-8 pt-6">
+                              <div className="flex flex-col">
+                                 <span className="text-[11px] font-bold uppercase tracking-wider bg-slate-100 px-3 py-1.5 rounded-md text-slate-500 mb-1">Số nét</span>
+                                 <span className="text-sm font-bold text-slate-800 ml-1">Tra cứu</span>
+                              </div>
+                              <div className="flex flex-col">
+                                 <span className="text-[11px] font-bold uppercase tracking-wider bg-slate-100 px-3 py-1.5 rounded-md text-slate-500 mb-1">JLPT</span>
+                                 <span className="text-sm font-bold text-slate-800 ml-1 uppercase">{levelName}</span>
+                              </div>
+                              <div className="flex flex-col">
+                                 <span className="text-[11px] font-bold uppercase tracking-wider bg-slate-100 px-3 py-1.5 rounded-md text-slate-500 mb-1">Tần suất ⓘ</span>
+                                 <span className="text-sm font-bold text-slate-800 ml-1">Đang cập nhật</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        {/* Right: Kanji Stroke */}
+                        <div className="shrink-0 w-full lg:w-[280px] flex items-center justify-center">
+                           <KanjiStroke character={k.character} size={200} />
+                        </div>
+                     </div>
+
+                     {/* Nghĩa */}
+                     <div className="pt-8">
+                        <h3 className="text-xl font-bold text-slate-800 mb-4">Nghĩa</h3>
+                        <div className="pl-5">
+                           <ul className="list-disc text-base text-slate-700 font-medium space-y-2 marker:text-slate-400">
+                              <li>{k.example || k.meaning}</li>
+                           </ul>
+                           {k.example && (
+                              <button className="text-blue-600 text-sm font-semibold hover:underline mt-3">Xem thêm</button>
+                           )}
+                        </div>
+                     </div>
+                  </div>
+                </article>
+              ))
+            )}
+          </div>
+        </main>
       </div>
-    </StudentLayout>
+    </div>
   );
 }

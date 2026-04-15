@@ -15,6 +15,7 @@ import {
   Search,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import MainNavbar from "@/components/MainNavbar";
 import EditFlashCardModal, {
   EditFlashCardData,
 } from "@/components/EditFlashCardModal";
@@ -203,10 +204,13 @@ export default function FlashcardDashboard() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-jp-washi flex items-center justify-center">
-        <div className="space-y-4 text-center">
-          <Loader2 className="w-12 h-12 animate-spin mx-auto text-jp-indigo" />
-          <p className="text-jp-indigo font-semibold">Loading flashcards...</p>
+      <div className="min-h-screen bg-jp-washi">
+        <MainNavbar />
+        <div className="flex items-center justify-center py-24">
+          <div className="space-y-4 text-center">
+            <Loader2 className="w-12 h-12 animate-spin mx-auto text-jp-indigo" />
+            <p className="text-jp-indigo font-semibold">Loading flashcards...</p>
+          </div>
         </div>
       </div>
     );
@@ -214,8 +218,9 @@ export default function FlashcardDashboard() {
 
   return (
     <div className="min-h-screen bg-jp-washi text-jp-ink">
+      <MainNavbar />
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-white/50 backdrop-blur-md border-b border-black/10 px-6 py-4">
+      <header className="sticky top-[88px] z-30 bg-white/50 backdrop-blur-md border-b border-black/10 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <button
             onClick={() => router.back()}

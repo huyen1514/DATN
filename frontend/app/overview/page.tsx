@@ -11,10 +11,6 @@ export default function OverviewPage() {
   const [recentDecks, setRecentDecks] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
   const loadData = async () => {
     try {
       const [folders, decks] = await Promise.all([
@@ -28,7 +24,7 @@ export default function OverviewPage() {
       }
 
       let totalFlashcards = 0;
-      let allDecks = Array.isArray(decks) ? decks : [];
+      const allDecks = Array.isArray(decks) ? decks : [];
       allDecks.forEach((d: any) => {
         totalFlashcards += (d.flashCardCount || 0);
       });
@@ -47,6 +43,10 @@ export default function OverviewPage() {
     }
   };
 
+  useEffect(() => {
+    void loadData();
+  }, []);
+
   const statCards = [
     { label: "Không gian học", value: stats.folders, icon: Folder, color: "text-blue-500", bg: "bg-blue-50" },
     { label: "Bộ thẻ từ", value: stats.decks, icon: Layers, color: "text-jp-red", bg: "bg-red-50" },
@@ -63,7 +63,7 @@ export default function OverviewPage() {
 
         {/* Quick Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <Link href="/courses" className="group bg-gradient-to-br from-violet-500 to-violet-700 text-white p-6 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-4">
+          <Link href="/" className="group bg-gradient-to-br from-violet-500 to-violet-700 text-white p-6 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-4">
             <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
               <GraduationCap size={28} />
             </div>

@@ -1,34 +1,60 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
-import StudentLayout from "@/components/StudentLayout";
-import { FileText, ChevronLeft, BookOpen } from "lucide-react";
 import Link from "next/link";
+import MainNavbar from "@/components/MainNavbar";
+
+interface Level {
+  levelId: number;
+  levelName: string;
+}
+
+interface Lesson {
+  lessonId: number;
+  lessonName?: string;
+  level?: Level;
+  skillType?: string;
+}
+
+interface ReadingItem {
+  readingId: number;
+  lessonId: number;
+  content: string;
+  question: string;
+}
 
 export default function ReadingDetailPage() {
   const params = useParams();
-  const levelName = params.levelName as string; 
-  const lessonIdStr = params.lessonId as string;
-  const lessonId = parseInt(lessonIdStr);
+  const levelName = params.levelName as string;
+  const lessonId = Number(params.lessonId as string);
 
-  const [readings, setReadings] = useState<any[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [readings, setReadings] = useState<ReadingItem[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { loadData(); }, [lessonId]);
-
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     try {
-      const [lessonData, allReadings] = await Promise.all([
+      const [lessonsData, lessonData, allReadingsData] = await Promise.all([
+        api("/lessons"),
         api(`/lessons/${lessonId}`),
         api("/readings"),
       ]);
 
-      if (lessonData) setLessonName(lessonData.lessonName || `Bài ${lessonId}`);
-      if (Array.isArray(allReadings)) {
-        const filtered = allReadings.filter((r: any) => r.lessonId === lessonId);
+      if (Array.isArray(lessonsData)) {
+        const filtered = lessonsData.filter((l: Lesson) => 
+          l.level?.levelName === levelName && 
+          (!l.skillType || l.skillType === "Đọc hiểu" || l.skillType === "Tự do")
+        );
+        setLessons(filtered);
+      }
+
+      if (lessonData?.lessonName) setLessonName(lessonData.lessonName);
+
+      if (Array.isArray(allReadingsData)) {
+        const filtered = allReadingsData.filter((r: ReadingItem) => r.lessonId === lessonId);
         setReadings(filtered);
       }
     } catch (e) {
@@ -36,57 +62,110 @@ export default function ReadingDetailPage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [lessonId, levelName]);
+
+  useEffect(() => {
+    void loadData();
+  }, [loadData]);
 
   return (
-    <StudentLayout>
-      <div className="max-w-5xl mx-auto">
-        <Link href={`/reading/${levelName}`} className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-jp-indigo transition-colors mb-6 uppercase tracking-widest">
-            <ChevronLeft size={16} /> Quay lại danh sách bài học
-        </Link>
-        <div className="mb-10">
-          <h1 className="text-3xl font-serif text-jp-indigo mb-2 flex items-center gap-3">
-            <FileText size={28} className="text-indigo-600" />
-            {lessonName}
-          </h1>
-          <p className="text-neutral-500 font-light">Danh sách các bài đọc hiểu thuộc {lessonName}</p>
+    <div className="min-h-screen bg-white text-jp-ink">
+      <MainNavbar />
+
+      {/* MAIN CONTENT */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+        {/* TITLE SECTION */}
+        <div className="mb-12 relative">
+          <div className="inline-block">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-jp-indigo mb-2">
+              {lessonName || "Đọc Hiểu"}
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-jp-red to-jp-sakura"></div>
+          </div>
+          <p className="text-jp-ink/60 mt-4 text-lg">Luyện tập đọc hiểu tiếng Nhật</p>
         </div>
 
-        {isLoading ? (
-          <div className="text-center p-12 text-neutral-400">Đang tải dữ liệu...</div>
-        ) : readings.length === 0 ? (
-          <div className="bg-white p-16 rounded-3xl border border-black/5 text-center">
-            <BookOpen size={48} className="mx-auto text-neutral-200 mb-6" />
-            <h3 className="text-xl font-bold text-jp-indigo mb-2">Chưa có bài đọc nào</h3>
-            <p className="text-neutral-500">Bài học này hiện chưa được thêm bài đọc hiểu.</p>
-          </div>
-        ) : (
-          <div className="space-y-10">
-            {readings.map((item, idx) => (
-              <div key={item.readingId} className="bg-white rounded-2xl border border-black/5 p-8 md:p-12 shadow-sm hover:shadow-xl hover:border-indigo-500/20 transition-all duration-300">
-                <div className="flex items-center gap-4 mb-8 border-b border-black/5 pb-6">
-                  <span className="text-sm font-bold bg-indigo-50 text-indigo-600 px-6 py-2 rounded-full tracking-widest uppercase">
-                    Đoạn văn {idx + 1}
-                  </span>
-                </div>
-                
-                <div className="bg-stone-50/50 rounded-2xl p-8 md:p-10 mb-10 border border-stone-200/60 shadow-inner">
-                  <p className="text-xl text-jp-indigo leading-loose whitespace-pre-wrap font-serif text-justify">
-                    {item.content}
-                  </p>
-                </div>
-                
-                <div className="bg-blue-50/30 rounded-2xl p-8 border border-blue-100/50">
-                  <p className="text-[10px] font-bold text-blue-500/80 uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-blue-500"></span> Câu hỏi tham khảo
-                  </p>
-                  <p className="text-neutral-700 font-medium text-lg leading-relaxed">{item.question}</p>
-                </div>
+        {/* CONTENT GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* LEFT: READING CARDS */}
+          <div className="lg:col-span-3 space-y-6">
+            {isLoading ? (
+              <div className="text-center py-12 text-jp-ink/40">
+                <p className="text-lg">正在加载...</p>
               </div>
-            ))}
+            ) : readings.length === 0 ? (
+              <div className="bg-white rounded-2xl border-2 border-jp-red/10 p-12 text-center">
+                <p className="text-jp-ink/60 text-lg">Chưa có bài đọc nào</p>
+              </div>
+            ) : (
+              readings.map((item, idx) => (
+                <div 
+                  key={item.readingId} 
+                  className="group bg-white rounded-2xl border-2 border-jp-red/10 hover:border-jp-red/30 p-6 md:p-8 transition-all shadow-sm hover:shadow-lg"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-jp-sakura flex items-center justify-center flex-shrink-0 font-serif font-bold text-jp-red">
+                      {(idx + 1).toString().padStart(2, "0")}
+                    </div>
+                    <h3 className="text-xl font-serif font-bold text-jp-indigo mt-1">
+                      Đoạn {idx + 1}
+                    </h3>
+                  </div>
+
+                  <div className="bg-jp-washi/50 rounded-lg border border-jp-red/10 p-4 mb-4">
+                    <p className="text-jp-ink leading-relaxed whitespace-pre-wrap font-serif text-sm">
+                      {item.content}
+                    </p>
+                  </div>
+
+                  <div className="bg-jp-sakura/20 rounded-lg p-4 border border-jp-red/10">
+                    <p className="text-xs font-bold text-jp-red/70 uppercase tracking-wide mb-2">Câu hỏi</p>
+                    <p className="text-sm text-jp-ink">{item.question}</p>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
-        )}
+
+          {/* RIGHT: SIDEBAR - LESSON NAVIGATOR */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-20 bg-white rounded-2xl border-2 border-jp-red/10 p-6 shadow-sm">
+              <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-6 pb-3 border-b-2 border-jp-red/20">
+                📚 {lessons.length} Bài Học
+              </h3>
+
+              {/* LESSON GRID */}
+              <div className="grid grid-cols-5 lg:grid-cols-4 gap-2">
+                {lessons.map((lesson, idx) => (
+                  <Link
+                    key={lesson.lessonId}
+                    href={`/reading/${levelName}/${lesson.lessonId}`}
+                    className={`aspect-square flex items-center justify-center rounded-lg text-xs font-bold transition ${
+                      lesson.lessonId === lessonId
+                        ? "bg-jp-red text-white shadow-md scale-105"
+                        : "bg-jp-sakura text-jp-indigo hover:bg-jp-red hover:text-white"
+                    }`}
+                    title={lesson.lessonName}
+                  >
+                    {idx + 1}
+                  </Link>
+                ))}
+              </div>
+
+              {/* INFO CARD */}
+              <div className="mt-8 pt-6 border-t-2 border-jp-red/10">
+                <p className="text-xs text-jp-ink/60 font-medium mb-2">💡 Mẹo:</p>
+                <p className="text-xs text-jp-ink/70 leading-relaxed">
+                  Đọc chậm từng câu để hiểu ý nghĩa, sử dụng từ điển khi cần thiết.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </StudentLayout>
+
+      {/* FOOTER DECORATION */}
+      <div className="h-1 bg-gradient-to-r from-jp-red via-jp-sakura to-jp-red mt-20"></div>
+    </div>
   );
 }

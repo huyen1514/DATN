@@ -6,6 +6,7 @@ import { api } from "@/lib/api";
 import FlashCardDisplay from "@/components/FlashCardDisplay";
 import DifficultyButtons from "@/components/DifficultyButtons";
 import ProgressRing from "@/components/ProgressRing";
+import MainNavbar from "@/components/MainNavbar";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -117,10 +118,13 @@ export default function LearnPage({ params }: { params: { deckId: string } }) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-jp-washi flex items-center justify-center">
-        <div className="text-center space-y-4">
-          <div className="w-12 h-12 border-4 border-jp-indigo border-t-transparent rounded-full animate-spin mx-auto" />
-          <p className="text-jp-indigo font-semibold">Loading flashcards...</p>
+      <div className="min-h-screen bg-jp-washi">
+        <MainNavbar />
+        <div className="flex items-center justify-center py-24">
+          <div className="text-center space-y-4">
+            <div className="w-12 h-12 border-4 border-jp-indigo border-t-transparent rounded-full animate-spin mx-auto" />
+            <p className="text-jp-indigo font-semibold">Loading flashcards...</p>
+          </div>
         </div>
       </div>
     );
@@ -190,8 +194,9 @@ export default function LearnPage({ params }: { params: { deckId: string } }) {
 
   return (
     <div className="min-h-screen bg-jp-washi flex flex-col text-jp-ink">
+      <MainNavbar />
       {/* Header */}
-      <header className="sticky top-0 z-20 bg-white/50 backdrop-blur-md border-b border-black/10 px-6 py-4">
+      <header className="sticky top-[88px] z-20 bg-white/50 backdrop-blur-md border-b border-black/10 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <button
             onClick={handleBack}

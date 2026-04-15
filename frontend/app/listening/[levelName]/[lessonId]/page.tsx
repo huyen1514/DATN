@@ -1,38 +1,66 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
-import StudentLayout from "@/components/StudentLayout";
-import { Headphones, ChevronLeft, BookOpen, Volume2, CheckCircle2, XCircle } from "lucide-react";
 import Link from "next/link";
+import MainNavbar from "@/components/MainNavbar";
+
+interface Level {
+  levelId: number;
+  levelName: string;
+}
+
+interface Lesson {
+  lessonId: number;
+  lessonName?: string;
+  level?: Level;
+  skillType?: string;
+}
+
+interface ListeningItem {
+  listeningId: number;
+  lessonId: number;
+  audioUrl?: string;
+  imageUrl?: string;
+  transcript?: string;
+  question: string;
+  optionA: string;
+  optionB: string;
+  optionC: string;
+  optionD: string;
+}
 
 export default function ListeningDetailPage() {
   const params = useParams();
-  const levelName = params.levelName as string; 
-  const lessonIdStr = params.lessonId as string;
-  const lessonId = parseInt(lessonIdStr);
+  const levelName = params.levelName as string;
+  const lessonId = Number(params.lessonId as string);
 
-  const [listenings, setListenings] = useState<any[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [listenings, setListenings] = useState<ListeningItem[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  // States for quiz
-  const [listeningAnswers, setListeningAnswers] = useState<Record<number, string>>({});
-  const [listeningChecked, setListeningChecked] = useState<Record<number, boolean>>({});
-
-  useEffect(() => { loadData(); }, [lessonId]);
-
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     try {
-      const [lessonData, allListenings] = await Promise.all([
+      const [lessonsData, lessonData, allListeningsData] = await Promise.all([
+        api("/lessons"),
         api(`/lessons/${lessonId}`),
         api("/listenings"),
       ]);
 
-      if (lessonData) setLessonName(lessonData.lessonName || `Bài ${lessonId}`);
-      if (Array.isArray(allListenings)) {
-        const filtered = allListenings.filter((l: any) => l.lessonId === lessonId);
+      if (Array.isArray(lessonsData)) {
+        const filtered = lessonsData.filter((l: Lesson) => 
+          l.level?.levelName === levelName && 
+          (!l.skillType || l.skillType === "Nghe hiểu" || l.skillType === "Tự do")
+        );
+        setLessons(filtered);
+      }
+
+      if (lessonData?.lessonName) setLessonName(lessonData.lessonName);
+
+      if (Array.isArray(allListeningsData)) {
+        const filtered = allListeningsData.filter((l: ListeningItem) => l.lessonId === lessonId);
         setListenings(filtered);
       }
     } catch (e) {
@@ -40,131 +68,151 @@ export default function ListeningDetailPage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [lessonId, levelName]);
 
-  const handleAnswer = (id: number, answer: string) => {
-    if (listeningChecked[id]) return;
-    setListeningAnswers(prev => ({ ...prev, [id]: answer }));
-  };
-
-  const checkAnswer = (id: number) => {
-    setListeningChecked(prev => ({ ...prev, [id]: true }));
-  };
+  useEffect(() => {
+    void loadData();
+  }, [loadData]);
 
   return (
-    <StudentLayout>
-      <div className="max-w-5xl mx-auto">
-        <Link href={`/listening/${levelName}`} className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-jp-indigo transition-colors mb-6 uppercase tracking-widest">
-            <ChevronLeft size={16} /> Quay lại danh sách bài học
-        </Link>
-        <div className="mb-10">
-          <h1 className="text-3xl font-serif text-jp-indigo mb-2 flex items-center gap-3">
-            <Headphones size={28} className="text-cyan-600" />
-            {lessonName}
-          </h1>
-          <p className="text-neutral-500 font-light">Danh sách các bài luyện nghe thuộc {lessonName}</p>
+    <div className="min-h-screen bg-white text-jp-ink">
+      <MainNavbar />
+
+      {/* MAIN CONTENT */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+        {/* TITLE SECTION */}
+        <div className="mb-12 relative">
+          <div className="inline-block">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-jp-indigo mb-2">
+              {lessonName || "Nghe Hiểu"}
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-jp-red to-jp-sakura"></div>
+          </div>
+          <p className="text-jp-ink/60 mt-4 text-lg">Luyện tập nghe tiếng Nhật</p>
         </div>
 
-        {isLoading ? (
-          <div className="text-center p-12 text-neutral-400">Đang tải dữ liệu...</div>
-        ) : listenings.length === 0 ? (
-          <div className="bg-white p-16 rounded-3xl border border-black/5 text-center">
-            <BookOpen size={48} className="mx-auto text-neutral-200 mb-6" />
-            <h3 className="text-xl font-bold text-jp-indigo mb-2">Chưa có bài nghe nào</h3>
-            <p className="text-neutral-500">Bài học này hiện chưa được thêm bài nghe hiểu.</p>
-          </div>
-        ) : (
-          <div className="space-y-8">
-            {listenings.map((item, idx) => {
-              const selected = listeningAnswers[item.listeningId];
-              const checked = listeningChecked[item.listeningId];
-              const isCorrect = selected === item.correctAnswer;
-              
-              return (
-                <div key={item.listeningId} className="bg-white rounded-2xl border border-black/5 p-8 md:p-10 hover:shadow-xl hover:border-cyan-500/20 transition-all duration-300">
-                  <div className="flex flex-wrap items-center gap-4 mb-8 border-b border-black/5 pb-6">
-                    <span className="text-sm font-bold bg-cyan-50 text-cyan-700 px-6 py-2 rounded-full uppercase tracking-widest border border-cyan-100">
+        {/* CONTENT GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* LEFT: LISTENING CARDS */}
+          <div className="lg:col-span-3 space-y-6">
+            {isLoading ? (
+              <div className="text-center py-12 text-jp-ink/40">
+                <p className="text-lg">正在加载...</p>
+              </div>
+            ) : listenings.length === 0 ? (
+              <div className="bg-white rounded-2xl border-2 border-jp-red/10 p-12 text-center">
+                <p className="text-jp-ink/60 text-lg">Chưa có bài nghe nào</p>
+              </div>
+            ) : (
+              listenings.map((item, idx) => (
+                <div 
+                  key={item.listeningId} 
+                  className="group bg-white rounded-2xl border-2 border-jp-red/10 hover:border-jp-red/30 p-6 md:p-8 transition-all shadow-sm hover:shadow-lg"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-jp-sakura flex items-center justify-center flex-shrink-0 font-serif font-bold text-jp-red">
+                      {(idx + 1).toString().padStart(2, "0")}
+                    </div>
+                    <h3 className="text-xl font-serif font-bold text-jp-indigo">
                       Câu {idx + 1}
-                    </span>
+                    </h3>
                     {item.audioUrl && (
                       <button
-                        onClick={() => new Audio(item.audioUrl).play()}
-                        className="flex items-center gap-2 text-sm font-bold text-white bg-cyan-600 hover:bg-cyan-500 px-6 py-2 rounded-full transition-all shadow-md hover:shadow-lg focus:ring-4 focus:ring-cyan-500/20 active:scale-95"
+                        onClick={() => {
+                          const audio = new Audio(item.audioUrl);
+                          audio.play().catch(e => console.error("Audio play error:", e));
+                        }}
+                        className="ml-auto px-4 py-2 bg-jp-red hover:bg-red-700 text-white rounded-lg font-bold transition text-sm"
+                        title="Phát âm thanh"
                       >
-                        <Volume2 size={16} /> Nghe Audio
+                        🔊 Nghe
                       </button>
                     )}
                   </div>
+
                   {item.imageUrl && (
-                    <div className="mb-6 flex justify-center">
-                      <img
+                    <div className="mb-4 flex justify-center">
+                      <img 
                         src={item.imageUrl}
                         alt="Hình minh họa"
-                        className="max-h-56 rounded-2xl object-contain border border-black/5 shadow-sm"
+                        className="max-h-64 rounded-lg border border-jp-red/10 object-contain"
                       />
                     </div>
                   )}
-                  
-                  <p className="text-2xl font-bold text-jp-indigo mb-10 leading-snug">{item.question}</p>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
-                    {["A", "B", "C", "D"].map(opt => {
-                      const optionText = item[`option${opt}`];
-                      const isSelected = selected === opt;
-                      const isRight = checked && opt === item.correctAnswer;
-                      const isWrong = checked && isSelected && !isCorrect && opt !== item.correctAnswer;
-                      
+
+                  <div className="bg-jp-washi/50 rounded-lg border border-jp-red/10 p-4 mb-4">
+                    <p className="text-jp-ink font-serif font-bold leading-relaxed">{item.question}</p>
+                  </div>
+
+                  {/* OPTIONS */}
+                  <div className="space-y-2 mb-4">
+                    {["A", "B", "C", "D"].map((option) => {
+                      const valueKey = `option${option}` as keyof ListeningItem;
+                      const text = item[valueKey];
                       return (
-                        <button
-                          key={opt}
-                          onClick={() => handleAnswer(item.listeningId, opt)}
-                          disabled={checked}
-                          className={`text-left p-6 rounded-2xl border-2 transition-all text-base font-medium flex items-center gap-5 group
-                            ${isRight ? "border-emerald-500 bg-emerald-50/50 text-emerald-800 shadow-sm" : 
-                              isWrong ? "border-red-400 bg-red-50/50 text-red-700 shadow-sm" :
-                              isSelected ? "border-cyan-500 bg-cyan-50/30 text-cyan-800 shadow-md ring-4 ring-cyan-500/10" : 
-                              "border-neutral-100 hover:border-cyan-300 hover:bg-cyan-50/10 text-neutral-700 bg-white shadow-sm hover:shadow-md"
-                            }
-                            ${checked ? "cursor-default opacity-90" : "cursor-pointer active:scale-[0.98]"}
-                          `}
+                        <div 
+                          key={option} 
+                          className="flex items-start gap-3 p-3 border border-jp-red/10 rounded-lg hover:border-jp-red/30 hover:bg-jp-sakura/10 transition cursor-pointer"
                         >
-                          <span className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 transition-colors
-                            ${isRight ? "bg-emerald-500 text-white" : 
-                              isWrong ? "bg-red-400 text-white" : 
-                              isSelected ? "bg-cyan-500 text-white shadow-sm" : 
-                              "bg-neutral-100 text-neutral-500 group-hover:bg-cyan-100 group-hover:text-cyan-700"}
-                          `}>{opt}</span>
-                          <span className="flex-1 leading-relaxed">{optionText}</span>
-                          {isRight && <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center animate-bounce-short"><CheckCircle2 size={18} className="text-emerald-600" /></div>}
-                          {isWrong && <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center animate-shake"><XCircle size={18} className="text-red-500" /></div>}
-                        </button>
+                          <span className="w-8 h-8 font-bold bg-jp-sakura text-jp-red rounded-lg flex items-center justify-center text-sm flex-shrink-0">
+                            {option}
+                          </span>
+                          <span className="text-sm text-jp-ink leading-relaxed">{text}</span>
+                        </div>
                       );
                     })}
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                    {selected && !checked && (
-                      <button onClick={() => checkAnswer(item.listeningId)} className="px-8 py-4 bg-jp-indigo text-white rounded-xl text-sm font-bold tracking-[0.1em] hover:bg-jp-red transition-colors shadow-lg uppercase active:scale-95 text-center">
-                        Kiểm tra đáp án
-                      </button>
-                    )}
-
-                    {checked && (
-                      <div className={`p-5 rounded-2xl text-md font-bold flex items-center gap-4 flex-1 shadow-sm ${isCorrect ? "bg-emerald-50 text-emerald-800 border border-emerald-200" : "bg-red-50 text-red-800 border border-red-200"}`}>
-                        {isCorrect ? (
-                          <><div className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center flex-shrink-0"><CheckCircle2 size={24} /></div> <span className="text-lg">Chính xác tuyệt đối!</span></>
-                        ) : (
-                          <><div className="w-10 h-10 rounded-full bg-red-400 text-white flex items-center justify-center flex-shrink-0"><XCircle size={24} /></div> <span className="text-lg">Rất tiếc! Đáp án đúng là {item.correctAnswer}</span></>
-                        )}
-                      </div>
-                    )}
-                  </div>
+                  {item.transcript && (
+                    <div className="bg-jp-sakura/20 rounded-lg p-4 border border-jp-red/10">
+                      <p className="text-xs font-bold text-jp-red/70 uppercase tracking-wide mb-2">Bản ghi chép</p>
+                      <p className="text-sm text-jp-ink italic">{item.transcript}</p>
+                    </div>
+                  )}
                 </div>
-              );
-            })}
+              ))
+            )}
           </div>
-        )}
+
+          {/* RIGHT: SIDEBAR - LESSON NAVIGATOR */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-20 bg-white rounded-2xl border-2 border-jp-red/10 p-6 shadow-sm">
+              <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-6 pb-3 border-b-2 border-jp-red/20">
+                📚 {lessons.length} Bài Học
+              </h3>
+
+              {/* LESSON GRID */}
+              <div className="grid grid-cols-5 lg:grid-cols-4 gap-2">
+                {lessons.map((lesson, idx) => (
+                  <Link
+                    key={lesson.lessonId}
+                    href={`/listening/${levelName}/${lesson.lessonId}`}
+                    className={`aspect-square flex items-center justify-center rounded-lg text-xs font-bold transition ${
+                      lesson.lessonId === lessonId
+                        ? "bg-jp-red text-white shadow-md scale-105"
+                        : "bg-jp-sakura text-jp-indigo hover:bg-jp-red hover:text-white"
+                    }`}
+                    title={lesson.lessonName}
+                  >
+                    {idx + 1}
+                  </Link>
+                ))}
+              </div>
+
+              {/* INFO CARD */}
+              <div className="mt-8 pt-6 border-t-2 border-jp-red/10">
+                <p className="text-xs text-jp-ink/60 font-medium mb-2">💡 Mẹo:</p>
+                <p className="text-xs text-jp-ink/70 leading-relaxed">
+                  Nghe nhiều lần để quen với độ dài âm tiếng Nhật, chú ý các chi tiết nhỏ.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </StudentLayout>
+
+      {/* FOOTER DECORATION */}
+      <div className="h-1 bg-gradient-to-r from-jp-red via-jp-sakura to-jp-red mt-20"></div>
+    </div>
   );
 }

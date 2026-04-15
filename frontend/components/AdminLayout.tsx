@@ -24,25 +24,36 @@ import {
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [user, setUser] = useState<{ fullName?: string; userName?: string; role?: string } | null>(null);
+
+  const normalizeUser = (raw: any) => ({
+    fullName: raw?.fullName ?? raw?.FullName ?? "",
+    userName: raw?.userName ?? raw?.UserName ?? "",
+    role: raw?.role ?? raw?.Role ?? "",
+  });
+
+  const [authState] = useState<{
+    user: { fullName?: string; userName?: string; role?: string } | null | undefined;
+    redirectTo: "/login" | "/" | null;
+  } | undefined>(() => {
+    if (typeof window === "undefined") return undefined;
+    const userStr = localStorage.getItem("user");
+    if (!userStr) return { user: null, redirectTo: "/login" };
+    try {
+      const parsed = JSON.parse(userStr);
+      const normalized = normalizeUser(parsed);
+      if (normalized.role !== "Admin") return { user: null, redirectTo: "/" };
+      return { user: normalized, redirectTo: null };
+    } catch {
+      return { user: null, redirectTo: "/login" };
+    }
+  });
+  const user = authState?.user;
 
   useEffect(() => {
-    const userStr = localStorage.getItem("user");
-    if (userStr) {
-      try {
-        const parsed = JSON.parse(userStr);
-        if (parsed.role !== "Admin") {
-          window.location.href = "/";
-          return;
-        }
-        setUser(parsed);
-      } catch (e) {
-        window.location.href = "/login";
-      }
-    } else {
-      window.location.href = "/login";
+    if (authState?.redirectTo) {
+      window.location.href = authState.redirectTo;
     }
-  }, []);
+  }, [authState]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -84,6 +95,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     },
   ];
 
+  if (user === undefined) return null;
   if (!user) return null;
 
   return (

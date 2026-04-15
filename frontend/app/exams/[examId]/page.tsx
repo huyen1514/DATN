@@ -4,6 +4,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { api } from "@/lib/api";
 import { Clock, ChevronLeft, ChevronRight, Send, AlertTriangle } from "lucide-react";
+import MainNavbar from "@/components/MainNavbar";
 
 interface ExamQuestion {
   examQuestionId: number;
@@ -131,8 +132,11 @@ export default function TakeExamPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-jp-washi flex items-center justify-center">
-        <div className="text-center"><div className="animate-spin w-10 h-10 border-4 border-jp-indigo/20 border-t-jp-indigo rounded-full mx-auto mb-4" /><p className="text-jp-indigo font-bold">Đang tải đề thi...</p></div>
+      <div className="min-h-screen bg-jp-washi">
+        <MainNavbar />
+        <div className="flex items-center justify-center py-24">
+          <div className="text-center"><div className="animate-spin w-10 h-10 border-4 border-jp-indigo/20 border-t-jp-indigo rounded-full mx-auto mb-4" /><p className="text-jp-indigo font-bold">Đang tải đề thi...</p></div>
+        </div>
       </div>
     );
   }
@@ -152,8 +156,9 @@ export default function TakeExamPage() {
 
   return (
     <div className="min-h-screen bg-[#f0f2f5] flex flex-col">
+      <MainNavbar />
       {/* Top Bar */}
-      <header className="bg-white border-b border-black/10 px-6 py-3 flex items-center justify-between sticky top-0 z-30">
+      <header className="bg-white border-b border-black/10 px-6 py-3 flex items-center justify-between sticky top-[88px] z-30">
         <div className="flex items-center gap-4">
           <button onClick={() => router.push("/exams")} className="text-neutral-400 hover:text-jp-indigo transition-colors"><ChevronLeft size={20} /></button>
           <h1 className="font-bold text-jp-indigo text-lg">{exam?.examName}</h1>
