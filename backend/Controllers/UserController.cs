@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using System.Security.Claims;
 
 namespace Controllers
 {
@@ -109,9 +110,15 @@ namespace Controllers
         [HttpGet("me")]
         public async Task<IActionResult> GetProfile()
         {
-            var userId = int.Parse(User.FindFirst("UserId")?.Value);
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                ?? User.FindFirst("UserId")?.Value;
+
+            if (!int.TryParse(userIdClaim, out var userId))
+                return Unauthorized(new { message = "Invalid token payload" });
 
             var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+                return NotFound(new { message = "User not found" });
 
             return Ok(new UserResponse(user));
         }
