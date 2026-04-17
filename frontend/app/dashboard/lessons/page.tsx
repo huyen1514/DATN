@@ -21,6 +21,7 @@ export default function AdminLessons() {
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [filterLevel, setFilterLevel] = useState<number | "all">("all");
+  const [filterSkillType, setFilterSkillType] = useState<string>("all");
 
   // Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -95,7 +96,8 @@ export default function AdminLessons() {
   const filtered = lessons.filter(l => {
     const matchSearch = l.lessonName.toLowerCase().includes(search.toLowerCase());
     const matchLevel = filterLevel === "all" || l.levelId === filterLevel;
-    return matchSearch && matchLevel;
+    const matchSkill = filterSkillType === "all" || l.skillType === filterSkillType || (filterSkillType === "Tự do" && !l.skillType);
+    return matchSearch && matchLevel && matchSkill;
   });
 
   return (
@@ -115,8 +117,8 @@ export default function AdminLessons() {
         </div>
 
         {/* Filters */}
-        <div className="flex gap-3 mb-6">
-          <div className="relative flex-1">
+        <div className="flex flex-wrap gap-3 mb-6">
+          <div className="relative flex-1 min-w-[200px]">
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" />
             <input type="text" placeholder="Tìm kiếm bài học..." value={search} onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-3 bg-white border border-black/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo text-sm" />
@@ -125,6 +127,16 @@ export default function AdminLessons() {
             className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[160px]">
             <option value="all">Tất cả cấp độ</option>
             {levels.map(l => <option key={l.levelId} value={l.levelId}>{l.levelName}</option>)}
+          </select>
+          <select value={filterSkillType} onChange={(e) => setFilterSkillType(e.target.value)}
+            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[160px]">
+            <option value="all">Tất cả kỹ năng</option>
+            <option value="Tự do">Tự do (Kết hợp)</option>
+            <option value="Từ vựng">Từ vựng</option>
+            <option value="Ngữ pháp">Ngữ pháp</option>
+            <option value="Kanji">Kanji (Chữ Hán)</option>
+            <option value="Đọc hiểu">Đọc hiểu</option>
+            <option value="Nghe hiểu">Nghe hiểu</option>
           </select>
         </div>
 

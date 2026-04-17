@@ -43,7 +43,7 @@ export default function GrammarDetailPage() {
       const [lessonsData, lessonData, allGrammarsData] = await Promise.all([
         api("/lessons"),
         api(`/lessons/${lessonId}`),
-        api("/grammars"),
+        api(`/grammars?lessonId=${lessonId}`),
       ]);
 
       if (Array.isArray(lessonsData)) {
@@ -58,10 +58,7 @@ export default function GrammarDetailPage() {
       if (lessonData?.lessonName) setLessonName(lessonData.lessonName);
 
       if (Array.isArray(allGrammarsData)) {
-        const filtered = allGrammarsData.filter(
-          (g: GrammarItem) => g.lessonId === lessonId
-        );
-        setGrammars(filtered);
+        setGrammars(allGrammarsData as GrammarItem[]);
       }
     } catch (e) {
       console.error(e);

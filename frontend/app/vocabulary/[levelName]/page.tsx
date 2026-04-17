@@ -64,28 +64,29 @@ export default function VocabularyLessonsPage() {
         return;
       }
 
-      const [levelLessonsData, allVocabsData] = await Promise.all([
+      const [levelLessonsData, countsData] = await Promise.all([
         api(`/lessons/level/${targetLevel.levelId}`),
-        api("/vocabularies"),
+        api("/vocabularies/counts"),
       ]);
 
-      if (!Array.isArray(levelLessonsData) || !Array.isArray(allVocabsData)) {
+      if (!Array.isArray(levelLessonsData)) {
         setLessons([]);
         setVocabCounts({});
         return;
       }
 
       const levelLessons = levelLessonsData as Lesson[];
-      const allVocabs = allVocabsData as VocabularyItem[];
 
       const counts: Record<number, number> = {};
-      allVocabs.forEach((v) => {
-        counts[v.lessonId] = (counts[v.lessonId] || 0) + 1;
-      });
+      if (Array.isArray(countsData)) {
+        countsData.forEach((item: any) => {
+          counts[item.lessonId] = item.count;
+        });
+      }
       setVocabCounts(counts);
 
       const validLessons = levelLessons.filter(
-        (l) => isVocabularySkill(l.skillType) && (counts[l.lessonId] || 0) > 0
+        (l) => isVocabularySkill(l.skillType)
       );
       setLessons(validLessons);
     } catch (e) {

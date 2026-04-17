@@ -25,21 +25,22 @@ export default function GrammarLessonsPage() {
       
       if (!targetLevel) { setIsLoading(false); return; }
 
-      const [levelLessons, allGrammars] = await Promise.all([
+      const [levelLessons, countsData] = await Promise.all([
         api(`/lessons/level/${targetLevel.levelId}`),
-        api("/grammars"),
+        api("/grammars/counts"),
       ]);
 
-      if (Array.isArray(levelLessons) && Array.isArray(allGrammars)) {
+      if (Array.isArray(levelLessons)) {
         const counts: Record<number, number> = {};
-        allGrammars.forEach((g: any) => {
-          counts[g.lessonId] = (counts[g.lessonId] || 0) + 1;
-        });
+        if (Array.isArray(countsData)) {
+          countsData.forEach((item: any) => {
+            counts[item.lessonId] = item.count;
+          });
+        }
         setGrammarCounts(counts);
 
         const validLessons = levelLessons.filter((l: any) => 
-          (l.skillType === "Ngữ pháp" || l.skillType === "Tự do" || !l.skillType) && 
-          counts[l.lessonId] && counts[l.lessonId] > 0
+          (l.skillType === "Ngữ pháp" || l.skillType === "Tự do" || !l.skillType)
         );
         setLessons(validLessons);
       }

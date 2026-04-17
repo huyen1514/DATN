@@ -72,7 +72,7 @@ export default function VocabularyDetailPage() {
       const [levelLessonsData, lessonData, allVocabsData] = await Promise.all([
         api(`/lessons/level/${targetLevel.levelId}`),
         api(`/lessons/${lessonId}`),
-        api("/vocabularies"),
+        api(`/vocabularies?lessonId=${lessonId}`),
       ]);
 
       if (Array.isArray(levelLessonsData)) {
@@ -85,10 +85,7 @@ export default function VocabularyDetailPage() {
       if (lessonData?.lessonName) setLessonName(lessonData.lessonName);
 
       if (Array.isArray(allVocabsData)) {
-        const currentLessonVocabs = (allVocabsData as VocabularyItem[]).filter(
-          (item) => item.lessonId === lessonId
-        );
-        setVocabs(currentLessonVocabs);
+        setVocabs(allVocabsData as VocabularyItem[]);
       }
     } catch (e) {
       console.error(e);
@@ -273,12 +270,12 @@ export default function VocabularyDetailPage() {
                     {/* Header: Reading + Word + POS */}
                     <div className="flex flex-wrap items-baseline gap-3 md:gap-4 pt-2 md:pt-0">
                       {/* Reading First */}
-                      <span className="text-3xl sm:text-4xl font-bold text-[#a71f48] tracking-tight md:text-5xl">
+                      <span className="text-xl sm:text-2xl font-bold text-[#a71f48] tracking-tight md:text-3xl">
                         {v.reading || v.word}
                       </span>
                       {/* Word Beside Reading */}
                       {v.reading && v.word !== v.reading && (
-                        <span className="text-xl sm:text-2xl font-bold text-slate-500 md:text-3xl">
+                        <span className="text-base sm:text-lg font-bold text-slate-500 md:text-xl">
                           【{v.word}】
                         </span>
                       )}
@@ -292,7 +289,7 @@ export default function VocabularyDetailPage() {
                       
                     {/* Meaning */}
                     <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-xl sm:text-2xl font-bold text-slate-800">
+                      <h3 className="text-base sm:text-lg font-bold text-slate-800">
                         {v.meaning || "-"}
                       </h3>
                     </div>
