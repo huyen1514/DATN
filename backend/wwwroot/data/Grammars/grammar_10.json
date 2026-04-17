@@ -1,0 +1,44 @@
+[
+    {
+        "GrammarName": "Sự tồn tại: あります và います",
+        "Structure": "Danh từ が あります / います",
+        "Meaning": "Dùng để biểu thị sự tồn tại của đồ vật hoặc con người/động vật.\n- 「あります」: Dùng cho đối tượng không tự chuyển động được (đồ vật, thực vật, địa điểm, sự kiện).\n- 「います」: Dùng cho đối tượng có thể tự chuyển động (người, động vật).",
+        "Example": "こんぴゅーたーが あります。\nーおとこのひとが います。\n(Có cái máy tính.\n-Có người đàn ông.)",
+        "LessonId": 39
+    },
+    {
+        "GrammarName": "Địa điểm tồn tại: Danh từ (địa điểm) に Danh từ が あります / います",
+        "Structure": "N1 (địa điểm) に N2 が あります / います",
+        "Meaning": "Mẫu câu này dùng để diễn tả ở một địa điểm N1 có sự tồn tại của vật/người N2. Trợ từ 「に」 được dùng để chỉ vị trí tĩnh của đối tượng. \n- Khi muốn hỏi có cái gì/ai ở địa điểm đó, ta dùng nghi vấn từ 「なに」(cái gì) hoặc 「だれ」(ai).",
+        "Example": "わたしの へやに つくえが あります。\nーあそこに だれが いますか。\n(Trong phòng của tôi có cái bàn.\n-Ở đằng kia có ai vậy?)",
+        "LessonId": 39
+    },
+    {
+        "GrammarName": "Vị trí của chủ thể: Danh từ は Danh từ (địa điểm) に あります / います",
+        "Structure": "N1 は N2 (địa điểm) に あります / います",
+        "Meaning": "Mẫu câu này dùng khi N1 đã được xác định hoặc là chủ đề của cuộc hội thoại, người nói muốn cho biết vị trí của N1 đang ở đâu (N2). \n- Nghi vấn từ dùng để hỏi vị trí là 「どこ」.",
+        "Example": "みらーさんは じむしょに います。\nーぱそんこんは どこに ありますか。\n(Anh Miller ở trong văn phòng.\n-Cái máy tính ở đâu vậy?)",
+        "LessonId": 39
+    },
+    {
+        "GrammarName": "Danh từ chỉ vị trí: N1 (vật) の N2 (vị trí)",
+        "Structure": "N1 の [うえ / した / まえ / うしろ / みぎ / ひだり / なか / そと / となり / ちかく / あいだ]",
+        "Meaning": "Các danh từ chỉ vị trí được nối với danh từ chỉ vật bằng trợ từ 「の」 để xác định cụ thể điểm tồn tại.\n- Ví dụ: うえ (trên), した (dưới), まえ (trước), うしろ (sau), なか (trong), そと (ngoài), となり (bên cạnh),... \n- Lưu ý: 「となり」 dùng cho hai vật cùng loại ở sát cạnh nhau.",
+        "Example": "つくえの うえに しゃしんが あります。\nーはこの なかに なにが ありますか。\n(Trên bàn có bức ảnh.\n-Trong hộp có cái gì thế?)",
+        "LessonId": 39
+    },
+    {
+        "GrammarName": "Trợ từ liệt kê không đầy đủ: Danh từ 1 や Danh từ 2",
+        "Structure": "N1 や N2",
+        "Meaning": "Khác với trợ từ 「と」 dùng để liệt kê toàn bộ, trợ từ 「や」 dùng để liệt kê một vài danh từ tiêu biểu trong số nhiều danh từ hiện có. Có thể dịch là 'N1 và N2... (chẳng hạn)'. Thường đi kèm với 「など」 ở cuối để nhấn mạnh ý còn nữa.",
+        "Example": "はこの なかに てがみや しゃしんが あります。\n(Trong hộp có những thứ như là thư và ảnh.)",
+        "LessonId": 39
+    },
+    {
+        "GrammarName": "Xác nhận thông tin: ~ ですか (với nghi vấn từ)",
+        "Structure": "N は なんですか / だれですか",
+        "Meaning": "Khi bạn muốn hỏi về một đối tượng cụ thể hoặc người nào đó tại một vị trí cụ thể. Trong bài này thường dùng kết hợp với cấu trúc chỉ vị trí để tìm đồ vật hoặc người.",
+        "Example": "ゆびんきょくは どこですか。\nーえきの ちかくです。\n(Bưu điện ở đâu vậy?\n-Ở gần nhà ga.)",
+        "LessonId": 39
+    }
+]

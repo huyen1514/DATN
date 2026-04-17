@@ -1,0 +1,298 @@
+[
+    {
+        "Word": "ここ",
+        "Reading": "ここ",
+        "Meaning": "đây, chỗ này",
+        "PartOfSpeech": "Đại từ chỉ thị",
+        "LessonId": 6,
+        "Example": "ここは 教室です。\n(Đây là phòng học.)"
+    },
+    {
+        "Word": "そこ",
+        "Reading": "そこ",
+        "Meaning": "đó, chỗ đó",
+        "PartOfSpeech": "Đại từ chỉ thị",
+        "LessonId": 6,
+        "Example": "そこは 事務所です。\n(Đó là văn phòng.)"
+    },
+    {
+        "Word": "あそこ",
+        "Reading": "あそこ",
+        "Meaning": "kia, chỗ kia",
+        "PartOfSpeech": "Đại từ chỉ thị",
+        "LessonId": 6,
+        "Example": "あそこは 食堂です。\n(Chỗ kia là nhà ăn.)"
+    },
+    {
+        "Word": "どこ",
+        "Reading": "どこ",
+        "Meaning": "đâu, chỗ nào",
+        "PartOfSpeech": "Đại từ nghi vấn",
+        "LessonId": 6,
+        "Example": "お手洗いは どこですか。\n(Nhà vệ sinh ở đâu vậy?)"
+    },
+    {
+        "Word": "こちら",
+        "Reading": "こちら",
+        "Meaning": "phía này, chỗ này (lịch sự)",
+        "PartOfSpeech": "Đại từ chỉ thị",
+        "LessonId": 6,
+        "Example": "こちらは 受付です。\n(Chỗ này là quầy lễ tân.)"
+    },
+    {
+        "Word": "そちら",
+        "Reading": "そちら",
+        "Meaning": "phía đó, chỗ đó (lịch sự)",
+        "PartOfSpeech": "Đại từ chỉ thị",
+        "LessonId": 6,
+        "Example": "そちらは 会議室です。\n(Chỗ đó là phòng họp.)"
+    },
+    {
+        "Word": "あちら",
+        "Reading": "あちら",
+        "Meaning": "phía kia, chỗ kia (lịch sự)",
+        "PartOfSpeech": "Đại từ chỉ thị",
+        "LessonId": 6,
+        "Example": "あちらは 階段です。\n(Phía kia là cầu thang.)"
+    },
+    {
+        "Word": "どちら",
+        "Reading": "どちら",
+        "Meaning": "phía nào, đằng nào (lịch sự)",
+        "PartOfSpeech": "Đại từ nghi vấn",
+        "LessonId": 6,
+        "Example": "エレベーターは どちらですか。\n(Thang máy ở phía nào vậy?)"
+    },
+    {
+        "Word": "教室",
+        "Reading": "きょうしつ",
+        "Meaning": "lớp học, phòng học",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "教室に 学生が います。\n(Trong lớp học có sinh viên.)"
+    },
+    {
+        "Word": "食堂",
+        "Reading": "しょくどう",
+        "Meaning": "nhà ăn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "12時に 食堂へ 行きます。\n(Tôi đi đến nhà ăn vào lúc 12 giờ.)"
+    },
+    {
+        "Word": "事務所",
+        "Reading": "じむしょ",
+        "Meaning": "văn phòng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "事務所は 2階に あります。\n(Văn phòng nằm ở tầng 2.)"
+    },
+    {
+        "Word": "会議室",
+        "Reading": "かいぎしつ",
+        "Meaning": "phòng họp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "会議室は どこですか。\n(Phòng họp ở đâu?)"
+    },
+    {
+        "Word": "受付",
+        "Reading": "うけつけ",
+        "Meaning": "quầy lễ tân, phòng thường trực",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "受付で 名前を 書きます。\n(Viết tên tại quầy lễ tân.)"
+    },
+    {
+        "Word": "ロビー",
+        "Reading": "ロビー",
+        "Meaning": "hành lang, đại sảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "ロビーで 友達を 待ちます。\n(Đợi bạn ở đại sảnh.)"
+    },
+    {
+        "Word": "部屋",
+        "Reading": "へや",
+        "Meaning": "căn phòng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "私の 部屋は ここです。\n(Phòng của tôi ở đây.)"
+    },
+    {
+        "Word": "トイレ",
+        "Reading": "トイレ",
+        "Meaning": "nhà vệ sinh (toa-lét)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "トイレは あそこです。\n(Nhà vệ sinh ở kia.)"
+    },
+    {
+        "Word": "お手洗い",
+        "Reading": "おてあらい",
+        "Meaning": "phòng vệ sinh (cách nói lịch sự)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "お手洗いは どこですか。\n(Phòng vệ sinh ở đâu ạ?)"
+    },
+    {
+        "Word": "階段",
+        "Reading": "かいだん",
+        "Meaning": "cầu thang",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "階段を 降ります。\n(Đi xuống cầu thang.)"
+    },
+    {
+        "Word": "エレベーター",
+        "Reading": "エレベーター",
+        "Meaning": "thang máy",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "エレベーターで 3階へ 行きます。\n(Đi thang máy lên tầng 3.)"
+    },
+    {
+        "Word": "エスカレーター",
+        "Reading": "エスカレーター",
+        "Meaning": "thang cuốn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "エスカレーターは 事務所の 隣です。\n(Thang cuốn nằm bên cạnh văn phòng.)"
+    },
+    {
+        "Word": "自動販売機",
+        "Reading": "じどうはんばいき",
+        "Meaning": "máy bán hàng tự động",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "自動販売機で ジュースを 買います。\n(Mua nước trái cây ở máy bán hàng tự động.)"
+    },
+    {
+        "Word": "電話",
+        "Reading": "でんわ",
+        "Meaning": "điện thoại",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "電話は あちらです。\n(Điện thoại ở phía kia.)"
+    },
+    {
+        "Word": "お国",
+        "Reading": "おくに",
+        "Meaning": "đất nước (của bạn)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "お国は どちらですか。\n(Đất nước của bạn là nước nào vậy?)"
+    },
+    {
+        "Word": "会社",
+        "Reading": "かいしゃ",
+        "Meaning": "công ty",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "会社は どちらですか。\n(Công ty của bạn ở đâu?)"
+    },
+    {
+        "Word": "うち",
+        "Reading": "うち",
+        "Meaning": "nhà",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "うちへ 帰ります。\n(Tôi đi về nhà.)"
+    },
+    {
+        "Word": "靴",
+        "Reading": "くつ",
+        "Meaning": "giày",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "新しい 靴を 買いました。\n(Tôi đã mua đôi giày mới.)"
+    },
+    {
+        "Word": "ネクタイ",
+        "Reading": "ネクタイ",
+        "Meaning": "cà vạt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "この ネクタイは いくらですか。\n(Cái cà vạt này bao nhiêu tiền?)"
+    },
+    {
+        "Word": "ワイン",
+        "Reading": "ワイン",
+        "Meaning": "rượu vang",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "フランスの ワインを 飲みます。\n(Uống rượu vang của Pháp.)"
+    },
+    {
+        "Word": "売り場",
+        "Reading": "うりば",
+        "Meaning": "quầy bán hàng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "ワイン売り場は 地下です。\n(Quầy bán rượu vang ở dưới tầng hầm.)"
+    },
+    {
+        "Word": "地下",
+        "Reading": "ちか",
+        "Meaning": "tầng hầm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 6,
+        "Example": "地下に 駐車場が あります。\n(Dưới tầng hầm có bãi đỗ xe.)"
+    },
+    {
+        "Word": "～階",
+        "Reading": "～かい(がい)",
+        "Meaning": "tầng thứ ~",
+        "PartOfSpeech": "Hậu tố / Trợ số từ",
+        "LessonId": 6,
+        "Example": "事務所は 2階です。\n(Văn phòng ở tầng 2.)"
+    },
+    {
+        "Word": "何階",
+        "Reading": "なんがい",
+        "Meaning": "tầng mấy",
+        "PartOfSpeech": "Đại từ nghi vấn",
+        "LessonId": 6,
+        "Example": "食堂は 何階ですか。\n(Nhà ăn ở tầng mấy?)"
+    },
+    {
+        "Word": "～円",
+        "Reading": "～えん",
+        "Meaning": "yên (tiền Nhật)",
+        "PartOfSpeech": "Hậu tố / Trợ số từ",
+        "LessonId": 6,
+        "Example": "この 鞄は 5,000円です。\n(Cái cặp này giá 5,000 yên.)"
+    },
+    {
+        "Word": "いくら",
+        "Reading": "いくら",
+        "Meaning": "bao nhiêu tiền",
+        "PartOfSpeech": "Đại từ nghi vấn",
+        "LessonId": 6,
+        "Example": "これは いくらですか。\n(Cái này bao nhiêu tiền?)"
+    },
+    {
+        "Word": "百",
+        "Reading": "ひゃく",
+        "Meaning": "trăm",
+        "PartOfSpeech": "Số từ",
+        "LessonId": 6,
+        "Example": "100円の りんごです。\n(Táo giá 100 yên.)"
+    },
+    {
+        "Word": "千",
+        "Reading": "せん",
+        "Meaning": "nghìn",
+        "PartOfSpeech": "Số từ",
+        "LessonId": 6,
+        "Example": "2,000円です。\n(Giá là 2,000 yên.)"
+    },
+    {
+        "Word": "万",
+        "Reading": "まん",
+        "Meaning": "vạn (mười nghìn)",
+        "PartOfSpeech": "Số từ",
+        "LessonId": 6,
+        "Example": "1万円 あります。\n(Tôi có 1 vạn yên.)"
+    }
+]

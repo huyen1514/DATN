@@ -1,0 +1,154 @@
+[
+    {
+        "Word": "着ます",
+        "Reading": "きます",
+        "Meaning": "mặc (áo sơ mi, v.v.)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 27,
+        "Example": "しゃつを きます。\n(Tôi mặc áo sơ mi.)"
+    },
+    {
+        "Word": "はきます",
+        "Reading": "はきます",
+        "Meaning": "mặc (quần, váy), đi (giày, tất)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 27,
+        "Example": "くつを はきます。\n(Tôi đi giày.)"
+    },
+    {
+        "Word": "かぶります",
+        "Reading": "かぶります",
+        "Meaning": "đội (mũ, v.v.)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 27,
+        "Example": "ぼうしを かぶります。\n(Tôi đội mũ.)"
+    },
+    {
+        "Word": "かけます",
+        "Reading": "かけます",
+        "Meaning": "đeo [kính]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 27,
+        "Example": "めがねを かけます。\n(Tôi đeo kính.)"
+    },
+    {
+        "Word": "生まれます",
+        "Reading": "うまれます",
+        "Meaning": "sinh ra",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 27,
+        "Example": "1990ねんに うまれました。\n(Tôi sinh năm 1990.)"
+    },
+    {
+        "Word": "コート",
+        "Reading": "こーと",
+        "Meaning": "áo khoác",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "こーとを きます。\n(Mặc áo khoác.)"
+    },
+    {
+        "Word": "セーター",
+        "Reading": "せーたー",
+        "Meaning": "áo len",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "あかい せーたーを かいました。\n(Tôi đã mua cái áo len màu đỏ.)"
+    },
+    {
+        "Word": "スーツ",
+        "Reading": "すーつ",
+        "Meaning": "bộ com-lê",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "すーつを きて います。\n(Tôi đang mặc com-lê.)"
+    },
+    {
+        "Word": "帽子",
+        "Reading": "ぼうし",
+        "Meaning": "mũ, nón",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "ぼうしを かぶって います。\n(Tôi đang đội mũ.)"
+    },
+    {
+        "Word": "眼鏡",
+        "Reading": "めがね",
+        "Meaning": "kính",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "めがねを かけて います。\n(Tôi đang đeo kính.)"
+    },
+    {
+        "Word": "よく",
+        "Reading": "よく",
+        "Meaning": "hay, thường (tần suất)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 27,
+        "Example": "よく えいがを みに いきます。\n(Tôi hay đi xem phim.)"
+    },
+    {
+        "Word": "おめでとうございます",
+        "Reading": "おめでとうございます",
+        "Meaning": "chúc mừng",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 27,
+        "Example": "たんじょうび おめでとうございます。\n(Chúc mừng sinh nhật.)"
+    },
+    {
+        "Word": "家",
+        "Reading": "うち",
+        "Meaning": "nhà",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "わたしの うちは あそこです。\n(Nhà của tôi ở kia.)"
+    },
+    {
+        "Word": "ケーキ",
+        "Reading": "けーき",
+        "Meaning": "bánh ngọt, bánh ga-tô",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "けーきを たべます。\n(Tôi ăn bánh ngọt.)"
+    },
+    {
+        "Word": "お弁当",
+        "Reading": "おべんとう",
+        "Meaning": "cơm hộp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "おべんとうを つくりました。\n(Tôi đã làm cơm hộp.)"
+    },
+    {
+        "Word": "ロボット",
+        "Reading": "ろぼっと",
+        "Meaning": "rô-bốt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "ろぼっとが あります。\n(Có con rô-bốt.)"
+    },
+    {
+        "Word": "ユーモア",
+        "Reading": "ゆーもあ",
+        "Meaning": "hài hước",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "ゆーもあが ありますね。\n(Bạn hài hước nhỉ.)"
+    },
+    {
+        "Word": "都合",
+        "Reading": "つごう",
+        "Meaning": "sự thuận tiện (về thời gian)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 27,
+        "Example": "つごうが いいです。\n(Thời gian thuận tiện.)"
+    },
+    {
+        "Word": "探しにいきます",
+        "Reading": "さがしにいきます",
+        "Meaning": "đi tìm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 27,
+        "Example": "うちを さがしに いきます。\n(Tôi đi tìm nhà.)"
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Phân loại động từ và Cách chia thể て (Te-form)",
+        "Structure": "Động từ chia về thể て",
+        "Meaning": "Động từ tiếng Nhật được chia làm 3 nhóm dựa trên đuôi của thể ます:\n- Nhóm 1: Kết thúc bằng các âm hàng [i]. Cách chia: [い,ち,り] -> [って]; [に,び,み] -> [んで]; [き] -> [いて]; [ぎ] -> [いで]; [し] -> [して]. Ngoại lệ: [いきます] -> [いって].\n- Nhóm 2: Kết thúc bằng âm hàng [e] hoặc một số từ đặc biệt hàng [i]. Cách chia: Bỏ [ます] thêm [て].\n- Nhóm 3: [します] -> [して]; [きます] -> [きて].",
+        "Example": "かきます -> かいて\nのみます -> のんで\nたべます -> たべれば\n(Viết -> Đang viết / Hãy viết...)",
+        "LessonId": 43
+    },
+    {
+        "GrammarName": "Mẫu câu yêu cầu lịch sự: ～てください",
+        "Structure": "Động từ (thể て) + ください",
+        "Meaning": "Dùng để yêu cầu, nhờ vả hoặc sai khiến người nghe thực hiện một hành động nào đó một cách lịch sự. \n- Khi muốn nhờ vả, thường thêm 「すみませんが」 vào đầu câu để thể hiện sự khiêm nhường.",
+        "Example": "すみませんが, この Kanji を よんでください。\n(Xin lỗi, hãy đọc giúp tôi chữ Kanji này.)",
+        "LessonId": 43
+    },
+    {
+        "GrammarName": "Hành động đang diễn ra: ～ています",
+        "Structure": "Động từ (thể て) + います",
+        "Meaning": "Dùng để diễn tả một hành động đang được thực hiện tại thời điểm nói (tương đương với thì hiện tại tiếp diễn trong tiếng Anh).",
+        "Example": "みらーさんは いま でんわを かけています。\n(Anh Miller bây giờ đang gọi điện thoại.)",
+        "LessonId": 43
+    },
+    {
+        "GrammarName": "Đề nghị giúp đỡ: ～ましょうか",
+        "Structure": "Động từ (bỏ ます) + ましょうか",
+        "Meaning": "Mẫu câu này dùng khi người nói muốn đề nghị làm một việc gì đó để giúp đỡ người nghe. \n- Nếu đồng ý: 「すみません. おねがいします」(Cảm ơn, nhờ bạn nhé).\n- Nếu từ chối: 「いいえ, けっこうです」(Không, tôi ổn rồi).",
+        "Example": "あめが ふっていますね. かさを かしましょうか。\nーすみません. おねがいします。\n(Trời đang mưa nhỉ. Tôi cho bạn mượn ô nhé?\n-Cảm ơn, nhờ bạn nhé.)",
+        "LessonId": 43
+    },
+    {
+        "GrammarName": "Trợ từ が chỉ hiện tượng tự nhiên",
+        "Structure": "Danh từ (tự nhiên) が Động từ",
+        "Meaning": "Khi muốn miêu tả một hiện tượng tự nhiên như mưa (あめ), tuyết (ゆき), chúng ta sử dụng trợ từ 「가」 để biểu thị chủ thể của hành động thay vì dùng trợ từ 「は」.",
+        "Example": "あめが ふっています。\n(Trời đang mưa.)",
+        "LessonId": 43
+    }
+]

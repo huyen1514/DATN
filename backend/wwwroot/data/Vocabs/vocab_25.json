@@ -1,0 +1,130 @@
+[
+    {
+        "Word": "考えます",
+        "Reading": "かんがえます",
+        "Meaning": "suy nghĩ, cân nhắc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 30,
+        "Example": "いろいろ かんがえます。\n(Tôi suy nghĩ nhiều thứ.)"
+    },
+    {
+        "Word": "着きます",
+        "Reading": "つきます",
+        "Meaning": "đến [ga]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 30,
+        "Example": "えきに ついたら、でんわして ください。\n(Khi nào đến ga hãy gọi điện cho tôi.)"
+    },
+    {
+        "Word": "留学します",
+        "Reading": "りゅうがくします",
+        "Meaning": "đi du học",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 30,
+        "Example": "にほんへ りゅうがくしたいです。\n(Tôi muốn đi du học Nhật Bản.)"
+    },
+    {
+        "Word": "年を取ります",
+        "Reading": "としをとります",
+        "Meaning": "thêm tuổi, già đi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 30,
+        "Example": "としを とっても、しごとを したいです。\n(Dù có tuổi rồi tôi vẫn muốn làm việc.)"
+    },
+    {
+        "Word": "田舎",
+        "Reading": "いなか",
+        "Meaning": "quê, nông thôn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 30,
+        "Example": "いなかへ かえりたいです。\n(Tôi muốn về quê.)"
+    },
+    {
+        "Word": "大使館",
+        "Reading": "たいしかん",
+        "Meaning": "đại sứ quán",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 30,
+        "Example": "たいしかんへ いきます。\n(Tôi đi đến đại sứ quán.)"
+    },
+    {
+        "Word": "グループ",
+        "Reading": "ぐるーぷ",
+        "Meaning": "nhóm, đoàn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 30,
+        "Example": "ぐるーぷで りょこうします。\n(Chúng tôi đi du lịch theo nhóm.)"
+    },
+    {
+        "Word": "チャンス",
+        "Reading": "ちゃんす",
+        "Meaning": "cơ hội",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 30,
+        "Example": "ちゃんすが あったら、にほんへ いきたいです。\n(Nếu có cơ hội, tôi muốn đi Nhật.)"
+    },
+    {
+        "Word": "億",
+        "Reading": "おく",
+        "Meaning": "một trăm triệu",
+        "PartOfSpeech": "Số từ",
+        "LessonId": 30,
+        "Example": "1おくえん あったら、なにを しますか。\n(Nếu có 1 trăm triệu yên, bạn sẽ làm gì?)"
+    },
+    {
+        "Word": "もし",
+        "Reading": "もし",
+        "Meaning": "nếu",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 30,
+        "Example": "もし 1おくえん あったら、うちを かいます。\n(Nếu có 1 trăm triệu yên, tôi sẽ mua nhà.)"
+    },
+    {
+        "Word": "いくら",
+        "Reading": "いくら",
+        "Meaning": "bao nhiêu đi chăng nữa",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 30,
+        "Example": "いくら かんがえても、わかりません。\n(Dù có suy nghĩ bao nhiêu đi nữa tôi cũng không hiểu.)"
+    },
+    {
+        "Word": "転勤",
+        "Reading": "てんきん",
+        "Meaning": "việc chuyển công tác",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 30,
+        "Example": "てんきんしても、がんばります。\n(Dù có chuyển công tác tôi cũng sẽ cố gắng.)"
+    },
+    {
+        "Word": "一杯飲みましょう",
+        "Reading": "いっぱいのみましょう",
+        "Meaning": "chúng ta cùng uống một ly nhé",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 30,
+        "Example": "いっしょに いっぱい のみましょう。\n(Chúng ta cùng uống một ly nhé.)"
+    },
+    {
+        "Word": "お世話になりました",
+        "Reading": "おせわになりました",
+        "Meaning": "cảm ơn anh/chị đã giúp đỡ",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 30,
+        "Example": "いろいろ おせわに なりました。\n(Cảm ơn anh/chị đã giúp đỡ tôi rất nhiều.)"
+    },
+    {
+        "Word": "頑張ります",
+        "Reading": "がんばります",
+        "Meaning": "cố gắng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 30,
+        "Example": "これからも がんばります。\n(Từ giờ tôi cũng sẽ cố gắng.)"
+    },
+    {
+        "Word": "どうぞお元気で",
+        "Reading": "どうぞおげんきで",
+        "Meaning": "chúc anh/chị mạnh khỏe (dùng khi chia tay)",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 30,
+        "Example": "どうぞ おげんきで。\n(Chúc anh/chị mạnh khỏe.)"
+    }
+]

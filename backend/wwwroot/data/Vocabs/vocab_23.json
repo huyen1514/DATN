@@ -1,0 +1,178 @@
+[
+    {
+        "Word": "時",
+        "Reading": "とき",
+        "Meaning": "khi, lúc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "こどもの とき、よく およぎました。\n(Khi còn nhỏ, tôi thường hay đi bơi.)"
+    },
+    {
+        "Word": "引きます",
+        "Reading": "ひきます",
+        "Meaning": "kéo",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "この どあを ひいて ください。\n(Hãy kéo cái cửa này.)"
+    },
+    {
+        "Word": "変えます",
+        "Reading": "かえます",
+        "Meaning": "đổi, thay đổi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "おかねを かえます。\n(Tôi đổi tiền.)"
+    },
+    {
+        "Word": "触ります",
+        "Reading": "さわります",
+        "Meaning": "sờ, chạm vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "きかいに さわらないで ください。\n(Làm ơn đừng chạm vào máy móc.)"
+    },
+    {
+        "Word": "出ます",
+        "Reading": "でます",
+        "Meaning": "ra [tiền thừa]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "おつりが でます。\n(Tiền thừa sẽ ra.)"
+    },
+    {
+        "Word": "歩きます",
+        "Reading": "あるきます",
+        "Meaning": "đi bộ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "みちを あるきます。\n(Tôi đi bộ trên đường.)"
+    },
+    {
+        "Word": "渡ります",
+        "Reading": "わたります",
+        "Meaning": "băng qua [cầu]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "はしを わたります。\n(Băng qua cầu.)"
+    },
+    {
+        "Word": "気をつけます",
+        "Reading": "きをつけます",
+        "Meaning": "cẩn thận, chú ý",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "くるまに きをつけます。\n(Chú ý xe ô tô.)"
+    },
+    {
+        "Word": "引っ越しします",
+        "Reading": "ひっこしします",
+        "Meaning": "chuyển nhà",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 28,
+        "Example": "あした ひっこしします。\n(Ngày mai tôi chuyển nhà.)"
+    },
+    {
+        "Word": "電気屋",
+        "Reading": "でんきや",
+        "Meaning": "cửa hàng đồ điện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "でんきやで てれびを かいました。\n(Tôi đã mua tivi ở cửa hàng đồ điện.)"
+    },
+    {
+        "Word": "サイズ",
+        "Reading": "さいず",
+        "Meaning": "kích cỡ (size)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "さいずが あいません。\n(Kích cỡ không vừa.)"
+    },
+    {
+        "Word": "音",
+        "Reading": "おと",
+        "Meaning": "âm thanh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "おとを おおきく します。\n(Tôi chỉnh âm thanh to lên.)"
+    },
+    {
+        "Word": "機械",
+        "Reading": "きかい",
+        "Meaning": "máy móc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "この きかいの つかいかたを おしえて ください。\n(Hãy chỉ cho tôi cách dùng cái máy này.)"
+    },
+    {
+        "Word": "つまみ",
+        "Reading": "つまみ",
+        "Meaning": "núm vặn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "この つまみを まわします。\n(Vặn cái núm này.)"
+    },
+    {
+        "Word": "故障",
+        "Reading": "こしょう",
+        "Meaning": "hỏng hóc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "ぱそこんが こしょうしました。\n(Máy tính bị hỏng rồi.)"
+    },
+    {
+        "Word": "道",
+        "Reading": "みち",
+        "Meaning": "đường xá",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "みちを ききます。\n(Hỏi đường.)"
+    },
+    {
+        "Word": "交差点",
+        "Reading": "こうさてん",
+        "Meaning": "ngã tư",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "こうさてんを みぎに まがります。\n(Rẽ phải ở ngã tư.)"
+    },
+    {
+        "Word": "信号",
+        "Reading": "しんごう",
+        "Meaning": "đèn giao thông",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "しんごうが あかく なりました。\n(Đèn giao thông đã chuyển sang màu đỏ.)"
+    },
+    {
+        "Word": "角",
+        "Reading": "かど",
+        "Meaning": "góc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "かどを ひだりに まがって ください。\n(Hãy rẽ trái ở góc kia.)"
+    },
+    {
+        "Word": "橋",
+        "Reading": "はし",
+        "Meaning": "cây cầu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "はしを わたりましょう。\n(Chúng ta cùng băng qua cầu nào.)"
+    },
+    {
+        "Word": "駐車場",
+        "Reading": "ちゅうしゃじょう",
+        "Meaning": "bãi đỗ xe",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "あそこに ちゅうしゃじょうが あります。\n(Ở đằng kia có bãi đỗ xe.)"
+    },
+    {
+        "Word": "建物",
+        "Reading": "たてもの",
+        "Meaning": "tòa nhà",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 28,
+        "Example": "この たてものは なんていいますか。\n(Tòa nhà này tên là gì vậy?)"
+    }
+]

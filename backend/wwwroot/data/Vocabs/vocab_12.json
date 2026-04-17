@@ -1,0 +1,266 @@
+[
+    {
+        "Word": "簡単[な]",
+        "Reading": "かんたん",
+        "Meaning": "đơn giản, dễ",
+        "PartOfSpeech": "Tính từ đuôi na",
+        "LessonId": 17,
+        "Example": "しけんは かんたんでした。\n(Kỳ thi đã rất dễ.)"
+    },
+    {
+        "Word": "近い",
+        "Reading": "ちかい",
+        "Meaning": "gần",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "うちから えきまで ちかいです。\n(Từ nhà đến ga rất gần.)"
+    },
+    {
+        "Word": "遠い",
+        "Reading": "とおい",
+        "Meaning": "xa",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "びょういんは とおいです。\n(Bệnh viện thì xa.)"
+    },
+    {
+        "Word": "速い",
+        "Reading": "はやい",
+        "Meaning": "nhanh (tốc độ)",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "しんかんせんは はやいです。\n(Tàu Shinkansen rất nhanh.)"
+    },
+    {
+        "Word": "早い",
+        "Reading": "はやい",
+        "Meaning": "sớm (thời gian)",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "あしたは はやく おきます。\n(Ngày mai tôi sẽ dậy sớm.)"
+    },
+    {
+        "Word": "遅い",
+        "Reading": "おそい",
+        "Meaning": "chậm, muộn",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "あしが おそいです。\n(Chân chạy chậm / đi chậm.)"
+    },
+    {
+        "Word": "多い",
+        "Reading": "おおい",
+        "Meaning": "nhiều [người]",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "ひとが おおいです。\n(Đông người.)"
+    },
+    {
+        "Word": "少ない",
+        "Reading": "すくない",
+        "Meaning": "ít [người]",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "ひとが すくないです。\n(Ít người.)"
+    },
+    {
+        "Word": "暖かい",
+        "Reading": "あたたかい",
+        "Meaning": "ấm áp (thời tiết)",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "はるは あたたかいです。\n(Mùa xuân ấm áp.)"
+    },
+    {
+        "Word": "涼しい",
+        "Reading": "すずしい",
+        "Meaning": "mát mẻ",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "あきは すずしいです。\n(Mùa thu mát mẻ.)"
+    },
+    {
+        "Word": "甘い",
+        "Reading": "あまい",
+        "Meaning": "ngọt",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "この けーきは あまいです。\n(Cái bánh này ngọt.)"
+    },
+    {
+        "Word": "辛い",
+        "Reading": "からい",
+        "Meaning": "cay",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "この りょうりは からいです。\n(Món ăn này cay.)"
+    },
+    {
+        "Word": "重い",
+        "Reading": "おもい",
+        "Meaning": "nặng",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "この にもつは おもいです。\n(Hành lý này nặng.)"
+    },
+    {
+        "Word": "軽い",
+        "Reading": "かるい",
+        "Meaning": "nhẹ",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 17,
+        "Example": "この かばんは かるいです。\n(Cái cặp này nhẹ.)"
+    },
+    {
+        "Word": "季節",
+        "Reading": "きせつ",
+        "Meaning": "mùa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "どの きせつが いちばん すきですか。\n(Bạn thích mùa nào nhất?)"
+    },
+    {
+        "Word": "春",
+        "Reading": "はる",
+        "Meaning": "mùa xuân",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "はるに なりました。\n(Đã sang mùa xuân rồi.)"
+    },
+    {
+        "Word": "夏",
+        "Reading": "なつ",
+        "Meaning": "mùa hè",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "なつは とても あついです。\n(Mùa hè rất nóng.)"
+    },
+    {
+        "Word": "秋",
+        "Reading": "あき",
+        "Meaning": "mùa thu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "あきは すずしいですね。\n(Mùa thu mát mẻ nhỉ.)"
+    },
+    {
+        "Word": "冬",
+        "Reading": "ふゆ",
+        "Meaning": "mùa đông",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "ふゆは ゆきが ふります。\n(Mùa đông tuyết rơi.)"
+    },
+    {
+        "Word": "天気",
+        "Reading": "てんき",
+        "Meaning": "thời tiết",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "きょうは てんきが いいです。\n(Hôm nay thời tiết đẹp.)"
+    },
+    {
+        "Word": "雨",
+        "Reading": "あめ",
+        "Meaning": "mưa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "あめが ふっています。\n(Trời đang mưa.)"
+    },
+    {
+        "Word": "雪",
+        "Reading": "ゆき",
+        "Meaning": "tuyết",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "ゆきが おおいです。\n(Tuyết rơi nhiều.)"
+    },
+    {
+        "Word": "曇り",
+        "Reading": "くもり",
+        "Meaning": "trời nhiều mây",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "きょうは くもりです。\n(Hôm nay trời nhiều mây.)"
+    },
+    {
+        "Word": "ホテル",
+        "Reading": "ほてる",
+        "Meaning": "khách sạn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "ほてるに とまります。\n(Tôi ở lại khách sạn.)"
+    },
+    {
+        "Word": "空港",
+        "Reading": "くうこう",
+        "Meaning": "sân bay",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "くうこうまで たくしーで いきます。\n(Tôi đi taxi đến sân bay.)"
+    },
+    {
+        "Word": "海",
+        "Reading": "うみ",
+        "Meaning": "biển",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "うみで およぎたいです。\n(Tôi muốn bơi ở biển.)"
+    },
+    {
+        "Word": "世界",
+        "Reading": "せかい",
+        "Meaning": "thế giới",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "せかいで いちばん たかい やまは どこですか。\n(Ngọn núi cao nhất thế giới là ở đâu?)"
+    },
+    {
+        "Word": "パーティー",
+        "Reading": "ぱーてぃー",
+        "Meaning": "bữa tiệc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "きのう ぱーてぃーを しました。\n(Hôm qua tôi đã tổ chức tiệc.)"
+    },
+    {
+        "Word": "お祭り",
+        "Reading": "おまつり",
+        "Meaning": "lễ hội",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 17,
+        "Example": "おまつりは たのしかったです。\n(Lễ hội đã rất vui.)"
+    },
+    {
+        "Word": "どちら",
+        "Reading": "どちら",
+        "Meaning": "cái nào (trong hai cái)",
+        "PartOfSpeech": "Đại từ nghi vấn",
+        "LessonId": 17,
+        "Example": "どちらが すきですか。\n(Bạn thích cái nào hơn?)"
+    },
+    {
+        "Word": "どちらも",
+        "Reading": "どちらも",
+        "Meaning": "cả hai",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 17,
+        "Example": "どちらも すきです。\n(Cả hai tôi đều thích.)"
+    },
+    {
+        "Word": "ずっと",
+        "Reading": "ずっと",
+        "Meaning": "hơn hẳn, suốt",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 17,
+        "Example": "こっちの ほうが ずっと おおきいです。\n(Cái này lớn hơn hẳn.)"
+    },
+    {
+        "Word": "はじめて",
+        "Reading": "はじめて",
+        "Meaning": "lần đầu tiên",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 17,
+        "Example": "にほんへ はじめて きました。\n(Lần đầu tiên tôi đến Nhật Bản.)"
+    }
+]

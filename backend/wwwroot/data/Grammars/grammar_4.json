@@ -1,0 +1,51 @@
+[
+    {
+        "GrammarName": "Cách nói giờ và phút (~ じ / ~ ふん)",
+        "Structure": "[Số từ] じ / [Số từ] ふん",
+        "Meaning": "Dùng để biểu thị thời điểm chính xác. \n- Để hỏi về thời gian, ta dùng nghi vấn từ 「なんじ」 (mấy giờ) và 「なんぷん」 (mấy phút).\n- Lưu ý cách đọc đặc biệt: 4 giờ (よじ), 7 giờ (しちじ), 9 giờ (くじ).\n- Với phút, hậu tố đọc là 「ふん」 hoặc 「ぷん」 tùy theo số đứng trước. 30 phút còn có thể gọi là 「はん」 (rưỡi).",
+        "Example": "いま なんじですか。\nー7じ 30ぷんです。\n(Bây giờ là mấy giờ?\n-Là 7 giờ 30 phút.)",
+        "LessonId": 33
+    },
+    {
+        "GrammarName": "Động từ thể ます (Hiện tại / Tương lai / Thói quen)",
+        "Structure": "Động từ (thể ます / ません)",
+        "Meaning": "Đuôi 「ます」 đi kèm sau động từ để tạo thành vị ngữ, thể hiện thái độ lịch sự của người nói. \n- 「Vます」: Dùng cho hành động ở hiện tại (thói quen) hoặc tương lai.\n- 「Vません」: Dạng phủ định của hành động ở hiện tại hoặc tương lai.",
+        "Example": "まいにち べんきょうします。\nーあしたは べんきょうしません。\n(Mỗi ngày tôi đều học bài.\n-Ngày mai tôi sẽ không học.)",
+        "LessonId": 33
+    },
+    {
+        "GrammarName": "Động từ thể ました (Quá khứ)",
+        "Structure": "Động từ (thể ました / ませんでした)",
+        "Meaning": "Dùng để biểu thị một hành động đã xảy ra và kết thúc trong quá khứ.\n- 「Vました」: Khẳng định đã làm gì đó trong quá khứ.\n- 「Vませんでした」: Phủ định đã không làm gì đó trong quá khứ.",
+        "Example": "きのうは はたらきましたか。\nーいいえ、はたらきませんでした。\n(Hôm qua bạn có làm việc không?\n-Không, tôi đã không làm việc.)",
+        "LessonId": 33
+    },
+    {
+        "GrammarName": "Trợ từ に (Xác định thời điểm xảy ra hành động)",
+        "Structure": "Danh từ (thời gian) に Động từ",
+        "Meaning": "Trợ từ 「に」 được đặt sau danh từ chỉ thời gian có con số cụ thể (giờ, ngày, tháng, năm...) để chỉ rõ thời điểm hành động xảy ra. \n- Lưu ý: Các danh từ chỉ thời gian mang tính tương đối như 「きょう」(hôm nay), 「きのう」(hôm qua), 「いつ」(khi nào)... thì không dùng trợ từ 「に」.",
+        "Example": "6じに おきます。\n(Tôi thức dậy vào lúc 6 giờ.)",
+        "LessonId": 33
+    },
+    {
+        "GrammarName": "Trợ từ から / まで (Từ / Đến)",
+        "Structure": "N1 (thời gian/địa điểm) から N2 (thời gian/địa điểm) まで",
+        "Meaning": "「から」 biểu thị điểm bắt đầu, 「まで」 biểu thị điểm kết thúc của thời gian hoặc không gian.\n- Hai trợ từ này có thể đi cùng nhau trong một câu hoặc đứng độc lập.\n- Khi dùng với 「です」, chúng có thể đóng vai trò là vị ngữ trực tiếp.",
+        "Example": "9じから 5じまで はたらきます。\n(Tôi làm việc từ 9 giờ đến 5 giờ.)",
+        "LessonId": 33
+    },
+    {
+        "GrammarName": "Trợ từ と (Và / Nối các danh từ)",
+        "Structure": "Danh từ 1 と Danh từ 2",
+        "Meaning": "Dùng để nối hai danh từ với nhau, mang ý nghĩa liệt kê đầy đủ tất cả các đối tượng được nhắc tới (tương đương với 'Và' trong tiếng Việt).",
+        "Example": "ぎんこうの やすみは どようびと にちようびです。\n(Ngày nghỉ của ngân hàng là thứ bảy và chủ nhật.)",
+        "LessonId": 33
+    },
+    {
+        "GrammarName": "Trợ từ kết thúc câu ね",
+        "Structure": "Câu + ね",
+        "Meaning": "Được đặt ở cuối câu để thể hiện sự đồng cảm của người nói đối với người nghe, hoặc mong muốn người nghe xác nhận lại thông tin. Nó làm cho giọng điệu câu nói trở nên mềm mỏng và thân thiện hơn.",
+        "Example": "まいにち 6じに おきますか。\nーはい、そうです。\nーたいへんですね。\n(Mỗi ngày bạn đều dậy lúc 6 giờ à?\n-Vâng, đúng vậy.\n-Vất vả nhỉ.)",
+        "LessonId": 33
+    }
+]

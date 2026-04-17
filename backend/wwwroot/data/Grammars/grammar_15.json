@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Xin phép làm gì: ～てもいいです",
+        "Structure": "Động từ (thể て) + もいいです",
+        "Meaning": "Mẫu câu này dùng để biểu thị sự cho phép hoặc xin phép thực hiện một hành động nào đó. \n- Khi dùng để hỏi (～てもいいですか), người nói đang xin phép người nghe. \n- Để trả lời đồng ý: 「はい、いいですよ」 hoặc 「はい、どうぞ」.\n- Để từ chối: Cần nói khéo léo như 「すみませんが...」.",
+        "Example": "しゃしんを とってもいいですか。\nーはい、いいですよ。\n(Tôi chụp ảnh có được không?\n-Vâng, được chứ.)",
+        "LessonId": 44
+    },
+    {
+        "GrammarName": "Cấm làm gì: ～てはいけません",
+        "Structure": "Động từ (thể て) + はいけません",
+        "Meaning": "Mẫu câu này dùng để biểu thị sự cấm đoán hoặc không được phép thực hiện một hành động nào đó. Thường được dùng trong các quy định, biển báo hoặc khi người lớn nhắc nhở người nhỏ.",
+        "Example": "ここで たばこを すってはいけません。\n(Không được hút thuốc ở đây.)",
+        "LessonId": 44
+    },
+    {
+        "GrammarName": "Diễn tả trạng thái kết quả: ～ています",
+        "Structure": "Động từ (thể て) + います",
+        "Meaning": "Khác với Bài 14 (diễn tả hành động đang xảy ra), trong Bài 15 mẫu câu này dùng để diễn tả một trạng thái là kết quả của một hành động đã xảy ra trong quá khứ và vẫn còn tiếp diễn ở hiện tại. \n- Thường dùng với các động từ như: 結婚しています (đã kết hôn), 持っています (đang sở hữu), 知っています (biết), 住んでいます (đang sống).",
+        "Example": "わたしは けっこんしています。\nーみらーさんは おおさかに すんでいます。\n(Tôi đã kết hôn.\n-Anh Miller đang sống ở Osaka.)",
+        "LessonId": 44
+    },
+    {
+        "GrammarName": "Sở hữu và Nghề nghiệp: ～ています",
+        "Structure": "Danh từ を もっています / [Nghề nghiệp] を しています",
+        "Meaning": "Dùng để nói về việc sở hữu một món đồ hoặc đang làm một công việc/nghề nghiệp cụ thể mang tính chất lâu dài.\n- 「もっています」: Có/Sở hữu (vật chất).\n- 「しています」: Đang làm nghề/công tác tại đâu đó.",
+        "Example": "わたしは かめらを もっています。\nーいもうとは だいがくで べんきょうしています。\n(Tôi có máy ảnh.\n-Em gái tôi đang học ở trường đại học.)",
+        "LessonId": 44
+    },
+    {
+        "GrammarName": "Biết và Không biết: しっています / しりません",
+        "Structure": "しっています / しりません",
+        "Meaning": "Đây là trường hợp đặc biệt của động từ 「しります」 (biết):\n- Khi khẳng định: Dùng 「しっています」.\n- Khi phủ định (không biết): Tuyệt đối không dùng 'shitte imasen' mà phải dùng 「しりません」.",
+        "Example": "しやくしょの でんわばんごうを しっていますか。\nーいいえ、しりません。\n(Bạn có biết số điện thoại của tòa thị chính không?\n-Không, tôi không biết.)",
+        "LessonId": 44
+    }
+]

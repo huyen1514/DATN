@@ -1,0 +1,186 @@
+[
+    {
+        "Word": "登ります",
+        "Reading": "のぼります",
+        "Meaning": "leo (núi), lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 24,
+        "Example": "やまに のぼった ことが ありますか。\n(Bạn đã từng leo núi bao giờ chưa?)"
+    },
+    {
+        "Word": "泊まります",
+        "Reading": "とまります",
+        "Meaning": "trọ lại, ở lại [khách sạn]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 24,
+        "Example": "ほてるに とまりました。\n(Tôi đã trọ lại ở khách sạn.)"
+    },
+    {
+        "Word": "掃除します",
+        "Reading": "そうじします",
+        "Meaning": "dọn vệ sinh, quét dọn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 24,
+        "Example": "へやを そうじします。\n(Tôi dọn dẹp căn phòng.)"
+    },
+    {
+        "Word": "洗濯します",
+        "Reading": "せんたくします",
+        "Meaning": "giặt giũ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 24,
+        "Example": "まいにち せんたくします。\n(Mỗi ngày tôi đều giặt giũ.)"
+    },
+    {
+        "Word": "なります",
+        "Reading": "なります",
+        "Meaning": "trở nên, trở thành",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 24,
+        "Example": "せんせいに なりたいです。\n(Tôi muốn trở thành giáo viên.)"
+    },
+    {
+        "Word": "眠い",
+        "Reading": "ねむい",
+        "Meaning": "buồn ngủ",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 24,
+        "Example": "とても ねむいです。\n(Tôi rất buồn ngủ.)"
+    },
+    {
+        "Word": "強い",
+        "Reading": "つよい",
+        "Meaning": "mạnh",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 24,
+        "Example": "からだが つよいです。\n(Cơ thể mạnh khỏe.)"
+    },
+    {
+        "Word": "弱い",
+        "Reading": "よわい",
+        "Meaning": "yếu",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 24,
+        "Example": "おさけに よわいです。\n(Tôi uống rượu kém/yếu.)"
+    },
+    {
+        "Word": "練習",
+        "Reading": "れんしゅう",
+        "Meaning": "việc luyện tập",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 24,
+        "Example": "まいにち にほんごを れんしゅうします。\n(Hỗ ngày tôi đều luyện tập tiếng Nhật.)"
+    },
+    {
+        "Word": "ゴルフ",
+        "Reading": "ごるふ",
+        "Meaning": "môn gôn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 24,
+        "Example": "ごるふを した ことが あります。\n(Tôi đã từng chơi gôn.)"
+    },
+    {
+        "Word": "相撲",
+        "Reading": "すもう",
+        "Meaning": "vật Sumo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 24,
+        "Example": "すもうを みた ことが ありますか。\n(Bạn đã từng xem Sumo chưa?)"
+    },
+    {
+        "Word": "お茶",
+        "Reading": "おちゃ",
+        "Meaning": "trà đạo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 24,
+        "Example": "おちゃを ならいます。\n(Tôi học trà đạo.)"
+    },
+    {
+        "Word": "日",
+        "Reading": "ひ",
+        "Meaning": "ngày",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 24,
+        "Example": "ひが ながくなりました。\n(Ngày đã trở nên dài hơn.)"
+    },
+    {
+        "Word": "調子",
+        "Reading": "ちょうし",
+        "Meaning": "tình trạng, trạng thái",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 24,
+        "Example": "からだの ちょうしが いいです。\n(Tình trạng cơ thể tốt.)"
+    },
+    {
+        "Word": "一度",
+        "Reading": "いちど",
+        "Meaning": "một lần",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 24,
+        "Example": "いちど にほんへ いきたいです。\n(Tôi muốn đi Nhật một lần.)"
+    },
+    {
+        "Word": "一度も",
+        "Reading": "いちども",
+        "Meaning": "chưa lần nào (dùng với phủ định)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 24,
+        "Example": "いちども おすしを たべた ことが ありません。\n(Tôi chưa từng ăn sushi lần nào.)"
+    },
+    {
+        "Word": "だんだん",
+        "Reading": "だんだん",
+        "Meaning": "dần dần",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 24,
+        "Example": "だんだん あつくなります。\n(Trời dần dần trở nên nóng.)"
+    },
+    {
+        "Word": "もうすぐ",
+        "Reading": "もうすぐ",
+        "Meaning": "sắp sửa, chẳng mấy chốc",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 24,
+        "Example": "もうすぐ はるに なります。\n(Sắp sửa sang mùa xuân rồi.)"
+    },
+    {
+        "Word": "おかげさまで",
+        "Reading": "おかげさまで",
+        "Meaning": "nhờ trời, nhờ ơn anh/chị",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 24,
+        "Example": "おかげさまで、 げんきになりました。\n(Nhờ ơn anh/chị mà tôi đã khỏe lại rồi.)"
+    },
+    {
+        "Word": "乾杯",
+        "Reading": "かんぱい",
+        "Meaning": "cạn chén, nâng ly",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 24,
+        "Example": "いっしょに かんぱいしましょう。\n(Cùng nhau nâng ly nào.)"
+    },
+    {
+        "Word": "ダイエット",
+        "Reading": "だいえっと",
+        "Meaning": "việc ăn kiêng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 24,
+        "Example": "だいえっとを しています。\n(Tôi đang ăn kiêng.)"
+    },
+    {
+        "Word": "無理[な]",
+        "Reading": "むり",
+        "Meaning": "quá sức, không thể",
+        "PartOfSpeech": "Tính từ đuôi na",
+        "LessonId": 24,
+        "Example": "むりな だいえっとは からだに よくありません。\n(Ăn kiêng quá sức không tốt cho cơ thể.)"
+    },
+    {
+        "Word": "体にいい",
+        "Reading": "からだにいい",
+        "Meaning": "tốt cho sức khỏe",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 24,
+        "Example": "やさいを たべる ほうが からだに いいです。\n(Ăn rau thì tốt cho sức khỏe hơn.)"
+    }
+]

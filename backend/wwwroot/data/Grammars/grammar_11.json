@@ -1,0 +1,44 @@
+[
+    {
+        "GrammarName": "Cách đếm đồ vật và Vị trí của số từ",
+        "Structure": "Danh từ を [Số lượng] Động từ",
+        "Meaning": "Trong tiếng Nhật, số từ (số đếm + đơn vị đếm) thường được đặt trực tiếp trước động từ mà nó bổ nghĩa, hoặc đặt sau trợ từ 「を」. \n- Với các đồ vật chung, ta dùng cách đếm: ひとつ (1 cái), ふたつ (2 cái)... đến とお (10 cái). Từ 11 trở đi dùng số đếm bình thường.\n- Nghi vấn từ để hỏi số lượng đồ vật là 「いくつ」.",
+        "Example": "りんごを よっつ かいました。\n(Tôi đã mua 4 quả táo.)",
+        "LessonId": 40
+    },
+    {
+        "GrammarName": "Các đơn vị đếm chuyên biệt (Counters)",
+        "Structure": "[Số đếm] + [Đơn vị đếm]",
+        "Meaning": "Tùy vào đặc điểm của đối tượng mà ta sử dụng đơn vị đếm khác nhau:\n- ～にん (Người): ひとり (1 người), ふたり (2 người), từ 3 người dùng Số + にん (Lưu ý 4 người là よにん).\n- ～だい (Máy móc, xe cộ, đồ điện gia dụng).\n- ～まい (Vật mỏng, phẳng như giấy, áo sơ mi, đĩa).\n- ～かい (Lần/Tầng).\n- ～さい (Tuổi).\nNghi vấn từ thường dùng: 「なんにん」, 「なんだい」, 「なんまい」.",
+        "Example": "この きょうしつに がくせいが ごにん います。\nーしゃしんを なんまい とりましたか。\n(Trong lớp học này có 5 sinh viên.\n-Bạn đã chụp bao nhiêu kiểu ảnh thế?)",
+        "LessonId": 40
+    },
+    {
+        "GrammarName": "Cách nói khoảng thời gian (Duration)",
+        "Structure": "[Số đếm] + [Đơn vị thời gian]",
+        "Meaning": "Dùng để diễn tả độ dài của thời gian. Các đơn vị chính gồm:\n- ～じかん (Tiếng đồng hồ).\n- ～にち (Ngày - Lưu ý: 1 ngày là いちにち).\n- ～しゅうかん (Tuần).\n- ～かげつ (Tháng).\n- ～ねん (Năm).\nKhác với mốc thời gian (đi với に), khoảng thời gian thường đứng độc lập trước động từ.",
+        "Example": "まいにch 8じかん はたらきます。\nーにほんごを 3かげつ べんきょうしました。\n(Mỗi ngày tôi làm việc 8 tiếng.\n-Tôi đã học tiếng Nhật được 3 tháng rồi.)",
+        "LessonId": 40
+    },
+    {
+        "GrammarName": "Nghi vấn từ hỏi khoảng thời gian: どのくらい",
+        "Structure": "どのくらい Động từ",
+        "Meaning": "Dùng để hỏi về độ dài của thời gian hoặc một khoảng cách nào đó. Có thể dịch là 'Khoảng bao lâu' hoặc 'Bao xa'. Câu trả lời sẽ đi kèm với các đơn vị thời gian hoặc các từ ước lượng như 「ぐらい」(khoảng).",
+        "Example": "どのくらい にほんごを べんきょうしましたか。\nー2ねん べんきょうしました。\n(Bạn đã học tiếng Nhật được bao lâu rồi?\n-Tôi đã học được 2 năm.)",
+        "LessonId": 40
+    },
+    {
+        "GrammarName": "Diễn đạt tần suất hành động: [Khoảng thời gian] に [Số lần]",
+        "Structure": "[Khoảng thời gian] に [Số lần] Động từ",
+        "Meaning": "Mẫu câu này dùng để nói về tần suất thực hiện một việc gì đó trong một khoảng thời gian nhất định. Trợ từ 「に」 ở đây dùng để chỉ định mức thời gian làm chuẩn.",
+        "Example": "1かげつに 2かい えいがを みます。\n(Một tháng tôi đi xem phim 2 lần.)",
+        "LessonId": 40
+    },
+    {
+        "GrammarName": "Trợ từ giới hạn: Danh từ (số lượng) だけ",
+        "Structure": "Số lượng + だけ",
+        "Meaning": "Trợ từ 「だけ」 đặt sau số từ hoặc danh từ để biểu thị sự giới hạn, mang nghĩa là 'Chỉ...'. Nó thay thế cho các trợ từ như 「を」, 「は」 nhưng đứng sau các trợ từ như 「に」.",
+        "Example": "やすみは にちようびだけです。\nーりんごを ひとつだけ かいました。\n(Ngày nghỉ chỉ có chủ nhật thôi.\n-Tôi chỉ mua duy nhất 1 quả táo.)",
+        "LessonId": 40
+    }
+]

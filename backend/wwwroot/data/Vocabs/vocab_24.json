@@ -1,0 +1,146 @@
+[
+    {
+        "Word": "くれます",
+        "Reading": "くれます",
+        "Meaning": "cho, tặng (tôi hoặc người thân của tôi)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "さとうさんは わたしに はなを くれました。\n(Chị Sato đã tặng hoa cho tôi.)"
+    },
+    {
+        "Word": "直します",
+        "Reading": "なおします",
+        "Meaning": "sửa, chữa",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "じてんしゃを なおして くれました。\n(Bạn ấy đã sửa xe đạp giúp tôi.)"
+    },
+    {
+        "Word": "連れて行きます",
+        "Reading": "つれていきます",
+        "Meaning": "dẫn đi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "こどもを こうえんへ つれていきます。\n(Tôi dẫn con đi công viên.)"
+    },
+    {
+        "Word": "連れて来ます",
+        "Reading": "つれてきます",
+        "Meaning": "dẫn đến",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "ともだちを うちへ つれてきました。\n(Tôi đã dẫn bạn về nhà.)"
+    },
+    {
+        "Word": "送ります",
+        "Reading": "おくります",
+        "Meaning": "đưa đi, tiễn [người]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "えきまで ともだちを おくります。\n(Tôi tiễn bạn đến tận nhà ga.)"
+    },
+    {
+        "Word": "紹介します",
+        "Reading": "しょうかいします",
+        "Meaning": "giới thiệu",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "ともだちを しょうかいします。\n(Tôi giới thiệu bạn bè.)"
+    },
+    {
+        "Word": "案内します",
+        "Reading": "あんないします",
+        "Meaning": "hướng dẫn, dẫn đường",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "まちを あんないして くれました。\n(Anh ấy đã dẫn đường quanh thành phố cho tôi.)"
+    },
+    {
+        "Word": "説明します",
+        "Reading": "せつめいします",
+        "Meaning": "giải thích",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 29,
+        "Example": "つかいかたを せつめいします。\n(Tôi giải thích cách sử dụng.)"
+    },
+    {
+        "Word": "おじいさん",
+        "Reading": "おじいさん",
+        "Meaning": "ông nội, ông ngoại, ông cụ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 29,
+        "Example": "おじいさんは おげんきですか。\n(Ông của bạn có khỏe không?)"
+    },
+    {
+        "Word": "おばあさん",
+        "Reading": "おばあさん",
+        "Meaning": "bà nội, bà ngoại, bà cụ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 29,
+        "Example": "おばあさんは りょうりが じょうずです。\n(Bà của tôi nấu ăn rất giỏi.)"
+    },
+    {
+        "Word": "準備",
+        "Reading": "じゅんび",
+        "Meaning": "việc chuẩn bị",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 29,
+        "Example": "りょこうの じゅんびを します。\n(Tôi chuẩn bị cho chuyến đi du lịch.)"
+    },
+    {
+        "Word": "意味",
+        "Reading": "いみ",
+        "Meaning": "ý nghĩa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 29,
+        "Example": "この ことばの いみを おしえて ください。\n(Hãy chỉ cho tôi ý nghĩa của từ này.)"
+    },
+    {
+        "Word": "[お]菓子",
+        "Reading": "[お]かし",
+        "Meaning": "bánh kẹo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 29,
+        "Example": "おかしを たべました。\n(Tôi đã ăn bánh kẹo.)"
+    },
+    {
+        "Word": "全部",
+        "Reading": "ぜんぶ",
+        "Meaning": "tất cả",
+        "PartOfSpeech": "Danh từ/Phó từ",
+        "LessonId": 29,
+        "Example": "ぜんぶで いくらですか。\n(Tất cả là bao nhiêu tiền?)"
+    },
+    {
+        "Word": "自分で",
+        "Reading": "じぶんで",
+        "Meaning": "tự mình",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 29,
+        "Example": "じぶんで べんきょうします。\n(Tôi tự mình học bài.)"
+    },
+    {
+        "Word": "ほかに",
+        "Reading": "ほかに",
+        "Meaning": "ngoài ra, bên cạnh đó",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 29,
+        "Example": "ほかに なにが ありますか。\n(Ngoài ra còn cái gì nữa không?)"
+    },
+    {
+        "Word": "お弁当",
+        "Reading": "おべんとう",
+        "Meaning": "cơm hộp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 29,
+        "Example": "ははが おべんとうを つくって くれました。\n(Mẹ đã làm cơm hộp cho tôi.)"
+    },
+    {
+        "Word": "母の日",
+        "Reading": "ははのひ",
+        "Meaning": "Ngày của Mẹ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 29,
+        "Example": "ははのひに はなを あげました。\n(Tôi đã tặng hoa vào Ngày của Mẹ.)"
+    }
+]

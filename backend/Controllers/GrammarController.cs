@@ -47,6 +47,17 @@ namespace Controllers
             return Ok(grammars);
         }
 
+        [HttpGet("counts")]
+        public async Task<IActionResult> GetCounts()
+        {
+            var counts = await _context.Grammars
+                .GroupBy(g => g.LessonId)
+                .Select(g => new { LessonId = g.Key, Count = g.Count() })
+                .ToListAsync();
+
+            return Ok(counts);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

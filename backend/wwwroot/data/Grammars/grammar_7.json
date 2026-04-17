@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Trợ từ で (Công cụ / Phương tiện / Ngôn ngữ)",
+        "Structure": "Danh từ (Công cụ/Ngôn ngữ) で Động từ",
+        "Meaning": "Trợ từ 「で」 biểu thị công cụ, phương tiện hoặc cách thức để thực hiện một hành động nào đó. \n- Với công cụ: Có nghĩa là 'bằng...'.\n- Với ngôn ngữ: Biểu thị phương tiện giao tiếp hoặc ngôn ngữ dùng để thực hiện hành động (như viết, nói).",
+        "Example": "はしで たべます。\nーにほんごで れぽーとを かきます。\n(Tôi ăn bằng đũa.\n-Tôi viết báo cáo bằng tiếng Nhật.)",
+        "LessonId": 36
+    },
+    {
+        "GrammarName": "Từ/Câu は ~ごで なんですか",
+        "Structure": "Từ/Câu は [Ngôn ngữ]で なんですか",
+        "Meaning": "Mẫu câu này dùng để hỏi một từ hoặc một câu trong ngôn ngữ khác nói như thế nào. Trợ từ 「で」 ở đây biểu thị phương tiện ngôn ngữ.",
+        "Example": "「ありがとう」は えいごで なんですか。\nー「Thank you」です。\n(「Arigato」 tiếng Anh nói là gì?\n-Là 「Thank you」.)",
+        "LessonId": 36
+    },
+    {
+        "GrammarName": "Tặng / Cho / Dạy: Danh từ 1 に Danh từ 2 を あげます",
+        "Structure": "N1 (người nhận) に N2 (vật) を あげます / かします / おしえます",
+        "Meaning": "Các động từ như 「あげます」(tặng), 「かします」(cho mượn), 「おしえます」(dạy) biểu thị hành động hướng về đối tượng khác. Trợ từ 「に」 được đặt sau danh từ chỉ người nhận hành động đó. \nLưu ý: Không dùng 「あげます」 khi người nhận là chính mình.",
+        "Example": "わたしは きむらさんに はなを あげました。\n(Tôi đã tặng hoa cho anh Kimura.)",
+        "LessonId": 36
+    },
+    {
+        "GrammarName": "Nhận / Mượn / Học: Danh từ 1 に/から Danh từ 2 を もらいます",
+        "Structure": "N1 (người cho) に/から N2 (vật) を もらいます / かります / ならいます",
+        "Meaning": "Các động từ như 「もらいます」(nhận), 「かります」(mượn), 「ならいます」(học từ ai đó) biểu thị hành động từ phía đối tượng khác hướng về mình. \n- Trợ từ 「に」 dùng cho người cho.\n- Có thể dùng 「から」 thay thế cho 「に」. \n- Đặc biệt, khi người cho là một tổ chức (như công ty, trường học) thì chỉ dùng 「から」, không dùng 「に」.",
+        "Example": "わたしは やまださんに ぷれぜんとを もらいました。\nーぎんこうから おかねを かりました。\n(Tôi đã nhận quà từ anh Yamada.\n-Tôi đã mượn tiền từ ngân hàng.)",
+        "LessonId": 36
+    },
+    {
+        "GrammarName": "Hành động đã hoàn thành: もう Động từ ました",
+        "Structure": "もう Động từ (thể ました)",
+        "Meaning": "「もう」 mang nghĩa là 'đã/rồi'. Khi kết hợp với động từ quá khứ, nó nhấn mạnh rằng hành động đó đã được thực hiện xong tại thời điểm nói. \n- Khi trả lời khẳng định: 「はい、もう Vました」.\n- Khi trả lời phủ định (vẫn chưa): 「いいえ、まだです」 (Không, vẫn chưa). Lưu ý: Không dùng 「Vませんでした」 vì nó mang nghĩa là đã không làm trong quá khứ.",
+        "Example": "もう にしゅうかん べんきょうしましたか。\nーいいえ、まだです。\n(Bạn đã học bài xong chưa?\n-Không, vẫn chưa.)",
+        "LessonId": 36
+    }
+]

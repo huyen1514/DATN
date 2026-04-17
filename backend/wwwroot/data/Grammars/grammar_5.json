@@ -1,0 +1,44 @@
+[
+    {
+        "GrammarName": "Danh từ (địa điểm) へ いきます / きます / かえります",
+        "Structure": "Danh từ (địa điểm) へ Động từ (di chuyển)",
+        "Meaning": "Trợ từ 「へ」 (phát âm là 'e') được đặt sau danh từ chỉ địa điểm để biểu thị hướng di chuyển của hành động. Các động từ di chuyển chính bao gồm:\n- 「いきます」: Đi đến một nơi xa vị trí hiện tại.\n- 「きます」: Đến nơi người nói đang ở.\n- 「かえります」: Trở về địa điểm gắn bó (như nhà, đất nước).",
+        "Example": "きょうとに いきます。\n(Tôi đi Kyoto.)",
+        "LessonId": 34
+    },
+    {
+        "GrammarName": "Phủ định hoàn toàn: どこ [へ] も いきません",
+        "Structure": "Nghi vấn từ + も + Động từ (phủ định)",
+        "Meaning": "Mẫu câu này dùng để phủ định hoàn toàn mọi đối tượng trong phạm vi của nghi vấn từ. Trong bài 5, mẫu này dùng để nói việc không đi bất cứ đâu cả. Lưu ý: Bạn có thể dùng 「どこへも」 hoặc lược bỏ 「へ」 thành 「どこも」 đều được.",
+        "Example": "どこへも いきませんでした。\n(Tôi đã không đi đâu cả.)",
+        "LessonId": 34
+    },
+    {
+        "GrammarName": "Trợ từ で (Phương tiện giao thông)",
+        "Structure": "Danh từ (phương tiện) で Động từ",
+        "Meaning": "Trợ từ 「で」 biểu thị phương thức hoặc phương tiện thực hiện hành động di chuyển (như tàu điện, xe buýt, máy bay...). \nLưu ý đặc biệt: Khi đi bộ, ta dùng cụm từ 「あるいて」 mà không đi kèm với trợ từ 「で」.",
+        "Example": "でんしゃで いきます。\n(Tôi đi bằng tàu điện.)",
+        "LessonId": 34
+    },
+    {
+        "GrammarName": "Trợ từ と (Cùng với người / động vật)",
+        "Structure": "Danh từ (người/động vật) と Động từ",
+        "Meaning": "Trợ từ 「と」 được dùng để chỉ đối tượng (người hoặc động vật) cùng thực hiện hành động với chủ thể. \nLưu ý: Nếu thực hiện hành động một mình, ta dùng cụm từ 「ひとりでお」 và không dùng trợ từ 「と」.",
+        "Example": "かぞくと にほんへ きました。\n(Tôi đã đến Nhật Bản cùng với gia đình.)",
+        "LessonId": 34
+    },
+    {
+        "GrammarName": "Nghi vấn từ: いつ (Khi nào)",
+        "Structure": "いつ Động từ",
+        "Meaning": "「いつ」 là nghi vấn từ dùng để hỏi về thời điểm thực hiện một hành động. Khác với các danh từ chỉ thời gian cụ thể (như 6 giờ, thứ Hai), sau 「いつ」 tuyệt đối không dùng trợ từ 「に」.",
+        "Example": "いつ ひろしまへ いきますか。\nーらいしゅうの げつようびに いきます。\n(Khi nào bạn đi Hiroshima?\n-Thứ Hai tuần sau tôi sẽ đi.)",
+        "LessonId": 34
+    },
+    {
+        "GrammarName": "Trợ từ cuối câu よ",
+        "Structure": "Câu + よ",
+        "Meaning": "Trợ từ 「よ」 được đặt ở cuối câu để nhấn mạnh một thông tin mà người nói cho rằng người nghe chưa biết, hoặc để khẳng định mạnh mẽ ý kiến/sự hướng dẫn của mình đối với đối phương.",
+        "Example": "この でんしゃは こうしえんへ いきますか。\nーいいえ、いきません。つぎの ふつうですよ。\n(Chuyến tàu này có đi Koshien không?\n-Không, không đi đâu. Chuyến tàu thường tiếp theo mới đi đấy.)",
+        "LessonId": 34
+    }
+]

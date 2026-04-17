@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Trợ từ が với các động từ chỉ khả năng và sở hữu",
+        "Structure": "Danh từ が あります / わかります",
+        "Meaning": "Trong tiếng Nhật, các động từ biểu thị khả năng (わかります - hiểu) hoặc sở hữu (あります - có) không dùng trợ từ 「を」 mà dùng trợ từ 「が」 để biểu thị đối tượng. \n- 「あります」 dùng cho đồ vật, sự kiện (không dùng cho người/động vật).\n- 「わかります」 dùng để chỉ việc hiểu biết về một nội dung nào đó.",
+        "Example": "わたしは にほんごが わかります。\nーくるまが あります。\n(Tôi hiểu tiếng Nhật.\n-Tôi có xe hơi.)",
+        "LessonId": 38
+    },
+    {
+        "GrammarName": "Trợ từ が với tính từ chỉ tâm trạng và năng lực",
+        "Structure": "Danh từ が すきです / きらいです / じょうずです / へたです",
+        "Meaning": "Các tính từ chỉ sở thích (すき - thích, きらい - ghét) hoặc năng lực (じょうず - giỏi, へた - kém) cũng sử dụng trợ từ 「が」 để chỉ đối tượng được hướng tới. \nLưu ý: 「じょうず」 thường dùng để khen người khác, ít khi tự dùng cho bản thân (thay vào đó dùng 「できます」).",
+        "Example": "わたしは い Italian りょうりが すきです。\nーさんは じょうずです。\n(Tôi thích món ăn Ý.\n-Anh Miller giỏi nấu ăn.)",
+        "LessonId": 38
+    },
+    {
+        "GrammarName": "Phó từ chỉ mức độ (Mức độ hiểu và số lượng)",
+        "Structure": "よく / だいたい / すこし / たくさん / あまり / ぜんぜん",
+        "Meaning": "Các phó từ này đứng trước động từ/tính từ để bổ nghĩa về mức độ hoặc số lượng:\n- 「よく」(tốt/rõ), 「だいたい」(đại khái), 「すこし」(một chút): Dùng trong câu khẳng định.\n- 「たくさん」(nhiều): Dùng cho số lượng vật có được.\n- 「あまり」(không... lắm), 「ぜんぜん」(hoàn toàn không...): Luôn đi kèm với câu phủ định ở cuối.",
+        "Example": "えいごが よく わかります。\nーおかねが ぜんぜん ありません。\n(Tôi hiểu rất rõ tiếng Anh.\n-Tôi hoàn toàn không có tiền.)",
+        "LessonId": 38
+    },
+    {
+        "GrammarName": "Mẫu câu chỉ lý do: ～から (Vì...)",
+        "Structure": "Câu 1 (Lý do) から, Câu 2 (Kết quả)",
+        "Meaning": "Trợ từ 「から」 đặt sau một mệnh đề để biểu thị lý do hoặc nguyên nhân cho mệnh đề đứng sau nó. Câu 1 và Câu 2 được nối với nhau tạo thành mối quan hệ nhân quả (Vì Câu 1 nên Câu 2).",
+        "Example": "じかんが ありませんから, しんぶんを よみません。\n(Vì không có thời gian nên tôi không đọc báo.)",
+        "LessonId": 38
+    },
+    {
+        "GrammarName": "Nghi vấn từ: どうして (Tại sao)",
+        "Structure": "どうして ~ か",
+        "Meaning": "Dùng để hỏi về lý do hoặc nguyên nhân. \n- Khi trả lời câu hỏi 「どうして」, ta bắt buộc phải thêm 「から」 vào cuối câu trả lời để xác nhận đó là lý do.",
+        "Example": "どうして きのう やすみましたか。\nーようじが ありましたから。\n(Tại sao hôm qua bạn lại nghỉ?\n-Vì tôi có việc bận.)",
+        "LessonId": 38
+    }
+]

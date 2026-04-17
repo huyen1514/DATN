@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Mệnh đề định ngữ: Bổ nghĩa cho Danh từ",
+        "Structure": "[Động từ thể thông thường] + Danh từ",
+        "Meaning": "Trong tiếng Nhật, để miêu tả cụ thể hơn cho một danh từ bằng một hành động, ta đặt động từ ở thể thông thường (Plain Form) ngay trước danh từ đó. \n- Khác với tiếng Việt (dùng từ 'mà', 'để'), tiếng Nhật đặt toàn bộ mệnh đề bổ nghĩa lên trước.\n- Lưu ý: Trong mệnh đề bổ nghĩa này, trợ từ 「は」 của chủ thể sẽ được thay thế bằng trợ từ 「が」.",
+        "Example": "これは ミラーさんが つくった ケーキです。\nーあそこに いる ひとは だれですか。\n(Đây là cái bánh mà anh Miller đã làm.\n-Người đang ở đằng kia là ai vậy?)",
+        "LessonId": 51
+    },
+    {
+        "GrammarName": "Danh từ được bổ nghĩa làm Tân ngữ",
+        "Structure": "[V-plain + N] を Động từ",
+        "Meaning": "Một danh từ sau khi được bổ nghĩa bởi một mệnh đề động từ vẫn có thể đóng vai trò làm tân ngữ trong một câu lớn hơn. Bạn chỉ cần coi cả cụm [Mệnh đề + Danh từ] là một danh từ phức hợp.",
+        "Example": "きのう ならった ことばを わすれました。\n(Tôi đã quên những từ vựng mà tôi đã học ngày hôm qua.)",
+        "LessonId": 51
+    },
+    {
+        "GrammarName": "Danh từ được bổ nghĩa làm Chủ ngữ",
+        "Structure": "[V-plain + N] は Tính từ / Danh từ です",
+        "Meaning": "Tương tự như tân ngữ, cụm danh từ có mệnh đề định ngữ cũng có thể đứng làm chủ ngữ của câu để được miêu tả tính chất hoặc định nghĩa.",
+        "Example": "わたしが うまれた ところは きれいな まちです。\n(Nơi mà tôi sinh ra là một thành phố đẹp.)",
+        "LessonId": 51
+    },
+    {
+        "GrammarName": "Mẫu câu: [V-jisho + Danh từ] じかん / やくそく / 用事 が あります",
+        "Structure": "V-jisho + [じかん / やくそく / ようじ] が あります",
+        "Meaning": "Đây là cách dùng phổ biến của định ngữ để nói về việc có thời gian, có cuộc hẹn hoặc có việc bận để làm một hành động nào đó. Động từ bổ nghĩa cho các danh từ này luôn ở thể từ điển.",
+        "Example": "わたしは じゅうに あう やくそくが あります。\nーこんばん べんきょうする じかんが ありますか。\n(Tôi có cuộc hẹn gặp gia đình.\n-Tối nay bạn có thời gian để học bài không?)",
+        "LessonId": 51
+    },
+    {
+        "GrammarName": "Sự thay đổi trợ từ trong mệnh đề phụ: は -> が",
+        "Structure": "S が V-plain + Danh từ",
+        "Meaning": "Đây là quy tắc vàng: Trong một mệnh đề bổ nghĩa cho danh từ, chủ ngữ của mệnh đề đó không bao giờ đi với 「は」 mà phải đi với 「가」 để tránh nhầm lẫn với chủ đề chính của cả câu.",
+        "Example": "カリナさんが かいた えは どれですか。\n(Bức tranh mà chị Karina đã vẽ là bức nào?)",
+        "LessonId": 51
+    }
+]

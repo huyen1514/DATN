@@ -1,0 +1,274 @@
+[
+    {
+        "Word": "これ",
+        "Reading": "これ",
+        "Meaning": "cái này, đây",
+        "PartOfSpeech": "Đại từ",
+        "LessonId": 5,
+        "Example": "これは 本です。\n(Đây là quyển sách.)"
+    },
+    {
+        "Word": "それ",
+        "Reading": "それ",
+        "Meaning": "cái đó, đó",
+        "PartOfSpeech": "Đại từ",
+        "LessonId": 5,
+        "Example": "それは 私の 辞書です。\n(Đó là từ điển của tôi.)"
+    },
+    {
+        "Word": "あれ",
+        "Reading": "あれ",
+        "Meaning": "cái kia, kia",
+        "PartOfSpeech": "Đại từ",
+        "LessonId": 5,
+        "Example": "あれは だれの 傘ですか。\n(Kia là cái ô của ai?)"
+    },
+    {
+        "Word": "この",
+        "Reading": "この",
+        "Meaning": "~ này",
+        "PartOfSpeech": "Liên thể từ",
+        "LessonId": 5,
+        "Example": "この 手帳は 私の です。\n(Cuốn sổ tay này là của tôi.)"
+    },
+    {
+        "Word": "その",
+        "Reading": "その",
+        "Meaning": "~ đó",
+        "PartOfSpeech": "Liên thể từ",
+        "LessonId": 5,
+        "Example": "その 鞄は 佐藤さんの です。\n(Cái cặp đó là của anh Sato.)"
+    },
+    {
+        "Word": "あの",
+        "Reading": "あの",
+        "Meaning": "~ kia",
+        "PartOfSpeech": "Liên thể từ",
+        "LessonId": 5,
+        "Example": "あの 人は だれですか。\n(Người kia là ai?)"
+    },
+    {
+        "Word": "本",
+        "Reading": "ほん",
+        "Meaning": "sách",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "これは 日本語の 本です。\n(Đây là sách tiếng Nhật.)"
+    },
+    {
+        "Word": "辞書",
+        "Reading": "じしょ",
+        "Meaning": "từ điển",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "これは 英語の 辞書です。\n(Đây là từ điển tiếng Anh.)"
+    },
+    {
+        "Word": "雑誌",
+        "Reading": "ざっし",
+        "Meaning": "tạp chí",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "カメラの 雑誌を 読みます。\n(Tôi đọc tạp chí về máy ảnh.)"
+    },
+    {
+        "Word": "新聞",
+        "Reading": "しんぶん",
+        "Meaning": "báo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "毎朝 新聞を 読みます。\n(Mỗi sáng tôi đều đọc báo.)"
+    },
+    {
+        "Word": "ノート",
+        "Reading": "ノート",
+        "Meaning": "quyển vở",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "新しい ノートを 買いました。\n(Tôi đã mua một quyển vở mới.)"
+    },
+    {
+        "Word": "手帳",
+        "Reading": "てちょう",
+        "Meaning": "sổ tay",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "手帳に 予定を 書きます。\n(Tôi viết dự định vào sổ tay.)"
+    },
+    {
+        "Word": "名刺",
+        "Reading": "めいし",
+        "Meaning": "danh thiếp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "これは 私の 名刺です。\n(Đây là danh thiếp của tôi.)"
+    },
+    {
+        "Word": "カード",
+        "Reading": "カード",
+        "Meaning": "thẻ, cạc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "カードで 払います。\n(Tôi thanh toán bằng thẻ.)"
+    },
+    {
+        "Word": "鉛筆",
+        "Reading": "えんぴつ",
+        "Meaning": "bút chì",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "鉛筆を 貸して ください。\n(Hãy cho tôi mượn bút chì.)"
+    },
+    {
+        "Word": "ボールペン",
+        "Reading": "ボールペン",
+        "Meaning": "bút bi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "この ボールペンは 100円です。\n(Cái bút bi này giá 100 yên.)"
+    },
+    {
+        "Word": "シャープペンシル",
+        "Reading": "シャープペンシル",
+        "Meaning": "bút chì kim",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "それは シャープペンシルですか。\n(Đó là bút chì kim phải không?)"
+    },
+    {
+        "Word": "かぎ",
+        "Reading": "かぎ",
+        "Meaning": "chìa khóa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "車の かぎを 忘れました。\n(Tôi đã quên chìa khóa xe ô tô.)"
+    },
+    {
+        "Word": "時計",
+        "Reading": "とけい",
+        "Meaning": "đồng hồ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "その 時計は いくらですか。\n(Cái đồng hồ đó bao nhiêu tiền?)"
+    },
+    {
+        "Word": "傘",
+        "Reading": "かさ",
+        "Meaning": "ô, dù",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "あれは 私の 傘です。\n(Kia là cái ô của tôi.)"
+    },
+    {
+        "Word": "かばん",
+        "Reading": "かばん",
+        "Meaning": "cặp sách, túi xách",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "重い かばんを 持っています。\n(Tôi đang cầm một cái cặp nặng.)"
+    },
+    {
+        "Word": "CD",
+        "Reading": "シーディー",
+        "Meaning": "đĩa CD",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "RADWIMPSの CDを 聞きます。\n(Tôi nghe đĩa CD của RADWIMPS.)"
+    },
+    {
+        "Word": "テレビ",
+        "Reading": "テレビ",
+        "Meaning": "tivi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "テレビで ニュースを 見ます。\n(Tôi xem tin tức trên tivi.)"
+    },
+    {
+        "Word": "ラジオ",
+        "Reading": "ラジオ",
+        "Meaning": "radio",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "ラジオを 聞きながら 勉強します。\n(Tôi vừa nghe radio vừa học bài.)"
+    },
+    {
+        "Word": "カメラ",
+        "Reading": "カメラ",
+        "Meaning": "máy ảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "新しい カメラを 買いたいです。\n(Tôi muốn mua máy ảnh mới.)"
+    },
+    {
+        "Word": "コンピューター",
+        "Reading": "コンピューター",
+        "Meaning": "máy vi tính",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "コンピューターの 会社で 働いています。\n(Tôi đang làm việc tại một công ty máy tính.)"
+    },
+    {
+        "Word": "車",
+        "Reading": "くるま",
+        "Meaning": "ô tô, xe hơi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "赤い 車を 運転します。\n(Tôi lái chiếc xe ô tô màu đỏ.)"
+    },
+    {
+        "Word": "机",
+        "Reading": "つくえ",
+        "Meaning": "bàn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "机の 上に 本が あります。\n(Trên bàn có cuốn sách.)"
+    },
+    {
+        "Word": "いす",
+        "Reading": "いす",
+        "Meaning": "ghế",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "この いすは とても 良いです。\n(Cái ghế này rất tốt.)"
+    },
+    {
+        "Word": "チョコレート",
+        "Reading": "チョコレート",
+        "Meaning": "sôcôla",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "チョコレートを 食べます。\n(Tôi ăn sô-cô-la.)"
+    },
+    {
+        "Word": "コーヒー",
+        "Reading": "コーヒー",
+        "Meaning": "cà phê",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "毎朝 コーヒーを 飲みます。\n(Mỗi sáng tôi đều uống cà phê.)"
+    },
+    {
+        "Word": "お土産",
+        "Reading": "おみやげ",
+        "Meaning": "quà (mua khi đi xa về)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "これは 日本の お土産です。\n(Đây là quà lưu niệm của Nhật Bản.)"
+    },
+    {
+        "Word": "英語",
+        "Reading": "えいご",
+        "Meaning": "tiếng Anh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "英語の 雑誌を 読みます。\n(Tôi đọc tạp chí tiếng Anh.)"
+    },
+    {
+        "Word": "日本語",
+        "Reading": "にほんご",
+        "Meaning": "tiếng Nhật",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 5,
+        "Example": "毎日 日本語を 勉強します。\n(Tôi học tiếng Nhật mỗi ngày.)"
+    }
+]

@@ -1,0 +1,338 @@
+[
+    {
+        "Word": "食べます",
+        "Reading": "たべます",
+        "Meaning": "ăn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "ぱんを たべます。\n(Tôi ăn bánh mì.)"
+    },
+    {
+        "Word": "飲みます",
+        "Reading": "のみます",
+        "Meaning": "uống",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "じゅーすを のみます。\n(Tôi uống nước trái cây.)"
+    },
+    {
+        "Word": "吸います",
+        "Reading": "すいます",
+        "Meaning": "hút [thuốc lá]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "たばこを すいます。\n(Tôi hút thuốc lá.)"
+    },
+    {
+        "Word": "見ます",
+        "Reading": "みます",
+        "Meaning": "xem, nhìn, trông",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "てれびを みます。\n(Tôi xem tivi.)"
+    },
+    {
+        "Word": "聞きます",
+        "Reading": "ききます",
+        "Meaning": "nghe",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "らじおを ききます。\n(Tôi nghe radio.)"
+    },
+    {
+        "Word": "読みます",
+        "Reading": "よみます",
+        "Meaning": "đọc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "しんぶんを よみます。\n(Tôi đọc báo.)"
+    },
+    {
+        "Word": "書きます",
+        "Reading": "かきます",
+        "Meaning": "viết, vẽ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "てがみを かきます。\n(Tôi viết thư.)"
+    },
+    {
+        "Word": "買います",
+        "Reading": "かいます",
+        "Meaning": "mua",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "ざっしを かいます。\n(Tôi mua tạp chí.)"
+    },
+    {
+        "Word": "撮ります",
+        "Reading": "とります",
+        "Meaning": "chụp [ảnh]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "しゃしんを とります。\n(Tôi chụp ảnh.)"
+    },
+    {
+        "Word": "します",
+        "Reading": "します",
+        "Meaning": "làm, chơi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "さっかーを します。\n(Tôi chơi bóng đá.)"
+    },
+    {
+        "Word": "会います",
+        "Reading": "あいます",
+        "Meaning": "gặp [bạn]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 11,
+        "Example": "ともだちに あいます。\n(Tôi gặp bạn.)"
+    },
+    {
+        "Word": "ごはん",
+        "Reading": "ごはん",
+        "Meaning": "cơm, bữa ăn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "いっしょに ごはんを たべませんか。\n(Cùng ăn cơm với tôi không?)"
+    },
+    {
+        "Word": "朝ごはん",
+        "Reading": "あさごはん",
+        "Meaning": "cơm sáng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "あさごはんを たべました。\n(Tôi đã ăn cơm sáng rồi.)"
+    },
+    {
+        "Word": "昼ごはん",
+        "Reading": "ひるごはん",
+        "Meaning": "cơm trưa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "どこで ひるごはんを たべますか。\n(Bạn ăn cơm trưa ở đâu?)"
+    },
+    {
+        "Word": "晩ごはん",
+        "Reading": "ばんごはん",
+        "Meaning": "cơm tối",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "ばんごはんを たべます。\n(Tôi ăn cơm tối.)"
+    },
+    {
+        "Word": "パン",
+        "Reading": "ぱん",
+        "Meaning": "bánh mì",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "ぱんを かいました。\n(Tôi đã mua bánh mì.)"
+    },
+    {
+        "Word": "卵",
+        "Reading": "たまご",
+        "Meaning": "trứng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "たまごを たべます。\n(Tôi ăn trứng.)"
+    },
+    {
+        "Word": "肉",
+        "Reading": "にく",
+        "Meaning": "thịt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "にくを かいます。\n(Tôi mua thịt.)"
+    },
+    {
+        "Word": "魚",
+        "Reading": "さかな",
+        "Meaning": " cá",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "さかなを たべました。\n(Tôi đã ăn cá.)"
+    },
+    {
+        "Word": "野菜",
+        "Reading": "やさい",
+        "Meaning": "rau",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "やさいを かいます。\n(Tôi mua rau.)"
+    },
+    {
+        "Word": "果物",
+        "Reading": "くだもの",
+        "Meaning": "hoa quả, trái cây",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "くだものを たべます。\n(Tôi ăn trái cây.)"
+    },
+    {
+        "Word": "水",
+        "Reading": "みず",
+        "Meaning": "nước",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "みずを のみます。\n(Tôi uống nước.)"
+    },
+    {
+        "Word": "お茶",
+        "Reading": "おちゃ",
+        "Meaning": "trà",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "おちゃを のみますか。\n(Bạn có uống trà không?)"
+    },
+    {
+        "Word": "紅茶",
+        "Reading": "こうちゃ",
+        "Meaning": "trà đen (hồng trà)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "こうちゃを のみます。\n(Tôi uống trà đen.)"
+    },
+    {
+        "Word": "牛乳",
+        "Reading": "ぎゅうにゅう",
+        "Meaning": "sữa bò",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "ぎゅうにゅうを のみます。\n(Tôi uống sữa bò.)"
+    },
+    {
+        "Word": "ジュース",
+        "Reading": "じゅーす",
+        "Meaning": "nước trái cây",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "じゅーすを かいました。\n(Tôi đã mua nước trái cây.)"
+    },
+    {
+        "Word": "ビール",
+        "Reading": "びーる",
+        "Meaning": "bia",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "びーるを のみました。\n(Tôi đã uống bia.)"
+    },
+    {
+        "Word": "お酒",
+        "Reading": "おさけ",
+        "Meaning": "rượu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "おさけを のみますか。\n(Bạn có uống rượu không?)"
+    },
+    {
+        "Word": "映画",
+        "Reading": "えいが",
+        "Meaning": "phim, điện ảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "えいがを みます。\n(Tôi xem phim.)"
+    },
+    {
+        "Word": "手紙",
+        "Reading": "てがみ",
+        "Meaning": "thư",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "てがみを かきました。\n(Tôi đã viết thư rồi.)"
+    },
+    {
+        "Word": "レポート",
+        "Reading": "れぽーと",
+        "Meaning": "báo cáo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "れぽーとを かきます。\n(Tôi viết báo cáo.)"
+    },
+    {
+        "Word": "写真",
+        "Reading": "しゃしん",
+        "Meaning": "ảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "しゃしんを とります。\n(Tôi chụp ảnh.)"
+    },
+    {
+        "Word": "店",
+        "Reading": "みせ",
+        "Meaning": "cửa hàng, tiệm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "あの みせで かいました。\n(Tôi đã mua ở cửa hàng kia.)"
+    },
+    {
+        "Word": "庭",
+        "Reading": "にわ",
+        "Meaning": "vườn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "にわで しゃしんを とります。\n(Tôi chụp ảnh ở vườn.)"
+    },
+    {
+        "Word": "宿題",
+        "Reading": "しゅくだい",
+        "Meaning": "bài tập về nhà",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "しゅくだいを します。\n(Tôi làm bài tập về nhà.)"
+    },
+    {
+        "Word": "テニス",
+        "Reading": "てにす",
+        "Meaning": "quần vợt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "てにすを しました。\n(Tôi đã chơi quần vợt.)"
+    },
+    {
+        "Word": "サッカー",
+        "Reading": "さっかー",
+        "Meaning": "bóng đá",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "さっかーを します。\n(Tôi chơi bóng đá.)"
+    },
+    {
+        "Word": "お花見",
+        "Reading": "おはなみ",
+        "Meaning": "ngắm hoa anh đào",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 11,
+        "Example": "おはなみを します。\n(Tôi đi ngắm hoa anh đào.)"
+    },
+    {
+        "Word": "一緒に",
+        "Reading": "いっしょに",
+        "Meaning": "cùng nhau",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 11,
+        "Example": "いっしょに いきませんか。\n(Cùng đi với tôi không?)"
+    },
+    {
+        "Word": "ちょっと",
+        "Reading": "ちょっと",
+        "Meaning": "một chút",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 11,
+        "Example": "ちょっと やすみます。\n(Nghỉ một chút.)"
+    },
+    {
+        "Word": "いつも",
+        "Reading": "いつも",
+        "Meaning": "luôn luôn",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 11,
+        "Example": "いつも ここで かいます。\n(Tôi luôn luôn mua ở đây.)"
+    },
+    {
+        "Word": "時々",
+        "Reading": "ときどき",
+        "Meaning": "thỉnh thoảng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 11,
+        "Example": "ときどき えいがを みます。\n(Thỉnh thoảng tôi xem phim.)"
+    }
+]

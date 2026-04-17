@@ -11,7 +11,7 @@ using Models;
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = args,
-    WebRootPath = "wwwroot" // ✅ Cấu hình WebRootPath ngay từ đầu
+    WebRootPath = "wwwroot" // Cấu hình WebRootPath ngay từ đầu
 });
 
 // Add DbContext
@@ -20,6 +20,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 builder.Services.AddScoped<JwtService>();
+
+builder.Services.AddScoped<VocabImportService>();
+builder.Services.AddScoped<GrammarImportService>();
+
 builder.Services.AddHttpContextAccessor();
 
 // Add Authentication with JWT Bearer
@@ -162,6 +166,29 @@ using (var scope = app.Services.CreateScope())
 
         context.Users.Add(admin);
         context.SaveChanges();
+    }
+
+    var importer = scope.ServiceProvider.GetRequiredService<VocabImportService>();
+    try 
+    {
+        // Bạn có thể await vì Program.cs của .NET 8 hỗ trợ Top-level statements
+        await importer.ImportAllFromFolderAsync();
+        Console.WriteLine("Vocab Import check completed.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Vocab Import failed: " + ex.Message);
+    }
+
+    var grammarImporter = scope.ServiceProvider.GetRequiredService<GrammarImportService>();
+    try 
+    {
+        await grammarImporter.ImportAllFromFolderAsync(); 
+        Console.WriteLine("Grammar Import check completed.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Grammar Import failed: " + ex.Message);
     }
 }
 

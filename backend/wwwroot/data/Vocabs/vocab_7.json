@@ -1,0 +1,266 @@
+[
+    {
+        "Word": "切ります",
+        "Reading": "きります",
+        "Meaning": "cắt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "はさみで かみを きります。\n(Tôi cắt giấy bằng kéo.)"
+    },
+    {
+        "Word": "送ります",
+        "Reading": "おくります",
+        "Meaning": "gửi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "にもつを おくります。\n(Tôi gửi hành lý.)"
+    },
+    {
+        "Word": "あげます",
+        "Reading": "あげます",
+        "Meaning": "cho, tặng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "はなを あげます。\n(Tôi tặng hoa.)"
+    },
+    {
+        "Word": "もらいます",
+        "Reading": "もらいます",
+        "Meaning": "nhận",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "ぷれぜんとを もらいました。\n(Tôi đã nhận được quà.)"
+    },
+    {
+        "Word": "貸します",
+        "Reading": "かします",
+        "Meaning": "cho mượn, cho vay",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "おかねを かします。\n(Tôi cho mượn tiền.)"
+    },
+    {
+        "Word": "借ります",
+        "Reading": "かります",
+        "Meaning": "mượn, vay",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "ほんを かりました。\n(Tôi đã mượn sách.)"
+    },
+    {
+        "Word": "教えます",
+        "Reading": "おしえます",
+        "Meaning": "dạy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "にほんごを おしえます。\n(Tôi dạy tiếng Nhật.)"
+    },
+    {
+        "Word": "習います",
+        "Reading": "ならいます",
+        "Meaning": "học, tập",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "ぎたーを ならいます。\n(Tôi học đàn ghi-ta.)"
+    },
+    {
+        "Word": "かけます",
+        "Reading": "かけます",
+        "Meaning": "gọi [điện thoại]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 12,
+        "Example": "でんわを かけます。\n(Tôi gọi điện thoại.)"
+    },
+    {
+        "Word": "手",
+        "Reading": "て",
+        "Meaning": "tay",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "てを あらいます。\n(Tôi rửa tay.)"
+    },
+    {
+        "Word": "はし",
+        "Reading": "はし",
+        "Meaning": "đũa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "はしで たべます。\n(Tôi ăn bằng đũa.)"
+    },
+    {
+        "Word": "スプーン",
+        "Reading": "すぷーん",
+        "Meaning": "thìa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "すぷーんで たべます。\n(Tôi ăn bằng thìa.)"
+    },
+    {
+        "Word": "ナイフ",
+        "Reading": "ないふ",
+        "Meaning": "dao",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "ないふで きります。\n(Tôi cắt bằng dao.)"
+    },
+    {
+        "Word": "フォーク",
+        "Reading": "ふぉーく",
+        "Meaning": "dĩa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "ふぉーくを つかいます。\n(Tôi dùng dĩa.)"
+    },
+    {
+        "Word": "はさみ",
+        "Reading": "はさみ",
+        "Meaning": "kéo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "はさみで きります。\n(Tôi cắt bằng kéo.)"
+    },
+    {
+        "Word": "パソコン",
+        "Reading": "ぱそこん",
+        "Meaning": "máy tính cá nhân",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "ぱそこんで れぽーとを かきます。\n(Tôi viết báo cáo bằng máy tính.)"
+    },
+    {
+        "Word": "ケータイ",
+        "Reading": "けーたい",
+        "Meaning": "điện thoại di động",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "けーたいで しゃしんを とります。\n(Tôi chụp ảnh bằng điện thoại.)"
+    },
+    {
+        "Word": "メール",
+        "Reading": "めーる",
+        "Meaning": "email",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "めーるを おくります。\n(Tôi gửi email.)"
+    },
+    {
+        "Word": "年賀状",
+        "Reading": "ねんがじょう",
+        "Meaning": "thiệp chúc mừng năm mới",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "ねんがじょうを かきます。\n(Tôi viết thiệp chúc mừng năm mới.)"
+    },
+    {
+        "Word": "消しゴム",
+        "Reading": "けしごむ",
+        "Meaning": "cục tẩy",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "けしごむを かしてください。\n(Hãy cho tôi mượn cục tẩy.)"
+    },
+    {
+        "Word": "紙",
+        "Reading": "かみ",
+        "Meaning": "giấy",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "かみに なまえを かきます。\n(Tôi viết tên lên giấy.)"
+    },
+    {
+        "Word": "花",
+        "Reading": "はな",
+        "Meaning": "hoa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "はなを かいました。\n(Tôi đã mua hoa.)"
+    },
+    {
+        "Word": "シャツ",
+        "Reading": "しゃつ",
+        "Meaning": "áo sơ mi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "しゃつを かいます。\n(Tôi mua áo sơ mi.)"
+    },
+    {
+        "Word": "プレゼント",
+        "Reading": "ぷれぜんと",
+        "Meaning": "quà tặng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "ぷれぜんとを あげます。\n(Tôi tặng quà.)"
+    },
+    {
+        "Word": "荷物",
+        "Reading": "にもつ",
+        "Meaning": "hành lý",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "にもつを おくりました。\n(Tôi đã gửi hành lý rồi.)"
+    },
+    {
+        "Word": "お金",
+        "Reading": "おかね",
+        "Meaning": "tiền",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "おかねが あります。\n(Tôi có tiền.)"
+    },
+    {
+        "Word": "切符",
+        "Reading": "きっぷ",
+        "Meaning": "vé",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "きっぷを かいました。\n(Tôi đã mua vé.)"
+    },
+    {
+        "Word": "クリスマス",
+        "Reading": "くりすます",
+        "Meaning": "Giáng sinh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "くりすますに ぷれぜんとを あげます。\n(Tôi tặng quà vào dịp Giáng sinh.)"
+    },
+    {
+        "Word": "父",
+        "Reading": "ちち",
+        "Meaning": "bố (của mình)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "ちちに めーるを おくります。\n(Tôi gửi email cho bố.)"
+    },
+    {
+        "Word": "母",
+        "Reading": "はは",
+        "Meaning": "mẹ (của mình)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 12,
+        "Example": "ははに はなを あげました。\n(Tôi đã tặng hoa cho mẹ.)"
+    },
+    {
+        "Word": "もう",
+        "Reading": "もう",
+        "Meaning": "đã, rồi",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 12,
+        "Example": "もう たべました。\n(Tôi đã ăn rồi.)"
+    },
+    {
+        "Word": "まだ",
+        "Reading": "まだ",
+        "Meaning": "chưa",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 12,
+        "Example": "まだ です。\n(Vẫn chưa.)"
+    },
+    {
+        "Word": "これから",
+        "Reading": "これから",
+        "Meaning": "từ bây giờ",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 12,
+        "Example": "これから いきます。\n(Tôi đi bây giờ đây.)"
+    }
+]

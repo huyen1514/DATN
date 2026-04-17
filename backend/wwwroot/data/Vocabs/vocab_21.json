@@ -1,0 +1,218 @@
+[
+    {
+        "Word": "思います",
+        "Reading": "おもいます",
+        "Meaning": "nghĩ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 26,
+        "Example": "にほんは きれいだと おもいます。\n(Tôi nghĩ Nhật Bản đẹp.)"
+    },
+    {
+        "Word": "言います",
+        "Reading": "いいます",
+        "Meaning": "nói",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 26,
+        "Example": "ねる まえに おやすみなさいと いいます。\n(Trước khi ngủ thì nói chúc ngủ ngon.)"
+    },
+    {
+        "Word": "足ります",
+        "Reading": "たります",
+        "Meaning": "đủ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 26,
+        "Example": "じかんが たりますか。\n(Có đủ thời gian không?)"
+    },
+    {
+        "Word": "勝ちます",
+        "Reading": "かちます",
+        "Meaning": "thắng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 26,
+        "Example": "しあいに かちました。\n(Tôi đã thắng trận đấu.)"
+    },
+    {
+        "Word": "負けます",
+        "Reading": "まけます",
+        "Meaning": "thua",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 26,
+        "Example": "しあいに まけました。\n(Tôi đã thua trận đấu.)"
+    },
+    {
+        "Word": "役に立ちます",
+        "Reading": "やくにたちます",
+        "Meaning": "có ích, giúp ích",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 26,
+        "Example": "この じしょは やくにたちます。\n(Cuốn từ điển này có ích.)"
+    },
+    {
+        "Word": "無駄[な]",
+        "Reading": "むだ",
+        "Meaning": "lãng phí, vô ích",
+        "PartOfSpeech": "Tính từ đuôi na",
+        "LessonId": 26,
+        "Example": "むだな おかねを つかいません。\n(Tôi không tiêu tiền lãng phí.)"
+    },
+    {
+        "Word": "不便[な]",
+        "Reading": "ふべん",
+        "Meaning": "bất tiện",
+        "PartOfSpeech": "Tính từ đuôi na",
+        "LessonId": 26,
+        "Example": "ここは ふべんな ところです。\n(Nơi đây là một nơi bất tiện.)"
+    },
+    {
+        "Word": "同じ",
+        "Reading": "おなじ",
+        "Meaning": "giống nhau",
+        "PartOfSpeech": "Tính từ đuôi na/Danh từ",
+        "LessonId": 26,
+        "Example": "かれと おなじ かばんを かいました。\n(Tôi đã mua cái cặp giống anh ấy.)"
+    },
+    {
+        "Word": "すごい",
+        "Reading": "すごい",
+        "Meaning": "ghê gớm, tuyệt vời",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 26,
+        "Example": "すごいですね。\n(Tuyệt quá nhỉ / Ghê thật đấy nhỉ.)"
+    },
+    {
+        "Word": "首相",
+        "Reading": "しゅしょう",
+        "Meaning": "thủ tướng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "にほんの しゅしょうは だれですか。\n(Thủ tướng Nhật Bản là ai vậy?)"
+    },
+    {
+        "Word": "大統領",
+        "Reading": "だいとうりょう",
+        "Meaning": "tổng thống",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "あめりかの だいとうりょうに あいました。\n(Tôi đã gặp tổng thống Mỹ.)"
+    },
+    {
+        "Word": "政治",
+        "Reading": "せいじ",
+        "Meaning": "chính trị",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "せいじの はなしは むずかしいです。\n(Chuyện chính trị thì khó.)"
+    },
+    {
+        "Word": "ニュース",
+        "Reading": "にゅうす",
+        "Meaning": "tin tức, bản tin",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "まいにち にゅうすを みます。\n(Mỗi ngày tôi đều xem tin tức.)"
+    },
+    {
+        "Word": "スピーチ",
+        "Reading": "すぴーち",
+        "Meaning": "bài diễn văn (speech)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "すぴーちを します。\n(Tôi làm bài diễn thuyết.)"
+    },
+    {
+        "Word": "試合",
+        "Reading": "しあい",
+        "Meaning": "trận đấu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "あした さっかーの しあいが あります。\n(Ngày mai có trận đấu bóng đá.)"
+    },
+    {
+        "Word": "意見",
+        "Reading": "いけん",
+        "Meaning": "ý kiến",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "いけんを いって ください。\n(Hãy nói ý kiến của bạn đi.)"
+    },
+    {
+        "Word": "お話",
+        "Reading": "おはなし",
+        "Meaning": "câu chuyện, bài nói chuyện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "せんせいの おはなしを ききます。\n(Nghe câu chuyện của thầy giáo.)"
+    },
+    {
+        "Word": "ユーモア",
+        "Reading": "ゆーもあ",
+        "Meaning": "hài hước (humor)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "かれは ゆーもあが あります。\n(Anh ấy có tính hài hước.)"
+    },
+    {
+        "Word": "デザイン",
+        "Reading": "でざいん",
+        "Meaning": "thiết kế (design)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "この しゃつの でざいんは いいですね。\n(Thiết kế của cái áo này đẹp nhỉ.)"
+    },
+    {
+        "Word": "交通",
+        "Reading": "こうつう",
+        "Meaning": "giao thông",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "にほんは こうつうが べんりです。\n(Giao thông ở Nhật tiện lợi.)"
+    },
+    {
+        "Word": "最近",
+        "Reading": "さいきん",
+        "Meaning": "gần đây",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 26,
+        "Example": "さいきん とても あついです。\n(Gần đây trời rất nóng.)"
+    },
+    {
+        "Word": "たぶん",
+        "Reading": "たぶん",
+        "Meaning": "có lẽ, chắc là",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 26,
+        "Example": "あしたは たぶん あめでしょう。\n(Ngày mai có lẽ sẽ mưa.)"
+    },
+    {
+        "Word": "きっと",
+        "Reading": "きっと",
+        "Meaning": "nhất định, chắc chắn",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 26,
+        "Example": "かれは きっと きます。\n(Anh ấy nhất định sẽ đến.)"
+    },
+    {
+        "Word": "本当に",
+        "Reading": "ほんとうに",
+        "Meaning": "thật sự",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 26,
+        "Example": "にほんごは ほんとうに おもしろいです。\n(Tiếng Nhật thật sự rất thú vị.)"
+    },
+    {
+        "Word": "そんなに",
+        "Reading": "そんなに",
+        "Meaning": "đến mức như thế (dùng với phủ định)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 26,
+        "Example": "そんなに むずかしくないです。\n(Không khó đến mức như thế đâu.)"
+    },
+    {
+        "Word": "～について",
+        "Reading": "～について",
+        "Meaning": "về ~",
+        "PartOfSpeech": "Trợ từ",
+        "LessonId": 26,
+        "Example": "にほんの せいかつに ついて はなします。\n(Nói về cuộc sống ở Nhật.)"
+    }
+]

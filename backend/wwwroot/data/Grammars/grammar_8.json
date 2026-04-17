@@ -1,0 +1,44 @@
+[
+    {
+        "GrammarName": "Phân loại tính từ: Tính từ đuôi な và Tính từ đuôi い",
+        "Structure": "Danh từ は [Tính từ な] です / [Tính từ い] です",
+        "Meaning": "Tính từ trong tiếng Nhật được chia làm hai loại dựa trên cách kết thúc của chúng:\n1. Tính từ đuôi な (Na-adj): Khi bổ nghĩa cho danh từ sẽ có đuôi 「な」 (Ví dụ: shizuka na). Lưu ý: Một số từ kết thúc bằng chữ 'i' nhưng vẫn là tính từ đuôi な như 「きれい」 (đẹp), 「きらい」 (ghét).\n2. Tính từ đuôi い (I-adj): Kết thúc bằng đuôi 「い」 (Ví dụ: oishii, takai). Lưu ý: Tính từ 「いい」 (tốt) khi chia sang các dạng khác sẽ đổi thành 「よい」.",
+        "Example": "わっとさんは しんせつです。\nーふじさんは たかいです。\n(Ông Watt là người tử tế.\n-Núi Phú Sĩ thì cao.)",
+        "LessonId": 37
+    },
+    {
+        "GrammarName": "Phủ định của tính từ",
+        "Structure": "Na-adj: [じゃ ありません] / I-adj: [～くない です]",
+        "Meaning": "Cách chia phủ định của hai loại tính từ hoàn toàn khác nhau:\n- Với tính từ đuôi な: Chia giống như danh từ, thay 「です」 bằng 「じゃ ありません」 (hoặc 「では ありません」 trong văn viết).\n- Với tính từ đuôi い: Bỏ đuôi 「い」 ở cuối và thêm 「くない です」. \nVí dụ: あつい (nóng) -> あくない です.",
+        "Example": "あしたは ひまじゃ ありません。\nーこの ほんは おもしろくないです。\n(Ngày mai tôi không rảnh.\n-Cuốn sách này không hay.)",
+        "LessonId": 37
+    },
+    {
+        "GrammarName": "Tính từ bổ nghĩa cho danh từ",
+        "Structure": "[Tính từ な] な [Danh từ] / [Tính từ い] [Danh từ]",
+        "Meaning": "Khi dùng tính từ để miêu tả trực tiếp cho một danh từ, tính từ luôn đứng trước danh từ đó:\n- Đối với tính từ đuôi な: Bắt buộc phải thêm 「な」 vào giữa tính từ và danh từ.\n- Đối với tính từ đuôi い: Giữ nguyên đuôi 「い」 và đặt ngay trước danh từ.",
+        "Example": "わっとさんは しんせつな せんせいです。\nーふじさんは たかい やまです。\n(Ông Watt là một giáo viên tử tế.\n-Núi Phú Sĩ là một ngọn núi cao.)",
+        "LessonId": 37
+    },
+    {
+        "GrammarName": "Trạng từ mức độ: とても (Rất) và あまり (Không... lắm)",
+        "Structure": "とても / あまり + Tính từ",
+        "Meaning": "Đây là các phó từ đứng trước tính từ để bổ nghĩa về mức độ:\n- 「とても」: Mang nghĩa là 'Rất', dùng trong câu khẳng định.\n- 「あまり」: Mang nghĩa là 'Không... lắm', luôn luôn đi kèm với câu phủ định ở cuối.",
+        "Example": "ぺきんは とても さむいです。\nーこの じしょは あまり べnりじゃ ありません。\n(Bắc Kinh rất lạnh.\n-Cuốn từ điển này không tiện lợi lắm.)",
+        "LessonId": 37
+    },
+    {
+        "GrammarName": "Câu hỏi về trạng thái: どうですか / どんな N ですか",
+        "Structure": "N は どうですか / N は どんな [Danh từ] ですか",
+        "Meaning": "Dùng để hỏi về tính chất hoặc ấn tượng về sự vật, con người:\n- 「どうですか」: Dùng để hỏi cảm tưởng về một sự vật/việc người nghe đã biết hoặc đã trải nghiệm.\n- 「どんな [Danh từ]」: Dùng khi muốn người nghe mô tả cụ thể về một đối tượng. Câu trả lời luôn có dạng [Tính từ + Danh từ].",
+        "Example": "にほんの せいかつは どうですか。\nーならは どんな まちですか。\nーふるい まちです。\n(Cuộc sống ở Nhật thế nào?\n-Nara là thành phố như thế nào?\n-Là một thành phố cổ.)",
+        "LessonId": 37
+    },
+    {
+        "GrammarName": "Liên từ nối câu: そして (Và) và ～が (Nhưng)",
+        "Structure": "Câu 1. そして Câu 2 / Câu 1 が, Câu 2",
+        "Meaning": "Dùng để nối hai câu có tính chất miêu tả:\n- 「そして」: Nối hai câu có cùng chiều đánh giá (cùng khen hoặc cùng chê).\n- 「が」: Nối hai câu có ý nghĩa tương phản nhau. Lưu ý dấu phẩy 「,」 thường đặt sau 「が」.",
+        "Example": "にほんの たべものは おいしいです. そして やすいです。\nーにほんの たべものは おいしいですが, たかいです。\n(Đồ ăn Nhật ngon và rẻ.\n-Đồ ăn Nhật ngon nhưng mà đắt.)",
+        "LessonId": 37
+    }
+]

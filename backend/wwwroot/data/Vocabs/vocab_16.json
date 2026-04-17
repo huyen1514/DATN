@@ -1,0 +1,242 @@
+[
+    {
+        "Word": "乗ります",
+        "Reading": "のります",
+        "Meaning": "lên [tàu]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "でんしゃに のります。\n(Tôi lên tàu điện.)"
+    },
+    {
+        "Word": "降ります",
+        "Reading": "おります",
+        "Meaning": "xuống [tàu]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "えきで おります。\n(Tôi xuống ở nhà ga.)"
+    },
+    {
+        "Word": "乗り換えます",
+        "Reading": "のりかえます",
+        "Meaning": "chuyển, đổi [tàu]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "とうきょうで のりかえます。\n(Tôi chuyển tàu ở Tokyo.)"
+    },
+    {
+        "Word": "浴びます",
+        "Reading": "あびます",
+        "Meaning": "tắm [vòi hoa sen]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "しゃわーを あびます。\n(Tôi tắm vòi hoa sen.)"
+    },
+    {
+        "Word": "入れます",
+        "Reading": "いれます",
+        "Meaning": "cho vào, bỏ vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "かばんに ほんを いれます。\n(Tôi cho sách vào cặp.)"
+    },
+    {
+        "Word": "出します",
+        "Reading": "だします",
+        "Meaning": "lấy ra, rút [tiền]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "おかねを だします。\n(Tôi rút tiền.)"
+    },
+    {
+        "Word": "入ります",
+        "Reading": "はいります",
+        "Meaning": "vào [đại học]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "だいがくに はいります。\n(Tôi vào đại học.)"
+    },
+    {
+        "Word": "出ます",
+        "Reading": "でます",
+        "Meaning": "ra, tốt nghiệp [đại học]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "だいがくを でます。\n(Tôi tốt nghiệp đại học.)"
+    },
+    {
+        "Word": "辞めます",
+        "Reading": "やめます",
+        "Meaning": "bỏ, thôi [việc]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "かいしゃを やめます。\n(Tôi nghỉ việc ở công ty.)"
+    },
+    {
+        "Word": "押します",
+        "Reading": "おします",
+        "Meaning": "bấm, ấn [nút]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 21,
+        "Example": "ぼたんを おして ください。\n(Hãy ấn nút.)"
+    },
+    {
+        "Word": "若い",
+        "Reading": "わかい",
+        "Meaning": "trẻ",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 21,
+        "Example": "あの ひとは わかいです。\n(Người kia trẻ.)"
+    },
+    {
+        "Word": "長い",
+        "Reading": "ながい",
+        "Meaning": "dài",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 21,
+        "Example": "かみが ながいです。\n(Tóc dài.)"
+    },
+    {
+        "Word": "短い",
+        "Reading": "みじかい",
+        "Meaning": "ngắn",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 21,
+        "Example": "ぺんが みじかいです。\n(Cái bút ngắn.)"
+    },
+    {
+        "Word": "明るい",
+        "Reading": "あかるい",
+        "Meaning": "sáng sủa",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 21,
+        "Example": "へやが あかるいです。\n(Phòng sáng sủa.)"
+    },
+    {
+        "Word": "暗い",
+        "Reading": "くらい",
+        "Meaning": "tối",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 21,
+        "Example": "へやが くらいです。\n(Phòng tối.)"
+    },
+    {
+        "Word": "背が高い",
+        "Reading": "せがたかい",
+        "Meaning": "cao (dáng người)",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 21,
+        "Example": "あの ひとは せがたかいです。\n(Người kia cao.)"
+    },
+    {
+        "Word": "頭がいい",
+        "Reading": "あたまがいい",
+        "Meaning": "thông minh",
+        "PartOfSpeech": "Tính từ đuôi i",
+        "LessonId": 21,
+        "Example": "かのじょは あたまが いいです。\n(Cô ấy thông minh.)"
+    },
+    {
+        "Word": "体",
+        "Reading": "からだ",
+        "Meaning": "cơ thể",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "からだに いいです。\n(Tốt cho cơ thể.)"
+    },
+    {
+        "Word": "頭",
+        "Reading": "あたま",
+        "Meaning": "đầu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "あたまが いたいです。\n(Đau đầu.)"
+    },
+    {
+        "Word": "髪",
+        "Reading": "かみ",
+        "Meaning": "tóc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "かみを きります。\n(Cắt tóc.)"
+    },
+    {
+        "Word": "顔",
+        "Reading": "かお",
+        "Meaning": "khuôn mặt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "かおを あらいます。\n(Rửa mặt.)"
+    },
+    {
+        "Word": "目",
+        "Reading": "め",
+        "Meaning": "mắt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "めが おおきいです。\n(Mắt to.)"
+    },
+    {
+        "Word": "耳",
+        "Reading": "みみ",
+        "Meaning": "tai",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "みみが いたいです。\n(Đau tai.)"
+    },
+    {
+        "Word": "口",
+        "Reading": "くち",
+        "Meaning": "miệng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "くちを あけて ください。\n(Hãy mở miệng ra.)"
+    },
+    {
+        "Word": "歯",
+        "Reading": "は",
+        "Meaning": "răng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "はを みがきます。\n(Đánh răng.)"
+    },
+    {
+        "Word": "お腹",
+        "Reading": "おなか",
+        "Meaning": "bụng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "おなかが すきました。\n(Đói bụng.)"
+    },
+    {
+        "Word": "足",
+        "Reading": "あし",
+        "Meaning": "chân",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "あしが ながいですね。\n(Chân dài nhỉ.)"
+    },
+    {
+        "Word": "サービス",
+        "Reading": "さーびす",
+        "Meaning": "dịch vụ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "さーびすが いいです。\n(Dịch vụ tốt.)"
+    },
+    {
+        "Word": "ジョギング",
+        "Reading": "じょぎんぐ",
+        "Meaning": "chạy bộ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "まいあさ じょぎんぐを します。\n(Mỗi sáng tôi chạy bộ.)"
+    },
+    {
+        "Word": "シャワー",
+        "Reading": "しゃわー",
+        "Meaning": "vòi hoa sen",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 21,
+        "Example": "しゃわーを あびました。\n(Tôi đã tắm vòi hoa sen rồi.)"
+    }
+]

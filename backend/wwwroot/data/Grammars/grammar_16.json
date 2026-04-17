@@ -1,0 +1,44 @@
+[
+    {
+        "GrammarName": "Liệt kê hành động: Động từ thể て, Động từ thể て... Động từ",
+        "Structure": "V1 (thể て), V2 (thể て), ... V-masu",
+        "Meaning": "Mẫu câu này dùng để liệt kê các hành động xảy ra theo thứ tự thời gian (việc 1 xong đến việc 2). \n- Thì của cả câu (quá khứ, hiện tại, tương lai) sẽ được quyết định bởi động từ cuối cùng của câu.\n- Lưu ý: Không dùng mẫu này để nối các hành động không có quan hệ về trình tự thời gian.",
+        "Example": "あさ おきて, じょぎんぐを して, しゃわーを あびました。\n(Sáng nay tôi thức dậy, đi bộ, rồi tắm.)",
+        "LessonId": 45
+    },
+    {
+        "GrammarName": "Sau khi làm việc gì đó: ～てから",
+        "Structure": "Động từ 1 (thể て) + から, Động từ 2",
+        "Meaning": "Dùng để diễn tả sau khi hành động 1 kết thúc thì hành động 2 mới được thực hiện. \n- Mẫu này nhấn mạnh sự kết thúc của hành động 1 rõ rệt hơn mẫu liệt kê 「て」 thông thường. \n- Thì của câu cũng được quyết định ở động từ cuối cùng.",
+        "Example": "しごとが おわってから, すぐ うちへ かえります。\n(Sau khi kết thúc công việc, tôi sẽ về nhà ngay.)",
+        "LessonId": 45
+    },
+    {
+        "GrammarName": "Nối Tính từ và Danh từ (Cách chia thể て của Adj/Noun)",
+        "Structure": "[I-adj: ～くて] / [Na-adj: ～で] / [Noun: ～で]",
+        "Meaning": "Để nối hai hay nhiều câu miêu tả tính chất hoặc thông tin danh từ, chúng ta chia về thể て:\n- Tính từ đuôi い: Bỏ 「い」 thêm 「くて」 (Ngoại lệ: いい -> よくて).\n- Tính từ đuôi な: Thay 「です」 bằng 「で」.\n- Danh từ: Thay 「です」 bằng 「で」.\nLưu ý: Chỉ nối các câu có cùng chiều đánh giá (cùng khen hoặc cùng chê).",
+        "Example": "ミラーさんは わかくて, げんきです。\nー奈良は しずかで, きれいな まちです。\n(Anh Miller trẻ và khỏe mạnh.\n-Nara là một thành phố yên tĩnh và đẹp.)",
+        "LessonId": 45
+    },
+    {
+        "GrammarName": "Miêu tả bộ phận cơ thể: Danh từ 1 は Danh từ 2 が [Tính từ] です",
+        "Structure": "N1 は N2 が Tính từ です",
+        "Meaning": "Dùng để miêu tả một bộ phận cơ thể hoặc một thuộc tính của một chủ thể (người hoặc vật). \n- N1 là chủ thể chính.\n- N2 là bộ phận hoặc đặc điểm được miêu tả.",
+        "Example": "マリアさんは かみが ながいです。\nーこの へやは まどが おおきいです。\n(Chị Maria có mái tóc dài.\n-Cái phòng này có cửa sổ lớn.)",
+        "LessonId": 45
+    },
+    {
+        "GrammarName": "Hỏi cách đi: どうやって",
+        "Structure": "Địa điểm + まで どうやって いきますか",
+        "Meaning": "Nghi vấn từ 「どうやって」 được dùng để hỏi về trình tự, cách thức để thực hiện một việc gì đó hoặc hỏi đường đi đến một địa điểm nào đó. \n- Để trả lời, ta dùng mẫu liệt kê hành động 「Vて, Vて...」.",
+        "Example": "だいがくまで どうやって いきますか。\nーきょうとえきから 16ばんの ばすに のって, だいがくまえで おります。\n(Đi đến trường đại học bằng cách nào?\n-Từ ga Kyoto lên xe buýt số 16, rồi xuống ở điểm trước trường đại học.)",
+        "LessonId": 45
+    },
+    {
+        "GrammarName": "Lựa chọn trong nhóm: どの / どれ",
+        "Structure": "どの + Danh từ / どれ",
+        "Meaning": "Dùng khi người nói muốn yêu cầu người nghe xác định hoặc lựa chọn một đối tượng cụ thể trong một nhóm có từ 3 đối tượng trở lên.\n- 「どれ」: Cái nào (đứng độc lập).\n- 「どの」: Cái ... nào (phải đi kèm danh từ).",
+        "Example": "ミラーさんの かさは どれですか。\nーあの あおい かさです。\n(Cái ô của anh Miller là cái nào vậy?\n-Là cái ô màu xanh kia.)",
+        "LessonId": 45
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "GrammarName": "Đại từ chỉ địa điểm: ここ / そこ / あそこ / どこ",
+        "Structure": "ここ / そこ / あそこ は Địa điểm です",
+        "Meaning": "Đây là các đại từ chỉ địa điểm.\n- 「ここ」: Chỉ nơi người nói đang ở (đây).\n- 「そこ」: Chỉ nơi người nghe đang ở (đó).\n- 「あそこ」: Chỉ nơi xa cả người nói và người nghe (kia).\n- 「どこ」: Từ để hỏi địa điểm (ở đâu).\nKhi người nói và người nghe ở cùng một nơi, 「ここ」 chỉ khu vực xung quanh cả hai, 「そこ」 chỉ nơi hơi xa một chút và 「あそこ」 chỉ nơi rất xa.",
+        "Example": "ここは きょうしつです。\n(Đây là phòng học.)",
+        "LessonId": 32
+    },
+    {
+        "GrammarName": "Đại từ chỉ phương hướng (Lịch sự): こちら / そちら / あちら / どちら",
+        "Structure": "こちら / そちら / あちら / どちら",
+        "Meaning": "Đây là những từ chỉ phương hướng nhưng cũng được dùng thay thế cho 「ここ / そこ / あそこ / どこ」 để thể hiện sự lịch sự và trang trọng hơn.\n- 「こちら」: Phía này / Chỗ này.\n- 「そちら」: Phía đó / Chỗ đó.\n- 「あちら」: Phía kia / Chỗ kia.\n- 「どちら」: Phía nào / Chỗ nào.\nNgoài ra, 「どちら」 còn được dùng để hỏi về tên công ty, trường học hoặc quốc gia của ai đó.",
+        "Example": "うけつけは こちらです。\n(Quầy tiếp tân ở phía này.)",
+        "LessonId": 32
+    },
+    {
+        "GrammarName": "Mẫu câu hỏi địa điểm: Danh từ は Địa điểm です",
+        "Structure": "N は Địa điểm / Chỗ ở です",
+        "Meaning": "Mẫu câu này dùng để hỏi hoặc giới thiệu về vị trí của một người, một vật hoặc một địa điểm nào đó. \n- Để hỏi vị trí, ta thay địa điểm bằng 「どこ」 hoặc 「どちら」 (lịch sự).",
+        "Example": "おてあらいは どこですか。\nーあそこです。\n(Nhà vệ sinh ở đâu vậy?\n-Ở đằng kia.)",
+        "LessonId": 32
+    },
+    {
+        "GrammarName": "Trợ từ の (Xuất xứ / Nơi sản xuất)",
+        "Structure": "Danh từ 1 の Danh từ 2",
+        "Meaning": "Trong bài này, trợ từ 「の」 được dùng để biểu thị nguồn gốc hoặc nơi sản xuất của đồ vật (Danh từ 2).\n- Danh từ 1 có thể là tên một quốc gia hoặc tên một công ty.\n- Để hỏi về xuất xứ, ta dùng nghi vấn từ 「どこ」.",
+        "Example": "これは どこの ぱそこんですか。\nーにほんの ぱそこんです。\n(Đây là máy tính của đâu (nước nào)?\n-Là máy tính của Nhật Bản.)",
+        "LessonId": 32
+    },
+    {
+        "GrammarName": "Mẫu câu hỏi giá tiền: いくらですか",
+        "Structure": "Danh từ は いくらですか",
+        "Meaning": "Dùng để hỏi về giá tiền của một món hàng. 「いくら」 là nghi vấn từ dùng cho số tiền.",
+        "Example": "この ねくたいは いくらですか。\nー2,800えんです。\n(Cái cà vạt này giá bao nhiêu?\n-Giá 2.800 Yên.)",
+        "LessonId": 32
+    },
+    {
+        "GrammarName": "Tiền tố lịch sự: お～",
+        "Structure": "お + Danh từ",
+        "Meaning": "Tiền tố 「お」 được thêm vào trước một danh từ liên quan đến người nghe hoặc người thứ ba để thể hiện sự kính trọng của người nói (không dùng cho chính mình). Thường dùng với các từ như Quốc gia (おくに), Công việc (おしごと),... ",
+        "Example": "おくには どちらですか。\n(Đất nước của bạn là ở đâu vậy?)",
+        "LessonId": 32
+    }
+]

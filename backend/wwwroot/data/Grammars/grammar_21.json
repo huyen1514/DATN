@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Bày tỏ ý kiến cá nhân: ～と おもいます",
+        "Structure": "[Thể thông thường] + と おomimasu",
+        "Meaning": "Dùng để diễn đạt suy nghĩ, quan điểm hoặc phán đoán của người nói về một sự việc nào đó. \n- Trước 「と」 luôn là thể thông thường (Plain Form).\n- Lưu ý: Với Danh từ và Tính từ đuôi な ở thì hiện tại khẳng định, phải giữ nguyên 「だ」 trước 「と」 (Ví dụ: だめだ と おもいます).",
+        "Example": "あしたは あめが ふると おもいます。\nーこの まちは べんりだ と おもいます。\n(Tôi nghĩ rằng ngày mai trời sẽ mưa.\n-Tôi nghĩ rằng thành phố này tiện lợi.)",
+        "LessonId": 50
+    },
+    {
+        "GrammarName": "Trích dẫn lời nói: ～と いいました",
+        "Structure": "Câu trực tiếp / [Thể thông thường] + と いいました",
+        "Meaning": "Dùng để trích dẫn lại lời nói của một ai đó.\n1. Trích dẫn trực tiếp: Giữ nguyên câu nói của họ trong ngoặc kép 「 」.\n2. Trích dẫn gián tiếp: Chuyển toàn bộ nội dung lời nói sang thể thông thường trước khi thêm 「と いいました」.",
+        "Example": "みらーさんは 「おやすみなさい」と いいました。\nーねるまえに 「おやすみなさい」と いいます。\n(Anh Miller đã nói: \"Chúc ngủ ngon\".\n-Trước khi đi ngủ, chúng ta nói \"Chúc ngủ ngon\".)",
+        "LessonId": 50
+    },
+    {
+        "GrammarName": "Xác nhận sự đồng ý: ～でしょう？",
+        "Structure": "[Thể thông thường] + でしょう？",
+        "Meaning": "Dùng khi người nói muốn nhận được sự đồng ý hoặc xác nhận từ người nghe về một vấn đề mà người nói tin rằng người nghe cũng biết. \n- Lưu ý: Với Danh từ và Tính từ đuôi な ở hiện tại khẳng định, ta bỏ 「だ」 rồi mới thêm 「でしょう」. Ngữ điệu thường lên giọng ở cuối câu.",
+        "Example": "あしたの ぱーてぃーに いくでしょう？\nーはい、いきます。\n(Ngày mai bạn sẽ đi tiệc chứ nhỉ?\n-Vâng, tôi sẽ đi.)",
+        "LessonId": 50
+    },
+    {
+        "GrammarName": "Địa điểm tổ chức sự kiện: Danh từ (địa điểm) で Danh từ (sự kiện) が あります",
+        "Structure": "N (địa điểm) で N (sự kiện) が あります",
+        "Meaning": "Ở các bài trước, 「あります」 dùng để chỉ sự tồn tại của đồ vật. Trong bài này, khi chủ thể là các sự kiện (bữa tiệc, buổi hòa nhạc, lễ hội, vụ tai nạn...), trợ từ đi kèm địa điểm phải là 「で」 để chỉ nơi sự kiện đó diễn ra.",
+        "Example": "こうしえんで やきゅうの しあいがあります。\n(Ở sân vận động Koshien sẽ có một trận thi đấu bóng chày.)",
+        "LessonId": 50
+    },
+    {
+        "GrammarName": "Cấu trúc: Danh từ (người) に ～と つたえていただけませんか",
+        "Structure": "N に ～と つたえていただけませんか",
+        "Meaning": "Đây là mẫu câu nhờ vả rất lịch sự, dùng để nhờ ai đó nhắn lại một điều gì đó cho người khác. Nội dung lời nhắn được chia về thể thông thường trước 「と」.",
+        "Example": "すみませんが, わたなべさんに あしたの ぱーてぃーは 6じからだ と つたえていただけませんか。\n(Xin lỗi, bạn có thể nhắn lại với chị Watanabe rằng bữa tiệc ngày mai bắt đầu từ 6 giờ được không?)",
+        "LessonId": 50
+    }
+]
