@@ -1,0 +1,58 @@
+[
+    {
+        "Character": "人",
+        "Meaning": "Người (Nhân)",
+        "Onyomi": "ジン, ニン",
+        "Kunyomi": "ひと",
+        "Example": "日本人 (にほんじん): Người Nhật; 三人 (さんにん): 3 người",
+        "LessonId": 103
+    },
+    {
+        "Character": "口",
+        "Meaning": "Miệng (Khẩu)",
+        "Onyomi": "コウ",
+        "Kunyomi": "くち, -ぐち",
+        "Example": "出口 (でぐち): Cửa ra; 人口 (じんこう): Dân số",
+        "LessonId": 103
+    },
+    {
+        "Character": "目",
+        "Meaning": "Mắt (Mục)",
+        "Onyomi": "モク",
+        "Kunyomi": "め",
+        "Example": "目 (め): Mắt; 目的 (もくてき): Mục đích",
+        "LessonId": 103
+    },
+    {
+        "Character": "耳",
+        "Meaning": "Tai (Nhĩ)",
+        "Onyomi": "ジ",
+        "Kunyomi": "みみ",
+        "Example": "耳 (みみ): Tai; 耳鼻科 (じびか): Khoa tai mũi họng",
+        "LessonId": 103
+    },
+    {
+        "Character": "手",
+        "Meaning": "Tay (Thủ)",
+        "Onyomi": "シュ",
+        "Kunyomi": "て",
+        "Example": "手紙 (てがみ): Bức thư; 切手 (きって): Tem",
+        "LessonId": 103
+    },
+    {
+        "Character": "足",
+        "Meaning": "Chân / Đủ (Túc)",
+        "Onyomi": "ソク",
+        "Kunyomi": "あし, たす",
+        "Example": "足 (あし): Chân; 足りる (たりる): Đủ",
+        "LessonId": 103
+    },
+    {
+        "Character": "力",
+        "Meaning": "Sức mạnh (Lực)",
+        "Onyomi": "リョク, リキ",
+        "Kunyomi": "ちから",
+        "Example": "力 (ちから): Sức mạnh; 水力 (すいりょく): Thủy lực",
+        "LessonId": 103
+    }
+]

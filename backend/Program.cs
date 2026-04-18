@@ -23,6 +23,7 @@ builder.Services.AddScoped<JwtService>();
 
 builder.Services.AddScoped<VocabImportService>();
 builder.Services.AddScoped<GrammarImportService>();
+builder.Services.AddScoped<KanjiImportService>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -189,6 +190,17 @@ using (var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         Console.WriteLine("Grammar Import failed: " + ex.Message);
+    }
+
+    var kanjiImporter = scope.ServiceProvider.GetRequiredService<KanjiImportService>();
+    try 
+    {
+        await kanjiImporter.ImportAllFromFolderAsync(); 
+        Console.WriteLine("Kanji Import check completed.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Kanji Import failed: " + ex.Message);
     }
 }
 

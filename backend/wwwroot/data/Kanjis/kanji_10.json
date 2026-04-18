@@ -1,0 +1,66 @@
+[
+    {
+        "Character": "米",
+        "Meaning": "Gạo (Mễ)",
+        "Onyomi": "マイ, ベイ",
+        "Kunyomi": "こめ",
+        "Example": "お米 (おこめ): Gạo; 玄米 (げんまい): Gạo lứt; 白米 (はくまい): Gạo trắng",
+        "LessonId": 110
+    },
+    {
+        "Character": "茶",
+        "Meaning": "Trà (Trà)",
+        "Onyomi": "チャ, サ",
+        "Kunyomi": "",
+        "Example": "お茶 (おちゃ): Trà; 紅茶 (こうちゃ): Trà đen (Hồng trà); 日本茶 (にほんちゃ): Trà Nhật",
+        "LessonId": 110
+    },
+    {
+        "Character": "牛",
+        "Meaning": "Bò (Ngưu)",
+        "Onyomi": "ギュウ",
+        "Kunyomi": "うし",
+        "Example": "牛肉 (ぎゅうにく): Thịt bò; 牛乳 (ぎゅうにゅう): Sữa bò; 子牛 (こうし): Bê/Bò con",
+        "LessonId": 110
+    },
+    {
+        "Character": "肉",
+        "Meaning": "Thịt (Nhục)",
+        "Onyomi": "ニク",
+        "Kunyomi": "",
+        "Example": "牛肉 (ぎゅうにく): Thịt bò; 焼き肉 (やきにく): Thịt nướng; とり肉 (とりにく): Thịt gà",
+        "LessonId": 110
+    },
+    {
+        "Character": "魚",
+        "Meaning": "Cá (Ngư)",
+        "Onyomi": "ギョ",
+        "Kunyomi": "さかな, うお",
+        "Example": "魚 (さかな): Cá; 焼き魚 (やきざかな): Cá nướng; 金魚 (きんぎょ): Cá vàng",
+        "LessonId": 110
+    },
+    {
+        "Character": "貝",
+        "Meaning": "Sò, vỏ sò (Bối)",
+        "Onyomi": "",
+        "Kunyomi": "かい",
+        "Example": "貝 (かい): Con sò; 赤貝 (あかがい): Sò huyết; 貝がら (かいがら): Vỏ sò",
+        "LessonId": 110
+    },
+    {
+        "Character": "好",
+        "Meaning": "Thích (Hảo)",
+        "Onyomi": "コウ",
+        "Kunyomi": "す.き, この.む",
+        "Example": "好き (すき): Thích; 大好物 (だいこうぶつ): Món cực kỳ yêu thích; 大好き (だいすき): Rất thích",
+        "LessonId": 110
+    },
+    {
+        "Character": "物",
+        "Meaning": "Vật, đồ vật (Vật)",
+        "Onyomi": "ブツ, モツ",
+        "Kunyomi": "もの",
+        "Example": "食べ物 (たべもの): Đồ ăn; 買い物 (かいもの): Mua sắm; 荷物 (にもつ): Hành lý",
+        "LessonId": 110
+    }
+]

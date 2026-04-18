@@ -1,0 +1,82 @@
+[
+    {
+        "Character": "一",
+        "Meaning": "Số 1 (Nhất)",
+        "Onyomi": "イチ",
+        "Kunyomi": "ひと",
+        "Example": "一人 (ひとり): 1 người; 一月 (いちがつ): Tháng 1",
+        "LessonId": 4
+    },
+    {
+        "Character": "二",
+        "Meaning": "Số 2 (Nhị)",
+        "Onyomi": "ニ",
+        "Kunyomi": "ふた",
+        "Example": "二人 (ふたり): 2 người; 二月 (にがつ): Tháng 2",
+        "LessonId": 4
+    },
+    {
+        "Character": "三",
+        "Meaning": "Số 3 (Tam)",
+        "Onyomi": "サン",
+        "Kunyomi": "みっ",
+        "Example": "三月 (さんがつ): Tháng 3; 三日 (みっか): Ngày mồng 3",
+        "LessonId": 4
+    },
+    {
+        "Character": "四",
+        "Meaning": "Số 4 (Tứ)",
+        "Onyomi": "シ",
+        "Kunyomi": "よん, よ, よっ",
+        "Example": "四月 (しがつ): Tháng 4; 四日 (よっka): Ngày mồng 4",
+        "LessonId": 4
+    },
+    {
+        "Character": "五",
+        "Meaning": "Số 5 (Ngũ)",
+        "Onyomi": "ゴ",
+        "Kunyomi": "いつ",
+        "Example": "五月 (ごがつ): Tháng 5; 五日 (いつか): Ngày mồng 5",
+        "LessonId": 4
+    },
+    {
+        "Character": "六",
+        "Meaning": "Số 6 (Lục)",
+        "Onyomi": "ロク",
+        "Kunyomi": "むっ",
+        "Example": "六月 (ろくがつ): Tháng 6; 六日 (むいか): Ngày mồng 6",
+        "LessonId": 4
+    },
+    {
+        "Character": "七",
+        "Meaning": "Số 7 (Thất)",
+        "Onyomi": "シチ",
+        "Kunyomi": "なな",
+        "Example": "七月 (しちがつ): Tháng 7; 七日 (なのか): Ngày mồng 7",
+        "LessonId": 4
+    },
+    {
+        "Character": "八",
+        "Meaning": "Số 8 (Bát)",
+        "Onyomi": "ハチ",
+        "Kunyomi": "やっ",
+        "Example": "八月 (はちがつ): Tháng 8; 八日 (ようか): Ngày mồng 8",
+        "LessonId": 4
+    },
+    {
+        "Character": "九",
+        "Meaning": "Số 9 (Cửu)",
+        "Onyomi": "キュウ, ク",
+        "Kunyomi": "ここの",
+        "Example": "九月 (くがつ): Tháng 9; 九日 (ここのか): Ngày mồng 9",
+        "LessonId": 4
+    },
+    {
+        "Character": "十",
+        "Meaning": "Số 10 (Thập)",
+        "Onyomi": "ジュウ",
+        "Kunyomi": "とお",
+        "Example": "十月 (じゅうがつ): Tháng 40; 十日 (とおか): Ngày mồng 10",
+        "LessonId": 1
+    }
+]

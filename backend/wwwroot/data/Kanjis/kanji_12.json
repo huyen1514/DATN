@@ -1,0 +1,58 @@
+[
+    {
+        "Character": "食",
+        "Meaning": "Ăn (Thực)",
+        "Onyomi": "ショク",
+        "Kunyomi": "た.べる",
+        "Example": "食べる (たべる): Ăn; 食事 (しょくじ): Bữa ăn; 食べ物 (たべもの): Đồ ăn",
+        "LessonId": 112
+    },
+    {
+        "Character": "飲",
+        "Meaning": "Uống (Ẩm)",
+        "Onyomi": "イン",
+        "Kunyomi": "の.む",
+        "Example": "飲む (のむ): Uống; 飲み物 (のみもの): Đồ uống; 飲食店 (いんしょくてん): Cửa hàng ăn uống",
+        "LessonId": 112
+    },
+    {
+        "Character": "買",
+        "Meaning": "Mua (Mãi)",
+        "Onyomi": "バイ",
+        "Kunyomi": "か.う",
+        "Example": "買う (かう): Mua; 買い物 (かいもの): Mua sắm; 売買 (ばいばい): Mua bán",
+        "LessonId": 112
+    },
+    {
+        "Character": "書",
+        "Meaning": "Viết (Thư)",
+        "Onyomi": "ショ",
+        "Kunyomi": "か.く",
+        "Example": "書く (かく): Viết; 読書 (どくしょ): Đọc sách; 図書館 (としょかん): Thư viện",
+        "LessonId": 112
+    },
+    {
+        "Character": "読",
+        "Meaning": "Đọc (Độc)",
+        "Onyomi": "ドク",
+        "Kunyomi": "よ.む",
+        "Example": "読む (よむ): Đọc; 読書 (どくしょ): Việc đọc sách; 読解 (どっかい): Đọc hiểu",
+        "LessonId": 112
+    },
+    {
+        "Character": "話",
+        "Meaning": "Nói chuyện (Thoại)",
+        "Onyomi": "ワ",
+        "Kunyomi": "はな.す, はなし",
+        "Example": "話す (はなす): Nói chuyện; 電話 (でんわ): Điện thoại; 会話 (かいわ): Hội thoại",
+        "LessonId": 112
+    },
+    {
+        "Character": "語",
+        "Meaning": "Ngôn ngữ / Kể chuyện (Ngữ)",
+        "Onyomi": "ゴ",
+        "Kunyomi": "かた.る",
+        "Example": "日本語 (にほんご): Tiếng Nhật; 外国語 (がいこくご): Ngoại ngữ; 物語 (ものがたり): Truyện/Tiểu thuyết",
+        "LessonId": 112
+    }
+]

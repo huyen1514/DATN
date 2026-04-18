@@ -1,0 +1,66 @@
+[
+    {
+        "Character": "料",
+        "Meaning": "Liệu (Nguyên liệu / Phí)",
+        "Onyomi": "リョウ",
+        "Kunyomi": "",
+        "Example": "<ruby>料理<rt>りょうり</rt></ruby>: Nấu ăn; <ruby>料金<rt>りょうきん</rt></ruby>: Cước phí; <ruby>材料<rt>ざいりょう</rt></ruby>: Nguyên liệu",
+        "LessonId": 123
+    },
+    {
+        "Character": "理",
+        "Meaning": "Lý (Lý do / Xử lý)",
+        "Onyomi": "リ",
+        "Kunyomi": "ことわり",
+        "Example": "<ruby>理由<rt>りゆう</rt></ruby>: Lý do; <ruby>地理<rt>ちり</rt></ruby>: Địa lý; <ruby>無理<rt>むり</rt></ruby>な: Quá sức/Vô lý",
+        "LessonId": 123
+    },
+    {
+        "Character": "野",
+        "Meaning": "Dã (Cánh đồng / Hoang dã)",
+        "Onyomi": "ヤ",
+        "Kunyomi": "の",
+        "Example": "<ruby>野菜<rt>やさい</rt></ruby>: Rau; <ruby>分野<rt>ぶんや</rt></ruby>: Lĩnh vực; <ruby>長野<rt>ながの</rt></ruby>: Tỉnh Nagano",
+        "LessonId": 123
+    },
+    {
+        "Character": "菜",
+        "Meaning": "Thái (Rau)",
+        "Onyomi": "サイ",
+        "Kunyomi": "な",
+        "Example": "<ruby>野菜<rt>やさい</rt></ruby>: Rau; <ruby>菜<rt>な</rt></ruby>の<ruby>花<rt>はな</rt></ruby>: Hoa cải dầu; <ruby>生野菜<rt>なまやさい</rt></ruby>: Rau sống",
+        "LessonId": 123
+    },
+    {
+        "Character": "果",
+        "Meaning": "Quả (Hoa quả / Kết quả)",
+        "Onyomi": "カ",
+        "Kunyomi": "くだ, は.たす",
+        "Example": "<ruby>果物<rt>くだもの</rt></ruby>: Trái cây; <ruby>結果<rt>けっか</rt></ruby>: Kết quả; <ruby>効果<rt>こうか</rt></ruby>: Hiệu quả",
+        "LessonId": 123
+    },
+    {
+        "Character": "菓",
+        "Meaning": "Quả (Bánh kẹo)",
+        "Onyomi": "カ",
+        "Kunyomi": "",
+        "Example": "お<ruby>菓子<rt>かし</rt></ruby>: Bánh kẹo; <ruby>製菓<rt>せいか</rt></ruby>: Làm bánh kẹo; <ruby>和菓子<rt>わがし</rt></ruby>: Bánh kẹo Nhật",
+        "LessonId": 123
+    },
+    {
+        "Character": "皿",
+        "Meaning": "Mãnh (Cái đĩa)",
+        "Onyomi": "",
+        "Kunyomi": "さら",
+        "Example": "<ruby>皿<rt>さら</rt></ruby>: Cái đĩa; <ruby>灰皿<rt>はいざら</rt></ruby>: Gạt tàn thuốc; <ruby>小皿<rt>こざら</rt></ruby>: Đĩa nhỏ",
+        "LessonId": 123
+    },
+    {
+        "Character": "卵",
+        "Meaning": "Noãn (Quả trứng)",
+        "Onyomi": "ラン",
+        "Kunyomi": "たまご",
+        "Example": "<ruby>卵<rt>たまご</rt></ruby>: Quả trứng; <ruby>卵白<rt>らんぱく</rt></ruby>: Lòng trắng trứng; <ruby>卵黄<rt>らんおう</rt></ruby>: Lòng đỏ trứng",
+        "LessonId": 123
+    }
+]

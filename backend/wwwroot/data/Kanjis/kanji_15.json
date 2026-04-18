@@ -1,0 +1,98 @@
+[
+    {
+        "Character": "長",
+        "Meaning": "Dài / Đứng đầu (Trường)",
+        "Onyomi": "チョウ",
+        "Kunyomi": "なが.い",
+        "Example": "長い (ながい): Dài; 校長 (こうちょう): Hiệu trưởng; 市長 (しちょう): Thị trưởng",
+        "LessonId": 115
+    },
+    {
+        "Character": "短",
+        "Meaning": "Ngắn (Đoản)",
+        "Onyomi": "タン",
+        "Kunyomi": "みじか.い",
+        "Example": "短い (みじかい): Ngắn; 短大 (たんだい): Trường cao đẳng; 短期 (たんき): Ngắn hạn",
+        "LessonId": 115
+    },
+    {
+        "Character": "高",
+        "Meaning": "Cao / Đắt (Cao)",
+        "Onyomi": "コウ",
+        "Kunyomi": "たか.い",
+        "Example": "高い (たかい): Cao/Đắt; 高校 (こうこう): Trường cấp 3; 最高 (さいこう): Cao nhất/Tuyệt nhất",
+        "LessonId": 115
+    },
+    {
+        "Character": "安",
+        "Meaning": "Rẻ / An tâm (An)",
+        "Onyomi": "アン",
+        "Kunyomi": "やす.い",
+        "Example": "安い (やすい): Rẻ; 安心 (あんしん): An tâm; 安全 (あんぜん): An toàn",
+        "LessonId": 115
+    },
+    {
+        "Character": "低",
+        "Meaning": "Thấp (Đê)",
+        "Onyomi": "テイ",
+        "Kunyomi": "ひく.い",
+        "Example": "低い (ひくい): Thấp; 低温 (ていおん): Nhiệt độ thấp; 低下 (ていか): Sự giảm sút",
+        "LessonId": 115
+    },
+    {
+        "Character": "暗",
+        "Meaning": "Tối (Ám)",
+        "Onyomi": "アン",
+        "Kunyomi": "くら.い",
+        "Example": "暗い (くらい): Tối; 真っ暗 (まっくら): Tối đen như mực; 暗号 (あんごう): Mật mã",
+        "LessonId": 115
+    },
+    {
+        "Character": "明",
+        "Meaning": "Sáng / Rõ ràng (Minh)",
+        "Onyomi": "メイ, ミョウ",
+        "Kunyomi": "あか.るい, あ.ける",
+        "Example": "明るい (あかるい): Sáng sủa; 明日 (あした): Ngày mai; 説明 (せつめい): Giải thích",
+        "LessonId": 115
+    },
+    {
+        "Character": "多",
+        "Meaning": "Nhiều (Đa)",
+        "Onyomi": "タ",
+        "Kunyomi": "おお.い",
+        "Example": "多い (おおい): Nhiều; 多分 (たぶん): Có lẽ; 多数 (たすう): Đa số",
+        "LessonId": 115
+    },
+    {
+        "Character": "少",
+        "Meaning": "Ít (Thiểu)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "すく.ない, すこ.し",
+        "Example": "少ない (すくない): Ít; 少し (すこし): Một chút; 少年 (しょうねん): Thiếu niên",
+        "LessonId": 115
+    },
+    {
+        "Character": "新",
+        "Meaning": "Mới (Tân)",
+        "Onyomi": "シン",
+        "Kunyomi": "あたら.しい",
+        "Example": "新しい (あたらしい): Mới; 新聞 (しんぶん): Tờ báo; 新幹線 (しんかんせん): Tàu Shinkansen",
+        "LessonId": 115
+    },
+    {
+        "Character": "古",
+        "Meaning": "Cũ (Cổ)",
+        "Onyomi": "コ",
+        "Kunyomi": "ふる.い",
+        "Example": "古い (ふるい): Cũ; 中古 (ちゅうこ): Đồ cũ/Đồ đã qua sử dụng; 古本 (ふるほん): Sách cũ",
+        "LessonId": 115
+    },
+    {
+        "Character": "早",
+        "Meaning": "Sớm (Tảo)",
+        "Onyomi": "ソウ",
+        "Kunyomi": "はや.い",
+        "Example": "早い (はやい): Sớm; 早退 (そうたい): Về sớm; 早朝 (そうちょう): Sáng sớm",
+        "LessonId": 115
+    }
+]

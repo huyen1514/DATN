@@ -1,0 +1,66 @@
+[
+    {
+        "Character": "予",
+        "Meaning": "Dự (Dự định, chuẩn bị trước)",
+        "Onyomi": "ヨ",
+        "Kunyomi": "あらかじ.め",
+        "Example": "<ruby>予定<rt>よてい</rt></ruby>: Dự định; <ruby>予約<rt>よやく</rt></ruby>: Đặt trước; <ruby>予習<rt>よしゅう</rt></ruby>: Chuẩn bị bài trước",
+        "LessonId": 119
+    },
+    {
+        "Character": "定",
+        "Meaning": "Định (Quyết định, xác định)",
+        "Onyomi": "テイ, ジョウ",
+        "Kunyomi": "さだ.める",
+        "Example": "<ruby>予定<rt>よてい</rt></ruby>: Dự định; <ruby>定休日<rt>ていきゅうび</rt></ruby>: Ngày nghỉ định kỳ; <ruby>決定<rt>けってい</rt></ruby>: Quyết định",
+        "LessonId": 119
+    },
+    {
+        "Character": "用",
+        "Meaning": "Dụng (Sử dụng, việc bận)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "もち.いる",
+        "Example": "<ruby>用事<rt>ようじ</rt></ruby>: Việc bận; <ruby>利用<rt>りよう</rt></ruby>: Sử dụng; <ruby>用意<rt>ようい</rt></ruby>: Chuẩn bị",
+        "LessonId": 119
+    },
+    {
+        "Character": "事",
+        "Meaning": "Sự (Sự việc, công việc)",
+        "Onyomi": "ジ, ズ",
+        "Kunyomi": "こと",
+        "Example": "<ruby>仕事<rt>しごと</rt></ruby>: Công việc; <ruby>用事<rt>ようじ</rt></ruby>: Việc bận; <ruby>大事<rt>だいじ</rt></ruby>: Quan trọng; <ruby>行事<rt>ぎょうじ</rt></ruby>: Sự kiện",
+        "LessonId": 119
+    },
+    {
+        "Character": "結",
+        "Meaning": "Kết (Kết nối, kết thúc)",
+        "Onyomi": "ケツ, ケッ-",
+        "Kunyomi": "むす.ぶ, ゆ.う",
+        "Example": "<ruby>結婚<rt>けっこん</rt></ruby>: Kết hôn; <ruby>結果<rt>けっか</rt></ruby>: Kết quả; <ruby>結<rt>むす</rt></ruby>ぶ: Buộc/Kết nối",
+        "LessonId": 119
+    },
+    {
+        "Character": "婚",
+        "Meaning": "Hôn (Kết hôn)",
+        "Onyomi": "コン",
+        "Kunyomi": "",
+        "Example": "<ruby>結婚<rt>けっこん</rt></ruby>: Kết hôn; <ruby>婚約<rt>こんやく</rt></ruby>: Đính hôn; <ruby>新婚<rt>しんこん</rt></ruby>: Mới cưới",
+        "LessonId": 119
+    },
+    {
+        "Character": "案",
+        "Meaning": "Án (Phương án, hướng dẫn)",
+        "Onyomi": "アン",
+        "Kunyomi": "",
+        "Example": "<ruby>案内<rt>あんない</rt></ruby>: Hướng dẫn; <ruby>提案<rt>ていあん</rt></ruby>: Đề án; <ruby>名案<rt>めいあん</rt></ruby>: Ý kiến hay",
+        "LessonId": 119
+    },
+    {
+        "Character": "内",
+        "Meaning": "Nội (Bên trong)",
+        "Onyomi": "ナイ, ダイ",
+        "Kunyomi": "うち",
+        "Example": "<ruby>案内<rt>あんない</rt></ruby>: Hướng dẫn; <ruby>以内<rt>いない</rt></ruby>: Trong vòng; <ruby>国内<rt>こくない</rt></ruby>: Trong nước",
+        "LessonId": 119
+    }
+]

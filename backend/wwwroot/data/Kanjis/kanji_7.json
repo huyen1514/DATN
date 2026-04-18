@@ -1,0 +1,58 @@
+[
+    {
+        "Character": "大",
+        "Meaning": "To, lớn (Đại)",
+        "Onyomi": "ダイ, タイ",
+        "Kunyomi": "おお.きい",
+        "Example": "大きい (おおきい): To, lớn; 大学 (だいがく): Trường đại học",
+        "LessonId": 107
+    },
+    {
+        "Character": "小",
+        "Meaning": "Nhỏ, bé (Tiểu)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "ちい.さい, こ, お",
+        "Example": "小さい (ちいさい): Nhỏ; 小学生 (しょうがくせい): Học sinh tiểu học",
+        "LessonId": 107
+    },
+    {
+        "Character": "高",
+        "Meaning": "Cao, đắt (Cao)",
+        "Onyomi": "コウ",
+        "Kunyomi": "たか.い",
+        "Example": "高い (たかい): Cao, đắt; 高校 (こうこう): Trường cấp 3",
+        "LessonId": 107
+    },
+    {
+        "Character": "友",
+        "Meaning": "Bạn bè (Hữu)",
+        "Onyomi": "ユウ",
+        "Kunyomi": "とも",
+        "Example": "友だち (ともだち): Bạn bè; 親友 (しんゆう): Bạn thân",
+        "LessonId": 107
+    },
+    {
+        "Character": "入",
+        "Meaning": "Vào, nhập (Nhập)",
+        "Onyomi": "ニュウ",
+        "Kunyomi": "はい.る, い.れる",
+        "Example": "入る (はい.る): Đi vào; 入り口 (いりぐち): Lối vào",
+        "LessonId": 107
+    },
+    {
+        "Character": "出",
+        "Meaning": "Ra, xuất (Xuất)",
+        "Onyomi": "シュツ, シュッ",
+        "Kunyomi": "で.る, だ.す",
+        "Example": "出る (でる): Đi ra; 出口 (でぐち): Lối ra",
+        "LessonId": 107
+    },
+    {
+        "Character": "門",
+        "Meaning": "Cổng (Môn)",
+        "Onyomi": "モン",
+        "Kunyomi": "かど",
+        "Example": "門 (もん): Cổng; 専門 (せんもん): Chuyên môn",
+        "LessonId": 107
+    }
+]
