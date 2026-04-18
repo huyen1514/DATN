@@ -1,0 +1,13 @@
+[
+    {
+        "content": "<div class='reading-container'><p><b>Warming-up 3: こうべまで いくらですか (Đến Kobe hết bao nhiêu tiền?)</b></p><p>切符（きっぷ）の売り場の上にある図（ず）を見て、あとの質問に答えてください。</p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-128/reading_128_01.jpg' alt='Bản đồ giá vé tàu điện' style='max-width:100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);'/></div><p>Hãy nhìn vào bản đồ mạng lưới các ga tàu. Con số ghi bên dưới mỗi tên ga chính là số tiền vé từ ga hiện tại đến ga đó.</p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-128/reading_128_02.jpg' alt='Nhân vật đang xem bảng giá' style='max-width:100%; border-radius: 8px;'/></div></div>",
+        "question": "「大阪（おおさか）」から「神戸（こうべ）」まで いくらですか。",
+        "option1": "300円",
+        "option2": "400円",
+        "option3": "450円",
+        "option4": "560円",
+        "correctOption": 2,
+        "imageUrl": "/images/readings/lesson-128/reading_128_thumb.jpg",
+        "lessonId": 128
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "content": "<div class='reading-container'><p><b>Warming-up 2: ジュースを お願いします (Cho tôi nước trái cây)</b></p><p>レストラン「みんな」のメニューを見て、あとの質問に答えてください。</p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-127/reading_127_01.jpg' alt='Thực đơn nhà hàng Minna' style='max-width:100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);'/></div><p>Dưới đây là danh sách các món đồ uống và thức ăn mà các vị khách đã chọn:</p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-127/reading_127_02.jpg' alt='Các vị khách gọi món' style='max-width:100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);'/></div><p>Hãy tính tổng số tiền dựa trên thực đơn phía trên.</p></div>",
+        "question": "ホンさんは「カレー」と「コーヒー」を注文しました。全部でいくらですか。",
+        "option1": "950円",
+        "option2": "1,000円",
+        "option3": "1,050円",
+        "option4": "1,100円",
+        "correctOption": 3,
+        "imageUrl": "/images/readings/lesson-127/reading_127_thumb.jpg",
+        "lessonId": 127
+    }
+]
