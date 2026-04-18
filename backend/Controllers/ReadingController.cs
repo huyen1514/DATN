@@ -71,9 +71,18 @@ namespace Controllers
             if (!lessonExists)
                 return BadRequest("Lesson không tồn tại");
 
+            // Cập nhật các trường dữ liệu cũ
             reading.Content = model.Content;
             reading.Question = model.Question;
             reading.LessonId = model.LessonId;
+
+            // Cập nhật các trường trắc nghiệm mới được thêm vào Model
+            reading.Option1 = model.Option1;
+            reading.Option2 = model.Option2;
+            reading.Option3 = model.Option3;
+            reading.Option4 = model.Option4;
+            reading.CorrectOption = model.CorrectOption;
+            reading.ImageUrl = model.ImageUrl;
 
             await _context.SaveChangesAsync();
             return Ok(reading);

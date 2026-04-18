@@ -1,121 +1,134 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Mic, PenTool, Sparkles, Target, Settings, Info } from "lucide-react";
+import { ArrowRight, BookOpen, Mic, PenTool, Sparkles, Target, Settings, Info, Play } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-jp-washi text-jp-ink font-sans selection:bg-jp-red/20 selection:text-jp-red">
+    <div className="min-h-screen flex flex-col bg-[#FAFAFA] text-neutral-900 font-sans selection:bg-jp-red/10 selection:text-jp-red">
       <MainNavbar />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-10 pb-20 px-6 md:px-16 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-20 pb-20 px-6 md:px-16 overflow-hidden">
         {/* Abstract Background Element */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-jp-sakura/40 blur-[120px] rounded-full pointer-events-none -z-10"></div>
-        
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-jp-red/[0.03] blur-[100px] rounded-full pointer-events-none -z-10 translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-jp-indigo/[0.03] blur-[100px] rounded-full pointer-events-none -z-10 -translate-x-1/3 translate-y-1/3"></div>
+
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-jp-red/30 bg-jp-sakura/30 text-jp-red text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase mb-8 animate-fade-in">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-jp-red/20 bg-white/50 backdrop-blur-sm text-jp-red text-xs font-bold tracking-[0.15em] uppercase mb-8 shadow-sm">
               <Sparkles size={14} />
-              <span>Nền tảng học Tiếng Nhật chuẩn mực</span>
+              <span>Nền tảng học chuẩn mực</span>
             </div>
-            
-            <h2 className="text-5xl md:text-7xl xl:text-[80px] font-sans font-light text-balance mb-8 leading-[1.1] text-jp-indigo">
-              Thành thạo <br/>
-              <span className="font-serif italic font-normal text-jp-red pr-4">Tiếng Nhật</span><br/>
+
+            {/* Headline */}
+            <h2 className="text-5xl md:text-7xl xl:text-[80px] font-sans font-medium text-balance mb-8 leading-[1.1] text-neutral-900 tracking-tight">
+              Thành thạo <br />
+              <span className="font-serif italic font-normal text-jp-red pr-4">Tiếng Nhật</span><br />
               theo cách của bạn.
             </h2>
-            
-            <p className="text-neutral-500 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light">
-              Trải nghiệm môi trường học tập tinh gọn, thẩm mỹ và hiệu quả với triết lý <strong className="text-jp-indigo font-medium">Kaizen</strong> (cải tiến liên tục) - tiếng Nhật không còn là rào cản.
+
+            <p className="text-neutral-500 text-lg md:text-xl max-w-lg mb-12 leading-relaxed font-light">
+              Trải nghiệm môi trường học tập tinh gọn, thẩm mỹ và hiệu quả với triết lý <strong className="text-neutral-900 font-medium">Kaizen</strong> (cải tiến liên tục) - tiếng Nhật không còn là rào cản.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <Link href="/register" className="group flex items-center justify-center gap-3 bg-jp-red text-white px-10 py-5 font-bold tracking-[0.25em] hover:bg-[#8B0000] transition-all shadow-xl shadow-jp-red/20 text-xs">
-                KHÁM PHÁ NGAY
-                <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
+              <Link href="/register" className="group flex items-center justify-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-full font-semibold tracking-wide hover:bg-jp-red transition-colors duration-300 shadow-xl shadow-neutral-900/10 text-sm">
+                BẮT ĐẦU NGAY
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/demo" className="flex items-center justify-center gap-3 border border-black/10 bg-white text-jp-indigo px-10 py-5 font-bold tracking-[0.25em] hover:border-jp-indigo transition-all text-xs">
+              <Link href="/demo" className="group flex items-center justify-center gap-3 bg-white border border-neutral-200 text-neutral-900 px-8 py-4 rounded-full font-semibold tracking-wide hover:bg-neutral-50 hover:border-neutral-300 transition-all text-sm shadow-sm">
+                <Play size={18} className="text-jp-red group-hover:scale-110 transition-transform" />
                 XEM DEMO
               </Link>
             </div>
-            
-            <div className="mt-12 flex items-center gap-6">
+
+            {/* Social Proof */}
+            <div className="mt-16 flex items-center gap-5 pt-8 border-t border-neutral-200/60 max-w-md">
               <div className="flex -space-x-3">
-                 {[1,2,3,4].map(idx => (
-                    <div key={idx} className={`w-10 h-10 rounded-full border-2 border-white bg-neutral-${idx}00 overflow-hidden`}>
-                       <img src={`https://i.pravatar.cc/100?img=${idx+10}`} alt="Student" className="w-full h-full object-cover" />
-                    </div>
-                 ))}
+                {[1, 2, 3, 4].map(idx => (
+                  <div key={idx} className={`w-10 h-10 rounded-full border-2 border-white bg-neutral-100 overflow-hidden shadow-sm`}>
+                    <img src={`https://i.pravatar.cc/100?img=${idx + 10}`} alt="Student" className="w-full h-full object-cover" />
+                  </div>
+                ))}
               </div>
-              <p className="text-xs text-neutral-500"><strong className="text-jp-indigo">5,000+</strong> học viên <br/> đã tham gia hệ thống.</p>
+              <p className="text-sm text-neutral-500 leading-snug">
+                Đồng hành cùng <br /><strong className="text-neutral-900">5,000+</strong> học viên.
+              </p>
             </div>
           </div>
 
-          {/* Hero Images - Artistic layout */}
-          <div className="relative h-[550px] xl:h-[650px] w-full hidden lg:block perspective-1000">
-             <div className="absolute top-0 right-0 w-[85%] h-[95%] overflow-hidden shadow-2xl rounded-tr-[120px] rounded-bl-[120px]">
-               <img 
-                 src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1200" 
-                 alt="Kyoto Temple" 
-                 className="w-full h-full object-cover transition-transform duration-[2s] hover:scale-105 ease-out"
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-jp-indigo/30 to-transparent"></div>
-             </div>
-             
-             {/* Floating Accent Card Element */}
-             <div className="absolute bottom-16 -left-4 bg-white/95 backdrop-blur-xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-2xl w-[260px] border border-white hover:-translate-y-2 transition-transform duration-300">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#FEE2E2] rounded-full flex items-center justify-center">
-                    <Target className="text-jp-red" size={20} />
+          {/* Hero Images - Modern Editorial Layout */}
+          <div className="relative h-[600px] xl:h-[700px] w-full hidden lg:block">
+            {/* Main Image */}
+            <div className="absolute top-0 right-0 w-[85%] h-[90%] overflow-hidden rounded-[2.5rem] border border-neutral-200/50 shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1200"
+                alt="Kyoto Temple"
+                className="w-full h-full object-cover transition-transform duration-[10s] hover:scale-110 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 via-transparent to-transparent"></div>
+            </div>
+
+            {/* Floating Goal Widget (Cá nhân hóa) */}
+            <div className="absolute bottom-24 -left-8 bg-white/90 backdrop-blur-xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.08)] rounded-3xl w-[280px] border border-white hover:-translate-y-2 transition-transform duration-500">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-jp-red/10 rounded-full flex items-center justify-center">
+                    <Target className="text-jp-red" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-jp-indigo">Học viên xuất sắc</h4>
-                    <p className="text-[11px] text-neutral-500">Đạt JLPT N2 sau 1 năm</p>
+                    <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Mục tiêu</p>
+                    <p className="text-sm font-bold text-neutral-900">Thi đỗ JLPT N3</p>
                   </div>
                 </div>
-                <div className="w-full bg-neutral-100 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-gradient-to-r from-jp-red to-[#ff4d4d] w-[85%] h-full rounded-full relative">
-                  </div>
+                <span className="text-xs font-bold text-jp-red bg-jp-red/5 px-2 py-1 rounded-md">85%</span>
+              </div>
+              <div className="w-full bg-neutral-100 h-1.5 rounded-full overflow-hidden">
+                <div className="bg-gradient-to-r from-jp-red to-rose-400 w-[85%] h-full rounded-full relative">
+                  <div className="absolute inset-0 bg-white/20 w-full h-full animate-pulse"></div>
                 </div>
-             </div>
-             
-             {/* Floating Japanese Text */}
-             <div className="absolute top-10 -left-6 z-20 pointer-events-none">
-                <div className="writing-vertical-rl text-6xl font-jp text-black/10 leading-none h-[400px]">
-                   日本語を学ぶ
-                </div>
-             </div>
+              </div>
+            </div>
+
+            {/* Floating Japanese Text (Chữ chìm mờ) */}
+            <div className="absolute top-16 -left-4 z-20 pointer-events-none select-none">
+              <div className="writing-vertical-rl text-[80px] font-serif text-neutral-900/[0.03] leading-none h-[500px]">
+                日本語を学ぶ
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CURRICULUM SECTION */}
-      <section className="py-32 px-6 md:px-16 bg-white relative z-10 border-t border-black/5">
+      {/* CURRICULUM SECTION (Bento Box Style) */}
+      <section className="py-32 px-6 md:px-16 bg-white relative z-10 border-t border-neutral-100">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl font-serif text-jp-indigo mb-6">Trải nghiệm học tập toàn diện</h2>
-            <p className="text-neutral-500 max-w-2xl mx-auto text-lg font-light leading-relaxed">Hệ thống bài học được thiết kế tinh giản, kết hợp giữa phương pháp học truyền thống và công nghệ hiện đại nhằm tối ưu khả năng ghi nhớ.</p>
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-neutral-900 mb-6">Trải nghiệm học tập toàn diện</h2>
+            <p className="text-neutral-500 max-w-2xl mx-auto text-lg font-light leading-relaxed">
+              Hệ thống bài học được thiết kế tinh giản, kết hợp giữa phương pháp học truyền thống và công nghệ hiện đại.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Từ vựng", desc: "Flashcard thông minh, ghi nhớ qua Spaced Repetition (SRS).", icon: BookOpen },
-              { title: "Ngữ pháp", desc: "Cấu trúc dễ hiểu, học đến đâu thực hành ngay đến đó.", icon: PenTool },
-              { title: "Giao tiếp", desc: "Luyện phát âm qua công nghệ AI nhận diện tự nhiên.", icon: Mic },
-              { title: "Mô phỏng JLPT", desc: "Kho đề thi thử chuẩn format của kỳ thi thực tế.", icon: Settings }
+              { title: "Từ vựng", desc: "Flashcard thông minh, ghi nhớ qua thuật toán Spaced Repetition (SRS).", icon: BookOpen },
+              { title: "Ngữ pháp", desc: "Cấu trúc dễ hiểu, học đến đâu thực hành ngay đến đó với ví dụ thực tế.", icon: PenTool },
+              { title: "Giao tiếp", desc: "Luyện phát âm Kaiwa qua công nghệ AI nhận diện giọng nói tự nhiên.", icon: Mic },
+              { title: "Mô phỏng JLPT", desc: "Kho đề thi thử chuẩn format của kỳ thi thực tế, tự động chấm điểm.", icon: Settings }
             ].map((feature, idx) => (
-              <div 
+              <div
                 key={idx}
-                className="group p-8 xl:p-10 rounded-3xl bg-jp-washi/50 border border-black/5 hover:bg-white hover:border-jp-red/30 hover:shadow-[0_20px_40px_-15px_rgba(188,0,45,0.1)] transition-all duration-500 relative overflow-hidden cursor-default"
+                className="group p-8 rounded-[2rem] bg-neutral-50 border border-neutral-100 hover:bg-white hover:border-neutral-200 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-500 relative flex flex-col h-full"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-jp-sakura/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[100px]"></div>
-                
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:scale-110 group-hover:bg-jp-red group-hover:shadow-lg group-hover:shadow-jp-red/30 transition-all duration-500 relative z-10">
-                  <feature.icon size={28} className="text-jp-red group-hover:text-white transition-colors duration-300" />
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-neutral-100 mb-8 group-hover:bg-neutral-900 group-hover:scale-110 transition-all duration-500">
+                  <feature.icon size={24} className="text-neutral-700 group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-jp-indigo mb-4 relative z-10">{feature.title}</h3>
-                <p className="text-neutral-500 leading-relaxed relative z-10">{feature.desc}</p>
+                <h3 className="text-xl font-medium text-neutral-900 mb-3">{feature.title}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed font-light flex-1">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -123,45 +136,45 @@ export default function HomePage() {
       </section>
 
       {/* KAIZEN PHILOSOPHY SECTION */}
-      <section className="py-32 px-6 md:px-16 bg-jp-indigo text-jp-washi relative overflow-hidden">
+      <section className="py-32 px-6 md:px-16 bg-neutral-900 text-white relative overflow-hidden">
         {/* Subtle patterned background */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-radial-gradient(circle at 0 0, transparent 0, #faf8f5 10px), repeating-linear-gradient(#faf8f555, #faf8f5)'}}></div>
-        
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 xl:gap-32 items-center relative z-10">
-          <div className="relative w-full aspect-square md:aspect-auto lg:h-[700px] overflow-hidden rounded-[80px] rounded-tr-[200px] rounded-bl-[200px] border border-white/10 hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] transition-shadow duration-700">
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
+
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 xl:gap-24 items-center relative z-10">
+          <div className="relative w-full aspect-[4/5] lg:h-[700px] overflow-hidden rounded-[2.5rem] border border-white/10 group">
             <div className="w-full h-full relative">
-              <img src="https://images.unsplash.com/photo-1578469645762-461b4fa615f4?auto=format&fit=crop&q=80&w=1200" alt="Bonsai/Zen" className="w-full h-full object-cover transition-transform duration-[5s] hover:scale-105" />
-              <div className="absolute inset-0 bg-jp-indigo/40 mix-blend-multiply"></div>
+              <img src="https://images.unsplash.com/photo-1578469645762-461b4fa615f4?auto=format&fit=crop&q=80&w=1200" alt="Bonsai/Zen" className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" />
+              <div className="absolute inset-0 bg-neutral-900/30 mix-blend-multiply"></div>
             </div>
-            
+
             {/* Zen Circle Enso */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 border-[2px] border-jp-gold/30 rounded-full pointer-events-none mix-blend-overlay"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 h-2/3 border-[1px] border-white/20 rounded-full pointer-events-none mix-blend-overlay"></div>
           </div>
 
-          <div>
-            <div className="text-jp-gold font-bold tracking-[0.4em] mb-6 text-xs flex items-center gap-4">
-              <span className="w-12 h-[1px] bg-jp-gold"></span>
-              TRIẾT LÝ HỌC TẬP
+          <div className="pr-4 lg:pr-0">
+            <div className="text-jp-red font-bold tracking-[0.3em] mb-6 text-xs flex items-center gap-4 uppercase">
+              <span className="w-8 h-[1px] bg-jp-red"></span>
+              Triết lý học tập
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-10 leading-tight">
-              Cải tiến liên tục. <br/> <span className="text-jp-red italic font-light">Kaizen</span>.
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-8 leading-[1.1]">
+              Cải tiến liên tục. <br /> <span className="text-jp-red italic font-light">Kaizen</span>.
             </h2>
-            <p className="text-xl text-white/70 mb-12 leading-[1.8] font-light">
-               Học ngôn ngữ không phải là cuộc đua nước rút, mà là quá trình dài cần sự bền bỉ. Chúng tôi chia nhỏ kiến thức để bạn tận hưởng những thành tựu nhỏ bé mỗi ngày.
+            <p className="text-lg text-neutral-400 mb-14 leading-relaxed font-light">
+              Học ngôn ngữ không phải là cuộc đua nước rút, mà là quá trình dài cần sự bền bỉ. Chúng tôi chia nhỏ kiến thức để bạn tận hưởng những thành tựu nhỏ bé mỗi ngày.
             </p>
-            <ul className="space-y-8">
+            <ul className="space-y-10">
               {[
-                {t: 'Học ít nhưng sâu, không ôm đồm lý thuyết.', d: 'Tối ưu thời gian tập trung thay vì kéo dài số giờ học.'},
-                {t: 'Giao diện tinh giản tuyệt đối.', d: 'Loại bỏ mọi yếu tố gây xao nhãng để bạn hoàn toàn đắm chìm vào tiếng Nhật.'},
-                {t: 'Tạo động lực học tập liên tục.', d: 'Theo dõi tiến trình thông minh giúp bạn nhận ra sự tiến bộ của bản thân mỗi tuần.'}
+                { t: 'Học ít nhưng sâu', d: 'Tối ưu thời gian tập trung thay vì kéo dài số giờ học, loại bỏ hoàn toàn việc nhồi nhét lý thuyết.' },
+                { t: 'Tập trung tuyệt đối', d: 'Giao diện tinh giản, không quảng cáo, loại bỏ mọi yếu tố gây xao nhãng để bạn đắm chìm vào bài học.' },
+                { t: 'Động lực mỗi ngày', d: 'Hệ thống theo dõi tiến trình thông minh giúp bạn nhìn thấy sự thay đổi rõ rệt của bản thân sau mỗi tuần.' }
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-5 group cursor-default">
-                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10 text-jp-red mt-1 group-hover:bg-jp-red group-hover:text-white transition-colors duration-300">
-                     <span className="text-xs font-bold leading-none">{i+1}</span>
+                <li key={i} className="flex items-start gap-6 group">
+                  <div className="font-serif text-3xl italic text-neutral-600 group-hover:text-jp-red transition-colors duration-500 mt-1">
+                    0{i + 1}
                   </div>
                   <div>
-                     <h4 className="text-lg font-bold text-white mb-2 group-hover:text-jp-red transition-colors duration-300">{item.t}</h4>
-                     <p className="text-white/50 text-sm leading-relaxed">{item.d}</p>
+                    <h4 className="text-xl font-medium text-white mb-2">{item.t}</h4>
+                    <p className="text-neutral-400 text-sm leading-relaxed font-light">{item.d}</p>
                   </div>
                 </li>
               ))}
@@ -173,78 +186,78 @@ export default function HomePage() {
       {/* CTA SECTION */}
       <section className="relative py-40 px-6 text-center overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1490806678567-2410b2da3073?auto=format&fit=crop&q=80&w=2000" 
+          <img
+            src="https://images.unsplash.com/photo-1490806678567-2410b2da3073?auto=format&fit=crop&q=80&w=2000"
             alt="Fuji Mount Background"
-            className="w-full h-full object-cover opacity-10 grayscale"
+            className="w-full h-full object-cover opacity-[0.04] grayscale"
           />
         </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto bg-white/60 backdrop-blur-md p-10 md:p-16 rounded-[40px] border border-white/50 shadow-2xl hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-shadow duration-500">
-           <div className="w-16 h-16 bg-jp-red rounded-full flex items-center justify-center mx-auto mb-8 text-white font-jp text-2xl shadow-[0_0_20px_rgba(188,0,45,0.3)]">
-             日
-           </div>
-           <h2 className="text-4xl md:text-6xl font-serif mb-6 text-jp-indigo">Sẵn sàng để bắt đầu?</h2>
-          <p className="text-xl text-neutral-500 mb-12 font-light">Tham gia cùng hàng nghìn học viên đang cải thiện bản thân mỗi ngày cùng J-Learning.</p>
-           
-           <Link
-              href="/register"
-              className="inline-flex items-center gap-4 bg-jp-indigo text-white px-12 py-5 font-bold tracking-[0.2em] hover:bg-jp-red transition-all duration-500 text-[11px] uppercase shadow-2xl hover:scale-105"
-            >
-              TẠO TÀI KHOẢN MIỄN PHÍ
-              <ArrowRight size={18} />
-            </Link>
+
+        <div className="relative z-10 max-w-4xl mx-auto bg-white/80 backdrop-blur-xl p-12 md:p-20 rounded-[3rem] border border-neutral-100 shadow-[0_20px_60px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.06)] transition-shadow duration-700">
+          <div className="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center mx-auto mb-8 text-white font-serif text-2xl">
+            日
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 text-neutral-900 tracking-tight">Sẵn sàng để bắt đầu?</h2>
+          <p className="text-lg text-neutral-500 mb-12 font-light max-w-xl mx-auto">Tham gia cùng hàng nghìn học viên đang chinh phục tiếng Nhật mỗi ngày cùng J-Learning.</p>
+
+          <Link
+            href="/register"
+            className="group inline-flex items-center gap-4 bg-jp-red text-white px-10 py-4 rounded-full font-bold tracking-[0.15em] hover:bg-[#D32F2F] hover:shadow-lg hover:shadow-jp-red/20 transition-all duration-300 text-sm"
+          >
+            TẠO TÀI KHOẢN MIỄN PHÍ
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-jp-washi text-jp-indigo border-t border-black/5 pt-24 pb-10 px-6 md:px-16">
+      <footer className="bg-white text-neutral-900 border-t border-neutral-100 pt-24 pb-10 px-6 md:px-16 font-sans">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20 mb-20">
-           <div className="md:col-span-2 lg:col-span-1">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 bg-jp-red rounded-full flex items-center justify-center text-white font-jp shadow-md">日</div>
-                <h2 className="text-xl font-bold tracking-[0.2em] font-serif uppercase">J-Learning</h2>
-              </div>
-              <p className="text-neutral-500 leading-relaxed mb-8 text-sm">
-                 Nền tảng học Tiếng Nhật hiện đại, kết hợp phương pháp Kaizen giúp tối ưu hiệu suất học tập dành cho người Việt.
-              </p>
-           </div>
-           
-           <div>
-              <h4 className="font-bold mb-8 tracking-[0.2em] uppercase text-xs">Học Tập</h4>
-              <ul className="space-y-4 text-neutral-500 text-sm">
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Tự vựng (N5-N1)</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Ngữ pháp (N5-N1)</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Luyện thi JLPT</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Podcast Tiếng Nhật</a></li>
-              </ul>
-           </div>
-           
-           <div>
-              <h4 className="font-bold mb-8 tracking-[0.2em] uppercase text-xs">Hỗ Trợ</h4>
-              <ul className="space-y-4 text-neutral-500 text-sm">
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Về chúng tôi</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Liên hệ</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Điều khoản sử dụng</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Chính sách bảo mật</a></li>
-              </ul>
-           </div>
+          <div className="md:col-span-2 lg:col-span-1">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-jp-red rounded-lg flex items-center justify-center text-white font-serif text-lg shadow-sm">日</div>
+              <h2 className="text-lg font-bold tracking-widest font-serif uppercase text-neutral-900">J-Learning</h2>
+            </div>
+            <p className="text-neutral-500 leading-relaxed text-sm font-light pr-4">
+              Nền tảng học Tiếng Nhật hiện đại, kết hợp phương pháp Kaizen giúp tối ưu hiệu suất học tập dành riêng cho người Việt.
+            </p>
+          </div>
 
-           <div>
-              <h4 className="font-bold mb-8 tracking-[0.2em] uppercase text-xs">Kết Nối</h4>
-              <ul className="space-y-4 text-neutral-500 text-sm">
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Facebook</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">Instagram</a></li>
-                 <li><a href="#" className="hover:text-jp-red transition-colors inline-block hover:translate-x-1">YouTube</a></li>
-              </ul>
-           </div>
+          <div>
+            <h4 className="font-bold mb-6 tracking-widest uppercase text-xs text-neutral-900">Học Tập</h4>
+            <ul className="space-y-4 text-neutral-500 text-sm font-light">
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Từ vựng (N5-N1)</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Ngữ pháp (N5-N1)</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Luyện thi JLPT</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Podcast Tiếng Nhật</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-6 tracking-widest uppercase text-xs text-neutral-900">Hỗ Trợ</h4>
+            <ul className="space-y-4 text-neutral-500 text-sm font-light">
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Về chúng tôi</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Liên hệ</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Điều khoản sử dụng</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Chính sách bảo mật</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-6 tracking-widest uppercase text-xs text-neutral-900">Kết Nối</h4>
+            <ul className="space-y-4 text-neutral-500 text-sm font-light">
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Facebook</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Instagram</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">YouTube</a></li>
+            </ul>
+          </div>
         </div>
-        
-        <div className="max-w-7xl mx-auto border-t border-black/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-neutral-400 text-xs tracking-widest uppercase">
-           <p>© 2026 J-LEARNING SYSTEM. ALL RIGHTS RESERVED.</p>
-           <p className="flex items-center gap-2">
-              <Info size={14} /> Hệ thống 2.0
-           </p>
+
+        <div className="max-w-7xl mx-auto border-t border-neutral-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-neutral-400 text-[10px] tracking-widest uppercase font-semibold">
+          <p>© 2026 J-LEARNING SYSTEM. ALL RIGHTS RESERVED.</p>
+          <p className="flex items-center gap-2">
+            <Info size={14} /> Hệ thống 2.0
+          </p>
         </div>
       </footer>
     </div>
