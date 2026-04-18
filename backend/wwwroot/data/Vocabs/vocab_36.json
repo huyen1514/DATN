@@ -1,0 +1,202 @@
+[
+    {
+        "Word": "届きます",
+        "Reading": "とどきます",
+        "Meaning": "được gửi đến, được chuyển đến [hành lý ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 62,
+        "Example": "<ruby>荷物<rt>にもつ</rt></ruby>が <ruby>届<rt>とど</rt></ruby>きました。\n(Hành lý đã được gửi đến.)"
+    },
+    {
+        "Word": "出ます",
+        "Reading": "でます",
+        "Meaning": "tham gia, tham dự [trận đấu]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 62,
+        "Example": "<ruby>試合<rt>しあい</rt></ruby>に <ruby>出<rt>で</rt></ruby>ます。\n(Tham dự trận đấu.)"
+    },
+    {
+        "Word": "打ちます",
+        "Reading": "うちます",
+        "Meaning": "đánh [máy chữ]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 62,
+        "Example": "<ruby>ワープロ<rt></rt></ruby>を <ruby>打<rt>う</rt></ruby>ちます。\n(Đánh máy chữ.)"
+    },
+    {
+        "Word": "貯金します",
+        "Reading": "ちょきんします",
+        "Meaning": "tiết kiệm tiền, để dành tiền",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 62,
+        "Example": "<ruby>将来<rt>しょうらい</rt></ruby>のために <ruby>貯金<rt>ちょきん</rt></ruby>しています。\n(Tôi đang tiết kiệm tiền cho tương lai.)"
+    },
+    {
+        "Word": "太ります",
+        "Reading": "ふとります",
+        "Meaning": "béo lên, tăng cân",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 62,
+        "Example": "<ruby>太<rt>ふと</rt></ruby>りましたから、<ruby>好<rt>す</rt></ruby>きな <ruby>服<rt>ふく</rt></ruby>が <ruby>着<rt>き</rt></ruby>られなくなりました。\n(Vì béo ra nên tôi không thể mặc được quần áo mà mình thích nữa.)"
+    },
+    {
+        "Word": "痩せます",
+        "Reading": "やせます",
+        "Meaning": "gầy đi, giảm cân",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 62,
+        "Example": "なかなか <ruby>痩<rt>や</rt></ruby>せません。\n(Mãi mà không gầy đi được.)"
+    },
+    {
+        "Word": "過ぎます",
+        "Reading": "すぎます",
+        "Meaning": "quá, qua [7 giờ]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 62,
+        "Example": "7<ruby>時<rt>じ</rt></ruby>を <ruby>過<rt>す</rt></ruby>ぎました。\n(Đã quá 7 giờ rồi.)"
+    },
+    {
+        "Word": "慣れます",
+        "Reading": "なれます",
+        "Meaning": "làm quen với [tập quán]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 62,
+        "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>習慣<rt>しゅうかん</rt></ruby>に <ruby>慣<rt>な</rt></ruby>れました。\n(Tôi đã quen với tập quán của Nhật Bản.)"
+    },
+    {
+        "Word": "硬い",
+        "Reading": "かたい",
+        "Meaning": "cứng",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 62,
+        "Example": "この <ruby>パン<rt></rt></ruby>は <ruby>硬<rt>かた</rt></ruby>いです。\n(Cái bánh mì này cứng.)"
+    },
+    {
+        "Word": "軟らかい",
+        "Reading": "やわらかい",
+        "Meaning": "mềm",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 62,
+        "Example": "<ruby>軟<rt>やわ</rt></ruby>らかい <ruby>肉<rt>にく</rt></ruby>を <ruby>食<rt>た</rt></ruby>べたいです。\n(Tôi muốn ăn thịt mềm.)"
+    },
+    {
+        "Word": "電子~",
+        "Reading": "でんし~",
+        "Meaning": "điện tử",
+        "PartOfSpeech": "Tiền tố",
+        "LessonId": 62,
+        "Example": "<ruby>電子辞書<rt>でんしじしょ</rt></ruby>を <ruby>使<rt>つか</rt></ruby>っています。\n(Tôi đang sử dụng từ điển điện tử.)"
+    },
+    {
+        "Word": "携帯~",
+        "Reading": "けいたい~",
+        "Meaning": "cầm tay",
+        "PartOfSpeech": "Tiền tố",
+        "LessonId": 62,
+        "Example": "<ruby>携帯電話<rt>けいたいでんわ</rt></ruby>を <ruby>持<rt>も</rt></ruby>っています。\n(Tôi có điện thoại cầm tay.)"
+    },
+    {
+        "Word": "健康",
+        "Reading": "けんこう",
+        "Meaning": "sức khỏe",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 62,
+        "Example": "<ruby>健康<rt>けんこう</rt></ruby>のために、<ruby>毎日<rt>まいにち</rt></ruby> <ruby>運動<rt>うんどう</rt></ruby>するように しています。\n(Vì sức khỏe, hàng ngày tôi cố gắng vận động.)"
+    },
+    {
+        "Word": "剣道",
+        "Reading": "けんどう",
+        "Meaning": "kiếm đạo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 62,
+        "Example": "<ruby>剣道<rt>けんどう</rt></ruby>を <ruby>習<rt>なら</rt></ruby>っています。\n(Tôi đang học kiếm đạo.)"
+    },
+    {
+        "Word": "毎週",
+        "Reading": "まいしゅう",
+        "Meaning": "hàng tuần",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 62,
+        "Example": "<ruby>毎週<rt>まいしゅう</rt></ruby> <ruby>泳<rt>およ</rt></ruby>ぎに <ruby>行<rt>い</rt></ruby>きます。\n(Hàng tuần tôi đi bơi.)"
+    },
+    {
+        "Word": "やっと",
+        "Reading": "やっと",
+        "Meaning": "cuối cùng thì",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 62,
+        "Example": "<ruby>やっと<rt></rt></ruby> <ruby>自転車<rt>じてんしゃ</rt></ruby>に <ruby>乗<rt>の</rt></ruby>れるように なりました。\n(Cuối cùng thì tôi đã đi được xe đạp.)"
+    },
+    {
+        "Word": "かなり",
+        "Reading": "かなり",
+        "Meaning": "khá, tương đối",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 62,
+        "Example": "<ruby>日本語<rt>にほんご</rt></ruby>が かなり <ruby>上手<rt>じょうず</rt></ruby>に なりました。\n(Tiếng Nhật của tôi đã khá lên tương đối rồi.)"
+    },
+    {
+        "Word": "必ず",
+        "Reading": "かならず",
+        "Meaning": "nhất định",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 62,
+        "Example": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>必<rt>かなら</rt></ruby>ず <ruby>日記<rt>にっき</rt></ruby>を <ruby>書<rt>か</rt></ruby>くように しています。\n(Hàng ngày tôi nhất định cố gắng viết nhật ký.)"
+    },
+    {
+        "Word": "絶対に",
+        "Reading": "ぜったいに",
+        "Meaning": "tuyệt đối, nhất định",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 62,
+        "Example": "<ruby>絶対<rt>ぜったい</rt></ruby>に <ruby>時間<rt>じかん</rt></ruby>に <ruby>遅<rt>おく</rt></ruby>れないように してください。\n(Tuyệt đối không được muộn giờ.)"
+    },
+    {
+        "Word": "できるだけ",
+        "Reading": "できるだけ",
+        "Meaning": "cố gắng, trong khả năng có thể",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 62,
+        "Example": "できるだけ <ruby>甘<rt>あま</rt></ruby>い <ruby>物<rt>もの</rt></ruby>を <ruby>食<rt>た</rt></ruby>べないように しています。\n(Tôi cố gắng hết sức không ăn đồ ngọt.)"
+    },
+    {
+        "Word": "このごろ",
+        "Reading": "このごろ",
+        "Meaning": "gần đây, dạo này",
+        "PartOfSpeech": "Danh từ / Phó từ",
+        "LessonId": 62,
+        "Example": "このごろ <ruby>忙<rt>いそが</rt></ruby>しいです。\n(Dạo này tôi bận.)"
+    },
+    {
+        "Word": "特別[な]",
+        "Reading": "とくべつ",
+        "Meaning": "đặc biệt",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 62,
+        "Example": "<ruby>特別<rt>とくべつ</rt></ruby>な ことは <ruby>何<rt>なに</rt></ruby>も していません。\n(Tôi không làm điều gì đặc biệt cả.)"
+    },
+    {
+        "Word": "歴史",
+        "Reading": "れきし",
+        "Meaning": "lịch sử",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 62,
+        "Example": "<ruby>歴史<rt>れきし</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>しています。\n(Tôi đang học lịch sử.)"
+    },
+    {
+        "Word": "大勢の~",
+        "Reading": "おおぜいの~",
+        "Meaning": "nhiều (người)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 62,
+        "Example": "<ruby>大勢<rt>おおぜい</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>集<rt>あつ</rt></ruby>まりました。\n(Nhiều người đã tập trung lại.)"
+    },
+    {
+        "Word": "安全[な]",
+        "Reading": "あんぜん",
+        "Meaning": "an toàn",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 62,
+        "Example": "<ruby>安全<rt>あんぜん</rt></ruby>な <ruby>所<rt>ところ</rt></ruby>に <ruby>逃<rt>に</rt></ruby>げてください。\n(Hãy chạy đến nơi an toàn.)"
+    }
+]

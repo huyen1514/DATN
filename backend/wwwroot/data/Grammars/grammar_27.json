@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Động từ khả năng (可能動詞)",
+        "Structure": "Nhóm 1: u -> e + ます | Nhóm 2: ます -> られます | Nhóm 3: きます -> こられます, します -> できます",
+        "Meaning": "Dùng để diễn tả khả năng hoặc năng lực có thể làm một việc gì đó. Động từ khả năng không dùng để chỉ hành động của chủ thể mà chỉ trạng thái của khả năng. Lưu ý: Trong mẫu câu này, trợ từ 「を」 thường được thay thế bằng 「が」.",
+        "Example": "わたしは <ruby>漢字<rt>かんじ</rt></ruby>が <ruby>読<rt>よ</rt></ruby>めます。\n(Tôi có thể đọc được chữ Hán.)",
+        "LessonId": 78
+    },
+    {
+        "GrammarName": "Phân biệt 見えます/聞こえます và 見られます/聞けます",
+        "Structure": "N が 見えます/聞こえます | N が 見られます/聞けます",
+        "Meaning": "「見えます/聞こえます」 dùng khi âm thanh hoặc hình ảnh tự nhiên đập vào mắt/tai mà không cần nỗ lực (khả năng tự nhiên). 「見られます/聞けます」 dùng khi khả năng đó phụ thuộc vào điều kiện hoặc nỗ lực của người nói (khả năng có điều kiện).",
+        "Example": "<ruby>新幹線<rt>しんかんせん</rt></ruby>から <ruby>富士山<rt>ふじさん</rt></ruby>が <ruby>見<rt>み</rt></ruby>えます。\n(Từ tàu Shinkansen có thể nhìn thấy núi Phú Sĩ - tự nhiên nhìn thấy.)",
+        "LessonId": 78
+    },
+    {
+        "GrammarName": "Cấu trúc できました (Xong/Hoàn thành)",
+        "Structure": "Danh từ + が できました",
+        "Meaning": "Ngoài nghĩa là 'có thể làm', 「できました」 còn dùng để diễn tả một sự vật gì đó đã được hoàn thành, xây dựng xong, hoặc chuẩn bị xong (như cơm chín, nhà xây xong, bài tập làm xong).",
+        "Example": "<ruby>駅<rt>えき</rt></ruby>の <ruby>前<rt>まえ</rt></ruby>に <ruby>大<rt>おお</rt></ruby>きい スーパーが できました。\n(Một siêu thị lớn đã được xây xong ở trước nhà ga.)",
+        "LessonId": 78
+    },
+    {
+        "GrammarName": "Trợ từ は (Dùng để đối chiếu)",
+        "Structure": "N1 は ... が、N2 は ...",
+        "Meaning": "Trợ từ 「は」 dùng thay thế cho 「が」 hoặc 「を」 để tạo sự đối chiếu rõ rệt giữa hai sự việc. Khi dùng với các trợ từ khác như 「に」、「へ」、「から」, 「は」 sẽ được thêm vào sau (ví dụ: には, へは).",
+        "Example": "<ruby>酒<rt>さけ</rt></ruby>は <ruby>飲<rt>の</rt></ruby>みますが、ビールは <ruby>飲<rt>の</rt></ruby>みません。\n(Rượu thì tôi có uống, nhưng bia thì tôi không uống.)",
+        "LessonId": 78
+    },
+    {
+        "GrammarName": "Cấu trúc しか ... ません (Chỉ)",
+        "Structure": "N + しか + V (thể phủ định)",
+        "Meaning": "Mang ý nghĩa là 'chỉ', giống với 「だけ」 nhưng 「しか」 luôn đi với động từ thể phủ định. Nó nhấn mạnh sự giới hạn và thường mang sắc thái đáng tiếc hoặc cảm thấy không đủ.",
+        "Example": "<ruby>平仮名<rt>ひらがな</rt></ruby>しか <ruby>書<rt>か</rt></ruby>けません。\n(Tôi chỉ có thể viết được Hiragana thôi - hàm ý không viết được Kanji/Katakana.)",
+        "LessonId": 78
+    }
+]

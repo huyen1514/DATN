@@ -1,0 +1,30 @@
+[
+    {
+        "GrammarName": "Cấu trúc ～そうです (Vẻ bề ngoài / Phỏng đoán)",
+        "Structure": "V-masu (bỏ ます) / A-i (bỏ い) / A-na (bỏ な) + そうです",
+        "Meaning": "Dùng để diễn tả sự phỏng đoán dựa trên những gì mắt thấy trực tiếp. Có nghĩa là 'trông có vẻ...', 'nhìn có vẻ...'. Lưu ý: Với tính từ いい sẽ biến thành よさそうです, và ない thành なさそうです.",
+        "Example": "この <ruby>料理<rt>りょうり</rt></ruby>は おいしそうです。\n(Món ăn này trông có vẻ ngon.)",
+        "LessonId": 93
+    },
+    {
+        "GrammarName": "Cấu trúc ～そうです (Sắp sửa)",
+        "Structure": "V-masu (bỏ ます) + そうです",
+        "Meaning": "Dùng để diễn tả một sự việc hoặc trạng thái có vẻ như sắp xảy ra ngay bây giờ. Thường đi kèm với các phó từ như 「今にも」.",
+        "Example": "<ruby>今<rt>いま</rt></ruby>にも <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>りそうです。\n(Trời trông có vẻ sắp mưa đến nơi rồi.)",
+        "LessonId": 93
+    },
+    {
+        "GrammarName": "Cấu trúc ～て きます (Đi rồi về)",
+        "Structure": "V-te + きます",
+        "Meaning": "Diễn tả việc đi đến một địa điểm nào đó để thực hiện một hành động rồi quay trở lại điểm xuất phát ban đầu. Có nghĩa là 'đi làm gì đó rồi về'.",
+        "Example": "ちょっと <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に <ruby>行<rt>い</rt></ruby>って きます。\n(Tôi đi mua đồ một chút rồi về.)",
+        "LessonId": 93
+    },
+    {
+        "GrammarName": "Cấu trúc ～て きます (Đi lấy rồi về / Đi đâu đó rồi về)",
+        "Structure": "N (địa điểm) へ <ruby>行<rt>い</rt></ruby>って きます / N を <ruby>取<rt>と</rt></ruby>って きます",
+        "Meaning": "Một biến thể của cấu trúc trên, nhấn mạnh vào việc đi đến đâu đó hoặc đi lấy một vật gì đó rồi quay về.",
+        "Example": "<ruby>台所<rt>だいどころ</rt></ruby>から コップを <ruby>取<rt>と</rt></ruby>って きます。\n(Tôi đi lấy cái cốc từ nhà bếp rồi quay lại ngay.)",
+        "LessonId": 93
+    }
+]

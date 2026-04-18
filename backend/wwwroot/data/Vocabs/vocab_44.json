@@ -1,0 +1,186 @@
+[
+    {
+        "Word": "泣きます",
+        "Reading": "なきます",
+        "Meaning": "khóc",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 70,
+        "Example": "<ruby>赤<rt>あか</rt></ruby>ちゃんが <ruby>泣<rt>な</rt></ruby>いています。\n(Em bé đang khóc.)"
+    },
+    {
+        "Word": "笑います",
+        "Reading": "わらいます",
+        "Meaning": "cười",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 70,
+        "Example": "<ruby>笑<rt>わら</rt></ruby>うと、<ruby>楽<rt>たの</rt></ruby>しく なります。\n(Khi cười, mình sẽ thấy vui vẻ.)"
+    },
+    {
+        "Word": "乾きます",
+        "Reading": "かわきます",
+        "Meaning": "khô",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 70,
+        "Example": "<ruby>洗濯物<rt>せんたくもの</rt></ruby>が よく <ruby>乾<rt>かわ</rt></ruby>きました。\n(Đồ giặt đã rất khô ráo.)"
+    },
+    {
+        "Word": "濡れます",
+        "Reading": "ぬれます",
+        "Meaning": "ướt",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 70,
+        "Example": "<ruby>雨<rt>あめ</rt></ruby>で <ruby>服<rt>ふく</rt></ruby>が <ruby>濡<rt>ぬ</rt></ruby>れてしまいました。\n(Quần áo bị ướt hết vì mưa rồi.)"
+    },
+    {
+        "Word": "滑ります",
+        "Reading": "すべります",
+        "Meaning": "trượt",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 70,
+        "Example": "<ruby>道<rt>みち</rt></ruby>が <ruby>凍<rt>こお</rt></ruby>って いますから、<ruby>滑<rt>すべ</rt></ruby>りやすいです。\n(Vì đường bị đóng băng nên rất dễ trượt.)"
+    },
+    {
+        "Word": "起きます",
+        "Reading": "おきます",
+        "Meaning": "xảy ra [tai nạn ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 70,
+        "Example": "あそこで <ruby>事故<rt>じこ</rt></ruby>が <ruby>起<rt>お</rt></ruby>きたようです。\n(Hình như ở đằng kia đã xảy ra tai nạn.)"
+    },
+    {
+        "Word": "調節します",
+        "Reading": "ちょうせつします",
+        "Meaning": "điều tiết, điều chỉnh",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 70,
+        "Example": "<ruby>部屋<rt>へや</rt></ruby>の <ruby>温度<rt>おんど</rt></ruby>を <ruby>調節<rt>ちょうせつ</rt></ruby>します。\n(Điều chỉnh nhiệt độ trong phòng.)"
+    },
+    {
+        "Word": "安全[な]",
+        "Reading": "あんぜん",
+        "Meaning": "an toàn",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 70,
+        "Example": "この <ruby>町<rt>まち</rt></ruby>は <ruby>夜<rt>よる</rt></ruby>でも <ruby>安全<rt>あんぜん</rt></ruby>です。\n(Thành phố này ngay cả ban đêm cũng an toàn.)"
+    },
+    {
+        "Word": "危険[な]",
+        "Reading": "きけん",
+        "Meaning": "nguy hiểm",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 70,
+        "Example": "<ruby>川<rt>かわ</rt></ruby>で <ruby>泳<rt>およ</rt></ruby>ぐのは <ruby>危険<rt>きけん</rt></ruby>です。\n(Bơi ở sông rất nguy hiểm.)"
+    },
+    {
+        "Word": "濃い",
+        "Reading": "こい",
+        "Meaning": "đậm, đặc",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 70,
+        "Example": "<ruby>濃<rt>こ</rt></ruby>い <ruby>コーヒー<rt></rt></ruby>が <ruby>好<rt>す</rt></ruby>きです。\n(Tôi thích cà phê đậm đặc.)"
+    },
+    {
+        "Word": "薄い",
+        "Reading": "うすい",
+        "Meaning": "nhạt, loãng, mỏng",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 70,
+        "Example": "<ruby>味<rt>あじ</rt></ruby>が <ruby>薄<rt>うす</rt></ruby>かったら、<ruby>塩<rt>しお</rt></ruby>を <ruby>入<rt>い</rt></ruby>れて ください。\n(Nếu vị nhạt thì hãy cho thêm muối vào.)"
+    },
+    {
+        "Word": "厚い",
+        "Reading": "あつい",
+        "Meaning": "dày",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 70,
+        "Example": "<ruby>冬<rt>ふゆ</rt></ruby>は <ruby>厚<rt>あつ</rt></ruby>い <ruby>靴下<rt>くつした</rt></ruby>を <ruby>履<rt>は</rt></ruby>きます。\n(Mùa đông tôi đi tất dày.)"
+    },
+    {
+        "Word": "太い",
+        "Reading": "ふとい",
+        "Meaning": "béo, to",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 70,
+        "Example": "<ruby>太<rt>ふと</rt></ruby>い <ruby>鉛筆<rt>えんぴつ</rt></ruby>で <ruby>書<rt>か</rt></ruby>きます。\n(Viết bằng bút chì thân to.)"
+    },
+    {
+        "Word": "細い",
+        "Reading": "ほそい",
+        "Meaning": "thon, mảnh, gầy",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 70,
+        "Example": "<ruby>彼女<rt>かのじょ</rt></ruby>は <ruby>足<rt>あし</rt></ruby>が <ruby>細<rt>ほそ</rt></ruby>いです。\n(Cô ấy có đôi chân thon gọn.)"
+    },
+    {
+        "Word": "空気",
+        "Reading": "くうき",
+        "Meaning": "không khí",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "<ruby>田舎<rt>いなか</rt></ruby>は <ruby>空気<rt>くうき</rt></ruby>が きれいです。\n(Ở quê không khí trong lành.)"
+    },
+    {
+        "Word": "涙",
+        "Reading": "なみだ",
+        "Meaning": "nước mắt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "<ruby>涙<rt>なみだ</rt></ruby>が <ruby>止<rt>と</rt></ruby>まりません。\n(Nước mắt không ngừng rơi.)"
+    },
+    {
+        "Word": "和食",
+        "Reading": "わしょく",
+        "Meaning": "món ăn Nhật",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "<ruby>今日<rt>きょう</rt></ruby>の <ruby>晩<rt>ばん</rt></ruby>ごはんは <ruby>和食<rt>わしょく</rt></ruby>です。\n(Bữa tối nay là món Nhật.)"
+    },
+    {
+        "Word": "洋食",
+        "Reading": "ようしょく",
+        "Meaning": "món ăn Âu Mỹ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "<ruby>洋食<rt>ようしょく</rt></ruby>より <ruby>和食<rt>わしょく</rt></ruby>の ほうが <ruby>好<rt>す</rt></ruby>きです。\n(Tôi thích món Nhật hơn món Tây.)"
+    },
+    {
+        "Word": "おかず",
+        "Reading": "おかず",
+        "Meaning": "món ăn kèm, thức ăn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "お<ruby>弁当<rt>べんとう</rt></ruby>の おかずを <ruby>作<rt>つく</rt></ruby>ります。\n(Tôi làm thức ăn cho cơm hộp.)"
+    },
+    {
+        "Word": "量",
+        "Reading": "りょう",
+        "Meaning": "lượng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "<ruby>砂糖<rt>さとう</rt></ruby>の <ruby>量<rt>りょう</rt></ruby>を <ruby>少<rt>すく</rt></ruby>なく して ください。\n(Hãy giảm lượng đường đi.)"
+    },
+    {
+        "Word": "～倍",
+        "Reading": "～ばい",
+        "Meaning": "gấp ~ lần",
+        "PartOfSpeech": "Hậu tố",
+        "LessonId": 70,
+        "Example": "<ruby>人口<rt>じんこう</rt></ruby>が 10<ruby>年前<rt>ねんまえ</rt></ruby>の 2<ruby>倍<rt>ばい</rt></ruby>に なりました。\n(Dân số đã tăng gấp 2 lần so với 10 năm trước.)"
+    },
+    {
+        "Word": "洗濯物",
+        "Reading": "せんたくもの",
+        "Meaning": "đồ giặt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "<ruby>洗濯物<rt>せんたくもの</rt></ruby>を <ruby>干<rt>ほ</rt></ruby>します。\n(Phơi đồ giặt.)"
+    },
+    {
+        "Word": "理由",
+        "Reading": "りゆう",
+        "Meaning": "lý do",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 70,
+        "Example": "<ruby>遅<rt>おく</rt></ruby>れた <ruby>理由<rt>りゆう</rt></ruby>を <ruby>話<rt>はな</rt></ruby>して ください。\n(Hãy nói lý do tại sao anh/chị đến muộn.)"
+    }
+]

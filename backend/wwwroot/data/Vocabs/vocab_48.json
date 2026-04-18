@@ -1,0 +1,178 @@
+[
+    {
+        "Word": "下ろします",
+        "Reading": "おろします",
+        "Meaning": "cho xuống, hạ xuống",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 74,
+        "Example": "<ruby>荷物<rt>にもつ</rt></ruby>を <ruby>下<rt>お</rt></ruby>ろします。\n(Hạ hành lý xuống.)"
+    },
+    {
+        "Word": "届けます",
+        "Reading": "とどけます",
+        "Meaning": "đưa đến, giao đến",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 74,
+        "Example": "<ruby>荷物<rt>にもつ</rt></ruby>を <ruby>届<rt>とど</rt></ruby>けます。\n(Giao hành lý đến.)"
+    },
+    {
+        "Word": "世話をします",
+        "Reading": "せわをします",
+        "Meaning": "chăm sóc, giúp đỡ",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 74,
+        "Example": "<ruby>子供<rt>こども</rt></ruby>の <ruby>世話<rt>せわ</rt></ruby>を します。\n(Chăm sóc trẻ con.)"
+    },
+    {
+        "Word": "録音します",
+        "Reading": "ろくおんします",
+        "Meaning": "ghi âm",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 74,
+        "Example": "<ruby>歌<rt>うた</rt></ruby>を <ruby>録音<rt>ろくおん</rt></ruby>します。\n(Ghi âm bài hát.)"
+    },
+    {
+        "Word": "嫌[な]",
+        "Reading": "いや",
+        "Meaning": "ghét, không thích, khó chịu",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 74,
+        "Example": "<ruby>嫌<rt>いや</rt></ruby>な <ruby>仕事<rt>しごと</rt></ruby>を させられました。\n(Tôi bị bắt làm công việc mà mình ghét.)"
+    },
+    {
+        "Word": "塾",
+        "Reading": "じゅく",
+        "Meaning": "lò luyện thi, trường tư thục",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "<ruby>子供<rt>こども</rt></ruby>を <ruby>塾<rt>じゅく</rt></ruby>へ <ruby>行<rt>い</rt></ruby>かせます。\n(Cho con đi học ở lò luyện thi.)"
+    },
+    {
+        "Word": "生徒",
+        "Reading": "せいと",
+        "Meaning": "học sinh (cấp 1, cấp 2)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "<ruby>生徒<rt>せいと</rt></ruby>が <ruby>集<rt>あつ</rt></ruby>まりました。\n(Học sinh đã tập trung lại.)"
+    },
+    {
+        "Word": "ファイル",
+        "Reading": "ファイル",
+        "Meaning": "cái kẹp tài liệu, tệp tin (file)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "<ruby>書類<rt>しょるい</rt></ruby>を <ruby>ファイル<rt></rt></ruby>に <ruby>入<rt>い</rt></ruby>れます。\n(Cho giấy tờ vào kẹp tài liệu.)"
+    },
+    {
+        "Word": "自由な",
+        "Reading": "じゆうな",
+        "Meaning": "tự do",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 74,
+        "Example": "<ruby>自由<rt>じゆう</rt></ruby>に <ruby>話<rt>はな</rt></ruby>して ください。\n(Hãy nói chuyện một cách tự do.)"
+    },
+    {
+        "Word": "～間に",
+        "Reading": "～かんに",
+        "Meaning": "trong khoảng ~ (thời gian)",
+        "PartOfSpeech": "Hậu tố",
+        "LessonId": 74,
+        "Example": "10<ruby>分<rt>ぷん</rt></ruby><ruby>間<rt>かん</rt></ruby> ほど <ruby>待<rt>ま</rt></ruby>って ください。\n(Hãy đợi trong khoảng 10 phút.)"
+    },
+    {
+        "Word": "いいことですね",
+        "Reading": "いいことですね",
+        "Meaning": "Điều đó tốt nhỉ / Hay nhỉ",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 74,
+        "Example": "それは <ruby>良<rt>い</rt></ruby>いことですね。\n(Điều đó tốt quá nhỉ.)"
+    },
+    {
+        "Word": "お忙しいところ",
+        "Reading": "おいそがしいところ",
+        "Meaning": "lúc đang bận (cách nói lịch sự)",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 74,
+        "Example": "お<ruby>忙<rt>いそが</rt></ruby>しいところ、すみません。\n(Xin lỗi vì làm phiền lúc anh/chị đang bận.)"
+    },
+    {
+        "Word": "営業",
+        "Reading": "えいぎょう",
+        "Meaning": "kinh doanh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "あの <ruby>店<rt>みせ</rt></ruby>は <ruby>営業<rt>えいぎょう</rt></ruby>して います。\n(Cửa hàng kia đang kinh doanh.)"
+    },
+    {
+        "Word": "それまでに",
+        "Reading": "それまでに",
+        "Meaning": "trước thời điểm đó",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 74,
+        "Example": "それまでに <ruby>終<rt>お</rt></ruby>わらせます。\n(Tôi sẽ làm xong trước lúc đó.)"
+    },
+    {
+        "Word": "かまいません",
+        "Reading": "かまいません",
+        "Meaning": "không sao / không thành vấn đề",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 74,
+        "Example": "「ここで <ruby>書<rt>か</rt></ruby>いても いいですか」「ええ、かまいません」\n(\"Tôi viết ở đây được không?\" \"Vâng, không sao ạ.\")"
+    },
+    {
+        "Word": "楽しみます",
+        "Reading": "たのしみます",
+        "Meaning": "thưởng thức, vui chơi",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 74,
+        "Example": "<ruby>休日<rt>きゅうじつ</rt></ruby>を <ruby>楽<rt>たの</rt></ruby>しみます。\n(Tận hưởng ngày nghỉ.)"
+    },
+    {
+        "Word": "親",
+        "Reading": "おや",
+        "Meaning": "bố mẹ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "<ruby>親<rt>おや</rt></ruby>に <ruby>相談<rt>そうだん</rt></ruby>します。\n(Thảo luận với bố mẹ.)"
+    },
+    {
+        "Word": "小学生",
+        "Reading": "しょうがくせい",
+        "Meaning": "học sinh tiểu học",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "<ruby>弟<rt>おとうと</rt></ruby>は <ruby>小学生<rt>しょうがくせい</rt></ruby>です。\n(Em trai tôi là học sinh tiểu học.)"
+    },
+    {
+        "Word": "〜パーセント",
+        "Reading": "〜パーセント",
+        "Meaning": "phần trăm (%)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "50<ruby>パーセント<rt></rt></ruby>ほど <ruby>安<rt>やす</rt></ruby>く なりました。\n(Đã rẻ đi khoảng 50%.)"
+    },
+    {
+        "Word": "その次",
+        "Reading": "そのつぎ",
+        "Meaning": "tiếp theo đó",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 74,
+        "Example": "その<ruby>次<rt>つぎ</rt></ruby>に <ruby>何<rt>なに</rt></ruby>を しますか。\n(Tiếp theo sau đó bạn sẽ làm gì?)"
+    },
+    {
+        "Word": "習字",
+        "Reading": "しゅうじ",
+        "Meaning": "luyện viết chữ đẹp, thư pháp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 74,
+        "Example": "<ruby>子供<rt>こども</rt></ruby>に <ruby>習字<rt>しゅうじ</rt></ruby>を <ruby>習<rt>なら</rt></ruby>わせます。\n(Cho con đi học viết thư pháp.)"
+    },
+    {
+        "Word": "普通の",
+        "Reading": "ふつうの",
+        "Meaning": "bình thường, thông thường",
+        "PartOfSpeech": "Tính từ / Danh từ",
+        "LessonId": 74,
+        "Example": "<ruby>普通<rt>ふつう</rt></ruby>の <ruby>生活<rt>せいかつ</rt></ruby>を して います。\n(Đang sống một cuộc sống bình thường.)"
+    }
+]

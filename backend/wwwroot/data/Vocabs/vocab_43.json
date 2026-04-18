@@ -1,0 +1,162 @@
+[
+    {
+        "Word": "増えます",
+        "Reading": "ふえます",
+        "Meaning": "tăng lên [xuất khẩu ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 69,
+        "Example": "<ruby>輸出<rt>ゆしゅつ</rt></ruby>が <ruby>増<rt>ふ</rt></ruby>えそうです。\n(Xuất khẩu có vẻ sẽ tăng lên.)"
+    },
+    {
+        "Word": "減ります",
+        "Reading": "へります",
+        "Meaning": "giảm xuống [xuất khẩu ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 69,
+        "Example": "<ruby>輸出<rt>ゆしゅつ</rt></ruby>が <ruby>減<rt>へ</rt></ruby>りそうです。\n(Xuất khẩu có vẻ sẽ giảm xuống.)"
+    },
+    {
+        "Word": "上がります",
+        "Reading": "あがります",
+        "Meaning": "tăng lên [giá ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 69,
+        "Example": "<ruby>値段<rt>ねだん</rt></ruby>が <ruby>上<rt>あ</rt></ruby>がりそうです。\n(Giá cả có vẻ sẽ tăng lên.)"
+    },
+    {
+        "Word": "下がります",
+        "Reading": "さがります",
+        "Meaning": "giảm xuống [giá ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 69,
+        "Example": "<ruby>値段<rt>ねだん</rt></ruby>が <ruby>下<rt>さ</rt></ruby>がりそうです。\n(Giá cả có vẻ sẽ giảm xuống.)"
+    },
+    {
+        "Word": "切れます",
+        "Reading": "きれます",
+        "Meaning": "đứt [sợi dây ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 69,
+        "Example": "<ruby>紐<rt>ひも</rt></ruby>が <ruby>切<rt>き</rt></ruby>れそうです。\n(Sợi dây có vẻ sắp đứt.)"
+    },
+    {
+        "Word": "とれます",
+        "Reading": "とれます",
+        "Meaning": "tuột [cái cúc ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 69,
+        "Example": "<ruby>ボタン<rt></rt></ruby>が とれそうです。\n(Cái cúc có vẻ sắp tuột.)"
+    },
+    {
+        "Word": "落ちます",
+        "Reading": "おちます",
+        "Meaning": "rơi [hành lý ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 69,
+        "Example": "<ruby>荷物<rt>にもつ</rt></ruby>が <ruby>落<rt>お</rt></ruby>ちそうです。\n(Hành lý có vẻ sắp rơi.)"
+    },
+    {
+        "Word": "なくなります",
+        "Reading": "なくなります",
+        "Meaning": "hết, mất [xăng ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 69,
+        "Example": "<ruby>ガソリン<rt></rt></ruby>が なくなりそうです。\n(Xăng có vẻ sắp hết.)"
+    },
+    {
+        "Word": "丈夫[な]",
+        "Reading": "じょうぶ",
+        "Meaning": "bền, chắc chắn",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 69,
+        "Example": "この <ruby>袋<rt>ふくろ</rt></ruby>は <ruby>丈夫<rt>じょうぶ</rt></ruby>そうです。\n(Cái túi này có vẻ chắc chắn.)"
+    },
+    {
+        "Word": "変[な]",
+        "Reading": "へん",
+        "Meaning": "lạ, kỳ lạ",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 69,
+        "Example": "<ruby>変<rt>へん</rt></ruby>な <ruby>音<rt>おと</rt></ruby>が します。\n(Có âm thanh lạ.)"
+    },
+    {
+        "Word": "幸せ[な]",
+        "Reading": "しあわせ",
+        "Meaning": "hạnh phúc",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 69,
+        "Example": "とても <ruby>幸<rt>しあわ</rt></ruby>せそうです。\n(Trông có vẻ rất hạnh phúc.)"
+    },
+    {
+        "Word": "楽[な]",
+        "Reading": "らく",
+        "Meaning": "nhàn nhã, thoải mái",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 69,
+        "Example": "<ruby>仕事<rt>しごと</rt></ruby>が <ruby>終<rt>お</rt></ruby>わって、<ruby>楽<rt>らく</rt></ruby>に なりました。\n(Công việc kết thúc nên tôi đã thấy thoải mái hơn.)"
+    },
+    {
+        "Word": "うまい",
+        "Reading": "うまい",
+        "Meaning": "ngon, giỏi",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 69,
+        "Example": "この <ruby>料理<rt>りょうり</rt></ruby>は うまそうです。\n(Món ăn này có vẻ ngon.)"
+    },
+    {
+        "Word": "まずい",
+        "Reading": "まずい",
+        "Meaning": "dở, không ngon",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 69,
+        "Example": "この <ruby>料理<rt>りょうり</rt></ruby>は まずそうです。\n(Món ăn này trông có vẻ không ngon.)"
+    },
+    {
+        "Word": "辛い",
+        "Reading": "からい",
+        "Meaning": "cay",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 69,
+        "Example": "この <ruby>料理<rt>りょうり</rt></ruby>は <ruby>辛<rt>から</rt></ruby>そうです。\n(Món ăn này có vẻ cay.)"
+    },
+    {
+        "Word": "暖房",
+        "Reading": "だんぼう",
+        "Meaning": "máy sưởi, thiết bị sưởi ấm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 69,
+        "Example": "<ruby>暖房<rt>だんぼう</rt></ruby>を つけましょう。\n(Chúng ta hãy bật máy sưởi lên nhé.)"
+    },
+    {
+        "Word": "冷房",
+        "Reading": "れいぼう",
+        "Meaning": "máy lạnh, thiết bị làm mát",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 69,
+        "Example": "<ruby>冷房<rt>れいぼう</rt></ruby>が きいています。\n(Máy lạnh đang chạy.)"
+    },
+    {
+        "Word": "センス",
+        "Reading": "センス",
+        "Meaning": "có gu, có năng khiếu [âm nhạc, thời trang ~]",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 69,
+        "Example": "<ruby>服<rt>ふく</rt></ruby>の センスが いいですね。\n(Gu thời trang của bạn tốt quá nhỉ.)"
+    },
+    {
+        "Word": "今にも",
+        "Reading": "いまにも",
+        "Meaning": "sắp sửa (bất kỳ lúc nào)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 69,
+        "Example": "<ruby>今<rt>いま</rt></ruby>にも <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>りそうです。\n(Trời có vẻ sắp mưa đến nơi rồi.)"
+    },
+    {
+        "Word": "わあ",
+        "Reading": "わあ",
+        "Meaning": "ôi, oa (thốt lên khi ngạc nhiên)",
+        "PartOfSpeech": "Thán từ",
+        "LessonId": 69,
+        "Example": "わあ、きれいな <ruby>景色<rt>けしき</rt></ruby>ですね。\n(Oa, phong cảnh đẹp quá nhỉ.)"
+    }
+]

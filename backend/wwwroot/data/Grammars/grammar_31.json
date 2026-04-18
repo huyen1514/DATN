@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Thể ý định (意向形 - Ishikikei)",
+        "Structure": "Nhóm 1: u -> o + う | Nhóm 2: ます -> よう | Nhóm 3: きます -> こよう, します -> しよう",
+        "Meaning": "Là biến thể của thể từ điển, dùng trong giao tiếp thân mật giữa bạn bè, người thân hoặc khi tự nói với chính mình. Nó mang nghĩa rủ rê hoặc diễn tả ý định thực hiện hành động của người nói.",
+        "Example": "<ruby>週末<rt>しゅうまつ</rt></ruby>は <ruby>海<rt>うみ</rt></ruby>に <ruby>行<rt>い</rt></ruby>こう。\n(Cuối tuần này cùng đi biển nào.)",
+        "LessonId": 82
+    },
+    {
+        "GrammarName": "Cấu trúc ～と 思っています (Đang định...)",
+        "Structure": "V-(Thể ý định) + と 思っています",
+        "Meaning": "Dùng để diễn tả một ý định đã được hình thành từ trước thời điểm nói và bây giờ vẫn đang tiếp diễn. Mẫu câu này mang tính chất bền vững hơn so với việc chỉ dùng 「～と 思います」.",
+        "Example": "<ruby>将来<rt>しょうらい</rt></ruby> <ruby>日本<rt>にほん</rt></ruby>で <ruby>働<rt>はたら</rt></ruby>こうと <ruby>思<rt>おomoo</rt></ruby>っています。\n(Tôi đang định tương lai sẽ làm việc tại Nhật Bản.)",
+        "LessonId": 82
+    },
+    {
+        "GrammarName": "Cấu trúc ～つもりです (Dự định...)",
+        "Structure": "V-(Thể từ điển / Thể ない) + つもりです",
+        "Meaning": "Dùng để diễn tả một dự định hoặc quyết tâm thực hiện (hoặc không thực hiện) một hành động nào đó. Mức độ chắc chắn cao hơn so với thể ý định.",
+        "Example": "<ruby>来年<rt>らいねん</rt></ruby> <ruby>結婚<rt>けっこん</rt></ruby>する つもりです。\n(Năm sau tôi dự định sẽ kết hôn.)",
+        "LessonId": 82
+    },
+    {
+        "GrammarName": "Cấu trúc ～予定です (Kế hoạch...)",
+        "Structure": "V-(Thể từ điển) / Danh từ + の + 予定です",
+        "Meaning": "Dùng để nói về một lịch trình hoặc kế hoạch đã được ấn định sẵn bởi cơ quan, tổ chức hoặc sự kiện nào đó, chứ không đơn thuần là ý định cá nhân.",
+        "Example": "7<ruby>月<rt>がつ</rt></ruby>の <ruby>終<rt>お</rt></ruby>わりに <ruby>ドイツ<rt></rt></ruby>へ <ruby>出張<rt>しゅっちょう</rt></ruby>する <ruby>予定<rt>よてい</rt></ruby>です。\n(Theo kế hoạch tôi sẽ đi công tác Đức vào cuối tháng 7.)",
+        "LessonId": 82
+    },
+    {
+        "GrammarName": "Cấu trúc まだ ～ていません (Vẫn chưa...)",
+        "Structure": "まだ + V-te + いません",
+        "Meaning": "Diễn tả một hành động hoặc sự việc tính đến thời điểm hiện tại vẫn chưa được thực hiện hoặc chưa xảy ra.",
+        "Example": "<ruby>銀行<rt>ぎんこう</rt></ruby>は まだ <ruby>開<rt>あ</rt></ruby>いて いません。\n(Ngân hàng vẫn chưa mở cửa.)",
+        "LessonId": 82
+    }
+]

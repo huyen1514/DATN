@@ -1,0 +1,23 @@
+[
+    {
+        "GrammarName": "Cấu trúc ～場合は (Trong trường hợp...)",
+        "Structure": "Thể thông thường (A-na + な / N + の) + 場合は",
+        "Meaning": "Dùng để giả định về một tình huống có thể xảy ra trong tương lai hoặc một điều kiện cụ thể. 'Trong trường hợp...'. Thường được dùng nhiều trong các bản hướng dẫn, nội quy hoặc khi nói về cách xử lý các sự cố, tình huống khẩn cấp.",
+        "Example": "<ruby>火事<rt>かじ</rt></ruby>の <ruby>場合<rt>ばあい</rt></ruby>は、すぐに <ruby>非常<rt>ひじょう</rt></ruby>ボタンを <ruby>押<rt>お</rt></ruby>して ください。\n(Trong trường hợp hỏa hoạn, hãy nhấn nút khẩn cấp ngay lập tức.)",
+        "LessonId": 95
+    },
+    {
+        "GrammarName": "Cấu trúc ～のに (Mặc dù... vậy mà...)",
+        "Structure": "Thể thông thường (A-na + な / N + な) + のに",
+        "Meaning": "Dùng để nối hai vế câu có ý nghĩa tương phản. Khác với 「が」 hay 「けれど」, 「のに」 mang sắc thái biểu cảm mạnh mẽ, thể hiện sự bất ngờ, thất vọng, tiếc nuối hoặc trách móc của người nói khi kết quả xảy ra trái ngược với dự tính.",
+        "Example": "<ruby>一生懸命<rt>いっしょうけんめい</rt></ruby> <ruby>勉強<rt>べんきょう</rt></ruby>したのに、<ruby>試験<rt>しけん</rt></ruby>に <ruby>落<rt>お</rt></ruby>ちて しまいました。\n(Mặc dù đã học hành rất chăm chỉ vậy mà tôi lại bị trượt kỳ thi mất rồi.)",
+        "LessonId": 95
+    },
+    {
+        "GrammarName": "Phân biệt ～のに và ～が/～けれど",
+        "Structure": "So sánh cách dùng",
+        "Meaning": "「が」 và 「けれど」 dùng để nối hai vế đối lập một cách khách quan. Trong khi đó, 「のに」 luôn chứa đựng cảm xúc của người nói (thường là tiêu cực hoặc ngạc nhiên). Lưu ý: Vế sau của 「のに」 không được là câu mệnh lệnh, yêu cầu hay xin phép.",
+        "Example": "<ruby>今日<rt>きょう</rt></ruby>は <ruby>日曜日<rt>にちようび</rt></ruby>なのに、<ruby>働<rt>はたら</rt></ruby>かなければ なりません。\n(Mặc dù hôm nay là Chủ Nhật vậy mà tôi vẫn phải làm việc.)",
+        "LessonId": 95
+    }
+]

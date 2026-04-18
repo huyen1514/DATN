@@ -1,0 +1,51 @@
+[
+    {
+        "GrammarName": "Cấu trúc いただきます (Nhận từ người trên)",
+        "Structure": "N を いただきます",
+        "Meaning": "Đây là khiêm nhường ngữ của 「もらいます」. Dùng khi người nói nhận vật gì đó từ người có địa vị cao hơn, người lớn tuổi hơn (như cấp trên, thầy cô). Trợ từ đi kèm người cho là 「に」.",
+        "Example": "<ruby>私<rt>わたし</rt></ruby>は <ruby>部長<rt>ぶちょう</rt></ruby>に お<ruby>土産<rt>みやげ</rt></ruby>を いただきました。\n(Tôi đã nhận được quà từ trưởng phòng.)",
+        "LessonId": 91
+    },
+    {
+        "GrammarName": "Cấu trúc くださいます (Người trên cho mình)",
+        "Structure": "N を くださいます",
+        "Meaning": "Đây là tôn kính ngữ của 「くれます」. Dùng khi người có địa vị cao hơn tặng hoặc cho người nói (hoặc người thân của người nói) vật gì đó. Chủ ngữ thường đi với trợ từ 「が」.",
+        "Example": "<ruby>社長<rt>しゃちょう</rt></ruby>が <ruby>私<rt>わたし</rt></ruby>に <ruby>時計<rt>とけい</rt></ruby>を くださいました。\n(Giám đốc đã tặng đồng hồ cho tôi.)",
+        "LessonId": 91
+    },
+    {
+        "GrammarName": "Cấu trúc やります (Cho người dưới/động thực vật)",
+        "Structure": "N を やります",
+        "Meaning": "Dùng thay cho 「あげます」 khi đối tượng nhận là người có địa vị thấp hơn (con cái, em út), động vật hoặc thực vật. Lưu ý: Hiện nay đối với người dưới, người Nhật cũng hay dùng 「あげます」 để nghe lịch sự hơn.",
+        "Example": "<ruby>息子<rt>むすこ</rt></ruby>に おもちゃを やりました。\n(Tôi đã cho con trai đồ chơi.)",
+        "LessonId": 91
+    },
+    {
+        "GrammarName": "Cấu trúc ～て いただきます (Nhận hành động từ người trên)",
+        "Structure": "V-te + いただきます",
+        "Meaning": "Biểu thị lòng biết ơn khi được người trên làm giúp việc gì đó. Ý nghĩa tương tự 「～て もらいます」 nhưng lịch sự và khiêm nhường hơn.",
+        "Example": "<ruby>先生<rt>せんせい</rt></ruby>に <ruby>日本語<rt>にほんご</rt></ruby>を <ruby>教<rt>おし</rt></ruby>えて いただきました。\n(Tôi đã được thầy giáo dạy tiếng Nhật cho.)",
+        "LessonId": 91
+    },
+    {
+        "GrammarName": "Cấu trúc ～て くださいました (Người trên làm giúp mình)",
+        "Structure": "V-te + くださいました",
+        "Meaning": "Biểu thị sự kính trọng khi người trên chủ động làm giúp mình một việc gì đó. Ý nghĩa tương tự 「～て くれます」 nhưng tôn kính hơn.",
+        "Example": "<ruby>課長<rt>かちょう</rt></ruby>が <ruby>駅<rt>えき</rt></ruby>まで <ruby>送<rt>おく</rt></ruby>って くださいました。\n(Trưởng nhóm đã tiễn tôi ra tận ga.)",
+        "LessonId": 91
+    },
+    {
+        "GrammarName": "Cấu trúc ～て やります (Làm giúp người dưới/động vật)",
+        "Structure": "V-te + やります",
+        "Meaning": "Diễn tả việc làm một hành động có lợi cho người dưới, động vật hoặc thực vật.",
+        "Example": "<ruby>娘<rt>むすめ</rt></ruby>に <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>んで やりました。\n(Tôi đã đọc sách cho con gái nghe.)",
+        "LessonId": 91
+    },
+    {
+        "GrammarName": "Cấu trúc ～て くださいませんか (Yêu cầu lịch sự)",
+        "Structure": "V-te + くださいませんか",
+        "Meaning": "Đây là mẫu câu yêu cầu, nhờ vả với mức độ lịch sự cao hơn cả 「～て ください」. Nó mang ý nghĩa 'Anh/chị làm ơn giúp tôi... có được không?'.",
+        "Example": "<ruby>漢字<rt>かんじ</rt></ruby>の <ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>を <ruby>教<rt>おし</rt></ruby>えて くださいませんか。\n(Anh/chị có thể làm ơn dạy tôi cách đọc chữ Hán này được không?)",
+        "LessonId": 91
+    }
+]

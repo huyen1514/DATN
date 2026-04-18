@@ -1,0 +1,170 @@
+[
+    {
+        "Word": "磨きます",
+        "Reading": "みがきます",
+        "Meaning": "mài, đánh [răng]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 60,
+        "Example": "<ruby>ご飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べた あとで、<ruby>歯<rt>は</rt></ruby>を <ruby>磨<rt>みが</rt></ruby>きます。\n(Sau khi ăn cơm xong, tôi đánh răng.)"
+    },
+    {
+        "Word": "組み立てます",
+        "Reading": "くみたてます",
+        "Meaning": "lắp, lắp ráp, lắp đặt",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 60,
+        "Example": "<ruby>説明書<rt>せつめいしょ</rt></ruby>の とおりに、<ruby>組<rt>く</rt></ruby>み<ruby>立<rt>た</rt></ruby>ててください。\n(Hãy lắp ráp theo đúng như sách hướng dẫn.)"
+    },
+    {
+        "Word": "折ります",
+        "Reading": "おります",
+        "Meaning": "gấp, gập, bẻ gãy",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 60,
+        "Example": "<ruby>紙<rt>かみ</rt></ruby>を <ruby>折<rt>お</rt></ruby>ってください。\n(Hãy gấp tờ giấy.)"
+    },
+    {
+        "Word": "気がつきます",
+        "Reading": "きがつきます",
+        "Meaning": "nhận thấy, phát hiện [đồ bỏ quên]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 60,
+        "Example": "<ruby>忘<rt>わす</rt></ruby>れ<ruby>物<rt>もの</rt></ruby>に <ruby>気<rt>き</rt></ruby>が つきました。\n(Tôi đã nhận ra mình để quên đồ.)"
+    },
+    {
+        "Word": "つけます",
+        "Reading": "つけます",
+        "Meaning": "chấm [xì-dầu]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 60,
+        "Example": "<ruby>醬油<rt>しょうゆ</rt></ruby>を つけて <ruby>食<rt>た</rt></ruby>べます。\n(Chấm xì dầu rồi ăn.)"
+    },
+    {
+        "Word": "見つかります",
+        "Reading": "みつかります",
+        "Meaning": "được tìm thấy [chìa khóa]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 60,
+        "Example": "<ruby>鍵<rt>かぎ</rt></ruby>が <ruby>見<rt>み</rt></ruby>つかりました。\n(Chìa khóa đã được tìm thấy.)"
+    },
+    {
+        "Word": "します",
+        "Reading": "します",
+        "Meaning": "đeo, thắt [cà-vạt]",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 60,
+        "Example": "<ruby>白<rt>しろ</rt></ruby>い <ruby>ネクタイ<rt></rt></ruby>を して います。\n(Đang thắt cà vạt trắng.)"
+    },
+    {
+        "Word": "質問します",
+        "Reading": "しつもんします",
+        "Meaning": "hỏi",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 60,
+        "Example": "<ruby>先生<rt>せんせい</rt></ruby>に <ruby>質問<rt>しつもん</rt></ruby>します。\n(Hỏi thầy giáo.)"
+    },
+    {
+        "Word": "細い",
+        "Reading": "ほそい",
+        "Meaning": "gầy, hẹp, thon",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 60,
+        "Example": "<ruby>細<rt>ほそ</rt></ruby>い <ruby>道<rt>みち</rt></ruby>ですね。\n(Con đường hẹp nhỉ.)"
+    },
+    {
+        "Word": "太い",
+        "Reading": "ふとい",
+        "Meaning": "béo, to",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 60,
+        "Example": "<ruby>太<rt>ふと</rt></ruby>い <ruby>線<rt>せん</rt></ruby>を <ruby>引<rt>ひ</rt></ruby>いて ください。\n(Hãy kẻ một đường đậm.)"
+    },
+    {
+        "Word": "說明書",
+        "Reading": "せつめいしょ",
+        "Meaning": "quyển hướng dẫn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 60,
+        "Example": "<ruby>説明書<rt>せつめいしょ</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます。\n(Đọc sách hướng dẫn.)"
+    },
+    {
+        "Word": "図",
+        "Reading": "ず",
+        "Meaning": "sơ đồ, hình vẽ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 60,
+        "Example": "<ruby>図<rt>ず</rt></ruby>を <ruby>見<rt>み</rt></ruby>て ください。\n(Hãy nhìn vào sơ đồ.)"
+    },
+    {
+        "Word": "矢印",
+        "Reading": "やじるし",
+        "Meaning": "dấu mũi tên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 60,
+        "Example": "<ruby>矢印<rt>やじるし</rt></ruby>の とおりに <ruby>行<rt>い</rt></ruby>ってください。\n(Hãy đi theo hướng mũi tên.)"
+    },
+    {
+        "Word": "紺",
+        "Reading": "こん",
+        "Meaning": "màu xanh lam (navy)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 60,
+        "Example": "<ruby>紺<rt>こん</rt></ruby>の <ruby>背広<rt>せびろ</rt></ruby>を <ruby>着<rt>き</rt></ruby>ています。\n(Tôi đang mặc bộ com-lê màu xanh lam.)"
+    },
+    {
+        "Word": "黄色",
+        "Reading": "きいろ",
+        "Meaning": "màu vàng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 60,
+        "Example": "<ruby>黄色<rt>きいろ</rt></ruby>い <ruby>花<rt>はな</rt></ruby>が <ruby>咲<rt>さ</rt></ruby>いています。\n(Hoa màu vàng đang nở.)"
+    },
+    {
+        "Word": "ゆうべ",
+        "Reading": "ゆうべ",
+        "Meaning": "tối qua, đêm qua",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 60,
+        "Example": "ゆうべ <ruby>面白<rt>おもしろ</rt></ruby>い <ruby>夢<rt>ゆめ</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。\n(Tối qua tôi đã thấy một giấc mơ thú vị.)"
+    },
+    {
+        "Word": "さっき",
+        "Reading": "さっき",
+        "Meaning": "vừa rồi, vừa lúc nãy",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 60,
+        "Example": "さっき <ruby>話<rt>はな</rt></ruby>した とおりに、<ruby>書<rt>か</rt></ruby>いて ください。\n(Hãy viết theo đúng như tôi vừa nói.)"
+    },
+    {
+        "Word": "先に",
+        "Reading": "さきに",
+        "Meaning": "trước",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 60,
+        "Example": "<ruby>先<rt>さき</rt></ruby>に <ruby>菓子<rt>かし</rt></ruby>を <ruby>食<rt>た</rt></ruby>べて ください。\n(Hãy ăn bánh kẹo trước đi.)"
+    },
+    {
+        "Word": "載せます",
+        "Reading": "のせます",
+        "Meaning": "để lên, đặt lên",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 60,
+        "Example": "<ruby>荷物<rt>にもつ</rt></ruby>を <ruby>棚<rt>たな</rt></ruby>に <ruby>載<rt>の</rt></ruby>せます。\n(Đặt đồ đạc lên giá.)"
+    },
+    {
+        "Word": "苦い",
+        "Reading": "にがい",
+        "Meaning": "đắng",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 60,
+        "Example": "この <ruby>薬<rt>くすり</rt></ruby>は <ruby>苦<rt>にが</rt></ruby>いです。\n(Thuốc này đắng.)"
+    },
+    {
+        "Word": "材料",
+        "Reading": "ざいりょう",
+        "Meaning": "nguyên liệu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 60,
+        "Example": "<ruby>料理<rt>りょうり</rt></ruby>の <ruby>材料<rt>ざいりょう</rt></ruby>を <ruby>買<rt>か</rt></ruby>いに <ruby>行<rt>い</rt></ruby>きます。\n(Đi mua nguyên liệu nấu ăn.)"
+    }
+]

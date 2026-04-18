@@ -1,0 +1,282 @@
+[
+    {
+        "Word": "始まります",
+        "Reading": "はじまります",
+        "Meaning": "bắt đầu [buổi lễ ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 57,
+        "Example": "<ruby>式<rt>しき</rt></ruby>が <ruby>始<rt>はじ</rt></ruby>まります。\n(Buổi lễ bắt đầu.)"
+    },
+    {
+        "Word": "続けます",
+        "Reading": "つづけます",
+        "Meaning": "tiếp tục",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 57,
+        "Example": "<ruby>柔道<rt>じゅうどう</rt></ruby>を <ruby>続<rt>つづ</rt></ruby>けます。\n(Tiếp tục tập Judo.)"
+    },
+    {
+        "Word": "見つけます",
+        "Reading": "みつけます",
+        "Meaning": "tìm, tìm thấy",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 57,
+        "Example": "いい <ruby>仕事<rt>しごと</rt></ruby>を <ruby>見<rt>み</rt></ruby>つけました。\n(Tôi đã tìm thấy một công việc tốt.)"
+    },
+    {
+        "Word": "受けます",
+        "Reading": "うけます",
+        "Meaning": "thi [kỳ thi]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 57,
+        "Example": "<ruby>試験<rt>しけん</rt></ruby>を <ruby>受<rt>う</rt></ruby>けます。\n(Dự thi.)"
+    },
+    {
+        "Word": "入学します",
+        "Reading": "にゅう学します",
+        "Meaning": "nhập học, vào [(trường) đại học]",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 57,
+        "Example": "<ruby>大学<rt>だいがく</rt></ruby>に <ruby>入学<rt>にゅうがく</rt></ruby>します。\n(Nhập học đại học.)"
+    },
+    {
+        "Word": "卒業します",
+        "Reading": "そつぎょうします",
+        "Meaning": "tốt nghiệp [(trường) đại học]",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 57,
+        "Example": "<ruby>大学<rt>だいがく</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>しました。\n(Đã tốt nghiệp đại học.)"
+    },
+    {
+        "Word": "出席します",
+        "Reading": "しゅっせきします",
+        "Meaning": "tham dự, tham gia [cuộc họp]",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 57,
+        "Example": "<ruby>会議<rt>かいぎ</rt></ruby>に <ruby>出席<rt>しゅっせき</rt></ruby>します。\n(Tham dự cuộc họp.)"
+    },
+    {
+        "Word": "休憩します",
+        "Reading": "きゅうけいします",
+        "Meaning": "nghỉ, giải lao",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 57,
+        "Example": "ちょっと <ruby>休憩<rt>きゅうけい</rt></ruby>しましょう。\n(Chúng ta cùng nghỉ một chút nhé.)"
+    },
+    {
+        "Word": "連休",
+        "Reading": "れんきゅう",
+        "Meaning": "ngày nghỉ liền nhau",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>連休<rt>れんきゅう</rt></ruby>に <ruby>何<rt>なに</rt></ruby>を しますか。\n(Bạn làm gì vào kỳ nghỉ dài?)"
+    },
+    {
+        "Word": "作文",
+        "Reading": "さくぶん",
+        "Meaning": "bài văn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>日本語<rt>にほんご</rt></ruby>で <ruby>作文<rt>さくぶん</rt></ruby>を <ruby>書<rt>か</rt></ruby>きます。\n(Viết bài văn bằng tiếng Nhật.)"
+    },
+    {
+        "Word": "展覧会",
+        "Reading": "てんらんかい",
+        "Meaning": "triển lãm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>展覧会<rt>てんらんかい</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。\n(Đi xem triển lãm.)"
+    },
+    {
+        "Word": "結婚式",
+        "Reading": "けっこんしき",
+        "Meaning": "lễ cưới, đám cưới",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>友達<rt>ともだち</rt></ruby>の <ruby>結婚式<rt>けっこんしき</rt></ruby>に <ruby>出席<rt>しゅっせき</rt></ruby>します。\n(Dự lễ cưới của bạn.)"
+    },
+    {
+        "Word": "葬式",
+        "Reading": "そうしき",
+        "Meaning": "lễ tang, đám tang",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "お<ruby>葬式<rt>そうしき</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。\n(Đi dự đám tang.)"
+    },
+    {
+        "Word": "式",
+        "Reading": "しき",
+        "Meaning": "lễ, đám",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>卒業式<rt>そつぎょうしき</rt></ruby>は いつですか。\n(Lễ tốt nghiệp là khi nào?)"
+    },
+    {
+        "Word": "本社",
+        "Reading": "ほんしゃ",
+        "Meaning": "trụ sở chính",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>本社<rt>ほんしゃ</rt></ruby>に <ruby>転勤<rt>てんきん</rt></ruby>します。\n(Chuyển công tác đến trụ sở chính.)"
+    },
+    {
+        "Word": "支店",
+        "Reading": "してん",
+        "Meaning": "chi nhánh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>大阪支店<rt>おおさかしてん</rt></ruby>で <ruby>働<rt>はたら</rt></ruby>いています。\n(Đang làm việc tại chi nhánh Osaka.)"
+    },
+    {
+        "Word": "教会",
+        "Reading": "きょうかい",
+        "Meaning": "nhà thờ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>日曜日<rt>にちようび</rt></ruby>に <ruby>教会<rt>きょうかい</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。\n(Đi nhà thờ vào chủ nhật.)"
+    },
+    {
+        "Word": "大学院",
+        "Reading": "だいがくいん",
+        "Meaning": "cao học",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>大学院<rt>だいがくいん</rt></ruby>を <ruby>受<rt>う</rt></ruby>けます。\n(Thi vào cao học.)"
+    },
+    {
+        "Word": "動物園",
+        "Reading": "どうぶつえん",
+        "Meaning": "vườn thú, vườn bách thú",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>動物園<rt>どうぶつえん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きました。\n(Đã đi vườn bách thú.)"
+    },
+    {
+        "Word": "温泉",
+        "Reading": "おんせん",
+        "Meaning": "suối nước nóng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>温泉<rt>おんせん</rt></ruby>に <ruby>入<rt>はい</rt></ruby>りたいです。\n(Tôi muốn tắm suối nước nóng.)"
+    },
+    {
+        "Word": "お客さん",
+        "Reading": "おきゃくさん",
+        "Meaning": "khách hàng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "お<ruby>客<rt>きゃく</rt></ruby>さんが <ruby>来<rt>く</rt></ruby>ます。\n(Khách đến.)"
+    },
+    {
+        "Word": "誰か",
+        "Reading": "だれか",
+        "Meaning": "ai đó",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>誰<rt>だれ</rt></ruby>か <ruby>来<rt>き</rt></ruby>ました。\n(Có ai đó đã đến.)"
+    },
+    {
+        "Word": "ずっと",
+        "Reading": "ずっと",
+        "Meaning": "suốt, liền",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 57,
+        "Example": "<ruby>昨日<rt>きのう</rt></ruby>は ずっと <ruby>寝<rt>ね</rt></ruby>ていました。\n(Hôm qua tôi đã ngủ suốt.)"
+    },
+    {
+        "Word": "残ります",
+        "Reading": "のこります",
+        "Meaning": "ở lại",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 57,
+        "Example": "<ruby>東京<rt>とうきょう</rt></ruby>に <ruby>残<rt>のこ</rt></ruby>ります。\n(Ở lại Tokyo.)"
+    },
+    {
+        "Word": "インターネット",
+        "Reading": "インターネット",
+        "Meaning": "Internet",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>インターネット<rt></rt></ruby>を <ruby>使<rt>つか</rt></ruby>います。\n(Sử dụng Internet.)"
+    },
+    {
+        "Word": "村",
+        "Reading": "むら",
+        "Meaning": "làng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>小<rt>ちい</rt></ruby>さな <ruby>村<rt>むら</rt></ruby>。\n(Ngôi làng nhỏ.)"
+    },
+    {
+        "Word": "嫌",
+        "Reading": "いや",
+        "Meaning": "chán, ghét, không chấp nhận được",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 57,
+        "Example": "<ruby>嫌<rt>いや</rt></ruby>な <ruby>仕事<rt>しごと</rt></ruby>。\n(Công việc đáng ghét.)"
+    },
+    {
+        "Word": "空",
+        "Reading": "そら",
+        "Meaning": "bầu trời",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>空<rt>そら</rt></ruby>が <ruby>青<rt>あお</rt></ruby>いです。\n(Bầu trời xanh.)"
+    },
+    {
+        "Word": "閉じます",
+        "Reading": "とじます",
+        "Meaning": "đóng, nhắm",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 57,
+        "Example": "<ruby>目<rt>め</rt></ruby>を <ruby>閉<rt>と</rt></ruby>じます。\n(Nhắm mắt.)"
+    },
+    {
+        "Word": "都会",
+        "Reading": "とかい",
+        "Meaning": "thành phố, nơi đô hội",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>都会<rt>とかい</rt></ruby>の <ruby>生活<rt>せいかつ</rt></ruby>。\n(Cuộc sống ở thành thị.)"
+    },
+    {
+        "Word": "世界中",
+        "Reading": "せかいじゅう",
+        "Meaning": "khắp thế giới",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>世界中<rt>せかいじゅう</rt></ruby>を <ruby>旅行<rt>りょこう</rt></ruby>したいです。\n(Tôi muốn đi du lịch khắp thế giới.)"
+    },
+    {
+        "Word": "集まります",
+        "Reading": "あつまります",
+        "Meaning": "tập trung",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 57,
+        "Example": "<ruby>人<rt>ひと</rt></ruby>が <ruby>集<rt>あつ</rt></ruby>まりました。\n(Mọi người đã tập trung lại.)"
+    },
+    {
+        "Word": "美しい",
+        "Reading": "うつくしい",
+        "Meaning": "đẹp",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 57,
+        "Example": "<ruby>美<rt>うつく</rt></ruby>しい <ruby>自然<rt>しぜん</rt></ruby>。\n(Thiên nhiên tươi đẹp.)"
+    },
+    {
+        "Word": "自然",
+        "Reading": "しぜん",
+        "Meaning": "tự nhiên, thiên nhiên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 57,
+        "Example": "<ruby>自然<rt>しぜん</rt></ruby>を <ruby>守<rt>まも</rt></ruby>ります。\n(Bảo vệ thiên nhiên.)"
+    },
+    {
+        "Word": "気がつきます",
+        "Reading": "きがつきます",
+        "Meaning": "để ý, nhận ra",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 57,
+        "Example": "<ruby>忘<rt>わす</rt></ruby>れ<ruby>物<rt>もの</rt></ruby>に <ruby>気<rt>き</rt></ruby>が つきました。\n(Đã nhận ra đồ bỏ quên.)"
+    }
+]

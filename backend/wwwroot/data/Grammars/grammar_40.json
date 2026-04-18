@@ -1,0 +1,30 @@
+[
+    {
+        "GrammarName": "Câu nghi vấn có từ nghi vấn (～か)",
+        "Structure": "[Thể thông thường] + か, [Mệnh đề chính] (Lưu ý: A-na và N bỏ だ)",
+        "Meaning": "Dùng để lồng một câu hỏi có chứa từ nghi vấn (ai, cái gì, ở đâu...) vào trong một câu văn lớn. Thường đi kèm với các động từ như 'biết', 'quên', 'hỏi', 'tìm hiểu'...",
+        "Example": "<ruby>結婚<rt>けっこん</rt></ruby>お<ruby>祝<rt>いわ</rt></ruby>いは <ruby>何<rt>なに</rt></ruby>が <ruby>良<rt>い</rt></ruby>いか、<ruby>考<rt>かんが</rt></ruby>えて います。\n(Tôi đang suy nghĩ xem quà mừng đám cưới thì cái gì tốt.)",
+        "LessonId": 90
+    },
+    {
+        "GrammarName": "Câu nghi vấn không có từ nghi vấn (～かどうか)",
+        "Structure": "[Thể thông thường] + かどうか, [Mệnh đề chính] (Lưu ý: A-na và N bỏ だ)",
+        "Meaning": "Dùng khi bạn muốn lồng một câu hỏi dạng Có/Không (Yes/No) vào trong câu văn. Có nghĩa là '...có hay không'.",
+        "Example": "<ruby>間違い<rt>まちがい</rt></ruby>が ないか どうか、<ruby>調<rt>しら</rt></ruby>べて ください。\n(Hãy kiểm tra xem có sai sót gì hay không.)",
+        "LessonId": 90
+    },
+    {
+        "GrammarName": "Cấu trúc ～てみます (Thử làm gì đó)",
+        "Structure": "V-te + みます",
+        "Meaning": "Dùng để diễn tả việc thử thực hiện một hành động nào đó để xem kết quả ra sao hoặc để trải nghiệm. Giống như việc bạn chạy thử một đoạn code mới để debug vậy.",
+        "Example": "もう <ruby>一度<rt>いちど</rt></ruby> <ruby>考<rt>かんが</rt></ruby>えて みます。\n(Tôi sẽ thử suy nghĩ lại một lần nữa.)",
+        "LessonId": 90
+    },
+    {
+        "GrammarName": "Danh từ hóa tính từ đuôi い (～さ)",
+        "Structure": "A-i (bỏ い) + さ",
+        "Meaning": "Biến một tính từ đuôi い thành một danh từ chỉ mức độ hoặc kích thước (độ cao, độ dài, độ nặng...).",
+        "Example": "<ruby>富士山<rt>ふじさん</rt></ruby>の <ruby>高<rt>たか</rt></ruby>さを <ruby>知<rt>し</rt></ruby>って いますか。\n(Bạn có biết độ cao của núi Phú Sĩ không?)",
+        "LessonId": 90
+    }
+]

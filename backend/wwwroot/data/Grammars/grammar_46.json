@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Cấu trúc ～ところです (Sắp sửa/Chuẩn bị làm...)",
+        "Structure": "V-(từ điển) + ところです",
+        "Meaning": "Dùng để diễn tả một hành động sắp sửa xảy ra trong tương lai rất gần. Thường đi kèm với phó từ 「これから」 hoặc 「ちょうど 今から」 để nhấn mạnh sự bắt đầu ngay lập tức.",
+        "Example": "<ruby>今<rt>いま</rt></ruby>から <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>食<rt>た</rt></ruby>べるところです。\n(Bây giờ tôi chuẩn bị ăn cơm trưa.)",
+        "LessonId": 96
+    },
+    {
+        "GrammarName": "Cấu trúc ～ているところです (Đang làm...)",
+        "Structure": "V-te + いるところです",
+        "Meaning": "Dùng để nhấn mạnh rằng một hành động đang thực sự diễn ra tại thời điểm nói. Nó có sắc thái nhấn mạnh vào tiến trình của hành động mạnh hơn so với 「～ています」 đơn thuần.",
+        "Example": "<ruby>今<rt>いま</rt></ruby> <ruby>故障<rt>こしょう</rt></ruby>の <ruby>原因<rt>げんいん</rt></ruby>を <ruby>調<rt>しら</rt></ruby>べて いるところです。\n(Bây giờ tôi đang kiểm tra nguyên nhân của sự cố.)",
+        "LessonId": 96
+    },
+    {
+        "GrammarName": "Cấu trúc ～たところです (Vừa mới làm xong...)",
+        "Structure": "V-ta + ところです",
+        "Meaning": "Dùng để diễn tả một hành động vừa mới kết thúc hoàn toàn tại thời điểm nói. Thường đi kèm với phó từ 「たった今」 để nhấn mạnh sự vừa mới xảy ra trong tích tắc.",
+        "Example": "<ruby>会議<rt>かいぎ</rt></ruby>は たった<ruby>今<rt>いま</rt></ruby> <ruby>終<rt>お</rt></ruby>わったところです。\n(Cuộc họp vừa mới kết thúc xong.)",
+        "LessonId": 96
+    },
+    {
+        "GrammarName": "Cấu trúc ～たばかりです (Vừa mới làm... - Cảm giác)",
+        "Structure": "V-ta + ばかりです",
+        "Meaning": "Diễn tả việc một hành động vừa xảy ra cách đây chưa lâu theo cảm nhận chủ quan của người nói. Khác với 「～たところ」 chỉ thời gian thực tế cực ngắn, 「～たばかり」 có thể dùng cho sự việc đã xảy ra vài ngày, vài tháng nếu người nói cảm thấy nó vẫn còn mới.",
+        "Example": "この <ruby>靴<rt>くつ</rt></ruby>は <ruby>先週<rt>せんしゅう</rt></ruby> <ruby>買<rt>か</rt></ruby>ったばかりです。\n(Đôi giày này tôi vừa mới mua tuần trước - cảm giác vẫn còn mới.)",
+        "LessonId": 96
+    },
+    {
+        "GrammarName": "Cấu trúc ～はずです (Chắc chắn là... / Hiển nhiên là...)",
+        "Structure": "Thể thông thường (A-na + な / N + の) + はずです",
+        "Meaning": "Dùng để diễn tả một phỏng đoán có căn cứ xác thực và người nói tin chắc rằng sự việc đó sẽ xảy ra như vậy theo lẽ thường hoặc theo kế hoạch. Nó mang nghĩa là 'Chắc chắn là...' hoặc 'Theo dự định thì...'.",
+        "Example": "<ruby>田中<rt>たなか</rt></ruby>さんは <ruby>今日<rt>きょう</rt></ruby> <ruby>来<rt>く</rt></ruby>るはずです。\n(Anh Tanaka chắc chắn hôm nay sẽ đến.)",
+        "LessonId": 96
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Tự động từ thể ～ています (Diễn tả trạng thái)",
+        "Structure": "N が V-(Tự động từ) て + います",
+        "Meaning": "Mẫu câu này dùng để diễn tả trạng thái của một sự vật hiện hữu trước mắt người nói. Trạng thái này thường là kết quả của một hành động đã xảy ra trong quá khứ và vẫn còn lưu lại đến hiện tại.",
+        "Example": "<ruby>窓<rt>まど</rt></ruby>が <ruby>開<rt>あ</rt></ruby>いています。\n(Cửa sổ đang mở.)",
+        "LessonId": 80
+    },
+    {
+        "GrammarName": "Đưa danh từ trạng thái lên làm chủ đề (は)",
+        "Structure": "N は V-(Tự động từ) て + います",
+        "Meaning": "Khi muốn đưa vật đang ở trạng thái đó lên làm chủ đề của câu để giải thích hoặc miêu tả kỹ hơn, ta thay trợ từ 「が」 bằng trợ từ 「は」.",
+        "Example": "この <ruby>椅子<rt>いす</rt></ruby>は <ruby>壊<rt>こわ</rt></ruby>れています。\n(Cái ghế này bị hỏng rồi.)",
+        "LessonId": 80
+    },
+    {
+        "GrammarName": "Cấu trúc ～てしまいました (Sự nuối tiếc/Lỡ làm...)",
+        "Structure": "V-te + しまいました",
+        "Meaning": "Dùng để diễn tả tâm trạng hối tiếc, bối rối hoặc thất vọng của người nói khi một sự việc không hay xảy ra ngoài ý muốn.",
+        "Example": "<ruby>電車<rt>でんしゃ</rt></ruby>の <ruby>中<rt>なか</rt></ruby>に <ruby>傘<rt>かさ</rt></ruby>を <ruby>忘<rt>わす</rt></ruby>れて しまいました。\n(Tôi đã để quên ô trên tàu mất rồi.)",
+        "LessonId": 80
+    },
+    {
+        "GrammarName": "Cấu trúc ～てしまいました (Sự hoàn thành)",
+        "Structure": "V-te + しまいました / しまいます",
+        "Meaning": "Diễn tả một hành động đã được thực hiện xong xuôi hoàn toàn hoặc sẽ được hoàn thành dứt điểm trong tương lai.",
+        "Example": "<ruby>漢字<rt>かんじ</rt></ruby>の <ruby>宿題<rt>しゅくだい</rt></ruby>は もう <ruby>やって<rt></rt></ruby> しまいました。\n(Bài tập Kanji tôi đã làm xong hết rồi.)",
+        "LessonId": 80
+    },
+    {
+        "GrammarName": "Cách dùng どこかで / どこかに",
+        "Structure": "どこかで / どこかに / どこかから",
+        "Meaning": "Trong tiếng Nhật, các trợ từ như 「で」、「に」、「から」 có thể được thêm trực tiếp sau 「どこか」 để chỉ một địa điểm không xác định cụ thể (ở đâu đó).",
+        "Example": "<ruby>どこか<rt></rt></ruby>で <ruby>財布<rt>さいふ</rt></ruby>を <ruby>落<rt>お</rt></ruby>として しまいました。\n(Tôi đã đánh rơi ví ở đâu đó mất rồi.)",
+        "LessonId": 80
+    }
+]

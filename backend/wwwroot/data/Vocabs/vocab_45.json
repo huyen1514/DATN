@@ -1,0 +1,202 @@
+[
+    {
+        "Word": "信じます",
+        "Reading": "しんじます",
+        "Meaning": "tin, tin tưởng",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 71,
+        "Example": "<ruby>彼<rt>かれ</rt></ruby>の <ruby>話<rt>はなし</rt></ruby>を <ruby>信<rt>しん</rt></ruby>じて います。\n(Tôi tin vào câu chuyện của anh ấy.)"
+    },
+    {
+        "Word": "キャンセルします",
+        "Reading": "キャンセルします",
+        "Meaning": "hủy, hủy bỏ (cuộc hẹn, đặt chỗ)",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 71,
+        "Example": "<ruby>予約<rt>よやく</rt></ruby>を キャンセルしました。\n(Tôi đã hủy việc đặt chỗ.)"
+    },
+    {
+        "Word": "知らせます",
+        "Reading": "しらせます",
+        "Meaning": "thông báo, báo cho biết",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 71,
+        "Example": "<ruby>会議<rt>かいぎ</rt></ruby>の <ruby>時間<rt>じかん</rt></ruby>を <ruby>知<rt>し</rt></ruby>らせます。\n(Thông báo thời gian họp.)"
+    },
+    {
+        "Word": "保証書",
+        "Reading": "ほしょうしょ",
+        "Meaning": "giấy bảo hành",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "この <ruby>保証書<rt>ほしょうしょ</rt></ruby>を <ruby>大切<rt>たいせつ</rt></ruby>に <ruby>保管<rt>ほかん</rt></ruby>して ください。\n(Hãy bảo quản cẩn thận giấy bảo hành này.)"
+    },
+    {
+        "Word": "領収書",
+        "Reading": "りょうしゅうしょ",
+        "Meaning": "biên lai, hóa đơn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>を もらって ください。\n(Hãy lấy biên lai.)"
+    },
+    {
+        "Word": "キャンプ",
+        "Reading": "キャンプ",
+        "Meaning": "cắm trại",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>夏休み<rt>なつやすみ</rt></ruby>に キャンプに <ruby>行<rt>い</rt></ruby>きます。\n(Đi cắm trại vào kỳ nghỉ hè.)"
+    },
+    {
+        "Word": "中止",
+        "Reading": "ちゅうし",
+        "Meaning": "hủy bỏ, đình chỉ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>雨<rt>あめ</rt></ruby>で <ruby>試合<rt>しあい</rt></ruby>が <ruby>中止<rt>ちゅうし</rt></ruby>に なりました。\n(Trận đấu đã bị hủy vì trời mưa.)"
+    },
+    {
+        "Word": "点",
+        "Reading": "てん",
+        "Meaning": "điểm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>試験<rt>しけん</rt></ruby>の <ruby>点<rt>てん</rt></ruby>が <ruby>悪<rt>わる</rt></ruby>かったです。\n(Điểm thi của tôi đã không tốt.)"
+    },
+    {
+        "Word": "梅",
+        "Reading": "うめ",
+        "Meaning": "hoa mơ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>梅<rt>うめ</rt></ruby>の <ruby>花<rt>はな</rt></ruby>が <ruby>咲<rt>さ</rt></ruby>きました。\n(Hoa mơ đã nở rồi.)"
+    },
+    {
+        "Word": "110番",
+        "Reading": "ひゃくとおばん",
+        "Meaning": "số điện thoại báo cảnh sát khi khẩn cấp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>事件<rt>じけん</rt></ruby>の <ruby>時<rt>とき</rt></ruby>は 110<ruby>番<rt>ばん</rt></ruby>を かけます。\n(Khi có sự việc/vụ án thì gọi số 110.)"
+    },
+    {
+        "Word": "119番",
+        "Reading": "ひゃくじゅうきゅうばん",
+        "Meaning": "số điện thoại báo cháy/cấp cứu khẩn cấp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>火事<rt>かじ</rt></ruby>の <ruby>時<rt>とき</rt></ruby>は 119<ruby>番<rt>ばん</rt></ruby>を かけます。\n(Khi có hỏa hoạn thì gọi số 119.)"
+    },
+    {
+        "Word": "急に",
+        "Reading": "きゅうに",
+        "Meaning": "đột nhiên, gấp",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 71,
+        "Example": "<ruby>急<rt>きゅう</rt></ruby>に <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>り<ruby>出<rt>だ</rt></ruby>しました。\n(Trời đột nhiên đổ mưa.)"
+    },
+    {
+        "Word": "無理に",
+        "Reading": "むりに",
+        "Meaning": "cố quá, ép buộc",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 71,
+        "Example": "<ruby>無理<rt>むり</rt></ruby>に <ruby>来<rt>こ</rt></ruby>なくても いいですよ。\n(Không cần phải cố ép mình đến đâu.)"
+    },
+    {
+        "Word": "楽しみにしています",
+        "Reading": "たのしみにしています",
+        "Meaning": "đang mong đợi, đang mong chờ",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 71,
+        "Example": "<ruby>来月<rt>らいげつ</rt></ruby> お<ruby>会<rt>あ</rt></ruby>いできるのを <ruby>楽<rt>たの</rt></ruby>しみに して います。\n(Tôi đang rất mong chờ được gặp anh vào tháng sau.)"
+    },
+    {
+        "Word": "以上です",
+        "Reading": "いじょうです",
+        "Meaning": "xin hết, thế là hết",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 71,
+        "Example": "<ruby>発表<rt>はっぴょう</rt></ruby>は <ruby>以上<rt>いじょう</rt></ruby>です。\n(Phần thuyết trình của tôi đến đây là hết.)"
+    },
+    {
+        "Word": "係員",
+        "Reading": "かかりいん",
+        "Meaning": "người phụ trách, nhân viên trực",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>係員<rt>かかりいん</rt></ruby>に <ruby>聞<rt>き</rt></ruby>いて ください。\n(Hãy hỏi nhân viên phụ trách.)"
+    },
+    {
+        "Word": "コース",
+        "Reading": "コース",
+        "Meaning": "khóa học, tuyến đường",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "どの <ruby>コース<rt></rt></ruby>に <ruby>申<rt>もう</rt></ruby>し<ruby>込<rt>こ</rt></ruby>みますか。\n(Bạn sẽ đăng ký khóa học nào?)"
+    },
+    {
+        "Word": "スタート",
+        "Reading": "スタート",
+        "Meaning": "bắt đầu, xuất phát",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>走<rt>はし</rt></ruby>り<ruby>始<rt>はじ</rt></ruby>める <ruby>場所<rt>ばしょ</rt></ruby>は <ruby>スタート<rt></rt></ruby>です。\n(Nơi bắt đầu chạy là điểm xuất phát.)"
+    },
+    {
+        "Word": "〜位",
+        "Reading": "〜い",
+        "Meaning": "thứ ~, vị trí thứ ~",
+        "PartOfSpeech": "Hậu tố",
+        "LessonId": 71,
+        "Example": "マラソンで 1<ruby>位<rt>い</rt></ruby>に なりました。\n(Tôi đã giành vị trí thứ nhất trong cuộc thi marathon.)"
+    },
+    {
+        "Word": "優勝します",
+        "Reading": "ゆうしょうします",
+        "Meaning": "vô địch, thắng cuộc",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 71,
+        "Example": "<ruby>試合<rt>しあい</rt></ruby>で <ruby>優勝<rt>ゆうしょう</rt></ruby>しました。\n(Tôi đã vô địch trong trận đấu.)"
+    },
+    {
+        "Word": "悩み",
+        "Reading": "なやみ",
+        "Meaning": "nỗi khổ, điều lo nghĩ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>悩み<rt>なや</rt></ruby>が ありますか。\n(Anh/chị có điều gì phiền muộn không?)"
+    },
+    {
+        "Word": "目覚まし時計",
+        "Reading": "めざましどけい",
+        "Meaning": "đồng hồ báo thức",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>目覚<rt>めざ</rt></ruby>まし<ruby>時計<rt>どけい</rt></ruby>を セットします。\n(Đặt đồng hồ báo thức.)"
+    },
+    {
+        "Word": "回答",
+        "Reading": "かいとう",
+        "Meaning": "câu trả lời, lời giải",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 71,
+        "Example": "<ruby>質問<rt>しつもん</rt></ruby>に <ruby>回答<rt>かいとう</rt></ruby>します。\n(Trả lời câu hỏi.)"
+    },
+    {
+        "Word": "鳴ります",
+        "Reading": "なります",
+        "Meaning": "reo, kêu",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 71,
+        "Example": "<ruby>電話<rt>でんわ</rt></ruby>が <ruby>鳴<rt>な</rt></ruby>って います。\n(Điện thoại đang reo.)"
+    },
+    {
+        "Word": "セットします",
+        "Reading": "セットします",
+        "Meaning": "đặt, cài đặt",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 71,
+        "Example": "7<ruby>時<rt>じ</rt></ruby>に <ruby>セット<rt></rt></ruby>しました。\n(Tôi đã đặt lúc 7 giờ.)"
+    }
+]

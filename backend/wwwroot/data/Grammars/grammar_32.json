@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Cấu trúc ～ほうが いいです (Nên... / Không nên...)",
+        "Structure": "V-ta / V-nai + ほうが いいです",
+        "Meaning": "Dùng để đưa ra lời khuyên hoặc gợi ý cho người nghe nên thực hiện hoặc không nên thực hiện một hành động nào đó. Cấu trúc này mang sắc thái khuyên bảo mạnh mẽ, vì vậy nên cân nhắc khi dùng với người cấp trên.",
+        "Example": "<ruby>毎日<rt>まいにchich</rt></ruby> <ruby>運動<rt>うんどう</rt></ruby>した ほうが いいです。\n(Anh/chị nên vận động hàng ngày.)",
+        "LessonId": 83
+    },
+    {
+        "GrammarName": "Cấu trúc ～でしょう (Chắc là...)",
+        "Structure": "[Thể thông thường] + でしょう (Lưu ý: A-na và N bỏ だ)",
+        "Meaning": "Dùng để diễn tả sự phỏng đoán của người nói về một sự việc dựa trên một số căn cứ hoặc thông tin nào đó. Thường được dùng nhiều trong các bản tin dự báo thời tiết hoặc nhận định khách quan.",
+        "Example": "<ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>るでしょう。\n(Ngày mai chắc là trời sẽ mưa.)",
+        "LessonId": 83
+    },
+    {
+        "GrammarName": "Cấu trúc ～かもしれません (Có thể là... / Có lẽ...)",
+        "Structure": "[Thể thông thường] + かもしれません (Lưu ý: A-na và N bỏ だ)",
+        "Meaning": "Dùng để diễn tả sự phỏng đoán của người nói nhưng với mức độ chắc chắn thấp hơn so với 「でしょう」. Diễn tả một khả năng có thể xảy ra nhưng người nói không khẳng định.",
+        "Example": "ごごから <ruby>雪<rt>ゆき</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>る かもしれません。\n(Từ chiều có lẽ trời sẽ mưa tuyết.)",
+        "LessonId": 83
+    },
+    {
+        "GrammarName": "Cấu trúc phỏng đoán đi kèm phó từ (きっと / たぶん / もしかしたら)",
+        "Structure": "きっと/たぶん + ～でしょう | もしかしたら + ～かもしれません",
+        "Meaning": "Việc kết hợp các phó từ giúp nhấn mạnh mức độ chắc chắn của lời phỏng đoán. 「きっと」: Chắc chắn (tin tưởng cao). 「たぶん」: Đa phần/Có lẽ. 「もしかしたら」: Biết đâu là/Có khả năng (thấp).",
+        "Example": "もしかしたら <ruby>約束<rt>やくそく</rt></ruby>の <ruby>時間<rt>じかん</rt></ruby>に <ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わない かもしれません。\n(Biết đâu là tôi sẽ không kịp giờ hẹn.)",
+        "LessonId": 83
+    },
+    {
+        "GrammarName": "Cấu trúc định lượng đi kèm で (Trong vòng...)",
+        "Structure": "Số lượng (thời gian/tiền bạc) + で",
+        "Meaning": "Trợ từ 「で」 dùng để biểu thị một hạn mức hoặc giới hạn tối đa về thời gian hoặc tiền bạc để thực hiện một việc gì đó.",
+        "Example": "30<ruby>分<rt>ぷん</rt></ruby>で <ruby>駅<rt>えき</rt></ruby>まで <ruby>行<rt>い</rt></ruby>けるでしょう。\n(Trong vòng 30 phút chắc là có thể đi đến ga.)",
+        "LessonId": 83
+    }
+]

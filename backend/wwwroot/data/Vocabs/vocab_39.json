@@ -1,0 +1,202 @@
+[
+    {
+        "Word": "答えます",
+        "Reading": "こたえます",
+        "Meaning": "trả lời [câu hỏi]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 65,
+        "Example": "<ruby>質問<rt>しつもん</rt></ruby>に <ruby>答<rt>こた</rt></ruby>えます。\n(Trả lời câu hỏi.)"
+    },
+    {
+        "Word": "倒れます",
+        "Reading": "たおれます",
+        "Meaning": "đổ [nhà cao tầng ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 65,
+        "Example": "<ruby>地震<rt>じしん</rt></ruby>で <ruby>ビル<rt></rt></ruby>が <ruby>倒<rt>たお</rt></ruby>れました。\n(Tòa nhà bị đổ do động đất.)"
+    },
+    {
+        "Word": "焼けます",
+        "Reading": "やけます",
+        "Meaning": "cháy [nhà ~], được nướng [thịt ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 65,
+        "Example": "<ruby>家<rt>うち</rt></ruby>が <ruby>焼<rt>や</rt></ruby>けました。\n(Ngôi nhà bị cháy.)"
+    },
+    {
+        "Word": "通ります",
+        "Reading": "とおります",
+        "Meaning": "đi qua [đường]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 65,
+        "Example": "<ruby>道<rt>みち</rt></ruby>を <ruby>通<rt>とお</rt></ruby>ります。\n(Đi qua đường.)"
+    },
+    {
+        "Word": "死にます",
+        "Reading": "しにます",
+        "Meaning": "chết",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 65,
+        "Example": "<ruby>去年<rt>きょねん</rt></ruby> <ruby>祖父<rt>そふ</rt></ruby>が <ruby>死<rt>し</rt></ruby>にました。\n(Ông tôi đã mất vào năm ngoái.)"
+    },
+    {
+        "Word": "びっくりします",
+        "Reading": "びっくりします",
+        "Meaning": "ngạc nhiên, giật mình",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 65,
+        "Example": "<ruby>ニュース<rt></rt></ruby>を <ruby>聞<rt>き</rt></ruby>いて、びっくりしました。\n(Tôi đã ngạc nhiên khi nghe tin.)"
+    },
+    {
+        "Word": "がっかりします",
+        "Reading": "がっかりします",
+        "Meaning": "thất vọng",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 65,
+        "Example": "<ruby>試験<rt>しけん</rt></ruby>に <ruby>落<rt>お</rt></ruby>ちて、がっかりしました。\n(Tôi thất vọng vì thi trượt.)"
+    },
+    {
+        "Word": "安心します",
+        "Reading": "あんしんします",
+        "Meaning": "yên tâm",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 65,
+        "Example": "<ruby>家族<rt>かぞく</rt></ruby>の <ruby>顔<rt>かお</rt></ruby>を <ruby>見<rt>み</rt></ruby>て、<ruby>安心<rt>あんしん</rt></ruby>しました。\n(Nhìn thấy mặt gia đình nên tôi đã yên tâm.)"
+    },
+    {
+        "Word": "遅刻します",
+        "Reading": "ちこくします",
+        "Meaning": "đến chậm, đến muộn",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 65,
+        "Example": "<ruby>授業<rt>じゅぎょう</rt></ruby>に <ruby>遅刻<rt>ちこく</rt></ruby>しました。\n(Tôi đã đến lớp muộn.)"
+    },
+    {
+        "Word": "早退します",
+        "Reading": "そうたいします",
+        "Meaning": "về sớm, ra sớm",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 65,
+        "Example": "<ruby>気分<rt>きぶん</rt></ruby>が <ruby>悪<rt>わる</rt></ruby>いので、<ruby>早退<rt>そうたい</rt></ruby>しました。\n(Vì trong người không khỏe nên tôi đã xin về sớm.)"
+    },
+    {
+        "Word": "複雑[な]",
+        "Reading": "ふくざつ",
+        "Meaning": "phức tạp",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 65,
+        "Example": "<ruby>話<rt>はなし</rt></ruby>が <ruby>複雑<rt>ふくざつ</rt></ruby>で、よく わかりませんでした。\n(Nội dung phức tạp nên tôi không hiểu lắm.)"
+    },
+    {
+        "Word": "邪魔[な]",
+        "Reading": "じゃま",
+        "Meaning": "cản trở, chiếm diện tích",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 65,
+        "Example": "この <ruby>荷物<rt>にもつ</rt></ruby>は <ruby>邪魔<rt>じゃま</rt></ruby>です。\n(Hành lý này gây cản trở.)"
+    },
+    {
+        "Word": "汚い",
+        "Reading": "きたない",
+        "Meaning": "bẩn",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 65,
+        "Example": "<ruby>道<rt>みち</rt></ruby>が <ruby>汚<rt>きたな</rt></ruby>いです。\n(Đường bẩn.)"
+    },
+    {
+        "Word": "うれしい",
+        "Reading": "うれしい",
+        "Meaning": "vui, mừng",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 65,
+        "Example": "<ruby>合格<rt>ごうかく</rt></ruby>して、とても うれしいです。\n(Tôi rất vui vì đã thi đỗ.)"
+    },
+    {
+        "Word": "悲しい",
+        "Reading": "かなしい",
+        "Meaning": "buồn, đau thương",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 65,
+        "Example": "<ruby>犬<rt>いぬ</rt></ruby>が <ruby>死<rt>し</rt></ruby>んで、とても <ruby>悲<rt>かな</rt></ruby>しいです。\n(Tôi rất buồn vì con chó đã chết.)"
+    },
+    {
+        "Word": "恥ずかしい",
+        "Reading": "はずかしい",
+        "Meaning": "xấu hổ, thẹn",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 65,
+        "Example": "<ruby>間違<rt>まちが</rt></ruby>えて、<ruby>恥<rt>はず</rt></ruby>ずかしかったです。\n(Vì nhầm nên tôi đã thấy xấu hổ.)"
+    },
+    {
+        "Word": "地震",
+        "Reading": "じしん",
+        "Meaning": "động đất",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 65,
+        "Example": "<ruby>昨日<rt>きのう</rt></ruby> <ruby>大<rt>おお</rt></ruby>きい <ruby>地震<rt>じしん</rt></ruby>が ありました。\n(Hôm qua đã có một trận động đất lớn.)"
+    },
+    {
+        "Word": "台風",
+        "Reading": "たいふう",
+        "Meaning": "bão",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 65,
+        "Example": "<ruby>台風<rt>たいふう</rt></ruby>で <ruby>木<rt>き</rt></ruby>が <ruby>倒<rt>たお</rt></ruby>れました。\n(Cây bị đổ do bão.)"
+    },
+    {
+        "Word": "火事",
+        "Reading": "かじ",
+        "Meaning": "hỏa hoạn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 65,
+        "Example": "<ruby>火事<rt>かじ</rt></ruby>に <ruby>注意<rt>ちゅうい</rt></ruby>して ください。\n(Hãy chú ý hỏa hoạn.)"
+    },
+    {
+        "Word": "事故",
+        "Reading": "じこ",
+        "Meaning": "tai nạn, sự cố",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 65,
+        "Example": "<ruby>交通事故<rt>こうつうじこ</rt></ruby>に <ruby>遭<rt>あ</rt></ruby>いました。\n(Tôi đã gặp tai nạn giao thông.)"
+    },
+    {
+        "Word": "電話代",
+        "Reading": "でんわだい",
+        "Meaning": "tiền điện thoại, phí điện thoại",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 65,
+        "Example": "<ruby>電話代<rt>でんわだい</rt></ruby>が <ruby>高<rt>たか</rt></ruby>いです。\n(Tiền điện thoại đắt.)"
+    },
+    {
+        "Word": "途中で",
+        "Reading": "とちゅうで",
+        "Meaning": "giữa đường, giữa chừng",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 65,
+        "Example": "<ruby>来<rt>く</rt></ruby>る <ruby>途中<rt>とちゅう</rt></ruby>で <ruby>事故<rt>じこ</rt></ruby>が ありました。\n(Đã có tai nạn trên đường đến đây.)"
+    },
+    {
+        "Word": "並びます",
+        "Reading": "ならびます",
+        "Meaning": "xếp hàng",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 65,
+        "Example": "<ruby>大勢<rt>おおぜい</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>並<rt>なら</rt></ruby>んでいます。\n(Nhiều người đang xếp hàng.)"
+    },
+    {
+        "Word": "洋服",
+        "Reading": "ようふく",
+        "Meaning": "quần áo kiểu Tây Âu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 65,
+        "Example": "きれいな <ruby>洋服<rt>ようふく</rt></ruby>を <ruby>買<rt>か</rt></ruby>いたいです。\n(Tôi muốn mua quần áo kiểu Tây đẹp.)"
+    },
+    {
+        "Word": "成人式",
+        "Reading": "せいじんしき",
+        "Meaning": "Lễ trưởng thành",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 65,
+        "Example": "1<ruby>月<rt>がつ</rt></ruby>に <ruby>成人式<rt>せいじんしき</rt></ruby>が あります。\n(Tháng 1 có Lễ trưởng thành.)"
+    }
+]

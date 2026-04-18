@@ -1,0 +1,30 @@
+[
+    {
+        "GrammarName": "Cấu trúc ～ように (Mục đích)",
+        "Structure": "V1 (Thể từ điển / Thể ない) + ように, V2",
+        "Meaning": "Dùng để diễn tả mục đích: 'Để cho V1 xảy ra/không xảy ra thì làm V2'. Vế V1 thường là các động từ không mang tính ý chí (như động từ khả năng, tự động từ hoặc thể phủ định). Khác với 「～ために」 dùng cho động từ ý chí.",
+        "Example": "<ruby>忘<rt>わす</rt></ruby>れない ように、メモして おきます。\n(Tôi ghi chú lại để không bị quên.)",
+        "LessonId": 87
+    },
+    {
+        "GrammarName": "Cấu trúc ～ように なりました (Sự thay đổi trạng thái)",
+        "Structure": "V (Thể từ điển) + ように なりました",
+        "Meaning": "Diễn tả một sự thay đổi về khả năng hoặc thói quen, từ trạng thái không thể sang có thể, hoặc chưa làm sang thường xuyên làm một việc gì đó. Thường dùng với động từ khả năng.",
+        "Example": "<ruby>日本語<rt>にほんご</rt></ruby>が <ruby>話<rt>はな</rt></ruby>せる ように なりました。\n(Tôi đã có thể nói được tiếng Nhật.)",
+        "LessonId": 87
+    },
+    {
+        "GrammarName": "Cấu trúc ～ように して います (Nỗ lực tạo thói quen)",
+        "Structure": "V (Thể từ điển / Thể ない) + ように して います",
+        "Meaning": "Dùng để diễn tả việc chủ thể đang cố gắng, nỗ lực thực hiện một hành động nào đó một cách đều đặn để tạo thành thói quen hoặc để đạt được mục tiêu.",
+        "Example": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>運動<rt>うんどう</rt></ruby>する ように して います。\n(Tôi đang cố gắng vận động hàng ngày.)",
+        "LessonId": 87
+    },
+    {
+        "GrammarName": "Cấu trúc ～ように して ください (Yêu cầu gián tiếp)",
+        "Structure": "V (Thể từ điển / Thể ない) + ように して ください",
+        "Meaning": "Dùng để yêu cầu, nhắc nhở ai đó nỗ lực thực hiện (hoặc không thực hiện) một việc gì đó. Mẫu câu này mang tính chất khuyên bảo nhẹ nhàng và lịch sự hơn so với mệnh lệnh trực tiếp.",
+        "Example": "もっと <ruby>野菜<rt>やさい</rt></ruby>を <ruby>食<rt>た</rt></ruby>べる ように して ください。\n(Hãy cố gắng ăn nhiều rau hơn nhé.)",
+        "LessonId": 87
+    }
+]

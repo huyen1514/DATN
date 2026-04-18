@@ -1,0 +1,226 @@
+[
+    {
+        "Word": "参ります",
+        "Reading": "まいります",
+        "Meaning": "đi, đến (khiêm nhường ngữ của いきます và きます)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "<ruby>明日<rt>あした</rt></ruby> <ruby>伺<rt>うかが</rt></ruby>います。\n(Ngày mai tôi sẽ đến thăm ạ.)"
+    },
+    {
+        "Word": "おります",
+        "Reading": "おります",
+        "Meaning": "ở, có (khiêm nhường ngữ của います)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "はい、<ruby>父<rt>ちち</rt></ruby>は <ruby>奥<rt>おく</rt></ruby>におります。\n(Vâng, bố tôi đang ở bên trong ạ.)"
+    },
+    {
+        "Word": "いただきます",
+        "Reading": "いただきます",
+        "Meaning": "ăn, uống, nhận (khiêm nhường ngữ của たべます, のみます và もらいます)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "どうぞ、ごえんりょなく <ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がってください。\n(Xin mời anh/chị dùng bữa, đừng ngại ạ.)"
+    },
+    {
+        "Word": "申します",
+        "Reading": "もうします",
+        "Meaning": "nói, tên là ~ (khiêm nhường ngữ của いいます)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "わたしは ミラーと <ruby>申<rt>もう</rt></ruby>します。\n(Tôi tên là Miller ạ.)"
+    },
+    {
+        "Word": "いたします",
+        "Reading": "いたします",
+        "Meaning": "làm (khiêm nhường ngữ của します)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "どうぞ、よろしく お<ruby>願<rt>ねが</rt></ruby>いいたします。\n(Rất mong được anh/chị giúp đỡ ạ.)"
+    },
+    {
+        "Word": "拝見します",
+        "Reading": "はいけんします",
+        "Meaning": "xem, nhìn (khiêm nhường ngữ của みます)",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 76,
+        "Example": "<ruby>写真<rt>しゃしん</rt></ruby>を <ruby>拝見<rt>はいけん</rt></ruby>しました。\n(Tôi đã xem ảnh rồi ạ.)"
+    },
+    {
+        "Word": "存じます",
+        "Reading": "ぞんじます",
+        "Meaning": "biết (khiêm nhường ngữ của しっています)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "あの方を ご<ruby>存<rt>ぞん</rt></ruby>じですか。\n(Anh/Chị có biết vị kia không?)"
+    },
+    {
+        "Word": "伺います",
+        "Reading": "うかがいます",
+        "Meaning": "hỏi, đến thăm (khiêm nhường ngữ của ききます và いきます)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "ちょっと お<ruby>伺<rt>うかが</rt></ruby>いしますが....\n(Tôi xin mạn phép hỏi một chút ạ....)"
+    },
+    {
+        "Word": "お目にかかります",
+        "Reading": "おめにかかります",
+        "Meaning": "gặp (khiêm nhường ngữ của あいます)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "<ruby>明日<rt>あした</rt></ruby> お<ruby>目<rt>め</rt></ruby>に かかります。\n(Ngày mai tôi sẽ đến gặp ạ.)"
+    },
+    {
+        "Word": "ございます",
+        "Reading": "ございます",
+        "Meaning": "có (cách nói lịch sự của あります)",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "お<ruby>手洗<rt>てあらい</rt></ruby>いは あちらに ございます。\n(Nhà vệ sinh ở đằng kia ạ.)"
+    },
+    {
+        "Word": "〜でございます",
+        "Reading": "〜でございます",
+        "Meaning": "là (cách nói lịch sự của です)",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 76,
+        "Example": "こちらは <ruby>部長<rt>ぶちょう</rt></ruby>の <ruby>奥様<rt>おくさま</rt></ruby>で ございます。\n(Đây là vợ của trưởng phòng ạ.)"
+    },
+    {
+        "Word": "私",
+        "Reading": "わたくし",
+        "Meaning": "tôi (khiêm nhường ngữ của わたし)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>私<rt>わたくし</rt></ruby>が <ruby>伺<rt>うかが</rt></ruby>います。\n(Chính tôi sẽ đi ạ.)"
+    },
+    {
+        "Word": "ガイド",
+        "Reading": "ガイド",
+        "Meaning": "hướng dẫn viên (guide)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>今日<rt>きょう</rt></ruby>の <ruby>担当<rt>たんとう</rt></ruby>は <ruby>私<rt>わたくし</rt></ruby>が いたします。\n(Tôi sẽ là người phụ trách hướng dẫn hôm nay ạ.)"
+    },
+    {
+        "Word": "お宅",
+        "Reading": "おたく",
+        "Meaning": "nhà của người khác (tôn kính ngữ của うち)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>部長<rt>ぶちょう</rt></ruby>の お<ruby>宅<rt>たく</rt></ruby>へ <ruby>伺<rt>うかが</rt></ruby>いました。\n(Tôi đã đến thăm nhà trưởng phòng ạ.)"
+    },
+    {
+        "Word": "郊外",
+        "Reading": "こうがい",
+        "Meaning": "ngoại ô",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>郊外<rt>こうがい</rt></ruby>に <ruby>住<rt>す</rt></ruby>んでいます。\n(Tôi đang sống ở ngoại ô.)"
+    },
+    {
+        "Word": "再来週",
+        "Reading": "さらいしゅう",
+        "Meaning": "tuần sau nữa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>再来週<rt>さらいしゅう</rt></ruby>、また <ruby>伺<rt>うかが</rt></ruby>います。\n(Tuần sau nữa tôi sẽ lại đến thăm ạ.)"
+    },
+    {
+        "Word": "再来月",
+        "Reading": "さらいげつ",
+        "Meaning": "tháng sau nữa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>再来月<rt>さらいげつ</rt></ruby>に <ruby>結婚<rt>けっこん</rt></ruby>いたします。\n(Tôi sẽ kết hôn vào tháng sau nữa ạ.)"
+    },
+    {
+        "Word": "再来年",
+        "Reading": "さらいねん",
+        "Meaning": "năm sau nữa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>再来年<rt>さらいねん</rt></ruby>、<ruby>日本<rt>にほん</rt></ruby>へ <ruby>参<rt>まい</rt></ruby>ります。\n(Năm sau nữa tôi sẽ đi Nhật ạ.)"
+    },
+    {
+        "Word": "半年",
+        "Reading": "はんとし",
+        "Meaning": "nửa năm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>半年<rt>はんとし</rt></ruby> <ruby>日本語<rt>にほんご</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>いたしました。\n(Tôi đã học tiếng Nhật được nửa năm rồi ạ.)"
+    },
+    {
+        "Word": "最初に",
+        "Reading": "さいしょに",
+        "Meaning": "đầu tiên",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 76,
+        "Example": "<ruby>最初<rt>さいしょ</rt></ruby>に <ruby>自己紹介<rt>じこしょうかい</rt></ruby>を いたします。\n(Đầu tiên tôi xin được tự giới thiệu bản thân ạ.)"
+    },
+    {
+        "Word": "最後に",
+        "Reading": "さいごに",
+        "Meaning": "cuối cùng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 76,
+        "Example": "<ruby>最後<rt>さいご</rt></ruby>に <ruby>皆様<rt>みなさま</rt></ruby>に お<ruby>礼<rt>れい</rt></ruby>を <ruby>申<rt>もう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げます。\n(Cuối cùng tôi xin được gửi lời cảm ơn tới tất cả quý vị ạ.)"
+    },
+    {
+        "Word": "緊張します",
+        "Reading": "きんちょうします",
+        "Meaning": "hồi hộp, căng thẳng",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 76,
+        "Example": "とても <ruby>緊張<rt>きんちょう</rt></ruby>して おります。\n(Tôi đang rất căng thẳng ạ.)"
+    },
+    {
+        "Word": "放送します",
+        "Reading": "ほうそうします",
+        "Meaning": "phát thanh, truyền hình",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 76,
+        "Example": "テレビで <ruby>放送<rt>ほうそう</rt></ruby>されました。\n(Nó đã được phát trên truyền hình.)"
+    },
+    {
+        "Word": "撮ります",
+        "Reading": "とります",
+        "Meaning": "quay [video], chụp [ảnh]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 76,
+        "Example": "<ruby>ビデオ<rt></rt></ruby>を お<ruby>撮<rt>と</rt></ruby>り いたします。\n(Tôi sẽ quay video cho anh/chị ạ.)"
+    },
+    {
+        "Word": "賞金",
+        "Reading": "しょうきん",
+        "Meaning": "tiền thưởng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>賞金<rt>しょうきん</rt></ruby>を いただきました。\n(Tôi đã nhận được tiền thưởng ạ.)"
+    },
+    {
+        "Word": "自然",
+        "Reading": "しぜん",
+        "Meaning": "tự nhiên, thiên nhiên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 76,
+        "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>自然<rt>しぜん</rt></ruby>を <ruby>拝見<rt>はいけん</rt></ruby>したいです。\n(Tôi muốn được ngắm nhìn thiên nhiên Nhật Bản ạ.)"
+    },
+    {
+        "Word": "協力します",
+        "Reading": "きょうりょくします",
+        "Meaning": "hợp tác, cộng tác",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 76,
+        "Example": "よろしく ご<ruby>協力<rt>きょうりょく</rt></ruby> お<ruby>願<rt>ねが</rt></ruby>いいたします。\n(Rất mong nhận được sự hợp tác của quý vị ạ.)"
+    },
+    {
+        "Word": "感謝します",
+        "Reading": "かんしゃします",
+        "Meaning": "cảm ơn, cảm tạ",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 76,
+        "Example": "<ruby>皆様<rt>みなさま</rt></ruby>に <ruby>感謝<rt>かんしゃ</rt></ruby>して おります。\n(Tôi vô cùng biết ơn tất cả mọi người ạ.)"
+    }
+]

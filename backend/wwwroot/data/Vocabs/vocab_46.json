@@ -1,0 +1,130 @@
+[
+    {
+        "Word": "焼きます",
+        "Reading": "やきます",
+        "Meaning": "nướng, rán",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 72,
+        "Example": "<ruby>今<rt>いま</rt></ruby> <ruby>パン<rt></rt></ruby>を <ruby>焼<rt>や</rt></ruby>いている ところです。\n(Bây giờ tôi đang nướng bánh mì.)"
+    },
+    {
+        "Word": "渡します",
+        "Reading": "わたします",
+        "Meaning": "đưa cho, giao cho",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 72,
+        "Example": "<ruby>先生<rt>せんせい</rt></ruby>に <ruby>荷物<rt>にもつ</rt></ruby>を <ruby>渡<rt>わた</rt></ruby>しました。\n(Tôi đã giao hành lý cho thầy giáo.)"
+    },
+    {
+        "Word": "帰って来ます",
+        "Reading": "かえってきます",
+        "Meaning": "về, trở lại",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 72,
+        "Example": "<ruby>父<rt>ちち</rt></ruby>は たった<ruby>今<rt>いま</rt></ruby> <ruby>帰<rt>かえ</rt></ruby>って <ruby>来<rt>き</rt></ruby>た ばかりです。\n(Bố tôi vừa mới về đến nhà xong.)"
+    },
+    {
+        "Word": "出ます",
+        "Reading": "でます",
+        "Meaning": "xuất phát, chạy [xe buýt ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 72,
+        "Example": "<ruby>バス<rt></rt></ruby>が <ruby>出<rt>で</rt></ruby>た ところです。\n(Xe buýt vừa mới chạy xong.)"
+    },
+    {
+        "Word": "留守",
+        "Reading": "るす",
+        "Meaning": "đi vắng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 72,
+        "Example": "<ruby>隣<rt>となり</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>は <ruby>留守<rt>るす</rt></ruby>の ようです。\n(Hình như người hàng xóm đi vắng rồi.)"
+    },
+    {
+        "Word": "宅配便",
+        "Reading": "たくはいびん",
+        "Meaning": "dịch vụ chuyển phát tận nhà",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 72,
+        "Example": "<ruby>宅配便<rt>たくはいびん</rt></ruby>で <ruby>荷物<rt>にもつ</rt></ruby>を <ruby>送<rt>おく</rt></ruby>ります。\n(Gửi hành lý bằng dịch vụ chuyển phát tận nhà.)"
+    },
+    {
+        "Word": "原因",
+        "Reading": "げんいん",
+        "Meaning": "nguyên nhân",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 72,
+        "Example": "<ruby>故障<rt>こしょう</rt></ruby>の <ruby>原因<rt>げんいん</rt></ruby>を <ruby>調<rt>しら</rt></ruby>べて います。\n(Tôi đang điều tra nguyên nhân hỏng hóc.)"
+    },
+    {
+        "Word": "～の所",
+        "Reading": "～のところ",
+        "Meaning": "chỗ ~",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 72,
+        "Example": "<ruby>先生<rt>せんせい</rt></ruby>の <ruby>所<rt>ところ</rt></ruby>へ <ruby>相談<rt>そうだん</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。\n(Tôi đi đến chỗ thầy giáo để trao đổi công việc.)"
+    },
+    {
+        "Word": "半年",
+        "Reading": "はんとし",
+        "Meaning": "nửa năm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 72,
+        "Example": "<ruby>半年<rt>はんとし</rt></ruby> <ruby>日本<rt>にほん</rt></ruby>に <ruby>住<rt>す</rt></ruby>んで います。\n(Tôi đã sống ở Nhật được nửa năm rồi.)"
+    },
+    {
+        "Word": "ちょうど",
+        "Reading": "ちょうど",
+        "Meaning": "vừa đúng, vừa chuẩn",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 72,
+        "Example": "<ruby>今<rt>いま</rt></ruby> ちょうど <ruby>終<rt>お</rt></ruby>わった ところです。\n(Bây giờ vừa đúng lúc kết thúc xong.)"
+    },
+    {
+        "Word": "たった今",
+        "Reading": "たったいま",
+        "Meaning": "vừa mới (dùng với thì quá khứ, biểu thị sự hoàn thành)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 72,
+        "Example": "たった<ruby>今<rt>いま</rt></ruby> <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>食<rt>た</rt></ruby>べた ところです。\n(Tôi vừa mới ăn trưa xong tức thì.)"
+    },
+    {
+        "Word": "今いいですか",
+        "Reading": "いまいいですか",
+        "Meaning": "bây giờ có được không?",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 72,
+        "Example": "すみません、<ruby>今<rt>いま</rt></ruby> いいですか。\n(Xin lỗi, bây giờ anh/chị có rảnh không ạ?) "
+    },
+    {
+        "Word": "具合",
+        "Reading": "ぐあい",
+        "Meaning": "tình trạng, trạng thái",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 72,
+        "Example": "<ruby>体<rt>からだ</rt></ruby>の <ruby>具合<rt>ぐあい</rt></ruby>が <ruby>悪<rt>わる</rt></ruby>いです。\n(Tình trạng sức khỏe của tôi không tốt.)"
+    },
+    {
+        "Word": "申し訳ありません",
+        "Reading": "もうしわけありません",
+        "Meaning": "Xin lỗi (cách nói rất lịch sự)",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 72,
+        "Example": "<ruby>遅<rt>おく</rt></ruby>れて <ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ありません。\n(Tôi vô cùng xin lỗi vì đã đến muộn.)"
+    },
+    {
+        "Word": "向かいます",
+        "Reading": "むかいます",
+        "Meaning": "hướng đến, đi đến",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 72,
+        "Example": "<ruby>今<rt>いま</rt></ruby> そちらへ <ruby>向<rt>む</rt></ruby>かって います。\n(Bây giờ tôi đang đi về phía đó.)"
+    },
+    {
+        "Word": "転びます",
+        "Reading": "ころびます",
+        "Meaning": "ngã",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 72,
+        "Example": "<ruby>道<rt>みち</rt></ruby>で <ruby>転<rt>ころ</rt></ruby>んで、けがを しました。\n(Tôi bị ngã trên đường và bị thương.)"
+    }
+]

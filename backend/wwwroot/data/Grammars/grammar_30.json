@@ -1,0 +1,44 @@
+[
+    {
+        "GrammarName": "Cấu trúc ～てあります (Diễn tả trạng thái có mục đích)",
+        "Structure": "N1 に N2 が V-te (Tha động từ) あります",
+        "Meaning": "Dùng để diễn tả một trạng thái hiện hữu là kết quả của một hành động có mục đích của ai đó trong quá khứ. Khác với ～ています (tự động từ) chỉ diễn tả trạng thái đơn thuần, cấu trúc này hàm ý có người đã làm việc đó vì một mục tiêu nào đó.",
+        "Example": "<ruby>机<rt>つくえ</rt></ruby>の <ruby>上<rt>うえ</rt></ruby>に <ruby>メモ<rt></rt></ruby>が <ruby>置<rt>お</rt></ruby>いて あります。\n(Trên bàn có đặt/dán một tờ giấy ghi chú - hàm ý ai đó đặt để nhắc nhở.)",
+        "LessonId": 81
+    },
+    {
+        "GrammarName": "Cấu trúc ～てあります (Đưa vật lên làm chủ đề)",
+        "Structure": "N2 は N1 に V-te (Tha động từ) あります",
+        "Meaning": "Khi muốn nhấn mạnh vào danh từ N2 (vật đang ở trạng thái đó) và đưa nó lên làm chủ đề của câu, ta thay trợ từ 「が」 bằng trợ từ 「は」.",
+        "Example": "<ruby>カレンダー<rt></rt></ruby>は <ruby>壁<rt>かべ</rt></ruby>に <ruby>掛<rt>か</rt></ruby>けて あります。\n(Tờ lịch thì được treo ở trên tường.)",
+        "LessonId": 81
+    },
+    {
+        "GrammarName": "Cấu trúc ～ておきます (Chuẩn bị trước)",
+        "Structure": "V-te + おきます",
+        "Meaning": "Dùng để diễn tả việc thực hiện một hành động cần thiết trước một thời điểm nhất định để chuẩn bị cho một sự việc hoặc một mục đích nào đó trong tương lai.",
+        "Example": "<ruby>旅行<rt>りょこう</rt></ruby>の <ruby>前<rt>まえ</rt></ruby>に <ruby>切符<rt>きっぷ</rt></ruby>を <ruby>買<rt>か</rt></ruby>って おきます。\n(Trước khi đi du lịch tôi sẽ mua vé trước.)",
+        "LessonId": 81
+    },
+    {
+        "GrammarName": "Cấu trúc ～ておきます (Xử lý sau khi dùng / Dự phòng)",
+        "Structure": "V-te + おきます",
+        "Meaning": "Diễn tả việc thực hiện một hành động mang tính tạm thời hoặc xử lý vật dụng sau khi dùng để chuẩn bị cho lần sử dụng kế tiếp.",
+        "Example": "<ruby>道具<rt>どうぐ</rt></ruby>を <ruby>使<rt>つか</rt></ruby>ったら、元の <ruby>所<rt>ところ</rt></ruby>に <ruby>戻<rt>もど</rt></ruby>して おいて ください。\n(Sau khi dùng xong dụng cụ, hãy để lại chỗ cũ nhé.)",
+        "LessonId": 81
+    },
+    {
+        "GrammarName": "Cấu trúc ～ておきます (Giữ nguyên trạng thái)",
+        "Structure": "V-te + おきます",
+        "Meaning": "Diễn tả việc giữ nguyên một trạng thái hiện tại hoặc cứ để mặc như thế để phục vụ cho một mục đích sau đó.",
+        "Example": "<ruby>明日<rt>あした</rt></ruby> <ruby>会議<rt>かいぎ</rt></ruby>が ありますから、<ruby>椅子<rt>いす</rt></ruby>は このままに して おいて ください。\n(Vì mai có cuộc họp nên cứ để nguyên ghế như thế này nhé.)",
+        "LessonId": 81
+    },
+    {
+        "GrammarName": "Cách dùng まだ (Vẫn còn)",
+        "Structure": "まだ + V-(thể khẳng định)",
+        "Meaning": "Khác với cấu trúc 'Mada + thể phủ định' (Chưa...), ở bài này 'Mada + thể khẳng định' dùng để diễn tả một trạng thái vẫn đang tiếp diễn hoặc vẫn còn tồn tại.",
+        "Example": "まだ <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>って います。\n(Trời vẫn còn đang mưa.)",
+        "LessonId": 81
+    }
+]

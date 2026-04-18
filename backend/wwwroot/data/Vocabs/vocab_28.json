@@ -1,0 +1,322 @@
+[
+    {
+        "Word": "売れます",
+        "Reading": "うれます",
+        "Meaning": "bán chạy, được bán [bánh mì ~]",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 8,
+        "Example": "この <ruby>店<rt>みせ</rt></ruby>では <ruby>パン<rt></rt></ruby>が よく <ruby>売<rt>う</rt></ruby>れます。\n(Ở cửa hàng này bánh mì bán rất chạy.)"
+    },
+    {
+        "Word": "踊ります",
+        "Reading": "おどります",
+        "Meaning": "nhảy, khiêu vũ",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 8,
+        "Example": "<ruby>祭<rt>まつ</rt></ruby>りで <ruby>踊<rt>おど</rt></ruby>りを <ruby>踊<rt>おど</rt></ruby>りました。\n(Tôi đã nhảy một điệu nhảy ở lễ hội.)"
+    },
+    {
+        "Word": "かみます",
+        "Reading": "かみます",
+        "Meaning": "nhai",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 8,
+        "Example": "<ruby>眠<rt>ねむ</rt></ruby>い とき、<ruby>ガム<rt></rt></ruby>を かみます。\n(Khi buồn ngủ, tôi nhai kẹo cao su.)"
+    },
+    {
+        "Word": "選びます",
+        "Reading": "えらびます",
+        "Meaning": "chọn",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 8,
+        "Example": "どちらの <ruby>靴<rt>くつ</rt></ruby>を <ruby>選<rt>えら</rt></ruby>びますか。\n(Bạn sẽ chọn đôi giày nào?)"
+    },
+    {
+        "Word": "違います",
+        "Reading": "ちがいます",
+        "Meaning": "khác",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 8,
+        "Example": "<ruby>習慣<rt>しゅうかん</rt></ruby>が <ruby>違<rt>ちが</rt></ruby>いますから、<ruby>大変<rt>たいへん</rt></ruby>です。\n(Vì tập quán khác nhau nên rất vất vả.)"
+    },
+    {
+        "Word": "通います",
+        "Reading": "かよいます",
+        "Meaning": "đi đi về về [trường đại học]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 8,
+        "Example": "<ruby>大学<rt>だいがく</rt></ruby>に <ruby>通<rt>かよ</rt></ruby>いながら、<ruby>仕事<rt>しごと</rt></ruby>を しています。\n(Tôi vừa đi học đại học vừa đi làm.)"
+    },
+    {
+        "Word": "メモします",
+        "Reading": "メモします",
+        "Meaning": "ghi chép",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 8,
+        "Example": "<ruby>先生<rt>せんせい</rt></ruby>の <ruby>話<rt>はなし</rt></ruby>を <ruby>手帳<rt>てちょう</rt></ruby>に メモしました。\n(Tôi đã ghi chép lại lời thầy giáo vào sổ tay.)"
+    },
+    {
+        "Word": "まじめ",
+        "Reading": "まじめ",
+        "Meaning": "nghiêm túc, nghiêm chỉnh",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 8,
+        "Example": "あの <ruby>学生<rt>がくせい</rt></ruby>は とても まじめです。\n(Cậu sinh viên kia rất nghiêm túc.)"
+    },
+    {
+        "Word": "熱心",
+        "Reading": "ねっしん",
+        "Meaning": "nhiệt tâm, nhiệt tình, hết lòng",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 8,
+        "Example": "ワット<ruby>先生<rt>せんせい</rt></ruby>は <ruby>熱心<rt>ねっしん</rt></ruby>な <ruby>先生<rt>せんせい</rt></ruby>です。\n(Thầy Watt là một giáo viên nhiệt tình.)"
+    },
+    {
+        "Word": "優しい",
+        "Reading": "やさしい",
+        "Meaning": "tình cảm, hiền lành",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 8,
+        "Example": "お<ruby>母<rt>かあ</rt></ruby>さんは とても <ruby>優<rt>やさ</rt></ruby>しいです。\n(Mẹ tôi rất hiền từ.)"
+    },
+    {
+        "Word": "偉い",
+        "Reading": "えらい",
+        "Meaning": "vĩ đại, đáng kính, đáng khâm phục",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 8,
+        "Example": "一人で <ruby>家<rt>いえ</rt></ruby>を <ruby>建<rt>た</rt></ruby>てたんですか。<ruby>偉<rt>えら</rt></ruby>いですね。\n(Anh tự mình xây nhà à? Đáng khâm phục nhỉ.)"
+    },
+    {
+        "Word": "ちょうどいい",
+        "Reading": "ちょうどいい",
+        "Meaning": "vừa đủ, vừa đúng",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 8,
+        "Example": "この <ruby>服<rt>ふく</rt></ruby>は サイズが ちょうどいいです。\n(Bộ quần áo này có kích cỡ vừa vặn.)"
+    },
+    {
+        "Word": "習慣",
+        "Reading": "しゅうかん",
+        "Meaning": "tập quán",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>生活<rt>せいかつ</rt></ruby>の <ruby>習慣<rt>しゅうかん</rt></ruby>に <ruby>慣<rt>な</rt></ruby>れましたか。\n(Bạn đã quen với tập quán sinh hoạt của Nhật Bản chưa?)"
+    },
+    {
+        "Word": "経験",
+        "Reading": "けいけん",
+        "Meaning": "kinh nghiệm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>外国<rt>がいこく</rt></ruby>で <ruby>働<rt>はたら</rt></ruby>いた <ruby>経験<rt>けいけん</rt></ruby>が ありますか。\n(Bạn đã có kinh nghiệm làm việc ở nước ngoài chưa?)"
+    },
+    {
+        "Word": "力",
+        "Reading": "ちから",
+        "Meaning": "sức lực, năng lực",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>言葉<rt>ことば</rt></ruby>の <ruby>力<rt>ちから</rt></ruby>を <ruby>信<rt>しん</rt></ruby>じて います。\n(Tôi tin vào sức mạnh của ngôn từ.)"
+    },
+    {
+        "Word": "人気",
+        "Reading": "にんき",
+        "Meaning": "sự hâm mộ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "この <ruby>歌手<rt>かしゅ</rt></ruby>は <ruby>若<rt>わか</rt></ruby>い <ruby>人<rt>ひと</rt></ruby>に <ruby>人気<rt>にんき</rt></ruby>が あります。\n(Ca sĩ này được giới trẻ rất hâm mộ.)"
+    },
+    {
+        "Word": "形",
+        "Reading": "かたち",
+        "Meaning": "hình, hình dáng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "おもしろい <ruby>形<rt>かたち</rt></ruby>の <ruby>花瓶<rt>かびん</rt></ruby>ですね。\n(Cái lọ hoa có hình dáng thú vị nhỉ.)"
+    },
+    {
+        "Word": "色",
+        "Reading": "いろ",
+        "Meaning": "màu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "きれいな <ruby>色<rt>いろ</rt></ruby>の <ruby>靴<rt>くつ</rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。\n(Tôi đã mua một đôi giày màu đẹp.)"
+    },
+    {
+        "Word": "味",
+        "Reading": "あじ",
+        "Meaning": "vị",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "この <ruby>料理<rt>りょうり</rt></ruby>は いい <ruby>味<rt>あじ</rt></ruby>が します。\n(Món ăn này có vị ngon.)"
+    },
+    {
+        "Word": "ガム",
+        "Reading": "ガム",
+        "Meaning": "kẹo cao su",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>授業<rt>じゅぎょう</rt></ruby>の <ruby>中<rt>なか</rt></ruby>で <ruby>ガム<rt></rt></ruby>を かんでは いけません。\n(Không được nhai kẹo cao su trong giờ học.)"
+    },
+    {
+        "Word": "品物",
+        "Reading": "しなもの",
+        "Meaning": "hàng hóa, mặt hàng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "いい <ruby>品物<rt>しなもの</rt></ruby>が たくさん あります。\n(Có rất nhiều mặt hàng tốt.)"
+    },
+    {
+        "Word": "値段",
+        "Reading": "ねだん",
+        "Meaning": "giá",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "この <ruby>店<rt>みせ</rt></ruby>は <ruby>値段<rt>ねだん</rt></ruby>が <ruby>安<rt>やす</rt></ruby>いです。\n(Cửa hàng này giá rẻ.)"
+    },
+    {
+        "Word": "給料",
+        "Reading": "きゅうりょう",
+        "Meaning": "lương",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>給料<rt>きゅうりょう</rt></ruby>が <ruby>高<rt>たか</rt></ruby>い <ruby>仕事<rt>しごと</rt></ruby>を <ruby>探<rt>さが</rt></ruby>して います。\n(Tôi đang tìm một công việc lương cao.)"
+    },
+    {
+        "Word": "ボーナス",
+        "Reading": "ボーナス",
+        "Meaning": "thưởng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "12<ruby>月<rt>がつ</rt></ruby>に <ruby>ボーナス<rt></rt></ruby>が もらえます。\n(Tháng 12 sẽ nhận được tiền thưởng.)"
+    },
+    {
+        "Word": "番組",
+        "Reading": "ぱんぐみ",
+        "Meaning": "chương trình (phát thanh, truyền hình)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "おもしろい <ruby>テレビ<rt></rt></ruby><ruby>番組<rt>ばんぐみ</rt></ruby>が ありますか。\n(Có chương trình tivi nào hay không?)"
+    },
+    {
+        "Word": "ドラマ",
+        "Reading": "ドラマ",
+        "Meaning": "kịch, phim truyền hình",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>ドラマ<rt></rt></ruby>を よく <ruby>見<rt>み</rt></ruby>ます。\n(Tôi hay xem phim truyền hình Nhật Bản.)"
+    },
+    {
+        "Word": "小説",
+        "Reading": "しょうせつ",
+        "Meaning": "tiểu thuyết",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>暇<rt>ひま</rt></ruby>な とき、<ruby>小説<rt>しょうせつ</rt></ruby>を <ruby>読<rt>よ</rt></ruby>みます。\n(Lúc rảnh rỗi, tôi đọc tiểu thuyết.)"
+    },
+    {
+        "Word": "小説家",
+        "Reading": "しょうせつか",
+        "Meaning": "tiểu thuyết gia, nhà văn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>将来<rt>しょうらい</rt></ruby> <ruby>小説家<rt>しょうせつか</rt></ruby>に なりたいです。\n(Tương lai tôi muốn trở thành nhà văn.)"
+    },
+    {
+        "Word": "歌手",
+        "Reading": "かしゅ",
+        "Meaning": "ca sĩ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "すばらしい <ruby>声<rt>こえ</rt></ruby>の <ruby>歌手<rt>かしゅ</rt></ruby>ですね。\n(Ca sĩ có giọng hát tuyệt vời quá nhỉ.)"
+    },
+    {
+        "Word": "管理人",
+        "Reading": "かんりにん",
+        "Meaning": "người quản lý",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>管理人<rt>かんりにん</rt></ruby>さんに お<ruby>願<rt>ねが</rt></ruby>いしました。\n(Tôi đã nhờ người quản lý.)"
+    },
+    {
+        "Word": "息子",
+        "Reading": "むすこ",
+        "Meaning": "con trai (dùng cho mình)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>息子<rt>むすこ</rt></ruby>は <ruby>大学<rt>だいがく</rt></ruby>に <ruby>通<rt>かよ</rt></ruby>って います。\n(Con trai tôi đang đi học đại học.)"
+    },
+    {
+        "Word": "娘",
+        "Reading": "むすめ",
+        "Meaning": "con gái (dùng cho mình)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>娘<rt>むすめ</rt></ruby>は <ruby>来年<rt>らいねん</rt></ruby> <ruby>小学生<rt>しょうがくせい</rt></ruby>に なります。\n(Con gái tôi sang năm sẽ vào tiểu học.)"
+    },
+    {
+        "Word": "自分",
+        "Reading": "じぶん",
+        "Meaning": "bản thân, mình",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>自分<rt>じぶん</rt></ruby>で <ruby>弁当<rt>べんとう</rt></ruby>を <ruby>作<rt>つく</rt></ruby>りました。\n(Tôi tự mình làm cơm hộp.)"
+    },
+    {
+        "Word": "将来",
+        "Reading": "しょうらい",
+        "Meaning": "tương lai",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "<ruby>将来<rt>しょうらい</rt></ruby> <ruby>日本<rt>にほん</rt></ruby>で <ruby>働<rt>はたら</rt></ruby>きたいです。\n(Tương lai tôi muốn làm việc tại Nhật.)"
+    },
+    {
+        "Word": "しばらく",
+        "Reading": "しばらく",
+        "Meaning": "một khoảng thời gian ngắn, một lúc, một lát",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 8,
+        "Example": "しばらく <ruby>休<rt>やす</rt></ruby>みましょう。\n(Chúng ta hãy nghỉ một lát nhé.)"
+    },
+    {
+        "Word": "たいてい",
+        "Reading": "たいてい",
+        "Meaning": "thường, thông thường",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 8,
+        "Example": "<ruby>休<rt>やす</rt></ruby>みの <ruby>日<rt>ひ</rt></ruby>は たいてい <ruby>家<rt>いえ</rt></ruby>に います。\n(Ngày nghỉ tôi thường ở nhà.)"
+    },
+    {
+        "Word": "それに",
+        "Reading": "それに",
+        "Meaning": "thêm nữa là, thêm vào đó là",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 8,
+        "Example": "<ruby>近<rt>ちか</rt></ruby>いし、それに <ruby>安<rt>やす</rt></ruby>いです。\n(Gần, thêm nữa lại còn rẻ.)"
+    },
+    {
+        "Word": "それで",
+        "Reading": "それで",
+        "Meaning": "thế thì, thế nên",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 8,
+        "Example": "<ruby>昨日<rt>きのう</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>でした。それで <ruby>出<rt>で</rt></ruby>かけませんでした。\n(Hôm qua trời mưa. Thế nên tôi đã không ra ngoài.)"
+    },
+    {
+        "Word": "お知らせ",
+        "Reading": "おしらせ",
+        "Meaning": "thông báo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "ロビーに <ruby>休<rt>やす</rt></ruby>みの お知らせが あります。\n(Ở sảnh có thông báo về ngày nghỉ.)"
+    },
+    {
+        "Word": "無料",
+        "Reading": "むりょう",
+        "Meaning": "miễn phí",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 8,
+        "Example": "この <ruby>雑誌<rt>ざっし</rt></ruby>は <ruby>無料<rt>むりょう</rt></ruby>です。\n(Cuốn tạp chí này miễn phí.)"
+    }
+]

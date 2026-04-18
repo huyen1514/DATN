@@ -1,0 +1,37 @@
+[
+    {
+        "GrammarName": "Cấu trúc ～ながら (Vừa... vừa...)",
+        "Structure": "V1 (thể ます bỏ ます) + ながら, V2",
+        "Meaning": "Dùng để diễn tả hai hành động diễn ra đồng thời tại cùng một thời điểm của cùng một chủ thể. Trong đó, hành động thứ hai (V2) được coi là hành động chính hoặc quan trọng hơn.",
+        "Example": "<ruby>音楽<rt>おんがく</rt></ruby>を <ruby>聞<rt>き</rt></ruby>きながら <ruby>食事<rt>しょくじ</rt></ruby>します。\n(Tôi vừa nghe nhạc vừa dùng bữa.)",
+        "LessonId": 79
+    },
+    {
+        "GrammarName": "Cấu trúc ～ています (Thói quen / Hành động lặp lại)",
+        "Structure": "V-te + います",
+        "Meaning": "Mẫu câu này dùng để diễn tả một thói quen hoặc một hành động được lặp đi lặp lại đều đặn trong một khoảng thời gian dài (như công việc, việc học tập hàng ngày). Khác với thể hiện tại đơn, nó nhấn mạnh tính chu kỳ và bền vững.",
+        "Example": "ひまな ときは、いつも <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>んでいます。\n(Lúc rảnh rỗi, tôi lúc nào cũng đọc sách.)",
+        "LessonId": 79
+    },
+    {
+        "GrammarName": "Cấu trúc ～し、～し (Liệt kê nguyên nhân / Tính chất)",
+        "Structure": "Thể thông thường + し、 Thể thông thường + し",
+        "Meaning": "Dùng để liệt kê nhiều lý do, nguyên nhân hoặc các đặc điểm có cùng tính chất (cùng tốt hoặc cùng xấu) để đi đến một kết luận hoặc đưa ra nhận xét. Việc dùng 「し」 làm cho câu văn mang tính liệt kê đa dạng và thuyết phục hơn là chỉ dùng 「から」.",
+        "Example": "<ruby>熱<rt>ねつ</rt></ruby>も あるし、<ruby>頭<rt>あたま</rt></ruby>も <ruby>痛<rt>いた</rt></ruby>いし、<ruby>今日<rt>きょう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>みます。\n(Vừa bị sốt, lại vừa đau đầu nên hôm nay tôi xin nghỉ.)",
+        "LessonId": 79
+    },
+    {
+        "GrammarName": "Liên từ それに (Hơn nữa)",
+        "Structure": "Câu 1. それに Câu 2.",
+        "Meaning": "Dùng để bổ sung thêm một thông tin, một ưu điểm hoặc một nhược điểm khác vào những điều đã được nhắc đến ở câu trước. Nó có ý nghĩa tương đương với 'vả lại', 'thêm vào đó'.",
+        "Example": "この <ruby>店<rt>みせ</rt></ruby>は <ruby>料理<rt>りょうり</rt></ruby>も おいしいし、それに <ruby>安<rt>やす</rt></ruby>いです。\n(Cửa hàng này đồ ăn ngon, và hơn nữa là giá cũng rẻ.)",
+        "LessonId": 79
+    },
+    {
+        "GrammarName": "Liên từ それで (Vì thế / Do đó)",
+        "Structure": "Câu 1. それで Câu 2.",
+        "Meaning": "Dùng khi câu trước đó liệt kê các lý do (thường dùng kết hợp với cấu trúc ～し) và 「それで」 sẽ dẫn dắt đến kết quả hoặc kết luận cuối cùng của vấn đề đó.",
+        "Example": "デザインも いいし、<ruby>大<rt>おお</rt></ruby>きさもちょうど いいです。それで この <ruby>靴<rt>くつ</rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。\n(Kiểu dáng đẹp, kích cỡ cũng vừa vặn. Vì thế tôi đã mua đôi giày này.)",
+        "LessonId": 79
+    }
+]

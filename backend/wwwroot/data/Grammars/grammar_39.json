@@ -1,0 +1,30 @@
+[
+    {
+        "GrammarName": "Diễn tả nguyên nhân bằng thể て (V-te / A-i -> kute / A-na -> de)",
+        "Structure": "V-te / V-nai -> なくて / Adj-i -> くて / Adj-na -> で, [Kết quả]",
+        "Meaning": "Dùng để biểu thị nguyên nhân, lý do. Phần vế sau thường là các từ chỉ cảm xúc (ngạc nhiên, lo lắng), động từ khả năng hoặc các trạng thái không mang tính ý chí. Đây là cách nói nhẹ nhàng, khách quan hơn 「から」.",
+        "Example": "<ruby>ニュース<rt></rt></ruby>を <ruby>聞<rt>き</rt></ruby>いて、びっくりしました。\n(Sau khi nghe tin tức, tôi đã rất ngạc nhiên.)",
+        "LessonId": 90
+    },
+    {
+        "GrammarName": "Nguyên nhân do thiên tai, sự cố (Danh từ + で)",
+        "Structure": "Danh từ (Thiên tai, tai nạn, bệnh tật...) + で",
+        "Meaning": "Trợ từ 「で」 dùng để chỉ nguyên nhân dẫn đến một kết quả (thường là kết quả không tốt). Danh từ ở đây thường là các sự việc xảy ra ngoài ý muốn như động đất, hỏa hoạn, hay kẹt xe.",
+        "Example": "<ruby>地震<rt>じしん</rt></ruby>で <ruby>ビル<rt></rt></ruby>が <ruby>倒<rt>たお</rt></ruby>れました。\n(Tòa nhà đã bị đổ do động đất.)",
+        "LessonId": 90
+    },
+    {
+        "GrammarName": "Cấu trúc ～ので (Vì... nên...)",
+        "Structure": "Thể thông thường + ので (Lưu ý: A-na và N giữ nguyên な rồi cộng ので)",
+        "Meaning": "Giống như 「から」, nhưng 「ので」 nhấn mạnh vào mối quan hệ nhân quả một cách khách quan và lịch sự hơn. Thường được dùng khi đưa ra lý do để xin phép hoặc giải thích nhẹ nhàng, tránh gây cảm giác áp đặt.",
+        "Example": "<ruby>用事<rt>ようじ</rt></ruby>が あるので、<ruby>早<rt>はや</rt></ruby>く <ruby>帰<rt>かえ</rt></ruby>ります。\n(Vì có việc bận nên tôi xin phép về sớm.)",
+        "LessonId": 90
+    },
+    {
+        "GrammarName": "Cấu trúc ～途中で (Trên đường / Giữa chừng)",
+        "Structure": "V-(từ điển) / Danh từ + の + <ruby>途中<rt>とちゅう</rt></ruby>で",
+        "Meaning": "Dùng để diễn tả một sự việc khác xảy ra xen ngang khi hành động chính đang được thực hiện hoặc đang trên đường đi đến đâu đó.",
+        "Example": "<ruby>家<rt>うち</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby>る <ruby>途中<rt>とちゅう</rt></ruby>で、<ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>り<ruby>出<rt>だ</rt></ruby>しました。\n(Trên đường về nhà, trời đã bắt đầu đổ mưa.)",
+        "LessonId": 90
+    }
+]

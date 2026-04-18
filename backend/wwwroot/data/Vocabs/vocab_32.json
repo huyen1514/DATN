@@ -1,0 +1,226 @@
+[
+    {
+        "Word": "運動します",
+        "Reading": "うんどうします",
+        "Meaning": "vận động, tập thể thao",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 58,
+        "Example": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>運動<rt>うんどう</rt></ruby>したほうがいいです。\n(Hàng ngày anh/chị nên vận động.)"
+    },
+    {
+        "Word": "成功します",
+        "Reading": "せいこうします",
+        "Meaning": "thành công",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 58,
+        "Example": "オリンピックは <ruby>成功<rt>せいこう</rt></ruby>するでしょう。\n(Olympic chắc sẽ thành công.)"
+    },
+    {
+        "Word": "失敗します",
+        "Reading": "しっぱいします",
+        "Meaning": "thất bại, trượt [thi ~]",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 58,
+        "Example": "<ruby>試験<rt>しけん</rt></ruby>に <ruby>失敗<rt>しっぱい</rt></ruby>してしまいました。\n(Tôi đã bị trượt kỳ thi mất rồi.)"
+    },
+    {
+        "Word": "合格します",
+        "Reading": "ごうかくします",
+        "Meaning": "đỗ [thi ~]",
+        "PartOfSpeech": "Động từ nhóm 3",
+        "LessonId": 58,
+        "Example": "<ruby>試験<rt>しけん</rt></ruby>に <ruby>合格<rt>ごうかく</rt></ruby>するでしょうか。\n(Liệu tôi có đỗ kỳ thi không nhỉ?)"
+    },
+    {
+        "Word": "戻ります",
+        "Reading": "もどります",
+        "Meaning": "quay lại, trở lại",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "すぐ <ruby>空港<rt>くうこう</rt></ruby>へ <ruby>戻<rt>もど</rt></ruby>ります。\n(Tôi sẽ quay lại sân bay ngay.)"
+    },
+    {
+        "Word": "止みます",
+        "Reading": "やみます",
+        "Meaning": "tạnh, ngừng [mưa ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "<ruby>雨<rt>あめ</rt></ruby>が <ruby>止<rt>や</rt></ruby>みました。\n(Mưa đã tạnh rồi.)"
+    },
+    {
+        "Word": "晴れます",
+        "Reading": "はれます",
+        "Meaning": "nắng, quang đãng",
+        "PartOfSpeech": "Động từ nhóm 2",
+        "LessonId": 58,
+        "Example": "<ruby>明日<rt>あした</rt></ruby>は <ruby>晴<rt>は</rt></ruby>れるでしょう。\n(Ngày mai chắc sẽ nắng.)"
+    },
+    {
+        "Word": "曇ります",
+        "Reading": "くもります",
+        "Meaning": "có mây, mây mù",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "ごごから <ruby>曇<rt>くも</rt></ruby>るかもしれません。\n(Từ chiều có thể trời sẽ có mây.)"
+    },
+    {
+        "Word": "吹きます",
+        "Reading": "ふきます",
+        "Meaning": "thổi [gió ~]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "<ruby>強<rt>つよ</rt></ruby>い <ruby>風<rt>かぜ</rt></ruby>が <ruby>吹<rt>ふ</rt></ruby>いています。\n(Gió mạnh đang thổi.)"
+    },
+    {
+        "Word": "治ります",
+        "Reading": "なおります",
+        "Meaning": "khỏi [bệnh], được sửa [chỗ hỏng]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "<ruby>病気<rt>びょうき</rt></ruby>が <ruby>治<rt>なお</rt></ruby>りました。\n(Tôi đã khỏi bệnh rồi.)"
+    },
+    {
+        "Word": "続きます",
+        "Reading": "つづきます",
+        "Meaning": "tiếp tục, tiếp diễn [sốt]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "<ruby>熱<rt>ねつ</rt></ruby>が <ruby>三日<rt>みっか</rt></ruby> <ruby>続<rt>つづ</rt></ruby>くかもしれません。\n(Có thể sẽ còn tiếp tục sốt khoảng 3 ngày nữa.)"
+    },
+    {
+        "Word": "引きます",
+        "Reading": "ひきます",
+        "Meaning": "bị [cảm]",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "<ruby>風邪<rt>かぜ</rt></ruby>を <ruby>引<rt>ひ</rt></ruby>きました。\n(Tôi bị cảm rồi.)"
+    },
+    {
+        "Word": "冷やします",
+        "Reading": "ひやします",
+        "Meaning": "làm lạnh",
+        "PartOfSpeech": "Động từ nhóm 1",
+        "LessonId": 58,
+        "Example": "お<ruby>湯<rt>ゆ</rt></ruby>を <ruby>冷<rt>ひ</rt></ruby>やします。\n(Tôi làm lạnh nước nóng.)"
+    },
+    {
+        "Word": "心配",
+        "Reading": "しんぱい",
+        "Meaning": "lo lắng",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 58,
+        "Example": "<ruby>何<rt>なに</rt></ruby>か <ruby>心配<rt>しんぱい</rt></ruby>な ことが あるんですか。\n(Anh/Chị có gì lo lắng à?)"
+    },
+    {
+        "Word": "十分",
+        "Reading": "じゅうぶん",
+        "Meaning": "đủ",
+        "PartOfSpeech": "Tính từ đuôi な",
+        "LessonId": 58,
+        "Example": "40<ruby>万円<rt>まんえん</rt></ruby>で <ruby>十分<rt>じゅうぶん</rt></ruby>ですか。\n(40 vạn yên có đủ không?)"
+    },
+    {
+        "Word": "おかしい",
+        "Reading": "おかしい",
+        "Meaning": "có vấn đề, không bình thường",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 58,
+        "Example": "エンジンの <ruby>音<rt>おと</rt></ruby>が おかしいです。\n(Tiếng động cơ có vấn đề/không bình thường.)"
+    },
+    {
+        "Word": "うるさい",
+        "Reading": "うるさい",
+        "Meaning": "ồn ào",
+        "PartOfSpeech": "Tính từ đuôi い",
+        "LessonId": 58,
+        "Example": "テレビの <ruby>音<rt>おと</rt></ruby>が うるさいです。\n(Tiếng tivi ồn quá.)"
+    },
+    {
+        "Word": "やけど",
+        "Reading": "やけど",
+        "Meaning": "bỏng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>火<rt>ひ</rt></ruby>で やけどを しました。\n(Tôi bị bỏng do lửa.)"
+    },
+    {
+        "Word": "けが",
+        "Reading": "けが",
+        "Meaning": "vết thương",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "足に けがを しました。\n(Tôi bị thương ở chân.)"
+    },
+    {
+        "Word": "咳",
+        "Reading": "せき",
+        "Meaning": "ho",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>咳<rt>せき</rt></ruby>が <ruby>出<rt>で</rt></ruby>ます。\n(Tôi bị ho.)"
+    },
+    {
+        "Word": "空",
+        "Reading": "そら",
+        "Meaning": "bầu trời",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>空<rt>そら</rt></ruby>が <ruby>青<rt>あお</rt></ruby>いです。\n(Bầu trời xanh.)"
+    },
+    {
+        "Word": "太陽",
+        "Reading": "たいよう",
+        "Meaning": "mặt trời",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>太陽<rt>たいよう</rt></ruby>が <ruby>出<rt>で</rt></ruby>ました。\n(Mặt trời đã mọc.)"
+    },
+    {
+        "Word": "星",
+        "Reading": "ほし",
+        "Meaning": "ngôi sao",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>夜<rt>よる</rt></ruby> <ruby>星<rt>ほし</rt></ruby>を <ruby>見<rt>み</rt></ruby>るのが <ruby>好<rt>す</rt></ruby>きです。\n(Tôi thích ngắm sao vào ban đêm.)"
+    },
+    {
+        "Word": "水道",
+        "Reading": "すいどう",
+        "Meaning": "nước máy",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>水道<rt>すいどう</rt></ruby>の <ruby>水<rt>みず</rt></ruby>を <ruby>飲<rt>の</rt></ruby>みます。\n(Tôi uống nước máy.)"
+    },
+    {
+        "Word": "夕方",
+        "Reading": "ゆうがた",
+        "Meaning": "chiều tối",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>夕方<rt>ゆうがた</rt></ruby>から <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>るでしょう。\n(Chắc là từ chiều tối trời sẽ mưa.)"
+    },
+    {
+        "Word": "今夜",
+        "Reading": "こんや",
+        "Meaning": "tối nay",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>今夜<rt>こんや</rt></ruby> <ruby>星<rt>ほし</rt></ruby>が きれいです。\n(Tối nay sao rất đẹp.)"
+    },
+    {
+        "Word": "もしかしたら",
+        "Reading": "もしかしたら",
+        "Meaning": "có thể, biết đâu là",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 58,
+        "Example": "もしかしたら <ruby>約束<rt>やくそく</rt></ruby>の <ruby>時間<rt>じかん</rt></ruby>に <ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わないかもしれません。\n(Có thể tôi sẽ không kịp giờ hẹn.)"
+    },
+    {
+        "Word": "健康",
+        "Reading": "けんこう",
+        "Meaning": "sức khỏe",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 58,
+        "Example": "<ruby>健康<rt>けんこう</rt></ruby>の ために <ruby>運動<rt>うんどう</rt></ruby>します。\n(Vận động vì sức khỏe.)"
+    }
+]
