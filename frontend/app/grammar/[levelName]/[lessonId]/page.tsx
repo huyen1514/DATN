@@ -228,9 +228,10 @@ export default function GrammarDetailPage() {
                             <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
                               Ví dụ
                             </span>
-                            <p className="text-base text-slate-700 leading-relaxed whitespace-pre-wrap">
-                              {g.example}
-                            </p>
+                            <p 
+                              className="text-base text-slate-700 leading-relaxed whitespace-pre-wrap"
+                              dangerouslySetInnerHTML={{ __html: g.example }}
+                            />
                           </div>
                         )}
                       </div>

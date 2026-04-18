@@ -298,7 +298,10 @@ export default function VocabularyDetailPage() {
                     {v.example ? (
                       <div className="mt-2 rounded-xl bg-slate-50 p-4 text-slate-700">
                         <span className="mb-1 block text-xs font-semibold uppercase tracking-wider text-slate-400">Ví dụ</span>
-                        <p className="text-base md:text-lg">{v.example}</p>
+                        <p 
+                          className="text-base md:text-lg whitespace-pre-wrap"
+                          dangerouslySetInnerHTML={{ __html: v.example }}
+                        />
                       </div>
                     ) : (
                       <p className="mt-1 text-sm italic text-slate-400">Chưa có ví dụ.</p>

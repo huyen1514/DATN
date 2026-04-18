@@ -269,7 +269,10 @@ export default function KanjiDetailPage() {
                         <h3 className="text-xl font-bold text-slate-800 mb-4">Nghĩa</h3>
                         <div className="pl-5">
                            <ul className="list-disc text-base text-slate-700 font-medium space-y-2 marker:text-slate-400">
-                              <li>{k.example || k.meaning}</li>
+                              <li 
+                                 className="whitespace-pre-wrap"
+                                 dangerouslySetInnerHTML={{ __html: k.example || k.meaning }} 
+                              />
                            </ul>
                            {k.example && (
                               <button className="text-blue-600 text-sm font-semibold hover:underline mt-3">Xem thêm</button>

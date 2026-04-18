@@ -31,22 +31,34 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     role: raw?.role ?? raw?.Role ?? "",
   });
 
-  const [authState] = useState<{
-    user: { fullName?: string; userName?: string; role?: string } | null | undefined;
+  // --- [BẮT ĐẦU PHẦN SỬA ĐỔI] ---
+  // 1. Khởi tạo state mặc định là undefined để Server và Client đồng bộ (tránh lỗi Hydration)
+  const [authState, setAuthState] = useState<{
+    user: { fullName?: string; userName?: string; role?: string } | null;
     redirectTo: "/login" | "/" | null;
-  } | undefined>(() => {
-    if (typeof window === "undefined") return undefined;
+  } | undefined>(undefined);
+
+  // 2. Chuyển logic đọc localStorage vào useEffect để đảm bảo chỉ chạy ở phía Client
+  useEffect(() => {
     const userStr = localStorage.getItem("user");
-    if (!userStr) return { user: null, redirectTo: "/login" };
+    if (!userStr) {
+      setAuthState({ user: null, redirectTo: "/login" });
+      return;
+    }
     try {
       const parsed = JSON.parse(userStr);
       const normalized = normalizeUser(parsed);
-      if (normalized.role !== "Admin") return { user: null, redirectTo: "/" };
-      return { user: normalized, redirectTo: null };
+      if (normalized.role !== "Admin") {
+        setAuthState({ user: null, redirectTo: "/" });
+      } else {
+        setAuthState({ user: normalized, redirectTo: null });
+      }
     } catch {
-      return { user: null, redirectTo: "/login" };
+      setAuthState({ user: null, redirectTo: "/login" });
     }
-  });
+  }, []);
+  // --- [KẾT THÚC PHẦN SỬA ĐỔI] ---
+
   const user = authState?.user;
 
   useEffect(() => {
