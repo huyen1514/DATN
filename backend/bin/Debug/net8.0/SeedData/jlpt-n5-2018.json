@@ -1,0 +1,149 @@
+{
+  "test_info": {
+    "test_id": "JLPT_N5_2018",
+    "title": "Đề thi chính thức JLPT N5 - 2018",
+    "level": "N5",
+    "total_duration_minutes": 105,
+    "pass_marks": {
+      "total": 80,
+      "vocabulary_grammar_reading": 38,
+      "listening": 19
+    }
+  },
+  "sections": [
+    {
+      "section_id": "sec_01",
+      "section_name": "Kiến thức ngôn ngữ (Chữ Hán - Từ vựng) ",
+      "jp_name": "言語知識(文字・語彙) ",
+      "duration_minutes": 25,
+      "mondai_list": [
+        {
+          "mondai_id": "m_01",
+          "mondai_number": 1,
+          "instruction": "＿＿のことばはひらがなでどうかきますか。1・2・3・4から いちばんいいものをひとつ えらんでください。 [cite: 25, 26, 27]",
+          "vn_instruction": "Từ được gạch chân viết bằng Hiragana như thế nào? Chọn đáp án đúng nhất từ 1, 2, 3, 4.",
+          "questions": [
+            {
+              "question_id": "q_001",
+              "number": 1,
+              "content": "あしたは雨ですか。 [cite: 34]",
+              "options": [
+                { "option_id": 1, "text": "ゆき [cite: 35]" },
+                { "option_id": 2, "text": "はれ [cite: 36]" },
+                { "option_id": 3, "text": "くもり [cite: 37]" },
+                { "option_id": 4, "text": "あめ [cite: 38]" }
+              ],
+              "correct_option_id": 4,
+              "explanation": "Đáp án 4[cite: 1471]. 雨 (あめ): Mưa."
+            }
+          ]
+        },
+        {
+          "mondai_id": "m_02",
+          "mondai_number": 2,
+          "instruction": "＿＿のことばはどうかきますか。1・2・3・4から いちばんいいものをひとつえらんでください。 [cite: 102, 103]",
+          "vn_instruction": "Từ được gạch chân viết bằng Kanji/Katakana như thế nào? Chọn đáp án đúng nhất từ 1, 2, 3, 4.",
+          "questions": [
+            {
+              "question_id": "q_013",
+              "number": 13,
+              "content": "このわいしゃつをください。 [cite: 113]",
+              "options": [
+                { "option_id": 1, "text": "ウイシャソ [cite: 114]" },
+                { "option_id": 2, "text": "ウイシャツ [cite: 115]" },
+                { "option_id": 3, "text": "ワイシャソ [cite: 116]" },
+                { "option_id": 4, "text": "ワイシャツ [cite: 117]" }
+              ],
+              "correct_option_id": 4,
+              "explanation": "Đáp án 4[cite: 1473]. わいしゃつ -> ワイシャツ (Áo sơ mi)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "sec_02",
+      "section_name": "Kiến thức ngôn ngữ (Ngữ pháp) - Đọc hiểu ",
+      "jp_name": "言語知識(文法)・読解 ",
+      "duration_minutes": 50,
+      "mondai_list": [
+        {
+          "mondai_id": "m_04",
+          "mondai_number": 1,
+          "instruction": "（　）に何を入れますか。1・2・3・4から いちばん いいものを 一つえらんでください。 [cite: 342, 343, 344]",
+          "vn_instruction": "Điền gì vào chỗ trống? Chọn đáp án đúng nhất từ 1, 2, 3, 4.",
+          "questions": [
+            {
+              "question_id": "q_026",
+              "number": 1,
+              "content": "私はあしたの ひこうき ( ) 国へ帰ります。 [cite: 358, 360]",
+              "options": [
+                { "option_id": 1, "text": "に [cite: 362]" },
+                { "option_id": 2, "text": "で [cite: 363]" },
+                { "option_id": 3, "text": "か [cite: 364]" },
+                { "option_id": 4, "text": "を [cite: 365]" }
+              ],
+              "correct_option_id": 2,
+              "explanation": "Đáp án 2[cite: 1482]. Trợ từ で dùng để chỉ phương tiện di chuyển (bằng máy bay)."
+            }
+          ]
+        },
+        {
+          "mondai_id": "m_07",
+          "mondai_number": 4,
+          "instruction": "つぎの (1) から (3)の ぶんしょうを読んで、しつもんに こたえてください。こたえは、1・2・3・4から いちばん いいものを一つえらんでください。 [cite: 725, 726, 727]",
+          "vn_instruction": "Đọc các đoạn văn từ (1) đến (3) và trả lời câu hỏi. Chọn đáp án đúng nhất từ 1, 2, 3, 4.",
+          "reading_passage": "わたしは毎朝ご飯となっとうか、パンとたまごを食べて、学校へ行きます。でも、けさはなにも食べませんでした。バナナを学校へ持っていきました。起きた時間がおそかったからです。 [cite: 733, 735, 739]",
+          "questions": [
+            {
+              "question_id": "q_042",
+              "number": 27,
+              "content": "けさ 「わたし」は学校へ行く前に、何を食べましたか。 [cite: 744]",
+              "options": [
+                { "option_id": 1, "text": "ご飯と なっとうを食べました。 [cite: 747]" },
+                { "option_id": 2, "text": "パンとたまごを食べました。 [cite: 749]" },
+                { "option_id": 3, "text": "なにも食べませんでした。 [cite: 751]" },
+                { "option_id": 4, "text": "バナナを食べました。 [cite: 753]" }
+              ],
+              "correct_option_id": 3,
+              "explanation": "Đáp án 3[cite: 1487]. Trong bài viết: 「けさはなにも食べませんでした」 (Sáng nay tôi đã không ăn gì cả)[cite: 735]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "sec_03",
+      "section_name": "Nghe hiểu ",
+      "jp_name": "聴解 ",
+      "duration_minutes": 30,
+      "mondai_list": [
+        {
+          "mondai_id": "m_09",
+          "mondai_number": 1,
+          "instruction": "もんだい1では、はじめにしつもんをきいてください。それから はなしをきいて、もんだいようしの 1から4のなかから、いちばん いいものをひとつえらんでください。 [cite: 1045]",
+          "vn_instruction": "Trong Mondai 1, trước tiên hãy nghe câu hỏi. Sau đó nghe câu chuyện và chọn đáp án đúng nhất từ 1 đến 4.",
+          "mondai_audio_url": null,
+          "questions": [
+            {
+              "question_id": "q_047",
+              "number": 1,
+              "content": "男の人はどこへ行きますか。 [cite: 1534]",
+              "audio_script": "M: すみません、喫茶店「みどり」はどこですか。 [cite: 1524]\\nF: 喫茶店「みどり」ですね。あそこに交差点がありますね。 [cite: 1527]\\nM: はい。 [cite: 1528]\\nF: あの交差点を左に曲がってください。道の左側に銀行があります。喫茶店「みどり」は銀行のとなりですよ。 [cite: 1529, 1531]\\nM: 分かりました。ありがとうございます。 [cite: 1532]",
+              "attachment": "image_url_m1_q1.jpg",
+              "options": [
+                { "option_id": 1, "text": "Hình 1" },
+                { "option_id": 2, "text": "Hình 2" },
+                { "option_id": 3, "text": "Hình 3" },
+                { "option_id": 4, "text": "Hình 4" }
+              ],
+              "correct_option_id": 3,
+              "explanation": "Đáp án 3[cite: 1495]. Người phụ nữ chỉ đường: Rẽ trái ở ngã tư, quán giải khát nằm cạnh ngân hàng bên trái[cite: 1529, 1531]. Hình số 3 khớp với miêu tả này."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

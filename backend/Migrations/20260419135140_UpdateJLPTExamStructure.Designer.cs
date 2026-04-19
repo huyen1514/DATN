@@ -4,6 +4,7 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260419135140_UpdateJLPTExamStructure")]
+    partial class UpdateJLPTExamStructure
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,21 +94,6 @@ namespace backend.Migrations
                     b.Property<int>("LevelId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PassScaledListening")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PassScaledReading")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PassScaledTotal")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PassScaledVocabularyGrammar")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PassScaledVocabularyGrammarReading")
-                        .HasColumnType("int");
-
                     b.HasKey("ExamId");
 
                     b.HasIndex("LevelId");
@@ -133,13 +121,7 @@ namespace backend.Migrations
                     b.Property<int>("ExamId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Explanation")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Instruction")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MondaiNumber")

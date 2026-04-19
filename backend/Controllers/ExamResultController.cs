@@ -23,9 +23,40 @@ namespace Controllers
             if (!userExists)
                 return BadRequest("User không tồn tại");
 
-            var examExists = await _context.Exams.AnyAsync(x => x.ExamId == model.ExamId);
-            if (!examExists)
+            var exam = await _context.Exams.FindAsync(model.ExamId);
+            if (exam == null)
                 return BadRequest("Exam không tồn tại");
+
+            // Always recompute total on server
+            model.Score = model.VocabularyGrammarScore + model.ReadingScore + model.ListeningScore;
+
+            var passTotal = exam.PassScaledTotal ?? 0;
+
+            // Official JLPT format (N5..N1): (語彙・文法・読解)=120 + (聴解)=60, total=180
+            if (exam.PassScaledVocabularyGrammarReading.HasValue)
+            {
+                var passVgr = exam.PassScaledVocabularyGrammarReading.Value;
+                var passListening = exam.PassScaledListening ?? 0;
+
+                // Convention: client sends combined section score in VocabularyGrammarScore (0..120)
+                model.IsPassed =
+                    model.Score >= passTotal &&
+                    model.VocabularyGrammarScore >= passVgr &&
+                    model.ListeningScore >= passListening;
+            }
+            else
+            {
+                // Custom 3-part format (60+60+60)
+                var passVocabularyGrammar = exam.PassScaledVocabularyGrammar ?? 0;
+                var passReading = exam.PassScaledReading ?? 0;
+                var passListening = exam.PassScaledListening ?? 0;
+
+                model.IsPassed =
+                    model.Score >= passTotal &&
+                    model.VocabularyGrammarScore >= passVocabularyGrammar &&
+                    model.ReadingScore >= passReading &&
+                    model.ListeningScore >= passListening;
+            }
 
             model.CreatedAt = DateTime.UtcNow;
             if (model.CompletedAt == default)

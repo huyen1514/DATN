@@ -13,6 +13,14 @@ namespace Models
         [Required]
         public decimal Score  { get; set; }
 
+        public decimal VocabularyGrammarScore { get; set; }
+        
+        public decimal ReadingScore { get; set; }
+        
+        public decimal ListeningScore { get; set; }
+
+        public bool HasParalysisScore { get; set; }
+
         [Required]
         public int TotalQuestion { get; set; }
 

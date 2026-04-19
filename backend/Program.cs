@@ -26,6 +26,7 @@ builder.Services.AddScoped<GrammarImportService>();
 builder.Services.AddScoped<KanjiImportService>();
 builder.Services.AddScoped<ReadImportService>();
 builder.Services.AddScoped<ListenImportService>();
+builder.Services.AddScoped<ExamPdfImportService>();
 
 builder.Services.AddHttpContextAccessor();
 

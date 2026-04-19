@@ -155,3 +155,9 @@ D:\DATN\JapaneseLearning\backend\obj\Debug\net8.0\backend.pdb
 D:\DATN\JapaneseLearning\backend\obj\Debug\net8.0\backend.genruntimeconfig.cache
 D:\DATN\JapaneseLearning\backend\obj\Debug\net8.0\ref\backend.dll
 D:\DATN\JapaneseLearning\backend\bin\Debug\net8.0\backend.staticwebassets.runtime.json
+D:\DATN\JapaneseLearning\backend\bin\Debug\net8.0\SeedData\jlpt-n5-2018.json
+D:\DATN\JapaneseLearning\backend\bin\Debug\net8.0\UglyToad.PdfPig.dll
+D:\DATN\JapaneseLearning\backend\bin\Debug\net8.0\UglyToad.PdfPig.Core.dll
+D:\DATN\JapaneseLearning\backend\bin\Debug\net8.0\UglyToad.PdfPig.Fonts.dll
+D:\DATN\JapaneseLearning\backend\bin\Debug\net8.0\UglyToad.PdfPig.Tokenization.dll
+D:\DATN\JapaneseLearning\backend\bin\Debug\net8.0\UglyToad.PdfPig.Tokens.dll
