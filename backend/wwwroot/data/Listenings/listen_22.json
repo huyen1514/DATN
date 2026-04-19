@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 171,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：ミラーさんが住んでいる家はどこですか。\n女：あそこの白い家ですよ。\n男：庭が広い家ですね。いいですね。",
+        "Question": "ミラーさんが住んでいる家はどんな家ですか。",
+        "OptionA": "駅の近くの家",
+        "OptionB": "庭が広い白い家",
+        "OptionC": "古い家",
+        "OptionD": "赤い家",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 171,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：昨日買った辞書はどうですか。\n男：とても使いやすくて、いいですよ。漢字も調べることができますから。",
+        "Question": "男の人は昨日何をしましたか。",
+        "OptionA": "辞書を買いました",
+        "OptionB": "漢字を勉強しました",
+        "OptionC": "本屋へ行きました",
+        "OptionD": "友達に辞書を貸しました",
+        "CorrectAnswer": "A"
+    },
+    {
+        "LessonId": 171,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：あの、赤いシャツを着ている人はだれですか。\n女：ああ、あの人はカリナさんですよ。インドネシアから来た学生です。",
+        "Question": "カリナさんはどの人ですか。",
+        "OptionA": "青いシャツを着ている人",
+        "OptionB": "眼鏡をかけている人",
+        "OptionC": "赤いシャツを着ている人",
+        "OptionD": "帽子をかぶっている人",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 171,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：ワンさんが働いている病院はどこにありますか。\n男：神戸にあります。とても大きくて、きれいな病院です。",
+        "Question": "ワンさんはどこで働いていますか。",
+        "OptionA": "大阪の病院",
+        "OptionB": "大学の病院",
+        "OptionC": "神戸の病院",
+        "OptionD": "近くの薬局",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 171,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：週末、友達に会う約束がありますか。\n女：いいえ、ありません。家で宿題をします。",
+        "Question": "女の人は週末、何をしますか。",
+        "OptionA": "友達に会います",
+        "OptionB": "映画を見に行きます",
+        "OptionC": "家で宿題をします",
+        "OptionD": "買い物に行きます",
+        "CorrectAnswer": "C"
+    }
+]

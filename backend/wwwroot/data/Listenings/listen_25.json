@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 174,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：あした雨が降ったら、どこかへ行きますか。\n女：いいえ、どこへも行きません。家で本を読みます。\n男：そうですか。わたしもそうします。",
+        "Question": "二人はあした雨が降ったら、何をしますか。",
+        "OptionA": "映画を見に行きます",
+        "OptionB": "家で本を読みます",
+        "OptionC": "デパートへ買い物に行きます",
+        "OptionD": "友達に会います",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 174,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：大学を卒業したら、すぐ働きますか。\n男：いいえ、1年ぐらい世界を旅行したいです。\n女：いいですね。楽しそうですね。",
+        "Question": "男の人は大学を卒業してから、何をしますか。",
+        "OptionA": "すぐ会社で働きます",
+        "OptionB": "大学院へ行きます",
+        "OptionC": "世界を旅行します",
+        "OptionD": "日本へ来ます",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 174,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：暑いですね。エアコンをつけましょうか。\n女：いいえ、つけないでください。暑くても、エアコンは嫌いですから。",
+        "Question": "女の人はどうしてエアコンをつけませんか。",
+        "OptionA": "寒いですから",
+        "OptionB": "故障していますから",
+        "OptionC": "暑くても、エアコンが嫌いですから",
+        "OptionD": "電気代が高いですから",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 174,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：もし1億円あったら、何をしたいですか。\n男：会社を辞めて、広い家を買いたいです。佐藤さんは？\n女：わたしは学校を作りたいです。",
+        "Question": "男の人は1億円あったら、何をしますか。",
+        "OptionA": "学校を作ります",
+        "OptionB": "会社を作ります",
+        "OptionC": "会社を辞めて、広い家を買います",
+        "OptionD": "車を買います",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 174,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：駅に着いたら、電話をください。迎えに行きますから。\n女：ありがとうございます。10時ごろに着くと思います。\n男：わかりました。じゃ、後で。",
+        "Question": "女の人はいつ電話をかけますか。",
+        "OptionA": "電車に乗ったとき",
+        "OptionB": "駅に着いたとき",
+        "OptionC": "今すぐ",
+        "OptionD": "明日",
+        "CorrectAnswer": "B"
+    }
+]

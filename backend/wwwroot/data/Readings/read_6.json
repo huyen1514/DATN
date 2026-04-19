@@ -1,0 +1,13 @@
+[
+    {
+        "content": "<div class='reading-container'><h3 style='color: #d63031; border-bottom: 2px solid #d63031; padding-bottom: 5px;'>1. お知らせを 読みましょう (Hãy đọc thông báo)</h3><div class='image-wrapper' style='text-align:center; margin: 15px 0;'><img src='/images/readings/lesson-131/reading_131_01.jpg' alt='Tờ rơi ngắm hoa' style='max-width:100%; border-radius: 8px;'/></div><div style='background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px;'><p><b>お花見をしましょう</b></p><p>奈良の吉野山へ行きませんか。吉野山でお花見をします。電車とロープウエーで行きます。吉野山で昼ごはんを食べます。桜の写真を撮りましょう。みなさん、いっしょに行きましょう。</p><ul style='list-style-type: none; padding-left: 0;'><li><b>いつ：</b>4月18日（土曜日）</li><li><b>どこで：</b>近鉄あべの橋駅で 午前7時30分に会います</li><li><b>いくら：</b>2,500円（電車、ロープウエー）</li><li><b>持ち物：</b>お弁当、飲み物</li><li><b>申し込み：</b>田中（Tel. 194-0873）</li></ul></div><hr style='margin: 30px 0;'/><h3 style='color: #0984e3; border-bottom: 2px solid #0984e3; padding-bottom: 5px;'>2. 会話の（　）に ことばを 入れましょう</h3><div class='image-wrapper' style='text-align:center; margin: 15px 0;'><img src='/images/readings/lesson-131/reading_131_02.jpg' alt='Hội thoại Ann và Mel' style='max-width:100%; border-radius: 8px;'/></div><div style='padding: 10px;'><p><b>アン:</b> 4月18日に吉野山へ行きませんか。<br/><b>メル:</b> 何曜日ですか。<br/><b>アン:</b> （ ① ）です。<br/><b>メル:</b> 何をしますか。<br/><b>アン:</b> （ ② ）をします。<br/><b>メル:</b> いいですね。何時に行きますか。<br/><b>アン:</b> （ ③ ）に近鉄あべの橋駅で会いましょう。電車とロープウエーで行きます。<br/><b>メル:</b> いくらですか。<br/><b>アン:</b> （ ④ ）です。お弁当と（ ⑤ ）を持って行きます。<br/><b>メル:</b> わかりました。じゃ、18日に会いましょう。</p></div></div>",
+        "question": "会話の（ ① ）に入る正しいことばはどれですか。",
+        "option1": "金曜日",
+        "option2": "土曜日",
+        "option3": "日曜日",
+        "option4": "月曜日",
+        "correctOption": 2,
+        "imageUrl": "/images/readings/lesson-131/reading_131_thumb.jpg",
+        "lessonId": 131
+    }
+]

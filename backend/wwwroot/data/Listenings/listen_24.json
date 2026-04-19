@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 173,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：ミラーさん、そのネクタイ、すてきですね。\n女：ありがとうございます。誕生日に佐藤さんがくれました。\n男：そうですか。よかったですね。",
+        "Question": "だれがネクタイをくれましたか。",
+        "OptionA": "山田さん",
+        "OptionB": "佐藤さん",
+        "OptionC": "ミラーさん",
+        "OptionD": "お父さん",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 173,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：荷物、重そうですね。駅まで持ってあげましょうか。\n男：すみません。お願いします。助かります。",
+        "Question": "女の人は男の人に何をしますか。",
+        "OptionA": "荷物を送ります",
+        "OptionB": "荷物を買います",
+        "OptionC": "荷物を持ってあげます",
+        "OptionD": "道をおしえます",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 173,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：日本語が上手ですね。だれに教えてもらいましたか。\n女：カリナさんに教えてもらいました。\n男：そうですか。カリナさんは教えるのが上手ですね。",
+        "Question": "女の人はだれに日本語を教えてもらいましたか。",
+        "OptionA": "カリナさん",
+        "OptionB": "ミラーさん",
+        "OptionC": "山田先生",
+        "OptionD": "一人で勉強しました",
+        "CorrectAnswer": "A"
+    },
+    {
+        "LessonId": 173,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：太郎君、お父さんはどこですか。\n男（子）：駅までおじいさんを迎えに行きました。\n女：ああ、そうですか。",
+        "Question": "お父さんは何をしていますか。",
+        "OptionA": "おじいさんを駅まで送っています",
+        "OptionB": "おじいさんを駅まで迎えに行っています",
+        "OptionC": "駅でおじいさんを待っています",
+        "OptionD": "家でおじいさんを待っています",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 173,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：明日、引っ越しですね。手伝いに行きましょうか。\n女：ありがとうございます。じゃ、10時にお願いします。\n男：わかりました。車で行きますね。",
+        "Question": "男の人は明日、何をしますか。",
+        "OptionA": "車を貸します",
+        "OptionB": "引っ越しの手伝いに行きます",
+        "OptionC": "10時に電話をかけます",
+        "OptionD": "仕事に行きます",
+        "CorrectAnswer": "B"
+    }
+]

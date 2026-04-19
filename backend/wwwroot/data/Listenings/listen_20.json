@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 169,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：あした、どこか行く？\n女：ううん、どこも行かない。家でゆっくり休む。\n男：そう。じゃ、ぼくは映画を見に行くよ。",
+        "Question": "女の人はあした何をしますか。",
+        "OptionA": "映画を見に行きます",
+        "OptionB": "どこかへ行きます",
+        "OptionC": "家で休みます",
+        "OptionD": "友達に会います",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 169,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：これ、食べる？おいしいよ。\n男：うん、食べる。あ、本当だ。甘くておいしいね。",
+        "Question": "男の人は食べ物を食べましたか。",
+        "OptionA": "はい、食べました",
+        "OptionB": "いいえ、食べませんでした",
+        "OptionC": "甘いですから、食べません",
+        "OptionD": "あとで食べます",
+        "CorrectAnswer": "A"
+    },
+    {
+        "LessonId": 169,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：パスポート、持ってる？\n女：うん、持ってるよ。かばんの中にある。\n男：じゃ、ちょっと見せて。",
+        "Question": "パスポートはどこにありますか。",
+        "OptionA": "男の人の手の中",
+        "OptionB": "かばんの中",
+        "OptionC": "家",
+        "OptionD": "ポケットの中",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 169,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：今度の土曜日、暇？\n男：ううん、忙しい。アルバイトがあるんだ。\n女：そう。残念ね。",
+        "Question": "男の人は土曜日に何がありますか。",
+        "OptionA": "休み",
+        "OptionB": "パーティー",
+        "OptionC": "アルバイト",
+        "OptionD": "授業",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 169,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：日本語の勉強はどう？難しい？\n女：ううん、難しくないよ。とてもおもしろい。\n男：そう。よかったね。",
+        "Question": "女の人は日本語の勉強をどう思っていますか。",
+        "OptionA": "難しいです",
+        "OptionB": "おもしろくないです",
+        "OptionC": "難しくなくて、おもしろいです",
+        "OptionD": "大変です",
+        "CorrectAnswer": "C"
+    }
+]

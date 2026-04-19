@@ -91,5 +91,42 @@ namespace Controllers
 
             return Ok("Đã xoá exam");
         }
+
+        [HttpPost("seed")]
+        public async Task<IActionResult> SeedExams()
+        {
+            var user = await _context.Users.FirstOrDefaultAsync();
+            if (user == null)
+            {
+                user = new User { UserName = "admin_seed", Email = "admin@seed.com", PassWord = "hash", FullName = "Admin", Role = "Admin", IsActive = true, CreatedAt = DateTime.UtcNow };
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+            }
+
+            var level = await _context.Levels.FirstOrDefaultAsync();
+            if (level == null)
+            {
+                level = new Level { LevelName = "N5", Description = "Level N5" };
+                _context.Levels.Add(level);
+                await _context.SaveChangesAsync();
+            }
+
+            var exam1 = new Exam { ExamName = "JLPT N5 - Đề thi thử (Có Nghe)", Duration = 45, LevelId = level.LevelId, CreatedAt = DateTime.UtcNow };
+            _context.Exams.Add(exam1);
+            await _context.SaveChangesAsync();
+
+            var questions = new List<ExamQuestion>
+            {
+                new ExamQuestion { ExamId = exam1.ExamId, UserId = user.UserId, Question = "Từ 「学生」đọc là gì?", OptionA = "がくせい", OptionB = "がくせ", OptionC = "がっしょう", OptionD = "がくしょう", CorrectAnswer = AnswerOption.A, AudioUrl = "" },
+                new ExamQuestion { ExamId = exam1.ExamId, UserId = user.UserId, Question = "Hãy nghe đoạn băng sau và chọn câu đúng.", OptionA = "Cô gái đi mua sắm.", OptionB = "Cậu bé đi thư viện.", OptionC = "Cô gái đi học.", OptionD = "Cả hai đi xem phim.", CorrectAnswer = AnswerOption.B, AudioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+                new ExamQuestion { ExamId = exam1.ExamId, UserId = user.UserId, Question = "Điền vào chỗ trống: わたし＿＿ベトナム人です。", OptionA = "が", OptionB = "は", OptionC = "の", OptionD = "を", CorrectAnswer = AnswerOption.B, AudioUrl = "" },
+                new ExamQuestion { ExamId = exam1.ExamId, UserId = user.UserId, Question = "Hôm nay là thứ mấy? (Theo đoạn nghe)", OptionA = "Thứ hai", OptionB = "Thứ ba", OptionC = "Thứ sáu", OptionD = "Chủ nhật", CorrectAnswer = AnswerOption.C, AudioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" }
+            };
+
+            _context.ExamQuestions.AddRange(questions);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { Message = "Đã tạo dữ liệu mẫu thành công!", ExamId = exam1.ExamId });
+        }
     }
 }

@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 156,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：すみません。「ありがとう」は英語で何ですか。\n男：\"Thank you\" です。\n女：そうですか。ありがとうございます。",
+        "Question": "「ありがとう」は英語で何ですか。",
+        "OptionA": "Hello",
+        "OptionB": "Thank you",
+        "OptionC": "Goodbye",
+        "OptionD": "Sorry",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 156,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：ミラーさん、その時計、すてきですね。\n女：あ、これですか。誕生日に父にもらいました。\n男：そうですか。いいですね。",
+        "Question": "女の人はだれに時計をもらいましたか。",
+        "OptionA": "母",
+        "OptionB": "友達",
+        "OptionC": "父",
+        "OptionD": "先生",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 156,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：イーさん、もうお昼ご飯を食べましたか。\n女：いいえ、まだです。これから食べます。\n男：そうですか。じゃ、いっしょに行きませんか。",
+        "Question": "イーさんはもうご飯を食べましたか。",
+        "OptionA": "はい、食べました",
+        "OptionB": "いいえ、まだです",
+        "OptionC": "食べませんでした",
+        "OptionD": "朝ごはんを食べました",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 156,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：サントスさん、パソコンで手紙を書きますか。\n男：いいえ、ボールペンで書きます。\n女：そうですか。",
+        "Question": "サントスさんは何で手紙を書きますか。",
+        "OptionA": "パソコン",
+        "OptionB": "鉛筆",
+        "OptionC": "ボールペン",
+        "OptionD": "万年筆",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 156,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：山田さん、もう荷物を送りましたか。\n女：ええ、もう送りました。\n男：そうですか。",
+        "Question": "山田さんはもう荷物を送りましたか。",
+        "OptionA": "はい、もう送りました",
+        "OptionB": "いいえ、まだです",
+        "OptionC": "送りません",
+        "OptionD": "あした送ります",
+        "CorrectAnswer": "A"
+    }
+]

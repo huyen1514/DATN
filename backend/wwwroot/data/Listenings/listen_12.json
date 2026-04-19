@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 161,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：北海道はどうでしたか。\n女：とてもきれいでしたが、ちょっと寒かったです。\n男：そうですか。",
+        "Question": "北海道はどうでしたか。",
+        "OptionA": "寒くなかったです",
+        "OptionB": "きれいではありませんでした",
+        "OptionC": "きれいで、寒かったです",
+        "OptionD": "暑かったです",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 161,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：紅茶とコーヒーとどちらが好きですか。\n男：そうですね。コーヒーのほうが好きです。",
+        "Question": "男の人はどちらが好きですか。",
+        "OptionA": "紅茶",
+        "OptionB": "コーヒー",
+        "OptionC": "どちらも好きです",
+        "OptionD": "どちらも嫌いです",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 161,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：1年でいつがいちばん暑いですか。\n女：8月がいちばん暑いです。",
+        "Question": "1年でいつがいちばん暑いですか。",
+        "OptionA": "7月",
+        "OptionB": "8月",
+        "OptionC": "9月",
+        "OptionD": "10月",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 161,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：昨日のパーティーはどうでしたか。\n男：とてもにぎやかでした。料理もおいしかったです。\n女：そうですか。よかったですね。",
+        "Question": "昨日のパーティーはどうでしたか。",
+        "OptionA": "静かでした",
+        "OptionB": "料理がおいしくなかったです",
+        "OptionC": "にぎやかで、料理がおいしかったです",
+        "OptionD": "つまらなかったです",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 161,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：スポーツの中で何がいちばんおもしろいですか。\n女：サッカーがいちばんおもしろいです。\n男：そうですか。わたしは野球のほうが好きです。",
+        "Question": "女の人は何がいちばんおもしろいと思っていますか。",
+        "OptionA": "野球",
+        "OptionB": "テニス",
+        "OptionC": "サッカー",
+        "OptionD": "水泳",
+        "CorrectAnswer": "C"
+    }
+]

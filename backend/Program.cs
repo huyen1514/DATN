@@ -25,6 +25,7 @@ builder.Services.AddScoped<VocabImportService>();
 builder.Services.AddScoped<GrammarImportService>();
 builder.Services.AddScoped<KanjiImportService>();
 builder.Services.AddScoped<ReadImportService>();
+builder.Services.AddScoped<ListenImportService>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -213,6 +214,17 @@ using (var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         Console.WriteLine("Reading Import failed: " + ex.Message);
+    }
+
+    var listenImporter = scope.ServiceProvider.GetRequiredService<ListenImportService>();
+    try 
+    {
+        await listenImporter.ImportAllFromFolderAsync(); 
+        Console.WriteLine("Listening Import check completed.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Listening Import failed: " + ex.Message);
     }
 }
 

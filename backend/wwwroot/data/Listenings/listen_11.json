@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 160,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：りんごをいくつ買いましたか。\n女：４つ買いました。\n男：えっ、５つじゃありませんか。\n女：いいえ、４つですよ。",
+        "Question": "Người phụ nữ đã mua mấy quả táo?",
+        "OptionA": "3 quả",
+        "OptionB": "4 quả",
+        "OptionC": "5 quả",
+        "OptionD": "6 quả",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 160,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：ご家族は何人ですか。\n男：５人です。両親と姉が二人います。\n女：そうですか。",
+        "Question": "Gia đình người đàn ông có mấy người?",
+        "OptionA": "3 người",
+        "OptionB": "4 người",
+        "OptionC": "5 người",
+        "OptionD": "6 người",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 160,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：毎日、何時間ぐらい日本語を勉強しますか。\n女：２時間勉強します。でも、土曜日と日曜日はしません。",
+        "Question": "Người phụ nữ học tiếng Nhật bao lâu mỗi ngày?",
+        "OptionA": "1 giờ",
+        "OptionB": "2 giờ",
+        "OptionC": "3 giờ",
+        "OptionD": "Không học",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 160,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：ここから東京まで新幹線でどのくらいかかりますか。\n男：２時間半かかります。\n女：そうですか。意外に早いですね。",
+        "Question": "Từ đây đến Tokyo đi bằng Shinkansen mất bao lâu?",
+        "OptionA": "2 giờ",
+        "OptionB": "2 giờ 15 phút",
+        "OptionC": "2 giờ 30 phút",
+        "OptionD": "3 giờ",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 160,
+        "AudioUrl": " ",
+        "ImageUrl": "",
+        "Transcript": "男：１か月に何回ぐらい映画を見ますか。\n女：そうですね。２回ぐらい見ます。",
+        "Question": "Một tháng người phụ nữ xem phim khoảng mấy lần?",
+        "OptionA": "1 lần",
+        "OptionB": "2 lần",
+        "OptionC": "3 lần",
+        "OptionD": "4 lần",
+        "CorrectAnswer": "B"
+    }
+]

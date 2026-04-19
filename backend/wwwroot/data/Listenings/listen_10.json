@@ -1,0 +1,62 @@
+[
+    {
+        "LessonId": 159,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：すみません。ポストはどこにありますか。\n女：あそこにあります。デパートの隣です。\n男：あ、わかりました。ありがとうございます。",
+        "Question": "ポストはどこにありますか。",
+        "OptionA": "デパートの前",
+        "OptionB": "デパートの隣",
+        "OptionC": "デパートの後ろ",
+        "OptionD": "銀行の隣",
+        "CorrectAnswer": "B"
+    },
+    {
+        "LessonId": 159,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：冷蔵庫の中に何がありますか。\n男：えーと、ビールと卵があります。\n女：牛乳はありませんか。\n男：はい、ありません。",
+        "Question": "冷蔵庫の中に何がありますか。",
+        "OptionA": "ビールと牛乳",
+        "OptionB": "卵と牛乳",
+        "OptionC": "ビールと卵",
+        "OptionD": "肉と魚",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 159,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：あ、猫がいますね。\n女：どこですか。\n男：椅子の下にいますよ。\n女：あ、本当ですね。かわいいですね。",
+        "Question": "猫はどこにいますか。",
+        "OptionA": "椅子の下",
+        "OptionB": "椅子の上",
+        "OptionC": "机の下",
+        "OptionD": "箱の中",
+        "CorrectAnswer": "A"
+    },
+    {
+        "LessonId": 159,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "女：事務所にだれがいますか。\n男：佐藤さんとミラーさんがいます。\n女：山田さんは？\n男：山田さんはあそこにいますよ。受付です。",
+        "Question": "山田さんはどこにいますか。",
+        "OptionA": "事務所",
+        "OptionB": "会議室",
+        "OptionC": "受付",
+        "OptionD": "食堂",
+        "CorrectAnswer": "C"
+    },
+    {
+        "LessonId": 159,
+        "AudioUrl": "",
+        "ImageUrl": "",
+        "Transcript": "男：この近くにコンビニがありますか。\n女：はい、あります。あそこの高いビルの後ろです。\n男：そうですか。ありがとうございます。",
+        "Question": "コンビニはどこにありますか。",
+        "OptionA": "高いビルの前",
+        "OptionB": "駅の隣",
+        "OptionC": "高いビルの後ろ",
+        "OptionD": "公園の中",
+        "CorrectAnswer": "C"
+    }
+]
