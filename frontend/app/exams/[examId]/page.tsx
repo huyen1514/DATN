@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { api } from "@/lib/api";
-import { Clock, ChevronLeft, ChevronRight, Send, AlertTriangle } from "lucide-react";
+import { Clock, ChevronLeft, ChevronRight, Send, AlertTriangle, Play, Pause, Volume2 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 
 interface ExamQuestion {
@@ -38,7 +38,19 @@ export default function TakeExamPage() {
   const [showConfirm, setShowConfirm] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(1);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
   useEffect(() => { loadExam(); }, [examId]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    setIsPlaying(false);
+  }, [currentIndex]);
 
   useEffect(() => {
     if (timeLeft <= 0) return;
@@ -72,6 +84,25 @@ export default function TakeExamPage() {
 
   const selectAnswer = (questionId: number, answerIdx: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: answerIdx }));
+  };
+
+  const handlePlayPause = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play().catch(e => console.error("Audio error", e));
+      setIsPlaying(true);
+    }
+  };
+
+  const handleEnded = () => setIsPlaying(false);
+
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newVol = parseFloat(e.target.value);
+    setVolume(newVol);
+    if (audioRef.current) audioRef.current.volume = newVol;
   };
 
   const handleSubmit = useCallback(async () => {
@@ -205,8 +236,39 @@ export default function TakeExamPage() {
               </div>
             </div>
 
+            {/* Audio Player (If URL exists) */}
+            {current.audioUrl && (
+              <div className="mb-6 bg-jp-indigo/5 border border-jp-indigo/10 rounded-2xl p-4 flex flex-col md:flex-row items-center gap-4 animate-fade-in shadow-inner">
+                <audio ref={audioRef} src={current.audioUrl} onEnded={handleEnded} className="hidden" />
+                
+                <button 
+                  onClick={handlePlayPause} 
+                  className={`w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full text-white transition-all shadow-md 
+                    ${isPlaying ? "bg-red-500 hover:bg-red-600 animate-pulse" : "bg-jp-indigo hover:bg-jp-indigo/90"}`}
+                >
+                  {isPlaying ? <Pause size={20} /> : <Play size={20} className="ml-1" />}
+                </button>
+                
+                <div className="flex-1 w-full text-center md:text-left">
+                  <p className="font-bold text-jp-indigo mb-1 text-sm">File nghe câu hỏi</p>
+                  <p className="text-xs text-neutral-500">{isPlaying ? "Đang phát..." : "Nhấn nút để nghe"}</p>
+                </div>
+                
+                <div className="flex items-center gap-2 w-full md:w-auto">
+                  <Volume2 size={16} className="text-neutral-400" />
+                  <input 
+                    type="range" min="0" max="1" step="0.05" 
+                    value={volume} 
+                    onChange={handleVolumeChange} 
+                    className="w-24 h-1.5 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-jp-indigo" 
+                  />
+                </div>
+              </div>
+            )}
+
             {/* Question */}
-            <div className="bg-white rounded-2xl shadow-sm border border-black/5 p-8 mb-6">
+            <div className="bg-white rounded-2xl shadow-sm border border-black/5 p-8 mb-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-jp-indigo to-jp-red" />
               <p className="text-xl font-bold text-jp-indigo leading-relaxed">{current.question}</p>
             </div>
 

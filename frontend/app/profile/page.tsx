@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import StudentLayout from "@/components/StudentLayout";
-import { UserCircle, Mail, Shield, Calendar, Trophy, ClipboardList, CheckCircle2, XCircle } from "lucide-react";
+import { UserCircle, Mail, Shield, Calendar, Trophy, ClipboardList, CheckCircle2, XCircle, Clock } from "lucide-react";
 
 interface UserProfile {
   userId: number;
@@ -145,7 +145,16 @@ export default function ProfilePage() {
                         </div>
                         <div>
                           <p className="font-bold text-jp-indigo text-sm">{r.exam?.examName || "Đề thi"}</p>
-                          <p className="text-xs text-neutral-400">{new Date(r.completedAt).toLocaleDateString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}</p>
+                          <div className="flex items-center gap-3 mt-1">
+                            <p className="text-[11px] text-neutral-400 flex items-center gap-1">
+                              <Calendar size={12} /> {new Date(r.completedAt).toLocaleDateString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
+                            </p>
+                            {r.duration > 0 && (
+                              <p className="text-[11px] text-neutral-400 flex items-center gap-1">
+                                <Clock size={12} /> {Math.floor(r.duration / 60)} phút {r.duration % 60} giây
+                              </p>
+                            )}
+                          </div>
                         </div>
                       </div>
                       <div className="text-right">

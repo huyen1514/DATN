@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import Link from "next/link";
 import StudentLayout from "@/components/StudentLayout";
-import { ClipboardList, Clock, GraduationCap, Play } from "lucide-react";
+import { ClipboardList, Clock, GraduationCap, Play, Lock, Unlock, Loader2 } from "lucide-react";
 
 interface Exam {
   examId: number;
@@ -22,7 +22,45 @@ export default function ExamsPage() {
   const [filterLevel, setFilterLevel] = useState<number | "all">("all");
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { loadData(); }, []);
+  const [userExams, setUserExams] = useState<number[]>([]);
+  const [currentUser, setCurrentUser] = useState<{userId: number} | null>(null);
+  const [unlocking, setUnlocking] = useState<number | null>(null);
+
+  useEffect(() => { 
+    loadData(); 
+    const userStr = localStorage.getItem("user");
+    if (userStr) {
+      const u = JSON.parse(userStr);
+      setCurrentUser(u);
+      loadUserExams(u.userId);
+    }
+  }, []);
+
+  const loadUserExams = async (userId: number) => {
+    try {
+      const data = await api(`/user-exams?userId=${userId}`);
+      if (Array.isArray(data)) {
+        setUserExams(data.map((ue: any) => ue.examId));
+      }
+    } catch (e) { console.error(e); }
+  };
+
+  const handleUnlock = async (examId: number) => {
+    if (!currentUser) {
+      alert("Vui lòng đăng nhập để mở khoá đề thi định kì!");
+      return;
+    }
+    setUnlocking(examId);
+    try {
+      await api("/user-exams", "POST", {
+        userId: currentUser.userId,
+        examId: examId,
+        purchaseDate: new Date().toISOString()
+      });
+      await loadUserExams(currentUser.userId);
+    } catch (e) { console.error(e); alert("Có lỗi xảy ra khi mở khoá."); }
+    finally { setUnlocking(null); }
+  };
 
   const loadData = async () => {
     try {
@@ -73,11 +111,21 @@ export default function ExamsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {filtered.map(exam => (
-              <div key={exam.examId} className="group bg-white rounded-3xl border border-black/5 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden">
+            {filtered.map(exam => {
+              // Tạm thời để tất cả bằng true (Free hết)
+              const isUnlocked = true; // userExams.includes(exam.examId);
+              return (
+              <div key={exam.examId} className={`group bg-white rounded-3xl border border-black/5 shadow-sm transition-all duration-300 overflow-hidden relative ${isUnlocked ? "hover:-translate-y-0.5 hover:shadow-xl" : "opacity-90 hover:opacity-100"}`}>
+                
+                {!isUnlocked && (
+                  <div className="absolute top-4 right-4 bg-black/5 backdrop-blur-sm p-3 rounded-2xl text-neutral-400 z-10 shadow-inner border border-black/5">
+                    <Lock size={16} />
+                  </div>
+                )}
+
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold bg-violet-50 text-violet-600 px-3 py-1 rounded-full flex items-center gap-1">
+                  <div className="flex items-center justify-between mb-4 mt-2">
+                    <span className={`text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 ${isUnlocked ? "bg-violet-50 text-violet-600" : "bg-neutral-100 text-neutral-500"}`}>
                       <GraduationCap size={12} /> {exam.level?.levelName || `Level ${exam.levelId}`}
                     </span>
                     <span className="text-xs font-bold text-neutral-400 flex items-center gap-1">
@@ -85,19 +133,30 @@ export default function ExamsPage() {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-jp-indigo mb-4 group-hover:text-jp-red transition-colors">
+                  <h3 className={`text-xl font-bold mb-4 transition-colors ${isUnlocked ? "text-jp-indigo group-hover:text-jp-red" : "text-neutral-500"}`}>
                     {exam.examName}
                   </h3>
 
-                  <Link
-                    href={`/exams/${exam.examId}`}
-                    className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-jp-indigo to-jp-red text-white rounded-xl font-bold text-sm hover:shadow-lg transition-all"
-                  >
-                    <Play size={16} /> Bắt đầu thi
-                  </Link>
+                  {isUnlocked ? (
+                    <Link
+                      href={`/exams/${exam.examId}`}
+                      className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-jp-indigo to-jp-red text-white rounded-xl font-bold text-sm hover:shadow-lg hover:scale-[1.02] transition-all"
+                    >
+                      <Play size={16} /> Bắt đầu thi
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => handleUnlock(exam.examId)}
+                      disabled={unlocking === exam.examId}
+                      className="flex items-center justify-center gap-2 w-full py-3 bg-neutral-100 text-neutral-500 rounded-xl font-bold text-sm hover:bg-neutral-200 hover:text-neutral-700 transition-all disabled:opacity-50"
+                    >
+                      {unlocking === exam.examId ? <Loader2 size={16} className="animate-spin" /> : <Unlock size={16} />}
+                      Mở khoá Đề Thi
+                    </button>
+                  )}
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         )}
       </div>

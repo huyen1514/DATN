@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
 import Link from "next/link";
@@ -29,8 +29,202 @@ interface ListeningItem {
   optionB: string;
   optionC: string;
   optionD: string;
+  correctAnswer?: string; // Chú ý: Backend cần trả về trường này (vd: "A", "B", "C", "D")
 }
 
+// COMPONENT CON: Xử lý độc lập cho từng câu hỏi
+function ListeningCard({ item, idx }: { item: ListeningItem; idx: number }) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(1);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [showScript, setShowScript] = useState(false);
+
+  const handlePlay = () => {
+    if (audioRef.current && !isPlaying) {
+      audioRef.current.play().catch(e => console.error("Audio play error:", e));
+      setIsPlaying(true);
+    }
+  };
+
+  const handleEnded = () => {
+    setIsPlaying(false);
+  };
+
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
+    }
+  };
+
+  return (
+    <div className="group bg-white rounded-2xl border-2 border-jp-red/10 hover:border-jp-red/30 p-6 md:p-8 transition-all shadow-sm hover:shadow-lg">
+
+      {/* Ẩn thẻ audio mặc định đi, chỉ dùng để xử lý logic */}
+      {item.audioUrl && (
+        <audio
+          ref={audioRef}
+          src={item.audioUrl}
+          onEnded={handleEnded}
+          className="hidden"
+        />
+      )}
+
+      {/* HEADER CỦA CÂU HỎI (SỐ THỨ TỰ & AUDIO TÍNH NĂNG) */}
+      <div className="flex flex-wrap items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-full bg-jp-sakura flex items-center justify-center flex-shrink-0 font-serif font-bold text-jp-red">
+          {(idx + 1).toString().padStart(2, "0")}
+        </div>
+        <h3 className="text-xl font-serif font-bold text-jp-indigo">
+          Câu {idx + 1}
+        </h3>
+
+        {item.audioUrl && (
+          <div className="ml-auto flex items-center gap-4">
+            {/* Chỉnh âm lượng (Ẩn trên mobile, hiện trên màn to) */}
+            <div className="hidden sm:flex items-center gap-2">
+              <span className="text-xs text-jp-ink/60">🔉</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.05"
+                value={volume}
+                onChange={handleVolumeChange}
+                className="w-20 h-1 bg-jp-sakura rounded-lg appearance-none cursor-pointer accent-jp-red"
+                title="Âm lượng"
+              />
+            </div>
+
+            {/* Nút Nghe */}
+            <button
+              onClick={handlePlay}
+              disabled={isPlaying}
+              className={`px-4 py-2 rounded-lg font-bold transition text-sm flex items-center gap-2 ${isPlaying
+                  ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                  : "bg-jp-red hover:bg-red-700 text-white"
+                }`}
+              title={isPlaying ? "Đang phát..." : "Phát âm thanh"}
+            >
+              {isPlaying ? "⏳ Đang phát..." : "🔊 Nghe"}
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* HIỂN THỊ CHỈNH ÂM LƯỢNG TRÊN MOBILE KHI XUỐNG DÒNG */}
+      {item.audioUrl && (
+        <div className="flex sm:hidden items-center justify-end gap-2 mb-4">
+          <span className="text-xs text-jp-ink/60">🔉</span>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value={volume}
+            onChange={handleVolumeChange}
+            className="w-full max-w-[120px] h-1 bg-jp-sakura rounded-lg appearance-none cursor-pointer accent-jp-red"
+          />
+        </div>
+      )}
+
+      {/* HÌNH ẢNH MINH HỌA (NẾU CÓ) */}
+      {item.imageUrl && (
+        <div className="mb-4 flex justify-center">
+          <img
+            src={item.imageUrl}
+            alt="Hình minh họa"
+            className="max-h-64 rounded-lg border border-jp-red/10 object-contain"
+          />
+        </div>
+      )}
+
+      {/* CÂU HỎI */}
+      <div className="bg-jp-washi/50 rounded-lg border border-jp-red/10 p-4 mb-4">
+        <p className="text-jp-ink font-serif font-bold leading-relaxed">{item.question}</p>
+      </div>
+
+      {/* ĐÁP ÁN (OPTIONS) */}
+      <div className="space-y-2 mb-4">
+        {["A", "B", "C", "D"].map((option) => {
+          const valueKey = `option${option}` as keyof ListeningItem;
+          const text = item[valueKey];
+
+          // Trạng thái kiểm tra đáp án
+          const isSelected = selectedOption === option;
+          const hasAnswered = selectedOption !== null;
+          // So sánh với đáp án đúng từ API
+          const isCorrectAnswer = option === item.correctAnswer;
+
+          // Logic Class CSS
+          let wrapperClass = "border-jp-red/10 hover:border-jp-red/30 hover:bg-jp-sakura/10 cursor-pointer";
+          let iconClass = "bg-jp-sakura text-jp-red";
+          let textClass = "text-jp-ink";
+
+          if (hasAnswered) {
+            wrapperClass = "border-gray-200 cursor-not-allowed opacity-60"; // Làm mờ các đáp án không được chọn mặc định
+
+            if (isCorrectAnswer) {
+              // Đáp án đúng -> Màu Xanh lá
+              wrapperClass = "border-green-500 bg-green-50 shadow-sm opacity-100";
+              iconClass = "bg-green-500 text-white";
+              textClass = "text-green-700 font-bold";
+            } else if (isSelected) {
+              // Chọn sai -> Màu Đỏ
+              wrapperClass = "border-red-500 bg-red-50 shadow-sm opacity-100";
+              iconClass = "bg-red-500 text-white";
+              textClass = "text-red-700 font-bold";
+            }
+          }
+
+          return (
+            <div
+              key={option}
+              onClick={() => {
+                // Khóa chọn lại: Chỉ cho phép chọn nếu chưa trả lời
+                if (!hasAnswered) {
+                  setSelectedOption(option);
+                }
+              }}
+              className={`flex items-start gap-3 p-3 border rounded-lg transition-all duration-300 ${wrapperClass}`}
+            >
+              <span className={`w-8 h-8 font-bold rounded-lg flex items-center justify-center text-sm flex-shrink-0 transition-colors ${iconClass}`}>
+                {option}
+              </span>
+              <span className={`text-sm leading-relaxed ${textClass}`}>
+                {text}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* SCRIPT TOGGLE */}
+      {item.transcript && (
+        <div className="mt-6">
+          <button
+            onClick={() => setShowScript(!showScript)}
+            className="text-sm font-bold text-jp-red/80 hover:text-jp-red mb-3 inline-block transition-colors"
+          >
+            {showScript ? "▲ Ẩn Script" : "▼ Hiển thị Script"}
+          </button>
+
+          {showScript && (
+            <div className="bg-jp-sakura/20 rounded-lg p-4 border border-jp-red/10 animate-fade-in">
+              <p className="text-xs font-bold text-jp-red/70 uppercase tracking-wide mb-2">Bản ghi chép</p>
+              <p className="text-sm text-jp-ink italic">{item.transcript}</p>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// MAIN PAGE COMPONENT
 export default function ListeningDetailPage() {
   const params = useParams();
   const levelName = params.levelName as string;
@@ -50,8 +244,8 @@ export default function ListeningDetailPage() {
       ]);
 
       if (Array.isArray(lessonsData)) {
-        const filtered = lessonsData.filter((l: Lesson) => 
-          l.level?.levelName === levelName && 
+        const filtered = lessonsData.filter((l: Lesson) =>
+          l.level?.levelName === levelName &&
           (!l.skillType || l.skillType === "Nghe hiểu" || l.skillType === "Tự do")
         );
         setLessons(filtered);
@@ -97,7 +291,7 @@ export default function ListeningDetailPage() {
           <div className="lg:col-span-3 space-y-6">
             {isLoading ? (
               <div className="text-center py-12 text-jp-ink/40">
-                <p className="text-lg">正在加载...</p>
+                <p className="text-lg">Đang tải...</p>
               </div>
             ) : listenings.length === 0 ? (
               <div className="bg-white rounded-2xl border-2 border-jp-red/10 p-12 text-center">
@@ -105,71 +299,7 @@ export default function ListeningDetailPage() {
               </div>
             ) : (
               listenings.map((item, idx) => (
-                <div 
-                  key={item.listeningId} 
-                  className="group bg-white rounded-2xl border-2 border-jp-red/10 hover:border-jp-red/30 p-6 md:p-8 transition-all shadow-sm hover:shadow-lg"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-jp-sakura flex items-center justify-center flex-shrink-0 font-serif font-bold text-jp-red">
-                      {(idx + 1).toString().padStart(2, "0")}
-                    </div>
-                    <h3 className="text-xl font-serif font-bold text-jp-indigo">
-                      Câu {idx + 1}
-                    </h3>
-                    {item.audioUrl && (
-                      <button
-                        onClick={() => {
-                          const audio = new Audio(item.audioUrl);
-                          audio.play().catch(e => console.error("Audio play error:", e));
-                        }}
-                        className="ml-auto px-4 py-2 bg-jp-red hover:bg-red-700 text-white rounded-lg font-bold transition text-sm"
-                        title="Phát âm thanh"
-                      >
-                        🔊 Nghe
-                      </button>
-                    )}
-                  </div>
-
-                  {item.imageUrl && (
-                    <div className="mb-4 flex justify-center">
-                      <img 
-                        src={item.imageUrl}
-                        alt="Hình minh họa"
-                        className="max-h-64 rounded-lg border border-jp-red/10 object-contain"
-                      />
-                    </div>
-                  )}
-
-                  <div className="bg-jp-washi/50 rounded-lg border border-jp-red/10 p-4 mb-4">
-                    <p className="text-jp-ink font-serif font-bold leading-relaxed">{item.question}</p>
-                  </div>
-
-                  {/* OPTIONS */}
-                  <div className="space-y-2 mb-4">
-                    {["A", "B", "C", "D"].map((option) => {
-                      const valueKey = `option${option}` as keyof ListeningItem;
-                      const text = item[valueKey];
-                      return (
-                        <div 
-                          key={option} 
-                          className="flex items-start gap-3 p-3 border border-jp-red/10 rounded-lg hover:border-jp-red/30 hover:bg-jp-sakura/10 transition cursor-pointer"
-                        >
-                          <span className="w-8 h-8 font-bold bg-jp-sakura text-jp-red rounded-lg flex items-center justify-center text-sm flex-shrink-0">
-                            {option}
-                          </span>
-                          <span className="text-sm text-jp-ink leading-relaxed">{text}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {item.transcript && (
-                    <div className="bg-jp-sakura/20 rounded-lg p-4 border border-jp-red/10">
-                      <p className="text-xs font-bold text-jp-red/70 uppercase tracking-wide mb-2">Bản ghi chép</p>
-                      <p className="text-sm text-jp-ink italic">{item.transcript}</p>
-                    </div>
-                  )}
-                </div>
+                <ListeningCard key={item.listeningId} item={item} idx={idx} />
               ))
             )}
           </div>
@@ -187,11 +317,10 @@ export default function ListeningDetailPage() {
                   <Link
                     key={lesson.lessonId}
                     href={`/listening/${levelName}/${lesson.lessonId}`}
-                    className={`aspect-square flex items-center justify-center rounded-lg text-xs font-bold transition ${
-                      lesson.lessonId === lessonId
+                    className={`aspect-square flex items-center justify-center rounded-lg text-xs font-bold transition ${lesson.lessonId === lessonId
                         ? "bg-jp-red text-white shadow-md scale-105"
                         : "bg-jp-sakura text-jp-indigo hover:bg-jp-red hover:text-white"
-                    }`}
+                      }`}
                     title={lesson.lessonName}
                   >
                     {idx + 1}
