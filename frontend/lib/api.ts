@@ -61,3 +61,52 @@ export const uploadImage = async (file: File) => {
 
   return await res.json();
 };
+
+export const uploadExamPdf = async (file: File, dryRun = false) => {
+  const token = localStorage.getItem("token");
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const res = await fetch(API_URL + `/exams/import-pdf?dryRun=${dryRun ? "true" : "false"}`, {
+    method: "POST",
+    headers: {
+      Authorization: token ? `Bearer ${token}` : ""
+    },
+    body: formData
+  });
+
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch {
+    return res.ok ? { message: text } : { error: text };
+  }
+};
+
+export const uploadExamPdfWithAnswerKey = async (
+  questionFile: File,
+  answerKeyFile?: File | null,
+  dryRun = false
+) => {
+  const token = localStorage.getItem("token");
+  const formData = new FormData();
+  formData.append("questionFile", questionFile);
+  if (answerKeyFile) {
+    formData.append("answerKeyFile", answerKeyFile);
+  }
+
+  const res = await fetch(API_URL + `/exams/import-pdf-with-answer-key?dryRun=${dryRun ? "true" : "false"}`, {
+    method: "POST",
+    headers: {
+      Authorization: token ? `Bearer ${token}` : ""
+    },
+    body: formData
+  });
+
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch {
+    return res.ok ? { message: text } : { error: text };
+  }
+};

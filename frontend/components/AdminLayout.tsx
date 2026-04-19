@@ -17,6 +17,7 @@ import {
   FileText,
   ClipboardList,
   HelpCircle,
+  Upload,
   ChevronLeft,
   Shield,
   Home,
@@ -96,6 +97,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       label: "Luyện thi",
       items: [
         { label: "Đề thi", icon: ClipboardList, href: "/dashboard/exams" },
+        { label: "Import đề (JSON)", icon: Upload, href: "/dashboard/exams/import" },
         { label: "Câu hỏi thi", icon: HelpCircle, href: "/dashboard/exam-questions" },
       ],
     },

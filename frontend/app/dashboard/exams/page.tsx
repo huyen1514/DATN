@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import AdminLayout from "@/components/AdminLayout";
-import { ClipboardList, Plus, Edit2, Trash2, Search, X, Clock } from "lucide-react";
+import Link from "next/link";
+import { ClipboardList, Plus, Edit2, Trash2, Search, X, Clock, Upload } from "lucide-react";
 
 interface Level { levelId: number; levelName: string; }
 interface Exam {
@@ -84,9 +85,14 @@ export default function AdminExams() {
             </h1>
             <p className="text-neutral-500 text-sm mt-1">Quản lý đề thi theo cấp độ JLPT</p>
           </div>
-          <button onClick={openCreate} className="flex items-center gap-2 px-5 py-2.5 bg-jp-indigo text-white rounded-xl text-sm font-bold hover:bg-jp-red transition-colors shadow-lg">
-            <Plus size={16} /> Thêm đề thi
-          </button>
+          <div className="flex items-center gap-2">
+            <Link href="/dashboard/exams/import" className="flex items-center gap-2 px-5 py-2.5 bg-white border border-black/10 text-jp-indigo rounded-xl text-sm font-bold hover:bg-neutral-50 transition-colors shadow-sm">
+              <Upload size={16} /> Import JSON
+            </Link>
+            <button onClick={openCreate} className="flex items-center gap-2 px-5 py-2.5 bg-jp-indigo text-white rounded-xl text-sm font-bold hover:bg-jp-red transition-colors shadow-lg">
+              <Plus size={16} /> Thêm đề thi
+            </button>
+          </div>
         </div>
 
         <div className="flex gap-3 mb-6">
