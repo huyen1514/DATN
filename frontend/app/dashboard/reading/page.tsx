@@ -5,7 +5,13 @@ import { api } from "@/lib/api";
 import AdminLayout from "@/components/AdminLayout";
 import { FileText, Plus, Edit2, Trash2, Search, X } from "lucide-react";
 
-interface Lesson { lessonId: number; lessonName: string; level?: { levelName: string }; skillType?: string; }
+interface Lesson { 
+  lessonId: number; 
+  lessonName: string; 
+  level?: { levelName: string }; 
+  skillType?: string; 
+}
+
 interface Reading {
   readingId: number;
   content: string;
@@ -35,36 +41,59 @@ export default function AdminReading() {
       const [rData, lData] = await Promise.all([api("/readings"), api("/lessons")]);
       if (Array.isArray(rData)) setItems(rData);
       if (Array.isArray(lData)) setLessons(lData);
-    } catch (e) { console.error(e); }
-    finally { setIsLoading(false); }
+    } catch (e) { 
+      console.error(e); 
+    } finally { 
+      setIsLoading(false); 
+    }
   };
 
   const openCreate = () => {
     setModalMode("create");
     setForm({ content: "", question: "", lessonId: lessons[0]?.lessonId || 0 });
-    setEditId(null); setError(""); setIsModalOpen(true);
+    setEditId(null); 
+    setError(""); 
+    setIsModalOpen(true);
   };
 
   const openEdit = (item: Reading) => {
     setModalMode("edit");
     setForm({ content: item.content, question: item.question, lessonId: item.lessonId });
-    setEditId(item.readingId); setError(""); setIsModalOpen(true);
+    setEditId(item.readingId); 
+    setError(""); 
+    setIsModalOpen(true);
   };
 
   const handleSave = async () => {
-    if (!form.content.trim() || !form.question.trim()) { setError("Vui lòng nhập đầy đủ"); return; }
-    setIsSaving(true); setError("");
+    if (!form.content.trim() || !form.question.trim()) { 
+      setError("Vui lòng nhập đầy đủ"); 
+      return; 
+    }
+    setIsSaving(true); 
+    setError("");
     try {
-      const res = modalMode === "create" ? await api("/readings", "POST", form) : await api(`/readings/${editId}`, "PUT", form);
-      if (res?.error || res?.title) { setError(res.error || res.title); setIsSaving(false); return; }
-      setIsModalOpen(false); loadData();
-    } catch (e) { setError("Có lỗi xảy ra"); }
-    finally { setIsSaving(false); }
+      const res = modalMode === "create" 
+        ? await api("/readings", "POST", form) 
+        : await api(`/readings/${editId}`, "PUT", form);
+        
+      if (res?.error || res?.title) { 
+        setError(res.error || res.title); 
+        setIsSaving(false); 
+        return; 
+      }
+      setIsModalOpen(false); 
+      loadData();
+    } catch (e) { 
+      setError("Có lỗi xảy ra"); 
+    } finally { 
+      setIsSaving(false); 
+    }
   };
 
   const handleDelete = async (id: number) => {
     if (!confirm("Xóa bài đọc này?")) return;
-    await api(`/readings/${id}`, "DELETE"); loadData();
+    await api(`/readings/${id}`, "DELETE"); 
+    loadData();
   };
 
   const filtered = items.filter(i => {
@@ -102,16 +131,27 @@ export default function AdminReading() {
         </div>
 
         <div className="bg-white rounded-2xl border border-black/5 overflow-hidden shadow-sm">
-          {isLoading ? <div className="p-8 text-center text-neutral-400">Đang tải...</div> : filtered.length === 0 ? (
-            <div className="p-12 text-center"><FileText size={48} className="mx-auto text-neutral-200 mb-4" /><p className="text-neutral-500">Chưa có bài đọc nào</p></div>
+          {isLoading ? (
+            <div className="p-8 text-center text-neutral-400">Đang tải...</div>
+          ) : filtered.length === 0 ? (
+            <div className="p-12 text-center">
+              <FileText size={48} className="mx-auto text-neutral-200 mb-4" />
+              <p className="text-neutral-500">Chưa có bài đọc nào</p>
+            </div>
           ) : (
             <div className="divide-y divide-black/5">
               {filtered.map(item => (
                 <div key={item.readingId} className="p-6 hover:bg-neutral-50/50 transition-colors">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <span className="text-xs font-bold bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full mb-3 inline-block">{item.lesson?.lessonName || `Bài ${item.lessonId}`}</span>
-                      <p className="text-sm text-neutral-600 mb-2 line-clamp-2">{item.content}</p>
+                      <span className="text-xs font-bold bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full mb-3 inline-block">
+                        {item.lesson?.lessonName || `Bài ${item.lessonId}`}
+                      </span>
+                      {/* ĐOẠN ĐÃ ĐƯỢC FIX LỖI HIỂN THỊ HTML */}
+                      <div 
+                        className="text-sm text-neutral-600 mb-2 line-clamp-2 [&_.reading-container]:line-clamp-2 [&_img]:hidden" 
+                        dangerouslySetInnerHTML={{ __html: item.content }} 
+                      />
                       <p className="text-sm font-bold text-jp-indigo">❓ {item.question}</p>
                     </div>
                     <div className="flex gap-2 ml-4">
@@ -137,7 +177,7 @@ export default function AdminReading() {
             <div className="space-y-4 mb-6">
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Nội dung bài đọc *</label>
-                <textarea value={form.content} onChange={(e) => setForm({...form, content: e.target.value})} placeholder="Nhập đoạn văn tiếng Nhật..."
+                <textarea value={form.content} onChange={(e) => setForm({...form, content: e.target.value})} placeholder="Nhập đoạn văn tiếng Nhật hoặc mã HTML..."
                   className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm resize-none h-40" autoFocus />
               </div>
               <div>

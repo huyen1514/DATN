@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { api } from "@/lib/api";
 import StudentLayout from "@/components/StudentLayout";
@@ -10,9 +10,7 @@ import {
   ArrowRight,
   Loader2,
   Search,
-  Sparkles,
-  Bookmark,
-  Compass,
+  ChevronRight,
 } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
@@ -27,6 +25,16 @@ interface PrebuiltLesson {
 
 type SkillTab = "Vocabulary" | "Kanji";
 
+const LEVEL_COLORS: Record<string, { bg: string; text: string; dot: string }> = {
+  N5: { bg: "bg-emerald-50", text: "text-emerald-700", dot: "bg-emerald-400" },
+  N4: { bg: "bg-sky-50", text: "text-sky-700", dot: "bg-sky-400" },
+  N3: { bg: "bg-violet-50", text: "text-violet-700", dot: "bg-violet-400" },
+  N2: { bg: "bg-amber-50", text: "text-amber-700", dot: "bg-amber-400" },
+  N1: { bg: "bg-rose-50", text: "text-rose-700", dot: "bg-rose-400" },
+};
+
+const DEFAULT_COLOR = { bg: "bg-slate-50", text: "text-slate-600", dot: "bg-slate-400" };
+
 export default function PrebuiltFlashcardsPage() {
   const router = useRouter();
   const [lessons, setLessons] = useState<PrebuiltLesson[]>([]);
@@ -35,6 +43,7 @@ export default function PrebuiltFlashcardsPage() {
   const [selectedLevel, setSelectedLevel] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [startingLesson, setStartingLesson] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   useEffect(() => {
     loadLessons();
@@ -43,9 +52,7 @@ export default function PrebuiltFlashcardsPage() {
   const loadLessons = async () => {
     try {
       const result = await api("/prebuilt-flashcards/lessons");
-      if (Array.isArray(result)) {
-        setLessons(result);
-      }
+      if (Array.isArray(result)) setLessons(result);
     } catch (error) {
       console.error("Error loading prebuilt lessons:", error);
     } finally {
@@ -57,10 +64,7 @@ export default function PrebuiltFlashcardsPage() {
     setStartingLesson(lessonId);
     try {
       const typeParam = type === "Kanji" ? "kanji" : "vocab";
-      const result = await api(
-        `/prebuilt-flashcards/start/${typeParam}/${lessonId}`,
-        "POST"
-      );
+      const result = await api(`/prebuilt-flashcards/start/${typeParam}/${lessonId}`, "POST");
       if (result.deckId) {
         router.push(`/learn/${result.deckId}`);
       } else {
@@ -92,204 +96,269 @@ export default function PrebuiltFlashcardsPage() {
     {} as Record<string, PrebuiltLesson[]>
   );
 
+  const totalCards = filteredLessons.reduce((s, l) => s + l.cardCount, 0);
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
   };
 
   const itemVariants: Variants = {
-    hidden: { y: 15, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.3, ease: "easeOut" } }
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
   };
-
-  const totalCards = filteredLessons.reduce((s, l) => s + l.cardCount, 0);
 
   return (
     <StudentLayout>
-      <div className="relative min-h-screen font-sans text-slate-800 bg-slate-50/50">
+      <div className="min-h-screen bg-[#faf9f7] font-sans">
 
-        {/* --- DYNAMIC BACKGROUND: Tăng độ sáng và mờ --- */}
-        <div className="fixed inset-0 z-0 pointer-events-none grayscale opacity-[0.05]">
-          <img
-            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=2000"
-            alt="Japan Background"
-            className="w-full h-full object-cover"
+        {/* ─── HERO HEADER ─────────────────────────────── */}
+        <div className="relative overflow-hidden border-b border-stone-200">
+          {/* Subtle grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.035]"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+                linear-gradient(to bottom, #1a1a1a 1px, transparent 1px)
+              `,
+              backgroundSize: "48px 48px",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-slate-50/50 backdrop-blur-[0.5px]"></div>
-        </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20 pt-12">
+          {/* Large JP kanji watermark */}
+          <div className="absolute right-0 top-0 h-full flex items-center pr-16 pointer-events-none select-none">
+            <span className="text-[240px] font-thin text-stone-100 leading-none tracking-tight">
+              {activeTab === "Vocabulary" ? "語" : "字"}
+            </span>
+          </div>
 
-          {/* --- PAGE HEADER --- */}
-          <header className="mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-red-100 bg-white/80 text-[#c62828] text-[10px] font-bold tracking-[0.1em] uppercase mb-6 shadow-sm">
-              <Sparkles size={12} /> HỌC LIỆU CHUẨN MỰC
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-[1.5px] bg-[#c62828]" />
+              <span className="text-[10px] font-bold tracking-[0.25em] text-[#c62828] uppercase">
+                Học liệu chuẩn mực
+              </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-sans text-slate-800 mb-4 tracking-tight font-semibold">
-              Thư viện <span className="font-serif text-[#c62828] italic font-normal">Flashcard</span>
+            {/* Title */}
+            <h1 className="text-5xl lg:text-6xl font-light text-stone-800 mb-4 tracking-tight leading-none">
+              Thư viện
+              <em className="not-italic font-semibold text-[#c62828] ml-4">
+                Flashcard
+              </em>
             </h1>
 
-            <p className="text-slate-500 text-base leading-relaxed max-w-2xl font-medium">
-              Học tập hiệu quả với các bộ thẻ ghi nhớ được biên soạn chuẩn mực theo từng bài học và cấp độ JLPT.
+            <p className="text-stone-500 text-[15px] leading-relaxed max-w-lg mt-4 mb-10 font-normal">
+              Bộ thẻ ghi nhớ được biên soạn theo từng bài học và cấp độ, giúp bạn học tập có hệ thống và hiệu quả.
             </p>
-          </header>
 
-          {/* --- TOOLBAR: Sử dụng Slate thay vì Black --- */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12">
-
-            {/* Tabs - Slate Style */}
-            <div className="flex gap-1 p-1.5 bg-slate-200/50 rounded-full w-fit border border-slate-200/60 backdrop-blur-md">
-              {(["Vocabulary", "Kanji"] as SkillTab[]).map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => {
-                    setActiveTab(tab);
-                    setSelectedLevel("all");
-                  }}
-                  className={`flex items-center gap-2 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${activeTab === tab
-                    ? "bg-slate-800 text-white shadow-md shadow-slate-200"
-                    : "text-slate-500 hover:text-slate-800"
-                    }`}
-                >
-                  {tab === "Vocabulary" ? <BookOpen size={14} /> : <Languages size={14} />}
-                  {tab === "Vocabulary" ? "Từ vựng" : "Chữ Hán"}
-                </button>
-              ))}
+            {/* Stats row */}
+            <div className="flex items-center gap-8">
+              <div>
+                <p className="text-3xl font-semibold text-stone-800 tabular-nums">{filteredLessons.length}</p>
+                <p className="text-[11px] text-stone-400 uppercase tracking-widest mt-0.5 font-medium">Bộ thẻ</p>
+              </div>
+              <div className="w-px h-10 bg-stone-200" />
+              <div>
+                <p className="text-3xl font-semibold text-stone-800 tabular-nums">{totalCards.toLocaleString()}</p>
+                <p className="text-[11px] text-stone-400 uppercase tracking-widest mt-0.5 font-medium">
+                  {activeTab === "Vocabulary" ? "Từ vựng" : "Kanji"}
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 items-center">
-              {/* Level Filter - Slate Style */}
-              <div className="flex bg-slate-200/50 p-1.5 rounded-full border border-slate-200/60 backdrop-blur-md">
-                <button
-                  onClick={() => setSelectedLevel("all")}
-                  className={`px-4 py-1.5 rounded-full text-[11px] font-bold uppercase transition-all ${selectedLevel === "all" ? "bg-white text-slate-800 shadow-sm" : "text-slate-500 hover:text-slate-800"
-                    }`}
-                >
-                  Tất cả
-                </button>
-                {levels.map((level) => (
+        {/* ─── CONTROL BAR ─────────────────────────────── */}
+        <div className="sticky top-0 z-30 bg-[#faf9f7]/95 backdrop-blur-md border-b border-stone-200">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="flex flex-col md:flex-row md:items-center gap-4 py-3">
+
+              {/* Tab switcher */}
+              <div className="flex gap-0 bg-white border border-stone-200 rounded-lg overflow-hidden shadow-sm">
+                {(["Vocabulary", "Kanji"] as SkillTab[]).map((tab) => (
                   <button
-                    key={level}
-                    onClick={() => setSelectedLevel(level)}
-                    className={`px-4 py-1.5 rounded-full text-[11px] font-bold uppercase transition-all ${selectedLevel === level ? "bg-white text-slate-800 shadow-sm" : "text-slate-500 hover:text-slate-800"
-                      }`}
+                    key={tab}
+                    onClick={() => { setActiveTab(tab); setSelectedLevel("all"); }}
+                    className={`flex items-center gap-2 px-5 py-2.5 text-[12px] font-semibold uppercase tracking-wider transition-all duration-200 ${
+                      activeTab === tab
+                        ? "bg-stone-800 text-white"
+                        : "text-stone-500 hover:text-stone-800 hover:bg-stone-50"
+                    }`}
                   >
-                    {level}
+                    {tab === "Vocabulary" ? <BookOpen size={13} /> : <Languages size={13} />}
+                    {tab === "Vocabulary" ? "Từ vựng" : "Chữ Hán"}
                   </button>
                 ))}
               </div>
 
-              {/* Search - Soften colors */}
-              <div className="relative w-full sm:w-64">
-                <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+              {/* Divider */}
+              <div className="hidden md:block w-px h-7 bg-stone-200" />
+
+              {/* Level pills */}
+              <div className="flex items-center gap-1.5 flex-wrap">
+                {["all", ...levels].map((level) => {
+                  const color = level === "all" ? DEFAULT_COLOR : (LEVEL_COLORS[level] ?? DEFAULT_COLOR);
+                  const isActive = selectedLevel === level;
+                  return (
+                    <button
+                      key={level}
+                      onClick={() => setSelectedLevel(level)}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold transition-all duration-200 ${
+                        isActive
+                          ? `${color.bg} ${color.text} ring-1 ring-current ring-opacity-30`
+                          : "text-stone-400 hover:text-stone-700 hover:bg-stone-100"
+                      }`}
+                    >
+                      {isActive && level !== "all" && (
+                        <span className={`w-1.5 h-1.5 rounded-full ${color.dot}`} />
+                      )}
+                      {level === "all" ? "Tất cả" : level}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Search */}
+              <div className="relative md:ml-auto">
+                <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400" />
                 <input
                   type="text"
-                  placeholder="Tìm kiếm bài học..."
+                  placeholder="Tìm bài học..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-300 focus:ring-4 focus:ring-slate-100 transition-all shadow-sm"
+                  className="w-full md:w-56 pl-9 pr-4 py-2 bg-white border border-stone-200 rounded-lg text-[13px] text-stone-700 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-300 focus:border-transparent transition-all shadow-sm"
                 />
               </div>
             </div>
           </div>
+        </div>
 
-          {/* --- QUICK STATS --- */}
-          <div className="flex items-center gap-4 border-b border-slate-200/80 pb-6 mb-12">
-            <span className="text-sm font-bold text-slate-700">{filteredLessons.length} Bộ thẻ</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-slate-300" />
-            <span className="text-sm text-slate-400 font-medium tracking-wide">
-              Tổng cộng {totalCards} {activeTab === "Vocabulary" ? "từ vựng" : "chữ Kanji"}
-            </span>
-          </div>
+        {/* ─── MAIN CONTENT ─────────────────────────────── */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
 
-          {/* --- MAIN CONTENT Area --- */}
           {isLoading ? (
-            <div className="flex flex-col items-center justify-center py-20 gap-4">
-              <Loader2 className="w-8 h-8 animate-spin text-[#c62828]" />
-              <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Đang khởi tạo...</p>
+            <div className="flex flex-col items-center justify-center py-32 gap-4">
+              <div className="relative">
+                <div className="w-12 h-12 rounded-full border-2 border-stone-200" />
+                <div className="absolute inset-0 w-12 h-12 rounded-full border-t-2 border-[#c62828] animate-spin" />
+              </div>
+              <p className="text-stone-400 text-[11px] font-bold uppercase tracking-[0.2em]">Đang tải...</p>
             </div>
           ) : filteredLessons.length === 0 ? (
-            <div className="bg-white/80 backdrop-blur-sm py-24 rounded-[3rem] border border-slate-200 border-dashed text-center shadow-sm">
-              <Bookmark className="w-12 h-12 mx-auto text-slate-200 mb-4" />
-              <h3 className="text-lg font-serif italic text-slate-400">Không tìm thấy tài liệu phù hợp</h3>
+            <div className="text-center py-32">
+              <div className="text-7xl font-thin text-stone-200 mb-6">空</div>
+              <p className="text-stone-400 text-sm">Không tìm thấy bài học phù hợp</p>
             </div>
           ) : (
-            <div className="space-y-16 pb-20">
-              {Object.entries(groupedByLevel).map(([levelName, levelLessons]) => (
-                <div key={levelName}>
+            <div className="space-y-14">
+              {Object.entries(groupedByLevel).map(([levelName, levelLessons]) => {
+                const color = LEVEL_COLORS[levelName] ?? DEFAULT_COLOR;
+                return (
+                  <section key={levelName}>
+                    {/* Level heading */}
+                    <div className="flex items-center gap-4 mb-7">
+                      <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${color.bg}`}>
+                        <span className={`w-2 h-2 rounded-full ${color.dot}`} />
+                        <span className={`text-[11px] font-bold uppercase tracking-widest ${color.text}`}>
+                          Trình độ {levelName}
+                        </span>
+                      </div>
+                      <div className="flex-grow h-px bg-stone-200" />
+                      <span className="text-[11px] text-stone-400 font-medium">
+                        {levelLessons.length} bài học · {levelLessons.reduce((s, l) => s + l.cardCount, 0)} thẻ
+                      </span>
+                    </div>
 
-                  <div className="flex items-center gap-4 mb-8">
-                    <Compass size={18} className="text-[#c62828]" />
-                    <h2 className="text-2xl font-serif text-slate-800 font-medium tracking-tight uppercase">Trình độ {levelName}</h2>
-                    <div className="flex-grow h-[1px] bg-slate-200/60"></div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">{levelLessons.length} bài học</span>
-                  </div>
+                    {/* Cards grid */}
+                    <motion.div
+                      variants={containerVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+                    >
+                      {levelLessons.map((lesson) => {
+                        const isStarting = startingLesson === lesson.lessonId;
+                        const isHovered = hoveredCard === lesson.lessonId;
 
-                  <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-                  >
-                    {levelLessons.map((lesson) => (
-                      <motion.div key={lesson.lessonId} variants={itemVariants}>
-                        <div className="group relative bg-white border border-slate-200/80 rounded-[2.5rem] p-7 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 hover:border-red-100 transition-all duration-500 flex flex-col h-full overflow-hidden">
-
-                          {/* Watermark: Slate tone */}
-                          <div className="absolute -bottom-4 -right-2 text-[120px] font-serif text-slate-50 opacity-[0.8] group-hover:text-red-50/80 group-hover:scale-110 transition-all duration-700 pointer-events-none select-none leading-none">
-                            {activeTab === "Vocabulary" ? "語" : "漢"}
-                          </div>
-
-                          <div className="relative z-10 flex-grow">
-                            {/* Metadata
-                            <div className="flex justify-between items-start mb-6">
-                              <span className="text-[10px] font-black uppercase tracking-widest text-[#c62828] bg-red-50/60 px-2.5 py-1 rounded-full border border-red-100/50">
-                                JLPT {levelName}
-                              </span>
-                            </div> */}
-
-                            {/* Title: Slate text */}
-                            <h3 className="text-lg font-bold text-slate-700 mb-6 group-hover:text-[#c62828] transition-colors leading-tight min-h-[3rem]">
-                              {lesson.lessonName}
-                            </h3>
-
-                            {/* Scale Indicator */}
-                            <div className="flex items-center gap-2 mb-10">
-                              <div className="w-1.5 h-1.5 rounded-full bg-red-100 group-hover:bg-[#c62828] transition-colors"></div>
-                              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Quy mô:</span>
-                              <span className="text-[11px] font-black text-slate-600 uppercase">{lesson.cardCount} Thẻ ghi nhớ</span>
-                            </div>
-                          </div>
-
-                          {/* Action Button: Deep Slate instead of Black */}
-                          <div className="relative z-10 pt-2 mt-auto">
-                            <button
-                              onClick={() => handleStartLesson(lesson.lessonId, lesson.skillType)}
-                              disabled={startingLesson === lesson.lessonId}
-                              className={`w-full flex items-center justify-center gap-3 py-4 rounded-[1.5rem] font-bold text-[10px] uppercase tracking-[0.2em] transition-all duration-300 ${startingLesson === lesson.lessonId
-                                ? "bg-slate-100 text-slate-300 cursor-not-allowed border border-slate-200"
-                                : "bg-slate-800 text-white hover:bg-[#c62828] shadow-lg shadow-slate-200 hover:shadow-red-200"
-                                }`}
+                        return (
+                          <motion.div
+                            key={lesson.lessonId}
+                            variants={itemVariants}
+                            onMouseEnter={() => setHoveredCard(lesson.lessonId)}
+                            onMouseLeave={() => setHoveredCard(null)}
+                          >
+                            <div
+                              className={`group relative bg-white border rounded-2xl overflow-hidden transition-all duration-300 h-full flex flex-col ${
+                                isHovered
+                                  ? "border-stone-300 shadow-xl shadow-stone-100 -translate-y-0.5"
+                                  : "border-stone-200 shadow-sm"
+                              }`}
                             >
-                              {startingLesson === lesson.lessonId ? (
-                                <>
-                                  <Loader2 size={14} className="animate-spin" />
-                                  Đang đồng bộ...
-                                </>
-                              ) : (
-                                <>
-                                  Bắt đầu học ngay <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                                </>
-                              )}
-                            </button>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </div>
-              ))}
+                              {/* Card top accent bar */}
+                              <div className={`h-0.5 w-full ${color.dot} opacity-60`} />
+
+                              {/* Card body */}
+                              <div className="p-5 flex flex-col flex-grow">
+                                {/* Level badge + card count */}
+                                <div className="flex items-center justify-between mb-4">
+                                  <span className={`text-[9px] font-black uppercase tracking-[0.2em] ${color.text}`}>
+                                    {levelName}
+                                  </span>
+                                  <span className="text-[10px] text-stone-400 font-medium tabular-nums">
+                                    {lesson.cardCount} thẻ
+                                  </span>
+                                </div>
+
+                                {/* Lesson title */}
+                                <h3 className="text-[14px] font-semibold text-stone-800 leading-snug mb-4 flex-grow group-hover:text-[#c62828] transition-colors duration-200 line-clamp-2">
+                                  {lesson.lessonName}
+                                </h3>
+
+                                {/* Progress bar placeholder */}
+                                <div className="mb-5">
+                                  <div className="h-1 bg-stone-100 rounded-full overflow-hidden">
+                                    <div className={`h-full w-0 ${color.dot} rounded-full`} />
+                                  </div>
+                                  <p className="text-[10px] text-stone-400 mt-1.5 font-medium">Chưa học</p>
+                                </div>
+
+                                {/* CTA Button */}
+                                <button
+                                  onClick={() => handleStartLesson(lesson.lessonId, lesson.skillType)}
+                                  disabled={isStarting}
+                                  className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-300 ${
+                                    isStarting
+                                      ? "bg-stone-100 text-stone-300 cursor-not-allowed"
+                                      : "bg-stone-800 text-white hover:bg-[#c62828] active:scale-[0.98]"
+                                  }`}
+                                >
+                                  {isStarting ? (
+                                    <>
+                                      <Loader2 size={12} className="animate-spin" />
+                                      Đang tải...
+                                    </>
+                                  ) : (
+                                    <>
+                                      Học ngay
+                                      <ChevronRight
+                                        size={13}
+                                        className="transition-transform duration-200 group-hover:translate-x-0.5"
+                                      />
+                                    </>
+                                  )}
+                                </button>
+                              </div>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                    </motion.div>
+                  </section>
+                );
+              })}
             </div>
           )}
         </div>

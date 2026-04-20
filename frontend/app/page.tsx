@@ -39,10 +39,10 @@ export default function HomePage() {
                 BẮT ĐẦU NGAY
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/demo" className="group flex items-center justify-center gap-3 bg-white border border-neutral-200 text-neutral-900 px-8 py-4 rounded-full font-semibold tracking-wide hover:bg-neutral-50 hover:border-neutral-300 transition-all text-sm shadow-sm">
+              {/* <Link href="/demo" className="group flex items-center justify-center gap-3 bg-white border border-neutral-200 text-neutral-900 px-8 py-4 rounded-full font-semibold tracking-wide hover:bg-neutral-50 hover:border-neutral-300 transition-all text-sm shadow-sm">
                 <Play size={18} className="text-jp-red group-hover:scale-110 transition-transform" />
                 XEM DEMO
-              </Link>
+              </Link> */}
             </div>
 
             {/* Social Proof */}
@@ -143,7 +143,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 xl:gap-24 items-center relative z-10">
           <div className="relative w-full aspect-[4/5] lg:h-[700px] overflow-hidden rounded-[2.5rem] border border-white/10 group">
             <div className="w-full h-full relative">
-              <img src="https://images.unsplash.com/photo-1578469645762-461b4fa615f4?auto=format&fit=crop&q=80&w=1200" alt="Bonsai/Zen" className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" />
+              <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Bonsai/Zen" className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" />
               <div className="absolute inset-0 bg-neutral-900/30 mix-blend-multiply"></div>
             </div>
 

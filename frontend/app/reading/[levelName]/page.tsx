@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { api, API_URL } from "@/lib/api";
 import StudentLayout from "@/components/StudentLayout";
-import { BookOpen, CopyPlus, ArrowRight, FileText, Sparkles } from "lucide-react";
+import { Bookmark, Zap, ArrowRight, FileText, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-// Derive backend base URL from API_URL (remove trailing /api)
 const BACKEND_URL = API_URL.replace(/\/api$/, "");
 
 interface ReadingData {
@@ -20,27 +19,25 @@ interface ReadingData {
 
 export default function ReadingLessonsPage() {
   const params = useParams();
-  const levelName = params.levelName as string;
+  const levelName = (params?.levelName as string) || "";
 
   const [lessons, setLessons] = useState<any[]>([]);
   const [readingCounts, setReadingCounts] = useState<Record<number, number>>({});
-  const [readingThumbs, setReadingThumbs] = useState<Record<number, string>>({});
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    loadData();
-  }, [levelName]);
+  const [error, setError] = useState<string | null>(null);
 
   const loadData = async () => {
     try {
+      setIsLoading(true);
+      setError(null);
+
       const levels = await api("/levels");
       const targetLevel = Array.isArray(levels)
-        ? levels.find(
-            (l: any) => l.levelName.toUpperCase() === levelName.toUpperCase()
-          )
+        ? levels.find((l: any) => l.levelName.toUpperCase() === levelName.toUpperCase())
         : null;
 
       if (!targetLevel) {
+        setLessons([]);
         setIsLoading(false);
         return;
       }
@@ -52,23 +49,14 @@ export default function ReadingLessonsPage() {
 
       if (Array.isArray(levelLessons) && Array.isArray(allReadings)) {
         const counts: Record<number, number> = {};
-        const thumbs: Record<number, string> = {};
-
         allReadings.forEach((r: ReadingData) => {
           counts[r.lessonId] = (counts[r.lessonId] || 0) + 1;
-          // Lấy thumbnail đầu tiên của mỗi lesson
-          if (!thumbs[r.lessonId] && r.imageUrl) {
-            thumbs[r.lessonId] = r.imageUrl;
-          }
         });
         setReadingCounts(counts);
-        setReadingThumbs(thumbs);
 
         const validLessons = levelLessons.filter(
           (l: any) =>
-            (l.skillType === "Đọc hiểu" ||
-              l.skillType === "Tự do" ||
-              !l.skillType) &&
+            (l.skillType === "Đọc hiểu" || l.skillType === "Tự do" || !l.skillType) &&
             counts[l.lessonId] &&
             counts[l.lessonId] > 0
         );
@@ -76,137 +64,157 @@ export default function ReadingLessonsPage() {
       }
     } catch (e) {
       console.error(e);
+      setError("Không thể tải dữ liệu bài học. Vui lòng thử lại sau.");
     } finally {
       setIsLoading(false);
     }
   };
 
+  useEffect(() => { void loadData(); }, [levelName]);
+
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } },
+  };
+
   return (
     <StudentLayout>
-      <div className="max-w-6xl mx-auto">
-        {/* Page Header */}
-        <div className="mb-10">
-          <div className="flex items-center gap-4 mb-3">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-              <BookOpen size={26} className="text-white" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-serif text-jp-indigo flex items-center gap-3 uppercase font-bold">
-                Đọc Hiểu - {levelName}
-              </h1>
-              <p className="text-neutral-500 font-light text-sm">
-                Chọn bài học để luyện tập kỹ năng Đọc hiểu trình độ{" "}
-                {levelName?.toUpperCase()}
-              </p>
-            </div>
-          </div>
+      <div className="relative min-h-screen font-sans text-neutral-900 selection:bg-[#c62828]/20 selection:text-[#c62828]">
+
+        {/* Background — identical to KanjiLessonsPage */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <img
+            src="https://images.unsplash.com/photo-1490806678567-2410b2da3073?auto=format&fit=crop&q=80&w=2000"
+            alt="Japanese Background"
+            className="w-full h-full object-cover opacity-20 grayscale-[30%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-[#f8f9fa]/95 to-[#f8f9fa] backdrop-blur-[2px]" />
         </div>
 
-        {isLoading ? (
-          /* Skeleton Loading */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div
-                key={i}
-                className="h-72 bg-white/50 border border-black/5 rounded-3xl animate-pulse"
-              />
-            ))}
-          </div>
-        ) : lessons.length === 0 ? (
-          /* Empty State */
-          <div className="bg-white p-16 rounded-3xl border border-black/5 text-center">
-            <CopyPlus size={48} className="mx-auto text-neutral-200 mb-6" />
-            <h3 className="text-xl font-bold text-jp-indigo mb-2">
-              Chưa có bài học nào
-            </h3>
-            <p className="text-neutral-500">
-              Nội dung trình độ {levelName} đang được cập nhật thêm bài đọc.
-            </p>
-          </div>
-        ) : (
-          /* Lesson Cards Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {lessons.map((lesson, idx) => (
-              <motion.div
-                key={lesson.lessonId}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.06, duration: 0.4 }}
-              >
-                <Link
-                  href={`/reading/${levelName}/${lesson.lessonId}`}
-                  className="group block bg-white rounded-3xl border border-black/5 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-indigo-500/20 transition-all duration-300 overflow-hidden"
-                >
-                  {/* Thumbnail */}
-                  <div className="relative h-40 overflow-hidden bg-gradient-to-br from-indigo-50 to-purple-50">
-                    {readingThumbs[lesson.lessonId] ? (
-                      <img
-                        src={`${BACKEND_URL}${readingThumbs[lesson.lessonId]}`}
-                        alt={lesson.lessonName || `Bài ${lesson.lessonId}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.display = "none";
-                        }}
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <BookOpen
-                          size={48}
-                          className="text-indigo-200 group-hover:text-indigo-300 transition-colors"
-                        />
-                      </div>
-                    )}
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    {/* Count badge */}
-                    <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-xs font-bold text-indigo-600 px-3 py-1 rounded-full shadow-sm">
-                      {readingCounts[lesson.lessonId] || 0} câu hỏi
-                    </div>
-                  </div>
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-20 pt-12">
 
-                  {/* Content */}
-                  <div className="p-6">
-                    <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-3 inline-block tracking-widest uppercase">
-                      Bài {idx + 1}
-                    </span>
-                    <h3 className="text-lg font-bold text-jp-indigo mb-1 group-hover:text-indigo-600 transition-colors line-clamp-2">
-                      {lesson.lessonName || `Bài ${lesson.lessonId}`}
-                    </h3>
-
-                    <div className="mt-4 flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 text-xs text-neutral-400">
-                        <FileText size={12} />
-                        <span>Đọc hiểu</span>
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-colors">
-                        <ArrowRight size={16} />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        )}
-
-        {/* Bottom tip section */}
-        {!isLoading && lessons.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="mt-12 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200/50 p-6 flex items-start gap-4"
+          {/* HEADER — mirrors KanjiLessonsPage header exactly */}
+          <motion.header
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-14 text-center"
           >
-            <Sparkles size={20} className="text-amber-500 flex-shrink-0 mt-0.5" />
-            <div>
-              <p className="text-sm font-bold text-amber-800 mb-1">Mẹo học đọc hiểu</p>
-              <p className="text-sm text-amber-700/80 leading-relaxed">
-                Hãy đọc toàn bộ đoạn văn trước, sau đó trả lời câu hỏi. Chú ý các từ khóa
-                và thông tin quan trọng như thời gian, địa điểm, và số lượng.
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#c62828]/20 bg-white/60 backdrop-blur-sm text-[#c62828] text-xs font-semibold tracking-widest mb-4 shadow-sm">
+              <Sparkles size={14} /> CHƯƠNG TRÌNH HỌC
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#c62828] uppercase tracking-wider drop-shadow-sm">
+              ĐỌC HIỂU {levelName}
+            </h1>
+            <div className="w-20 h-[3px] bg-gradient-to-r from-transparent via-[#c62828] to-transparent mx-auto mt-6 rounded-full opacity-70" />
+          </motion.header>
+
+          {/* STATES */}
+          {isLoading ? (
+            /* SKELETON — same as Kanji */
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="bg-white/80 backdrop-blur-sm border border-neutral-200/60 rounded-xl p-6 shadow-sm h-56 flex flex-col justify-between">
+                  <div className="w-2/3 h-6 bg-neutral-200/60 rounded animate-pulse mb-4" />
+                  <div className="space-y-3 mb-6">
+                    <div className="w-3/4 h-4 bg-neutral-100 rounded animate-pulse" />
+                    <div className="w-1/2 h-4 bg-neutral-100 rounded animate-pulse" />
+                    <div className="w-2/3 h-4 bg-neutral-100 rounded animate-pulse" />
+                  </div>
+                  <div className="w-full h-10 bg-neutral-100 rounded-lg animate-pulse" />
+                </div>
+              ))}
+            </div>
+          ) : error ? (
+            /* ERROR STATE — same as Kanji */
+            <div className="text-center py-20 bg-white/80 backdrop-blur-md rounded-2xl border border-neutral-200 shadow-sm px-6 max-w-2xl mx-auto">
+              <Zap size={48} className="mx-auto mb-4 text-[#c62828]" />
+              <p className="text-neutral-600 font-medium text-lg">{error}</p>
+              <button
+                onClick={() => void loadData()}
+                className="mt-6 px-8 py-3 bg-[#c62828] text-white rounded-lg hover:bg-red-800 transition-colors font-medium shadow-md hover:shadow-lg"
+              >
+                Thử lại
+              </button>
+            </div>
+          ) : lessons.length === 0 ? (
+            /* EMPTY STATE — same as Kanji */
+            <div className="py-24 rounded-2xl border border-neutral-200/60 bg-white/80 backdrop-blur-md text-center shadow-sm px-6 max-w-3xl mx-auto">
+              <Bookmark size={56} className="mx-auto mb-4 text-neutral-300" strokeWidth={1.5} />
+              <h3 className="mb-3 text-2xl font-bold text-neutral-800">Chưa có bài học nào</h3>
+              <p className="text-neutral-500 text-base max-w-md mx-auto">
+                Nội dung Đọc hiểu cho cấp độ {levelName.toUpperCase()} đang được hệ thống cập nhật. Vui lòng quay lại sau nhé.
               </p>
             </div>
-          </motion.div>
-        )}
+          ) : (
+            /* LESSONS GRID — same card structure as Kanji */
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {lessons.map((lesson) => {
+                const count = readingCounts[lesson.lessonId] || 0;
+                return (
+                  <motion.div key={lesson.lessonId} variants={itemVariants} className="h-full">
+                    <div className="group relative bg-white/90 backdrop-blur-md border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-[0_12px_30px_rgb(198,40,40,0.12)] hover:border-[#c62828]/40 hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col overflow-hidden">
+
+                      {/* Decorative watermark — 読 (Đọc) thay cho 漢 */}
+                      <div className="absolute -bottom-6 -right-4 text-8xl font-black text-neutral-100 opacity-60 group-hover:text-[#c62828]/5 transition-colors duration-500 pointer-events-none select-none font-serif">
+                        読
+                      </div>
+
+                      {/* Lesson title */}
+                      <div className="relative z-10 mb-6 flex items-start justify-between gap-4">
+                        <h3 className="text-xl font-bold text-neutral-900 group-hover:text-[#c62828] transition-colors line-clamp-2">
+                          {lesson.lessonName || `Bài học Đọc hiểu ${lesson.lessonId}`}
+                        </h3>
+                      </div>
+
+                      {/* Key-value details — same structure as Kanji */}
+                      <div className="relative z-10 flex-grow space-y-3 mb-8">
+                        <div className="flex items-center text-[15px]">
+                          <div className="w-2 h-2 rounded-full bg-neutral-300 mr-3 group-hover:bg-[#c62828]/60 transition-colors" />
+                          <span className="w-36 text-neutral-500">Số câu hỏi</span>
+                          <span className="font-semibold text-neutral-900 bg-neutral-100 px-2 py-0.5 rounded text-sm group-hover:bg-[#c62828]/10 group-hover:text-[#c62828] transition-colors">
+                            {count} câu hỏi
+                          </span>
+                        </div>
+                        <div className="flex items-center text-[15px]">
+                          <div className="w-2 h-2 rounded-full bg-neutral-300 mr-3 group-hover:bg-[#c62828]/60 transition-colors" />
+                          <span className="w-36 text-neutral-500">Hình thức</span>
+                          <span className="font-semibold text-neutral-800">Trắc nghiệm</span>
+                        </div>
+                        <div className="flex items-center text-[15px]">
+                          <div className="w-2 h-2 rounded-full bg-neutral-300 mr-3 group-hover:bg-[#c62828]/60 transition-colors" />
+                          <span className="w-36 text-neutral-500">Mục tiêu</span>
+                          <span className="font-semibold text-emerald-600">Nắm vững đọc hiểu</span>
+                        </div>
+                      </div>
+
+                      {/* Action button — identical style to Kanji */}
+                      <div className="relative z-10 mt-auto pt-2">
+                        <Link
+                          href={`/reading/${levelName}/${lesson.lessonId}`}
+                          className="flex items-center justify-center w-full gap-2 border-2 border-[#c62828] text-[#c62828] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#c62828] hover:text-white transition-all duration-300 text-[15px] group/btn"
+                        >
+                          Bắt đầu học
+                          <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                        </Link>
+                      </div>
+
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          )}
+        </div>
       </div>
     </StudentLayout>
   );
