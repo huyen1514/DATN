@@ -7,20 +7,23 @@ import StudentLayout from "@/components/StudentLayout";
 import {
   BookOpen,
   Languages,
-  ArrowRight,
   Loader2,
   Search,
   ChevronRight,
 } from "lucide-react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface PrebuiltLesson {
   lessonId: number;
   lessonName: string;
   levelName: string;
-  levelId: number;
-  skillType: string;
-  cardCount: number;
+  vocabCount: number;
+  kanjiCount: number;
+  vocabMastered: number;
+  kanjiMastered: number;
+  vocabDeckId?: number;
+  kanjiDeckId?: number;
+  skillType?: string; // Giữ lại để tránh lỗi type ở các chỗ khác nếu có
 }
 
 type SkillTab = "Vocabulary" | "Kanji";
@@ -80,11 +83,13 @@ export default function PrebuiltFlashcardsPage() {
 
   const levels = [...new Set(lessons.map((l) => l.levelName))].sort();
 
+  // Đã thêm logic: Chỉ hiển thị bài học nếu có số lượng thẻ > 0 tương ứng với Tab đang chọn
   const filteredLessons = lessons.filter((l) => {
-    const matchesTab = l.skillType === activeTab;
     const matchesLevel = selectedLevel === "all" || l.levelName === selectedLevel;
     const matchesSearch = !searchQuery || l.lessonName.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesTab && matchesLevel && matchesSearch;
+    const hasCards = activeTab === "Vocabulary" ? l.vocabCount > 0 : l.kanjiCount > 0;
+
+    return matchesLevel && matchesSearch && hasCards;
   });
 
   const groupedByLevel = filteredLessons.reduce(
@@ -96,7 +101,10 @@ export default function PrebuiltFlashcardsPage() {
     {} as Record<string, PrebuiltLesson[]>
   );
 
-  const totalCards = filteredLessons.reduce((s, l) => s + l.cardCount, 0);
+  // Tính tổng số thẻ dựa trên Tab đang active
+  const totalCards = filteredLessons.reduce((s, l) => {
+    return s + (activeTab === "Vocabulary" ? l.vocabCount : l.kanjiCount);
+  }, 0);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -111,10 +119,8 @@ export default function PrebuiltFlashcardsPage() {
   return (
     <StudentLayout>
       <div className="min-h-screen bg-[#faf9f7] font-sans">
-
         {/* ─── HERO HEADER ─────────────────────────────── */}
         <div className="relative overflow-hidden border-b border-stone-200">
-          {/* Subtle grid pattern */}
           <div
             className="absolute inset-0 opacity-[0.035]"
             style={{
@@ -126,7 +132,6 @@ export default function PrebuiltFlashcardsPage() {
             }}
           />
 
-          {/* Large JP kanji watermark */}
           <div className="absolute right-0 top-0 h-full flex items-center pr-16 pointer-events-none select-none">
             <span className="text-[240px] font-thin text-stone-100 leading-none tracking-tight">
               {activeTab === "Vocabulary" ? "語" : "字"}
@@ -134,7 +139,6 @@ export default function PrebuiltFlashcardsPage() {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
-            {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-[1.5px] bg-[#c62828]" />
               <span className="text-[10px] font-bold tracking-[0.25em] text-[#c62828] uppercase">
@@ -142,7 +146,6 @@ export default function PrebuiltFlashcardsPage() {
               </span>
             </div>
 
-            {/* Title */}
             <h1 className="text-5xl lg:text-6xl font-light text-stone-800 mb-4 tracking-tight leading-none">
               Thư viện
               <em className="not-italic font-semibold text-[#c62828] ml-4">
@@ -154,7 +157,6 @@ export default function PrebuiltFlashcardsPage() {
               Bộ thẻ ghi nhớ được biên soạn theo từng bài học và cấp độ, giúp bạn học tập có hệ thống và hiệu quả.
             </p>
 
-            {/* Stats row */}
             <div className="flex items-center gap-8">
               <div>
                 <p className="text-3xl font-semibold text-stone-800 tabular-nums">{filteredLessons.length}</p>
@@ -175,18 +177,15 @@ export default function PrebuiltFlashcardsPage() {
         <div className="sticky top-0 z-30 bg-[#faf9f7]/95 backdrop-blur-md border-b border-stone-200">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex flex-col md:flex-row md:items-center gap-4 py-3">
-
-              {/* Tab switcher */}
               <div className="flex gap-0 bg-white border border-stone-200 rounded-lg overflow-hidden shadow-sm">
                 {(["Vocabulary", "Kanji"] as SkillTab[]).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => { setActiveTab(tab); setSelectedLevel("all"); }}
-                    className={`flex items-center gap-2 px-5 py-2.5 text-[12px] font-semibold uppercase tracking-wider transition-all duration-200 ${
-                      activeTab === tab
+                    className={`flex items-center gap-2 px-5 py-2.5 text-[12px] font-semibold uppercase tracking-wider transition-all duration-200 ${activeTab === tab
                         ? "bg-stone-800 text-white"
                         : "text-stone-500 hover:text-stone-800 hover:bg-stone-50"
-                    }`}
+                      }`}
                   >
                     {tab === "Vocabulary" ? <BookOpen size={13} /> : <Languages size={13} />}
                     {tab === "Vocabulary" ? "Từ vựng" : "Chữ Hán"}
@@ -194,10 +193,8 @@ export default function PrebuiltFlashcardsPage() {
                 ))}
               </div>
 
-              {/* Divider */}
               <div className="hidden md:block w-px h-7 bg-stone-200" />
 
-              {/* Level pills */}
               <div className="flex items-center gap-1.5 flex-wrap">
                 {["all", ...levels].map((level) => {
                   const color = level === "all" ? DEFAULT_COLOR : (LEVEL_COLORS[level] ?? DEFAULT_COLOR);
@@ -206,11 +203,10 @@ export default function PrebuiltFlashcardsPage() {
                     <button
                       key={level}
                       onClick={() => setSelectedLevel(level)}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold transition-all duration-200 ${
-                        isActive
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold transition-all duration-200 ${isActive
                           ? `${color.bg} ${color.text} ring-1 ring-current ring-opacity-30`
                           : "text-stone-400 hover:text-stone-700 hover:bg-stone-100"
-                      }`}
+                        }`}
                     >
                       {isActive && level !== "all" && (
                         <span className={`w-1.5 h-1.5 rounded-full ${color.dot}`} />
@@ -221,7 +217,6 @@ export default function PrebuiltFlashcardsPage() {
                 })}
               </div>
 
-              {/* Search */}
               <div className="relative md:ml-auto">
                 <Search size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400" />
                 <input
@@ -238,7 +233,6 @@ export default function PrebuiltFlashcardsPage() {
 
         {/* ─── MAIN CONTENT ─────────────────────────────── */}
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
-
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-32 gap-4">
               <div className="relative">
@@ -256,9 +250,14 @@ export default function PrebuiltFlashcardsPage() {
             <div className="space-y-14">
               {Object.entries(groupedByLevel).map(([levelName, levelLessons]) => {
                 const color = LEVEL_COLORS[levelName] ?? DEFAULT_COLOR;
+
+                // Cập nhật lại logic đếm thẻ theo từng cấp độ (Level)
+                const totalCardsInLevel = levelLessons.reduce((s, l) => {
+                  return s + (activeTab === "Vocabulary" ? l.vocabCount : l.kanjiCount);
+                }, 0);
+
                 return (
                   <section key={levelName}>
-                    {/* Level heading */}
                     <div className="flex items-center gap-4 mb-7">
                       <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${color.bg}`}>
                         <span className={`w-2 h-2 rounded-full ${color.dot}`} />
@@ -268,11 +267,10 @@ export default function PrebuiltFlashcardsPage() {
                       </div>
                       <div className="flex-grow h-px bg-stone-200" />
                       <span className="text-[11px] text-stone-400 font-medium">
-                        {levelLessons.length} bài học · {levelLessons.reduce((s, l) => s + l.cardCount, 0)} thẻ
+                        {levelLessons.length} bài học · {totalCardsInLevel} thẻ
                       </span>
                     </div>
 
-                    {/* Cards grid */}
                     <motion.div
                       variants={containerVariants}
                       initial="hidden"
@@ -283,6 +281,11 @@ export default function PrebuiltFlashcardsPage() {
                         const isStarting = startingLesson === lesson.lessonId;
                         const isHovered = hoveredCard === lesson.lessonId;
 
+                        // Xác định data hiển thị phụ thuộc vào Tab đang Active
+                        const currentCount = activeTab === "Vocabulary" ? lesson.vocabCount : lesson.kanjiCount;
+                        const masteredCount = activeTab === "Vocabulary" ? (lesson.vocabMastered || 0) : (lesson.kanjiMastered || 0);
+                        const progressPercent = currentCount > 0 ? Math.round((masteredCount / currentCount) * 100) : 0;
+
                         return (
                           <motion.div
                             key={lesson.lessonId}
@@ -291,49 +294,49 @@ export default function PrebuiltFlashcardsPage() {
                             onMouseLeave={() => setHoveredCard(null)}
                           >
                             <div
-                              className={`group relative bg-white border rounded-2xl overflow-hidden transition-all duration-300 h-full flex flex-col ${
-                                isHovered
+                              className={`group relative bg-white border rounded-2xl overflow-hidden transition-all duration-300 h-full flex flex-col ${isHovered
                                   ? "border-stone-300 shadow-xl shadow-stone-100 -translate-y-0.5"
                                   : "border-stone-200 shadow-sm"
-                              }`}
+                                }`}
                             >
-                              {/* Card top accent bar */}
                               <div className={`h-0.5 w-full ${color.dot} opacity-60`} />
 
-                              {/* Card body */}
                               <div className="p-5 flex flex-col flex-grow">
-                                {/* Level badge + card count */}
                                 <div className="flex items-center justify-between mb-4">
                                   <span className={`text-[9px] font-black uppercase tracking-[0.2em] ${color.text}`}>
                                     {levelName}
                                   </span>
                                   <span className="text-[10px] text-stone-400 font-medium tabular-nums">
-                                    {lesson.cardCount} thẻ
+                                    {currentCount} thẻ
                                   </span>
                                 </div>
 
-                                {/* Lesson title */}
                                 <h3 className="text-[14px] font-semibold text-stone-800 leading-snug mb-4 flex-grow group-hover:text-[#c62828] transition-colors duration-200 line-clamp-2">
                                   {lesson.lessonName}
                                 </h3>
 
-                                {/* Progress bar placeholder */}
-                                <div className="mb-5">
-                                  <div className="h-1 bg-stone-100 rounded-full overflow-hidden">
-                                    <div className={`h-full w-0 ${color.dot} rounded-full`} />
+                                <div className="mb-6">
+                                  <div className="flex justify-between items-center mb-1">
+                                    <span className="text-xs font-semibold text-neutral-500">Tiến trình học</span>
+                                    <span className="text-xs font-bold text-blue-600">
+                                      {masteredCount}/{currentCount} thẻ
+                                    </span>
                                   </div>
-                                  <p className="text-[10px] text-stone-400 mt-1.5 font-medium">Chưa học</p>
+                                  <div className="h-1.5 w-full bg-neutral-100 rounded-full overflow-hidden">
+                                    <div
+                                      className="h-full bg-green-500 transition-all duration-500"
+                                      style={{ width: `${progressPercent}%` }}
+                                    />
+                                  </div>
                                 </div>
 
-                                {/* CTA Button */}
                                 <button
-                                  onClick={() => handleStartLesson(lesson.lessonId, lesson.skillType)}
+                                  onClick={() => handleStartLesson(lesson.lessonId, activeTab)}
                                   disabled={isStarting}
-                                  className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-300 ${
-                                    isStarting
+                                  className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-300 ${isStarting
                                       ? "bg-stone-100 text-stone-300 cursor-not-allowed"
                                       : "bg-stone-800 text-white hover:bg-[#c62828] active:scale-[0.98]"
-                                  }`}
+                                    }`}
                                 >
                                   {isStarting ? (
                                     <>

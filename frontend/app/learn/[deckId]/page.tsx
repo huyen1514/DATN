@@ -59,6 +59,12 @@ export default function LearnPage({ params }: { params: Promise<{ deckId: string
       setIsLoading(true);
       const response = await api(`/flashcards/deck/${deckId}`);
 
+      // Handle auth error
+      if (!Array.isArray(response) && (response?.status === 401 || response?.title === "Unauthorized")) {
+        window.location.href = "/login";
+        return;
+      }
+
       let cards: FlashCard[] = [];
       if (Array.isArray(response)) {
         cards = response;

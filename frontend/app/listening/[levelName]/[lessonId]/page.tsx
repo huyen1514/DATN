@@ -1,10 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useCallback, useEffect, useState, useRef, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
 import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
+import { ChevronRight, CheckCircle2 } from "lucide-react";
+import LessonProgressSidebar from "@/components/LessonProgressSidebar";
 
 interface Level {
   levelId: number;
@@ -234,6 +236,7 @@ export default function ListeningDetailPage() {
   const [listenings, setListenings] = useState<ListeningItem[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [userId, setUserId] = useState<number>(1);
 
   const loadData = useCallback(async () => {
     try {
@@ -265,8 +268,50 @@ export default function ListeningDetailPage() {
   }, [lessonId, levelName]);
 
   useEffect(() => {
+    const userStr = localStorage.getItem("user");
+    if (userStr) {
+      try {
+        const u = JSON.parse(userStr);
+        setUserId(u.userId);
+      } catch (e) {}
+    }
     void loadData();
-  }, [loadData]);
+
+    // Mark as accessed/in progress
+    updateStatus("InProgress");
+
+  }, [loadData, lessonId, userId]);
+
+  const updateStatus = async (status: string, score: number | null = null) => {
+    if (!userId) return;
+    try {
+      await api("/progress/lesson", "PUT", {
+        userId,
+        lessonId,
+        partType: "Listening",
+        status,
+        score
+      });
+    } catch (e) {
+      console.error("Could not update progress", e);
+    }
+  };
+
+  const sortedLessons = useMemo(() => [...lessons].sort((a, b) => a.lessonId - b.lessonId), [lessons]);
+
+  const currentLessonIndex = useMemo(
+    () => sortedLessons.findIndex((l) => l.lessonId === lessonId),
+    [sortedLessons, lessonId]
+  );
+
+  const handleNextLesson = () => {
+    const nextIndex = currentLessonIndex + 1;
+    if (nextIndex < sortedLessons.length) {
+      updateStatus("Completed");
+      const nextLesson = sortedLessons[nextIndex];
+      window.location.href = `/listening/${levelName}/${nextLesson.lessonId}`;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white text-jp-ink">
@@ -306,14 +351,17 @@ export default function ListeningDetailPage() {
 
           {/* RIGHT: SIDEBAR - LESSON NAVIGATOR */}
           <div className="lg:col-span-1">
-            <div className="sticky top-20 bg-white rounded-2xl border-2 border-jp-red/10 p-6 shadow-sm">
-              <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-6 pb-3 border-b-2 border-jp-red/20">
-                📚 {lessons.length} Bài Học
-              </h3>
+            <div className="sticky top-20 space-y-6">
+              <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
+
+              <div className="bg-white rounded-2xl border-2 border-jp-red/10 p-6 shadow-sm">
+                <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-6 pb-3 border-b-2 border-jp-red/20">
+                  📚 {lessons.length} Bài Học
+                </h3>
 
               {/* LESSON GRID */}
               <div className="grid grid-cols-5 lg:grid-cols-4 gap-2">
-                {lessons.map((lesson, idx) => (
+                {sortedLessons.map((lesson, idx) => (
                   <Link
                     key={lesson.lessonId}
                     href={`/listening/${levelName}/${lesson.lessonId}`}
@@ -335,6 +383,19 @@ export default function ListeningDetailPage() {
                   Nghe nhiều lần để quen với độ dài âm tiếng Nhật, chú ý các chi tiết nhỏ.
                 </p>
               </div>
+              </div>
+            </div>
+
+            {/* Next Lesson Button */}
+            <div className="mt-8 flex justify-center">
+              {currentLessonIndex < sortedLessons.length - 1 && (
+                <button
+                  onClick={handleNextLesson}
+                  className="flex items-center gap-2 px-8 py-3 bg-[#a71f48] hover:bg-[#8e1a3d] text-white rounded-xl font-bold transition-all shadow-lg shadow-rose-200"
+                >
+                  Bài học tiếp theo <ChevronRight size={20} />
+                </button>
+              )}
             </div>
           </div>
         </div>

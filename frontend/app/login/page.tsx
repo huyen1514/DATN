@@ -149,7 +149,7 @@ export default function Login() {
               <div>
                 <div className="flex justify-between items-center mb-2">
                   <label className="block text-[11px] font-bold tracking-[0.2em] text-jp-indigo uppercase">Mật khẩu</label>
-                  <a href="#" className="text-xs text-jp-red hover:text-[#8B0000] hover:underline decoration-jp-red/30 underline-offset-4 transition-all">Quên mật khẩu?</a>
+                  <Link href="/forgot-password" className="text-xs text-jp-red hover:text-[#8B0000] hover:underline decoration-jp-red/30 underline-offset-4 transition-all">Quên mật khẩu?</Link>
                 </div>
                 <div className="relative group">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400 group-focus-within:text-jp-indigo transition-colors">

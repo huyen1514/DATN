@@ -5,7 +5,15 @@ import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
 import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
-import { BookOpen, Lightbulb } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Search,
+  BookOpen,
+  CheckCircle2,
+  Lightbulb,
+} from "lucide-react";
+import LessonProgressSidebar from "@/components/LessonProgressSidebar";
 
 interface Level {
   levelId: number;
@@ -37,6 +45,7 @@ export default function GrammarDetailPage() {
   const [grammars, setGrammars] = useState<GrammarItem[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [userId, setUserId] = useState<number>(1);
 
   const loadData = useCallback(async () => {
     try {
@@ -71,8 +80,43 @@ export default function GrammarDetailPage() {
   }, [lessonId, levelName]);
 
   useEffect(() => {
+    const userStr = localStorage.getItem("user");
+    if (userStr) {
+      try {
+        const u = JSON.parse(userStr);
+        setUserId(u.userId);
+      } catch (e) {}
+    }
     void loadData();
-  }, [loadData]);
+
+    // Mark as accessed/in progress
+    updateStatus("InProgress");
+
+  }, [loadData, lessonId, userId]);
+
+  const updateStatus = async (status: string) => {
+    if (!userId) return;
+    try {
+      await api("/progress/lesson", "PUT", {
+        userId,
+        lessonId,
+        partType: "Grammar",
+        status,
+        score: null
+      });
+    } catch (e) {
+      console.error("Could not update progress", e);
+    }
+  };
+
+  const handleNextLesson = () => {
+    const nextIndex = currentLessonIndex + 1;
+    if (nextIndex < sortedLessons.length) {
+      updateStatus("Completed");
+      const nextLesson = sortedLessons[nextIndex];
+      window.location.href = `/grammar/${levelName}/${nextLesson.lessonId}`;
+    }
+  };
 
   const sortedLessons = useMemo(
     () => [...lessons].sort((a, b) => a.lessonId - b.lessonId),
@@ -96,21 +140,25 @@ export default function GrammarDetailPage() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:px-8">
         {/* SIDEBAR */}
         <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sticky top-24">
-          <h2 className="text-2xl font-bold tracking-tight text-[#a71f48]">Tiến độ học tập</h2>
-          <p className="mt-1 text-sm font-medium text-slate-500">Lộ trình {levelName.toUpperCase()}</p>
+          <div className="shrink-0 mb-6">
+            <h2 className="text-2xl font-bold tracking-tight text-[#a71f48]">Tiến độ học tập</h2>
+            <p className="mt-1 text-sm font-medium text-slate-500">Lộ trình {levelName.toUpperCase()}</p>
 
-          <div className="mt-5">
-            <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-700">
-              <span>Hoàn thành</span>
-              <span className="text-[#a71f48] font-bold">{progressPercentage}%</span>
-            </div>
-            <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100">
-              <div
-                className="h-full rounded-full bg-[#a71f48] transition-all duration-500 ease-out"
-                style={{ width: `${progressPercentage}%` }}
-              ></div>
+            <div className="mt-5">
+              <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-700">
+                <span>Hoàn thành</span>
+                <span className="text-[#a71f48] font-bold">{progressPercentage}%</span>
+              </div>
+              <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100">
+                <div
+                  className="h-full rounded-full bg-[#a71f48] transition-all duration-500 ease-out"
+                  style={{ width: `${progressPercentage}%` }}
+                ></div>
+              </div>
             </div>
           </div>
+
+          <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
 
           <div className="mt-6 space-y-6">
             <div className="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">

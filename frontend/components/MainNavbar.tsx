@@ -94,6 +94,15 @@ export default function MainNavbar() {
         {/* NAVIGATION LINKS - Ép trên 1 dòng (flex-nowrap) */}
         <nav className="hidden flex-1 flex-nowrap items-center justify-center gap-x-1 px-4 lg:flex xl:gap-x-4">
           {navMenus.map((menu) => (
+            menu.path === "/exams" ? (
+              <Link
+                key={menu.label}
+                href={menu.path}
+                className="whitespace-nowrap px-2 py-2 text-[13px] font-bold tracking-wide text-slate-600 transition-colors hover:text-[#c62828]"
+              >
+                {menu.label}
+              </Link>
+            ) : (
             <div key={menu.label} className="group relative">
               <button className="flex items-center gap-1 whitespace-nowrap px-2 py-2 text-[13px] font-bold tracking-wide text-slate-600 transition-colors hover:text-[#c62828]">
                 {menu.label}
@@ -118,6 +127,7 @@ export default function MainNavbar() {
                 </div>
               </div>
             </div>
+            )
           ))}
 
           <Link

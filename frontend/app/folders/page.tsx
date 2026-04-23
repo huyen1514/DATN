@@ -89,14 +89,12 @@ export default function FoldersPage() {
                         <h1 className="text-3xl font-serif text-jp-indigo mb-2">Không Gian Học</h1>
                         <p className="text-neutral-500 font-light">Danh sách các thư mục chứa các bộ thẻ học tập.</p>
                     </div>
-                    {user?.role === "Admin" && (
-                        <button
-                            onClick={openCreateModal}
-                            className="flex items-center gap-2 px-6 py-3 bg-jp-indigo text-white rounded-full text-[11px] font-bold tracking-[0.1em] uppercase hover:bg-jp-red transition-colors shadow-lg shadow-jp-indigo/20"
-                        >
-                            <Plus size={16} /> Tạo Mới
-                        </button>
-                    )}
+                    <button
+                        onClick={openCreateModal}
+                        className="flex items-center gap-2 px-6 py-3 bg-jp-indigo text-white rounded-full text-[11px] font-bold tracking-[0.1em] uppercase hover:bg-jp-red transition-colors shadow-lg shadow-jp-indigo/20"
+                    >
+                        <Plus size={16} /> Tạo Mới
+                    </button>
                 </div>
 
                 {isLoading ? (
@@ -112,11 +110,9 @@ export default function FoldersPage() {
                         </div>
                         <h3 className="text-xl font-bold text-jp-indigo mb-2">Chưa có không gian nào</h3>
                         <p className="text-neutral-500 mb-6 max-w-sm">Dữ liệu các thư mục Không gian học đang được cập nhật.</p>
-                        {user?.role === "Admin" && (
-                            <button onClick={openCreateModal} className="px-8 py-3 bg-jp-red text-white rounded-full text-[11px] font-bold tracking-widest uppercase hover:bg-[#8b0000] transition-colors">
-                                THÊM THƯ MỤC KHÔNG GIAN
-                            </button>
-                        )}
+                        <button onClick={openCreateModal} className="px-8 py-3 bg-jp-red text-white rounded-full text-[11px] font-bold tracking-widest uppercase hover:bg-[#8b0000] transition-colors">
+                            THÊM THƯ MỤC KHÔNG GIAN
+                        </button>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -133,16 +129,14 @@ export default function FoldersPage() {
                                     <div className="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-colors">
                                         <Folder size={20} />
                                     </div>
-                                    {user?.role === "Admin" && (
-                                        <div className="flex gap-2">
-                                            <button onClick={(e) => openEditModal(e, f)} className="p-2 text-neutral-300 hover:text-jp-indigo transition-colors hover:bg-neutral-100 rounded-full">
-                                                <Edit2 size={16} />
-                                            </button>
-                                            <button onClick={(e) => handleDelete(e, f.folderId)} className="p-2 text-neutral-300 hover:text-red-500 transition-colors hover:bg-red-50 rounded-full">
-                                                <Trash2 size={16} />
-                                            </button>
-                                        </div>
-                                    )}
+                                    <div className="flex gap-2">
+                                        <button onClick={(e) => openEditModal(e, f)} className="p-2 text-neutral-300 hover:text-jp-indigo transition-colors hover:bg-neutral-100 rounded-full">
+                                            <Edit2 size={16} />
+                                        </button>
+                                        <button onClick={(e) => handleDelete(e, f.folderId)} className="p-2 text-neutral-300 hover:text-red-500 transition-colors hover:bg-red-50 rounded-full">
+                                            <Trash2 size={16} />
+                                        </button>
+                                    </div>
                                 </div>
                                 <h3 className="text-lg font-bold text-jp-indigo mb-1 group-hover:text-jp-red transition-colors relative z-10">{f.name}</h3>
                                 {f.description && <p className="text-xs text-neutral-500 mb-4 line-clamp-2 relative z-10">{f.description}</p>}

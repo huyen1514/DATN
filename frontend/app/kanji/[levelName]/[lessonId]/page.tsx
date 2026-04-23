@@ -7,13 +7,16 @@ import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
 import KanjiStroke from "@/components/KanjiStroke";
 import {
+  ChevronLeft,
+  ChevronRight,
+  Search,
   BookOpen,
+  CheckCircle2,
   Lightbulb,
-  Compass,
-  ChevronDown,
   Info,
   PenTool
 } from "lucide-react";
+import LessonProgressSidebar from "@/components/LessonProgressSidebar";
 
 interface Level {
   levelId: number;
@@ -46,6 +49,7 @@ export default function KanjiDetailPage() {
   const [kanjis, setKanjis] = useState<KanjiItem[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [userId, setUserId] = useState<number>(1);
 
   const loadData = useCallback(async () => {
     try {
@@ -77,8 +81,43 @@ export default function KanjiDetailPage() {
   }, [lessonId, levelName]);
 
   useEffect(() => {
+    const userStr = localStorage.getItem("user");
+    if (userStr) {
+      try {
+        const u = JSON.parse(userStr);
+        setUserId(u.userId);
+      } catch (e) {}
+    }
     void loadData();
-  }, [loadData]);
+
+    // Mark as accessed/in progress
+    updateStatus("InProgress");
+
+  }, [loadData, lessonId, userId]);
+
+  const updateStatus = async (status: string) => {
+    if (!userId) return;
+    try {
+      await api("/progress/lesson", "PUT", {
+        userId,
+        lessonId,
+        partType: "Kanji",
+        status,
+        score: null
+      });
+    } catch (e) {
+      console.error("Could not update progress", e);
+    }
+  };
+
+  const handleNextLesson = () => {
+    const nextIndex = currentLessonIndex + 1;
+    if (nextIndex < sortedLessons.length) {
+      updateStatus("Completed");
+      const nextLesson = sortedLessons[nextIndex];
+      window.location.href = `/kanji/${levelName}/${nextLesson.lessonId}`;
+    }
+  };
 
   const sortedLessons = useMemo(
     () => [...lessons].sort((a, b) => a.lessonId - b.lessonId),
@@ -101,9 +140,8 @@ export default function KanjiDetailPage() {
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 px-4 py-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:px-8">
 
-        {/* Sidebar - Cố định (Sticky) và cuộn bên trong */}
         <aside className="sticky top-24 flex max-h-[calc(100vh-6rem)] flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:p-6">
-          <div className="shrink-0">
+          <div className="shrink-0 mb-6">
             <h2 className="text-xl font-bold tracking-tight text-[#a71f48] lg:text-2xl">Lộ trình Kanji</h2>
             <p className="mt-1 text-sm font-medium text-slate-500">{levelName.toUpperCase()}</p>
 
@@ -120,6 +158,8 @@ export default function KanjiDetailPage() {
               </div>
             </div>
           </div>
+
+          <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
 
           <div className="mt-6 flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-100">
             <div className="flex shrink-0 items-center gap-2 p-4 pb-2 text-base font-semibold text-slate-800">
@@ -251,8 +291,27 @@ export default function KanjiDetailPage() {
             )}
           </div>
 
+          {/* Action Buttons */}
+          <div className="mt-8 flex justify-between items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+            <button
+              onClick={() => updateStatus("Completed")}
+              className="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold transition-all shadow-lg shadow-green-200"
+            >
+              <CheckCircle2 size={20} /> Đã thuộc Hán tự bài này
+            </button>
+            
+            {currentLessonIndex < sortedLessons.length - 1 && (
+              <button
+                onClick={handleNextLesson}
+                className="flex items-center gap-2 px-6 py-3 bg-[#a71f48] hover:bg-[#8e1a3d] text-white rounded-xl font-bold transition-all shadow-lg shadow-rose-200"
+              >
+                Bài học tiếp theo <ChevronRight size={20} />
+              </button>
+            )}
+          </div>
+
           {/* Bottom Lesson Navigation */}
-          <div className="mt-8 flex flex-wrap justify-center gap-2 border-t border-slate-200 pt-8 pb-10">
+          <div className="mt-6 flex flex-wrap justify-center gap-2 border-t border-slate-200 pt-6 pb-10">
             {sortedLessons.map((lesson) => (
               <Link
                 key={lesson.lessonId}

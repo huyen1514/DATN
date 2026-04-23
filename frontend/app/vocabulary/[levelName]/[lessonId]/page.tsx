@@ -13,7 +13,9 @@ import {
   Search,
   Volume2,
   BookOpen,
+  CheckCircle2,
 } from "lucide-react";
+import LessonProgressSidebar from "@/components/LessonProgressSidebar";
 
 interface Level {
   levelId: number;
@@ -51,6 +53,7 @@ export default function VocabularyDetailPage() {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5;
+  const [userId, setUserId] = useState<number>(1);
 
   const loadData = useCallback(async () => {
     try {
@@ -97,8 +100,44 @@ export default function VocabularyDetailPage() {
   }, [lessonId, levelName]);
 
   useEffect(() => {
+    const userStr = localStorage.getItem("user");
+    if (userStr) {
+      try {
+        const u = JSON.parse(userStr);
+        setUserId(u.userId);
+      } catch (e) {}
+    }
     void loadData();
-  }, [loadData]);
+
+    // Mark as accessed/in progress
+    updateStatus("InProgress");
+
+  }, [loadData, lessonId, userId]);
+
+  const updateStatus = async (status: string) => {
+    if (!userId) return;
+    try {
+      await api("/progress/lesson", "PUT", {
+        userId,
+        lessonId,
+        partType: "Vocabulary",
+        status,
+        score: null
+      });
+    } catch (e) {
+      console.error("Could not update progress", e);
+    }
+  };
+
+  const handleNextLesson = () => {
+    const nextIndex = currentLessonIndex + 1;
+    if (nextIndex < levelLessons.length) {
+      // Mark current as completed before moving
+      updateStatus("Completed");
+      const nextLesson = levelLessons[nextIndex];
+      window.location.href = `/vocabulary/${levelName}/${nextLesson.lessonId}`;
+    }
+  };
 
   useEffect(() => {
     setCurrentPage(1);
@@ -148,10 +187,10 @@ export default function VocabularyDetailPage() {
         {/* Sidebar - Cố định (Sticky) và cuộn bên trong */}
         <aside className="sticky top-24 flex max-h-[calc(100vh-6rem)] flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:p-6">
 
-          {/* Phần Header Sidebar */}
-          <div className="shrink-0">
-            <h2 className="text-xl font-bold tracking-tight text-[#a71f48] lg:text-2xl">Tiến độ học tập</h2>
-            <p className="mt-1 text-sm font-medium text-slate-500">Lộ trình {levelName.toUpperCase()}</p>
+          {/* Sidebar - Cố định (Sticky) và cuộn bên trong */}
+          <div className="shrink-0 mb-6">
+            <h2 className="text-xl font-bold tracking-tight text-[#a71f48] lg:text-2xl">Lộ trình học tập</h2>
+            <p className="mt-1 text-sm font-medium text-slate-500">Khóa {levelName.toUpperCase()}</p>
 
             <div className="mt-4">
               <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-700">
@@ -166,6 +205,8 @@ export default function VocabularyDetailPage() {
               </div>
             </div>
           </div>
+
+          <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
 
           {/* Phần Danh sách bài học có thanh cuộn */}
           <div className="mt-6 flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-100">
@@ -357,7 +398,12 @@ export default function VocabularyDetailPage() {
                 return (
                   <button
                     key={page}
-                    onClick={() => setCurrentPage(page)}
+                    onClick={() => {
+                      setCurrentPage(page);
+                      if (page === totalPages) {
+                        updateStatus("Completed");
+                      }
+                    }}
                     className={`flex h-9 w-9 items-center justify-center rounded-full transition ${active
                         ? "bg-[#a71f48] text-white shadow-sm"
                         : "hover:bg-slate-200"
@@ -369,7 +415,13 @@ export default function VocabularyDetailPage() {
               })}
 
               <button
-                onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+                onClick={() => {
+                  const nextPage = Math.min(totalPages, safePage + 1);
+                  setCurrentPage(nextPage);
+                  if (nextPage === totalPages) {
+                    updateStatus("Completed");
+                  }
+                }}
                 className="flex h-9 w-9 items-center justify-center rounded-full transition hover:bg-slate-200 disabled:opacity-50 disabled:hover:bg-transparent"
                 disabled={safePage === totalPages}
               >
@@ -377,6 +429,25 @@ export default function VocabularyDetailPage() {
               </button>
             </div>
           )}
+
+          {/* Action Buttons */}
+          <div className="mt-8 flex justify-between items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+            <button
+              onClick={() => updateStatus("Completed")}
+              className="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold transition-all shadow-lg shadow-green-200"
+            >
+              <CheckCircle2 size={20} /> Đã thuộc hết bài này
+            </button>
+            
+            {currentLessonIndex < levelLessons.length - 1 && (
+              <button
+                onClick={handleNextLesson}
+                className="flex items-center gap-2 px-6 py-3 bg-[#a71f48] hover:bg-[#8e1a3d] text-white rounded-xl font-bold transition-all shadow-lg shadow-rose-200"
+              >
+                Bài học tiếp theo <ChevronRight size={20} />
+              </button>
+            )}
+          </div>
 
           {/* Bottom Quick Navigation */}
           <div className="mt-6 flex flex-wrap justify-center gap-2 border-t border-slate-200 pt-6">

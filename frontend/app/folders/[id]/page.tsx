@@ -114,14 +114,12 @@ export default function FolderDetailPage() {
                                 <h1 className="text-3xl font-serif text-jp-indigo mb-2">{folder.name}</h1>
                                 <p className="text-neutral-500 font-light">{folder.description || "Danh sách các bộ thẻ thuộc không gian này."}</p>
                             </div>
-                            {user?.role === "Admin" && (
-                                <button
-                                    onClick={openCreateModal}
-                                    className="flex items-center gap-2 px-6 py-3 bg-jp-indigo text-white rounded-full text-[11px] font-bold tracking-[0.1em] uppercase hover:bg-jp-red transition-colors shadow-lg shadow-jp-indigo/20"
-                                >
-                                    <Plus size={16} /> Tạo Bộ Thẻ
-                                </button>
-                            )}
+                            <button
+                                onClick={openCreateModal}
+                                className="flex items-center gap-2 px-6 py-3 bg-jp-indigo text-white rounded-full text-[11px] font-bold tracking-[0.1em] uppercase hover:bg-jp-red transition-colors shadow-lg shadow-jp-indigo/20"
+                            >
+                                <Plus size={16} /> Tạo Bộ Thẻ
+                            </button>
                         </div>
 
                         {folder.decks?.length === 0 ? (
@@ -144,16 +142,14 @@ export default function FolderDetailPage() {
                                             <div className="w-10 h-10 bg-red-50 text-jp-red rounded-xl flex items-center justify-center group-hover:bg-jp-red group-hover:text-white transition-colors">
                                                 <Layers size={20} />
                                             </div>
-                                            {user?.role === "Admin" && (
-                                                <div className="flex gap-1">
-                                                    <button onClick={(e) => openEditModal(e, d)} className="p-2 text-neutral-300 hover:text-jp-indigo transition-colors hover:bg-neutral-100 rounded-full">
-                                                        <Edit2 size={14} />
-                                                    </button>
-                                                    <button onClick={(e) => handleDelete(e, d.deckId)} className="p-2 text-neutral-300 hover:text-red-500 transition-colors hover:bg-red-50 rounded-full">
-                                                        <Trash2 size={14} />
-                                                    </button>
-                                                </div>
-                                            )}
+                                            <div className="flex gap-1">
+                                                <button onClick={(e) => openEditModal(e, d)} className="p-2 text-neutral-300 hover:text-jp-indigo transition-colors hover:bg-neutral-100 rounded-full">
+                                                    <Edit2 size={14} />
+                                                </button>
+                                                <button onClick={(e) => handleDelete(e, d.deckId)} className="p-2 text-neutral-300 hover:text-red-500 transition-colors hover:bg-red-50 rounded-full">
+                                                    <Trash2 size={14} />
+                                                </button>
+                                            </div>
                                         </div>
                                         <h3 className="font-bold text-jp-indigo mb-1 group-hover:text-jp-red transition-colors">{d.title}</h3>
                                         <p className="text-xs text-neutral-400 font-medium tracking-[0.1em] uppercase">Bộ thẻ</p>

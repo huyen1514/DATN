@@ -55,7 +55,9 @@ export default function TakeExamPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [sessionId, setSessionId] = useState<number | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const debounceRef = useRef<Record<number, NodeJS.Timeout>>({});
 
   // Audio state
   const [isPlaying, setIsPlaying] = useState(false);
@@ -92,6 +94,9 @@ export default function TakeExamPage() {
 
   const loadExam = async () => {
     try {
+      const userStr = localStorage.getItem("user");
+      const userId = userStr ? JSON.parse(userStr).userId : 1;
+
       const [examData, questionsData] = await Promise.all([
         api(`/exams/${examId}`),
         api(`/exam-questions?examId=${examId}`),
@@ -99,9 +104,22 @@ export default function TakeExamPage() {
       if (examData?.examId) {
         setExam(examData);
         setTimeLeft(examData.duration * 60);
+
+        // Start session
+        try {
+          const session = await api(`/exams/start-session`, "POST", {
+            userId,
+            examId: parseInt(examId),
+            durationSeconds: examData.duration * 60
+          });
+          if (session && session.sessionId) {
+            setSessionId(session.sessionId);
+          }
+        } catch (err) {
+          console.error("Failed to start exam session", err);
+        }
       }
       if (Array.isArray(questionsData)) {
-        // Sort by Section -> Mondai
         const sorted = questionsData.sort((a, b) => {
           if (a.section !== b.section) return a.section - b.section;
           if (a.mondaiNumber !== b.mondaiNumber) return a.mondaiNumber - b.mondaiNumber;
@@ -115,6 +133,23 @@ export default function TakeExamPage() {
 
   const selectAnswer = (questionId: number, answerIdx: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: answerIdx }));
+
+    if (sessionId) {
+      if (debounceRef.current[questionId]) {
+        clearTimeout(debounceRef.current[questionId]);
+      }
+      debounceRef.current[questionId] = setTimeout(async () => {
+        try {
+          await api(`/exams/auto-save-answer`, "POST", {
+            sessionId,
+            questionId,
+            selectedOption: answerIdx.toString()
+          });
+        } catch (err) {
+          console.error("Auto save failed", err);
+        }
+      }, 1500);
+    }
   };
 
   const handlePlayAudio = () => {
@@ -143,6 +178,14 @@ export default function TakeExamPage() {
     if (isSubmitting) return;
     setIsSubmitting(true);
     if (timerRef.current) clearInterval(timerRef.current);
+
+    if (sessionId) {
+      try {
+        await api(`/exams/submit`, "POST", { sessionId });
+      } catch (err) {
+        console.error("Failed to submit session", err);
+      }
+    }
 
     // Calculate score by section (JLPT style: 60 + 60 + 60)
     let correctCount = 0;

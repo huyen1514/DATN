@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useCallback, useEffect, useState, useRef, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { api, API_URL } from "@/lib/api";
 import Link from "next/link";
@@ -18,6 +18,7 @@ import {
   ArrowRight,
   FileText,
 } from "lucide-react";
+import LessonProgressSidebar from "@/components/LessonProgressSidebar";
 
 /* =========== Types =========== */
 interface Level {
@@ -59,6 +60,7 @@ export default function ReadingDetailPage() {
   const [readings, setReadings] = useState<ReadingItem[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [userId, setUserId] = useState<number>(1);
 
   /* ---- Quiz State ---- */
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -113,9 +115,62 @@ export default function ReadingDetailPage() {
     }
   }, [lessonId, levelName]);
 
+  /* ---- Handlers & Helpers ---- */
+  const updateStatus = useCallback(
+    async (status: string, score: number | null = null) => {
+      if (!userId) return;
+      try {
+        await api("/progress/lesson", "PUT", {
+          userId,
+          lessonId,
+          partType: "Reading",
+          status,
+          score,
+        });
+      } catch (e) {
+        console.error("Could not update progress", e);
+      }
+    },
+    [userId, lessonId]
+  );
+
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const userStr = localStorage.getItem("user");
+      if (userStr) {
+        try {
+          const u = JSON.parse(userStr);
+          setUserId(u.userId);
+        } catch (e) {
+          console.error("Failed to parse user from localStorage", e);
+        }
+      }
+    }
     void loadData();
-  }, [loadData]);
+
+    // Mark as accessed/in progress
+    updateStatus("InProgress");
+  }, [loadData, updateStatus]);
+
+  // FIX: Định nghĩa sortedLessons trước khi sử dụng
+  const sortedLessons = useMemo(() => {
+    return [...lessons].sort((a, b) => a.lessonId - b.lessonId);
+  }, [lessons]);
+
+  const currentLessonIndex = useMemo(
+    () => sortedLessons.findIndex((l) => l.lessonId === lessonId),
+    [sortedLessons, lessonId]
+  );
+
+  const handleNextLesson = () => {
+    const nextIndex = currentLessonIndex + 1;
+    if (nextIndex < sortedLessons.length) {
+      // Mark as completed if moving to next lesson
+      updateStatus("Completed");
+      const nextLesson = sortedLessons[nextIndex];
+      window.location.href = `/reading/${levelName}/${nextLesson.lessonId}`;
+    }
+  };
 
   /* ---- Quiz Logic ---- */
   const currentReading = readings[currentIdx];
@@ -145,6 +200,11 @@ export default function ReadingDetailPage() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       setShowResult(true);
+      const correctCount = answers.filter(
+        (a, i) => a !== null && readings[i] && a === readings[i].correctOption
+      ).length;
+      const finalScore = Math.round((correctCount / totalQuestions) * 100);
+      updateStatus("Completed", finalScore);
     }
   };
 
@@ -173,13 +233,6 @@ export default function ReadingDetailPage() {
 
   const scorePercent =
     totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
-
-  /* ---- Find next lesson ---- */
-  const currentLessonIndex = lessons.findIndex((l) => l.lessonId === lessonId);
-  const nextLesson =
-    currentLessonIndex >= 0 && currentLessonIndex < lessons.length - 1
-      ? lessons[currentLessonIndex + 1]
-      : null;
 
   /* ---- Option styling ---- */
   const getOptionClasses = (optionNum: number): string => {
@@ -221,9 +274,7 @@ export default function ReadingDetailPage() {
   /* ---- Render HTML content ---- */
   const renderContentHTML = (htmlStr: string) => {
     // The JSON data uses /images/readings/... but actual files are at wwwroot/uploads/images/readings/...
-    // Step 1: Fix the path /images/ -> /uploads/images/
     let result = htmlStr.replace(/src=['"]\/images\//g, `src='${BACKEND_URL}/uploads/images/`);
-    // Step 2: Handle any other relative src that might not start with /images/
     result = result.replace(/src=['"]\/(?!uploads|http)/g, `src='${BACKEND_URL}/`);
     return result;
   };
@@ -236,7 +287,6 @@ export default function ReadingDetailPage() {
       img.onerror = () => {
         img.style.display = "none";
       };
-      // If already errored (cached), hide it
       if (img.complete && img.naturalWidth === 0) {
         img.style.display = "none";
       }
@@ -249,21 +299,20 @@ export default function ReadingDetailPage() {
       scorePercent >= 80
         ? "from-emerald-50 to-emerald-100 border-emerald-400 text-emerald-600"
         : scorePercent >= 50
-        ? "from-amber-50 to-yellow-100 border-amber-400 text-amber-600"
-        : "from-red-50 to-red-100 border-red-400 text-red-500";
+          ? "from-amber-50 to-yellow-100 border-amber-400 text-amber-600"
+          : "from-red-50 to-red-100 border-red-400 text-red-500";
 
     const barGradient =
       scorePercent >= 80
         ? "from-emerald-400 to-emerald-300"
         : scorePercent >= 50
-        ? "from-amber-400 to-yellow-300"
-        : "from-red-400 to-red-300";
+          ? "from-amber-400 to-yellow-300"
+          : "from-red-400 to-red-300";
 
     return (
       <div className="min-h-screen bg-white text-jp-ink">
         <MainNavbar />
         <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-          {/* Celebration icon */}
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
@@ -286,8 +335,8 @@ export default function ReadingDetailPage() {
             {scorePercent >= 80
               ? "すごい！ Xuất sắc!"
               : scorePercent >= 50
-              ? "がんばった！ Khá tốt!"
-              : "もう少し！ Cần cố gắng thêm!"}
+                ? "がんばった！ Khá tốt!"
+                : "もう少し！ Cần cố gắng thêm!"}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -298,7 +347,6 @@ export default function ReadingDetailPage() {
             Kết quả bài đọc hiểu: {lessonName}
           </motion.p>
 
-          {/* Score Circle */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -313,7 +361,6 @@ export default function ReadingDetailPage() {
             </span>
           </motion.div>
 
-          {/* Score bar */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -333,7 +380,6 @@ export default function ReadingDetailPage() {
             </p>
           </motion.div>
 
-          {/* Answer review dots */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -345,11 +391,10 @@ export default function ReadingDetailPage() {
               return (
                 <div
                   key={i}
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold border-2 ${
-                    correct
-                      ? "bg-emerald-100 text-emerald-600 border-emerald-300"
-                      : "bg-red-100 text-red-500 border-red-300"
-                  }`}
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold border-2 ${correct
+                    ? "bg-emerald-100 text-emerald-600 border-emerald-300"
+                    : "bg-red-100 text-red-500 border-red-300"
+                    }`}
                 >
                   {correct ? "✓" : "✗"}
                 </div>
@@ -357,7 +402,6 @@ export default function ReadingDetailPage() {
             })}
           </motion.div>
 
-          {/* Action buttons */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -371,14 +415,14 @@ export default function ReadingDetailPage() {
               <RotateCcw size={18} />
               Làm lại
             </button>
-            {nextLesson && (
-              <Link
-                href={`/reading/${levelName}/${nextLesson.lessonId}`}
+            {currentLessonIndex < sortedLessons.length - 1 && (
+              <button
+                onClick={handleNextLesson}
                 className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-jp-red to-rose-400 text-white border-none rounded-2xl font-bold text-[0.95rem] shadow-lg shadow-jp-red/20 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-jp-red/30"
               >
                 Bài tiếp theo
                 <ArrowRight size={18} />
-              </Link>
+              </button>
             )}
           </motion.div>
         </div>
@@ -393,7 +437,6 @@ export default function ReadingDetailPage() {
       <MainNavbar />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
-        {/* ---- Header ---- */}
         <div className="mb-8">
           <Link
             href={`/reading/${levelName}`}
@@ -417,7 +460,6 @@ export default function ReadingDetailPage() {
           </div>
         </div>
 
-        {/* ---- Progress Bar ---- */}
         {!isLoading && totalQuestions > 0 && (
           <div className="mb-8">
             <div className="flex items-center justify-between mb-2">
@@ -436,7 +478,6 @@ export default function ReadingDetailPage() {
                 }}
               />
             </div>
-            {/* Step dots */}
             <div className="flex items-center gap-1.5 mt-3 justify-center flex-wrap">
               {readings.map((_, i) => {
                 let dotClass =
@@ -458,9 +499,7 @@ export default function ReadingDetailPage() {
           </div>
         )}
 
-        {/* ---- Content Grid ---- */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* LEFT: Reading Content + Quiz */}
           <div className="lg:col-span-3 space-y-6">
             {isLoading ? (
               <div className="space-y-6">
@@ -489,9 +528,7 @@ export default function ReadingDetailPage() {
                   exit={{ opacity: 0, x: -30 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                 >
-                  {/* Reading Content Card */}
                   <div className="bg-white rounded-3xl border border-black/5 shadow-sm overflow-hidden">
-                    {/* Content Section */}
                     <div
                       ref={contentRef}
                       className="p-6 md:p-10 max-h-[600px] overflow-y-auto scroll-smooth"
@@ -505,7 +542,6 @@ export default function ReadingDetailPage() {
                         </h3>
                       </div>
 
-                      {/* HTML Content — rendered from backend */}
                       <div
                         className="font-serif leading-[1.9] text-jp-ink text-[0.95rem] [&_h3]:text-lg [&_h3]:font-bold [&_h3]:mb-3 [&_h3]:pb-2 [&_p]:mb-2.5 [&_b]:font-bold [&_b]:text-jp-indigo [&_ul]:pl-0 [&_ul]:my-3 [&_li]:py-1 [&_li]:text-sm [&_img]:max-w-full [&_img]:rounded-xl [&_img]:shadow-md [&_img]:mx-auto [&_img]:block [&_img]:my-4 [&_hr]:border-none [&_hr]:h-0.5 [&_hr]:bg-gradient-to-r [&_hr]:from-transparent [&_hr]:via-neutral-200 [&_hr]:to-transparent [&_hr]:my-7 [&_table]:w-full [&_table]:border-collapse [&_table]:my-4 [&_td]:border [&_td]:border-neutral-200 [&_td]:px-3 [&_td]:py-2 [&_td]:text-sm [&_th]:border [&_th]:border-neutral-200 [&_th]:px-3 [&_th]:py-2 [&_th]:text-sm [&_th]:bg-neutral-50 [&_th]:font-bold"
                         dangerouslySetInnerHTML={{
@@ -516,12 +552,9 @@ export default function ReadingDetailPage() {
                       />
                     </div>
 
-                    {/* Divider */}
                     <div className="h-px bg-gradient-to-r from-transparent via-jp-red/20 to-transparent" />
 
-                    {/* Question + Options Section */}
                     <div className="p-6 md:p-10 bg-gradient-to-b from-jp-sakura/10 to-white">
-                      {/* Question */}
                       <div className="mb-6">
                         <span className="inline-flex items-center gap-2 text-xs font-bold text-jp-red/80 uppercase tracking-widest mb-3">
                           <BookOpen size={14} />
@@ -532,7 +565,6 @@ export default function ReadingDetailPage() {
                         </p>
                       </div>
 
-                      {/* Options Grid */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                         {[1, 2, 3, 4].map((optNum) => {
                           const optKey =
@@ -548,12 +580,12 @@ export default function ReadingDetailPage() {
                             >
                               <span className={getOptionLabelClasses(optNum)}>
                                 {isAnswered &&
-                                optNum === currentReading?.correctOption ? (
+                                  optNum === currentReading?.correctOption ? (
                                   <CheckCircle2 size={18} />
                                 ) : isAnswered &&
                                   selectedOption === optNum &&
                                   optNum !==
-                                    currentReading?.correctOption ? (
+                                  currentReading?.correctOption ? (
                                   <XCircle size={18} />
                                 ) : (
                                   OPTION_LABELS[optNum - 1]
@@ -565,18 +597,16 @@ export default function ReadingDetailPage() {
                         })}
                       </div>
 
-                      {/* Feedback Banner */}
                       <AnimatePresence>
                         {isAnswered && (
                           <motion.div
                             initial={{ opacity: 0, y: 12 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0 }}
-                            className={`flex items-center gap-3 px-5 py-4 rounded-2xl border-2 ${
-                              isCorrect
-                                ? "bg-gradient-to-r from-emerald-50 to-emerald-100/50 border-emerald-300"
-                                : "bg-gradient-to-r from-red-50 to-red-100/50 border-red-300"
-                            }`}
+                            className={`flex items-center gap-3 px-5 py-4 rounded-2xl border-2 ${isCorrect
+                              ? "bg-gradient-to-r from-emerald-50 to-emerald-100/50 border-emerald-300"
+                              : "bg-gradient-to-r from-red-50 to-red-100/50 border-red-300"
+                              }`}
                           >
                             {isCorrect ? (
                               <>
@@ -608,14 +638,14 @@ export default function ReadingDetailPage() {
                                     <strong>
                                       {
                                         OPTION_LABELS[
-                                          (currentReading?.correctOption ?? 1) -
-                                            1
+                                        (currentReading?.correctOption ?? 1) -
+                                        1
                                         ]
                                       }
                                       .{" "}
                                       {
                                         currentReading?.[
-                                          `option${currentReading.correctOption}` as keyof ReadingItem
+                                        `option${currentReading.correctOption}` as keyof ReadingItem
                                         ] as string
                                       }
                                     </strong>
@@ -627,7 +657,6 @@ export default function ReadingDetailPage() {
                         )}
                       </AnimatePresence>
 
-                      {/* Navigation Buttons */}
                       {isAnswered && (
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
@@ -661,11 +690,11 @@ export default function ReadingDetailPage() {
             )}
           </div>
 
-          {/* RIGHT: Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-20 space-y-6">
-              {/* Lesson Navigator */}
-              <div className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm">
+              <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
+
+              <div className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm mt-6">
                 <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-5 pb-3 border-b border-black/5 flex items-center gap-2">
                   <FileText size={14} className="text-jp-red" />
                   {lessons.length} Bài Học
@@ -676,11 +705,10 @@ export default function ReadingDetailPage() {
                     <Link
                       key={lesson.lessonId}
                       href={`/reading/${levelName}/${lesson.lessonId}`}
-                      className={`aspect-square flex items-center justify-center rounded-xl text-xs font-bold transition-all duration-200 ${
-                        lesson.lessonId === lessonId
-                          ? "bg-gradient-to-br from-jp-red to-rose-400 text-white shadow-md scale-105"
-                          : "bg-jp-sakura/60 text-jp-indigo hover:bg-jp-red hover:text-white hover:scale-105"
-                      }`}
+                      className={`aspect-square flex items-center justify-center rounded-xl text-xs font-bold transition-all duration-200 ${lesson.lessonId === lessonId
+                        ? "bg-gradient-to-br from-jp-red to-rose-400 text-white shadow-md scale-105"
+                        : "bg-jp-sakura/60 text-jp-indigo hover:bg-jp-red hover:text-white hover:scale-105"
+                        }`}
                       title={lesson.lessonName}
                     >
                       {idx + 1}
@@ -689,7 +717,6 @@ export default function ReadingDetailPage() {
                 </div>
               </div>
 
-              {/* Progress Card */}
               {totalQuestions > 0 && (
                 <div className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm">
                   <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -710,11 +737,10 @@ export default function ReadingDetailPage() {
                       <div
                         className="h-full bg-gradient-to-r from-jp-red to-rose-400 rounded-full transition-all duration-500"
                         style={{
-                          width: `${
-                            (answers.filter((a) => a !== null).length /
-                              totalQuestions) *
+                          width: `${(answers.filter((a) => a !== null).length /
+                            totalQuestions) *
                             100
-                          }%`,
+                            }%`,
                         }}
                       />
                     </div>
@@ -722,7 +748,6 @@ export default function ReadingDetailPage() {
                 </div>
               )}
 
-              {/* Tips Card */}
               <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl border border-amber-200/50 p-6">
                 <p className="text-xs font-bold text-amber-700 mb-2 flex items-center gap-1.5">
                   <Sparkles size={12} />
@@ -738,7 +763,6 @@ export default function ReadingDetailPage() {
         </div>
       </div>
 
-      {/* Footer decoration */}
       <div className="h-1 bg-gradient-to-r from-jp-red via-jp-sakura to-jp-red mt-20" />
     </div>
   );

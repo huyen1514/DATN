@@ -77,6 +77,13 @@ export default function FlashcardDashboard() {
     try {
       setIsLoading(true);
       const response = await api(`/flashcards/deck/${deckId}`);
+
+      // Handle auth error
+      if (!Array.isArray(response) && (response?.status === 401 || response?.title === "Unauthorized")) {
+        window.location.href = "/login";
+        return;
+      }
+
       setCards(Array.isArray(response) ? response : []);
       try {
         const deckResponse = await api(`/decks/${deckId}`);
