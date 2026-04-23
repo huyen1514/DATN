@@ -13,11 +13,13 @@ namespace Controllers
     {
         private readonly AppDbContext _context;
         private readonly ExamPdfImportService _pdfImportService;
+        private readonly Repositories.IExamSessionRepository _sessionRepo;
 
-        public ExamController(AppDbContext context, ExamPdfImportService pdfImportService)
+        public ExamController(AppDbContext context, ExamPdfImportService pdfImportService, Repositories.IExamSessionRepository sessionRepo)
         {
             _context = context;
             _pdfImportService = pdfImportService;
+            _sessionRepo = sessionRepo;
         }
 
         [HttpPost]
@@ -83,6 +85,7 @@ namespace Controllers
             exam.PassScaledReading = model.PassScaledReading;
             exam.PassScaledListening = model.PassScaledListening;
             exam.PassScaledVocabularyGrammarReading = model.PassScaledVocabularyGrammarReading;
+            exam.Price = model.Price;
 
             await _context.SaveChangesAsync();
             return Ok(exam);
@@ -393,6 +396,49 @@ namespace Controllers
                 return ExamSectionType.Grammar;
 
             return ExamSectionType.Vocabulary;
+        }
+
+        // --- EXAM SESSION ENDPOINTS ---
+
+        public class StartSessionRequest
+        {
+            public int UserId { get; set; }
+            public int ExamId { get; set; }
+            public int DurationSeconds { get; set; }
+        }
+
+        [HttpPost("start-session")]
+        public async Task<IActionResult> StartSession([FromBody] StartSessionRequest request)
+        {
+            var session = await _sessionRepo.StartSessionAsync(request.UserId, request.ExamId, request.DurationSeconds);
+            return Ok(session);
+        }
+
+        public class AutoSaveAnswerRequest
+        {
+            public int SessionId { get; set; }
+            public int QuestionId { get; set; }
+            public string SelectedOption { get; set; }
+        }
+
+        [HttpPost("auto-save-answer")]
+        public async Task<IActionResult> AutoSaveAnswer([FromBody] AutoSaveAnswerRequest request)
+        {
+            var answer = await _sessionRepo.SaveAnswerAsync(request.SessionId, request.QuestionId, request.SelectedOption);
+            return Ok(answer);
+        }
+
+        public class SubmitSessionRequest
+        {
+            public int SessionId { get; set; }
+        }
+
+        [HttpPost("submit")]
+        public async Task<IActionResult> SubmitSession([FromBody] SubmitSessionRequest request)
+        {
+            var session = await _sessionRepo.SubmitSessionAsync(request.SessionId);
+            if (session == null) return NotFound("Session not found");
+            return Ok(session);
         }
     }
 }

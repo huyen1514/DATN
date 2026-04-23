@@ -61,11 +61,25 @@ namespace Services
 
             if (grammarList == null || !grammarList.Any()) return (0, 0);
 
+            var fileName = Path.GetFileNameWithoutExtension(filePath);
+            var match = System.Text.RegularExpressions.Regex.Match(fileName, @"\d+");
+            int lessonNumber = 0;
+            if (match.Success) lessonNumber = int.Parse(match.Value);
+
+            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Ngữ pháp");
+            if (targetLesson == null)
+            {
+                Console.WriteLine($"[Grammar Error] Target lesson not found for file {fileName}. Skipping.");
+                return (0, 0);
+            }
+
             int imported = 0;
             int skipped = 0;
 
             foreach (var grammar in grammarList)
             {
+                grammar.LessonId = targetLesson.LessonId;
+
                 var existingGrammar = await _context.Grammars
                     .FirstOrDefaultAsync(g => g.GrammarName == grammar.GrammarName && g.LessonId == grammar.LessonId);
 

@@ -41,6 +41,10 @@ namespace Models
         /// </summary>
         public int? PassScaledVocabularyGrammarReading { get; set; }
         
+        /// <summary>Giá tiền để mở khoá đề thi (VNĐ).</summary>
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Price { get; set; } = 50000;
+
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

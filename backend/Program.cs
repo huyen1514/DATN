@@ -7,6 +7,7 @@ using System.Security.Claims;
 using Data;
 using Services;
 using Models;
+using Repositories;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
@@ -27,7 +28,13 @@ builder.Services.AddScoped<KanjiImportService>();
 builder.Services.AddScoped<ReadImportService>();
 builder.Services.AddScoped<ListenImportService>();
 builder.Services.AddScoped<ExamPdfImportService>();
+builder.Services.AddScoped<EmailService>();
 
+// Register Repositories
+builder.Services.AddScoped<IProgressRepository, ProgressRepository>();
+builder.Services.AddScoped<IExamSessionRepository, ExamSessionRepository>();
+
+builder.Services.AddMemoryCache();
 builder.Services.AddHttpContextAccessor();
 
 // Add Authentication with JWT Bearer
@@ -154,6 +161,64 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    // Retry logic: đợi SQL Server sẵn sàng (đặc biệt quan trọng trong Docker)
+    var maxRetries = 10;
+    for (int i = 0; i < maxRetries; i++)
+    {
+        try
+        {
+            context.Database.Migrate();
+            Console.WriteLine("✅ Database migration completed successfully.");
+            break;
+        }
+        catch (Exception ex)
+        {
+            if (i == maxRetries - 1)
+            {
+                Console.WriteLine($"❌ Database migration failed after {maxRetries} retries: {ex.Message}");
+                throw; // Crash nếu không kết nối được sau tất cả retries
+            }
+            Console.WriteLine($"⏳ Database not ready (attempt {i + 1}/{maxRetries}), retrying in 5s... ({ex.Message})");
+            await Task.Delay(5000);
+        }
+    }
+
+    // Seed Levels và Lessons nếu chưa có
+    if (!context.Levels.Any())
+    {
+        context.Levels.AddRange(
+            new Level { LevelName = "N5" },
+            new Level { LevelName = "N4" },
+            new Level { LevelName = "N3" }
+        );
+        context.SaveChanges();
+    }
+
+    if (!context.Lessons.Any())
+    {
+        var levelN5 = context.Levels.FirstOrDefault(l => l.LevelName == "N5");
+        var levelN4 = context.Levels.FirstOrDefault(l => l.LevelName == "N4");
+        
+        string[] skills = { "Từ vựng", "Ngữ pháp", "Nghe hiểu", "Đọc hiểu", "Hán tự" };
+
+        for (int i = 1; i <= 25; i++)
+        {
+            foreach (var skill in skills)
+            {
+                context.Lessons.Add(new Lesson { LessonName = $"Bài {i}", SkillType = skill, LevelId = levelN5?.LevelId ?? 1 });
+            }
+        }
+        for (int i = 26; i <= 50; i++)
+        {
+            foreach (var skill in skills)
+            {
+                context.Lessons.Add(new Lesson { LessonName = $"Bài {i}", SkillType = skill, LevelId = levelN4?.LevelId ?? 2 });
+            }
+        }
+        context.SaveChanges();
+        Console.WriteLine("Seeded Levels and Lessons successfully.");
+    }
 
     if (!context.Users.Any(u => u.Role == "Admin"))
     {

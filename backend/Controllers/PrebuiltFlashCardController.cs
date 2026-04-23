@@ -34,24 +34,29 @@ namespace Controllers
         public async Task<IActionResult> GetLessons()
         {
             // Get vocab counts per lesson
-            var vocabLessons = await _context.Vocabularies
+            var lessonData = await _context.Vocabularies
                 .GroupBy(v => v.LessonId)
-                .Select(g => new { LessonId = g.Key, CardCount = g.Count() })
+                .Select(g => new
+                {
+                    LessonId = g.Key,
+                    Count = g.Count()
+                })
                 .ToListAsync();
 
-            // Get kanji counts per lesson
-            var kanjiLessons = await _context.Kanjis
+            var kanjiData = await _context.Kanjis
                 .GroupBy(k => k.LessonId)
-                .Select(g => new { LessonId = g.Key, CardCount = g.Count() })
+                .Select(g => new
+                {
+                    LessonId = g.Key,
+                    Count = g.Count()
+                })
                 .ToListAsync();
 
-            // Get all relevant lesson IDs
-            var allLessonIds = vocabLessons.Select(v => v.LessonId)
-                .Union(kanjiLessons.Select(k => k.LessonId))
+            var allLessonIds = lessonData.Select(v => v.LessonId)
+                .Union(kanjiData.Select(k => k.LessonId))
                 .Distinct()
                 .ToList();
 
-            // Load lesson details with level
             var lessons = await _context.Lessons
                 .Where(l => allLessonIds.Contains(l.LessonId))
                 .Include(l => l.Level)
@@ -59,39 +64,40 @@ namespace Controllers
                 .ThenBy(l => l.LessonId)
                 .ToListAsync();
 
-            var result = new List<object>();
-
-            foreach (var lesson in lessons)
+            // Get user's decks to show progress
+            var userIdStr = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userDecks = new List<Deck>();
+            if (userIdStr != null)
             {
-                var vocabCount = vocabLessons.FirstOrDefault(v => v.LessonId == lesson.LessonId)?.CardCount ?? 0;
-                var kanjiCount = kanjiLessons.FirstOrDefault(k => k.LessonId == lesson.LessonId)?.CardCount ?? 0;
-
-                if (vocabCount > 0)
-                {
-                    result.Add(new
-                    {
-                        lessonId = lesson.LessonId,
-                        lessonName = lesson.LessonName,
-                        levelName = lesson.Level?.LevelName ?? "N/A",
-                        levelId = lesson.LevelId,
-                        skillType = "Vocabulary",
-                        cardCount = vocabCount
-                    });
-                }
-
-                if (kanjiCount > 0)
-                {
-                    result.Add(new
-                    {
-                        lessonId = lesson.LessonId,
-                        lessonName = lesson.LessonName,
-                        levelName = lesson.Level?.LevelName ?? "N/A",
-                        levelId = lesson.LevelId,
-                        skillType = "Kanji",
-                        cardCount = kanjiCount
-                    });
-                }
+                var userId = int.Parse(userIdStr);
+                userDecks = await _context.Decks
+                    .Where(d => d.UserId == userId)
+                    .Include(d => d.FlashCards)
+                    .ToListAsync();
             }
+
+            var result = lessons.Select(l =>
+            {
+                var vocabCount = lessonData.FirstOrDefault(d => d.LessonId == l.LessonId)?.Count ?? 0;
+                var kanjiCount = kanjiData.FirstOrDefault(d => d.LessonId == l.LessonId)?.Count ?? 0;
+                
+                var vocabDeck = userDecks.FirstOrDefault(d => d.Title == $"[Từ vựng] {l.LessonName}");
+                var kanjiDeck = userDecks.FirstOrDefault(d => d.Title == $"[Kanji] {l.LessonName}");
+
+                return new
+                {
+                    l.LessonId,
+                    l.LessonName,
+                    LevelName = l.Level?.LevelName,
+                    VocabCount = vocabCount,
+                    KanjiCount = kanjiCount,
+                    VocabMastered = vocabDeck?.FlashCards.Count(f => f.Status == FlashCardStatus.Mastered) ?? 0,
+                    KanjiMastered = kanjiDeck?.FlashCards.Count(f => f.Status == FlashCardStatus.Mastered) ?? 0,
+                    VocabDeckId = vocabDeck?.DeckId,
+                    KanjiDeckId = kanjiDeck?.DeckId,
+                    LastStudiedAt = vocabDeck?.LastStudiedAt ?? kanjiDeck?.LastStudiedAt
+                };
+            });
 
             return Ok(result);
         }
@@ -123,10 +129,19 @@ namespace Controllers
 
             // Check if user already has this deck
             var existingDeck = await _context.Decks
+                .Include(d => d.FlashCards)
                 .FirstOrDefaultAsync(d => d.UserId == userId && d.Title == deckTitle);
 
             if (existingDeck != null)
             {
+                // If the deck exists but has no flashcards, regenerate them
+                if (existingDeck.FlashCards == null || existingDeck.FlashCards.Count == 0)
+                {
+                    await GenerateFlashCards(existingDeck.DeckId, type, lessonId);
+                    existingDeck.TotalCards = await _context.FlashCards.CountAsync(f => f.DeckId == existingDeck.DeckId);
+                    await _context.SaveChangesAsync();
+                }
+
                 return Ok(new
                 {
                     deckId = existingDeck.DeckId,
@@ -148,7 +163,23 @@ namespace Controllers
             _context.Decks.Add(deck);
             await _context.SaveChangesAsync();
 
-            // Generate flashcards based on type
+            // Generate flashcards
+            await GenerateFlashCards(deck.DeckId, type, lessonId);
+
+            // Calculate total cards AFTER saving flashcards
+            deck.TotalCards = await _context.FlashCards.CountAsync(f => f.DeckId == deck.DeckId);
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                deckId = deck.DeckId,
+                title = deck.Title,
+                isNew = true
+            });
+        }
+
+        private async Task GenerateFlashCards(int deckId, string type, int lessonId)
+        {
             if (type.ToLower() == "kanji")
             {
                 var kanjis = await _context.Kanjis
@@ -158,7 +189,7 @@ namespace Controllers
 
                 var flashCards = kanjis.Select(k => new FlashCard
                 {
-                    DeckId = deck.DeckId,
+                    DeckId = deckId,
                     FrontText = k.Character,
                     HiraganaText = string.IsNullOrEmpty(k.Kunyomi)
                         ? k.Onyomi
@@ -181,7 +212,7 @@ namespace Controllers
 
                 var flashCards = vocabs.Select(v => new FlashCard
                 {
-                    DeckId = deck.DeckId,
+                    DeckId = deckId,
                     FrontText = v.Word,
                     HiraganaText = v.Reading,
                     BackText = v.Meaning,
@@ -195,16 +226,7 @@ namespace Controllers
                 _context.FlashCards.AddRange(flashCards);
             }
 
-            // Calculate total cards
-            deck.TotalCards = await _context.FlashCards.CountAsync(f => f.DeckId == deck.DeckId);
             await _context.SaveChangesAsync();
-
-            return Ok(new
-            {
-                deckId = deck.DeckId,
-                title = deck.Title,
-                isNew = true
-            });
         }
     }
 }

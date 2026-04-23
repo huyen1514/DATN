@@ -61,7 +61,6 @@ namespace Controllers
             });
         }
 
-        // ================= GET BY DECK =================
         [HttpGet("deck/{deckId}")]
         public async Task<IActionResult> GetByDeck(int deckId)
         {
@@ -76,7 +75,11 @@ namespace Controllers
                     FrontText = x.FrontText,
                     HiraganaText = x.HiraganaText,
                     BackText = x.BackText,
-                    Status = x.Status.ToString()
+                    Example = x.Example,
+                    AudioUrl = x.AudioUrl,
+                    Status = x.Status.ToString(),
+                    NextReviewDate = x.NextReviewDate,
+                    ReviewCount = x.ReviewCount
                 })
                 .ToListAsync();
 
@@ -142,6 +145,12 @@ namespace Controllers
 
             card.ReviewCount++;
             card.LastReviewedAt = DateTime.UtcNow;
+
+            // Update Deck's last studied time
+            if (card.Deck != null)
+            {
+                card.Deck.LastStudiedAt = DateTime.UtcNow;
+            }
 
             if (dto.Score >= 4)
             {

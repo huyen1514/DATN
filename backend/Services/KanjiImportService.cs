@@ -58,21 +58,24 @@ namespace Services
 
             if (kanjiList == null || !kanjiList.Any()) return (0, 0);
 
-            // TỐI ƯU HÓA & BẢO VỆ: Lấy danh sách các LessonId hiện đang tồn tại thực tế trong database
-            // Điều này ngăn chặn lỗi sập app (Crash) do vi phạm Khóa ngoại (Foreign Key)
-            var validLessonIds = await _context.Lessons.Select(l => l.LessonId).ToListAsync();
+            var fileName = Path.GetFileNameWithoutExtension(filePath);
+            var match = System.Text.RegularExpressions.Regex.Match(fileName, @"\d+");
+            int lessonNumber = 0;
+            if (match.Success) lessonNumber = int.Parse(match.Value);
+
+            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Hán tự");
+            if (targetLesson == null)
+            {
+                Console.WriteLine($"[Kanji Cảnh báo] Target lesson not found for file {fileName}. Skipping.");
+                return (0, 0);
+            }
 
             int imported = 0;
             int skipped = 0;
 
             foreach (var kanji in kanjiList)
             {
-                // KIỂM TRA AN TOÀN: Nếu LessonId trong file JSON chưa được tạo trong DB, bỏ qua chữ đó
-                if (!validLessonIds.Contains(kanji.LessonId))
-                {
-                    Console.WriteLine($"[Kanji Cảnh báo] Bỏ qua chữ '{kanji.Character}' vì LessonId = {kanji.LessonId} chưa tồn tại trong bảng Lessons.");
-                    continue; // Chuyển sang xử lý chữ Kanji tiếp theo
-                }
+                kanji.LessonId = targetLesson.LessonId;
 
                 // Kiểm tra xem chữ Hán này đã tồn tại trong Lesson này chưa
                 var existingKanji = await _context.Kanjis

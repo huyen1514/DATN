@@ -94,8 +94,13 @@ namespace Controllers
                     {
                         FlashCardId = f.FlashCardId,
                         FrontText = f.FrontText,
+                        HiraganaText = f.HiraganaText,
                         BackText = f.BackText,
-                        Status = f.Status.ToString()
+                        Example = f.Example,
+                        AudioUrl = f.AudioUrl,
+                        Status = f.Status.ToString(),
+                        NextReviewDate = f.NextReviewDate,
+                        ReviewCount = f.ReviewCount
                     }).ToList()
     })
     .FirstOrDefaultAsync();

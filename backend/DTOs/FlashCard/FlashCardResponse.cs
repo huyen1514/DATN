@@ -14,5 +14,6 @@ namespace DTOs.FlashCard
         public string Status { get; set; }
 
         public DateTime? NextReviewDate { get; set; }
+        public int ReviewCount { get; set; }
     }
 }

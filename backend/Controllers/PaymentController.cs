@@ -108,5 +108,58 @@ namespace Controllers
 
             return Ok("Đã xoá payment");
         }
+
+        [HttpPost("confirm-and-unlock")]
+        public async Task<IActionResult> ConfirmAndUnlock([FromBody] ConfirmPaymentRequest request)
+        {
+            var userExists = await _context.Users.AnyAsync(x => x.UserId == request.UserId);
+            if (!userExists)
+                return BadRequest("User không tồn tại");
+
+            var exam = await _context.Exams.FirstOrDefaultAsync(x => x.ExamId == request.ExamId);
+            if (exam == null)
+                return BadRequest("Exam không tồn tại");
+
+            // Tạo payment record với trạng thái Success
+            var payment = new Payment
+            {
+                UserId = request.UserId,
+                ExamId = request.ExamId,
+                Amount = exam.Price,
+                PaymentMethod = PaymentMethodType.VNPay,
+                TransactionId = request.TransactionRef,
+                PaymentStatus = PaymentStatus.Success,
+                PaymentDate = DateTime.UtcNow,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            _context.Payments.Add(payment);
+
+            // Cập nhật UserExams (Mở khóa đề)
+            var userExam = await _context.UserExams
+                .FirstOrDefaultAsync(x => x.UserId == request.UserId && x.ExamId == request.ExamId);
+
+            if (userExam == null)
+            {
+                userExam = new UserExams
+                {
+                    UserId = request.UserId,
+                    ExamId = request.ExamId,
+                    PurchaseDate = DateTime.UtcNow
+                };
+                _context.UserExams.Add(userExam);
+            }
+            
+            await _context.SaveChangesAsync();
+
+            return Ok(new { success = true, message = "Thanh toán thành công và đã mở khoá đề thi" });
+        }
+    }
+
+    public class ConfirmPaymentRequest
+    {
+        public int UserId { get; set; }
+        public int ExamId { get; set; }
+        public string TransactionRef { get; set; }
     }
 }

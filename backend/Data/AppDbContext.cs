@@ -24,5 +24,8 @@ namespace Data
         public DbSet<ExamResult> ExamResults { get; set; }
         public DbSet<UserExams> UserExams { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<LessonProgress> LessonProgresses { get; set; }
+        public DbSet<ExamSession> ExamSessions { get; set; }
+        public DbSet<ExamSessionAnswer> ExamSessionAnswers { get; set; }
     }
 }

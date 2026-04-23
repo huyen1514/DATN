@@ -66,11 +66,24 @@ namespace Services
 
             if (readingList == null || !readingList.Any()) return (0, 0);
 
+            var fileName = Path.GetFileNameWithoutExtension(filePath);
+            var match = System.Text.RegularExpressions.Regex.Match(fileName, @"\d+");
+            int lessonNumber = 0;
+            if (match.Success) lessonNumber = int.Parse(match.Value);
+
+            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Đọc hiểu");
+            if (targetLesson == null)
+            {
+                Console.WriteLine($"[Reading] Target lesson not found for file {fileName}. Skipping.");
+                return (0, 0);
+            }
+
             int imported = 0;
             int updated = 0;
 
             foreach (var reading in readingList)
             {
+                reading.LessonId = targetLesson.LessonId;
                 // Kiểm tra xem bài đọc này đã tồn tại trong Lesson này chưa (dựa trên nội dung)
                 var existingReading = await _context.Readings
                     .FirstOrDefaultAsync(r => r.Content == reading.Content && r.LessonId == reading.LessonId);

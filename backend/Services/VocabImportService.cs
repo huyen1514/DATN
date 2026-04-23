@@ -56,16 +56,22 @@ namespace Services // Đảm bảo namespace này khớp với thư mục Servic
 
                 if (vocabList == null || vocabList.Count == 0) return;
 
+                var fileName = Path.GetFileNameWithoutExtension(filePath);
+                var match = System.Text.RegularExpressions.Regex.Match(fileName, @"\d+");
+                int lessonNumber = 0;
+                if (match.Success) lessonNumber = int.Parse(match.Value);
+
+                var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Từ vựng");
+                if (targetLesson == null)
+                {
+                    Console.WriteLine($"Error: Target lesson not found for file {fileName}. Skipping.");
+                    return;
+                }
+
                 foreach (var item in vocabList)
                 {
-                    // 3. KIỂM TRA AN TOÀN: LessonId có tồn tại trong bảng Lessons không?
-                    // Tránh lỗi Foreign Key nếu bạn chưa tạo Lesson 5, 6...
-                    var lessonExists = await _context.Lessons.AnyAsync(l => l.LessonId == item.LessonId);
-                    if (!lessonExists)
-                    {
-                        Console.WriteLine($"Error: LessonId {item.LessonId} not found in Database. Skipping '{item.Word}'.");
-                        continue; 
-                    }
+                    // Gán tự động LessonId lấy từ DB
+                    item.LessonId = targetLesson.LessonId;
 
                     // 4. KIỂM TRA TRÙNG LẶP: Dựa trên Word và Reading
                     var existingVocab = await _context.Vocabularies

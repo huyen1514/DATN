@@ -63,14 +63,25 @@ namespace Services
 
             if (listeningList == null || !listeningList.Any()) return (0, 0);
 
+            var fileName = Path.GetFileNameWithoutExtension(filePath);
+            var match = System.Text.RegularExpressions.Regex.Match(fileName, @"\d+");
+            int lessonNumber = 0;
+            if (match.Success) lessonNumber = int.Parse(match.Value);
+
+            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Nghe hiểu");
+            if (targetLesson == null)
+            {
+                Console.WriteLine($"[Listening] Target lesson not found for file {fileName}. Skipping.");
+                return (0, 0);
+            }
+
             int imported = 0;
             int updated = 0;
 
             foreach (var listening in listeningList)
             {
-                // Kiểm tra LessonId có tồn tại trong hệ thống không
-                var lessonExists = await _context.Lessons.AnyAsync(l => l.LessonId == listening.LessonId);
-                if (!lessonExists) continue;
+                listening.LessonId = targetLesson.LessonId;
+                // Bỏ qua bước kiểm tra lessonExists vì LessonId đã được lấy chuẩn từ DB
 
                 // Kiểm tra trùng lặp dựa trên câu hỏi và bài học
                 var existingListening = await _context.Listenings
