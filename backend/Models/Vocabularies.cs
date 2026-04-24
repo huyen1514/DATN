@@ -12,20 +12,25 @@ namespace Models
         
         [Required]
         [Column(TypeName = "nvarchar(255)")]
-        public string Word { get; set; }
+        public string Word { get; set; } = string.Empty;
 
         [Required]
         [Column(TypeName = "nvarchar(255)")]
-        public string Reading { get; set; }
+        public string Reading { get; set; } = string.Empty;
+
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string Meaning { get; set; }
+        public string Meaning { get; set; } = string.Empty;
 
         [Column(TypeName = "nvarchar(max)")]
         public string? Example { get; set; }
 
+        [MaxLength(50)] 
+        [Column(TypeName = "nvarchar(50)")]
         public string? PartOfSpeech { get; set; }
 
+        [MaxLength(500)] 
+        [Column(TypeName = "nvarchar(500)")]
         public string? AudioUrl { get; set; }
 
         [Required]
@@ -34,5 +39,7 @@ namespace Models
         public Lesson? Lesson { get; set; }
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        
+        public DateTime? UpdatedAt { get; set; } 
     }
 }

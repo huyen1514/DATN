@@ -12,7 +12,7 @@ namespace Models
         [Required]
         [StringLength(100)]
         [Column(TypeName = "nvarchar(100)")]
-        public string LevelName { get; set; }
+        public string LevelName { get; set; } = string.Empty;
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

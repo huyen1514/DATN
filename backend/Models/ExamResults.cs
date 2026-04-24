@@ -11,12 +11,16 @@ namespace Models
         public int ExamResultId { get; set; }
         
         [Required]
+        [Column(TypeName = "decimal(5,2)")]
         public decimal Score  { get; set; }
 
+        [Column(TypeName = "decimal(5,2)")]
         public decimal VocabularyGrammarScore { get; set; }
         
+        [Column(TypeName = "decimal(5,2)")]
         public decimal ReadingScore { get; set; }
         
+        [Column(TypeName = "decimal(5,2)")]
         public decimal ListeningScore { get; set; }
 
         public bool HasParalysisScore { get; set; }

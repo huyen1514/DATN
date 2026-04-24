@@ -17,48 +17,48 @@ namespace Repositories
             _context = context;
         }
 
-        public async Task<LessonProgress> UpsertProgressAsync(int userId, int lessonId, string partType, string status, decimal? score)
+        public async Task<bool> UserExistsAsync(int userId) => 
+            await _context.Users.AnyAsync(u => u.UserId == userId);
+
+        public async Task<bool> LessonExistsAsync(int lessonId) => 
+            await _context.Lessons.AnyAsync(l => l.LessonId == lessonId);
+
+        public async Task<UserProgress?> GetUserProgressWithPartsAsync(int userId, int lessonId)
         {
-            var progress = await _context.LessonProgresses
-                .FirstOrDefaultAsync(p => p.UserId == userId && p.LessonId == lessonId && p.PartType == partType);
-
-            if (progress == null)
-            {
-                progress = new LessonProgress
-                {
-                    UserId = userId,
-                    LessonId = lessonId,
-                    PartType = partType,
-                    Status = status,
-                    Score = score,
-                    LastAccessedAt = DateTime.UtcNow
-                };
-                _context.LessonProgresses.Add(progress);
-            }
-            else
-            {
-                progress.Status = status;
-                progress.Score = score;
-                progress.LastAccessedAt = DateTime.UtcNow;
-            }
-
-            await _context.SaveChangesAsync();
-            return progress;
+            return await _context.UserProgresses
+                .Include(up => up.LessonProgresses)
+                .Include(up => up.Lesson).ThenInclude(l => l.Level)
+                .FirstOrDefaultAsync(up => up.UserId == userId && up.LessonId == lessonId);
         }
 
-        public async Task<IEnumerable<LessonProgress>> GetLessonProgressesAsync(int lessonId, int userId)
+        public async Task<List<UserProgress>> GetAllProgressByUserAsync(int userId)
         {
-            return await _context.LessonProgresses
-                .Where(p => p.LessonId == lessonId && p.UserId == userId)
+            return await _context.UserProgresses
+                .Include(up => up.LessonProgresses)
+                .Include(up => up.Lesson).ThenInclude(l => l.Level)
+                .Where(up => up.UserId == userId)
+                .OrderByDescending(up => up.LastAccessed)
                 .ToListAsync();
         }
 
-        public async Task<LessonProgress> GetRecentProgressAsync(int userId)
+        public async Task<UserProgress?> GetRecentProgressAsync(int userId)
         {
-            return await _context.LessonProgresses
-                .Where(p => p.UserId == userId)
-                .OrderByDescending(p => p.LastAccessedAt)
+            return await _context.UserProgresses
+                .Include(up => up.LessonProgresses)
+                .Include(up => up.Lesson).ThenInclude(l => l.Level)
+                .Where(up => up.UserId == userId)
+                .OrderByDescending(up => up.LastAccessed)
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task AddUserProgressAsync(UserProgress progress)
+        {
+            _context.UserProgresses.Add(progress);
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
         }
     }
 }

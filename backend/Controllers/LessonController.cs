@@ -20,6 +20,11 @@ namespace Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Lesson model)
         {
+            // Kiểm tra Level có tồn tại không
+            var levelExists = await _context.Levels.AnyAsync(x => x.LevelId == model.LevelId);
+            if (!levelExists)
+                return BadRequest("Level không tồn tại");
+
             model.CreatedAt = DateTime.UtcNow;
 
             _context.Lessons.Add(model);
@@ -33,8 +38,16 @@ namespace Controllers
         public async Task<IActionResult> GetAll()
         {
             var lessons = await _context.Lessons
-                .Include(x => x.Level)
+                .AsNoTracking() // Tối ưu hiệu năng đọc
                 .OrderBy(x => x.LessonId)
+                .Select(x => new 
+                {
+                    x.LessonId,
+                    x.LessonName,
+                    x.SkillType,
+                    x.LevelId,
+                    LevelName = x.Level != null ? x.Level.LevelName : null
+                })
                 .ToListAsync();
 
             return Ok(lessons);
@@ -45,6 +58,7 @@ namespace Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var lesson = await _context.Lessons
+                .AsNoTracking()
                 .Include(x => x.Level)
                 .FirstOrDefaultAsync(x => x.LessonId == id);
 
@@ -59,8 +73,17 @@ namespace Controllers
         public async Task<IActionResult> GetByLevel(int levelId)
         {
             var lessons = await _context.Lessons
+                .AsNoTracking()
                 .Where(x => x.LevelId == levelId)
                 .OrderBy(x => x.LessonId)
+                .Select(x => new 
+                {
+                    x.LessonId,
+                    x.LessonName,
+                    x.SkillType,
+                    x.LevelId,
+                    VocabularyCount = x.Vocabularies.Count // Đếm trực tiếp số từ vựng thuộc bài học này
+                })
                 .ToListAsync();
 
             return Ok(lessons);
@@ -75,9 +98,15 @@ namespace Controllers
             if (lesson == null)
                 return NotFound("Không tìm thấy bài học");
 
+            // Kiểm tra Level có tồn tại không
+            var levelExists = await _context.Levels.AnyAsync(x => x.LevelId == model.LevelId);
+            if (!levelExists)
+                return BadRequest("Level không tồn tại");
+
             lesson.LessonName = model.LessonName;
             lesson.LevelId = model.LevelId;
             lesson.SkillType = model.SkillType;
+            lesson.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
 

@@ -13,7 +13,7 @@ namespace Models
         [Required]
         [StringLength(200)]
         [Column(TypeName = "nvarchar(200)")]
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
 
         [StringLength(1000)]
         [Column(TypeName = "nvarchar(1000)")]
@@ -25,7 +25,7 @@ namespace Models
         public int UserId { get; set; }
 
         [ForeignKey("UserId")]
-        public User User { get; set; }
+        public User User { get; set; } = null!;
 
         public int? FolderId { get; set; }
 
@@ -36,9 +36,10 @@ namespace Models
 
         public int TotalViews { get; set; } = 0;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime? LastStudiedAt { get; set; }
 
         public DateTime? UpdatedAt { get; set; }
 
-        public ICollection<FlashCard> FlashCards { get; set; }
+        public ICollection<FlashCard> FlashCards { get; set; } = new List<FlashCard>();
     }
 }

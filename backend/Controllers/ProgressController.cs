@@ -1,76 +1,77 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Repositories;
-using Microsoft.AspNetCore.Authorization;
-using System.Security.Claims;
-using Data;
-using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using DTOs.Progress;
+using Services;
 
 namespace Controllers
 {
     [ApiController]
     [Route("api/progress")]
-    // [Authorize] // Uncomment if JWT authentication is fully enforced
+    // [Authorize] // Bỏ comment dòng này khi project của bạn đã bật xác thực JWT
     public class ProgressController : ControllerBase
     {
-        private readonly IProgressRepository _progressRepo;
-        private readonly AppDbContext _context;
+        private readonly IProgressService _progressService;
 
-        public ProgressController(IProgressRepository progressRepo, AppDbContext context)
+        public ProgressController(IProgressService progressService)
         {
-            _progressRepo = progressRepo;
-            _context = context;
+            _progressService = progressService;
         }
 
-        // DTOs for requests
-        public class UpdateProgressRequest
+        [HttpPost("upsert")]
+        public async Task<IActionResult> UpsertPartProgress([FromBody] UpsertProgressRequest request)
         {
-            public int UserId { get; set; }
-            public int LessonId { get; set; }
-            public string PartType { get; set; }
-            public string Status { get; set; }
-            public decimal? Score { get; set; }
+            try
+            {
+                var result = await _progressService.UpsertProgressAsync(request);
+                return Ok(result);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
-        [HttpPut("lesson")]
-        public async Task<IActionResult> UpdateProgress([FromBody] UpdateProgressRequest request)
+        [HttpGet("user/{userId:int}")]
+        public async Task<IActionResult> GetAllProgressByUser(int userId)
         {
-            var progress = await _progressRepo.UpsertProgressAsync(request.UserId, request.LessonId, request.PartType, request.Status, request.Score);
-            return Ok(progress);
+            try
+            {
+                var result = await _progressService.GetAllProgressByUserAsync(userId);
+                return Ok(result);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
-        [HttpGet("lesson/{lessonId}/user/{userId}")]
+        [HttpGet("lesson/{lessonId:int}/user/{userId:int}")]
         public async Task<IActionResult> GetLessonProgress(int lessonId, int userId)
         {
-            var progresses = await _progressRepo.GetLessonProgressesAsync(lessonId, userId);
-            return Ok(progresses);
+            try
+            {
+                var progress = await _progressService.GetLessonProgressDetailAsync(lessonId, userId);
+                return Ok(progress);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
-        [HttpGet("all/{userId}")]
-        public async Task<IActionResult> GetAllProgress(int userId)
-        {
-            var all = await _context.LessonProgresses
-                .Where(p => p.UserId == userId)
-                .OrderByDescending(p => p.LastAccessedAt)
-                .ToListAsync();
-            return Ok(all);
-        }
-
-        [HttpGet("recent/{userId}")]
+        [HttpGet("recent/user/{userId:int}")]
         public async Task<IActionResult> GetRecentProgress(int userId)
         {
-            var recent = await _progressRepo.GetRecentProgressAsync(userId);
-            if (recent == null) return NotFound("No recent learning progress found.");
-
-            var lesson = await _context.Lessons.Include(l => l.Level).FirstOrDefaultAsync(l => l.LessonId == recent.LessonId);
-            var levelName = lesson?.Level?.LevelName?.ToLower() ?? "n5";
-
-            return Ok(new {
-                recent.LessonId,
-                recent.PartType,
-                recent.LastAccessedAt,
-                LevelName = levelName
-            });
+            try
+            {
+                var recent = await _progressService.GetRecentProgressAsync(userId);
+                return Ok(recent);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }

@@ -15,10 +15,17 @@ namespace Services
         public async Task SendEmailAsync(string toEmail, string subject, string body)
         {
             var smtpConfig = _config.GetSection("SmtpSettings");
-            string host = smtpConfig["Host"];
-            int port = int.Parse(smtpConfig["Port"]);
-            string senderEmail = smtpConfig["SenderEmail"];
-            string senderName = smtpConfig["SenderName"];
+            var host = smtpConfig["Host"]
+                ?? throw new InvalidOperationException("SmtpSettings:Host is missing.");
+            var portValue = smtpConfig["Port"]
+                ?? throw new InvalidOperationException("SmtpSettings:Port is missing.");
+            if (!int.TryParse(portValue, out var port))
+                throw new InvalidOperationException("SmtpSettings:Port is invalid.");
+
+            var senderEmail = smtpConfig["SenderEmail"]
+                ?? throw new InvalidOperationException("SmtpSettings:SenderEmail is missing.");
+            var senderName = smtpConfig["SenderName"]
+                ?? throw new InvalidOperationException("SmtpSettings:SenderName is missing.");
 
             using var client = new SmtpClient(host, port)
             {

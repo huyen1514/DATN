@@ -108,7 +108,7 @@ namespace Controllers
         [HttpPost("verify-otp")]
         public IActionResult VerifyOtp(VerifyOtpRequest dto)
         {
-            if (_cache.TryGetValue($"OTP_{dto.Email}", out string cachedOtp))
+            if (_cache.TryGetValue($"OTP_{dto.Email}", out string? cachedOtp) && cachedOtp != null)
             {
                 if (cachedOtp == dto.Otp)
                     return Ok("Mã OTP hợp lệ");
@@ -121,7 +121,7 @@ namespace Controllers
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword(ResetPasswordRequest dto)
         {
-            if (_cache.TryGetValue($"OTP_{dto.Email}", out string cachedOtp))
+            if (_cache.TryGetValue($"OTP_{dto.Email}", out string? cachedOtp) && cachedOtp != null)
             {
                 if (cachedOtp == dto.Otp)
                 {

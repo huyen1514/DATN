@@ -22,6 +22,36 @@ namespace backend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Models.Bookmark", b =>
+                {
+                    b.Property<int>("BookmarkId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookmarkId"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BookmarkId");
+
+                    b.HasIndex("UserId", "ItemId", "Type")
+                        .IsUnique();
+
+                    b.ToTable("Bookmarks");
+                });
+
             modelBuilder.Entity("Models.Deck", b =>
                 {
                     b.Property<int>("DeckId")
@@ -42,6 +72,9 @@ namespace backend.Migrations
 
                     b.Property<bool>("IsPublic")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastStudiedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -217,13 +250,13 @@ namespace backend.Migrations
                         .HasColumnType("bit");
 
                     b.Property<decimal>("ListeningScore")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<decimal>("ReadingScore")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<decimal>("Score")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<int>("TotalQuestion")
                         .HasColumnType("int");
@@ -232,7 +265,7 @@ namespace backend.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("VocabularyGrammarScore")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(5,2)");
 
                     b.HasKey("ExamResultId");
 
@@ -465,36 +498,6 @@ namespace backend.Migrations
                     b.ToTable("Kanjis");
                 });
 
-            modelBuilder.Entity("Models.LearningProgress", b =>
-                {
-                    b.Property<int>("ProgressId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProgressId"));
-
-                    b.Property<int>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("LastAccessed")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("Score")
-                        .HasColumnType("decimal(5,2)");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProgressId");
-
-                    b.ToTable("LearningProgress");
-                });
-
             modelBuilder.Entity("Models.Lesson", b =>
                 {
                     b.Property<int>("LessonId")
@@ -518,6 +521,9 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("LessonId");
 
@@ -731,6 +737,34 @@ namespace backend.Migrations
                     b.ToTable("Readings");
                 });
 
+            modelBuilder.Entity("Models.TestHistory", b =>
+                {
+                    b.Property<int>("TestHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TestHistoryId"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Detail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Score")
+                        .HasColumnType("decimal(5,2)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TestHistoryId");
+
+                    b.HasIndex("UserId", "Date");
+
+                    b.ToTable("TestHistories");
+                });
+
             modelBuilder.Entity("Models.User", b =>
                 {
                     b.Property<int>("UserId")
@@ -801,6 +835,39 @@ namespace backend.Migrations
                     b.ToTable("UserExams");
                 });
 
+            modelBuilder.Entity("Models.UserProgress", b =>
+                {
+                    b.Property<int>("UserProgressId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserProgressId"));
+
+                    b.Property<bool>("Completed")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastAccessed")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Score")
+                        .HasColumnType("decimal(5,2)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserProgressId");
+
+                    b.HasIndex("LessonId");
+
+                    b.HasIndex("UserId", "LessonId")
+                        .IsUnique();
+
+                    b.ToTable("UserProgresses");
+                });
+
             modelBuilder.Entity("Models.Vocabulary", b =>
                 {
                     b.Property<int>("VocabularyId")
@@ -810,7 +877,8 @@ namespace backend.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VocabularyId"));
 
                     b.Property<string>("AudioUrl")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -826,11 +894,15 @@ namespace backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PartOfSpeech")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Reading")
                         .IsRequired()
                         .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Word")
                         .IsRequired()
@@ -841,6 +913,17 @@ namespace backend.Migrations
                     b.HasIndex("LessonId");
 
                     b.ToTable("Vocabularies");
+                });
+
+            modelBuilder.Entity("Models.Bookmark", b =>
+                {
+                    b.HasOne("Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Models.Deck", b =>
@@ -1005,6 +1088,17 @@ namespace backend.Migrations
                     b.Navigation("Lesson");
                 });
 
+            modelBuilder.Entity("Models.TestHistory", b =>
+                {
+                    b.HasOne("Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Models.UserExams", b =>
                 {
                     b.HasOne("Models.Exam", "Exam")
@@ -1024,10 +1118,29 @@ namespace backend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Models.Vocabulary", b =>
+            modelBuilder.Entity("Models.UserProgress", b =>
                 {
                     b.HasOne("Models.Lesson", "Lesson")
                         .WithMany()
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lesson");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Models.Vocabulary", b =>
+                {
+                    b.HasOne("Models.Lesson", "Lesson")
+                        .WithMany("Vocabularies")
                         .HasForeignKey("LessonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1043,6 +1156,11 @@ namespace backend.Migrations
             modelBuilder.Entity("Models.Folder", b =>
                 {
                     b.Navigation("Decks");
+                });
+
+            modelBuilder.Entity("Models.Lesson", b =>
+                {
+                    b.Navigation("Vocabularies");
                 });
 #pragma warning restore 612, 618
         }

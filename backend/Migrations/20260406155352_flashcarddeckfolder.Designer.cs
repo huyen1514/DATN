@@ -13,7 +13,7 @@ namespace backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20260406155352_flashcarddeckfolder")]
-    partial class flashcarddeckfolder
+    partial class FlashcardDeckFolder
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

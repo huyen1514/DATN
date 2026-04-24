@@ -67,7 +67,7 @@ namespace Controllers
             var userId = GetUserId();
 
             var cards = await _context.FlashCards
-                .Where(x => x.DeckId == deckId && x.Deck.UserId == userId)
+                .Where(x => x.DeckId == deckId && x.Deck!.UserId == userId)
                 .OrderBy(x => x.CreatedAt)
                 .Select(x => new FlashCardResponse
                 {
@@ -93,7 +93,7 @@ namespace Controllers
             var userId = GetUserId();
 
             var card = await _context.FlashCards
-                .FirstOrDefaultAsync(x => x.FlashCardId == id && x.Deck.UserId == userId);
+                .FirstOrDefaultAsync(x => x.FlashCardId == id && x.Deck!.UserId == userId);
 
             if (card == null) return NotFound();
 
@@ -122,7 +122,7 @@ namespace Controllers
             var userId = GetUserId();
 
             var card = await _context.FlashCards
-                .FirstOrDefaultAsync(x => x.FlashCardId == id && x.Deck.UserId == userId);
+                .FirstOrDefaultAsync(x => x.FlashCardId == id && x.Deck!.UserId == userId);
 
             if (card == null) return NotFound();
 
@@ -139,7 +139,7 @@ namespace Controllers
             var userId = GetUserId();
 
             var card = await _context.FlashCards
-                .FirstOrDefaultAsync(x => x.FlashCardId == dto.FlashCardId && x.Deck.UserId == userId);
+                .FirstOrDefaultAsync(x => x.FlashCardId == dto.FlashCardId && x.Deck!.UserId == userId);
 
             if (card == null) return NotFound();
 

@@ -12,16 +12,16 @@ namespace Models
         [Required]
         [StringLength(10)]
         [Column(TypeName = "nvarchar(10)")]
-        public string Character { get; set; }
+        public string Character { get; set; } = string.Empty;
     
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string Meaning { get; set; }
+        public string Meaning { get; set; } = string.Empty;
 
         [Required]
         [StringLength(255)]
         [Column(TypeName = "nvarchar(255)")]
-        public string Onyomi { get; set; }
+        public string Onyomi { get; set; } = string.Empty;
         
         [Required]
         [StringLength(255)]
@@ -30,7 +30,7 @@ namespace Models
 
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string Example { get; set; }
+        public string Example { get; set; } = string.Empty;
         [Required]
         [ForeignKey("LessonId")]
         public int LessonId { get; set; }

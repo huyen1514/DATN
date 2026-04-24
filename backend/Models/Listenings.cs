@@ -22,28 +22,28 @@ namespace Models
         
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string Question { get; set; }
+        public string Question { get; set; } = string.Empty;
         // 4 đáp án
         [Required]
         [Column(TypeName = "nvarchar(255)")]
-        public string OptionA { get; set; }
+        public string OptionA { get; set; } = string.Empty;
 
         [Required]
         [Column(TypeName = "nvarchar(255)")]
-        public string OptionB { get; set; }
+        public string OptionB { get; set; } = string.Empty;
 
         [Required]
         [Column(TypeName = "nvarchar(255)")]
-        public string OptionC { get; set; }
+        public string OptionC { get; set; } = string.Empty;
 
         [Required]
         [Column(TypeName = "nvarchar(255)")]
-        public string OptionD { get; set; }
+        public string OptionD { get; set; } = string.Empty;
 
         // Đáp án đúng: A / B / C / D
         [Required]
         [Column(TypeName = "nvarchar(1)")]
-        public string CorrectAnswer { get; set; }
+        public string CorrectAnswer { get; set; } = string.Empty;
         [Required]
         [ForeignKey("LessonId")]
         public int LessonId { get; set; }

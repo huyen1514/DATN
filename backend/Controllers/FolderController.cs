@@ -20,8 +20,14 @@ namespace Controllers
             _context = context;
         }
 
-        private int GetUserId() =>
-            int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+        private int GetUserId()
+        {
+            var nameClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameClaim?.Value == null)
+                throw new UnauthorizedAccessException("User ID not found in token");
+
+            return int.Parse(nameClaim.Value);
+        }
 
         // CREATE
         [HttpPost]

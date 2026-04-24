@@ -18,6 +18,6 @@ namespace Models
 
         [Required]
         [StringLength(10)]
-        public string SelectedOption { get; set; }
+        public string SelectedOption { get; set; } = string.Empty;
     }
 }

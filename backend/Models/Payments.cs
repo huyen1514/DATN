@@ -23,6 +23,7 @@ namespace Models
         public int PaymentId { get; set; }
         
         [Required]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Amount { get; set; }
         
         [Required]
@@ -36,12 +37,12 @@ namespace Models
         [Required]
         [ForeignKey("UserId")]
         public int UserId { get; set; }
-        public User User { get; set; }
+        public User User { get; set; } = null!;
 
         [Required]
         [ForeignKey("ExamId")]
         public int ExamId { get; set; }
-        public Exam Exam { get; set; }
+        public Exam Exam { get; set; } = null!;
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? PaymentDate { get; set; }

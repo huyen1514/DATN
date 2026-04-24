@@ -33,15 +33,26 @@ namespace Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int? lessonId)
         {
-            var query = _context.Vocabularies
-                .Include(x => x.Lesson)
-                .AsQueryable();
+            var query = _context.Vocabularies.AsNoTracking().AsQueryable(); // Thêm AsNoTracking để tối ưu tốc độ đọc
 
             if (lessonId.HasValue)
                 query = query.Where(x => x.LessonId == lessonId.Value);
 
+            // Dùng Select để tránh lỗi vòng lặp JSON khi dính Include Lesson
             var vocabularies = await query
                 .OrderBy(x => x.VocabularyId)
+                .Select(v => new 
+                {
+                    v.VocabularyId,
+                    v.Word,
+                    v.Reading,
+                    v.Meaning,
+                    v.Example,
+                    v.PartOfSpeech,
+                    v.AudioUrl,
+                    v.LessonId,
+                    LessonName = v.Lesson != null ? v.Lesson.LessonName : null // Lấy tên bài học từ Model Lesson
+                })
                 .ToListAsync();
 
             return Ok(vocabularies);
@@ -50,7 +61,9 @@ namespace Controllers
         [HttpGet("counts")]
         public async Task<IActionResult> GetCounts()
         {
+            // Thêm AsNoTracking cho câu truy vấn GroupBy
             var counts = await _context.Vocabularies
+                .AsNoTracking()
                 .GroupBy(v => v.LessonId)
                 .Select(g => new { LessonId = g.Key, Count = g.Count() })
                 .ToListAsync();
@@ -62,6 +75,7 @@ namespace Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var vocabulary = await _context.Vocabularies
+                .AsNoTracking() // Tối ưu hiệu năng
                 .Include(x => x.Lesson)
                 .FirstOrDefaultAsync(x => x.VocabularyId == id);
 
@@ -89,6 +103,7 @@ namespace Controllers
             vocabulary.PartOfSpeech = model.PartOfSpeech;
             vocabulary.AudioUrl = model.AudioUrl;
             vocabulary.LessonId = model.LessonId;
+            vocabulary.UpdatedAt = DateTime.UtcNow; // Cập nhật thời gian chỉnh sửa
 
             await _context.SaveChangesAsync();
             return Ok(vocabulary);

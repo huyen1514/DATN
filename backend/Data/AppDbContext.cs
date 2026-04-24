@@ -11,7 +11,6 @@ namespace Data
         public DbSet<FlashCard> FlashCards { get; set; }
         public DbSet<Deck> Decks { get; set; }
         public DbSet<Folder> Folders { get; set; }
-        public DbSet<LearningProgress> LearningProgress { get; set; }
         public DbSet<Grammar> Grammars { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Level> Levels { get; set; }
@@ -27,5 +26,24 @@ namespace Data
         public DbSet<LessonProgress> LessonProgresses { get; set; }
         public DbSet<ExamSession> ExamSessions { get; set; }
         public DbSet<ExamSessionAnswer> ExamSessionAnswers { get; set; }
+        public DbSet<UserProgress> UserProgresses { get; set; }
+        public DbSet<TestHistory> TestHistories { get; set; }
+        public DbSet<Bookmark> Bookmarks { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<UserProgress>()
+                .HasIndex(x => new { x.UserId, x.LessonId })
+                .IsUnique();
+
+            modelBuilder.Entity<Bookmark>()
+                .HasIndex(x => new { x.UserId, x.ItemId, x.Type })
+                .IsUnique();
+
+            modelBuilder.Entity<TestHistory>()
+                .HasIndex(x => new { x.UserId, x.Date });
+        }
     }
 }

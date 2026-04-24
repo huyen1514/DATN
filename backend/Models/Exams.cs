@@ -13,7 +13,7 @@ namespace Models
         [Required]
         [StringLength(255)]
         [Column(TypeName = "nvarchar(255)")]
-        public string ExamName { get; set; }
+        public string ExamName { get; set; } = string.Empty;
 
         [Required]
         public int Duration { get; set; }

@@ -12,16 +12,16 @@ namespace Models
         [Required]
         [StringLength(255)]
         [Column(TypeName = "nvarchar(255)")]
-        public string GrammarName { get; set; }
+        public string GrammarName { get; set; } = string.Empty;
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string Structure { get; set; }
+        public string Structure { get; set; } = string.Empty;
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string Meaning { get; set; }
+        public string Meaning { get; set; } = string.Empty;
         [Required]
         [Column(TypeName = "nvarchar(max)")]
-        public string Example { get; set; }
+        public string Example { get; set; } = string.Empty;
         [Required]
         [ForeignKey("LessonId")]
         public int LessonId { get; set; }

@@ -160,6 +160,6 @@ namespace Controllers
     {
         public int UserId { get; set; }
         public int ExamId { get; set; }
-        public string TransactionRef { get; set; }
+        public string TransactionRef { get; set; } = string.Empty;
     }
 }

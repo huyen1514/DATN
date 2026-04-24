@@ -418,7 +418,7 @@ namespace Controllers
         {
             public int SessionId { get; set; }
             public int QuestionId { get; set; }
-            public string SelectedOption { get; set; }
+            public string SelectedOption { get; set; } = string.Empty;
         }
 
         [HttpPost("auto-save-answer")]

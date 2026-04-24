@@ -28,15 +28,15 @@ namespace Models
         
         [Required]
         [Column(TypeName="nvarchar(max)")]
-        public string Question {get; set;}
+        public string Question {get; set;} = string.Empty;
 
         [Required]
         [Column(TypeName="nvarchar(255)")]
-        public string OptionA {get; set;}
+        public string OptionA {get; set;} = string.Empty;
 
         [Required]
         [Column(TypeName="nvarchar(255)")]
-        public string OptionB {get; set;}
+        public string OptionB {get; set;} = string.Empty;
 
         [Column(TypeName="nvarchar(255)")]
         public string? OptionC {get; set;}

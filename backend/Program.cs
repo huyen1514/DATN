@@ -33,12 +33,24 @@ builder.Services.AddScoped<EmailService>();
 // Register Repositories
 builder.Services.AddScoped<IProgressRepository, ProgressRepository>();
 builder.Services.AddScoped<IExamSessionRepository, ExamSessionRepository>();
+builder.Services.AddScoped<IUserProgressRepository, UserProgressRepository>();
+builder.Services.AddScoped<ILessonRepository, LessonRepository>();
+builder.Services.AddScoped<ITestHistoryRepository, TestHistoryRepository>();
+builder.Services.AddScoped<IBookmarkRepository, BookmarkRepository>();
+
+// Register Services
+builder.Services.AddScoped<IProgressService, ProgressService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IRecommendationService, RecommendationService>();
+builder.Services.AddScoped<ITestHistoryService, TestHistoryService>();
+builder.Services.AddScoped<IBookmarkService, BookmarkService>();
 
 builder.Services.AddMemoryCache();
 builder.Services.AddHttpContextAccessor();
 
 // Add Authentication with JWT Bearer
-var jwtKey = builder.Configuration["Jwt:Key"];
+var jwtKey = builder.Configuration["Jwt:Key"]
+    ?? throw new InvalidOperationException("Jwt:Key is missing from configuration.");
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

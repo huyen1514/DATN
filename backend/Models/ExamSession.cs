@@ -22,7 +22,7 @@ namespace Models
 
         [Required]
         [StringLength(50)]
-        public string Status { get; set; } // InProgress, Submitted
+        public string Status { get; set; } = string.Empty; // InProgress, Submitted
 
         public int TimeRemainingSeconds { get; set; }
     }

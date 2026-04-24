@@ -13,7 +13,7 @@ namespace Models
         [Required]
         [StringLength(200)]
         [Column(TypeName = "nvarchar(200)")]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [StringLength(1000)]
         [Column(TypeName = "nvarchar(1000)")]
@@ -23,7 +23,7 @@ namespace Models
         public int UserId { get; set; }
 
         [ForeignKey("UserId")]
-        public User User { get; set; }
+        public User User { get; set; } = null!;
 
         public int TotalDecks { get; set; } = 0;
 
@@ -31,6 +31,6 @@ namespace Models
 
         public DateTime? UpdatedAt { get; set; }
 
-        public ICollection<Deck> Decks { get; set; }
+        public ICollection<Deck> Decks { get; set; } = new List<Deck>();
     }
 }

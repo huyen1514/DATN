@@ -33,7 +33,7 @@ namespace Repositories
             return session;
         }
 
-        public async Task<ExamSession> GetSessionAsync(int sessionId)
+        public async Task<ExamSession?> GetSessionAsync(int sessionId)
         {
             return await _context.ExamSessions.FindAsync(sessionId);
         }
@@ -69,7 +69,7 @@ namespace Repositories
                 .ToListAsync();
         }
 
-        public async Task<ExamSession> SubmitSessionAsync(int sessionId)
+        public async Task<ExamSession?> SubmitSessionAsync(int sessionId)
         {
             var session = await _context.ExamSessions.FindAsync(sessionId);
             if (session != null)
