@@ -21,6 +21,8 @@ interface ExamResultView {
   vocabularyGrammarScore: number;
   readingScore: number;
   listeningScore: number;
+  answers?: Record<string, string> | string[];
+  questions?: Array<Record<string, any>>;
 }
 
 function clamp(n: number, min: number, max: number) {
@@ -59,6 +61,8 @@ function ExamResultInner() {
           vocabularyGrammarScore: o.vocabularyGrammarScore ?? 0,
           readingScore: o.readingScore ?? 0,
           listeningScore: o.listeningScore ?? 0,
+          answers: o.answers ?? {},
+          questions: o.questions ?? [],
         });
         return true;
       } catch {
@@ -86,6 +90,8 @@ function ExamResultInner() {
             vocabularyGrammarScore: Number(data.vocabularyGrammarScore ?? 0),
             readingScore: Number(data.readingScore ?? 0),
             listeningScore: Number(data.listeningScore ?? 0),
+            answers: [],
+            questions: [],
           });
           return;
         }
@@ -101,6 +107,51 @@ function ExamResultInner() {
       cancelled = true;
     };
   }, [rid, router]);
+
+  useEffect(() => {
+    if (!result || typeof window === "undefined") return;
+
+    const rawUser = localStorage.getItem("user");
+    if (!rawUser) return;
+
+    let userId = 0;
+    try {
+      userId = JSON.parse(rawUser).userId;
+    } catch {
+      return;
+    }
+
+    if (!userId) return;
+
+    const saveKey = `test-history:${rid || examId}:${Math.round(result.score)}:${result.duration}`;
+    if (sessionStorage.getItem(saveKey) === "1") return;
+
+    const detailPayload = {
+      examId,
+      examName: result.examName,
+      score: result.score,
+      totalQuestion: result.totalQuestion,
+      correctCount: result.correctCount,
+      duration: result.duration,
+      isPassed: result.isPassed,
+      answers: result.answers ?? {},
+      questions: result.questions ?? [],
+    };
+
+    void (async () => {
+      try {
+        await api("/test-history", "POST", {
+          userId,
+          score: result.score,
+          date: new Date().toISOString(),
+          detail: JSON.stringify(detailPayload),
+        });
+        sessionStorage.setItem(saveKey, "1");
+      } catch (e) {
+        console.error("Could not save test history", e);
+      }
+    })();
+  }, [examId, result, rid]);
 
   if (!result) {
     return (

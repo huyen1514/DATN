@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
 import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
+import BookmarkButton from "@/components/BookmarkButton";
 import {
   ChevronLeft,
   ChevronRight,
@@ -36,6 +37,12 @@ interface GrammarItem {
   example: string;
 }
 
+interface BookmarkItem {
+  bookmarkId: number;
+  itemId: number;
+  type: string;
+}
+
 export default function GrammarDetailPage() {
   const params = useParams();
   const levelName = params.levelName as string;
@@ -46,6 +53,8 @@ export default function GrammarDetailPage() {
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [userId, setUserId] = useState<number>(1);
+  const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
+  const [bookmarkLoading, setBookmarkLoading] = useState(false);
 
   const loadData = useCallback(async () => {
     try {
@@ -79,12 +88,50 @@ export default function GrammarDetailPage() {
     }
   }, [lessonId, levelName]);
 
+  const loadBookmarks = useCallback(async (targetUserId: number) => {
+    if (!targetUserId) return;
+    try {
+      const data = await api(`/bookmark/${targetUserId}`);
+      setBookmarks(Array.isArray(data) ? (data as BookmarkItem[]) : []);
+    } catch (e) {
+      console.error("Could not load bookmarks", e);
+    }
+  }, []);
+
+  const isLessonBookmarked = useMemo(
+    () =>
+      bookmarks.some(
+        (bookmark) =>
+          bookmark.itemId === lessonId &&
+          bookmark.type.toLowerCase() === "lesson"
+      ),
+    [bookmarks, lessonId]
+  );
+
+  const toggleLessonBookmark = useCallback(async () => {
+    if (!userId) return;
+    setBookmarkLoading(true);
+    try {
+      if (isLessonBookmarked) {
+        await api("/bookmark", "DELETE", { userId, itemId: lessonId, type: "Lesson" });
+      } else {
+        await api("/bookmark", "POST", { userId, itemId: lessonId, type: "Lesson" });
+      }
+      await loadBookmarks(userId);
+    } catch (e) {
+      console.error("Could not update lesson bookmark", e);
+    } finally {
+      setBookmarkLoading(false);
+    }
+  }, [isLessonBookmarked, lessonId, loadBookmarks, userId]);
+
   useEffect(() => {
     const userStr = localStorage.getItem("user");
     if (userStr) {
       try {
         const u = JSON.parse(userStr);
         setUserId(u.userId);
+        void loadBookmarks(u.userId);
       } catch (e) {}
     }
     void loadData();
@@ -92,7 +139,7 @@ export default function GrammarDetailPage() {
     // Mark as accessed/in progress
     updateStatus("InProgress");
 
-  }, [loadData, lessonId, userId]);
+  }, [loadBookmarks, loadData, lessonId, userId]);
 
   const updateStatus = async (status: string) => {
     if (!userId) return;
@@ -214,6 +261,12 @@ export default function GrammarDetailPage() {
                 <span>{lessonName || `Bài ${lessonId}`}</span>
               </p>
             </div>
+            <BookmarkButton
+              active={isLessonBookmarked}
+              loading={bookmarkLoading}
+              label={`Lưu bài ${lessonName || lessonId}`}
+              onClick={() => void toggleLessonBookmark()}
+            />
           </div>
 
           {/* GRAMMAR LIST */}

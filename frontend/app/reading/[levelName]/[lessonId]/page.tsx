@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { api, API_URL } from "@/lib/api";
 import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
+import BookmarkButton from "@/components/BookmarkButton";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   BookOpen,
@@ -46,6 +47,12 @@ interface ReadingItem {
   imageUrl?: string;
 }
 
+interface BookmarkItem {
+  bookmarkId: number;
+  itemId: number;
+  type: string;
+}
+
 const OPTION_LABELS = ["A", "B", "C", "D"];
 // Derive backend base URL from API_URL (remove trailing /api)
 const BACKEND_URL = API_URL.replace(/\/api$/, "");
@@ -61,6 +68,8 @@ export default function ReadingDetailPage() {
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [userId, setUserId] = useState<number>(1);
+  const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
+  const [bookmarkLoading, setBookmarkLoading] = useState(false);
 
   /* ---- Quiz State ---- */
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -115,6 +124,16 @@ export default function ReadingDetailPage() {
     }
   }, [lessonId, levelName]);
 
+  const loadBookmarks = useCallback(async (targetUserId: number) => {
+    if (!targetUserId) return;
+    try {
+      const data = await api(`/bookmark/${targetUserId}`);
+      setBookmarks(Array.isArray(data) ? (data as BookmarkItem[]) : []);
+    } catch (e) {
+      console.error("Could not load bookmarks", e);
+    }
+  }, []);
+
   /* ---- Handlers & Helpers ---- */
   const updateStatus = useCallback(
     async (status: string, score: number | null = null) => {
@@ -134,6 +153,33 @@ export default function ReadingDetailPage() {
     [userId, lessonId]
   );
 
+  const isLessonBookmarked = useMemo(
+    () =>
+      bookmarks.some(
+        (bookmark) =>
+          bookmark.itemId === lessonId &&
+          bookmark.type.toLowerCase() === "lesson"
+      ),
+    [bookmarks, lessonId]
+  );
+
+  const toggleLessonBookmark = useCallback(async () => {
+    if (!userId) return;
+    setBookmarkLoading(true);
+    try {
+      if (isLessonBookmarked) {
+        await api("/bookmark", "DELETE", { userId, itemId: lessonId, type: "Lesson" });
+      } else {
+        await api("/bookmark", "POST", { userId, itemId: lessonId, type: "Lesson" });
+      }
+      await loadBookmarks(userId);
+    } catch (e) {
+      console.error("Could not update lesson bookmark", e);
+    } finally {
+      setBookmarkLoading(false);
+    }
+  }, [isLessonBookmarked, lessonId, loadBookmarks, userId]);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const userStr = localStorage.getItem("user");
@@ -141,6 +187,7 @@ export default function ReadingDetailPage() {
         try {
           const u = JSON.parse(userStr);
           setUserId(u.userId);
+          void loadBookmarks(u.userId);
         } catch (e) {
           console.error("Failed to parse user from localStorage", e);
         }
@@ -150,7 +197,7 @@ export default function ReadingDetailPage() {
 
     // Mark as accessed/in progress
     updateStatus("InProgress");
-  }, [loadData, updateStatus]);
+  }, [loadBookmarks, loadData, updateStatus]);
 
   // FIX: Định nghĩa sortedLessons trước khi sử dụng
   const sortedLessons = useMemo(() => {
@@ -445,18 +492,26 @@ export default function ReadingDetailPage() {
             <ChevronLeft size={16} />
             Quay lại danh sách
           </Link>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-jp-red to-rose-400 flex items-center justify-center">
-              <BookOpen size={22} className="text-white" />
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-jp-red to-rose-400 flex items-center justify-center">
+                <BookOpen size={22} className="text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl md:text-3xl font-serif font-bold text-jp-indigo">
+                  {lessonName || "Đọc Hiểu"}
+                </h1>
+                <p className="text-sm text-jp-ink/50">
+                  Trình độ {levelName?.toUpperCase()} • Luyện đọc hiểu tiếng Nhật
+                </p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-2xl md:text-3xl font-serif font-bold text-jp-indigo">
-                {lessonName || "Đọc Hiểu"}
-              </h1>
-              <p className="text-sm text-jp-ink/50">
-                Trình độ {levelName?.toUpperCase()} • Luyện đọc hiểu tiếng Nhật
-              </p>
-            </div>
+            <BookmarkButton
+              active={isLessonBookmarked}
+              loading={bookmarkLoading}
+              label={`Lưu bài ${lessonName || lessonId}`}
+              onClick={() => void toggleLessonBookmark()}
+            />
           </div>
         </div>
 

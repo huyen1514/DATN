@@ -215,7 +215,7 @@ export default function TakeExamPage() {
     // Scores to send to backend
     let vocabularyGrammarScore = 0;
     let readingScore = 0;
-    let listeningScore = listenTotal > 0 ? Math.round((listenCorrect / listenTotal) * 60) : 0;
+    const listeningScore = listenTotal > 0 ? Math.round((listenCorrect / listenTotal) * 60) : 0;
     let score = 0;
     let isPassed = false;
 

@@ -1,39 +1,54 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
-import { api, API_URL } from "@/lib/api";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import StudentLayout from "@/components/StudentLayout";
+import { api } from "@/lib/api";
 import {
+  ArrowRight,
+  BookMarked,
   BookOpen,
+  BrainCircuit,
+  CheckCircle2,
+  ChevronRight,
+  ClipboardList,
+  Clock,
+  FileText,
+  Flame,
+  Headphones,
   Languages,
   PenTool,
-  Headphones,
-  FileText,
-  GraduationCap,
-  ClipboardList,
-  ArrowRight,
-  Layers,
-  Folder,
-  Trophy,
-  Flame,
-  Target,
-  TrendingUp,
   Sparkles,
-  CheckCircle2,
-  Clock,
-  ChevronRight,
-  PlayCircle,
+  Star,
+  Target,
+  Trophy,
+  TrendingUp,
 } from "lucide-react";
 
-/* ============ Types ============ */
-interface LessonProgress {
-  id: number;
-  lessonId: number;
+interface Level {
+  levelId: number;
+  levelName: string;
+}
+
+// CẬP NHẬT INTERFACE THEO CHUẨN MỚI CỦA BACKEND
+interface LessonPart {
   partType: string;
   status: string;
   score: number | null;
   lastAccessedAt: string;
+}
+
+interface UserProgress {
+  userProgressId: number;
+  userId: number;
+  lessonId: number;
+  lessonName: string;
+  skillType: string;
+  levelName: string;
+  score: number;
+  lastAccessed: string;
+  completed: boolean;
+  parts: LessonPart[];
 }
 
 interface ExamResult {
@@ -46,75 +61,112 @@ interface ExamResult {
   exam?: { examName: string };
 }
 
-interface Level {
-  levelId: number;
-  levelName: string;
+interface DashboardResponse {
+  userId: number;
+  totalLessonsLearned: number;
+  completedLessons: number;
+  averageScore: number;
 }
 
-/* ============ Constants ============ */
-const SKILL_MAP: Record<string, { label: string; icon: any; color: string; bg: string; path: string }> = {
-  Vocabulary: { label: "Từ vựng", icon: BookOpen, color: "text-blue-600", bg: "bg-blue-50", path: "/vocabulary" },
-  Grammar:    { label: "Ngữ pháp", icon: PenTool, color: "text-violet-600", bg: "bg-violet-50", path: "/grammar" },
-  Kanji:      { label: "Hán tự", icon: Languages, color: "text-amber-600", bg: "bg-amber-50", path: "/kanji" },
-  Reading:    { label: "Đọc hiểu", icon: FileText, color: "text-emerald-600", bg: "bg-emerald-50", path: "/reading" },
-  Listening:  { label: "Nghe hiểu", icon: Headphones, color: "text-rose-600", bg: "bg-rose-50", path: "/listening" },
+interface BookmarkItem {
+  bookmarkId: number;
+  itemId: number;
+  type: string;
+  itemName: string;
+  createdAt: string;
+}
+
+interface TestHistoryItem {
+  testHistoryId: number;
+  userId: number;
+  score: number;
+  date: string;
+  detail: string;
+}
+
+interface RecommendedLesson {
+  lessonId: number;
+  lessonName: string;
+  skillType: string;
+  levelName: string;
+  recommendationReason: string;
+}
+
+interface RecommendationResponse {
+  userId: number;
+  averageScore: number;
+  simulatedKMeansCluster: string;
+  simulatedAprioriRule: string;
+  lessons: RecommendedLesson[];
+}
+
+const SKILL_MAP: Record<string, { label: string; icon: any; path: string; bg: string; color: string }> = {
+  Vocabulary: { label: "Từ vựng", icon: BookOpen, path: "/vocabulary", bg: "bg-blue-50", color: "text-blue-600" },
+  Grammar: { label: "Ngữ pháp", icon: PenTool, path: "/grammar", bg: "bg-violet-50", color: "text-violet-600" },
+  Kanji: { label: "Hán tự", icon: Languages, path: "/kanji", bg: "bg-amber-50", color: "text-amber-600" },
+  Reading: { label: "Đọc hiểu", icon: FileText, path: "/reading", bg: "bg-emerald-50", color: "text-emerald-600" },
+  Listening: { label: "Nghe hiểu", icon: Headphones, path: "/listening", bg: "bg-rose-50", color: "text-rose-600" },
 };
 
 const GREETING = () => {
-  const h = new Date().getHours();
-  if (h < 12) return "Chào buổi sáng";
-  if (h < 18) return "Chào buổi chiều";
+  const hour = new Date().getHours();
+  if (hour < 12) return "Chào buổi sáng";
+  if (hour < 18) return "Chào buổi chiều";
   return "Chào buổi tối";
 };
 
-/* ============ Component ============ */
 export default function OverviewPage() {
   const [user, setUser] = useState<any>(null);
   const [levels, setLevels] = useState<Level[]>([]);
-  const [progresses, setProgresses] = useState<LessonProgress[]>([]);
+  
+  // Sử dụng mảng UserProgress làm chuẩn
+  const [progresses, setProgresses] = useState<UserProgress[]>([]);
+  
   const [examResults, setExamResults] = useState<ExamResult[]>([]);
-  const [flashcardStats, setFlashcardStats] = useState({ folders: 0, decks: 0, cards: 0 });
+  const [dashboard, setDashboard] = useState<DashboardResponse | null>(null);
+  const [recommendations, setRecommendations] = useState<RecommendationResponse | null>(null);
+  const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
+  const [testHistories, setTestHistories] = useState<TestHistoryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const userStr = localStorage.getItem("user");
-    if (userStr) {
-      try {
-        const u = JSON.parse(userStr);
-        setUser(u);
-        void loadAllData(u.userId);
-      } catch { }
+    const raw = localStorage.getItem("user");
+    if (!raw) {
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const parsed = JSON.parse(raw);
+      setUser(parsed);
+      void loadAllData(parsed.userId);
+    } catch (e) {
+      console.error(e);
+      setIsLoading(false);
     }
   }, []);
 
   const loadAllData = async (userId: number) => {
     try {
-      const [levelsData, foldersData, decksData, examResultsData] = await Promise.all([
-        api("/levels"),
-        api("/folders"),
-        api("/decks"),
-        api(`/exam-results?userId=${userId}`),
-      ]);
+      const [levelsData, examResultsData, dashboardData, recommendationsData, bookmarksData, historyData, progressData] =
+        await Promise.all([
+          api("/levels"),
+          api(`/exam-results?userId=${userId}`),
+          api(`/dashboard/${userId}`),
+          api(`/recommendations/${userId}`),
+          api(`/bookmark/${userId}`),
+          api(`/test-history/${userId}`),
+          api(`/progress/user/${userId}`) // Cập nhật gọi đúng API mới
+        ]);
 
-      if (Array.isArray(levelsData)) setLevels(levelsData);
+      if (Array.isArray(levelsData)) setLevels(levelsData as Level[]);
+      if (Array.isArray(examResultsData)) setExamResults(examResultsData as ExamResult[]);
+      if (dashboardData?.userId) setDashboard(dashboardData as DashboardResponse);
+      if (recommendationsData?.userId) setRecommendations(recommendationsData as RecommendationResponse);
+      if (Array.isArray(bookmarksData)) setBookmarks(bookmarksData as BookmarkItem[]);
+      if (Array.isArray(historyData)) setTestHistories(historyData as TestHistoryItem[]);
+      if (Array.isArray(progressData)) setProgresses(progressData as UserProgress[]);
 
-      // Flashcard stats
-      const allFolders = Array.isArray(foldersData) ? foldersData : [];
-      const allDecks = Array.isArray(decksData) ? decksData : [];
-      let totalCards = 0;
-      allDecks.forEach((d: any) => { totalCards += d.flashCardCount || 0; });
-      setFlashcardStats({ folders: allFolders.length, decks: allDecks.length, cards: totalCards });
-
-      if (Array.isArray(examResultsData)) setExamResults(examResultsData);
-
-      // Load all progress for this user
-      try {
-        const res = await fetch(`${API_URL}/progress/all/${userId}`);
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data)) setProgresses(data);
-        }
-      } catch { }
     } catch (e) {
       console.error(e);
     } finally {
@@ -122,350 +174,455 @@ export default function OverviewPage() {
     }
   };
 
-  /* ---- Derived stats ---- */
+  const defaultLevel = levels[0]?.levelName || "N5";
+
+  // CẬP NHẬT LOGIC: Duyệt qua mảng cha (UserProgress) -> mảng con (Parts)
   const skillProgress = useMemo(() => {
     const counts: Record<string, { total: number; completed: number; inProgress: number }> = {};
-    Object.keys(SKILL_MAP).forEach(k => { counts[k] = { total: 0, completed: 0, inProgress: 0 }; });
-    progresses.forEach(p => {
-      const key = p.partType;
-      if (counts[key]) {
-        counts[key].total++;
-        if (p.status === "Completed") counts[key].completed++;
-        if (p.status === "InProgress") counts[key].inProgress++;
-      }
+    Object.keys(SKILL_MAP).forEach((key) => {
+      counts[key] = { total: 0, completed: 0, inProgress: 0 };
     });
+
+    progresses.forEach((up) => {
+      up.parts.forEach((part) => {
+        if (!counts[part.partType]) return;
+        counts[part.partType].total += 1;
+        if (part.status === "Completed") counts[part.partType].completed += 1;
+        if (part.status === "InProgress") counts[part.partType].inProgress += 1;
+      });
+    });
+
     return counts;
   }, [progresses]);
 
+  // Làm phẳng (Flatten) danh sách chi tiết các kỹ năng để hiện ở phần "Hoạt động gần đây"
   const recentActivity = useMemo(() => {
-    return [...progresses]
+    const flatParts: Array<{ lessonId: number, levelName: string, lessonName: string, partType: string, status: string, lastAccessedAt: string }> = [];
+    
+    progresses.forEach(up => {
+      up.parts.forEach(part => {
+        flatParts.push({
+          lessonId: up.lessonId,
+          levelName: up.levelName,
+          lessonName: up.lessonName,
+          partType: part.partType,
+          status: part.status,
+          lastAccessedAt: part.lastAccessedAt
+        });
+      });
+    });
+
+    return flatParts
       .sort((a, b) => new Date(b.lastAccessedAt).getTime() - new Date(a.lastAccessedAt).getTime())
       .slice(0, 5);
   }, [progresses]);
 
-  const totalLessonsLearned = useMemo(() => {
-    const uniqueLessons = new Set(progresses.map(p => p.lessonId));
-    return uniqueLessons.size;
-  }, [progresses]);
+  const bookmarkSummary = useMemo(
+    () => ({
+      lessons: bookmarks.filter((item) => item.type.toLowerCase() === "lesson").length,
+      vocabularies: bookmarks.filter((item) => item.type.toLowerCase() === "vocabulary").length,
+      latest: [...bookmarks]
+        .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+        .slice(0, 4),
+    }),
+    [bookmarks]
+  );
 
-  const totalCompleted = progresses.filter(p => p.status === "Completed").length;
-  const totalInProgress = progresses.filter(p => p.status === "InProgress").length;
-
-  const examStats = useMemo(() => ({
-    total: examResults.length,
-    passed: examResults.filter(r => r.isPassed).length,
-    avg: examResults.length > 0 ? Math.round(examResults.reduce((s, r) => s + r.score, 0) / examResults.length) : 0,
-  }), [examResults]);
-
+  // Tính chuỗi ngày học liên tục dựa trên bảng Cha
   const streakDays = useMemo(() => {
     if (progresses.length === 0) return 0;
-    const dates = [...new Set(progresses.map(p =>
-      new Date(p.lastAccessedAt).toDateString()
-    ))].sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
-    let streak = 0;
+    const dates = [...new Set(progresses.map((item) => new Date(item.lastAccessed).toDateString()))].sort(
+      (a, b) => new Date(b).getTime() - new Date(a).getTime()
+    );
+
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    for (let i = 0; i < dates.length; i++) {
-      const d = new Date(dates[i]);
-      d.setHours(0, 0, 0, 0);
-      const expectedDate = new Date(today);
-      expectedDate.setDate(expectedDate.getDate() - i);
-      if (d.getTime() === expectedDate.getTime()) {
-        streak++;
-      } else {
-        break;
-      }
+    let streak = 0;
+    for (let i = 0; i < dates.length; i += 1) {
+      const current = new Date(dates[i]);
+      current.setHours(0, 0, 0, 0);
+
+      const expected = new Date(today);
+      expected.setDate(expected.getDate() - i);
+
+      if (current.getTime() !== expected.getTime()) break;
+      streak += 1;
     }
+
     return streak;
   }, [progresses]);
 
+  const examStats = useMemo(
+    () => ({
+      total: examResults.length,
+      passed: examResults.filter((item) => item.isPassed).length,
+      average: examResults.length
+        ? Math.round(examResults.reduce((sum, item) => sum + item.score, 0) / examResults.length)
+        : 0,
+    }),
+    [examResults]
+  );
+
+  // Nút "Tiếp tục học" sẽ trỏ thẳng tới kỹ năng cuối cùng user truy cập
+  const continueLearningTarget = useMemo(() => {
+    const item = recentActivity[0];
+    if (!item || !SKILL_MAP[item.partType]) return "/courses";
+    return `${SKILL_MAP[item.partType].path}/${item.levelName || defaultLevel}/${item.lessonId}`;
+  }, [defaultLevel, recentActivity]);
+
   return (
     <StudentLayout>
-      <div className="max-w-6xl mx-auto pb-12">
+      <div className="mx-auto max-w-6xl pb-12">
+        {/* Header Hero */}
+        <section className="relative overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.22),_transparent_32%),linear-gradient(135deg,#16263d_0%,#27476d_46%,#a71f48_100%)] px-8 py-9 text-white shadow-xl shadow-slate-900/10">
+          <div className="absolute -right-20 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-40 w-40 rounded-full bg-rose-300/10 blur-3xl" />
 
-        {/* ====== GREETING HERO ====== */}
-        <div className="relative mb-10 rounded-[2rem] bg-gradient-to-br from-jp-indigo via-[#1e3a5f] to-[#0f2027] text-white p-8 md:p-10 overflow-hidden">
-          {/* Decorative */}
-          <div className="absolute -right-16 -top-16 w-64 h-64 bg-white/5 rounded-full blur-2xl" />
-          <div className="absolute -left-10 -bottom-10 w-48 h-48 bg-jp-red/10 rounded-full blur-3xl" />
-          <div className="absolute right-8 bottom-6 text-[120px] font-serif text-white/[0.03] leading-none select-none pointer-events-none hidden md:block">
-            学
-          </div>
+          <div className="relative grid gap-8 lg:grid-cols-[1.3fr_0.9fr]">
+            <div>
+              <p className="mb-2 text-sm font-medium text-white/65">{GREETING()},</p>
+              <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+                {user?.fullName || user?.userName || "Học viên"}
+              </h1>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
+                Tiến độ học đang được gom thành một luồng rõ ràng: hệ thống lưu hoạt động học tập, tổng hợp thành dashboard,
+                rồi dựa trên dữ liệu đó để gợi ý bài tiếp theo phù hợp.
+              </p>
 
-          <div className="relative z-10">
-            <p className="text-white/50 text-sm font-medium mb-1 tracking-wide">{GREETING()},</p>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3 tracking-tight">
-              {user?.fullName || user?.userName || "Học viên"} 👋
-            </h1>
-            <p className="text-white/60 text-sm md:text-base max-w-xl leading-relaxed">
-              Tiếp tục hành trình chinh phục tiếng Nhật. Mỗi ngày một bước tiến nhỏ, bạn sẽ đi rất xa!
-            </p>
+              <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+                <HeroMetric icon={Flame} label="Ngày liên tiếp" value={streakDays} />
+                <HeroMetric icon={Target} label="Bài đã học" value={dashboard?.totalLessonsLearned ?? 0} />
+                <HeroMetric icon={CheckCircle2} label="Bài hoàn thành" value={dashboard?.completedLessons ?? 0} />
+                <HeroMetric icon={Star} label="Điểm trung bình" value={`${Math.round(dashboard?.averageScore ?? 0)}%`} />
+              </div>
 
-            {/* Quick stats row */}
-            <div className="flex flex-wrap gap-6 mt-8">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
-                  <Flame size={20} className="text-orange-400" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold leading-none">{streakDays}</p>
-                  <p className="text-[11px] text-white/50 font-medium mt-0.5">Ngày liên tiếp</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
-                  <Target size={20} className="text-emerald-400" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold leading-none">{totalLessonsLearned}</p>
-                  <p className="text-[11px] text-white/50 font-medium mt-0.5">Bài đã học</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
-                  <CheckCircle2 size={20} className="text-sky-400" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold leading-none">{totalCompleted}</p>
-                  <p className="text-[11px] text-white/50 font-medium mt-0.5">Kỹ năng hoàn thành</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
-                  <Trophy size={20} className="text-amber-400" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold leading-none">{examStats.passed}</p>
-                  <p className="text-[11px] text-white/50 font-medium mt-0.5">Bài thi đạt</p>
-                </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href={continueLearningTarget}
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-jp-indigo transition hover:-translate-y-0.5"
+                >
+                  Tiếp tục học
+                  <ArrowRight size={16} />
+                </Link>
+                <Link
+                  href="/profile"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/15"
+                >
+                  Xem hồ sơ học tập
+                </Link>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* ====== SKILL PROGRESS GRID ====== */}
-        <div className="mb-10">
-          <div className="flex items-center justify-between mb-5">
-            <h2 className="text-xl font-bold text-jp-indigo flex items-center gap-2">
+            {/* Recommendations */}
+            <div className="grid gap-4 rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+              <div className="flex items-center gap-2 text-sm font-bold text-white">
+                <BrainCircuit size={18} className="text-amber-300" />
+                Gợi ý học tiếp
+              </div>
+
+              {recommendations?.lessons?.length ? (
+                <>
+                  <div className="rounded-2xl bg-white/10 p-4">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Phân cụm mô phỏng</p>
+                    <p className="mt-1 text-lg font-bold">{recommendations.simulatedKMeansCluster}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-white/65">{recommendations.simulatedAprioriRule}</p>
+                  </div>
+
+                  <div className="space-y-3">
+                    {recommendations.lessons.slice(0, 3).map((lesson) => {
+                      const skill = SKILL_MAP[lesson.skillType] || SKILL_MAP.Vocabulary;
+                      return (
+                        <Link
+                          key={lesson.lessonId}
+                          href={`${skill.path}/${lesson.levelName || defaultLevel}/${lesson.lessonId}`}
+                          className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+                        >
+                          <div className="mt-0.5 rounded-xl bg-white/10 p-2">
+                            <skill.icon size={16} className="text-amber-200" />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="text-sm font-bold">{lesson.lessonName}</p>
+                            <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-white/45">
+                              {lesson.levelName} · {skill.label}
+                            </p>
+                            <p className="mt-2 text-xs leading-relaxed text-white/65">{lesson.recommendationReason}</p>
+                          </div>
+                          <ChevronRight size={16} className="mt-1 text-white/35" />
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </>
+              ) : (
+                <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-5 text-sm text-white/65">
+                  Hệ thống sẽ bắt đầu gợi ý khi đã có đủ dữ liệu học tập từ tiến độ và điểm số của bạn.
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* CÁC PHẦN DƯỚI ĐÂY GIỮ NGUYÊN HOẶC ĐƯỢC MAP THEO STATE MỚI */}
+        <section className="mt-10">
+          <div className="mb-5 flex items-center justify-between">
+            <h2 className="flex items-center gap-2 text-xl font-bold text-jp-indigo">
               <TrendingUp size={20} className="text-jp-red" />
               Tiến độ theo kỹ năng
             </h2>
-            <Link href="/courses" className="text-xs font-bold text-jp-red hover:underline flex items-center gap-1">
-              Vào học <ChevronRight size={14} />
+            <Link href="/courses" className="flex items-center gap-1 text-xs font-bold text-jp-red hover:underline">
+              Vào học
+              <ChevronRight size={14} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-5">
             {Object.entries(SKILL_MAP).map(([key, skill]) => {
-              const stat = skillProgress[key] || { total: 0, completed: 0, inProgress: 0 };
-              const active = stat.completed + stat.inProgress;
-              const pct = stat.total > 0 ? Math.round((stat.completed / stat.total) * 100) : 0;
-              const defaultLevel = levels.length > 0 ? levels[0].levelName : "N5";
-
+              const stats = skillProgress[key] || { total: 0, completed: 0, inProgress: 0 };
+              const percent = stats.total ? Math.round((stats.completed / stats.total) * 100) : 0;
               return (
                 <Link
                   key={key}
                   href={`${skill.path}/${defaultLevel}`}
-                  className="group bg-white rounded-2xl border border-black/5 p-5 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                  className="group rounded-3xl border border-black/5 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`w-11 h-11 rounded-xl ${skill.bg} flex items-center justify-center ${skill.color} group-hover:scale-110 transition-transform`}>
+                  <div className="mb-4 flex items-center justify-between">
+                    <div className={`flex h-11 w-11 items-center justify-center rounded-2xl ${skill.bg} ${skill.color}`}>
                       <skill.icon size={20} />
                     </div>
-                    {active > 0 && (
-                      <span className="text-[10px] font-bold text-white bg-jp-indigo/80 px-2 py-0.5 rounded-md">
-                        {active} bài
-                      </span>
-                    )}
+                    <span className="rounded-full bg-neutral-50 px-2.5 py-1 text-[11px] font-bold text-neutral-500">
+                      {stats.completed + stats.inProgress} bài
+                    </span>
                   </div>
-                  <h3 className="font-bold text-jp-indigo text-sm mb-2 group-hover:text-jp-red transition-colors">{skill.label}</h3>
-                  <div className="w-full h-1.5 bg-neutral-100 rounded-full overflow-hidden">
+
+                  <h3 className="text-sm font-bold text-jp-indigo transition group-hover:text-jp-red">{skill.label}</h3>
+                  <div className="mt-4 h-2 overflow-hidden rounded-full bg-neutral-100">
                     <div
-                      className="h-full bg-gradient-to-r from-jp-red to-rose-400 rounded-full transition-all duration-700"
-                      style={{ width: `${pct}%` }}
+                      className="h-full rounded-full bg-gradient-to-r from-jp-red to-rose-400 transition-all duration-500"
+                      style={{ width: `${percent}%` }}
                     />
                   </div>
-                  <div className="flex items-center justify-between mt-2">
-                    <span className="text-[10px] text-neutral-400 font-medium">{stat.completed} hoàn thành</span>
-                    <span className="text-[10px] font-bold text-jp-red">{pct}%</span>
+                  <div className="mt-3 flex items-center justify-between text-[11px] font-medium text-neutral-400">
+                    <span>{stats.completed} hoàn thành</span>
+                    <span className="font-bold text-jp-red">{percent}%</span>
                   </div>
                 </Link>
               );
             })}
           </div>
-        </div>
+        </section>
 
-        {/* ====== QUICK ACTIONS + EXAM STATS ====== */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-          {/* Quick actions */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/courses" className="group bg-gradient-to-br from-violet-500 to-violet-700 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-4">
-              <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
-                <GraduationCap size={24} />
-              </div>
-              <div className="min-w-0">
-                <h3 className="font-bold text-base">Khóa Học</h3>
-                <p className="text-white/60 text-xs mt-0.5">Học theo trình độ JLPT N5 → N1</p>
-              </div>
-              <ArrowRight className="ml-auto opacity-40 group-hover:opacity-100 shrink-0 group-hover:translate-x-1 transition-all" size={18} />
-            </Link>
+        {/* Bảng hoạt động và Lưu trữ */}
+        <section className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="rounded-[1.75rem] border border-black/5 bg-white p-6 shadow-sm">
+            <div className="mb-5 flex items-center justify-between">
+              <h2 className="flex items-center gap-2 font-bold text-jp-indigo">
+                <BookMarked size={18} className="text-jp-red" />
+                Thư viện đã lưu
+              </h2>
+              <Link href="/profile" className="text-xs font-bold text-jp-red hover:underline">
+                Xem tất cả
+              </Link>
+            </div>
 
-            <Link href="/exams" className="group bg-gradient-to-br from-orange-500 to-orange-700 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-4">
-              <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
-                <ClipboardList size={24} />
-              </div>
-              <div className="min-w-0">
-                <h3 className="font-bold text-base">Luyện Thi JLPT</h3>
-                <p className="text-white/60 text-xs mt-0.5">Làm đề thi thử chuẩn JLPT</p>
-              </div>
-              <ArrowRight className="ml-auto opacity-40 group-hover:opacity-100 shrink-0 group-hover:translate-x-1 transition-all" size={18} />
-            </Link>
+            <div className="mb-5 grid grid-cols-2 gap-4">
+              <MiniMetric label="Bài học đã lưu" value={bookmarkSummary.lessons} />
+              <MiniMetric label="Từ vựng đã lưu" value={bookmarkSummary.vocabularies} />
+            </div>
 
-            <Link href="/flashcards/prebuilt" className="group bg-gradient-to-br from-teal-500 to-teal-700 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-4">
-              <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
-                <Layers size={24} />
-              </div>
-              <div className="min-w-0">
-                <h3 className="font-bold text-base">Flashcard</h3>
-                <p className="text-white/60 text-xs mt-0.5">Ôn tập bằng thẻ ghi nhớ</p>
-              </div>
-              <ArrowRight className="ml-auto opacity-40 group-hover:opacity-100 shrink-0 group-hover:translate-x-1 transition-all" size={18} />
-            </Link>
-
-            <Link href="/folders" className="group bg-gradient-to-br from-sky-500 to-sky-700 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-4">
-              <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
-                <Folder size={24} />
-              </div>
-              <div className="min-w-0">
-                <h3 className="font-bold text-base">Không gian học</h3>
-                <p className="text-white/60 text-xs mt-0.5">{flashcardStats.folders} thư mục · {flashcardStats.decks} bộ thẻ</p>
-              </div>
-              <ArrowRight className="ml-auto opacity-40 group-hover:opacity-100 shrink-0 group-hover:translate-x-1 transition-all" size={18} />
-            </Link>
+            <div className="space-y-3">
+              {bookmarkSummary.latest.length === 0 ? (
+                <EmptyCard text="Bạn chưa bookmark bài học hoặc từ vựng nào." />
+              ) : (
+                bookmarkSummary.latest.map((item) => (
+                  <div
+                    key={item.bookmarkId}
+                    className="flex items-center justify-between rounded-2xl border border-neutral-100 bg-neutral-50/70 px-4 py-3"
+                  >
+                    <div>
+                      <p className="text-sm font-bold text-jp-indigo">{item.itemName || `Item ${item.itemId}`}</p>
+                      <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-neutral-400">
+                        {item.type} · {formatDate(item.createdAt)}
+                      </p>
+                    </div>
+                    <BookMarked size={16} className="text-amber-500" />
+                  </div>
+                ))
+              )}
+            </div>
           </div>
 
-          {/* Exam summary */}
-          <div className="bg-white rounded-2xl border border-black/5 p-6 shadow-sm">
-            <h3 className="font-bold text-jp-indigo text-sm mb-5 flex items-center gap-2">
-              <Trophy size={16} className="text-amber-500" />
-              Thống kê luyện thi
-            </h3>
-            {examStats.total === 0 ? (
-              <div className="text-center py-6">
-                <ClipboardList size={32} className="text-neutral-200 mx-auto mb-3" />
-                <p className="text-sm text-neutral-400 mb-4">Bạn chưa làm bài thi nào.</p>
-                <Link href="/exams" className="text-xs font-bold text-jp-red hover:underline">
-                  Bắt đầu luyện thi →
-                </Link>
+          <div className="rounded-[1.75rem] border border-black/5 bg-white p-6 shadow-sm">
+            <div className="mb-5 flex items-center justify-between">
+              <h2 className="flex items-center gap-2 font-bold text-jp-indigo">
+                <ClipboardList size={18} className="text-jp-red" />
+                Lịch sử làm bài
+              </h2>
+              <Link href="/profile" className="text-xs font-bold text-jp-red hover:underline">
+                Xem chi tiết
+              </Link>
+            </div>
+
+            <div className="mb-5 grid grid-cols-2 gap-4">
+              <MiniMetric label="Bài test đã lưu" value={testHistories.length} />
+              <MiniMetric label="Điểm TB luyện tập" value={`${Math.round(dashboard?.averageScore ?? 0)}%`} />
+            </div>
+
+            <div className="space-y-3">
+              {testHistories.length === 0 ? (
+                <EmptyCard text="Chưa có lịch sử làm bài nào được lưu." />
+              ) : (
+                testHistories.slice(0, 3).map((item) => (
+                  <div
+                    key={item.testHistoryId}
+                    className="rounded-2xl border border-neutral-100 bg-neutral-50/70 px-4 py-3"
+                  >
+                    <div className="flex items-center justify-between">
+                      <p className="text-sm font-bold text-jp-indigo">Bài test #{item.testHistoryId}</p>
+                      <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-jp-red">
+                        {Math.round(item.score)}%
+                      </span>
+                    </div>
+                    <p className="mt-2 text-[11px] font-medium uppercase tracking-wide text-neutral-400">
+                      {formatDate(item.date)}
+                    </p>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* Lịch sử hoạt động gần đây & Bài tập */}
+        <section className="mt-10 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="overflow-hidden rounded-[1.75rem] border border-black/5 bg-white shadow-sm">
+            <div className="flex items-center justify-between border-b border-black/5 px-6 py-5">
+              <h2 className="flex items-center gap-2 font-bold text-jp-indigo">
+                <Clock size={18} className="text-jp-red" />
+                Hoạt động gần đây
+              </h2>
+            </div>
+
+            {isLoading ? (
+              <div className="p-8 text-center text-sm text-neutral-400">Đang tải...</div>
+            ) : recentActivity.length === 0 ? (
+              <div className="p-10">
+                <EmptyCard text="Chưa có hoạt động học tập gần đây." />
               </div>
             ) : (
-              <div className="space-y-5">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/50 flex flex-col items-center justify-center">
-                    <span className="text-2xl font-bold text-amber-600 leading-none">{examStats.total}</span>
-                    <span className="text-[9px] text-amber-500 font-medium mt-0.5">bài thi</span>
-                  </div>
-                  <div className="flex-1 space-y-2">
-                    <div className="flex justify-between text-xs">
-                      <span className="text-neutral-500">Đạt: <strong className="text-emerald-600">{examStats.passed}</strong></span>
-                      <span className="text-neutral-500">Chưa đạt: <strong className="text-red-500">{examStats.total - examStats.passed}</strong></span>
-                    </div>
-                    <div className="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full transition-all"
-                        style={{ width: `${examStats.total > 0 ? (examStats.passed / examStats.total) * 100 : 0}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-neutral-50 rounded-xl p-4 text-center">
-                  <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider mb-1">Điểm trung bình</p>
-                  <p className="text-3xl font-bold text-jp-indigo">{examStats.avg}<span className="text-base text-neutral-400">%</span></p>
-                </div>
-                <Link href="/profile" className="flex items-center justify-center gap-2 text-xs font-bold text-jp-red hover:underline pt-2">
-                  Xem lịch sử chi tiết <ArrowRight size={14} />
-                </Link>
+              <div className="divide-y divide-black/5">
+                {recentActivity.map((item, index) => {
+                  const skill = SKILL_MAP[item.partType];
+                  if (!skill) return null;
+                  return (
+                    <Link
+                      key={`${item.lessonId}-${item.partType}-${index}`}
+                      href={`${skill.path}/${item.levelName || defaultLevel}/${item.lessonId}`}
+                      className="flex items-center gap-4 px-6 py-4 transition hover:bg-neutral-50"
+                    >
+                      <div className={`flex h-10 w-10 items-center justify-center rounded-2xl ${skill.bg} ${skill.color}`}>
+                        <skill.icon size={18} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="text-sm font-bold text-jp-indigo">
+                          {item.lessonName || `Bài ${item.lessonId}`} · {skill.label}
+                        </p>
+                        <p className="mt-1 text-xs text-neutral-400">
+                          {getTimeAgo(item.lastAccessedAt)} · {item.status === "Completed" ? "Hoàn thành" : "Đang học"}
+                        </p>
+                      </div>
+                      <ChevronRight size={16} className="text-neutral-300" />
+                    </Link>
+                  );
+                })}
               </div>
             )}
           </div>
-        </div>
 
-        {/* ====== RECENT ACTIVITY ====== */}
-        <div className="bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
-          <div className="px-6 py-5 border-b border-black/5 flex items-center justify-between">
-            <h2 className="font-bold text-jp-indigo flex items-center gap-2">
-              <Clock size={18} className="text-jp-red" />
-              Hoạt động gần đây
-            </h2>
+          <div className="rounded-[1.75rem] border border-black/5 bg-white p-6 shadow-sm">
+            <div className="mb-5 flex items-center gap-2 font-bold text-jp-indigo">
+              <Trophy size={18} className="text-amber-500" />
+              Thống kê luyện thi
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <ScoreCard label="Bài thi" value={examStats.total} accent="text-jp-indigo" />
+              <ScoreCard label="Đạt" value={examStats.passed} accent="text-emerald-600" />
+              <ScoreCard label="Điểm TB" value={`${examStats.average}%`} accent="text-amber-600" />
+            </div>
+
+            <div className="mt-6 rounded-3xl bg-gradient-to-br from-amber-50 to-orange-50 p-5">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-amber-700">Liên kết logic hệ thống</p>
+              <ul className="mt-3 space-y-3 text-sm leading-relaxed text-amber-900/80">
+                <li>`Progress` lưu trạng thái học và điểm của user.</li>
+                <li>`Dashboard` gom dữ liệu đó thành các chỉ số tổng quan dễ đọc.</li>
+                <li>`Recommendation` tiếp tục dùng dữ liệu đã tổng hợp để đề xuất bài phù hợp hơn.</li>
+              </ul>
+            </div>
           </div>
-
-          {isLoading ? (
-            <div className="p-8 text-center text-neutral-400 text-sm">Đang tải...</div>
-          ) : recentActivity.length === 0 ? (
-            <div className="p-12 text-center">
-              <Sparkles size={32} className="text-neutral-200 mx-auto mb-3" />
-              <p className="text-neutral-400 text-sm mb-4">Chưa có hoạt động nào. Bắt đầu học ngay!</p>
-              <Link href="/courses" className="inline-flex items-center gap-2 bg-jp-indigo text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-jp-red transition-colors">
-                <PlayCircle size={16} /> Vào học ngay
-              </Link>
-            </div>
-          ) : (
-            <div className="divide-y divide-black/5">
-              {recentActivity.map((item, idx) => {
-                const skill = SKILL_MAP[item.partType];
-                if (!skill) return null;
-                const Icon = skill.icon;
-                const timeAgo = getTimeAgo(item.lastAccessedAt);
-                const defaultLevel = levels.length > 0 ? levels[0].levelName : "N5";
-
-                return (
-                  <Link
-                    key={item.id || idx}
-                    href={`${skill.path}/${defaultLevel}/${item.lessonId}`}
-                    className="flex items-center gap-4 px-6 py-4 hover:bg-neutral-50/50 transition-colors group"
-                  >
-                    <div className={`w-10 h-10 rounded-xl ${skill.bg} flex items-center justify-center ${skill.color} shrink-0 group-hover:scale-105 transition-transform`}>
-                      <Icon size={18} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-bold text-jp-indigo group-hover:text-jp-red transition-colors">
-                        Bài {item.lessonId} - {skill.label}
-                      </p>
-                      <p className="text-xs text-neutral-400 mt-0.5 flex items-center gap-2">
-                        <Clock size={12} /> {timeAgo}
-                        {item.status === "Completed" && (
-                          <span className="inline-flex items-center gap-1 text-emerald-600 font-bold">
-                            <CheckCircle2 size={12} /> Hoàn thành
-                          </span>
-                        )}
-                        {item.status === "InProgress" && (
-                          <span className="text-blue-500 font-medium">Đang học</span>
-                        )}
-                      </p>
-                    </div>
-                    <ChevronRight size={16} className="text-neutral-300 group-hover:text-jp-red group-hover:translate-x-0.5 transition-all shrink-0" />
-                  </Link>
-                );
-              })}
-            </div>
-          )}
-        </div>
+        </section>
       </div>
     </StudentLayout>
   );
 }
 
-/* ============ Helper ============ */
-function getTimeAgo(dateStr: string): string {
+function HeroMetric({ icon: Icon, label, value }: { icon: any; label: string; value: string | number }) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-sm">
+      <div className="flex items-center gap-2 text-white/55">
+        <Icon size={15} />
+        <span className="text-[11px] font-bold uppercase tracking-wide">{label}</span>
+      </div>
+      <p className="mt-3 text-2xl font-bold">{value}</p>
+    </div>
+  );
+}
+
+function MiniMetric({ label, value }: { label: string; value: string | number }) {
+  return (
+    <div className="rounded-2xl border border-neutral-100 bg-neutral-50 px-4 py-4">
+      <p className="text-[11px] font-bold uppercase tracking-wide text-neutral-400">{label}</p>
+      <p className="mt-2 text-2xl font-bold text-jp-indigo">{value}</p>
+    </div>
+  );
+}
+
+function ScoreCard({ label, value, accent }: { label: string; value: string | number; accent: string }) {
+  return (
+    <div className="rounded-2xl border border-black/5 bg-neutral-50 p-4 text-center">
+      <p className={`text-2xl font-bold ${accent}`}>{value}</p>
+      <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-neutral-400">{label}</p>
+    </div>
+  );
+}
+
+function EmptyCard({ text }: { text: string }) {
+  return (
+    <div className="rounded-2xl border border-dashed border-neutral-200 bg-neutral-50/80 p-5 text-sm text-neutral-500">
+      {text}
+    </div>
+  );
+}
+
+function formatDate(input: string) {
+  return new Date(input).toLocaleDateString("vi-VN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+function getTimeAgo(dateStr: string) {
   const now = new Date();
-  const d = new Date(dateStr);
-  const diff = Math.floor((now.getTime() - d.getTime()) / 1000);
+  const date = new Date(dateStr);
+  const diff = Math.floor((now.getTime() - date.getTime()) / 1000);
 
   if (diff < 60) return "Vừa xong";
   if (diff < 3600) return `${Math.floor(diff / 60)} phút trước`;
   if (diff < 86400) return `${Math.floor(diff / 3600)} giờ trước`;
   if (diff < 604800) return `${Math.floor(diff / 86400)} ngày trước`;
-  return d.toLocaleDateString("vi-VN");
+  return formatDate(dateStr);
 }
