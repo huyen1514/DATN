@@ -32,14 +32,13 @@ export default function BookmarkButton({
       aria-pressed={active}
       aria-label={label}
       title={label}
-      className={`inline-flex items-center justify-center gap-2 border transition-all ${sizing} ${
-        active
+      className={`inline-flex items-center justify-center gap-2 border transition-all ${sizing} ${active
           ? "border-amber-300 bg-amber-50 text-amber-700 shadow-sm"
           : "border-slate-200 bg-white text-slate-500 hover:border-rose-300 hover:bg-rose-50 hover:text-[#a71f48]"
-      } ${loading ? "cursor-wait opacity-70" : ""} ${className}`}
+        } ${loading ? "cursor-wait opacity-70" : ""} ${className}`}
     >
       <Bookmark size={size === "sm" ? 15 : 17} className={active ? "fill-current" : ""} />
-      {size === "md" && <span className="font-bold">{active ? "Da luu" : "Luu"}</span>}
+      {size === "md" && <span className="font-bold">{active ? "Đã lưu" : "Lưu"}</span>}
     </button>
   );
 }

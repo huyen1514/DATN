@@ -30,7 +30,6 @@ interface Level {
   levelName: string;
 }
 
-// CẬP NHẬT INTERFACE THEO CHUẨN MỚI CỦA BACKEND
 interface LessonPart {
   partType: string;
   status: string;
@@ -118,10 +117,7 @@ const GREETING = () => {
 export default function OverviewPage() {
   const [user, setUser] = useState<any>(null);
   const [levels, setLevels] = useState<Level[]>([]);
-  
-  // Sử dụng mảng UserProgress làm chuẩn
   const [progresses, setProgresses] = useState<UserProgress[]>([]);
-  
   const [examResults, setExamResults] = useState<ExamResult[]>([]);
   const [dashboard, setDashboard] = useState<DashboardResponse | null>(null);
   const [recommendations, setRecommendations] = useState<RecommendationResponse | null>(null);
@@ -148,7 +144,8 @@ export default function OverviewPage() {
 
   const loadAllData = async (userId: number) => {
     try {
-      const [levelsData, examResultsData, dashboardData, recommendationsData, bookmarksData, historyData, progressData] =
+      // Gọi các API tổng hợp
+      const [levelsData, examResultsData, dashboardData, recommendationsData, bookmarksData, historyData] =
         await Promise.all([
           api("/levels"),
           api(`/exam-results?userId=${userId}`),
@@ -156,7 +153,6 @@ export default function OverviewPage() {
           api(`/recommendations/${userId}`),
           api(`/bookmark/${userId}`),
           api(`/test-history/${userId}`),
-          api(`/progress/user/${userId}`) // Cập nhật gọi đúng API mới
         ]);
 
       if (Array.isArray(levelsData)) setLevels(levelsData as Level[]);
@@ -165,7 +161,18 @@ export default function OverviewPage() {
       if (recommendationsData?.userId) setRecommendations(recommendationsData as RecommendationResponse);
       if (Array.isArray(bookmarksData)) setBookmarks(bookmarksData as BookmarkItem[]);
       if (Array.isArray(historyData)) setTestHistories(historyData as TestHistoryItem[]);
-      if (Array.isArray(progressData)) setProgresses(progressData as UserProgress[]);
+
+      // Lấy danh sách tiến độ (Thử 2 API để tránh bị lỗi 404)
+      try {
+        const progressData = await api(`/progress/user/${userId}`);
+      
+        // Trực tiếp kiểm tra và set dữ liệu
+        if (Array.isArray(progressData)) {
+          setProgresses(progressData as UserProgress[]);
+        }
+      } catch (e) {
+        console.error("Không tải được tiến độ bài học:", e);
+      }
 
     } catch (e) {
       console.error(e);
@@ -176,16 +183,19 @@ export default function OverviewPage() {
 
   const defaultLevel = levels[0]?.levelName || "N5";
 
-  // CẬP NHẬT LOGIC: Duyệt qua mảng cha (UserProgress) -> mảng con (Parts)
+  // BẢO VỆ MẢNG BẰNG (progresses || []) VÀ (up.parts || [])
   const skillProgress = useMemo(() => {
     const counts: Record<string, { total: number; completed: number; inProgress: number }> = {};
     Object.keys(SKILL_MAP).forEach((key) => {
       counts[key] = { total: 0, completed: 0, inProgress: 0 };
     });
 
-    progresses.forEach((up) => {
+    (progresses || []).forEach((up) => {
+      if (!up.parts || !Array.isArray(up.parts)) return; // Bỏ qua nếu parts bị null
+      
       up.parts.forEach((part) => {
-        if (!counts[part.partType]) return;
+        if (!part || !counts[part.partType]) return;
+        
         counts[part.partType].total += 1;
         if (part.status === "Completed") counts[part.partType].completed += 1;
         if (part.status === "InProgress") counts[part.partType].inProgress += 1;
@@ -195,20 +205,24 @@ export default function OverviewPage() {
     return counts;
   }, [progresses]);
 
-  // Làm phẳng (Flatten) danh sách chi tiết các kỹ năng để hiện ở phần "Hoạt động gần đây"
   const recentActivity = useMemo(() => {
     const flatParts: Array<{ lessonId: number, levelName: string, lessonName: string, partType: string, status: string, lastAccessedAt: string }> = [];
     
-    progresses.forEach(up => {
+    (progresses || []).forEach(up => {
+      if (!up.parts || !Array.isArray(up.parts)) return;
+
       up.parts.forEach(part => {
-        flatParts.push({
-          lessonId: up.lessonId,
-          levelName: up.levelName,
-          lessonName: up.lessonName,
-          partType: part.partType,
-          status: part.status,
-          lastAccessedAt: part.lastAccessedAt
-        });
+        // Chỉ lấy những phần có dữ liệu thời gian truy cập
+        if (part.status !== "NotStarted") {
+          flatParts.push({
+            lessonId: up.lessonId,
+            levelName: up.levelName,
+            lessonName: up.lessonName,
+            partType: part.partType,
+            status: part.status,
+            lastAccessedAt: part.lastAccessedAt || up.lastAccessed || new Date().toISOString()
+          });
+        }
       });
     });
 
@@ -219,20 +233,24 @@ export default function OverviewPage() {
 
   const bookmarkSummary = useMemo(
     () => ({
-      lessons: bookmarks.filter((item) => item.type.toLowerCase() === "lesson").length,
-      vocabularies: bookmarks.filter((item) => item.type.toLowerCase() === "vocabulary").length,
-      latest: [...bookmarks]
+      lessons: (bookmarks || []).filter((item) => item.type.toLowerCase() === "lesson").length,
+      vocabularies: (bookmarks || []).filter((item) => item.type.toLowerCase() === "vocabulary").length,
+      latest: [...(bookmarks || [])]
         .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
         .slice(0, 4),
     }),
     [bookmarks]
   );
 
-  // Tính chuỗi ngày học liên tục dựa trên bảng Cha
   const streakDays = useMemo(() => {
-    if (progresses.length === 0) return 0;
+    if (!progresses || progresses.length === 0) return 0;
 
-    const dates = [...new Set(progresses.map((item) => new Date(item.lastAccessed).toDateString()))].sort(
+    // Lọc bỏ những object bị lỗi null ngày tháng
+    const validDates = progresses
+      .map((item) => item.lastAccessed)
+      .filter((d) => !!d);
+
+    const dates = [...new Set(validDates.map((item) => new Date(item).toDateString()))].sort(
       (a, b) => new Date(b).getTime() - new Date(a).getTime()
     );
 
@@ -256,16 +274,15 @@ export default function OverviewPage() {
 
   const examStats = useMemo(
     () => ({
-      total: examResults.length,
-      passed: examResults.filter((item) => item.isPassed).length,
-      average: examResults.length
-        ? Math.round(examResults.reduce((sum, item) => sum + item.score, 0) / examResults.length)
+      total: (examResults || []).length,
+      passed: (examResults || []).filter((item) => item.isPassed).length,
+      average: (examResults || []).length
+        ? Math.round((examResults || []).reduce((sum, item) => sum + item.score, 0) / examResults.length)
         : 0,
     }),
     [examResults]
   );
 
-  // Nút "Tiếp tục học" sẽ trỏ thẳng tới kỹ năng cuối cùng user truy cập
   const continueLearningTarget = useMemo(() => {
     const item = recentActivity[0];
     if (!item || !SKILL_MAP[item.partType]) return "/courses";
@@ -364,7 +381,6 @@ export default function OverviewPage() {
           </div>
         </section>
 
-        {/* CÁC PHẦN DƯỚI ĐÂY GIỮ NGUYÊN HOẶC ĐƯỢC MAP THEO STATE MỚI */}
         <section className="mt-10">
           <div className="mb-5 flex items-center justify-between">
             <h2 className="flex items-center gap-2 text-xl font-bold text-jp-indigo">
@@ -413,7 +429,6 @@ export default function OverviewPage() {
           </div>
         </section>
 
-        {/* Bảng hoạt động và Lưu trữ */}
         <section className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="rounded-[1.75rem] border border-black/5 bg-white p-6 shadow-sm">
             <div className="mb-5 flex items-center justify-between">
@@ -494,7 +509,6 @@ export default function OverviewPage() {
           </div>
         </section>
 
-        {/* Lịch sử hoạt động gần đây & Bài tập */}
         <section className="mt-10 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="overflow-hidden rounded-[1.75rem] border border-black/5 bg-white shadow-sm">
             <div className="flex items-center justify-between border-b border-black/5 px-6 py-5">
@@ -606,6 +620,7 @@ function EmptyCard({ text }: { text: string }) {
 }
 
 function formatDate(input: string) {
+  if (!input) return "";
   return new Date(input).toLocaleDateString("vi-VN", {
     day: "2-digit",
     month: "2-digit",
@@ -616,6 +631,7 @@ function formatDate(input: string) {
 }
 
 function getTimeAgo(dateStr: string) {
+  if (!dateStr) return "";
   const now = new Date();
   const date = new Date(dateStr);
   const diff = Math.floor((now.getTime() - date.getTime()) / 1000);

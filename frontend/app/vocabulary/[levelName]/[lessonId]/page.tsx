@@ -1,20 +1,17 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { api } from "@/lib/api";
 import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
-import BookmarkButton from "@/components/BookmarkButton";
 import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   Search,
   Volume2,
-  BookOpen,
-  CheckCircle2,
-  Bookmark, // Thêm icon Bookmark thuần để dùng custom nếu cần
+  Bookmark,
 } from "lucide-react";
 import LessonProgressSidebar from "@/components/LessonProgressSidebar";
 
@@ -50,6 +47,7 @@ interface BookmarkItem {
 
 export default function VocabularyDetailPage() {
   const params = useParams();
+  const router = useRouter();
   const levelName = params.levelName as string;
   const lessonId = Number(params.lessonId as string);
 
@@ -63,10 +61,9 @@ export default function VocabularyDetailPage() {
   const pageSize = 5;
   const [userId, setUserId] = useState<number>(1);
   
-  // Trạng thái cho Use Case
   const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
   const [bookmarkLoadingKey, setBookmarkLoadingKey] = useState<string | null>(null);
-  const [isCompleted, setIsCompleted] = useState(false); // Theo dõi tiến độ hoàn thành
+  const [isStartingFlashcard, setIsStartingFlashcard] = useState(false);
 
   const loadData = useCallback(async () => {
     try {
@@ -112,7 +109,6 @@ export default function VocabularyDetailPage() {
     }
   }, [lessonId, levelName]);
 
-  // Lấy dữ liệu Bookmark
   const loadBookmarks = useCallback(async (targetUserId: number) => {
     if (!targetUserId) return;
     try {
@@ -133,7 +129,6 @@ export default function VocabularyDetailPage() {
     [bookmarks]
   );
 
-  // Gọi API Toggle Bookmark mới của Backend
   const toggleBookmark = useCallback(
     async (itemId: number, type: "Lesson" | "Vocabulary") => {
       if (!userId) return;
@@ -143,7 +138,7 @@ export default function VocabularyDetailPage() {
 
       try {
         await api("/bookmark", "POST", { userId, itemId, type });
-        await loadBookmarks(userId); // Tải lại danh sách sau khi Toggle
+        await loadBookmarks(userId);
       } catch (e) {
         console.error("Could not update bookmark", e);
       } finally {
@@ -153,23 +148,18 @@ export default function VocabularyDetailPage() {
     [loadBookmarks, userId]
   );
 
-  // Lấy trạng thái tiến độ hiện tại của Bài học
   const fetchProgress = useCallback(async (currentUserId: number) => {
     try {
       const prog = await api(`/progress/lesson/${lessonId}/user/${currentUserId}`);
       if (prog && prog.parts) {
-        // Tìm xem phần "Từ vựng" đã học xong chưa
         const vocabPart = prog.parts.find((p: any) => p.partType === "Vocabulary");
-        if (vocabPart && vocabPart.status === "Completed") {
-          setIsCompleted(true);
-        }
+        if (vocabPart && vocabPart.status === "Completed") return;
       }
     } catch (e) {
-      // Bỏ qua lỗi 404 (chưa có tiến độ)
+      // Ignore 404
     }
   }, [lessonId]);
 
-  // Cập nhật tiến độ theo chuẩn CSDL Cha - Con
   const updateStatus = useCallback(async (status: string, currentUserId: number = userId) => {
     if (!currentUserId) return;
     try {
@@ -180,10 +170,6 @@ export default function VocabularyDetailPage() {
         status,
         score: null
       });
-
-      if (status === "Completed") {
-        setIsCompleted(true);
-      }
     } catch (e) {
       console.error("Could not update progress", e);
     }
@@ -201,21 +187,37 @@ export default function VocabularyDetailPage() {
       } catch (e) {}
     }
 
-    // Tải toàn bộ dữ liệu song song
     void loadData();
     void loadBookmarks(currentUserId);
     void fetchProgress(currentUserId);
-
-    // Ghi nhận trạng thái "Đang học" (InProgress) khi vừa vào trang
     void updateStatus("InProgress", currentUserId);
   }, [lessonId, levelName, loadData, loadBookmarks, fetchProgress, updateStatus]);
 
-  const handleNextLesson = () => {
-    const nextIndex = currentLessonIndex + 1;
-    if (nextIndex < levelLessons.length) {
-      updateStatus("Completed"); // Lưu là hoàn thành trước khi chuyển trang
-      const nextLesson = levelLessons[nextIndex];
-      window.location.href = `/vocabulary/${levelName}/${nextLesson.lessonId}`;
+  const goToLesson = useCallback(
+    async (targetLessonId: number) => {
+      if (!targetLessonId || targetLessonId === lessonId) return;
+      await updateStatus("Completed");
+      router.push(`/vocabulary/${levelName}/${targetLessonId}`);
+    },
+    [lessonId, levelName, router, updateStatus]
+  );
+
+  const handleStartFlashcard = async () => {
+    if (isStartingFlashcard) return;
+
+    setIsStartingFlashcard(true);
+    try {
+      const result = await api(`/prebuilt-flashcards/start/vocab/${lessonId}`, "POST");
+      if (result?.deckId) {
+        router.push(`/learn/${result.deckId}`);
+      } else {
+        alert("Không tạo được bộ thẻ cho bài này. Vui lòng thử lại.");
+      }
+    } catch (e) {
+      console.error("Could not start flashcard lesson", e);
+      alert("Có lỗi khi mở flashcard. Vui lòng thử lại.");
+    } finally {
+      setIsStartingFlashcard(false);
     }
   };
 
@@ -258,6 +260,16 @@ export default function VocabularyDetailPage() {
     return Math.round(((currentLessonIndex + 1) / levelLessons.length) * 100);
   }, [currentLessonIndex, levelLessons.length]);
 
+  // HÀM CHUYỂN TRANG MỚI: Cập nhật state + Cuộn mượt mà lên đầu trang
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    if (newPage === totalPages) {
+      updateStatus("Completed");
+    }
+    // Lệnh cuộn lên đỉnh màn hình
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
       <MainNavbar />
@@ -285,27 +297,6 @@ export default function VocabularyDetailPage() {
           </div>
 
           <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
-
-          <div className="mt-6 flex min-h-0 flex-1 flex-col overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-100">
-            <div className="flex shrink-0 items-center gap-2 p-4 pb-2 text-base font-semibold text-slate-800">
-              <BookOpen size={16} className="text-[#a71f48]" />
-              <span>Danh sách bài học</span>
-            </div>
-            <div className="flex-1 overflow-y-auto p-3 pt-0 space-y-1 pr-2 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300 hover:[&::-webkit-scrollbar-thumb]:bg-slate-400">
-              {levelLessons.map((lesson) => (
-                <Link
-                  key={lesson.lessonId}
-                  href={`/vocabulary/${levelName}/${lesson.lessonId}`}
-                  className={`block rounded-lg px-3 py-2 text-sm transition-colors ${lesson.lessonId === lessonId
-                      ? "bg-rose-100 font-semibold text-[#a71f48]"
-                      : "text-slate-600 hover:bg-slate-200 hover:text-slate-900"
-                    }`}
-                >
-                  {lesson.lessonName || `Bài ${lesson.lessonId}`}
-                </Link>
-              ))}
-            </div>
-          </div>
         </aside>
 
         {/* Main Content */}
@@ -322,7 +313,6 @@ export default function VocabularyDetailPage() {
               </p>
             </div>
             
-            {/* Tối ưu Bookmark Button (Bài học) để hiện Fill khi active */}
             <button
               onClick={() => void toggleBookmark(lessonId, "Lesson")}
               disabled={bookmarkLoadingKey === `Lesson-${lessonId}`}
@@ -370,7 +360,7 @@ export default function VocabularyDetailPage() {
               <select
                 value={lessonId}
                 onChange={(e) => {
-                  window.location.href = `/vocabulary/${levelName}/${e.target.value}`;
+                  void goToLesson(Number(e.target.value));
                 }}
                 className="h-10 w-full appearance-none rounded-xl border-none bg-slate-50 px-4 text-sm font-medium text-slate-700 outline-none ring-1 ring-inset ring-slate-200 transition focus:bg-white focus:ring-2 focus:ring-[#a71f48]"
               >
@@ -448,7 +438,6 @@ export default function VocabularyDetailPage() {
                       </button>
                     )}
                     
-                    {/* Tối ưu Bookmark Button (Từ vựng) để hiện Fill khi active */}
                     <button
                       onClick={() => void toggleBookmark(v.vocabularyId, "Vocabulary")}
                       disabled={bookmarkLoadingKey === `Vocabulary-${v.vocabularyId}`}
@@ -472,8 +461,9 @@ export default function VocabularyDetailPage() {
 
           {!isLoading && totalPages > 1 && (
             <div className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-slate-600">
+              {/* NÚT LÙI TRANG */}
               <button
-                onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+                onClick={() => handlePageChange(Math.max(1, safePage - 1))}
                 className="flex h-9 w-9 items-center justify-center rounded-full transition hover:bg-slate-200 disabled:opacity-50 disabled:hover:bg-transparent"
                 disabled={safePage === 1}
               >
@@ -490,12 +480,10 @@ export default function VocabularyDetailPage() {
                 }
 
                 return (
+                  /* NÚT CHỌN SỐ TRANG */
                   <button
                     key={page}
-                    onClick={() => {
-                      setCurrentPage(page);
-                      if (page === totalPages) updateStatus("Completed");
-                    }}
+                    onClick={() => handlePageChange(page)}
                     className={`flex h-9 w-9 items-center justify-center rounded-full transition ${active
                         ? "bg-[#a71f48] text-white shadow-sm"
                         : "hover:bg-slate-200"
@@ -506,12 +494,9 @@ export default function VocabularyDetailPage() {
                 );
               })}
 
+              {/* NÚT TIẾN TRANG */}
               <button
-                onClick={() => {
-                  const nextPage = Math.min(totalPages, safePage + 1);
-                  setCurrentPage(nextPage);
-                  if (nextPage === totalPages) updateStatus("Completed");
-                }}
+                onClick={() => handlePageChange(Math.min(totalPages, safePage + 1))}
                 className="flex h-9 w-9 items-center justify-center rounded-full transition hover:bg-slate-200 disabled:opacity-50 disabled:hover:bg-transparent"
                 disabled={safePage === totalPages}
               >
@@ -520,7 +505,7 @@ export default function VocabularyDetailPage() {
             </div>
           )}
 
-          {/* KHỐI CHUYỂN SANG FLASHCARD (Chỉ hiện ở trang cuối cùng) */}
+          {/* KHỐI CHUYỂN SANG FLASHCARD */}
           {!isLoading && safePage === totalPages && filteredVocabs.length > 0 && (
             <div className="mt-6 flex flex-col items-center justify-center rounded-2xl border border-rose-100 bg-gradient-to-b from-white to-rose-50/30 p-8 text-center shadow-sm">
               <h3 className="text-lg font-bold text-slate-800">
@@ -529,43 +514,25 @@ export default function VocabularyDetailPage() {
               <p className="mt-2 text-sm text-slate-500">
                 Nhưng nếu không luyện tập, bạn sẽ không nhớ được lâu.
               </p>
-              <Link
-                href={`/flashcards/${levelName}/${lessonId}`} // Thay bằng URL trỏ đến trang flashcard của bạn
-                className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d94838] to-[#c93222] px-8 py-3 text-sm font-bold text-white shadow-lg shadow-rose-200 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:brightness-110"
+              <button
+                onClick={() => void handleStartFlashcard()}
+                disabled={isStartingFlashcard}
+                className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d94838] to-[#c93222] px-8 py-3 text-sm font-bold text-white shadow-lg shadow-rose-200 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
               >
-                🚀 Bắt đầu luyện tập ngay (Flashcard)
-              </Link>
+                {isStartingFlashcard ? "Đang mở flashcard..." : "🚀 Bắt đầu luyện tập ngay (Flashcard)"}
+              </button>
             </div>
           )}
-
-          <div className="mt-8 flex justify-between items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <button
-              onClick={() => updateStatus("Completed")}
-              disabled={isCompleted}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all shadow-lg ${
-                isCompleted 
-                  ? "bg-slate-200 text-slate-500 cursor-not-allowed shadow-none" 
-                  : "bg-green-500 hover:bg-green-600 text-white shadow-green-200"
-              }`}
-            >
-              <CheckCircle2 size={20} /> {isCompleted ? "Đã hoàn thành" : "Đã thuộc hết bài này"}
-            </button>
-            
-            {currentLessonIndex < levelLessons.length - 1 && (
-              <button
-                onClick={handleNextLesson}
-                className="flex items-center gap-2 px-6 py-3 bg-[#a71f48] hover:bg-[#8e1a3d] text-white rounded-xl font-bold transition-all shadow-lg shadow-rose-200"
-              >
-                Bài học tiếp theo <ChevronRight size={20} />
-              </button>
-            )}
-          </div>
 
           <div className="mt-6 flex flex-wrap justify-center gap-2 border-t border-slate-200 pt-6">
             {levelLessons.map((lesson) => (
               <Link
                 key={lesson.lessonId}
                 href={`/vocabulary/${levelName}/${lesson.lessonId}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  void goToLesson(lesson.lessonId);
+                }}
                 className={`rounded-full border px-3 py-1 text-xs font-semibold transition ${lesson.lessonId === lessonId
                     ? "border-[#a71f48] bg-[#a71f48] text-white"
                     : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"

@@ -46,6 +46,14 @@ interface BookmarkItem {
   createdAt: string;
 }
 
+function getBookmarkTypeLabel(type: string) {
+  const normalized = (type || "").toLowerCase();
+  if (normalized === "lesson") return "Bài học";
+  if (normalized === "vocabulary" || normalized === "vocab") return "Từ vựng";
+  if (normalized === "grammar") return "Ngữ pháp";
+  return type || "Khác";
+}
+
 interface TestHistoryItem {
   testHistoryId: number;
   userId: number;
@@ -280,7 +288,7 @@ export default function ProfilePage() {
                               <div>
                                 <p className="text-sm font-bold text-jp-indigo">{item.itemName || `Item ${item.itemId}`}</p>
                                 <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-neutral-400">
-                                  {item.type} · {formatDate(item.createdAt)}
+                                  {getBookmarkTypeLabel(item.type)} · {formatDate(item.createdAt)}
                                 </p>
                               </div>
                               <BookMarked size={16} className="text-amber-500" />

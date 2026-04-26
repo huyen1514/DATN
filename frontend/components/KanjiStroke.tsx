@@ -150,13 +150,13 @@ export default function KanjiStroke({ character, size = 150 }: KanjiStrokeProps)
                     <span>Tự tập viết</span>
                 </button>
 
-                <button
+                {/* <button
                     onClick={handleReset}
                     className="flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-slate-500 shadow-sm transition hover:bg-slate-100 hover:text-slate-800"
                     title="Xóa để viết lại"
                 >
                     <RotateCcw size={16} />
-                </button>
+                </button> */}
             </div>
         </div>
     );

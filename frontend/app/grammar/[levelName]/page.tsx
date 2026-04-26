@@ -72,9 +72,11 @@ export default function GrammarLessonsPage() {
       }
       setGrammarCounts(counts);
 
-      const validLessons = (levelLessonsData as Lesson[]).filter(
-        (l) => isGrammarSkill(l.skillType)
-      );
+      // Lọc và SẮP XẾP bài học
+      const validLessons = (levelLessonsData as Lesson[])
+        .filter((l) => isGrammarSkill(l.skillType))
+        .sort((a, b) => a.lessonId - b.lessonId);
+
       setLessons(validLessons);
     } catch (e) {
       console.error(e);
@@ -88,7 +90,6 @@ export default function GrammarLessonsPage() {
     void loadData();
   }, [loadData]);
 
-  // Framer Motion Animation Variants
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -105,8 +106,6 @@ export default function GrammarLessonsPage() {
   return (
     <StudentLayout>
       <div className="relative min-h-screen font-sans text-neutral-900 selection:bg-[#c62828]/20 selection:text-[#c62828]">
-
-        {/* --- BACKGROUND IMAGE & OVERLAY --- */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1490806678567-2410b2da3073?auto=format&fit=crop&q=80&w=2000"
@@ -116,10 +115,7 @@ export default function GrammarLessonsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-[#f8f9fa]/95 to-[#f8f9fa] backdrop-blur-[2px]"></div>
         </div>
 
-        {/* --- MAIN CONTENT --- */}
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-20 pt-12">
-
-          {/* HEADER */}
           <motion.header
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -134,9 +130,7 @@ export default function GrammarLessonsPage() {
             <div className="w-20 h-[3px] bg-gradient-to-r from-transparent via-[#c62828] to-transparent mx-auto mt-6 rounded-full opacity-70"></div>
           </motion.header>
 
-          {/* STATES */}
           {isLoading ? (
-            /* SKELETON LOADING */
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div key={i} className="bg-white/80 backdrop-blur-sm border border-neutral-200/60 rounded-xl p-6 shadow-sm h-56 flex flex-col justify-between">
@@ -151,7 +145,6 @@ export default function GrammarLessonsPage() {
               ))}
             </div>
           ) : error ? (
-            /* ERROR STATE */
             <div className="text-center py-20 bg-white/80 backdrop-blur-md rounded-2xl border border-neutral-200 shadow-sm px-6 max-w-2xl mx-auto">
               <Zap size={48} className="mx-auto mb-4 text-[#c62828]" />
               <p className="text-neutral-600 font-medium text-lg">{error}</p>
@@ -160,7 +153,6 @@ export default function GrammarLessonsPage() {
               </button>
             </div>
           ) : lessons.length === 0 ? (
-            /* EMPTY STATE */
             <div className="py-24 rounded-2xl border border-neutral-200/60 bg-white/80 backdrop-blur-md text-center shadow-sm px-6 max-w-3xl mx-auto">
               <Bookmark size={56} className="mx-auto mb-4 text-neutral-300" strokeWidth={1.5} />
               <h3 className="mb-3 text-2xl font-bold text-neutral-800">Chưa có bài học nào</h3>
@@ -169,32 +161,36 @@ export default function GrammarLessonsPage() {
               </p>
             </div>
           ) : (
-            /* LESSONS GRID */
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
-              {lessons.map((lesson) => {
+              {lessons.map((lesson, index) => {
                 const grammarCount = grammarCounts[lesson.lessonId] || 0;
+
+                let displayName = `Bài ${index + 1}`;
+                if (lesson.lessonName) {
+                  const cleanName = lesson.lessonName.replace(/^(Bài|Lesson)\s*\d+[\s\-:]*/i, '').trim();
+                  if (cleanName) {
+                    displayName += ` - ${cleanName}`;
+                  }
+                }
+
                 return (
                   <motion.div key={lesson.lessonId} variants={itemVariants} className="h-full">
                     <div className="group relative bg-white/90 backdrop-blur-md border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-[0_12px_30px_rgb(198,40,40,0.12)] hover:border-[#c62828]/40 hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col overflow-hidden">
-
-                      {/* Decorative Watermark Kanji (文 - Bun: Ngữ pháp/Câu) */}
                       <div className="absolute -bottom-6 -right-4 text-8xl font-black text-neutral-100 opacity-60 group-hover:text-[#c62828]/5 transition-colors duration-500 pointer-events-none select-none font-serif">
                         文
                       </div>
 
-                      {/* Lesson Title */}
                       <div className="relative z-10 mb-6 flex items-start justify-between gap-4">
                         <h3 className="text-xl font-bold text-neutral-900 group-hover:text-[#c62828] transition-colors line-clamp-2">
-                          {lesson.lessonName || `Bài học ngữ pháp ${lesson.lessonId}`}
+                          {displayName}
                         </h3>
                       </div>
 
-                      {/* Key-Value Details */}
                       <div className="relative z-10 flex-grow space-y-3 mb-8">
                         <div className="flex items-center text-[15px]">
                           <div className="w-2 h-2 rounded-full bg-neutral-300 mr-3 group-hover:bg-[#c62828]/60 transition-colors"></div>
@@ -215,7 +211,6 @@ export default function GrammarLessonsPage() {
                         </div>
                       </div>
 
-                      {/* Action Button */}
                       <div className="relative z-10 mt-auto pt-2">
                         <Link
                           href={`/grammar/${levelName}/${lesson.lessonId}`}

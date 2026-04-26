@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState, useRef, useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { api, API_URL } from "@/lib/api";
 import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
@@ -59,6 +59,7 @@ const BACKEND_URL = API_URL.replace(/\/api$/, "");
 
 export default function ReadingDetailPage() {
   const params = useParams();
+  const router = useRouter();
   const levelName = params.levelName as string;
   const lessonId = Number(params.lessonId as string);
 
@@ -139,7 +140,7 @@ export default function ReadingDetailPage() {
     async (status: string, score: number | null = null) => {
       if (!userId) return;
       try {
-        await api("/progress/lesson", "PUT", {
+        await api("/progress/upsert", "POST", {
           userId,
           lessonId,
           partType: "Reading",
@@ -167,11 +168,7 @@ export default function ReadingDetailPage() {
     if (!userId) return;
     setBookmarkLoading(true);
     try {
-      if (isLessonBookmarked) {
-        await api("/bookmark", "DELETE", { userId, itemId: lessonId, type: "Lesson" });
-      } else {
-        await api("/bookmark", "POST", { userId, itemId: lessonId, type: "Lesson" });
-      }
+      await api("/bookmark", "POST", { userId, itemId: lessonId, type: "Lesson" });
       await loadBookmarks(userId);
     } catch (e) {
       console.error("Could not update lesson bookmark", e);
@@ -209,13 +206,12 @@ export default function ReadingDetailPage() {
     [sortedLessons, lessonId]
   );
 
-  const handleNextLesson = () => {
+  const handleNextLesson = async () => {
     const nextIndex = currentLessonIndex + 1;
     if (nextIndex < sortedLessons.length) {
-      // Mark as completed if moving to next lesson
-      updateStatus("Completed");
+      await updateStatus("Completed");
       const nextLesson = sortedLessons[nextIndex];
-      window.location.href = `/reading/${levelName}/${nextLesson.lessonId}`;
+      router.push(`/reading/${levelName}/${nextLesson.lessonId}`);
     }
   };
 
@@ -464,7 +460,7 @@ export default function ReadingDetailPage() {
             </button>
             {currentLessonIndex < sortedLessons.length - 1 && (
               <button
-                onClick={handleNextLesson}
+                onClick={() => void handleNextLesson()}
                 className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-jp-red to-rose-400 text-white border-none rounded-2xl font-bold text-[0.95rem] shadow-lg shadow-jp-red/20 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-jp-red/30"
               >
                 Bài tiếp theo
@@ -748,29 +744,6 @@ export default function ReadingDetailPage() {
           <div className="lg:col-span-1">
             <div className="sticky top-20 space-y-6">
               <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
-
-              <div className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm mt-6">
-                <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-5 pb-3 border-b border-black/5 flex items-center gap-2">
-                  <FileText size={14} className="text-jp-red" />
-                  {lessons.length} Bài Học
-                </h3>
-
-                <div className="grid grid-cols-5 lg:grid-cols-4 gap-2">
-                  {lessons.map((lesson, idx) => (
-                    <Link
-                      key={lesson.lessonId}
-                      href={`/reading/${levelName}/${lesson.lessonId}`}
-                      className={`aspect-square flex items-center justify-center rounded-xl text-xs font-bold transition-all duration-200 ${lesson.lessonId === lessonId
-                        ? "bg-gradient-to-br from-jp-red to-rose-400 text-white shadow-md scale-105"
-                        : "bg-jp-sakura/60 text-jp-indigo hover:bg-jp-red hover:text-white hover:scale-105"
-                        }`}
-                      title={lesson.lessonName}
-                    >
-                      {idx + 1}
-                    </Link>
-                  ))}
-                </div>
-              </div>
 
               {totalQuestions > 0 && (
                 <div className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm">

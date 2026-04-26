@@ -1,9 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState, useRef, useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { api } from "@/lib/api";
-import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
 import LessonProgressSidebar from "@/components/LessonProgressSidebar";
@@ -229,6 +228,7 @@ function ListeningCard({ item, idx }: { item: ListeningItem; idx: number }) {
 // MAIN PAGE COMPONENT
 export default function ListeningDetailPage() {
   const params = useParams();
+  const router = useRouter();
   const levelName = params.levelName as string;
   const lessonId = Number(params.lessonId as string);
 
@@ -285,7 +285,7 @@ export default function ListeningDetailPage() {
   const updateStatus = async (status: string, score: number | null = null) => {
     if (!userId) return;
     try {
-      await api("/progress/lesson", "PUT", {
+      await api("/progress/upsert", "POST", {
         userId,
         lessonId,
         partType: "Listening",
@@ -304,12 +304,12 @@ export default function ListeningDetailPage() {
     [sortedLessons, lessonId]
   );
 
-  const handleNextLesson = () => {
+  const handleNextLesson = async () => {
     const nextIndex = currentLessonIndex + 1;
     if (nextIndex < sortedLessons.length) {
-      updateStatus("Completed");
+      await updateStatus("Completed");
       const nextLesson = sortedLessons[nextIndex];
-      window.location.href = `/listening/${levelName}/${nextLesson.lessonId}`;
+      router.push(`/listening/${levelName}/${nextLesson.lessonId}`);
     }
   };
 
@@ -353,36 +353,11 @@ export default function ListeningDetailPage() {
           <div className="lg:col-span-1">
             <div className="sticky top-20 space-y-6">
               <LessonProgressSidebar lessonId={lessonId} userId={userId} levelName={levelName} />
-
               <div className="bg-white rounded-2xl border-2 border-jp-red/10 p-6 shadow-sm">
-                <h3 className="text-sm font-bold text-jp-indigo uppercase tracking-widest mb-6 pb-3 border-b-2 border-jp-red/20">
-                  📚 {lessons.length} Bài Học
-                </h3>
-
-              {/* LESSON GRID */}
-              <div className="grid grid-cols-5 lg:grid-cols-4 gap-2">
-                {sortedLessons.map((lesson, idx) => (
-                  <Link
-                    key={lesson.lessonId}
-                    href={`/listening/${levelName}/${lesson.lessonId}`}
-                    className={`aspect-square flex items-center justify-center rounded-lg text-xs font-bold transition ${lesson.lessonId === lessonId
-                        ? "bg-jp-red text-white shadow-md scale-105"
-                        : "bg-jp-sakura text-jp-indigo hover:bg-jp-red hover:text-white"
-                      }`}
-                    title={lesson.lessonName}
-                  >
-                    {idx + 1}
-                  </Link>
-                ))}
-              </div>
-
-              {/* INFO CARD */}
-              <div className="mt-8 pt-6 border-t-2 border-jp-red/10">
                 <p className="text-xs text-jp-ink/60 font-medium mb-2">💡 Mẹo:</p>
                 <p className="text-xs text-jp-ink/70 leading-relaxed">
                   Nghe nhiều lần để quen với độ dài âm tiếng Nhật, chú ý các chi tiết nhỏ.
                 </p>
-              </div>
               </div>
             </div>
 
@@ -390,7 +365,7 @@ export default function ListeningDetailPage() {
             <div className="mt-8 flex justify-center">
               {currentLessonIndex < sortedLessons.length - 1 && (
                 <button
-                  onClick={handleNextLesson}
+                  onClick={() => void handleNextLesson()}
                   className="flex items-center gap-2 px-8 py-3 bg-[#a71f48] hover:bg-[#8e1a3d] text-white rounded-xl font-bold transition-all shadow-lg shadow-rose-200"
                 >
                   Bài học tiếp theo <ChevronRight size={20} />

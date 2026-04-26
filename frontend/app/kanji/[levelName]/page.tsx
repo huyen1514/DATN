@@ -57,7 +57,7 @@ export default function KanjiLessonsPage() {
         setKanjiCounts(counts);
 
         const validLessons = levelLessons.filter((l: any) =>
-          (l.skillType === "Kanji" || l.skillType === "Tự do" || !l.skillType) &&
+          (l.skillType === "Hán tự" || l.skillType === "Kanji" || l.skillType === "Tự do" || !l.skillType) &&
           counts[l.lessonId] && counts[l.lessonId] > 0
         );
         setLessons(validLessons);

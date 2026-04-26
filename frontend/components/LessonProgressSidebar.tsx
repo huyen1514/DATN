@@ -20,7 +20,7 @@ interface ProgressResponse {
 
 interface Props {
   lessonId: number;
-  userId: number;
+  userId: number; // Mặc định nhận từ prop nhưng sẽ kiểm tra thêm localStorage
   levelName: string;
 }
 
@@ -36,6 +36,24 @@ export default function LessonProgressSidebar({ lessonId, userId, levelName }: P
   // Đổi state từ progress -> parts cho chuẩn logic
   const [parts, setParts] = useState<LessonPart[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeUserId, setActiveUserId] = useState<number>(userId);
+
+  useEffect(() => {
+    // Bọc lính gác JSON cho localStorage
+    if (typeof window !== "undefined") {
+      try {
+        const userStr = localStorage.getItem("user");
+        if (userStr && userStr !== "undefined" && userStr !== "null") {
+          const parsedUser = JSON.parse(userStr);
+          if (parsedUser && parsedUser.userId) {
+            setActiveUserId(parsedUser.userId);
+          }
+        }
+      } catch (err) {
+        console.error("Lỗi khi parse dữ liệu user từ localStorage:", err);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     fetchProgress();
@@ -43,11 +61,17 @@ export default function LessonProgressSidebar({ lessonId, userId, levelName }: P
     // Thêm Interval: Tự động tải lại mỗi 2 giây để đồng bộ dấu tick khi bấm "Đã thuộc bài"
     const interval = setInterval(fetchProgress, 2000);
     return () => clearInterval(interval);
-  }, [lessonId, userId]);
+  }, [lessonId, activeUserId]);
 
   const fetchProgress = async () => {
+    // Chặn gọi API rác: Nếu userId <= 0 thì không gọi API
+    if (!activeUserId || activeUserId <= 0) {
+      setLoading(false);
+      return;
+    }
+
     try {
-      const res = await fetch(`${API_URL}/progress/lesson/${lessonId}/user/${userId}`);
+      const res = await fetch(`${API_URL}/progress/lesson/${lessonId}/user/${activeUserId}`);
       if (res.ok) {
         const data: ProgressResponse = await res.json();
         // Lấy mảng parts từ response

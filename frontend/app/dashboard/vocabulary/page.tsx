@@ -1,11 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { uploadAudio, api } from "@/lib/api";
 import AdminLayout from "@/components/AdminLayout";
 import { BookA, Plus, Edit2, Trash2, Search, X, Upload, AudioLines } from "lucide-react";
 
-interface Lesson { lessonId: number; lessonName: string; level?: { levelName: string }; skillType?: string; }
+interface Level { levelId: number; levelName: string; }
+interface Lesson { 
+  lessonId: number; 
+  lessonName: string; 
+  levelId: number; 
+  level?: Level; 
+  skillType?: string; 
+}
 interface Vocabulary {
   vocabularyId: number;
   word: string;
@@ -21,9 +28,12 @@ interface Vocabulary {
 export default function AdminVocabulary() {
   const [vocabs, setVocabs] = useState<Vocabulary[]>([]);
   const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [levels, setLevels] = useState<Level[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  
   const [search, setSearch] = useState("");
-  const [filterLesson, setFilterLesson] = useState<number | "all">("all");
+  const [filterLevel, setFilterLevel] = useState<string>("all");
+  const [filterLesson, setFilterLesson] = useState<string>("all");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState<"create" | "edit">("create");
@@ -37,12 +47,22 @@ export default function AdminVocabulary() {
 
   const loadData = async () => {
     try {
-      const [vData, lData] = await Promise.all([api("/vocabularies"), api("/lessons")]);
+      const [vData, lData, lvData] = await Promise.all([
+        api("/vocabularies"), 
+        api("/lessons"),
+        api("/levels")
+      ]);
       if (Array.isArray(vData)) setVocabs(vData);
       if (Array.isArray(lData)) setLessons(lData);
+      if (Array.isArray(lvData)) setLevels(lvData);
     } catch (e) { console.error(e); }
     finally { setIsLoading(false); }
   };
+
+  const availableLessons = useMemo(() => {
+    if (filterLevel === "all") return lessons;
+    return lessons.filter(l => String(l.levelId) === filterLevel);
+  }, [lessons, filterLevel]);
 
   const openCreate = () => {
     setModalMode("create");
@@ -59,12 +79,14 @@ export default function AdminVocabulary() {
   };
 
   const handleSave = async () => {
-    if (!form.word.trim() || !form.meaning.trim()) { setError("Vui lòng nhập đầy đủ"); return; }
+    if (!form.word.trim() || !form.meaning.trim() || form.lessonId === 0) { 
+      setError("Vui lòng nhập đầy đủ thông tin và chọn Bài học"); 
+      return; 
+    }
     setIsSaving(true); setError("");
     try {
       let finalAudioUrl = form.audioUrl;
       
-      // Nếu có chọn file mới thì upload trước
       if (selectedFile) {
         try {
           const uploadRes = await uploadAudio(selectedFile);
@@ -90,9 +112,18 @@ export default function AdminVocabulary() {
   };
 
   const filtered = vocabs.filter(v => {
-    const matchSearch = v.word.toLowerCase().includes(search.toLowerCase()) || v.meaning.toLowerCase().includes(search.toLowerCase()) || v.reading.includes(search);
-    const matchLesson = filterLesson === "all" || v.lessonId === filterLesson;
-    return matchSearch && matchLesson;
+    const s = search.toLowerCase().trim();
+    const matchSearch = !s || 
+                        v.word.toLowerCase().includes(s) || 
+                        v.meaning.toLowerCase().includes(s) || 
+                        v.reading.toLowerCase().includes(s);
+    
+    const matchLesson = filterLesson === "all" || String(v.lessonId) === filterLesson;
+    
+    const lessonOfVocab = lessons.find(l => String(l.lessonId) === String(v.lessonId));
+    const matchLevel = filterLevel === "all" || String(lessonOfVocab?.levelId) === filterLevel;
+
+    return matchSearch && matchLesson && matchLevel;
   });
 
   return (
@@ -103,23 +134,44 @@ export default function AdminVocabulary() {
             <h1 className="text-2xl font-bold text-jp-indigo flex items-center gap-2">
               <BookA size={24} className="text-emerald-600" /> Quản Lý Từ Vựng
             </h1>
-            <p className="text-neutral-500 text-sm mt-1">Quản lý từ vựng theo bài học</p>
+            <p className="text-neutral-500 text-sm mt-1">Quản lý từ vựng theo bài học và cấp độ</p>
           </div>
           <button onClick={openCreate} className="flex items-center gap-2 px-5 py-2.5 bg-jp-indigo text-white rounded-xl text-sm font-bold hover:bg-jp-red transition-colors shadow-lg">
             <Plus size={16} /> Thêm từ vựng
           </button>
         </div>
 
-        <div className="flex gap-3 mb-6">
-          <div className="relative flex-1">
+        {/* BỘ LỌC VÀ TÌM KIẾM */}
+        <div className="flex flex-wrap gap-3 mb-6">
+          <div className="relative flex-1 min-w-[200px]">
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" />
-            <input type="text" placeholder="Tìm từ vựng..." value={search} onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white border border-black/10 rounded-xl text-sm" />
+            <input type="text" placeholder="Tìm kiếm từ vựng..." value={search} onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 bg-white border border-black/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo text-sm" />
           </div>
-          <select value={filterLesson} onChange={(e) => setFilterLesson(e.target.value === "all" ? "all" : parseInt(e.target.value))}
-            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm min-w-[200px]">
+
+          <select 
+            value={filterLevel} 
+            onChange={(e) => {
+              setFilterLevel(e.target.value);
+              setFilterLesson("all"); 
+            }}
+            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[160px] cursor-pointer"
+          >
+            <option value="all">Tất cả cấp độ</option>
+            {levels.map(l => <option key={l.levelId} value={String(l.levelId)}>{l.levelName}</option>)}
+          </select>
+
+          <select 
+            value={filterLesson} 
+            onChange={(e) => setFilterLesson(e.target.value)}
+            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[200px] cursor-pointer"
+          >
             <option value="all">Tất cả bài học</option>
-            {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.level ? `(${l.level.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
+            {availableLessons.map(l => (
+              <option key={l.lessonId} value={String(l.lessonId)}>
+                {l.lessonName}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -134,7 +186,7 @@ export default function AdminVocabulary() {
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Cách đọc</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Nghĩa</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Loại từ</th>
-                  <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Bài học</th>
+                  {/* Cột Bài học đã bị xóa ở đây */}
                   <th className="text-right px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Thao tác</th>
                 </tr>
               </thead>
@@ -145,7 +197,7 @@ export default function AdminVocabulary() {
                     <td className="px-6 py-4 text-sm text-jp-red">{v.reading}</td>
                     <td className="px-6 py-4 text-sm text-neutral-600 max-w-[200px] truncate">{v.meaning}</td>
                     <td className="px-6 py-4 text-xs text-neutral-500">{v.partOfSpeech || "—"}</td>
-                    <td className="px-6 py-4"><span className="text-xs font-bold bg-blue-50 text-blue-600 px-3 py-1 rounded-full">{v.lesson?.lessonName || `Bài ${v.lessonId}`}</span></td>
+                    {/* Dữ liệu cột Bài học đã bị xóa ở đây */}
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
                         <button onClick={() => openEdit(v)} className="p-2 text-neutral-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg"><Edit2 size={16} /></button>
@@ -197,7 +249,7 @@ export default function AdminVocabulary() {
                   <select value={form.lessonId} onChange={(e) => setForm({...form, lessonId: parseInt(e.target.value)})}
                     className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm">
                     <option value={0}>-- Chọn --</option>
-                    {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.level ? `(${l.level.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
+                    {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.level ? `(${l.level.levelName})` : ''}</option>)}
                   </select>
                 </div>
               </div>
