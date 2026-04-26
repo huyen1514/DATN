@@ -28,6 +28,16 @@ namespace Repositories
             return await _context.Vocabularies.AnyAsync(x => x.VocabularyId == vocabularyId);
         }
 
+        public async Task<bool> GrammarExistsAsync(int grammarId)
+        {
+            return await _context.Grammars.AnyAsync(x => x.GrammarId == grammarId);
+        }
+
+        public async Task<bool> KanjiExistsAsync(int kanjiId)
+        {
+            return await _context.Kanjis.AnyAsync(x => x.KanjiId == kanjiId);
+        }
+
         public async Task<string?> GetLessonNameAsync(int lessonId)
         {
             return await _context.Lessons
@@ -41,6 +51,22 @@ namespace Repositories
             return await _context.Vocabularies
                 .Where(x => x.VocabularyId == vocabularyId)
                 .Select(x => x.Word)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<string?> GetGrammarNameAsync(int grammarId)
+        {
+            return await _context.Grammars
+                .Where(x => x.GrammarId == grammarId)
+                .Select(x => x.GrammarName)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<string?> GetKanjiNameAsync(int kanjiId)
+        {
+            return await _context.Kanjis
+                .Where(x => x.KanjiId == kanjiId)
+                .Select(x => x.Character)
                 .FirstOrDefaultAsync();
         }
 
@@ -59,6 +85,22 @@ namespace Repositories
                 .AsNoTracking()
                 .Where(x => vocabularyIds.Contains(x.VocabularyId))
                 .ToDictionaryAsync(x => x.VocabularyId, x => x.Word);
+        }
+
+        public async Task<Dictionary<int, string>> GetGrammarNamesAsync(IEnumerable<int> grammarIds)
+        {
+            return await _context.Grammars
+                .AsNoTracking()
+                .Where(x => grammarIds.Contains(x.GrammarId))
+                .ToDictionaryAsync(x => x.GrammarId, x => x.GrammarName);
+        }
+
+        public async Task<Dictionary<int, string>> GetKanjiNamesAsync(IEnumerable<int> kanjiIds)
+        {
+            return await _context.Kanjis
+                .AsNoTracking()
+                .Where(x => kanjiIds.Contains(x.KanjiId))
+                .ToDictionaryAsync(x => x.KanjiId, x => x.Character);
         }
 
         public async Task<Bookmark?> GetByKeyAsync(int userId, int itemId, string type)

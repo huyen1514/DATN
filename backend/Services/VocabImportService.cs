@@ -68,19 +68,26 @@ namespace Services // Đảm bảo namespace này khớp với thư mục Servic
                     return;
                 }
 
+                // Tối ưu hóa N+1: Lấy trước tất cả từ vựng có thể trùng lặp
+                var words = vocabList.Select(v => v.Word).Distinct().ToList();
+                var existingVocabs = await _context.Vocabularies
+                    .Where(v => words.Contains(v.Word))
+                    .ToListAsync();
+
                 foreach (var item in vocabList)
                 {
                     // Gán tự động LessonId lấy từ DB
                     item.LessonId = targetLesson.LessonId;
 
-                    // 4. KIỂM TRA TRÙNG LẶP: Dựa trên Word và Reading
-                    var existingVocab = await _context.Vocabularies
-                        .FirstOrDefaultAsync(v => v.Word == item.Word && v.Reading == item.Reading);
+                    // 4. KIỂM TRA TRÙNG LẶP: Dựa trên Word và Reading từ bộ nhớ cache
+                    var existingVocab = existingVocabs
+                        .FirstOrDefault(v => v.Word == item.Word && v.Reading == item.Reading);
 
                     if (existingVocab == null)
                     {
                         // Thêm mới nếu chưa có
                         _context.Vocabularies.Add(item);
+                        existingVocabs.Add(item); // Cập nhật local list để tránh thêm trùng nếu có từ lặp trong file
                     }
                     else
                     {

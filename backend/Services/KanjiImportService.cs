@@ -73,28 +73,36 @@ namespace Services
             int imported = 0;
             int skipped = 0;
 
+            // Tối ưu hóa N+1: Lấy trước tất cả kanji có thể trùng lặp
+            var characters = kanjiList.Select(k => k.Character).Distinct().ToList();
+            var existingKanjis = await _context.Kanjis
+                .Where(k => characters.Contains(k.Character))
+                .ToListAsync();
+
             foreach (var kanji in kanjiList)
             {
                 kanji.LessonId = targetLesson.LessonId;
 
-                // Kiểm tra xem chữ Hán này đã tồn tại trong Lesson này chưa
-                var existingKanji = await _context.Kanjis
-                    .FirstOrDefaultAsync(k => k.Character == kanji.Character && k.LessonId == kanji.LessonId);
+                // Kiểm tra xem chữ Hán này đã tồn tại chưa (chỉ theo Character, không phụ thuộc LessonId)
+                var existingKanji = existingKanjis
+                    .FirstOrDefault(k => k.Character == kanji.Character);
 
                 if (existingKanji == null)
                 {
                     // Thêm mới nếu chưa có
                     kanji.CreatedAt = DateTime.UtcNow;
                     _context.Kanjis.Add(kanji);
+                    existingKanjis.Add(kanji);
                     imported++;
                 }
                 else
                 {
-                    // Cập nhật thông tin nếu đã tồn tại
+                    // Cập nhật thông tin nếu đã tồn tại (bao gồm cả LessonId)
                     existingKanji.Meaning = kanji.Meaning ?? existingKanji.Meaning;
                     existingKanji.Onyomi = kanji.Onyomi ?? existingKanji.Onyomi;
                     existingKanji.Kunyomi = kanji.Kunyomi ?? existingKanji.Kunyomi;
                     existingKanji.Example = kanji.Example ?? existingKanji.Example;
+                    existingKanji.LessonId = kanji.LessonId;
                     skipped++;
                 }
             }

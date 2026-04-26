@@ -5,7 +5,7 @@
         "Onyomi": "ケン",
         "Kunyomi": "と.ぐ",
         "Example": "<ruby>研究<rt>けんきゅう</rt></ruby>: Nghiên cứu; <ruby>研究所<rt>けんきゅうじょ</rt></ruby>: Viện nghiên cứu; <ruby>研<rt>と</rt></ruby>ぐ: Mài/Vo (gạo)",
-        "LessonId": 121
+        "LessonId": 1022
     },
     {
         "Character": "究",
@@ -13,7 +13,7 @@
         "Onyomi": "キュウ",
         "Kunyomi": "きわ.める",
         "Example": "<ruby>研究<rt>けんきゅう</rt></ruby>: Nghiên cứu; <ruby>究<rt>きわ</rt></ruby>める: Tìm hiểu thấu đáo; <ruby>探究<rt>たんきゅう</rt></ruby>: Thăm dò/Nghiên cứu",
-        "LessonId": 121
+        "LessonId": 1022
     },
     {
         "Character": "留",
@@ -21,7 +21,7 @@
         "Onyomi": "リュウ, ル",
         "Kunyomi": "と.まる, と.める",
         "Example": "<ruby>留学生<rt>りゅうがくせい</rt></ruby>: Du học sinh; <ruby>留学<rt>りゅうがく</rt></ruby>する: Đi du học; <ruby>留守<rt>るす</rt></ruby>: Vắng nhà",
-        "LessonId": 121
+        "LessonId": 1022
     },
     {
         "Character": "質",
@@ -29,7 +29,7 @@
         "Onyomi": "シツ, シチ",
         "Kunyomi": "",
         "Example": "<ruby>質問<rt>しつもん</rt></ruby>: Câu hỏi; <ruby>質<rt>しつ</rt></ruby>: Chất lượng; <ruby>性質<rt>せいしつ</rt></ruby>: Tính chất",
-        "LessonId": 121
+        "LessonId": 1022
     },
     {
         "Character": "問",
@@ -37,7 +37,7 @@
         "Onyomi": "モン",
         "Kunyomi": "と.う, と.い",
         "Example": "<ruby>質問<rt>しつもん</rt></ruby>: Câu hỏi; <ruby>問題<rt>もんだい</rt></ruby>: Vấn đề; <ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせ: Địa chỉ liên hệ",
-        "LessonId": 121
+        "LessonId": 1022
     },
     {
         "Character": "題",
@@ -45,7 +45,7 @@
         "Onyomi": "ダイ",
         "Kunyomi": "",
         "Example": "<ruby>問題<rt>もんだい</rt></ruby>: Vấn đề; <ruby>宿題<rt>しゅくだい</rt></ruby>: Bài tập về nhà; <ruby>話題<rt>わだい</rt></ruby>: Chủ đề",
-        "LessonId": 121
+        "LessonId": 1022
     },
     {
         "Character": "答",
@@ -53,7 +53,7 @@
         "Onyomi": "トウ",
         "Kunyomi": "こた.える, こた.え",
         "Example": "<ruby>答<rt>こた</rt></ruby>える: Trả lời; <ruby>解答<rt>かいとう</rt></ruby>: Giải đáp; <ruby>回答<rt>かいとう</rt></ruby>: Hồi đáp",
-        "LessonId": 121
+        "LessonId": 1022
     },
     {
         "Character": "宿",
@@ -61,6 +61,6 @@
         "Onyomi": "シュク",
         "Kunyomi": "やど, やど.る, やど.す",
         "Example": "<ruby>宿題<rt>しゅくだい</rt></ruby>: Bài tập về nhà; <ruby>宿泊<rt>しゅくはく</rt></ruby>する: Trọ lại; <ruby>下宿<rt>げしゅく</rt></ruby>: Nhà trọ",
-        "LessonId": 121
+        "LessonId": 1022
     }
 ]

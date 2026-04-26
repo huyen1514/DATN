@@ -5,7 +5,7 @@
         "Onyomi": "サン, ザン",
         "Kunyomi": "やま",
         "Example": "富士山 (ふじさん): Núi Phú Sĩ; 山道 (やまみち): Đường núi",
-        "LessonId": 104
+        "LessonId": 1005
     },
     {
         "Character": "川",
@@ -13,7 +13,7 @@
         "Onyomi": "セン",
         "Kunyomi": "かわ",
         "Example": "小川 (おがわ): Con suối; ナイル川 (ないるがわ): Sông Nile",
-        "LessonId": 104
+        "LessonId": 1005
     },
     {
         "Character": "田",
@@ -21,7 +21,7 @@
         "Onyomi": "デン",
         "Kunyomi": "た, だ",
         "Example": "田んぼ (たんぼ): Ruộng lúa; 山田さん (やまださん): Anh/chị Yamada",
-        "LessonId": 104
+        "LessonId": 1005
     },
     {
         "Character": "天",
@@ -29,7 +29,7 @@
         "Onyomi": "テン",
         "Kunyomi": "あめ, あま",
         "Example": "天気 (てんき): Thời tiết; 天国 (てんごく): Thiên đường",
-        "LessonId": 104
+        "LessonId": 1005
     },
     {
         "Character": "気",
@@ -37,7 +37,7 @@
         "Onyomi": "キ, ケ",
         "Kunyomi": "",
         "Example": "元気 (げんき): Khỏe mạnh; 電気 (でんき): Điện",
-        "LessonId": 104
+        "LessonId": 1005
     },
     {
         "Character": "雨",
@@ -45,6 +45,6 @@
         "Onyomi": "ウ",
         "Kunyomi": "あめ, -さめ",
         "Example": "大雨 (おおあめ): Mưa lớn; 雨天 (うてん): Trời mưa",
-        "LessonId": 104
+        "LessonId": 1005
     }
 ]

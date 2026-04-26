@@ -1,11 +1,11 @@
-[
+﻿[
     {
         "Character": "月",
         "Meaning": "Mặt trăng / Tháng (Nguyệt)",
         "Onyomi": "ゲツ, ガツ",
         "Kunyomi": "つき",
         "Example": "月曜日 (げつようび): Thứ hai; 今月 (こんげつ): Tháng này",
-        "LessonId": 102
+        "LessonId": 1003
     },
     {
         "Character": "火",
@@ -13,7 +13,7 @@
         "Onyomi": "カ",
         "Kunyomi": "ひ, ほ",
         "Example": "火曜日 (かようび): Thứ ba; 火 (ひ): Lửa",
-        "LessonId": 102
+        "LessonId": 1003
     },
     {
         "Character": "水",
@@ -21,7 +21,7 @@
         "Onyomi": "スイ",
         "Kunyomi": "みず",
         "Example": "水曜日 (すいようび): Thứ tư; 水 (みず): Nước",
-        "LessonId": 102
+        "LessonId": 1003
     },
     {
         "Character": "木",
@@ -29,7 +29,7 @@
         "Onyomi": "モク, ボク",
         "Kunyomi": "き",
         "Example": "木曜日 (もくようび): Thứ năm; 木 (き): Cây",
-        "LessonId": 102
+        "LessonId": 1003
     },
     {
         "Character": "金",
@@ -37,7 +37,7 @@
         "Onyomi": "キン, コン",
         "Kunyomi": "かね, かな",
         "Example": "金曜日 (きんようび): Thứ sáu; お金 (おかね): Tiền",
-        "LessonId": 102
+        "LessonId": 1003
     },
     {
         "Character": "土",
@@ -45,7 +45,7 @@
         "Onyomi": "ド, ト",
         "Kunyomi": "つち",
         "Example": "土曜日 (どようび): Thứ bảy; 土 (つち): Đất",
-        "LessonId": 102
+        "LessonId": 1003
     },
     {
         "Character": "日",
@@ -53,7 +53,7 @@
         "Onyomi": "ニチ, ジツ",
         "Kunyomi": "ひ, -び, -か",
         "Example": "日曜日 (にちようび): Chủ nhật; 日本 (にほん): Nhật Bản",
-        "LessonId": 102
+        "LessonId": 1003
     },
     {
         "Character": "年",
@@ -61,6 +61,6 @@
         "Onyomi": "ネン",
         "Kunyomi": "とし",
         "Example": "2026年 (にせんにじゅうろくねん): Năm 2026; 去年 (きょねん): Năm ngoái",
-        "LessonId": 102
+        "LessonId": 1003
     }
 ]

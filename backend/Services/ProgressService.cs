@@ -76,7 +76,16 @@ namespace Services
         public async Task<UserProgressResponse> GetLessonProgressDetailAsync(int lessonId, int userId)
         {
             var progress = await _progressRepository.GetUserProgressWithPartsAsync(userId, lessonId);
-            if (progress == null) throw new KeyNotFoundException("Progress not found for this lesson.");
+            if (progress == null)
+            {
+                // Trả về một response rỗng thay vì ném lỗi 404, vì user chưa bắt đầu bài học là chuyện bình thường
+                return new UserProgressResponse
+                {
+                    UserId = userId,
+                    LessonId = lessonId,
+                    Parts = new List<LessonPartDto>()
+                };
+            }
             
             return MapToResponse(progress);
         }

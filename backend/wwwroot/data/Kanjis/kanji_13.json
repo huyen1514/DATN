@@ -5,7 +5,7 @@
         "Onyomi": "チョウ",
         "Kunyomi": "まち",
         "Example": "町 (まち): Khu phố/Thị trấn; 町長 (ちょうちょう): Thị trưởng; 下町 (したまち): Khu phố cổ",
-        "LessonId": 113
+        "LessonId": 1014
     },
     {
         "Character": "寺",
@@ -13,7 +13,7 @@
         "Onyomi": "ジ",
         "Kunyomi": "てら",
         "Example": "お寺 (おてら): Chùa; 本願寺 (ほんがんじ): Chùa Honganji",
-        "LessonId": 113
+        "LessonId": 1014
     },
     {
         "Character": "電",
@@ -21,7 +21,7 @@
         "Onyomi": "デン",
         "Kunyomi": "",
         "Example": "電車 (でんしゃ): Tàu điện; 電話 (でんわ): Điện thoại; 電気 (でんき): Điện/Đèn điện",
-        "LessonId": 113
+        "LessonId": 1014
     },
     {
         "Character": "車",
@@ -29,7 +29,7 @@
         "Onyomi": "シャ",
         "Kunyomi": "くるま",
         "Example": "車 (くるま): Xe hơi; 電車 (でんしゃ): Tàu điện; 自動車 (じどうしゃ): Ô tô",
-        "LessonId": 113
+        "LessonId": 1014
     },
     {
         "Character": "東",
@@ -37,7 +37,7 @@
         "Onyomi": "トウ",
         "Kunyomi": "ひがし",
         "Example": "東 (ひがし): Phía Đông; 東京 (とうきょう): Tokyo; 東口 (ひがしぐち): Cửa Đông",
-        "LessonId": 113
+        "LessonId": 1014
     },
     {
         "Character": "西",
@@ -45,7 +45,7 @@
         "Onyomi": "セイ, サイ",
         "Kunyomi": "にし",
         "Example": "西 (にし): Phía Tây; 西口 (にしぐち): Cửa Tây; 関西 (かんさい): Vùng Kansai",
-        "LessonId": 113
+        "LessonId": 1014
     },
     {
         "Character": "南",
@@ -53,7 +53,7 @@
         "Onyomi": "ナン",
         "Kunyomi": "みなみ",
         "Example": "南 (みなみ): Phía Nam; 南口 (みなみぐち): Cửa Nam; 東南アジア (とうなんアジア): Đông Nam Á",
-        "LessonId": 113
+        "LessonId": 1014
     },
     {
         "Character": "北",
@@ -61,6 +61,6 @@
         "Onyomi": "ホク, ホッ-",
         "Kunyomi": "きた",
         "Example": "北 (きた): Phía Bắc; 北口 (きたぐち): Cửa Bắc; 北海道 (ほっかいどう): Hokkaido",
-        "LessonId": 113
+        "LessonId": 1014
     }
 ]

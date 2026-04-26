@@ -8,6 +8,8 @@ namespace Services
     {
         private const string LessonType = "Lesson";
         private const string VocabularyType = "Vocabulary";
+        private const string GrammarType = "Grammar";
+        private const string KanjiType = "Kanji";
 
         private readonly IBookmarkRepository _bookmarkRepository;
 
@@ -71,9 +73,13 @@ namespace Services
 
             var lessonIds = bookmarks.Where(b => b.Type == LessonType).Select(b => b.ItemId).Distinct().ToList();
             var vocabIds = bookmarks.Where(b => b.Type == VocabularyType).Select(b => b.ItemId).Distinct().ToList();
+            var grammarIds = bookmarks.Where(b => b.Type == GrammarType).Select(b => b.ItemId).Distinct().ToList();
+            var kanjiIds = bookmarks.Where(b => b.Type == KanjiType).Select(b => b.ItemId).Distinct().ToList();
 
             var lessonNames = lessonIds.Any() ? await _bookmarkRepository.GetLessonNamesAsync(lessonIds) : new Dictionary<int, string>();
             var vocabNames = vocabIds.Any() ? await _bookmarkRepository.GetVocabularyNamesAsync(vocabIds) : new Dictionary<int, string>();
+            var grammarNames = grammarIds.Any() ? await _bookmarkRepository.GetGrammarNamesAsync(grammarIds) : new Dictionary<int, string>();
+            var kanjiNames = kanjiIds.Any() ? await _bookmarkRepository.GetKanjiNamesAsync(kanjiIds) : new Dictionary<int, string>();
 
             return bookmarks.Select(bookmark => new BookmarkResponse
             {
@@ -81,9 +87,14 @@ namespace Services
                 UserId = bookmark.UserId,
                 ItemId = bookmark.ItemId,
                 Type = bookmark.Type,
-                ItemName = bookmark.Type == LessonType 
-                            ? lessonNames.GetValueOrDefault(bookmark.ItemId, string.Empty) 
-                            : vocabNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                ItemName = bookmark.Type switch
+                {
+                    LessonType => lessonNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                    VocabularyType => vocabNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                    GrammarType => grammarNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                    KanjiType => kanjiNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                    _ => string.Empty
+                },
                 CreatedAt = bookmark.CreatedAt
             }).ToList();
         }
@@ -94,6 +105,8 @@ namespace Services
             {
                 LessonType => await _bookmarkRepository.LessonExistsAsync(itemId),
                 VocabularyType => await _bookmarkRepository.VocabularyExistsAsync(itemId),
+                GrammarType => await _bookmarkRepository.GrammarExistsAsync(itemId),
+                KanjiType => await _bookmarkRepository.KanjiExistsAsync(itemId),
                 _ => false
             };
 
@@ -110,7 +123,13 @@ namespace Services
                 || string.Equals(type, "Vocab", StringComparison.OrdinalIgnoreCase))
                 return VocabularyType;
 
-            throw new ArgumentException("Type must be Lesson or Vocabulary.");
+            if (string.Equals(type, GrammarType, StringComparison.OrdinalIgnoreCase))
+                return GrammarType;
+
+            if (string.Equals(type, KanjiType, StringComparison.OrdinalIgnoreCase))
+                return KanjiType;
+
+            throw new ArgumentException("Type must be Lesson, Vocabulary, Grammar, or Kanji.");
         }
     }
 }

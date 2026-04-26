@@ -5,7 +5,7 @@
         "Onyomi": "ガク",
         "Kunyomi": "まな.ぶ",
         "Example": "学校 (がっこう): Trường học; 大学 (だいがく): Đại học; 学生 (がくせい): Học sinh",
-        "LessonId": 106
+        "LessonId": 1007
     },
     {
         "Character": "校",
@@ -13,7 +13,7 @@
         "Onyomi": "コウ",
         "Kunyomi": "",
         "Example": "学校 (がっこう): Trường học; 校長 (こうちょう): Hiệu trưởng; 高校 (こうこう): Trường cấp 3",
-        "LessonId": 106
+        "LessonId": 1007
     },
     {
         "Character": "先",
@@ -21,7 +21,7 @@
         "Onyomi": "セン",
         "Kunyomi": "さき",
         "Example": "先生 (せんせい): Giáo viên; 先月 (せんげつ): Tháng trước; お先に (おさきに): Xin phép về trước",
-        "LessonId": 106
+        "LessonId": 1007
     },
     {
         "Character": "生",
@@ -29,7 +29,7 @@
         "Onyomi": "セイ, ショウ",
         "Kunyomi": "い.きる, う.まれる, なま",
         "Example": "先生 (せんせい): Giáo viên; 誕生日 (たんじょうび): Ngày sinh nhật; 生ビール (なまビール): Bia tươi",
-        "LessonId": 106
+        "LessonId": 1007
     },
     {
         "Character": "名",
@@ -37,7 +37,7 @@
         "Onyomi": "メイ, ミョウ",
         "Kunyomi": "な",
         "Example": "名前 (なまえ): Tên; 有名 (ゆうめい): Nổi tiếng; 名字 (みょうじ): Họ",
-        "LessonId": 106
+        "LessonId": 1007
     },
     {
         "Character": "字",
@@ -45,7 +45,7 @@
         "Onyomi": "ジ",
         "Kunyomi": "",
         "Example": "漢字 (かんじ): Chữ Hán; 文字 (もじ): Chữ cái/Văn tự; 習字 (しゅうじ): Luyện chữ",
-        "LessonId": 106
+        "LessonId": 1007
     },
     {
         "Character": "本",
@@ -53,7 +53,7 @@
         "Onyomi": "ホン",
         "Kunyomi": "もと",
         "Example": "本 (ほん): Sách; 日本 (にほん): Nhật Bản; 一本 (いっぽん): 1 cái (vật dài)",
-        "LessonId": 106
+        "LessonId": 1007
     },
     {
         "Character": "体",
@@ -61,6 +61,6 @@
         "Onyomi": "タイ",
         "Kunyomi": "からだ",
         "Example": "体 (からだ): Cơ thể; 体力 (たいりょく): Thể lực; 体育 (たいいく): Thể dục",
-        "LessonId": 106
+        "LessonId": 1007
     }
 ]

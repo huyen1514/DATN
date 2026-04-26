@@ -34,6 +34,7 @@ namespace Controllers
         public async Task<IActionResult> GetAll([FromQuery] int? lessonId)
         {
             var query = _context.Grammars
+                .AsNoTracking() // Tối ưu: Không theo dõi tracking
                 .Include(x => x.Lesson)
                 .AsQueryable();
 
@@ -51,6 +52,7 @@ namespace Controllers
         public async Task<IActionResult> GetCounts()
         {
             var counts = await _context.Grammars
+                .AsNoTracking() // Tối ưu
                 .GroupBy(g => g.LessonId)
                 .Select(g => new { LessonId = g.Key, Count = g.Count() })
                 .ToListAsync();
@@ -62,6 +64,7 @@ namespace Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var grammar = await _context.Grammars
+                .AsNoTracking() // Tối ưu
                 .Include(x => x.Lesson)
                 .FirstOrDefaultAsync(x => x.GrammarId == id);
 

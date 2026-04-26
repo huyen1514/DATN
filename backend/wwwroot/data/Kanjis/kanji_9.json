@@ -5,7 +5,7 @@
         "Onyomi": "リツ",
         "Kunyomi": "た.つ",
         "Example": "立つ (たつ): Đứng; 国立大学 (こくりつだいがく): Đại học quốc lập",
-        "LessonId": 109
+        "LessonId": 1010
     },
     {
         "Character": "休",
@@ -13,7 +13,7 @@
         "Onyomi": "キュウ",
         "Kunyomi": "やす.む",
         "Example": "休む (やすむ): Nghỉ ngơi; 休日 (きゅうじつ): Ngày nghỉ; 夏休み (なつやすみ): Nghỉ hè",
-        "LessonId": 109
+        "LessonId": 1010
     },
     {
         "Character": "見",
@@ -21,7 +21,7 @@
         "Onyomi": "ケン",
         "Kunyomi": "み.る, み.せる",
         "Example": "見る (みる): Nhìn/Xem; 見学 (けんがく): Tham quan học tập; 花見 (はなみ): Ngắm hoa",
-        "LessonId": 109
+        "LessonId": 1010
     },
     {
         "Character": "聞",
@@ -29,7 +29,7 @@
         "Onyomi": "ブン, モン",
         "Kunyomi": "き.く",
         "Example": "聞く (きく): Nghe; 新聞 (しんぶん): Tờ báo; 意見 (いけん): Ý kiến",
-        "LessonId": 109
+        "LessonId": 1010
     },
     {
         "Character": "行",
@@ -37,7 +37,7 @@
         "Onyomi": "コウ, ギョウ",
         "Kunyomi": "い.く, おこな.う",
         "Example": "行く (いく): Đi; 銀行 (ぎんこう): Ngân hàng; 旅行 (りょこう): Du lịch",
-        "LessonId": 109
+        "LessonId": 1010
     },
     {
         "Character": "来",
@@ -45,7 +45,7 @@
         "Onyomi": "ライ",
         "Kunyomi": "く.る, き.ます, こ.ない",
         "Example": "来る (くる): Đến; 来年 (らいねん): Năm sau; 来日 (らいにち): Đến Nhật Bản",
-        "LessonId": 109
+        "LessonId": 1010
     },
     {
         "Character": "帰",
@@ -53,6 +53,6 @@
         "Onyomi": "キ",
         "Kunyomi": "かえ.る, かえ.り",
         "Example": "帰る (かえる): Về; 帰国 (きこく): Về nước; 帰宅 (きたく): Về nhà",
-        "LessonId": 109
+        "LessonId": 1010
     }
 ]

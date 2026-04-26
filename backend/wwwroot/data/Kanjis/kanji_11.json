@@ -5,7 +5,7 @@
         "Onyomi": "カ",
         "Kunyomi": "はな",
         "Example": "花火 (はなび): Pháo hoa; 花見 (はなみ): Ngắm hoa; 生け花 (いけばな): Nghệ thuật cắm hoa",
-        "LessonId": 111
+        "LessonId": 1012
     },
     {
         "Character": "竹",
@@ -13,7 +13,7 @@
         "Onyomi": "チク",
         "Kunyomi": "たけ",
         "Example": "竹の子 (たけのこ): Măng; 竹林 (ちくりん): Rừng trúc",
-        "LessonId": 111
+        "LessonId": 1012
     },
     {
         "Character": "草",
@@ -21,7 +21,7 @@
         "Onyomi": "ソウ",
         "Kunyomi": "くさ",
         "Example": "草原 (そうげん): Thảo nguyên; 草花 (くさばな): Hoa cỏ",
-        "LessonId": 111
+        "LessonId": 1012
     },
     {
         "Character": "林",
@@ -29,7 +29,7 @@
         "Onyomi": "リン",
         "Kunyomi": "はやし",
         "Example": "小林さん (こばやしさん): Anh/chị Kobayashi; 森林 (しんりん): Rừng rậm",
-        "LessonId": 111
+        "LessonId": 1012
     },
     {
         "Character": "森",
@@ -37,7 +37,7 @@
         "Onyomi": "シン",
         "Kunyomi": "もり",
         "Example": "森 (もり): Rừng; 森田さん (もりたさん): Anh/chị Morita; 森林 (しんりん): Rừng rậm",
-        "LessonId": 111
+        "LessonId": 1012
     },
     {
         "Character": "空",
@@ -45,7 +45,7 @@
         "Onyomi": "クウ",
         "Kunyomi": "そら, あ.く, から",
         "Example": "空気 (くうき): Không khí; 空港 (くうこう): Sân bay; 空 (そら): Bầu trời",
-        "LessonId": 111
+        "LessonId": 1012
     },
     {
         "Character": "海",
@@ -53,7 +53,7 @@
         "Onyomi": "カイ",
         "Kunyomi": "うみ",
         "Example": "海外 (かいがい): Nước ngoài; 北海道 (ほっかいどう): Hokkaido; 海 (うみ): Biển",
-        "LessonId": 111
+        "LessonId": 1012
     },
     {
         "Character": "化",
@@ -61,6 +61,6 @@
         "Onyomi": "カ, ケ",
         "Kunyomi": "ば.ける",
         "Example": "化学 (かがく): Hóa học; 文化 (ぶんか): Văn hóa; お化け (おばけ): Ma quỷ",
-        "LessonId": 111
+        "LessonId": 1012
     }
 ]

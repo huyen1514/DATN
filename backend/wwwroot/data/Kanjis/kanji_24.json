@@ -5,7 +5,7 @@
         "Onyomi": "セン",
         "Kunyomi": "",
         "Example": "<ruby>線<rt>せん</rt></ruby>: Đường kẻ; <ruby>番線<rt>ばんせん</rt></ruby>: Tuyến số (nhà ga); <ruby>新幹線<rt>しんかんせん</rt></ruby>: Tàu Shinkansen",
-        "LessonId": 124
+        "LessonId": 1025
     },
     {
         "Character": "面",
@@ -13,7 +13,7 @@
         "Onyomi": "メン",
         "Kunyomi": "おも, おもて, つら",
         "Example": "<ruby>画面<rt>がめん</rt></ruby>: Màn hình; <ruby>表面<rt>ひょうめん</rt></ruby>: Bề mặt; <ruby>方面<rt>ほうめん</rt></ruby>: Phương diện/Hướng",
-        "LessonId": 124
+        "LessonId": 1025
     },
     {
         "Character": "普",
@@ -21,7 +21,7 @@
         "Onyomi": "フ",
         "Kunyomi": "あまね.く",
         "Example": "<ruby>普通<rt>ふつう</rt></ruby>: Bình thường; <ruby>普及<rt>ふきゅう</rt></ruby>する: Phổ cập",
-        "LessonId": 124
+        "LessonId": 1025
     },
     {
         "Character": "各",
@@ -29,7 +29,7 @@
         "Onyomi": "カク",
         "Kunyomi": "おのおの",
         "Example": "<ruby>各駅<rt>かくえき</rt></ruby>: Mỗi nhà ga; <ruby>各国<rt>かっこく</rt></ruby>: Các nước; <ruby>各自<rt>かくじ</rt></ruby>: Mỗi người",
-        "LessonId": 124
+        "LessonId": 1025
     },
     {
         "Character": "次",
@@ -37,7 +37,7 @@
         "Onyomi": "ジ, シ",
         "Kunyomi": "つぎ, つ.ぐ",
         "Example": "<ruby>次<rt>つぎ</rt></ruby>: Tiếp theo; <ruby>目次<rt>もくじ</rt></ruby>: Mục lục; <ruby>次回<rt>じかい</rt></ruby>: Lần tới",
-        "LessonId": 124
+        "LessonId": 1025
     },
     {
         "Character": "表",
@@ -45,7 +45,7 @@
         "Onyomi": "ヒョウ",
         "Kunyomi": "おもて, あらわ.す",
         "Example": "<ruby>表<rt>ひょう</rt></ruby>: Cái bảng; <ruby>発表<rt>はっぴょう</rt></ruby>: Phát biểu; <ruby>表面<rt>ひょうめん</rt></ruby>: Bề mặt",
-        "LessonId": 124
+        "LessonId": 1025
     },
     {
         "Character": "発",
@@ -53,7 +53,7 @@
         "Onyomi": "ハツ, ホツ",
         "Kunyomi": "た.つ",
         "Example": "<ruby>出発<rt>しゅっぱつ</rt></ruby>: Xuất phát; <ruby>発見<rt>はっけん</rt></ruby>: Phát hiện; <ruby>発行<rt>はっこう</rt></ruby>: Phát hành",
-        "LessonId": 124
+        "LessonId": 1025
     },
     {
         "Character": "指",
@@ -61,6 +61,6 @@
         "Onyomi": "シ",
         "Kunyomi": "ゆび, さ.す",
         "Example": "<ruby>指<rt>ゆび</rt></ruby>: Ngón tay; <ruby>指定席<rt>していせき</rt></ruby>: Ghế chỉ định; <ruby>指輪<rt>ゆびわ</rt></ruby>: Nhẫn",
-        "LessonId": 124
+        "LessonId": 1025
     }
 ]

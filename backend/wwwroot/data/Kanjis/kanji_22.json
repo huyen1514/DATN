@@ -5,7 +5,7 @@
         "Onyomi": "シュン",
         "Kunyomi": "はる",
         "Example": "<ruby>春<rt>はる</rt></ruby>: Mùa xuân; <ruby>来春<rt>らいしゅん</rt></ruby>: Xuân tới; <ruby>春巻<rt>はるま</rt></ruby>き: Nem cuốn/Chả giò",
-        "LessonId": 122
+        "LessonId": 1023
     },
     {
         "Character": "夏",
@@ -13,7 +13,7 @@
         "Onyomi": "カ",
         "Kunyomi": "なつ",
         "Example": "<ruby>夏<rt>なつ</rt></ruby>: Mùa hè; <ruby>夏休<rt>なつやす</rt></ruby>み: Nghỉ hè; <ruby>真夏<rt>まなつ</rt></ruby>: Giữa hè",
-        "LessonId": 122
+        "LessonId": 1023
     },
     {
         "Character": "秋",
@@ -21,7 +21,7 @@
         "Onyomi": "シュウ",
         "Kunyomi": "あき",
         "Example": "<ruby>秋<rt>あき</rt></ruby>: Mùa thu; <ruby>秋分<rt>しゅうぶん</rt></ruby>の日: Ngày phân thu; <ruby>晩秋<rt>ばんしゅう</rt></ruby>: Cuối thu",
-        "LessonId": 122
+        "LessonId": 1023
     },
     {
         "Character": "冬",
@@ -29,7 +29,7 @@
         "Onyomi": "トウ",
         "Kunyomi": "ふゆ",
         "Example": "<ruby>冬<rt>ふゆ</rt></ruby>: Mùa đông; <ruby>冬休<rt>冬やす</rt></ruby>み: Nghỉ đông; <ruby>春夏秋冬<rt>しゅんかしゅとう</rt></ruby>: Xuân hạ thu đông",
-        "LessonId": 122
+        "LessonId": 1023
     },
     {
         "Character": "空",
@@ -37,7 +37,7 @@
         "Onyomi": "クウ",
         "Kunyomi": "そら, あ.く, から",
         "Example": "<ruby>空<rt>そら</rt></ruby>: Bầu trời; <ruby>空気<rt>くうき</rt></ruby>: Không khí; <ruby>空港<rt>くうこう</rt></ruby>: Sân bay",
-        "LessonId": 122
+        "LessonId": 1023
     },
     {
         "Character": "星",
@@ -45,7 +45,7 @@
         "Onyomi": "セイ",
         "Kunyomi": "ほし",
         "Example": "<ruby>星<rt>ほし</rt></ruby>: Ngôi sao; <ruby>火星<rt>かせい</rt></ruby>: Sao hỏa; <ruby>流星<rt>りゅうせい</rt></ruby>: Sao băng",
-        "LessonId": 122
+        "LessonId": 1023
     },
     {
         "Character": "雲",
@@ -53,7 +53,7 @@
         "Onyomi": "ウン",
         "Kunyomi": "くも",
         "Example": "<ruby>雲<rt>くも</rt></ruby>: Mây; <ruby>雨雲<rt>あまぐも</rt></ruby>: Mây mưa; <ruby>雲海<rt>うんかい</rt></ruby>: Biển mây",
-        "LessonId": 122
+        "LessonId": 1023
     },
     {
         "Character": "去",
@@ -61,6 +61,6 @@
         "Onyomi": "キョ, コ",
         "Kunyomi": "さ.る",
         "Example": "<ruby>去年<rt>きょねん</rt></ruby>: Năm ngoái; <ruby>過去<rt>かこ</rt></ruby>: Quá khứ; <ruby>去<rt>さ</rt></ruby>る: Rời đi",
-        "LessonId": 122
+        "LessonId": 1023
     }
 ]

@@ -5,7 +5,7 @@
         "Onyomi": "ジョウ",
         "Kunyomi": "うえ, あ.がる, のぼ.る",
         "Example": "テーブルの上 (うえ): Trên bàn; 上がる (あがる): Đi lên; 水上スキー (すいじょうスキー): Trượt nước",
-        "LessonId": 105
+        "LessonId": 1006
     },
     {
         "Character": "下",
@@ -13,7 +13,7 @@
         "Onyomi": "カ, ゲ",
         "Kunyomi": "した, さ.がる, くだ.る",
         "Example": "いすの下 (した): Dưới ghế; 下がる (さがる): Hạ xuống; 下書き (したがき): Bản nháp",
-        "LessonId": 105
+        "LessonId": 1006
     },
     {
         "Character": "左",
@@ -21,7 +21,7 @@
         "Onyomi": "サ",
         "Kunyomi": "ひだり",
         "Example": "左 (ひだり): Phía bên trái; 左利き (ひだりきき): Thuận tay trái; 左折 (させつ): Rẽ trái",
-        "LessonId": 105
+        "LessonId": 1006
     },
     {
         "Character": "右",
@@ -29,7 +29,7 @@
         "Onyomi": "ウ, ユウ",
         "Kunyomi": "みぎ",
         "Example": "右 (みぎ): Phía bên phải; 右きき (みぎきき): Thuận tay phải; 右折 (うせつ): Rẽ phải",
-        "LessonId": 105
+        "LessonId": 1006
     },
     {
         "Character": "外",
@@ -37,7 +37,7 @@
         "Onyomi": "ガイ, ゲ",
         "Kunyomi": "そと, ほか",
         "Example": "教室の外 (そと): Ngoài phòng học; 外国 (がいこく): Nước ngoài; 外出 (がいしゅつ): Ra ngoài",
-        "LessonId": 105
+        "LessonId": 1006
     },
     {
         "Character": "内",
@@ -45,7 +45,7 @@
         "Onyomi": "ナイ, ダイ",
         "Kunyomi": "うち",
         "Example": "内がわ (うちがわ): Phía bên trong; 国内 (こくない): Trong nước; 内科 (ないか): Nội khoa",
-        "LessonId": 105
+        "LessonId": 1006
     },
     {
         "Character": "中",
@@ -53,6 +53,6 @@
         "Onyomi": "チュウ, ジュウ",
         "Kunyomi": "なか",
         "Example": "車の中 (なか): Trong xe; 一日中 (いちにちじゅう): Cả ngày; 会議中 (かいぎちゅう): Đang họp",
-        "LessonId": 105
+        "LessonId": 1006
     }
 ]

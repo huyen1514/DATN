@@ -5,7 +5,7 @@
         "Onyomi": "フツ",
         "Kunyomi": "はら.う",
         "Example": "<ruby>払<rt>はら</rt></ruby>う: Trả tiền; <ruby>払<rt>はら</rt></ruby>い<ruby>戻<rt>もど</rt></ruby>し: Hoàn tiền; <ruby>前払<rt>まえばら</rt></ruby>い: Trả trước",
-        "LessonId": 117
+        "LessonId": 1018
     },
     {
         "Character": "札",
@@ -13,7 +13,7 @@
         "Onyomi": "サツ",
         "Kunyomi": "ふだ",
         "Example": "お<ruby>札<rt>さつ</rt></ruby>: Tờ tiền; <ruby>改札口<rt>かいさつぐち</rt></ruby>: Cổng soát vé; <ruby>名札<rt>なふだ</rt></ruby>: Thẻ tên",
-        "LessonId": 117
+        "LessonId": 1018
     },
     {
         "Character": "代",
@@ -21,7 +21,7 @@
         "Onyomi": "ダイ, タイ",
         "Kunyomi": "か.わる, か.える, よ, しろ",
         "Example": "<ruby>時代<rt>じだい</rt></ruby>: Thời đại; <ruby>代<rt>か</rt></ruby>わりに: Thay cho; <ruby>食事代<rt>しょくじだい</rt></ruby>: Tiền ăn",
-        "LessonId": 117
+        "LessonId": 1018
     },
     {
         "Character": "借",
@@ -29,7 +29,7 @@
         "Onyomi": "シャク, シャッ-",
         "Kunyomi": "か.りる",
         "Example": "<ruby>借<rt>か</rt></ruby>りる: Mượn; <ruby>借金<rt>しゃっきん</rt></ruby>: Tiền nợ; <ruby>借用書<rt>しゃくようしょ</rt></ruby>: Giấy vay nợ",
-        "LessonId": 117
+        "LessonId": 1018
     },
     {
         "Character": "貸",
@@ -37,7 +37,7 @@
         "Onyomi": "タイ",
         "Kunyomi": "か.す",
         "Example": "<ruby>貸<rt>か</rt></ruby>す: Cho mượn; <ruby>貸<rt>か</rt></ruby>し<ruby>出<rt>だ</rt></ruby>し: Cho mượn ra ngoài; <ruby>賃貸<rt>ちんたい</rt></ruby>: Cho thuê",
-        "LessonId": 117
+        "LessonId": 1018
     },
     {
         "Character": "賃",
@@ -45,7 +45,7 @@
         "Onyomi": "チン",
         "Kunyomi": "",
         "Example": "<ruby>家賃<rt>やちん</rt></ruby>: Tiền nhà; <ruby>運賃<rt>うんちん</rt></ruby>: Cước phí vận chuyển; <ruby>賃金<rt>ちんぎん</rt></ruby>: Tiền công",
-        "LessonId": 117
+        "LessonId": 1018
     },
     {
         "Character": "刷",
@@ -53,7 +53,7 @@
         "Onyomi": "サツ",
         "Kunyomi": "す.る",
         "Example": "<ruby>印刷<rt>いんさつ</rt></ruby>: In ấn; <ruby>刷新<rt>さっしん</rt></ruby>: Đổi mới/Cải cách; <ruby>刷<rt>す</rt></ruby>る: In",
-        "LessonId": 117
+        "LessonId": 1018
     },
     {
         "Character": "忙",
@@ -61,6 +61,6 @@
         "Onyomi": "ボウ",
         "Kunyomi": "いそが.しい",
         "Example": "<ruby>忙<rt>いそが</rt></ruby>しい: Bận rộn; <ruby>多忙<rt>たぼう</rt></ruby>: Rất bận rộn",
-        "LessonId": 117
+        "LessonId": 1018
     }
 ]

@@ -1,0 +1,186 @@
+[
+    {
+        "Word": "私",
+        "Reading": "わたし",
+        "Meaning": "tôi",
+        "PartOfSpeech": "Đại từ",
+        "LessonId": 1,
+        "Example": "私は 学生です。\n(Tôi là sinh viên.)"
+    },
+    {
+        "Word": "あなた",
+        "Reading": "あなた",
+        "Meaning": "bạn, anh/chị",
+        "PartOfSpeech": "Đại từ",
+        "LessonId": 1,
+        "Example": "あなたは 会社員ですか。\n(Bạn là nhân viên công ty phải không?)"
+    },
+    {
+        "Word": "あの人",
+        "Reading": "あのひと",
+        "Meaning": "người kia, người đó",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "あの人は だれですか。\n(Người kia là ai?)"
+    },
+    {
+        "Word": "あの方",
+        "Reading": "あのかた",
+        "Meaning": "vị kia",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "あの方は どなたですか。\n(Vị kia là vị nào vậy?)"
+    },
+    {
+        "Word": "先生",
+        "Reading": "せんせい",
+        "Meaning": "thầy giáo, cô giáo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "ワットさんは 先生です。\n(Ông Watt là giáo viên.)"
+    },
+    {
+        "Word": "教師",
+        "Reading": "きょうし",
+        "Meaning": "giáo viên (nghề nghiệp)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "私は 教師です。\n(Tôi là giáo viên.)"
+    },
+    {
+        "Word": "学生",
+        "Reading": "がくせい",
+        "Meaning": "học sinh, sinh viên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "カリナさんは 学生です。\n(Chị Karina là sinh viên.)"
+    },
+    {
+        "Word": "会社員",
+        "Reading": "かいしゃいん",
+        "Meaning": "nhân viên công ty",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "ミラーさんは 会社員です。\n(Anh Miller là nhân viên công ty.)"
+    },
+    {
+        "Word": "銀行員",
+        "Reading": "ぎんこういん",
+        "Meaning": "nhân viên ngân hàng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "兄は 銀行員です。\n(Anh trai tôi là nhân viên ngân hàng.)"
+    },
+    {
+        "Word": "医者",
+        "Reading": "いしゃ",
+        "Meaning": "bác sĩ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "あの人は 医者です。\n(Người kia là bác sĩ.)"
+    },
+    {
+        "Word": "研究者",
+        "Reading": "けんきゅうしゃ",
+        "Meaning": "nhà nghiên cứu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "イーさんは 研究者です。\n(Anh Lee là nhà nghiên cứu.)"
+    },
+    {
+        "Word": "エンジニア",
+        "Reading": "エンジニア",
+        "Meaning": "kỹ sư",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "夫は エンジニアです。\n(Chồng tôi là kỹ sư.)"
+    },
+    {
+        "Word": "大学",
+        "Reading": "だいがく",
+        "Meaning": "đại học",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "ハノイ工業大学の 学生です。\n(Tôi là sinh viên trường Đại học Công nghiệp Hà Nội.)"
+    },
+    {
+        "Word": "病院",
+        "Reading": "びょういん",
+        "Meaning": "bệnh viện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "あそこに 病院が あります。\n(Ở đằng kia có bệnh viện.)"
+    },
+    {
+        "Word": "電気",
+        "Reading": "でんき",
+        "Meaning": "điện, đèn điện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 1,
+        "Example": "電気を 消します。\n(Tắt điện.)"
+    },
+    {
+        "Word": "だれ",
+        "Reading": "だれ",
+        "Meaning": "ai",
+        "PartOfSpeech": "Đại từ",
+        "LessonId": 1,
+        "Example": "だれが 来ましたか。\n(Ai đã đến vậy?)"
+    },
+    {
+        "Word": "～歳",
+        "Reading": "～さい",
+        "Meaning": "~ tuổi",
+        "PartOfSpeech": "Hậu tố",
+        "LessonId": 1,
+        "Example": "私は 20歳です。\n(Tôi 20 tuổi.)"
+    },
+    {
+        "Word": "何歳",
+        "Reading": "なんさい",
+        "Meaning": "mấy tuổi",
+        "PartOfSpeech": "Nghi vấn từ",
+        "LessonId": 1,
+        "Example": "おこさんは 何歳ですか。\n(Con của bạn mấy tuổi rồi?)"
+    },
+    {
+        "Word": "はい",
+        "Reading": "はい",
+        "Meaning": "vâng, dạ",
+        "PartOfSpeech": "Thán từ",
+        "LessonId": 1,
+        "Example": "はい、そうです。\n(Vâng, đúng vậy.)"
+    },
+    {
+        "Word": "いいえ",
+        "Reading": "いいえ",
+        "Meaning": "không",
+        "PartOfSpeech": "Thán từ",
+        "LessonId": 1,
+        "Example": "いいえ、違います。\n(Không, không phải vậy.)"
+    },
+    {
+        "Word": "初めまして",
+        "Reading": "はじめまして",
+        "Meaning": "Rất hân hạnh được gặp anh/chị",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 1,
+        "Example": "初めまして。ミラーです。\n(Rất hân hạnh được gặp anh/chị. Tôi là Miller.)"
+    },
+    {
+        "Word": "から来ました",
+        "Reading": "からきました",
+        "Meaning": "Đến từ...",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 1,
+        "Example": "アメリカから 来ました。\n(Tôi đến từ Mỹ.)"
+    },
+    {
+        "Word": "どうぞよろしくお願いします",
+        "Reading": "どうぞよろしくおねがいします",
+        "Meaning": "Rất mong được sự giúp đỡ",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 1,
+        "Example": "どうぞ よろしく お願いします。\n(Rất mong được sự giúp đỡ của anh/chị.)"
+    }
+]

@@ -540,11 +540,11 @@ namespace backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("LastAccessedAt")
+                    b.Property<DateTime?>("CompletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("LessonId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("LastAccessedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("PartType")
                         .IsRequired()
@@ -559,10 +559,13 @@ namespace backend.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("UserProgressId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserProgressId", "PartType")
+                        .IsUnique();
 
                     b.ToTable("LessonProgresses");
                 });
@@ -846,6 +849,9 @@ namespace backend.Migrations
                     b.Property<bool>("Completed")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("LastAccessed")
                         .HasColumnType("datetime2");
 
@@ -1047,6 +1053,17 @@ namespace backend.Migrations
                     b.Navigation("Level");
                 });
 
+            modelBuilder.Entity("Models.LessonProgress", b =>
+                {
+                    b.HasOne("Models.UserProgress", "UserProgress")
+                        .WithMany("LessonProgresses")
+                        .HasForeignKey("UserProgressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserProgress");
+                });
+
             modelBuilder.Entity("Models.Listening", b =>
                 {
                     b.HasOne("Models.Lesson", "Lesson")
@@ -1161,6 +1178,11 @@ namespace backend.Migrations
             modelBuilder.Entity("Models.Lesson", b =>
                 {
                     b.Navigation("Vocabularies");
+                });
+
+            modelBuilder.Entity("Models.UserProgress", b =>
+                {
+                    b.Navigation("LessonProgresses");
                 });
 #pragma warning restore 612, 618
         }
