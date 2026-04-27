@@ -1,6 +1,9 @@
 using Data;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Repositories
 {
@@ -38,6 +41,18 @@ namespace Repositories
             return await _context.Kanjis.AnyAsync(x => x.KanjiId == kanjiId);
         }
 
+        // Đã cập nhật sang ReadingPassage và PassageId
+        public async Task<bool> ReadingExistsAsync(int readingId)
+        {
+            return await _context.ReadingPassages.AnyAsync(x => x.PassageId == readingId);
+        }
+
+        // Đã sửa: ListeningExercises -> Listenings
+        public async Task<bool> ListeningExistsAsync(int listeningId)
+        {
+            return await _context.Listenings.AnyAsync(x => x.ListeningId == listeningId);
+        }
+
         public async Task<string?> GetLessonNameAsync(int lessonId)
         {
             return await _context.Lessons
@@ -67,6 +82,24 @@ namespace Repositories
             return await _context.Kanjis
                 .Where(x => x.KanjiId == kanjiId)
                 .Select(x => x.Character)
+                .FirstOrDefaultAsync();
+        }
+
+        // Đã cập nhật trả về Content của đoạn văn thay vì Title
+        public async Task<string?> GetReadingNameAsync(int readingId)
+        {
+            return await _context.ReadingPassages
+                .Where(x => x.PassageId == readingId)
+                .Select(x => x.Content) 
+                .FirstOrDefaultAsync();
+        }
+
+        // Đã sửa: ListeningExercises -> Listenings
+        public async Task<string?> GetListeningNameAsync(int listeningId)
+        {
+            return await _context.Listenings
+                .Where(x => x.ListeningId == listeningId)
+                .Select(x => x.Question) 
                 .FirstOrDefaultAsync();
         }
 
@@ -101,6 +134,24 @@ namespace Repositories
                 .AsNoTracking()
                 .Where(x => kanjiIds.Contains(x.KanjiId))
                 .ToDictionaryAsync(x => x.KanjiId, x => x.Character);
+        }
+
+        // Đã cập nhật sang ReadingPassage
+        public async Task<Dictionary<int, string>> GetReadingNamesAsync(IEnumerable<int> readingIds)
+        {
+            return await _context.ReadingPassages
+                .AsNoTracking()
+                .Where(x => readingIds.Contains(x.PassageId))
+                .ToDictionaryAsync(x => x.PassageId, x => x.Content);
+        }
+
+        // Đã sửa: ListeningExercises -> Listenings
+        public async Task<Dictionary<int, string>> GetListeningNamesAsync(IEnumerable<int> listeningIds)
+        {
+            return await _context.Listenings
+                .AsNoTracking()
+                .Where(x => listeningIds.Contains(x.ListeningId))
+                .ToDictionaryAsync(x => x.ListeningId, x => x.Question);
         }
 
         public async Task<Bookmark?> GetByKeyAsync(int userId, int itemId, string type)

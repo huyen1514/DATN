@@ -1,13 +1,18 @@
 [
     {
-        "content": "<div class='reading-container'><p><b>1. どこの国の人ですか。例のように書いてください。</b></p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-126/world-map.jpg' alt='Bản đồ thế giới' style='max-width:100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'/></div><p>Hãy nhìn vào bản đồ và xác định quốc tịch của các nhân vật trong hình.</p></div>",
-        "question": "シュミットさんはどこの国の人ですか。",
-        "option1": "ブラジル (Burajiru)",
-        "option2": "ドイツ (Doitsu)",
-        "option3": "アメリカ (Amerika)",
-        "option4": "インド (Indo)",
-        "correctOption": 2,
-        "imageUrl": "/images/readings/lesson-126/thumbnail.jpg",
-        "lessonId": 126
+        "lessonId": 2002,
+        "lessonName": "Bài 1",
+        "content": "はじめまして。わたしは マリアです。フィリピンから きました。２０さいです。だいがくせいです。どうぞ よろしく おねがいします。",
+        "imageUrl": null,
+        "questions": [
+            {
+                "questionText": "マリアさんは どこから きましたか。",
+                "option1": "ベトナム",
+                "option2": "にほん",
+                "option3": "フィリピン",
+                "option4": "ちゅうごく",
+                "correctOption": 3
+            }
+        ]
     }
 ]

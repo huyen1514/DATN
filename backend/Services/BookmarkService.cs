@@ -1,6 +1,10 @@
 using DTOs.Bookmark;
 using Models;
 using Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Services
 {
@@ -10,6 +14,10 @@ namespace Services
         private const string VocabularyType = "Vocabulary";
         private const string GrammarType = "Grammar";
         private const string KanjiType = "Kanji";
+        // Khai báo thêm hằng số cho Reading
+        private const string ReadingType = "Reading";
+        // Khai báo thêm hằng số cho Listening
+        private const string ListeningType = "Listening";
 
         private readonly IBookmarkRepository _bookmarkRepository;
 
@@ -75,11 +83,19 @@ namespace Services
             var vocabIds = bookmarks.Where(b => b.Type == VocabularyType).Select(b => b.ItemId).Distinct().ToList();
             var grammarIds = bookmarks.Where(b => b.Type == GrammarType).Select(b => b.ItemId).Distinct().ToList();
             var kanjiIds = bookmarks.Where(b => b.Type == KanjiType).Select(b => b.ItemId).Distinct().ToList();
+            // Lấy danh sách ID của Reading
+            var readingIds = bookmarks.Where(b => b.Type == ReadingType).Select(b => b.ItemId).Distinct().ToList();
+            // Lấy danh sách ID của Listening
+            var listeningIds = bookmarks.Where(b => b.Type == ListeningType).Select(b => b.ItemId).Distinct().ToList();
 
             var lessonNames = lessonIds.Any() ? await _bookmarkRepository.GetLessonNamesAsync(lessonIds) : new Dictionary<int, string>();
             var vocabNames = vocabIds.Any() ? await _bookmarkRepository.GetVocabularyNamesAsync(vocabIds) : new Dictionary<int, string>();
             var grammarNames = grammarIds.Any() ? await _bookmarkRepository.GetGrammarNamesAsync(grammarIds) : new Dictionary<int, string>();
             var kanjiNames = kanjiIds.Any() ? await _bookmarkRepository.GetKanjiNamesAsync(kanjiIds) : new Dictionary<int, string>();
+            // Query một lần để lấy toàn bộ nội dung bài đọc đã bookmark
+            var readingNames = readingIds.Any() ? await _bookmarkRepository.GetReadingNamesAsync(readingIds) : new Dictionary<int, string>();
+            // Query một lần để lấy toàn bộ nội dung bài nghe đã bookmark
+            var listeningNames = listeningIds.Any() ? await _bookmarkRepository.GetListeningNamesAsync(listeningIds) : new Dictionary<int, string>();
 
             return bookmarks.Select(bookmark => new BookmarkResponse
             {
@@ -93,6 +109,9 @@ namespace Services
                     VocabularyType => vocabNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
                     GrammarType => grammarNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
                     KanjiType => kanjiNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                    // Map ItemName cho Reading (chính là nội dung đoạn văn)
+                    ReadingType => readingNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                    ListeningType => listeningNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
                     _ => string.Empty
                 },
                 CreatedAt = bookmark.CreatedAt
@@ -107,6 +126,9 @@ namespace Services
                 VocabularyType => await _bookmarkRepository.VocabularyExistsAsync(itemId),
                 GrammarType => await _bookmarkRepository.GrammarExistsAsync(itemId),
                 KanjiType => await _bookmarkRepository.KanjiExistsAsync(itemId),
+                // Xác thực sự tồn tại của Reading trong Database
+                ReadingType => await _bookmarkRepository.ReadingExistsAsync(itemId),
+                ListeningType => await _bookmarkRepository.ListeningExistsAsync(itemId),
                 _ => false
             };
 
@@ -129,7 +151,17 @@ namespace Services
             if (string.Equals(type, KanjiType, StringComparison.OrdinalIgnoreCase))
                 return KanjiType;
 
-            throw new ArgumentException("Type must be Lesson, Vocabulary, Grammar, or Kanji.");
+            // Normalize cho Reading
+            if (string.Equals(type, ReadingType, StringComparison.OrdinalIgnoreCase)
+                || string.Equals(type, "ReadingPassage", StringComparison.OrdinalIgnoreCase))
+                return ReadingType;
+
+            // Normalize cho Listening
+            if (string.Equals(type, ListeningType, StringComparison.OrdinalIgnoreCase)
+                || string.Equals(type, "ListeningExercise", StringComparison.OrdinalIgnoreCase))
+                return ListeningType;
+
+            throw new ArgumentException("Type must be Lesson, Vocabulary, Grammar, Kanji, Reading, or Listening.");
         }
     }
 }

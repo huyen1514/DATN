@@ -121,7 +121,13 @@ namespace backend.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<int>("LevelId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MinimumSectionScore")
                         .HasColumnType("int");
 
                     b.Property<int?>("PassScaledListening")
@@ -157,14 +163,14 @@ namespace backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExamQuestionId"));
 
-                    b.Property<string>("AudioUrl")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("CorrectAnswer")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedByUserId")
+                        .HasColumnType("int");
 
                     b.Property<int>("ExamId")
                         .HasColumnType("int");
@@ -195,27 +201,23 @@ namespace backend.Migrations
                     b.Property<string>("OptionD")
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("Passage")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Question")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("QuestionGroupId")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("QuestionGroupId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Section")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("ExamQuestionId");
+
+                    b.HasIndex("CreatedByUserId");
 
                     b.HasIndex("ExamId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("QuestionGroupId");
 
                     b.ToTable("ExamQuestions");
                 });
@@ -243,20 +245,23 @@ namespace backend.Migrations
                     b.Property<int>("ExamId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ExamSnapshotJson")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("HasParalysisScore")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsPassed")
                         .HasColumnType("bit");
 
-                    b.Property<decimal>("ListeningScore")
-                        .HasColumnType("decimal(5,2)");
+                    b.Property<int>("ListeningScore")
+                        .HasColumnType("int");
 
-                    b.Property<decimal>("ReadingScore")
-                        .HasColumnType("decimal(5,2)");
+                    b.Property<int>("ReadingScore")
+                        .HasColumnType("int");
 
-                    b.Property<decimal>("Score")
-                        .HasColumnType("decimal(5,2)");
+                    b.Property<int>("Score")
+                        .HasColumnType("int");
 
                     b.Property<int>("TotalQuestion")
                         .HasColumnType("int");
@@ -264,8 +269,8 @@ namespace backend.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("VocabularyGrammarScore")
-                        .HasColumnType("decimal(5,2)");
+                    b.Property<int>("VocabularyGrammarScore")
+                        .HasColumnType("int");
 
                     b.HasKey("ExamResultId");
 
@@ -290,10 +295,8 @@ namespace backend.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<int>("TimeRemainingSeconds")
                         .HasColumnType("int");
@@ -302,6 +305,10 @@ namespace backend.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("SessionId");
+
+                    b.HasIndex("ExamId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ExamSessions");
                 });
@@ -317,15 +324,17 @@ namespace backend.Migrations
                     b.Property<int>("QuestionId")
                         .HasColumnType("int");
 
-                    b.Property<string>("SelectedOption")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int?>("SelectedOption")
+                        .HasColumnType("int");
 
                     b.Property<int>("SessionId")
                         .HasColumnType("int");
 
                     b.HasKey("AnswerId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.HasIndex("SessionId");
 
                     b.ToTable("ExamSessionAnswers");
                 });
@@ -606,7 +615,7 @@ namespace backend.Migrations
 
                     b.Property<string>("CorrectAnswer")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("char(1)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -620,18 +629,22 @@ namespace backend.Migrations
 
                     b.Property<string>("OptionA")
                         .IsRequired()
+                        .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("OptionB")
                         .IsRequired()
+                        .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("OptionC")
                         .IsRequired()
+                        .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("OptionD")
                         .IsRequired()
+                        .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Question")
@@ -665,6 +678,9 @@ namespace backend.Migrations
                     b.Property<int>("ExamId")
                         .HasColumnType("int");
 
+                    b.Property<string>("GatewayResponse")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("PaymentDate")
                         .HasColumnType("datetime2");
 
@@ -675,7 +691,8 @@ namespace backend.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TransactionId")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -689,17 +706,70 @@ namespace backend.Migrations
                     b.ToTable("Payments");
                 });
 
-            modelBuilder.Entity("Models.Reading", b =>
+            modelBuilder.Entity("Models.QuestionGroup", b =>
                 {
-                    b.Property<int>("ReadingId")
+                    b.Property<int>("QuestionGroupId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReadingId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuestionGroupId"));
+
+                    b.Property<string>("AudioUrl")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("ExamId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Passage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("QuestionGroupId");
+
+                    b.HasIndex("ExamId");
+
+                    b.ToTable("QuestionGroups");
+                });
+
+            modelBuilder.Entity("Models.ReadingPassage", b =>
+                {
+                    b.Property<int>("PassageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PassageId"));
 
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .HasMaxLength(2048)
+                        .HasColumnType("nvarchar(2048)");
+
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PassageId");
+
+                    b.HasIndex("LessonId");
+
+                    b.ToTable("ReadingPassages");
+                });
+
+            modelBuilder.Entity("Models.ReadingQuestion", b =>
+                {
+                    b.Property<int>("ReadingQuestionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReadingQuestionId"));
 
                     b.Property<int>("CorrectOption")
                         .HasColumnType("int");
@@ -707,65 +777,42 @@ namespace backend.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("LessonId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Option1")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Option2")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Option3")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Option4")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
-                    b.Property<string>("Question")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ReadingId");
-
-                    b.HasIndex("LessonId");
-
-                    b.ToTable("Readings");
-                });
-
-            modelBuilder.Entity("Models.TestHistory", b =>
-                {
-                    b.Property<int>("TestHistoryId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("PassageId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TestHistoryId"));
+                    b.Property<string>("QuestionText")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Detail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("ReadingQuestionId");
 
-                    b.Property<decimal>("Score")
-                        .HasColumnType("decimal(5,2)");
+                    b.HasIndex("PassageId");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("TestHistoryId");
-
-                    b.HasIndex("UserId", "Date");
-
-                    b.ToTable("TestHistories");
+                    b.ToTable("ReadingQuestions");
                 });
 
             modelBuilder.Entity("Models.User", b =>
@@ -809,7 +856,7 @@ namespace backend.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Models.UserExams", b =>
+            modelBuilder.Entity("Models.UserExam", b =>
                 {
                     b.Property<int>("UserExamId")
                         .ValueGeneratedOnAdd()
@@ -962,21 +1009,28 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Models.ExamQuestion", b =>
                 {
-                    b.HasOne("Models.Exam", "Exam")
+                    b.HasOne("Models.User", "CreatedByUser")
                         .WithMany()
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("CreatedByUserId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("Models.Exam", "Exam")
+                        .WithMany("Questions")
+                        .HasForeignKey("ExamId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.HasOne("Models.QuestionGroup", "QuestionGroup")
+                        .WithMany("Questions")
+                        .HasForeignKey("QuestionGroupId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("CreatedByUser");
 
                     b.Navigation("Exam");
 
-                    b.Navigation("User");
+                    b.Navigation("QuestionGroup");
                 });
 
             modelBuilder.Entity("Models.ExamResult", b =>
@@ -984,18 +1038,56 @@ namespace backend.Migrations
                     b.HasOne("Models.Exam", "Exam")
                         .WithMany()
                         .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Exam");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Models.ExamSession", b =>
+                {
+                    b.HasOne("Models.Exam", "Exam")
+                        .WithMany()
+                        .HasForeignKey("ExamId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Exam");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Models.ExamSessionAnswer", b =>
+                {
+                    b.HasOne("Models.ExamQuestion", "Question")
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Models.ExamSession", "Session")
+                        .WithMany("Answers")
+                        .HasForeignKey("SessionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+
+                    b.Navigation("Session");
                 });
 
             modelBuilder.Entity("Models.FlashCard", b =>
@@ -1080,13 +1172,13 @@ namespace backend.Migrations
                     b.HasOne("Models.Exam", "Exam")
                         .WithMany()
                         .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Exam");
@@ -1094,7 +1186,18 @@ namespace backend.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Models.Reading", b =>
+            modelBuilder.Entity("Models.QuestionGroup", b =>
+                {
+                    b.HasOne("Models.Exam", "Exam")
+                        .WithMany()
+                        .HasForeignKey("ExamId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Exam");
+                });
+
+            modelBuilder.Entity("Models.ReadingPassage", b =>
                 {
                     b.HasOne("Models.Lesson", "Lesson")
                         .WithMany()
@@ -1105,29 +1208,29 @@ namespace backend.Migrations
                     b.Navigation("Lesson");
                 });
 
-            modelBuilder.Entity("Models.TestHistory", b =>
+            modelBuilder.Entity("Models.ReadingQuestion", b =>
                 {
-                    b.HasOne("Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                    b.HasOne("Models.ReadingPassage", "Passage")
+                        .WithMany("ReadingQuestions")
+                        .HasForeignKey("PassageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("Passage");
                 });
 
-            modelBuilder.Entity("Models.UserExams", b =>
+            modelBuilder.Entity("Models.UserExam", b =>
                 {
                     b.HasOne("Models.Exam", "Exam")
-                        .WithMany()
+                        .WithMany("UserExams")
                         .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Exam");
@@ -1170,6 +1273,18 @@ namespace backend.Migrations
                     b.Navigation("FlashCards");
                 });
 
+            modelBuilder.Entity("Models.Exam", b =>
+                {
+                    b.Navigation("Questions");
+
+                    b.Navigation("UserExams");
+                });
+
+            modelBuilder.Entity("Models.ExamSession", b =>
+                {
+                    b.Navigation("Answers");
+                });
+
             modelBuilder.Entity("Models.Folder", b =>
                 {
                     b.Navigation("Decks");
@@ -1178,6 +1293,16 @@ namespace backend.Migrations
             modelBuilder.Entity("Models.Lesson", b =>
                 {
                     b.Navigation("Vocabularies");
+                });
+
+            modelBuilder.Entity("Models.QuestionGroup", b =>
+                {
+                    b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("Models.ReadingPassage", b =>
+                {
+                    b.Navigation("ReadingQuestions");
                 });
 
             modelBuilder.Entity("Models.UserProgress", b =>

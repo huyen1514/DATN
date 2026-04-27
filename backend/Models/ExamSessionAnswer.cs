@@ -11,13 +11,15 @@ namespace Models
         public int AnswerId { get; set; }
 
         [Required]
+        [ForeignKey("SessionId")]
         public int SessionId { get; set; }
+        public ExamSession? Session { get; set; } // Navigation Property
 
         [Required]
+        [ForeignKey("QuestionId")]
         public int QuestionId { get; set; }
+        public ExamQuestion? Question { get; set; } // Navigation Property
 
-        [Required]
-        [StringLength(10)]
-        public string SelectedOption { get; set; } = string.Empty;
+        public AnswerOption? SelectedOption { get; set; }
     }
 }

@@ -1,0 +1,18 @@
+[
+    {
+        "lessonId": 2020,
+        "lessonName": "Bài 19",
+        "content": "きょうは あたまが いたいです。そして、ねつが あります。ですから、がっこうを やすみます。いまから びょういんへ いきます。",
+        "imageUrl": null,
+        "questions": [
+            {
+                "questionText": "どうして がっこうを やすみますか。",
+                "option1": "びょういんの ひとですから",
+                "option2": "ねつが ありますから",
+                "option3": "てんきが わるいですから",
+                "option4": "いそがしいですから",
+                "correctOption": 2
+            }
+        ]
+    }
+]

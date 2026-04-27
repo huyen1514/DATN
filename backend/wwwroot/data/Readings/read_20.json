@@ -1,0 +1,18 @@
+[
+    {
+        "lessonId": 2021,
+        "lessonName": "Bài 20",
+        "content": "あかい シャツと あおい シャツが あります。あかい シャツは ２０００えんです。あおい シャツは ３０００えんです。わたしは あかいのを かいます。",
+        "imageUrl": null,
+        "questions": [
+            {
+                "questionText": "わたしは いくらの シャツを かいますか。",
+                "option1": "２０００えん",
+                "option2": "３０００えん",
+                "option3": "４０００えん",
+                "option4": "５０００えん",
+                "correctOption": 1
+            }
+        ]
+    }
+]

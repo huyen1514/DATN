@@ -22,29 +22,46 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+      target: build # MỚI THÊM: Chỉ chạy đến stage build (chứa .NET SDK) để dùng được dotnet watch
     container_name: dotnet_backend
     ports:
       - "5135:5135"
+    volumes:
+      - ./backend:/app # MỚI THÊM: Map code từ máy thật vào thư mục /app trong container
+    working_dir: /app  # MỚI THÊM: Trỏ thư mục làm việc (Sửa lại thành /src nếu Dockerfile của bạn dùng /src)
+    command: dotnet watch run --urls "http://0.0.0.0:5135" # MỚI THÊM: Ghi đè lệnh khởi chạy
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Server=db;Database=JapaneseLearningDB;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - DOTNET_USE_POLLING_FILE_WATCHER=1 # MỚI THÊM: Bắt buộc để nhận diện file thay đổi qua Docker
     depends_on:
       db:
         condition: service_healthy
     restart: on-failure:5
 
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: nextjs_frontend
-    ports:
-      - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:5135/api
-    depends_on:
-      - backend
-    restart: on-failure:3
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   container_name: nextjs_frontend
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./frontend:/app # MỚI THÊM: Map code Next.js vào container
+  #     - /app/node_modules # MỚI THÊM: Giữ node_modules độc lập trong container, không đè ra máy ngoài
+  #     - /app/.next # MỚI THÊM: Tránh xung đột cache build
+  #   working_dir: /app
+  #   command: npm run dev -- -H 0.0.0.0 # MỚI THÊM: Ép Next.js chạy dev mode và mở port ra ngoài
+  #   environment:
+  #     - NEXT_PUBLIC_API_URL=http://host.docker.internal:5135/api
+  #     # MỚI THÊM: Bơm thêm RAM cho Node.js (Tối đa 4GB) để tránh ENOMEM
+  #     - NODE_OPTIONS=--max_old_space_size=4096 
+  #     # # ĐÃ XÓA/COMMENT 2 dòng WATCHPACK_POLLING và CHOKIDAR_USEPOLLING
+  #     # - WATCHPACK_POLLING=true # MỚI THÊM: Bắt buộc để Next.js nhận diện file thay đổi qua Docker
+  #     # - CHOKIDAR_USEPOLLING=true # MỚI THÊM: Hỗ trợ lắng nghe sự kiện đổi file cực nhạy
+  #   depends_on:
+  #     - backend
+  #   restart: on-failure:3
 
   mailpit:
     image: axllent/mailpit

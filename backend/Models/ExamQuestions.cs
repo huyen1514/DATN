@@ -3,21 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
-    public enum AnswerOption
-    {
-        A,
-        B,
-        C,
-        D
-    }
-
-    public enum ExamSectionType
-    {
-        Vocabulary,
-        Grammar,
-        Reading,
-        Listening
-    }
+    public enum AnswerOption { A, B, C, D }
+    public enum ExamSectionType { Vocabulary, Grammar, Reading, Listening }
 
     [Table("ExamQuestions")]
     public class ExamQuestion
@@ -47,8 +34,6 @@ namespace Models
         [Required]
         public AnswerOption CorrectAnswer {get; set;}
 
-        public string? AudioUrl {get; set;}
-
         public string? ImageUrl {get; set;}
 
         [Required]
@@ -56,10 +41,10 @@ namespace Models
 
         public int MondaiNumber { get; set; }
 
-        [Column(TypeName="nvarchar(max)")]
-        public string? Passage { get; set; }
-
-        public string? QuestionGroupId { get; set; }
+        // [CẬP NHẬT] Đã xóa Passage và AudioUrl, thay bằng Khóa ngoại trỏ về QuestionGroup
+        [ForeignKey("QuestionGroupId")]
+        public int? QuestionGroupId { get; set; }
+        public QuestionGroup? QuestionGroup { get; set; }
 
         [Column(TypeName="nvarchar(max)")]
         public string? Instruction { get; set; }
@@ -67,10 +52,11 @@ namespace Models
         [Column(TypeName="nvarchar(max)")]
         public string? Explanation { get; set; }
 
+        // [CẬP NHẬT] Đổi tên để phân biệt rõ đây là Admin/Giáo viên tạo câu hỏi
         [Required]
-        [ForeignKey("UserId")]
-        public int UserId { get; set; }
-        public User? User { get; set; }
+        [ForeignKey("CreatedByUserId")]
+        public int CreatedByUserId { get; set; }
+        public User? CreatedByUser { get; set; }
 
         [Required]
         [ForeignKey("ExamId")]

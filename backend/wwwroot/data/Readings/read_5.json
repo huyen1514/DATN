@@ -1,13 +1,18 @@
 [
     {
-        "content": "<div class='reading-container'><p><b>Warming-up 5: 何時（なんじ）の 飛行機（ひこうき）で？ (Đi chuyến máy bay mấy giờ?)</b></p><p>カリナさんは福岡（ふくおか）へ行きます。東京で11時まで会議（かいぎ）があります。何時の飛行機に乗りますか。</p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-130/reading_130_01.jpg' alt='Tình huống của Karina' style='max-width:100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);'/></div><p><b>日本航空 (Japan Airlines) - 時刻表:</b></p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-130/reading_130_02.jpg' alt='Bảng giờ bay' style='max-width:100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);'/></div><p style='font-style: italic; color: #666;'>Gợi ý: Hãy chú ý thời gian kết thúc cuộc họp của Karina (11:00) và tính toán thời gian di chuyển đến sân bay để chọn chuyến bay hợp lý nhất.</p></div>",
-        "question": "カリナさんは何時の飛行機に乗りますか。",
-        "option1": "10:00の飛行機",
-        "option2": "12:30の飛行機",
-        "option3": "14:00の飛行機",
-        "option4": "15:30の飛行機",
-        "correctOption": 2,
-        "imageUrl": "/images/readings/lesson-130/reading_130_thumb.jpg",
-        "lessonId": 130
+        "lessonId": 2006,
+        "lessonName": "Bài 5",
+        "content": "にちようびは ともだちと えいがを みます。そのあと、レストランで ひるごばんを たべます。とても たのしみです。",
+        "imageUrl": null,
+        "questions": [
+            {
+                "questionText": "にちようびに ともだちと 何を しますか。",
+                "option1": "えいがを みます",
+                "option2": "ほんを よみます",
+                "option3": "かいものを します",
+                "option4": "スポーツを します",
+                "correctOption": 1
+            }
+        ]
     }
 ]

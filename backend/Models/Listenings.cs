@@ -9,12 +9,11 @@ namespace Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ListeningId { get; set; }
-        [StringLength(255)]
-        [Column(TypeName = "nvarchar(255)")]
+
+        [MaxLength(255)]
         public string? AudioUrl { get; set; }
 
-        [StringLength(255)]
-        [Column(TypeName = "nvarchar(255)")]
+        [MaxLength(255)]
         public string? ImageUrl { get; set; }
 
         [Column(TypeName = "nvarchar(max)")]
@@ -23,31 +22,35 @@ namespace Models
         [Required]
         [Column(TypeName = "nvarchar(max)")]
         public string Question { get; set; } = string.Empty;
+
         // 4 đáp án
         [Required]
-        [Column(TypeName = "nvarchar(255)")]
+        [MaxLength(255)]
         public string OptionA { get; set; } = string.Empty;
 
         [Required]
-        [Column(TypeName = "nvarchar(255)")]
+        [MaxLength(255)]
         public string OptionB { get; set; } = string.Empty;
 
         [Required]
-        [Column(TypeName = "nvarchar(255)")]
+        [MaxLength(255)]
         public string OptionC { get; set; } = string.Empty;
 
         [Required]
-        [Column(TypeName = "nvarchar(255)")]
+        [MaxLength(255)]
         public string OptionD { get; set; } = string.Empty;
 
         // Đáp án đúng: A / B / C / D
         [Required]
-        [Column(TypeName = "nvarchar(1)")]
+        [Column(TypeName = "char(1)")]
+        [RegularExpression("^[ABCD]$", ErrorMessage = "Đáp án đúng chỉ có thể là A, B, C hoặc D")]
         public string CorrectAnswer { get; set; } = string.Empty;
+
         [Required]
-        [ForeignKey("LessonId")]
         public int LessonId { get; set; }
-        public Lesson? Lesson { get; set; }
+        
+        [ForeignKey("LessonId")]
+        public virtual Lesson? Lesson { get; set; }
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

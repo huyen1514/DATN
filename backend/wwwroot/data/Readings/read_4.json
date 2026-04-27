@@ -1,13 +1,18 @@
 [
     {
-        "content": "<div class='reading-container'><p><b>Warming-up 4: いつ行きますか (Khi nào bạn đi?)</b></p><p>☆ケンさんはいつ歯医者（はいしゃ）へ行きますか。</p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-129/reading_129_01.jpg' alt='Lịch trình của Ken' style='max-width:100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);'/></div><p><b>塩崎歯科 (Nha khoa Shiozaki):</b></p><div class='image-wrapper' style='text-align:center; margin: 20px 0;'><img src='/images/readings/lesson-129/reading_129_02.jpg' alt='Thời gian khám bệnh của nha khoa' style='max-width:100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);'/></div><p style='font-style: italic; color: #666;'>Gợi ý: Hãy tìm khoảng thời gian mà anh Ken không bận (không có University, Tennis hay làm thêm) và phòng khám đang mở cửa (có đánh dấu ◯).</p></div>",
-        "question": "ケンさんはいつ歯医者へ行きますか。",
-        "option1": "火曜日の午後 (Chiều thứ 3)",
-        "option2": "水曜日の午前 (Sáng thứ 4)",
-        "option3": "金曜日の午後 (Chiều thứ 6)",
-        "option4": "日曜日の午前 (Sáng Chủ Nhật)",
-        "correctOption": 1,
-        "imageUrl": "/images/readings/lesson-129/reading_129_thumb.jpg",
-        "lessonId": 129
+        "lessonId": 2005,
+        "lessonName": "Bài 4",
+        "content": "きのう デパートへ いきました。シャツと ズボンを かいました。シャツは ３０００えんでした。ズボンは ４０００えんでした。",
+        "imageUrl": null,
+        "questions": [
+            {
+                "questionText": "ズボンは いくらでしたか。",
+                "option1": "３０００えん",
+                "option2": "４０００えん",
+                "option3": "７０００えん",
+                "option4": "１０００えん",
+                "correctOption": 2
+            }
+        ]
     }
 ]

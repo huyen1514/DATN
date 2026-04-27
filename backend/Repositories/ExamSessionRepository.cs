@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Data;
 using Microsoft.EntityFrameworkCore;
 using Models;
@@ -24,7 +20,7 @@ namespace Repositories
                 UserId = userId,
                 ExamId = examId,
                 StartTime = DateTime.UtcNow,
-                Status = "InProgress",
+                Status = SessionStatus.InProgress,
                 TimeRemainingSeconds = durationSeconds
             };
 
@@ -38,7 +34,7 @@ namespace Repositories
             return await _context.ExamSessions.FindAsync(sessionId);
         }
 
-        public async Task<ExamSessionAnswer> SaveAnswerAsync(int sessionId, int questionId, string selectedOption)
+        public async Task<ExamSessionAnswer> SaveAnswerAsync(int sessionId, int questionId, AnswerOption? selectedOption)
         {
             var answer = await _context.ExamSessionAnswers
                 .FirstOrDefaultAsync(a => a.SessionId == sessionId && a.QuestionId == questionId);
@@ -74,7 +70,7 @@ namespace Repositories
             var session = await _context.ExamSessions.FindAsync(sessionId);
             if (session != null)
             {
-                session.Status = "Submitted";
+                session.Status = SessionStatus.Submitted;
                 await _context.SaveChangesAsync();
             }
             return session;

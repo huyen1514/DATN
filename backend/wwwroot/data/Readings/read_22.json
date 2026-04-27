@@ -1,0 +1,18 @@
+[
+    {
+        "lessonId": 2023,
+        "lessonName": "Bài 22",
+        "content": "なつやすみに かぞくと うみへ いきました。うみで およぎました。とても すずしかったです。それから、しゃしんを たくさん とりました。",
+        "imageUrl": null,
+        "questions": [
+            {
+                "questionText": "なつやすみに うみで 何を しましたか。",
+                "option1": "およぎました",
+                "option2": "さかなを たべました",
+                "option3": "ともだちに あいました",
+                "option4": "かいものを しました",
+                "correctOption": 1
+            }
+        ]
+    }
+]

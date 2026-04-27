@@ -8,6 +8,8 @@ using Data;
 using Services;
 using Models;
 using Repositories;
+using System.Text.Json.Serialization; 
+using Microsoft.AspNetCore.Http.Features; // MỚI THÊM: Thư viện cấu hình FormOptions cho Upload File lớn
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
@@ -25,9 +27,13 @@ builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<VocabImportService>();
 builder.Services.AddScoped<GrammarImportService>();
 builder.Services.AddScoped<KanjiImportService>();
+
+//Đăng ký ReadImportService
 builder.Services.AddScoped<ReadImportService>();
+
 builder.Services.AddScoped<ListenImportService>();
 builder.Services.AddScoped<ExamPdfImportService>();
+builder.Services.AddScoped<ExamJsonImportService>();
 builder.Services.AddScoped<EmailService>();
 
 // Register Repositories
@@ -35,15 +41,24 @@ builder.Services.AddScoped<IProgressRepository, ProgressRepository>();
 builder.Services.AddScoped<IExamSessionRepository, ExamSessionRepository>();
 builder.Services.AddScoped<IUserProgressRepository, UserProgressRepository>();
 builder.Services.AddScoped<ILessonRepository, LessonRepository>();
-builder.Services.AddScoped<ITestHistoryRepository, TestHistoryRepository>();
 builder.Services.AddScoped<IBookmarkRepository, BookmarkRepository>();
+builder.Services.AddScoped<IExamRepository, ExamRepository>();
+builder.Services.AddScoped<IExamQuestionRepository, ExamQuestionRepository>();
+builder.Services.AddScoped<IQuestionGroupRepository, QuestionGroupRepository>();
+builder.Services.AddScoped<IExamResultRepository, ExamResultRepository>();
+builder.Services.AddScoped<IUserExamRepository, UserExamRepository>();
+builder.Services.AddScoped<IExamSessionAnswerRepository, ExamSessionAnswerRepository>();
 
 // Register Services
 builder.Services.AddScoped<IProgressService, ProgressService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IRecommendationService, RecommendationService>();
-builder.Services.AddScoped<ITestHistoryService, TestHistoryService>();
 builder.Services.AddScoped<IBookmarkService, BookmarkService>();
+builder.Services.AddScoped<IExamService, ExamService>();
+builder.Services.AddScoped<IExamQuestionService, ExamQuestionService>();
+builder.Services.AddScoped<IExamResultService, ExamResultService>();
+builder.Services.AddScoped<IExamSessionService, ExamSessionService>();
+builder.Services.AddScoped<IUserExamService, UserExamService>();
 
 builder.Services.AddMemoryCache();
 builder.Services.AddHttpContextAccessor();
@@ -95,7 +110,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Add Authorization (🔑 BẮT BUỘC khi dùng app.UseAuthorization)
+// Add Authorization (BẮT BUỘC khi dùng app.UseAuthorization)
 builder.Services.AddAuthorization();
 
 // Add CORS
@@ -109,8 +124,17 @@ builder.Services.AddCors(options =>
     );
 });
 
-// Add Controllers
-builder.Services.AddControllers();
+// THÊM IGNORECYCLES ĐỂ FIX LỖI VÒNG LẶP JSON CHO READING (1-N)
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
+
+// MỚI THÊM: TĂNG GIỚI HẠN UPLOAD FILE CHO AUDIO/IMAGE (Ví dụ: 50MB)
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 52428800; // 50MB tính bằng bytes
+});
 
 // Add Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -130,7 +154,7 @@ builder.Services.AddSwaggerGen(c =>
         BearerFormat = "JWT",
         In = Microsoft.OpenApi.Models.ParameterLocation.Header,
         Description = "Nhập token theo định dạng: Bearer {token}"
-});
+    });
 
     c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
     {
@@ -173,6 +197,25 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    
+    // MỚI THÊM: Lấy IWebHostEnvironment để xử lý thư mục
+    var env = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>(); 
+
+    // MỚI THÊM: TỰ ĐỘNG TẠO CÁC THƯ MỤC CẦN THIẾT CHO LISTENING VÀ UPLOAD NẾU CHƯA CÓ
+    string[] requiredDirectories = {
+        Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "data", "Listenings"),
+        Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "uploads", "audio"),
+        Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "uploads", "images")
+    };
+
+    foreach (var dir in requiredDirectories)
+    {
+        if (!Directory.Exists(dir))
+        {
+            Directory.CreateDirectory(dir);
+            Console.WriteLine($"📁 Created directory: {dir}");
+        }
+    }
 
     // Retry logic: đợi SQL Server sẵn sàng (đặc biệt quan trọng trong Docker)
     var maxRetries = 10;
@@ -252,7 +295,6 @@ using (var scope = app.Services.CreateScope())
     var importer = scope.ServiceProvider.GetRequiredService<VocabImportService>();
     try 
     {
-        // Bạn có thể await vì Program.cs của .NET 8 hỗ trợ Top-level statements
         await importer.ImportAllFromFolderAsync();
         Console.WriteLine("Vocab Import check completed.");
     }
@@ -283,6 +325,7 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine("Kanji Import failed: " + ex.Message);
     }
 
+    // Import Đọc hiểu 
     var readImporter = scope.ServiceProvider.GetRequiredService<ReadImportService>();
     try 
     {

@@ -3,16 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 namespace Controllers
 {
     [ApiController]
-    [Route("api/upload")]
+    [Route("api/[controller]")] // Tự động map thành api/upload
     public class UploadController : ControllerBase
     {
         private readonly IWebHostEnvironment _environment;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public UploadController(IWebHostEnvironment environment, IHttpContextAccessor httpContextAccessor)
+        // Không cần IHttpContextAccessor nữa nếu ta trả về đường dẫn tương đối
+        public UploadController(IWebHostEnvironment environment)
         {
             _environment = environment;
-            _httpContextAccessor = httpContextAccessor;
         }
 
         [HttpPost("audio")]
@@ -21,15 +20,15 @@ namespace Controllers
             if (file == null || file.Length == 0)
                 return BadRequest("Không có file nào được tải lên.");
 
+            // BẢO MẬT: Kiểm tra định dạng file âm thanh
+            var allowedExtensions = new[] { ".mp3", ".wav", ".m4a", ".ogg" };
+            var extension = Path.GetExtension(file.FileName).ToLower();
+            if (!allowedExtensions.Contains(extension))
+                return BadRequest("Chỉ chấp nhận file âm thanh (.mp3, .wav, .m4a, .ogg)");
+
             try
             {
-                string webRootPath = _environment.WebRootPath;
-                if (string.IsNullOrWhiteSpace(webRootPath))
-                {
-                    // Fallback to ContentRootPath/wwwroot if WebRootPath is not set automatically
-                    webRootPath = Path.Combine(_environment.ContentRootPath, "wwwroot");
-                }
-
+                string webRootPath = _environment.WebRootPath ?? Path.Combine(_environment.ContentRootPath, "wwwroot");
                 string uploadsFolder = Path.Combine(webRootPath, "uploads", "audio");
                 
                 if (!Directory.Exists(uploadsFolder))
@@ -37,8 +36,7 @@ namespace Controllers
                     Directory.CreateDirectory(uploadsFolder);
                 }
 
-                // Create a unique filename
-                string uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
+                string uniqueFileName = Guid.NewGuid().ToString() + extension; // Dùng extension chuẩn để tên file gọn hơn
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -46,11 +44,8 @@ namespace Controllers
                     await file.CopyToAsync(fileStream);
                 }
 
-                // Determine base URL dynamically
-                var request = _httpContextAccessor.HttpContext?.Request;
-                string baseUrl = $"{request?.Scheme}://{request?.Host}";
-                
-                string fileUrl = $"{baseUrl}/uploads/audio/{uniqueFileName}";
+                // TỐI ƯU: Chỉ trả về đường dẫn tương đối
+                string fileUrl = $"/uploads/audio/{uniqueFileName}";
 
                 return Ok(new { url = fileUrl });
             }
@@ -59,20 +54,22 @@ namespace Controllers
                 return StatusCode(500, $"Lỗi server: {ex.Message}");
             }
         }
+
         [HttpPost("image")]
         public async Task<IActionResult> UploadImage(IFormFile file)
         {
             if (file == null || file.Length == 0)
                 return BadRequest("Không có file nào được tải lên.");
 
+            // BẢO MẬT: Kiểm tra định dạng file ảnh
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".webp", ".gif" };
+            var extension = Path.GetExtension(file.FileName).ToLower();
+            if (!allowedExtensions.Contains(extension))
+                return BadRequest("Chỉ chấp nhận file ảnh (.jpg, .jpeg, .png, .webp, .gif)");
+
             try
             {
-                string webRootPath = _environment.WebRootPath;
-                if (string.IsNullOrWhiteSpace(webRootPath))
-                {
-                    webRootPath = Path.Combine(_environment.ContentRootPath, "wwwroot");
-                }
-
+                string webRootPath = _environment.WebRootPath ?? Path.Combine(_environment.ContentRootPath, "wwwroot");
                 string uploadsFolder = Path.Combine(webRootPath, "uploads", "images");
                 
                 if (!Directory.Exists(uploadsFolder))
@@ -80,7 +77,7 @@ namespace Controllers
                     Directory.CreateDirectory(uploadsFolder);
                 }
 
-                string uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
+                string uniqueFileName = Guid.NewGuid().ToString() + extension;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -88,10 +85,8 @@ namespace Controllers
                     await file.CopyToAsync(fileStream);
                 }
 
-                var request = _httpContextAccessor.HttpContext?.Request;
-                string baseUrl = $"{request?.Scheme}://{request?.Host}";
-                
-                string fileUrl = $"{baseUrl}/uploads/images/{uniqueFileName}";
+                // TỐI ƯU: Chỉ trả về đường dẫn tương đối
+                string fileUrl = $"/uploads/images/{uniqueFileName}";
 
                 return Ok(new { url = fileUrl });
             }

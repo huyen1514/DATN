@@ -1,7 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text.Json;
-using Data; 
-using Models;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Models;
+using Data;
+using DTOs.Reading; 
 
 namespace Services
 {
@@ -16,108 +23,88 @@ namespace Services
             _env = env;
         }
 
-        /// <summary>
-        /// Duyệt tất cả file .json trong thư mục wwwroot/data/Readings và import vào DB
-        /// </summary>
         public async Task ImportAllFromFolderAsync()
         {
-            // Trỏ vào folder wwwroot/data/Readings
-            string folderPath = Path.Combine(_env.WebRootPath, "data", "Readings");
-
-            if (!Directory.Exists(folderPath))
+            // Trỏ thẳng vào wwwroot/data/Readings
+            var webRoot = _env.WebRootPath ?? Path.Combine(_env.ContentRootPath, "wwwroot");
+            var folderPath = Path.Combine(webRoot, "data", "Readings"); 
+            
+            if (!Directory.Exists(folderPath)) 
             {
-                Console.WriteLine($"[Reading] Thư mục không tồn tại: {folderPath}");
+                Console.WriteLine($"Không tìm thấy thư mục: {folderPath}");
                 return;
             }
 
             var files = Directory.GetFiles(folderPath, "*.json");
-            Console.WriteLine($"[Reading] Tìm thấy {files.Length} file JSON.");
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
             foreach (var file in files)
             {
-                try 
+                try
                 {
-                    var (imported, updated) = await ImportReadingFromJsonAsync(file);
-                    if (imported > 0 || updated > 0)
+                    var json = await File.ReadAllTextAsync(file);
+                    
+                    var dtos = JsonSerializer.Deserialize<List<ReadingImportDto>>(json, options);
+
+                    if (dtos == null) continue;
+
+                    foreach (var dto in dtos)
                     {
-                        Console.WriteLine($"[Reading] File: {Path.GetFileName(file)} -> Thêm mới: {imported}, Cập nhật: {updated}");
+                        Lesson? lesson = null;
+                        if (dto.LessonId > 0)
+                        {
+                            lesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonId == dto.LessonId);
+                        }
+                        
+                        // Fallback: Nếu không tìm thấy bằng LessonId (do ID có thể khác biệt giữa JSON và DB thực tế), tìm theo Tên
+                        if (lesson == null && !string.IsNullOrEmpty(dto.LessonName))
+                        {
+                            lesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == dto.LessonName && l.SkillType == "Đọc hiểu");
+                        }
+
+                        if (lesson == null) 
+                        {
+                            Console.WriteLine($"Bỏ qua: Không tìm thấy Lesson ID '{dto.LessonId}' (Tên: {dto.LessonName}).");
+                            continue;
+                        }
+
+                        // 2. Tránh import trùng lặp đoạn văn
+                        var exists = await _context.ReadingPassages
+                            .AnyAsync(p => p.LessonId == lesson.LessonId && p.Content == dto.Content);
+
+                        if (!exists)
+                        {
+                            var passage = new ReadingPassage
+                            {
+                                LessonId = lesson.LessonId,
+                                Content = dto.Content,
+                                ImageUrl = dto.ImageUrl,
+                                CreatedAt = DateTime.UtcNow,
+                                
+                                ReadingQuestions = dto.Questions.Select(q => new ReadingQuestion
+                                {
+                                    QuestionText = q.QuestionText,
+                                    Option1 = q.Option1,
+                                    Option2 = q.Option2,
+                                    Option3 = q.Option3,
+                                    Option4 = q.Option4,
+                                    CorrectOption = q.CorrectOption,
+                                    CreatedAt = DateTime.UtcNow
+                                }).ToList()
+                            };
+
+                            _context.ReadingPassages.Add(passage);
+                        }
                     }
+                    
+                    await _context.SaveChangesAsync();
+                    Console.WriteLine($"Đã import thành công file: {Path.GetFileName(file)}");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"[Reading] Lỗi khi xử lý file {Path.GetFileName(file)}: {ex.Message}");
+                    Console.WriteLine($"Lỗi khi import file {Path.GetFileName(file)}: {ex.Message}");
                 }
             }
-        }
-
-        /// <summary>
-        /// Đọc nội dung từ một file JSON cụ thể
-        /// </summary>
-        public async Task<(int imported, int updated)> ImportReadingFromJsonAsync(string filePath)
-        {
-            if (!File.Exists(filePath)) return (0, 0);
-
-            var jsonString = await File.ReadAllTextAsync(filePath);
-            
-            // Cấu hình để không phân biệt hoa thường trong key JSON
-            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            
-            var readingList = JsonSerializer.Deserialize<List<Reading>>(jsonString, options);
-
-            if (readingList == null || !readingList.Any()) return (0, 0);
-
-            var fileName = Path.GetFileNameWithoutExtension(filePath);
-            var match = System.Text.RegularExpressions.Regex.Match(fileName, @"\d+");
-            int lessonNumber = 0;
-            if (match.Success) lessonNumber = int.Parse(match.Value);
-
-            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Đọc hiểu");
-            if (targetLesson == null)
-            {
-                Console.WriteLine($"[Reading] Target lesson not found for file {fileName}. Skipping.");
-                return (0, 0);
-            }
-
-            int imported = 0;
-            int updated = 0;
-
-            foreach (var reading in readingList)
-            {
-                reading.LessonId = targetLesson.LessonId;
-                // Kiểm tra xem bài đọc này đã tồn tại trong Lesson này chưa (dựa trên nội dung)
-                var existingReading = await _context.Readings
-                    .FirstOrDefaultAsync(r => r.Content == reading.Content && r.LessonId == reading.LessonId);
-
-                if (existingReading == null)
-                {
-                    // Thiết lập ngày tạo
-                    reading.CreatedAt = DateTime.UtcNow;
-                    
-                    _context.Readings.Add(reading);
-                    imported++;
-                }
-                else
-                {
-                    // Cập nhật các trường dữ liệu nếu đã tồn tại
-                    existingReading.Question = reading.Question ?? existingReading.Question;
-                    existingReading.Option1 = reading.Option1 ?? existingReading.Option1;
-                    existingReading.Option2 = reading.Option2 ?? existingReading.Option2;
-                    existingReading.Option3 = reading.Option3 ?? existingReading.Option3;
-                    existingReading.Option4 = reading.Option4 ?? existingReading.Option4;
-                    existingReading.CorrectOption = reading.CorrectOption;
-                    existingReading.ImageUrl = reading.ImageUrl ?? existingReading.ImageUrl;
-                    
-                    updated++;
-                }
-            }
-
-            // Lưu thay đổi sau khi duyệt hết một file
-            if (imported > 0 || updated > 0)
-            {
-                await _context.SaveChangesAsync();
-            }
-            
-            return (imported, updated);
         }
     }
 }

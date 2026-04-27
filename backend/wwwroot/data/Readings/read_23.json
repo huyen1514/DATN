@@ -1,0 +1,18 @@
+[
+    {
+        "lessonId": 2024,
+        "lessonName": "Bài 23",
+        "content": "にほんには きせつが ４つ あります。はる、なつ、あき、ふゆです。わたしは はるが いちばん すきです。さくらが きれいですから。",
+        "imageUrl": null,
+        "questions": [
+            {
+                "questionText": "どうして はるが すきですか。",
+                "option1": "あたたかいですから",
+                "option2": "さくらが きれいですから",
+                "option3": "ゆきが ふりますから",
+                "option4": "なつやすみが ありますから",
+                "correctOption": 2
+            }
+        ]
+    }
+]

@@ -11,17 +11,13 @@ namespace Models
         public int ExamResultId { get; set; }
         
         [Required]
-        [Column(TypeName = "decimal(5,2)")]
-        public decimal Score  { get; set; }
+        public int Score { get; set; }
 
-        [Column(TypeName = "decimal(5,2)")]
-        public decimal VocabularyGrammarScore { get; set; }
+        public int VocabularyGrammarScore { get; set; }
         
-        [Column(TypeName = "decimal(5,2)")]
-        public decimal ReadingScore { get; set; }
+        public int ReadingScore { get; set; }
         
-        [Column(TypeName = "decimal(5,2)")]
-        public decimal ListeningScore { get; set; }
+        public int ListeningScore { get; set; }
 
         public bool HasParalysisScore { get; set; }
 
@@ -36,6 +32,10 @@ namespace Models
         public int Duration { get; set; }
 
         public DateTime CompletedAt { get; set; }
+
+        // Dùng để lưu lại cấu trúc đề + câu trả lời của user dưới dạng JSON để xem lại bài giải.
+        [Column(TypeName = "nvarchar(max)")]
+        public string? ExamSnapshotJson { get; set; }
 
         [Required]
         [ForeignKey("UserId")]

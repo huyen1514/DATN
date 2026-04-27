@@ -75,20 +75,22 @@ namespace Services
         public int ApplyAnswerKey(ImportExamRequest request, Dictionary<int, int> answerMap, List<string> warnings)
         {
             var updated = 0;
+            var questionIndex = 0;
             foreach (var section in request.Sections)
             {
                 foreach (var mondai in section.MondaiList)
                 {
                     foreach (var question in mondai.Questions)
                     {
-                        if (answerMap.TryGetValue(question.Number, out var ans) && ans >= 1 && ans <= 4)
+                        questionIndex++;
+                        if (answerMap.TryGetValue(questionIndex, out var ans) && ans >= 1 && ans <= 4)
                         {
-                            question.CorrectOptionId = ans;
+                            question.CorrectOption = OptionIdToLetter(ans);
                             updated++;
                         }
                         else
                         {
-                            warnings.Add($"Không tìm thấy đáp án cho câu {question.Number} trong answer key.");
+                            warnings.Add($"Không tìm thấy đáp án cho câu {questionIndex} trong answer key.");
                         }
                     }
                 }
@@ -110,7 +112,6 @@ namespace Services
             {
                 TestInfo = new TestInfoDto
                 {
-                    TestId = Path.GetFileNameWithoutExtension(fileName).Replace(" ", "_"),
                     Title = $"Imported from PDF: {Path.GetFileNameWithoutExtension(fileName)}",
                     Level = level,
                     TotalDurationMinutes = 105,
@@ -128,7 +129,6 @@ namespace Services
                         SectionId = "sec_01",
                         SectionName = "Imported Questions",
                         JpName = "PDF Import",
-                        DurationMinutes = 105,
                         MondaiList = new List<MondaiDto>()
                     }
                 }
@@ -136,7 +136,6 @@ namespace Services
 
             var mondai = new MondaiDto
             {
-                MondaiId = "m_01",
                 MondaiNumber = 1,
                 Instruction = "Tự động trích xuất từ PDF (vui lòng rà soát đáp án).",
                 VnInstruction = "Dữ liệu được parse tự động, hãy kiểm tra lại trước khi dùng chính thức."
@@ -146,7 +145,7 @@ namespace Services
             var questionRegex = new Regex(@"^(?:[Qq]?\s*|問\s*)(\d{1,3})[\.．\)\-\s]+(.+)$");
             var optionRegex = new Regex(@"^([1-4])[\.．\)\-\s]+(.+)$");
 
-            QuestionDto? currentQuestion = null;
+            ImportQuestionDto? currentQuestion = null;
             var questionCount = 0;
 
             foreach (var line in lines)
@@ -156,15 +155,13 @@ namespace Services
                 {
                     if (currentQuestion != null)
                     {
-                        FinalizeQuestion(currentQuestion, answerMap, warnings);
+                        FinalizeQuestion(currentQuestion, questionCount, answerMap, warnings);
                         mondai.Questions.Add(currentQuestion);
                     }
 
                     var qNum = int.Parse(q.Groups[1].Value);
-                    currentQuestion = new QuestionDto
+                    currentQuestion = new ImportQuestionDto
                     {
-                        QuestionId = $"pdf_q_{qNum:D3}",
-                        Number = qNum,
                         Content = q.Groups[2].Value.Trim(),
                         Options = new List<OptionDto>()
                     };
@@ -179,7 +176,7 @@ namespace Services
                 {
                     currentQuestion.Options.Add(new OptionDto
                     {
-                        OptionId = int.Parse(opt.Groups[1].Value),
+                        Id = int.Parse(opt.Groups[1].Value),
                         Text = opt.Groups[2].Value.Trim()
                     });
                 }
@@ -194,7 +191,8 @@ namespace Services
 
             if (currentQuestion != null)
             {
-                FinalizeQuestion(currentQuestion, answerMap, warnings);
+                questionCount++;
+                FinalizeQuestion(currentQuestion, questionCount - 1, answerMap, warnings);
                 mondai.Questions.Add(currentQuestion);
             }
 
@@ -204,7 +202,7 @@ namespace Services
             }
             else
             {
-                warnings.Add($"Đã parse tạm {questionCount} câu từ PDF.");
+                warnings.Add($"Đã parse tạm {mondai.Questions.Count} câu từ PDF.");
             }
 
             req.Sections[0].MondaiList.Add(mondai);
@@ -236,27 +234,35 @@ namespace Services
             return map;
         }
 
-        private static void FinalizeQuestion(QuestionDto q, Dictionary<int, int> answerMap, List<string> warnings)
+        private static void FinalizeQuestion(ImportQuestionDto q, int questionNumber, Dictionary<int, int> answerMap, List<string> warnings)
         {
             while (q.Options.Count < 4)
             {
                 q.Options.Add(new OptionDto
                 {
-                    OptionId = q.Options.Count + 1,
+                    Id = q.Options.Count + 1,
                     Text = $"(trống - option {q.Options.Count + 1})"
                 });
             }
 
-            if (answerMap.TryGetValue(q.Number, out var ans))
+            if (answerMap.TryGetValue(questionNumber, out var ans))
             {
-                q.CorrectOptionId = ans;
+                q.CorrectOption = OptionIdToLetter(ans);
             }
             else
             {
-                q.CorrectOptionId = 1;
-                warnings.Add($"Câu {q.Number}: không tìm thấy đáp án trong PDF, tạm đặt option 1.");
+                q.CorrectOption = "A";
+                warnings.Add($"Câu {questionNumber}: không tìm thấy đáp án trong PDF, tạm đặt option A.");
             }
         }
+
+        private static string OptionIdToLetter(int optionId) => optionId switch
+        {
+            1 => "A",
+            2 => "B",
+            3 => "C",
+            4 => "D",
+            _ => "A"
+        };
     }
 }
-

@@ -1,0 +1,137 @@
+{
+  "testInfo": {
+    "title": "JLPT N5 - Đề mẫu 01",
+    "level": "N5",
+    "totalDurationMinutes": 105,
+    "passMarks": {
+      "total": 80,
+      "vocabularyGrammar": 38,
+      "reading": 19,
+      "listening": 19,
+      "vocabularyGrammarReading": 0
+    }
+  },
+  "sections": [
+    {
+      "sectionId": "sec_vocab",
+      "sectionName": "Vocabulary",
+      "jpName": "文字・語彙",
+      "mondaiList": [
+        {
+          "mondaiNumber": 1,
+          "instruction": "＿＿の ことばは ひらがなで どう かきますか。",
+          "vnInstruction": "Từ gạch chân viết bằng Hiragana như thế nào?",
+          "questions": [
+            {
+              "content": "この　花は　とても　きれいです。",
+              "options": [
+                { "id": 1, "text": "はな" },
+                { "id": 2, "text": "はに" },
+                { "id": 3, "text": "かな" },
+                { "id": 4, "text": "かに" }
+              ],
+              "correctOption": "A",
+              "explanation": "花（はな）= hoa"
+            },
+            {
+              "content": "毎朝　六時に　おきます。",
+              "options": [
+                { "id": 1, "text": "まいあさ" },
+                { "id": 2, "text": "まいちょう" },
+                { "id": 3, "text": "めいあさ" },
+                { "id": 4, "text": "めいちょう" }
+              ],
+              "correctOption": "A",
+              "explanation": "毎朝（まいあさ）= mỗi buổi sáng"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "sec_grammar",
+      "sectionName": "Grammar",
+      "jpName": "文法",
+      "mondaiList": [
+        {
+          "mondaiNumber": 2,
+          "instruction": "（　）に　何を　入れますか。",
+          "vnInstruction": "Điền gì vào chỗ trống?",
+          "questions": [
+            {
+              "content": "わたしは　がくせい（　）です。",
+              "options": [
+                { "id": 1, "text": "は" },
+                { "id": 2, "text": "が" },
+                { "id": 3, "text": "を" },
+                { "id": 4, "text": "に" }
+              ],
+              "correctOption": "A"
+            },
+            {
+              "content": "きのう　えいがを（　）。",
+              "options": [
+                { "id": 1, "text": "みます" },
+                { "id": 2, "text": "みました" },
+                { "id": 3, "text": "みる" },
+                { "id": 4, "text": "みて" }
+              ],
+              "correctOption": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "sec_reading",
+      "sectionName": "Reading",
+      "jpName": "読解",
+      "mondaiList": [
+        {
+          "mondaiNumber": 3,
+          "instruction": "つぎの　ぶんしょうを　よんで、しつもんに　こたえて　ください。",
+          "vnInstruction": "Đọc đoạn văn sau và trả lời câu hỏi.",
+          "readingPassage": "きのう　わたしは　ともだちと　こうえんに　いきました。こうえんで　おべんとうを　たべました。とても　たのしかったです。",
+          "questions": [
+            {
+              "content": "きのう　どこに　いきましたか。",
+              "options": [
+                { "id": 1, "text": "がっこう" },
+                { "id": 2, "text": "こうえん" },
+                { "id": 3, "text": "うち" },
+                { "id": 4, "text": "えき" }
+              ],
+              "correctOption": "B",
+              "explanation": "Đoạn văn nói: こうえんに いきました (đi công viên)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "sec_listening",
+      "sectionName": "Listening",
+      "jpName": "聴解",
+      "mondaiList": [
+        {
+          "mondaiNumber": 4,
+          "instruction": "もんだいを　きいて、ただしい　こたえを　えらんで　ください。",
+          "vnInstruction": "Nghe câu hỏi và chọn đáp án đúng.",
+          "audioUrl": "/uploads/audio/n5_sample_listening_01.mp3",
+          "questions": [
+            {
+              "content": "おとこの　ひとは　なにを　かいましたか。",
+              "options": [
+                { "id": 1, "text": "ほん" },
+                { "id": 2, "text": "ノート" },
+                { "id": 3, "text": "えんぴつ" },
+                { "id": 4, "text": "かばん" }
+              ],
+              "correctOption": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
