@@ -4,17 +4,23 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { api, API_URL } from "@/lib/api";
 import StudentLayout from "@/components/StudentLayout";
-import { Bookmark, Zap, ArrowRight, FileText, Sparkles } from "lucide-react";
+import { Bookmark, Zap, ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 
 const BACKEND_URL = API_URL.replace(/\/api$/, "");
 
-interface ReadingData {
-  readingId: number;
+// Cập nhật lại Interface theo đúng Model mới
+interface ReadingQuestion {
+  readingQuestionId: number;
+  questionText: string;
+}
+
+interface ReadingPassage {
+  passageId: number;
   lessonId: number;
-  imageUrl?: string;
-  question?: string;
+  content: string;
+  readingQuestions?: ReadingQuestion[];
 }
 
 export default function ReadingLessonsPage() {
@@ -22,7 +28,9 @@ export default function ReadingLessonsPage() {
   const levelName = (params?.levelName as string) || "";
 
   const [lessons, setLessons] = useState<any[]>([]);
-  const [readingCounts, setReadingCounts] = useState<Record<number, number>>({});
+  // Tách riêng state đếm số đoạn văn và đếm tổng số câu hỏi
+  const [passageCounts, setPassageCounts] = useState<Record<number, number>>({});
+  const [questionCounts, setQuestionCounts] = useState<Record<number, number>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -44,21 +52,29 @@ export default function ReadingLessonsPage() {
 
       const [levelLessons, allReadings] = await Promise.all([
         api(`/lessons/level/${targetLevel.levelId}`),
-        api("/readings"),
+        api("/readings"), // Lấy toàn bộ bài đọc kèm câu hỏi
       ]);
 
       if (Array.isArray(levelLessons) && Array.isArray(allReadings)) {
-        const counts: Record<number, number> = {};
-        allReadings.forEach((r: ReadingData) => {
-          counts[r.lessonId] = (counts[r.lessonId] || 0) + 1;
+        const pCounts: Record<number, number> = {};
+        const qCounts: Record<number, number> = {};
+
+        // Đếm số đoạn văn và tổng số câu hỏi cho từng Lesson
+        allReadings.forEach((r: ReadingPassage) => {
+          pCounts[r.lessonId] = (pCounts[r.lessonId] || 0) + 1;
+
+          const questionsInPassage = r.readingQuestions ? r.readingQuestions.length : 0;
+          qCounts[r.lessonId] = (qCounts[r.lessonId] || 0) + questionsInPassage;
         });
-        setReadingCounts(counts);
+
+        setPassageCounts(pCounts);
+        setQuestionCounts(qCounts);
 
         const validLessons = levelLessons.filter(
           (l: any) =>
             (l.skillType === "Đọc hiểu" || l.skillType === "Tự do" || !l.skillType) &&
-            counts[l.lessonId] &&
-            counts[l.lessonId] > 0
+            pCounts[l.lessonId] &&
+            pCounts[l.lessonId] > 0
         );
         setLessons(validLessons);
       }
@@ -86,7 +102,7 @@ export default function ReadingLessonsPage() {
     <StudentLayout>
       <div className="relative min-h-screen font-sans text-neutral-900 selection:bg-[#c62828]/20 selection:text-[#c62828]">
 
-        {/* Background — identical to KanjiLessonsPage */}
+        {/* Background */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1490806678567-2410b2da3073?auto=format&fit=crop&q=80&w=2000"
@@ -98,7 +114,7 @@ export default function ReadingLessonsPage() {
 
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-20 pt-12">
 
-          {/* HEADER — mirrors KanjiLessonsPage header exactly */}
+          {/* HEADER */}
           <motion.header
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,7 +131,7 @@ export default function ReadingLessonsPage() {
 
           {/* STATES */}
           {isLoading ? (
-            /* SKELETON — same as Kanji */
+            /* SKELETON */
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div key={i} className="bg-white/80 backdrop-blur-sm border border-neutral-200/60 rounded-xl p-6 shadow-sm h-56 flex flex-col justify-between">
@@ -130,7 +146,7 @@ export default function ReadingLessonsPage() {
               ))}
             </div>
           ) : error ? (
-            /* ERROR STATE — same as Kanji */
+            /* ERROR STATE */
             <div className="text-center py-20 bg-white/80 backdrop-blur-md rounded-2xl border border-neutral-200 shadow-sm px-6 max-w-2xl mx-auto">
               <Zap size={48} className="mx-auto mb-4 text-[#c62828]" />
               <p className="text-neutral-600 font-medium text-lg">{error}</p>
@@ -142,7 +158,7 @@ export default function ReadingLessonsPage() {
               </button>
             </div>
           ) : lessons.length === 0 ? (
-            /* EMPTY STATE — same as Kanji */
+            /* EMPTY STATE */
             <div className="py-24 rounded-2xl border border-neutral-200/60 bg-white/80 backdrop-blur-md text-center shadow-sm px-6 max-w-3xl mx-auto">
               <Bookmark size={56} className="mx-auto mb-4 text-neutral-300" strokeWidth={1.5} />
               <h3 className="mb-3 text-2xl font-bold text-neutral-800">Chưa có bài học nào</h3>
@@ -151,7 +167,7 @@ export default function ReadingLessonsPage() {
               </p>
             </div>
           ) : (
-            /* LESSONS GRID — same card structure as Kanji */
+            /* LESSONS GRID */
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -159,12 +175,14 @@ export default function ReadingLessonsPage() {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {lessons.map((lesson) => {
-                const count = readingCounts[lesson.lessonId] || 0;
+                const pCount = passageCounts[lesson.lessonId] || 0;
+                const qCount = questionCounts[lesson.lessonId] || 0;
+
                 return (
                   <motion.div key={lesson.lessonId} variants={itemVariants} className="h-full">
                     <div className="group relative bg-white/90 backdrop-blur-md border border-neutral-200 rounded-xl p-6 shadow-sm hover:shadow-[0_12px_30px_rgb(198,40,40,0.12)] hover:border-[#c62828]/40 hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col overflow-hidden">
 
-                      {/* Decorative watermark — 読 (Đọc) thay cho 漢 */}
+                      {/* Decorative watermark */}
                       <div className="absolute -bottom-6 -right-4 text-8xl font-black text-neutral-100 opacity-60 group-hover:text-[#c62828]/5 transition-colors duration-500 pointer-events-none select-none font-serif">
                         読
                       </div>
@@ -176,13 +194,20 @@ export default function ReadingLessonsPage() {
                         </h3>
                       </div>
 
-                      {/* Key-value details — same structure as Kanji */}
+                      {/* Key-value details */}
                       <div className="relative z-10 flex-grow space-y-3 mb-8">
+                        <div className="flex items-center text-[15px]">
+                          <div className="w-2 h-2 rounded-full bg-neutral-300 mr-3 group-hover:bg-[#c62828]/60 transition-colors" />
+                          <span className="w-36 text-neutral-500">Số bài đọc</span>
+                          <span className="font-semibold text-neutral-900 bg-neutral-100 px-2 py-0.5 rounded text-sm group-hover:bg-[#c62828]/10 group-hover:text-[#c62828] transition-colors">
+                            {pCount} đoạn văn
+                          </span>
+                        </div>
                         <div className="flex items-center text-[15px]">
                           <div className="w-2 h-2 rounded-full bg-neutral-300 mr-3 group-hover:bg-[#c62828]/60 transition-colors" />
                           <span className="w-36 text-neutral-500">Số câu hỏi</span>
                           <span className="font-semibold text-neutral-900 bg-neutral-100 px-2 py-0.5 rounded text-sm group-hover:bg-[#c62828]/10 group-hover:text-[#c62828] transition-colors">
-                            {count} câu hỏi
+                            {qCount} câu hỏi
                           </span>
                         </div>
                         <div className="flex items-center text-[15px]">
@@ -190,14 +215,9 @@ export default function ReadingLessonsPage() {
                           <span className="w-36 text-neutral-500">Hình thức</span>
                           <span className="font-semibold text-neutral-800">Trắc nghiệm</span>
                         </div>
-                        <div className="flex items-center text-[15px]">
-                          <div className="w-2 h-2 rounded-full bg-neutral-300 mr-3 group-hover:bg-[#c62828]/60 transition-colors" />
-                          <span className="w-36 text-neutral-500">Mục tiêu</span>
-                          <span className="font-semibold text-emerald-600">Nắm vững đọc hiểu</span>
-                        </div>
                       </div>
 
-                      {/* Action button — identical style to Kanji */}
+                      {/* Action button */}
                       <div className="relative z-10 mt-auto pt-2">
                         <Link
                           href={`/reading/${levelName}/${lesson.lessonId}`}

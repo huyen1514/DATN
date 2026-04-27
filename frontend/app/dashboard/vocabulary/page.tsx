@@ -10,7 +10,7 @@ interface Lesson {
   lessonId: number; 
   lessonName: string; 
   levelId: number; 
-  level?: Level; 
+  levelName?: string; 
   skillType?: string; 
 }
 interface Vocabulary {
@@ -169,7 +169,7 @@ export default function AdminVocabulary() {
             <option value="all">Tất cả bài học</option>
             {availableLessons.map(l => (
               <option key={l.lessonId} value={String(l.lessonId)}>
-                {l.lessonName}
+                {l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}
               </option>
             ))}
           </select>
@@ -249,7 +249,7 @@ export default function AdminVocabulary() {
                   <select value={form.lessonId} onChange={(e) => setForm({...form, lessonId: parseInt(e.target.value)})}
                     className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm">
                     <option value={0}>-- Chọn --</option>
-                    {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.level ? `(${l.level.levelName})` : ''}</option>)}
+                    {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
                   </select>
                 </div>
               </div>

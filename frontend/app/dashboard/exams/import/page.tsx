@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminLayout from "@/components/AdminLayout";
 import { api, uploadExamPdf, uploadExamPdfWithAnswerKey } from "@/lib/api";
-import { AlertTriangle, ClipboardList, FileJson, FileText, Loader2, Upload, X } from "lucide-react";
+import { AlertTriangle, ClipboardList, FileJson, FileText, Loader2, Upload, X, CheckCircle, Info, ArrowRight, Layers } from "lucide-react";
 
 type ImportExamRequest = {
   test_info: {
@@ -105,15 +105,9 @@ export default function ImportExamPage() {
   const handleImport = async () => {
     setLastCreatedExamId(null);
     setWarnings([]);
-    if (parsed.parseError) {
-      setError(parsed.parseError);
-      return;
-    }
+    if (parsed.parseError) { setError(parsed.parseError); return; }
     const msg = validate(parsed.req);
-    if (msg) {
-      setError(msg);
-      return;
-    }
+    if (msg) { setError(msg); return; }
 
     setIsImporting(true);
     setError("");
@@ -135,10 +129,7 @@ export default function ImportExamPage() {
   };
 
   const handleImportPdf = async () => {
-    if (!pdfFile) {
-      setError("Vui lòng chọn file PDF.");
-      return;
-    }
+    if (!pdfFile) { setError("Vui lòng chọn file PDF."); return; }
     setLastCreatedExamId(null);
     setWarnings([]);
     setError("");
@@ -169,10 +160,7 @@ export default function ImportExamPage() {
   };
 
   const handlePreviewPdfToJson = async () => {
-    if (!pdfFile) {
-      setError("Vui lòng chọn file PDF.");
-      return;
-    }
+    if (!pdfFile) { setError("Vui lòng chọn file PDF."); return; }
     setLastCreatedExamId(null);
     setWarnings([]);
     setError("");
@@ -204,222 +192,188 @@ export default function ImportExamPage() {
 
   return (
     <AdminLayout>
-      <div className="max-w-5xl mx-auto">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-jp-indigo flex items-center gap-2">
-            <Upload size={22} className="text-orange-600" /> Import đề thi (JSON / PDF)
+      <div className="max-w-6xl mx-auto pb-20">
+        <div className="mb-10">
+          <h1 className="text-3xl font-black text-jp-indigo flex items-center gap-3">
+            <div className="bg-orange-500 text-white p-2 rounded-xl"><Upload size={24} /></div>
+            Import Đề Thi JLPT
           </h1>
-          <p className="text-sm text-neutral-500 mt-1">
-            JSON: chính xác nhất. PDF: hệ thống parse text và phân loại tự động (cần rà soát đáp án trước khi dùng chính thức).
-          </p>
+          <p className="text-neutral-400 text-sm mt-2 font-medium">Hỗ trợ nhập liệu từ file JSON chuẩn hoặc phân tách tự động từ file PDF</p>
         </div>
 
         {error && (
-          <div className="mb-4 p-4 rounded-2xl bg-red-50 border border-red-100 text-red-700 flex items-start gap-3">
-            <AlertTriangle size={18} className="mt-0.5" />
-            <div className="text-sm font-medium">{error}</div>
-            <button onClick={() => setError("")} className="ml-auto text-red-500/70 hover:text-red-700">
+          <div className="mb-8 p-5 rounded-3xl bg-red-50 border-2 border-red-100 text-red-700 flex items-start gap-4 shadow-lg shadow-red-500/5 animate-in fade-in slide-in-from-top-4">
+            <AlertTriangle size={24} className="shrink-0 mt-0.5" />
+            <div className="flex-1">
+               <h4 className="font-black text-sm uppercase tracking-widest mb-1">Đã xảy ra lỗi</h4>
+               <p className="text-sm font-bold opacity-80 leading-relaxed">{error}</p>
+            </div>
+            <button onClick={() => setError("")} className="bg-white/50 p-2 rounded-xl hover:bg-white transition-colors">
               <X size={18} />
             </button>
           </div>
         )}
 
         {warnings.length > 0 && (
-          <div className="mb-4 p-4 rounded-2xl bg-amber-50 border border-amber-100 text-amber-800">
-            <div className="text-sm font-bold mb-2">Cảnh báo parser</div>
-            <ul className="text-xs space-y-1 list-disc ml-4">
-              {warnings.slice(0, 8).map((w, i) => <li key={i}>{w}</li>)}
-              {warnings.length > 8 && <li>... và {warnings.length - 8} cảnh báo khác</li>}
+          <div className="mb-8 p-5 rounded-3xl bg-amber-50 border-2 border-amber-100 text-amber-800 shadow-lg shadow-amber-500/5 animate-in fade-in slide-in-from-top-4">
+            <div className="flex items-center gap-3 mb-3">
+               <Info size={20} className="text-amber-500" />
+               <h4 className="text-xs font-black uppercase tracking-widest">Cảnh báo Parser ({warnings.length})</h4>
+            </div>
+            <ul className="text-xs font-bold space-y-1.5 list-disc ml-5 opacity-70">
+              {warnings.slice(0, 5).map((w, i) => <li key={i}>{w}</li>)}
+              {warnings.length > 5 && <li className="list-none pt-1">... và {warnings.length - 5} cảnh báo khác</li>}
             </ul>
           </div>
         )}
 
         {lastCreatedExamId != null && (
-          <div className="mb-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-800 flex items-center gap-3">
-            <ClipboardList size={18} />
-            <div className="text-sm font-semibold">
-              Import thành công. ExamId: <span className="font-black">{lastCreatedExamId}</span>
+          <div className="mb-8 p-6 rounded-[2.5rem] bg-emerald-50 border-2 border-emerald-100 text-emerald-800 flex flex-col md:flex-row items-center gap-6 shadow-xl shadow-emerald-500/5 animate-in zoom-in-95">
+            <div className="w-16 h-16 bg-emerald-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-emerald-500/20">
+               <CheckCircle size={32} />
             </div>
-            <button
-              onClick={() => router.push(`/exams/${lastCreatedExamId}`)}
-              className="ml-auto px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm font-bold hover:bg-emerald-700 transition-colors"
-            >
-              Mở đề
-            </button>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-xl font-black mb-1">Import thành công!</h3>
+              <p className="font-bold opacity-70">Đề thi mới đã được tạo với ID: <span className="text-jp-indigo font-black">#{lastCreatedExamId}</span></p>
+            </div>
+            <div className="flex gap-3">
+               <button onClick={() => router.push(`/dashboard/exams`)} className="px-6 py-3 bg-white border-2 border-emerald-100 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-emerald-100 transition-all">Quản lý</button>
+               <button onClick={() => window.open(`/exams/${lastCreatedExamId}`, '_blank')} className="px-6 py-3 bg-emerald-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:opacity-90 shadow-lg shadow-emerald-500/20 flex items-center gap-2">Xem thử <ArrowRight size={14} /></button>
+            </div>
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <div className="lg:col-span-3">
-            <div className="bg-white border border-black/5 rounded-3xl shadow-sm overflow-hidden mb-6">
-              <div className="p-5 border-b border-black/5 flex items-center justify-between">
-                <div className="flex items-center gap-2 text-sm font-bold text-jp-indigo">
-                  <FileText size={16} /> Import từ PDF
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Method 1: PDF */}
+          <div className="lg:col-span-5 space-y-8">
+             <div className="bg-white border border-black/5 rounded-[2.5rem] shadow-xl shadow-black/[0.02] overflow-hidden">
+                <div className="p-8 border-b border-black/5 flex items-center justify-between bg-neutral-50/30">
+                   <div className="flex items-center gap-3">
+                      <div className="bg-violet-500 text-white p-2 rounded-xl"><FileText size={20} /></div>
+                      <span className="text-sm font-black uppercase tracking-widest text-jp-indigo">Nhập từ PDF</span>
+                   </div>
                 </div>
-                <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-jp-indigo text-white text-sm font-bold hover:bg-jp-red transition-colors">
-                  <Upload size={16} /> Chọn PDF
-                  <input
-                    type="file"
-                    accept="application/pdf,.pdf"
-                    className="hidden"
-                    onChange={(e) => {
-                      const f = e.target.files?.[0] || null;
-                      setPdfFile(f);
-                      setLastCreatedExamId(null);
-                      setWarnings([]);
-                    }}
-                  />
-                </label>
-              </div>
-              <div className="p-5">
-                <div className="text-sm text-neutral-600 mb-3">
-                  File: <span className="font-semibold text-neutral-800">{pdfFile?.name || "(chưa chọn)"}</span>
-                </div>
-                <div className="text-sm text-neutral-600 mb-4">
-                  Answer key (PDF/TXT):{" "}
-                  <span className="font-semibold text-neutral-800">{answerKeyFile?.name || "(tuỳ chọn)"}</span>
-                </div>
-                <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-neutral-200 text-jp-indigo text-sm font-bold hover:bg-neutral-50 transition-colors mb-4">
-                  <Upload size={14} /> Chọn Answer Key
-                  <input
-                    type="file"
-                    accept="application/pdf,.pdf,text/plain,.txt"
-                    className="hidden"
-                    onChange={(e) => setAnswerKeyFile(e.target.files?.[0] || null)}
-                  />
-                </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <button
-                    onClick={handlePreviewPdfToJson}
-                    disabled={isPreviewingPdf || !pdfFile}
-                    className="py-3 rounded-2xl bg-white border border-jp-indigo text-jp-indigo font-bold text-sm hover:bg-jp-indigo/5 disabled:opacity-50 transition-all flex items-center justify-center gap-2"
-                  >
-                    {isPreviewingPdf ? <Loader2 size={16} className="animate-spin" /> : <FileJson size={16} />}
-                    {isPreviewingPdf ? "Đang parse draft..." : "Preview/Edit trước khi publish"}
-                  </button>
-                  <button
-                    onClick={handleImportPdf}
-                    disabled={isImportingPdf || !pdfFile}
-                    className="py-3 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-black text-sm hover:opacity-95 disabled:opacity-50 transition-all flex items-center justify-center gap-2"
-                  >
-                    {isImportingPdf ? <Loader2 size={16} className="animate-spin" /> : <FileText size={16} />}
-                    {isImportingPdf ? "Đang đọc PDF & import..." : "Import PDF trực tiếp"}
-                  </button>
-                </div>
-                <p className="text-xs text-neutral-500 mt-3 leading-relaxed">
-                  Gợi ý: dùng nút Preview để parse thành JSON, chỉnh sửa lại rồi mới publish. PDF scan/ảnh cần OCR để chính xác.
-                </p>
-              </div>
-            </div>
+                <div className="p-8 space-y-6">
+                   <div className="space-y-4">
+                      <div className="p-6 bg-neutral-50 border-2 border-dashed border-neutral-200 rounded-[2rem] flex flex-col items-center text-center group hover:border-jp-indigo transition-all">
+                         <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-neutral-300 mb-3 group-hover:scale-110 group-hover:text-jp-indigo transition-all shadow-sm">
+                            <FileText size={24} />
+                         </div>
+                         <p className="text-xs font-black text-neutral-400 uppercase tracking-widest mb-1">{pdfFile ? pdfFile.name : 'Chọn File Đề Thi (PDF)'}</p>
+                         <label className="cursor-pointer text-[10px] font-black text-jp-indigo hover:text-jp-red transition-colors underline uppercase tracking-widest">
+                           {pdfFile ? 'Thay đổi file' : 'Duyệt file trên máy'}
+                           <input type="file" accept=".pdf" className="hidden" onChange={(e) => setPdfFile(e.target.files?.[0] || null)} />
+                         </label>
+                      </div>
 
-            <div className="bg-white border border-black/5 rounded-3xl shadow-sm overflow-hidden">
-              <div className="p-5 border-b border-black/5 flex items-center justify-between">
-                <div className="flex items-center gap-2 text-sm font-bold text-jp-indigo">
-                  <FileJson size={16} /> Dữ liệu JSON
-                </div>
-                <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-jp-indigo text-white text-sm font-bold hover:bg-jp-red transition-colors">
-                  <Upload size={16} /> Chọn file
-                  <input
-                    type="file"
-                    accept="application/json,.json"
-                    className="hidden"
-                    onChange={(e) => handlePickFile(e.target.files?.[0] || null)}
-                  />
-                </label>
-              </div>
+                      <div className="p-6 bg-neutral-50 border-2 border-dashed border-neutral-200 rounded-[2rem] flex flex-col items-center text-center group hover:border-emerald-500 transition-all">
+                         <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-neutral-300 mb-3 group-hover:scale-110 group-hover:text-emerald-500 transition-all shadow-sm">
+                            <CheckCircle size={24} />
+                         </div>
+                         <p className="text-xs font-black text-neutral-400 uppercase tracking-widest mb-1">{answerKeyFile ? answerKeyFile.name : 'Chọn Answer Key (Tùy chọn)'}</p>
+                         <label className="cursor-pointer text-[10px] font-black text-emerald-600 hover:text-jp-red transition-colors underline uppercase tracking-widest">
+                           {answerKeyFile ? 'Thay đổi file' : 'Duyệt file đáp án'}
+                           <input type="file" accept=".pdf,.txt" className="hidden" onChange={(e) => setAnswerKeyFile(e.target.files?.[0] || null)} />
+                         </label>
+                      </div>
+                   </div>
 
-              {jsonFileName && (
-                <div className="px-5 py-3 text-xs text-neutral-500 border-b border-black/5">
-                  File: <span className="font-semibold text-neutral-700">{jsonFileName}</span>
+                   <div className="space-y-3">
+                      <button 
+                        onClick={handlePreviewPdfToJson} 
+                        disabled={isPreviewingPdf || !pdfFile}
+                        className="w-full py-4 rounded-2xl bg-white border-2 border-jp-indigo/10 text-jp-indigo font-black text-xs uppercase tracking-widest hover:bg-neutral-50 disabled:opacity-50 transition-all flex items-center justify-center gap-3"
+                      >
+                        {isPreviewingPdf ? <Loader2 size={16} className="animate-spin" /> : <FileJson size={18} />}
+                        {isPreviewingPdf ? "Đang xử lý..." : "Chuyển sang JSON Draft"}
+                      </button>
+                      <button 
+                        onClick={handleImportPdf} 
+                        disabled={isImportingPdf || !pdfFile}
+                        className="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-black text-xs uppercase tracking-widest hover:opacity-90 shadow-xl shadow-violet-500/20 disabled:opacity-50 transition-all flex items-center justify-center gap-3"
+                      >
+                        {isImportingPdf ? <Loader2 size={16} className="animate-spin" /> : <Upload size={18} />}
+                        {isImportingPdf ? "Đang Import..." : "Import PDF Trực Tiếp"}
+                      </button>
+                   </div>
+                   
+                   <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-2xl text-[10px] font-bold text-blue-600 leading-relaxed">
+                      <Info size={14} className="shrink-0" />
+                      Hệ thống sử dụng AI để nhận diện cấu trúc đề thi. Để có độ chính xác cao nhất, hãy dùng tính năng "Draft" để kiểm tra dữ liệu trước khi lưu.
+                   </div>
                 </div>
-              )}
-
-              <div className="p-5">
-                <textarea
-                  value={raw}
-                  onChange={(e) => {
-                    setRaw(e.target.value);
-                    setLastCreatedExamId(null);
-                  }}
-                  placeholder="Dán JSON vào đây..."
-                  className="w-full h-[420px] font-mono text-[12px] leading-relaxed p-4 rounded-2xl border border-neutral-200 bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-jp-indigo/20"
-                />
-                {parsed.parseError && (
-                  <div className="mt-3 text-sm text-red-600 font-semibold">
-                    JSON parse error: <span className="font-mono">{parsed.parseError}</span>
-                  </div>
-                )}
-              </div>
-            </div>
+             </div>
           </div>
 
-          <div className="lg:col-span-2">
-            <div className="bg-white border border-black/5 rounded-3xl shadow-sm overflow-hidden">
-              <div className="p-5 border-b border-black/5">
-                <div className="text-sm font-bold text-jp-indigo">Preview</div>
-                <div className="text-xs text-neutral-500 mt-1">Kiểm tra nhanh trước khi import.</div>
-              </div>
-
-              <div className="p-5 space-y-4">
-                <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-4">
-                  <div className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider mb-2">Test info</div>
-                  <div className="space-y-1 text-sm">
-                    <div>
-                      <span className="text-neutral-500">Title:</span>{" "}
-                      <span className="font-bold text-neutral-800">{parsed.req?.test_info?.title || "-"}</span>
-                    </div>
-                    <div>
-                      <span className="text-neutral-500">Level:</span>{" "}
-                      <span className="font-bold text-jp-indigo">{parsed.req?.test_info?.level || "-"}</span>
-                    </div>
-                    <div>
-                      <span className="text-neutral-500">Duration:</span>{" "}
-                      <span className="font-bold text-neutral-800">{parsed.req?.test_info?.total_duration_minutes ?? "-"}</span>
-                      <span className="text-neutral-500"> phút</span>
-                    </div>
-                    <div className="pt-2 text-xs text-neutral-500">
-                      Pass marks:{" "}
-                      <span className="font-mono">
-                        {parsed.req?.test_info?.pass_marks ? JSON.stringify(parsed.req.test_info.pass_marks) : "-"}
-                      </span>
-                    </div>
-                  </div>
+          {/* Method 2: JSON Editor */}
+          <div className="lg:col-span-7 space-y-6">
+             <div className="bg-white border border-black/5 rounded-[2.5rem] shadow-xl shadow-black/[0.02] overflow-hidden flex flex-col h-full">
+                <div className="p-8 border-b border-black/5 flex items-center justify-between bg-neutral-50/30">
+                   <div className="flex items-center gap-3">
+                      <div className="bg-emerald-500 text-white p-2 rounded-xl"><FileJson size={20} /></div>
+                      <span className="text-sm font-black uppercase tracking-widest text-jp-indigo">Dữ liệu JSON</span>
+                   </div>
+                   <label className="cursor-pointer px-6 py-2.5 bg-jp-indigo text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-jp-red transition-all shadow-lg shadow-jp-indigo/20">
+                      Tải File JSON
+                      <input type="file" accept=".json" className="hidden" onChange={(e) => handlePickFile(e.target.files?.[0] || null)} />
+                   </label>
                 </div>
+                
+                <div className="p-8 flex-1 flex flex-col">
+                   <div className="flex-1 relative">
+                      <textarea 
+                        value={raw}
+                        onChange={(e) => { setRaw(e.target.value); setLastCreatedExamId(null); }}
+                        placeholder="Dán dữ liệu JSON hoặc tải từ file..."
+                        className="w-full h-[500px] bg-neutral-900 text-emerald-400 font-mono text-[11px] p-8 rounded-3xl outline-none focus:ring-4 focus:ring-jp-indigo/5 transition-all scrollbar-thin scrollbar-thumb-white/10"
+                      />
+                      {jsonFileName && (
+                        <div className="absolute top-4 right-4 bg-white/10 text-white/50 text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-lg backdrop-blur-md">
+                          File: {jsonFileName}
+                        </div>
+                      )}
+                   </div>
 
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-violet-50 border border-violet-100 rounded-2xl p-4">
-                    <div className="text-[11px] font-bold text-violet-600 uppercase tracking-wider">Sections</div>
-                    <div className="text-2xl font-black text-violet-800 mt-1">{parsed.req?.sections?.length ?? 0}</div>
-                  </div>
-                  <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4">
-                    <div className="text-[11px] font-bold text-amber-600 uppercase tracking-wider">Mondai</div>
-                    <div className="text-2xl font-black text-amber-800 mt-1">{stats?.mondaiCount ?? 0}</div>
-                  </div>
-                  <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-4 col-span-2">
-                    <div className="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">Questions</div>
-                    <div className="text-3xl font-black text-emerald-800 mt-1">{stats?.questionCount ?? 0}</div>
-                  </div>
+                   <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="md:col-span-2 bg-neutral-50 rounded-3xl p-6 border border-black/5">
+                         <div className="flex items-center gap-2 mb-4">
+                            <Layers size={14} className="text-jp-indigo" />
+                            <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Xem trước thông số</span>
+                         </div>
+                         <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                            <div>
+                               <span className="text-[9px] font-black text-neutral-300 uppercase block mb-1">Tên đề thi</span>
+                               <span className="text-xs font-bold text-jp-indigo truncate block">{parsed.req?.test_info?.title || '-'}</span>
+                            </div>
+                            <div>
+                               <span className="text-[9px] font-black text-neutral-300 uppercase block mb-1">Cấp độ</span>
+                               <span className="text-xs font-bold text-jp-indigo">{parsed.req?.test_info?.level || '-'}</span>
+                            </div>
+                            <div>
+                               <span className="text-[9px] font-black text-neutral-300 uppercase block mb-1">Số phần</span>
+                               <span className="text-xs font-bold text-jp-indigo">{parsed.req?.sections?.length || 0} PHẦN</span>
+                            </div>
+                            <div>
+                               <span className="text-[9px] font-black text-neutral-300 uppercase block mb-1">Tổng câu hỏi</span>
+                               <span className="text-xs font-bold text-emerald-600 font-black">{stats?.questionCount || 0} CÂU</span>
+                            </div>
+                         </div>
+                      </div>
+
+                      <button 
+                        onClick={handleImport}
+                        disabled={isImporting || !parsed.req}
+                        className="h-full bg-jp-indigo text-white rounded-[2rem] flex flex-col items-center justify-center gap-3 hover:bg-jp-red transition-all shadow-xl shadow-jp-indigo/20 disabled:opacity-50"
+                      >
+                        {isImporting ? <Loader2 size={24} className="animate-spin" /> : <Upload size={24} />}
+                        <span className="text-[10px] font-black uppercase tracking-widest">{isImporting ? 'Đang xử lý...' : 'Publish Ngay'}</span>
+                      </button>
+                   </div>
                 </div>
-
-                <button
-                  onClick={handleImport}
-                  disabled={isImporting}
-                  className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-jp-indigo to-jp-red text-white font-black text-sm hover:opacity-95 disabled:opacity-50 transition-all flex items-center justify-center gap-2"
-                >
-                  {isImporting ? <Loader2 size={16} className="animate-spin" /> : <Upload size={16} />}
-                  {isImporting ? "Đang import..." : "Import vào hệ thống"}
-                </button>
-
-                <div className="text-xs text-neutral-500 leading-relaxed">
-                  Lưu ý: endpoint sẽ tự tạo `Exam` + `ExamQuestion`. Với đề JLPT official (N5 2018) có thể dùng ngưỡng
-                  2 phần (120 + 60) từ `pass_marks`.
-                </div>
-              </div>
-            </div>
+             </div>
           </div>
         </div>
       </div>
     </AdminLayout>
   );
 }
-
