@@ -24,11 +24,15 @@ namespace Controllers
             return Ok(examDetail);
         }
 
-        // Lấy danh sách tất cả câu hỏi (cho Admin)
+        // Lấy danh sách câu hỏi (cho Admin) - hỗ trợ filter theo examId
         [HttpGet]
-        public async Task<IActionResult> GetAllQuestions()
+        public async Task<IActionResult> GetAllQuestions([FromQuery] int? examId)
         {
             var questions = await _examQuestionService.GetAllQuestionsAsync();
+            if (examId.HasValue)
+            {
+                questions = questions.Where(q => q.ExamId == examId.Value).ToList();
+            }
             return Ok(questions);
         }
 

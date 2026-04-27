@@ -17,6 +17,7 @@ namespace backend.DTOs.Exam
         public string? Instruction { get; set; }
         public string? Explanation { get; set; }
         public string? AudioUrl { get; set; }
+        public string? ImageUrl { get; set; }
         public int ExamId { get; set; }
         public int UserId { get; set; }
         

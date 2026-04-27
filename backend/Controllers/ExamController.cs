@@ -37,6 +37,21 @@ namespace Controllers
             return Ok(exam);
         }
 
+        // Tạo đề thi mới
+        [HttpPost]
+        public async Task<IActionResult> CreateExam([FromBody] ExamCreateDto createData)
+        {
+            try
+            {
+                var exam = await _examService.CreateExamAsync(createData);
+                return CreatedAtAction(nameof(GetExamById), new { id = exam?.ExamId }, exam);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
         // Cập nhật thông tin cơ bản của Exam
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateExam(int id, [FromBody] ExamUpdateDto updateData)
@@ -125,18 +140,30 @@ namespace Controllers
             [FromBody] ImportExamRequest request,
             [FromServices] ExamJsonImportService importService)
         {
-            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            int createdByUserId = 1;
-            if (!string.IsNullOrEmpty(userIdClaim) && int.TryParse(userIdClaim, out int uid))
+            try
             {
-                createdByUserId = uid;
+                var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                int createdByUserId = 1;
+                if (!string.IsNullOrEmpty(userIdClaim) && int.TryParse(userIdClaim, out int uid))
+                {
+                    createdByUserId = uid;
+                }
+
+                if (request == null)
+                {
+                    return BadRequest(new { Message = "Dữ liệu JSON không hợp lệ hoặc trống." });
+                }
+
+                var (success, message, examId) = await importService.ImportAsync(request, createdByUserId);
+
+                if (!success) return BadRequest(new { Message = message });
+
+                return Ok(new { Message = message, ExamId = examId });
             }
-
-            var (success, message, examId) = await importService.ImportAsync(request, createdByUserId);
-
-            if (!success) return BadRequest(new { Message = message });
-
-            return Ok(new { Message = message, ExamId = examId });
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = $"Lỗi hệ thống: {ex.Message} - {ex.InnerException?.Message}\n{ex.StackTrace}" });
+            }
         }
 
         // ==========================================
@@ -145,6 +172,7 @@ namespace Controllers
         [HttpPost("import-pdf")]
         public async Task<IActionResult> ImportFromPdf(
             IFormFile file,
+            [FromQuery] bool dryRun,
             [FromServices] ExamPdfImportService pdfService,
             [FromServices] ExamJsonImportService jsonImportService)
         {
@@ -169,6 +197,66 @@ namespace Controllers
 
                 if (request == null)
                     return BadRequest(new { Message = "Không thể parse PDF.", Warnings = warnings });
+
+                if (dryRun)
+                {
+                    return Ok(new { Message = "Tạo JSON Draft thành công.", Draft = request, Warnings = warnings });
+                }
+
+                var (success, message, examId) = await jsonImportService.ImportAsync(request, createdByUserId);
+
+                return Ok(new { Message = message, ExamId = examId, Warnings = warnings });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = $"Lỗi server: {ex.Message}" });
+            }
+        }
+
+        [HttpPost("import-pdf-with-answer-key")]
+        public async Task<IActionResult> ImportFromPdfWithAnswerKey(
+            IFormFile questionFile,
+            IFormFile answerKeyFile,
+            [FromQuery] bool dryRun,
+            [FromServices] ExamPdfImportService pdfService,
+            [FromServices] ExamJsonImportService jsonImportService)
+        {
+            if (questionFile == null || questionFile.Length == 0)
+                return BadRequest(new { Message = "Không có file câu hỏi nào được tải lên." });
+            if (answerKeyFile == null || answerKeyFile.Length == 0)
+                return BadRequest(new { Message = "Không có file đáp án nào được tải lên." });
+
+            var extension = Path.GetExtension(questionFile.FileName).ToLower();
+            if (extension != ".pdf")
+                return BadRequest(new { Message = "File câu hỏi phải là .pdf" });
+
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int createdByUserId = 1;
+            if (!string.IsNullOrEmpty(userIdClaim) && int.TryParse(userIdClaim, out int uid))
+            {
+                createdByUserId = uid;
+            }
+
+            try
+            {
+                using var qStream = questionFile.OpenReadStream();
+                var (request, warnings) = pdfService.Parse(qStream, questionFile.FileName);
+
+                if (request == null)
+                    return BadRequest(new { Message = "Không thể parse PDF câu hỏi.", Warnings = warnings });
+
+                using var aStream = answerKeyFile.OpenReadStream();
+                var answerMap = Path.GetExtension(answerKeyFile.FileName).ToLower() == ".pdf" 
+                    ? pdfService.ParseAnswerKeyFromPdf(aStream)
+                    : pdfService.ParseAnswerKeyFromText(await new StreamReader(aStream).ReadToEndAsync());
+
+                var updated = pdfService.ApplyAnswerKey(request, answerMap, warnings);
+                warnings.Add($"Đã áp dụng đáp án cho {updated} câu hỏi.");
+
+                if (dryRun)
+                {
+                    return Ok(new { Message = "Tạo JSON Draft thành công.", Draft = request, Warnings = warnings });
+                }
 
                 var (success, message, examId) = await jsonImportService.ImportAsync(request, createdByUserId);
 

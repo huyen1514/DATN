@@ -11,6 +11,7 @@ namespace Repositories
         Task<bool> KanjiExistsAsync(int kanjiId);
         Task<bool> ReadingExistsAsync(int readingId);
         Task<bool> ListeningExistsAsync(int listeningId);
+        Task<bool> ExamExistsAsync(int examId);
         
         Task<string?> GetLessonNameAsync(int lessonId);
         Task<string?> GetVocabularyNameAsync(int vocabularyId);
@@ -18,6 +19,7 @@ namespace Repositories
         Task<string?> GetKanjiNameAsync(int kanjiId);
         Task<string?> GetReadingNameAsync(int readingId);
         Task<string?> GetListeningNameAsync(int listeningId);
+        Task<string?> GetExamNameAsync(int examId);
         
         // Cấp quyền truy vấn theo Batch (Gom nhóm) để chống N+1 Query
         Task<Dictionary<int, string>> GetLessonNamesAsync(IEnumerable<int> lessonIds);
@@ -26,6 +28,7 @@ namespace Repositories
         Task<Dictionary<int, string>> GetKanjiNamesAsync(IEnumerable<int> kanjiIds);
         Task<Dictionary<int, string>> GetReadingNamesAsync(IEnumerable<int> readingIds);
         Task<Dictionary<int, string>> GetListeningNamesAsync(IEnumerable<int> listeningIds);
+        Task<Dictionary<int, string>> GetExamNamesAsync(IEnumerable<int> examIds);
         
         Task<Bookmark?> GetByKeyAsync(int userId, int itemId, string type);
         Task<List<Bookmark>> GetByUserIdAsync(int userId);

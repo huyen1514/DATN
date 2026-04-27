@@ -85,7 +85,7 @@ namespace Services
                         questionIndex++;
                         if (answerMap.TryGetValue(questionIndex, out var ans) && ans >= 1 && ans <= 4)
                         {
-                            question.CorrectOption = OptionIdToLetter(ans);
+                            question.CorrectOptionId = ans;
                             updated++;
                         }
                         else
@@ -247,22 +247,14 @@ namespace Services
 
             if (answerMap.TryGetValue(questionNumber, out var ans))
             {
-                q.CorrectOption = OptionIdToLetter(ans);
+                q.CorrectOptionId = ans;
             }
             else
             {
-                q.CorrectOption = "A";
+                q.CorrectOptionId = 1; // Default to Option A
                 warnings.Add($"Câu {questionNumber}: không tìm thấy đáp án trong PDF, tạm đặt option A.");
             }
         }
 
-        private static string OptionIdToLetter(int optionId) => optionId switch
-        {
-            1 => "A",
-            2 => "B",
-            3 => "C",
-            4 => "D",
-            _ => "A"
-        };
     }
 }

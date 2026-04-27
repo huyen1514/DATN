@@ -35,6 +35,7 @@ namespace Services
                     Instruction = q.Instruction,
                     Explanation = q.Explanation,
                     AudioUrl = q.QuestionGroup != null ? q.QuestionGroup.AudioUrl : null,
+                    ImageUrl = q.ImageUrl,
                     ExamId = q.ExamId,
                     UserId = q.CreatedByUserId,
                     Exam = q.Exam != null ? new ExamSimpleDto { ExamId = q.Exam.ExamId, ExamName = q.Exam.ExamName } : null
@@ -80,6 +81,7 @@ namespace Services
                 MondaiNumber = dto.MondaiNumber,
                 Instruction = dto.Instruction,
                 Explanation = dto.Explanation,
+                ImageUrl = dto.ImageUrl,
                 ExamId = dto.ExamId,
                 CreatedByUserId = dto.UserId,
                 QuestionGroupId = group?.QuestionGroupId,
@@ -104,6 +106,7 @@ namespace Services
                 Instruction = question.Instruction,
                 Explanation = question.Explanation,
                 AudioUrl = dto.AudioUrl,
+                ImageUrl = question.ImageUrl,
                 ExamId = question.ExamId,
                 UserId = question.CreatedByUserId
             };
@@ -164,6 +167,7 @@ namespace Services
             existing.MondaiNumber = dto.MondaiNumber;
             existing.Instruction = dto.Instruction;
             existing.Explanation = dto.Explanation;
+            existing.ImageUrl = dto.ImageUrl;
             existing.ExamId = dto.ExamId;
             existing.CreatedByUserId = dto.UserId;
             

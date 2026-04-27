@@ -18,6 +18,9 @@ namespace Services
         private const string ReadingType = "Reading";
         // Khai báo thêm hằng số cho Listening
         private const string ListeningType = "Listening";
+        // Khai báo thêm hằng số cho Exam
+        private const string ExamType = "Exam";
+
 
         private readonly IBookmarkRepository _bookmarkRepository;
 
@@ -88,6 +91,9 @@ namespace Services
             // Lấy danh sách ID của Listening
             var listeningIds = bookmarks.Where(b => b.Type == ListeningType).Select(b => b.ItemId).Distinct().ToList();
 
+            // Lấy danh sách ID của Exam
+            var examIds = bookmarks.Where(b => b.Type == ExamType).Select(b => b.ItemId).Distinct().ToList();
+
             var lessonNames = lessonIds.Any() ? await _bookmarkRepository.GetLessonNamesAsync(lessonIds) : new Dictionary<int, string>();
             var vocabNames = vocabIds.Any() ? await _bookmarkRepository.GetVocabularyNamesAsync(vocabIds) : new Dictionary<int, string>();
             var grammarNames = grammarIds.Any() ? await _bookmarkRepository.GetGrammarNamesAsync(grammarIds) : new Dictionary<int, string>();
@@ -96,6 +102,8 @@ namespace Services
             var readingNames = readingIds.Any() ? await _bookmarkRepository.GetReadingNamesAsync(readingIds) : new Dictionary<int, string>();
             // Query một lần để lấy toàn bộ nội dung bài nghe đã bookmark
             var listeningNames = listeningIds.Any() ? await _bookmarkRepository.GetListeningNamesAsync(listeningIds) : new Dictionary<int, string>();
+            // Query một lần để lấy tên bài thi đã bookmark
+            var examNames = examIds.Any() ? await _bookmarkRepository.GetExamNamesAsync(examIds) : new Dictionary<int, string>();
 
             return bookmarks.Select(bookmark => new BookmarkResponse
             {
@@ -112,6 +120,7 @@ namespace Services
                     // Map ItemName cho Reading (chính là nội dung đoạn văn)
                     ReadingType => readingNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
                     ListeningType => listeningNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
+                    ExamType => examNames.GetValueOrDefault(bookmark.ItemId, string.Empty),
                     _ => string.Empty
                 },
                 CreatedAt = bookmark.CreatedAt
@@ -129,7 +138,9 @@ namespace Services
                 // Xác thực sự tồn tại của Reading trong Database
                 ReadingType => await _bookmarkRepository.ReadingExistsAsync(itemId),
                 ListeningType => await _bookmarkRepository.ListeningExistsAsync(itemId),
+                ExamType => await _bookmarkRepository.ExamExistsAsync(itemId),
                 _ => false
+
             };
 
             if (!exists)
@@ -161,7 +172,11 @@ namespace Services
                 || string.Equals(type, "ListeningExercise", StringComparison.OrdinalIgnoreCase))
                 return ListeningType;
 
-            throw new ArgumentException("Type must be Lesson, Vocabulary, Grammar, Kanji, Reading, or Listening.");
+            // Normalize cho Exam
+            if (string.Equals(type, ExamType, StringComparison.OrdinalIgnoreCase))
+                return ExamType;
+
+            throw new ArgumentException("Type must be Lesson, Vocabulary, Grammar, Kanji, Reading, Listening, or Exam.");
         }
     }
 }

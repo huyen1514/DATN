@@ -79,11 +79,15 @@ namespace Services
 
                     foreach (var q in mondai.Questions)
                     {
-                        // Map CorrectOption (chữ cái A/B/C/D) sang AnswerOption Enum
-                        if (!Enum.TryParse<AnswerOption>(q.CorrectOption, true, out var correctAnswer))
+                        // Map CorrectOptionId (1, 2, 3, 4) sang AnswerOption Enum
+                        var correctAnswer = q.CorrectOptionId switch
                         {
-                            correctAnswer = AnswerOption.A; // Mặc định nếu không parse được
-                        }
+                            1 => AnswerOption.A,
+                            2 => AnswerOption.B,
+                            3 => AnswerOption.C,
+                            4 => AnswerOption.D,
+                            _ => AnswerOption.A // Mặc định nếu id không hợp lệ
+                        };
 
                         // Lấy text từ danh sách Options
                         var optionA = q.Options.Count > 0 ? q.Options[0].Text : "";

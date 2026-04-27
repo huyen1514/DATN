@@ -53,6 +53,12 @@ namespace Repositories
             return await _context.Listenings.AnyAsync(x => x.ListeningId == listeningId);
         }
 
+        public async Task<bool> ExamExistsAsync(int examId)
+        {
+            return await _context.Exams.AnyAsync(x => x.ExamId == examId);
+        }
+
+
         public async Task<string?> GetLessonNameAsync(int lessonId)
         {
             return await _context.Lessons
@@ -103,6 +109,15 @@ namespace Repositories
                 .FirstOrDefaultAsync();
         }
 
+        public async Task<string?> GetExamNameAsync(int examId)
+        {
+            return await _context.Exams
+                .Where(x => x.ExamId == examId)
+                .Select(x => x.ExamName) 
+                .FirstOrDefaultAsync();
+        }
+
+
         // --- Batch Queries ---
         public async Task<Dictionary<int, string>> GetLessonNamesAsync(IEnumerable<int> lessonIds)
         {
@@ -151,8 +166,17 @@ namespace Repositories
             return await _context.Listenings
                 .AsNoTracking()
                 .Where(x => listeningIds.Contains(x.ListeningId))
-                .ToDictionaryAsync(x => x.ListeningId, x => x.Question);
+                .ToDictionaryAsync(x => x.ListeningId, x => x.Question ?? string.Empty);
         }
+
+        public async Task<Dictionary<int, string>> GetExamNamesAsync(IEnumerable<int> examIds)
+        {
+            return await _context.Exams
+                .AsNoTracking()
+                .Where(x => examIds.Contains(x.ExamId))
+                .ToDictionaryAsync(x => x.ExamId, x => x.ExamName ?? string.Empty);
+        }
+
 
         public async Task<Bookmark?> GetByKeyAsync(int userId, int itemId, string type)
         {

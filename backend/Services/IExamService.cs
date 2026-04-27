@@ -8,5 +8,6 @@ namespace Services
         Task<ExamResponseDto?> GetExamByIdAsync(int id);
         Task<bool> UpdateExamAsync(int id, ExamUpdateDto updateData);
         Task<bool> DeleteExamAsync(int id);
+        Task<ExamResponseDto?> CreateExamAsync(ExamCreateDto createData);
     }
 }

@@ -92,5 +92,31 @@ namespace Services
 
             return rowsAffected > 0;
         }
+
+        public async Task<ExamResponseDto?> CreateExamAsync(ExamCreateDto createData)
+        {
+            var levelExists = await _context.Levels.AnyAsync(l => l.LevelId == createData.LevelId);
+            if (!levelExists) throw new ArgumentException("Level không tồn tại");
+
+            var exam = new Models.Exam
+            {
+                ExamName = createData.ExamName,
+                Duration = createData.Duration,
+                LevelId = createData.LevelId,
+                Price = createData.Price,
+                PassScaledTotal = createData.PassScaledTotal,
+                PassScaledVocabularyGrammar = createData.PassScaledVocabularyGrammar,
+                PassScaledReading = createData.PassScaledReading,
+                PassScaledListening = createData.PassScaledListening,
+                PassScaledVocabularyGrammarReading = createData.PassScaledVocabularyGrammarReading,
+                IsActive = true,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            _context.Exams.Add(exam);
+            await _context.SaveChangesAsync();
+
+            return await GetExamByIdAsync(exam.ExamId);
+        }
     }
 }
