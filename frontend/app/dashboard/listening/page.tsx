@@ -1,9 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { uploadAudio, uploadImage, api } from "@/lib/api";
+import { uploadAudio, uploadImage, api, API_URL } from "@/lib/api";
 import AdminLayout from "@/components/AdminLayout";
 import { Headphones, Plus, Edit2, Trash2, Search, X, Upload, Image as ImageIcon, PlayCircle, XCircle } from "lucide-react";
+
+/* Định nghĩa BACKEND_URL từ API_URL */
+const BACKEND_URL = API_URL.replace(/\/api$/, "");
+
+/* Hàm helper để nối URL cho ảnh và âm thanh */
+const getFullUrl = (url?: string) => {
+  if (!url) return "";
+  return url.startsWith('/') ? `${BACKEND_URL}${url}` : url;
+};
 
 interface Lesson { lessonId: number; lessonName: string; levelName?: string; skillType?: string; }
 interface Listening {
@@ -110,8 +119,17 @@ export default function AdminListening() {
         }
       }
 
-      const postBody = { ...form, audioUrl: finalAudioUrl, imageUrl: finalImageUrl };
-      const res = modalMode === "create" ? await api("/listenings", "POST", postBody) : await api(`/listenings/${editId}`, "PUT", postBody);
+      // THÊM LISTENING ID VÀO REQUEST BODY KHI CHỈNH SỬA ĐỂ TRÁNH LỖI 400 TỪ .NET
+      const postBody = {
+        ...form,
+        audioUrl: finalAudioUrl,
+        imageUrl: finalImageUrl,
+        ...(modalMode === "edit" ? { listeningId: editId } : {})
+      };
+
+      const res = modalMode === "create"
+        ? await api("/listenings", "POST", postBody)
+        : await api(`/listenings/${editId}`, "PUT", postBody);
 
       if (res?.error || res?.title) { setError(res.error || res.title); setIsSaving(false); return; }
 
@@ -156,7 +174,6 @@ export default function AdminListening() {
           <select value={filterLesson} onChange={(e) => setFilterLesson(e.target.value === "all" ? "all" : parseInt(e.target.value))}
             className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm min-w-[200px]">
             <option value="all">Tất cả bài học</option>
-            {/* Đã thêm LevelName và SkillType vào đây */}
             {lessons.filter(l => l.skillType === "Nghe hiểu" || !l.skillType).map(l => (
               <option key={l.lessonId} value={l.lessonId}>
                 {l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}
@@ -179,11 +196,11 @@ export default function AdminListening() {
                 <div key={item.listeningId} className="p-6 hover:bg-neutral-50/50 transition-colors">
                   <div className="flex flex-col md:flex-row items-start gap-6">
 
-                    {/* KHU VỰC MEDIA BÊN TRÁI */}
+                    {/* KHU VỰC MEDIA BÊN TRÁI - ĐÃ SỬA LẠI URL */}
                     <div className="flex flex-col gap-3 w-full md:w-48 shrink-0">
                       {item.imageUrl ? (
                         <div className="w-full h-32 rounded-xl border border-black/10 bg-white flex items-center justify-center overflow-hidden">
-                          <img src={item.imageUrl} alt="minh họa" className="max-w-full max-h-full object-contain" />
+                          <img src={getFullUrl(item.imageUrl)} alt="minh họa" className="max-w-full max-h-full object-contain" />
                         </div>
                       ) : (
                         <div className="w-full h-32 rounded-xl border border-black/5 border-dashed bg-neutral-50 flex flex-col items-center justify-center text-neutral-400">
@@ -192,7 +209,7 @@ export default function AdminListening() {
                         </div>
                       )}
                       {item.audioUrl && (
-                        <audio controls src={item.audioUrl} className="w-full h-10" />
+                        <audio controls src={getFullUrl(item.audioUrl)} className="w-full h-10" />
                       )}
                     </div>
 
@@ -265,7 +282,6 @@ export default function AdminListening() {
                     <select value={form.lessonId} onChange={(e) => setForm({ ...form, lessonId: parseInt(e.target.value) })}
                       className="w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-xl text-sm font-medium outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all">
                       <option value={0}>-- Chọn bài học --</option>
-                      {/* Đã thêm LevelName và SkillType vào Modal */}
                       {lessons.filter(l => l.skillType === "Nghe hiểu" || !l.skillType).map(l => (
                         <option key={l.lessonId} value={l.lessonId}>
                           {l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}
@@ -274,7 +290,7 @@ export default function AdminListening() {
                     </select>
                   </div>
 
-                  {/* Upload Audio */}
+                  {/* Upload Audio - ĐÃ SỬA LẠI URL TRONG MODAL */}
                   <div className="bg-cyan-50/50 p-5 rounded-2xl border border-cyan-100">
                     <label className="block text-[11px] font-bold tracking-wider text-cyan-800 uppercase mb-3 flex items-center gap-2">
                       <Headphones size={14} /> Tệp âm thanh (.mp3) *
@@ -285,11 +301,11 @@ export default function AdminListening() {
                       {selectedFile ? <span className="font-bold truncate">{selectedFile.name}</span> : <span className="font-medium">{form.audioUrl ? "Thay đổi File Audio" : "Chọn tệp MP3 tải lên"}</span>}
                     </label>
                     {(selectedFile || form.audioUrl) && (
-                      <audio controls src={selectedFile ? URL.createObjectURL(selectedFile) : form.audioUrl} className="w-full h-10 rounded-lg" />
+                      <audio controls src={selectedFile ? URL.createObjectURL(selectedFile) : getFullUrl(form.audioUrl)} className="w-full h-10 rounded-lg" />
                     )}
                   </div>
 
-                  {/* Upload Ảnh */}
+                  {/* Upload Ảnh - ĐÃ SỬA LẠI URL TRONG MODAL */}
                   <div>
                     <label className="block text-[11px] font-bold tracking-wider text-neutral-500 uppercase mb-2 flex items-center gap-2">
                       <ImageIcon size={14} /> Ảnh minh họa (Không bắt buộc)
@@ -298,7 +314,7 @@ export default function AdminListening() {
                     <label htmlFor="image-upload" className="flex flex-col items-center justify-center gap-2 px-4 py-6 border-2 border-dashed border-neutral-200 rounded-2xl text-sm text-neutral-500 cursor-pointer hover:border-jp-indigo/40 bg-neutral-50 hover:bg-white transition-all h-40">
                       {selectedImageFile || form.imageUrl ? (
                         <div className="relative w-full h-full flex items-center justify-center group">
-                          <img src={selectedImageFile ? URL.createObjectURL(selectedImageFile) : form.imageUrl} alt="preview" className="max-w-full max-h-full object-contain rounded-lg" />
+                          <img src={selectedImageFile ? URL.createObjectURL(selectedImageFile) : getFullUrl(form.imageUrl)} alt="preview" className="max-w-full max-h-full object-contain rounded-lg" />
                           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity rounded-lg text-white font-bold text-xs gap-1"><Upload size={14} /> Thay ảnh</div>
                         </div>
                       ) : (

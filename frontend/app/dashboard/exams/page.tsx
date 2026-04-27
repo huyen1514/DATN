@@ -11,15 +11,11 @@ interface Exam {
   examId: number;
   examName: string;
   duration: number;
-  levelId: number;
-  level?: Level;
-  createdAt: string;
+  levelName: string;
   price: number;
-  passScaledTotal: number;
-  passScaledVocabularyGrammar: number;
-  passScaledReading: number;
-  passScaledListening: number;
-  passScaledVocabularyGrammarReading?: number | null;
+  isActive: boolean;
+  totalQuestions: number;
+  createdAt: string;
 }
 
 export default function AdminExams() {
@@ -27,7 +23,7 @@ export default function AdminExams() {
   const [levels, setLevels] = useState<Level[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [filterLevel, setFilterLevel] = useState<number | "all">("all");
+  const [filterLevel, setFilterLevel] = useState<string>("all");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState<"create" | "edit">("create");
@@ -53,8 +49,11 @@ export default function AdminExams() {
   const loadData = async () => {
     try {
       const [eData, lData] = await Promise.all([api("/exams"), api("/levels")]);
-      if (Array.isArray(eData)) setExams(eData);
-      if (Array.isArray(lData)) setLevels(lData);
+      // Backend trả về { data: [...], total, page, pageSize } cho exams
+      const examList = Array.isArray(eData) ? eData : (eData?.data || eData?.Data || []);
+      setExams(examList);
+      const levelList = Array.isArray(lData) ? lData : (lData?.data || lData?.Data || []);
+      setLevels(levelList);
     } catch (e) { console.error(e); }
     finally { setIsLoading(false); }
   };
@@ -109,7 +108,7 @@ export default function AdminExams() {
 
   const filtered = exams.filter(e => {
     const matchSearch = e.examName.toLowerCase().includes(search.toLowerCase());
-    const matchLevel = filterLevel === "all" || e.levelId === filterLevel;
+    const matchLevel = filterLevel === "all" || e.levelName === filterLevel;
     return matchSearch && matchLevel;
   });
 
@@ -149,11 +148,11 @@ export default function AdminExams() {
           <div className="flex gap-4">
             <select
               value={filterLevel}
-              onChange={(e) => setFilterLevel(e.target.value === "all" ? "all" : parseInt(e.target.value))}
+              onChange={(e) => setFilterLevel(e.target.value)}
               className="px-6 py-4 bg-white border-2 border-black/5 rounded-[1.5rem] text-sm font-bold text-jp-indigo outline-none focus:border-jp-indigo transition-all min-w-[200px]"
             >
               <option value="all">Tất cả cấp độ</option>
-              {levels.map(l => <option key={l.levelId} value={l.levelId}>{l.levelName}</option>)}
+              {levels.map(l => <option key={l.levelId} value={l.levelName}>{l.levelName}</option>)}
             </select>
           </div>
         </div>
@@ -190,7 +189,7 @@ export default function AdminExams() {
                       <td className="px-8 py-6">
                         <div className="flex items-center gap-4">
                           <div className="w-12 h-12 rounded-2xl bg-jp-indigo/5 text-jp-indigo flex items-center justify-center font-black group-hover:bg-jp-indigo group-hover:text-white transition-all">
-                            {exam.level?.levelName || '??'}
+                            {exam.levelName || '??'}
                           </div>
                           <div className="flex flex-col">
                             <span className="font-black text-jp-indigo text-lg leading-tight">{exam.examName}</span>
@@ -204,7 +203,7 @@ export default function AdminExams() {
                             <Clock size={14} className="text-neutral-300" /> {exam.duration} phút
                           </div>
                           <div className="flex items-center gap-2 text-xs font-bold text-neutral-400 uppercase tracking-widest">
-                            JLPT {exam.level?.levelName}
+                            JLPT {exam.levelName}
                           </div>
                         </div>
                       </td>

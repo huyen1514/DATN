@@ -145,22 +145,30 @@ export default function OverviewPage() {
   const loadAllData = async (userId: number) => {
     try {
       // Gọi các API tổng hợp
-      const [levelsData, examResultsData, dashboardData, recommendationsData, bookmarksData, historyData] =
+      const [levelsData, examResultsData, dashboardData, recommendationsData, bookmarksData] =
         await Promise.all([
           api("/levels"),
-          api(`/exam-results?userId=${userId}`),
+          api(`/exam-results/history/${userId}`),
           api(`/dashboard/${userId}`),
           api(`/recommendations/${userId}`),
           api(`/bookmark/${userId}`),
-          api(`/test-history/${userId}`),
         ]);
 
       if (Array.isArray(levelsData)) setLevels(levelsData as Level[]);
-      if (Array.isArray(examResultsData)) setExamResults(examResultsData as ExamResult[]);
+      if (Array.isArray(examResultsData)) {
+          setExamResults(examResultsData as ExamResult[]);
+          // Lấy dữ liệu cho test history trực tiếp từ examResults
+          setTestHistories(examResultsData.map((e: ExamResult) => ({
+             testHistoryId: e.examResultId,
+             userId: userId,
+             score: e.score,
+             date: e.completedAt,
+             detail: "Bài thi"
+          })));
+      }
       if (dashboardData?.userId) setDashboard(dashboardData as DashboardResponse);
       if (recommendationsData?.userId) setRecommendations(recommendationsData as RecommendationResponse);
       if (Array.isArray(bookmarksData)) setBookmarks(bookmarksData as BookmarkItem[]);
-      if (Array.isArray(historyData)) setTestHistories(historyData as TestHistoryItem[]);
 
       // Lấy danh sách tiến độ (Thử 2 API để tránh bị lỗi 404)
       try {
@@ -496,7 +504,7 @@ export default function OverviewPage() {
                     <div className="flex items-center justify-between">
                       <p className="text-sm font-bold text-jp-indigo">Bài test #{item.testHistoryId}</p>
                       <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-jp-red">
-                        {Math.round(item.score)}%
+                        {item.score} / 180
                       </span>
                     </div>
                     <p className="mt-2 text-[11px] font-medium uppercase tracking-wide text-neutral-400">

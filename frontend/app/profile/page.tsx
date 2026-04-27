@@ -81,15 +81,22 @@ export default function ProfilePage() {
 
       setUser(userData as UserProfile);
 
-      const [results, bookmarkData, historyData] = await Promise.all([
-        api(`/exam-results?userId=${userData.userId}`),
-        api(`/bookmark/${userData.userId}`),
-        api(`/test-history/${userData.userId}`),
+      const [results, bookmarkData] = await Promise.all([
+        api(`/exam-results/history/${userData.userId}`),
+        api(`/bookmark/${userData.userId}`)
       ]);
 
-      if (Array.isArray(results)) setExamResults(results as ExamResult[]);
+      if (Array.isArray(results)) {
+          setExamResults(results as ExamResult[]);
+          setTestHistories(results.map((e: ExamResult) => ({
+             testHistoryId: e.examResultId,
+             userId: userData.userId,
+             score: e.score,
+             date: e.completedAt,
+             detail: "Bài thi JLPT"
+          })));
+      }
       if (Array.isArray(bookmarkData)) setBookmarks(bookmarkData as BookmarkItem[]);
-      if (Array.isArray(historyData)) setTestHistories(historyData as TestHistoryItem[]);
     } catch (e) {
       console.error(e);
     } finally {
@@ -205,7 +212,7 @@ export default function ProfilePage() {
 
                             <div className="flex items-center gap-3">
                               <span className="rounded-full bg-rose-50 px-3 py-1 text-xs font-bold text-jp-red">
-                                {Math.round(item.score)}%
+                                {item.score} / 180
                               </span>
                               <ChevronDown
                                 size={18}
@@ -341,7 +348,7 @@ export default function ProfilePage() {
 
                           <div className="text-right">
                             <p className={`text-lg font-bold ${result.isPassed ? "text-emerald-600" : "text-red-500"}`}>
-                              {result.score}%
+                              {result.score} / 180
                             </p>
                             <p className="text-xs text-neutral-400">
                               {result.amountCorrectAnswers}/{result.totalQuestion} câu đúng

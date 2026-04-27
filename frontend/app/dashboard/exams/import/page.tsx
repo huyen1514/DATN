@@ -112,12 +112,15 @@ export default function ImportExamPage() {
     setIsImporting(true);
     setError("");
     try {
-      const res = await api("/exams/import", "POST", parsed.req);
+      const res = await api("/exams/import-json-body", "POST", parsed.req);
       if (res?.examId) {
         setLastCreatedExamId(res.examId);
         setWarnings(Array.isArray(res.warnings) ? res.warnings : []);
       } else if (res?.error) {
         setError(res.error);
+      } else if (res?.Message || res?.message) {
+        setError(res?.Message || res?.message);
+        setWarnings(Array.isArray(res.warnings) ? res.warnings : []);
       } else {
         setError("Import thất bại (không nhận được ExamId).");
       }
@@ -362,7 +365,7 @@ export default function ImportExamPage() {
 
                       <button 
                         onClick={handleImport}
-                        disabled={isImporting || !parsed.req}
+                        disabled={isImporting || !raw.trim()}
                         className="h-full bg-jp-indigo text-white rounded-[2rem] flex flex-col items-center justify-center gap-3 hover:bg-jp-red transition-all shadow-xl shadow-jp-indigo/20 disabled:opacity-50"
                       >
                         {isImporting ? <Loader2 size={24} className="animate-spin" /> : <Upload size={24} />}
