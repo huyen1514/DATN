@@ -335,7 +335,7 @@ export default function AdminReading() {
 
                     {form.readingQuestions.length === 0 && (
                       <div className="text-center p-6 bg-neutral-50 rounded-xl border border-dashed border-neutral-300 text-neutral-500 text-sm">
-                        Chưa có câu hỏi nào. Bấm "Thêm câu hỏi" để bắt đầu.
+                        Chưa có câu hỏi nào. Bấm &quot;Thêm câu hỏi&quot; để bắt đầu.
                       </div>
                     )}
                   </div>

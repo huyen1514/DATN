@@ -302,7 +302,7 @@ export default function ImportExamPage() {
                    
                    <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-2xl text-[10px] font-bold text-blue-600 leading-relaxed">
                       <Info size={14} className="shrink-0" />
-                      Hệ thống sử dụng AI để nhận diện cấu trúc đề thi. Để có độ chính xác cao nhất, hãy dùng tính năng "Draft" để kiểm tra dữ liệu trước khi lưu.
+                      Hệ thống sử dụng AI để nhận diện cấu trúc đề thi. Để có độ chính xác cao nhất, hãy dùng tính năng &quot;Draft&quot; để kiểm tra dữ liệu trước khi lưu.
                    </div>
                 </div>
              </div>

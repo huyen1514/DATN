@@ -81,30 +81,55 @@ const formatTime = (time: number) => {
   return `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 };
 
+type ConfettiParticle = {
+  id: number;
+  initialLeft: string;
+  initialColor: string;
+  animateLeft: string;
+  rotate: number;
+  duration: number;
+  delay: number;
+};
+
+const createConfettiParticles = (colors: string[]): ConfettiParticle[] =>
+  Array.from({ length: 60 }, (_, index) => ({
+    id: index,
+    initialLeft: `${Math.random() * 100}%`,
+    initialColor: colors[Math.floor(Math.random() * colors.length)],
+    animateLeft: `${Math.random() * 100}%`,
+    rotate: 360 * (Math.random() * 2 + 1),
+    duration: Math.random() * 2 + 2.5,
+    delay: Math.random() * 2,
+  }));
+
 const Confetti = () => {
-  const particles = Array.from({ length: 60 });
   const colors = ["#0891b2", "#ffcf00", "#00a86b", "#0074d9", "#0ea5e9", "#b10dc9"];
+  const [particles, setParticles] = useState<ConfettiParticle[]>([]);
+
+  useEffect(() => {
+    setParticles(createConfettiParticles(colors));
+  }, []);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
-      {particles.map((_, i) => (
+      {particles.map((particle) => (
         <motion.div
-          key={i}
+          key={particle.id}
           className="absolute w-3 h-3 rounded-sm"
           initial={{
             top: "-5%",
-            left: `${Math.random() * 100}%`,
-            backgroundColor: colors[Math.floor(Math.random() * colors.length)]
+            left: particle.initialLeft,
+            backgroundColor: particle.initialColor
           }}
           animate={{
             top: "105%",
-            left: `${Math.random() * 100}%`,
-            rotate: 360 * (Math.random() * 2 + 1),
+            left: particle.animateLeft,
+            rotate: particle.rotate,
           }}
           transition={{
-            duration: Math.random() * 2 + 2.5,
+            duration: particle.duration,
             repeat: Infinity,
-            delay: Math.random() * 2,
+            delay: particle.delay,
             ease: "linear"
           }}
         />
