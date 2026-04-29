@@ -1,5 +1,20 @@
 export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5135/api";
 
+// URL gốc của Backend (không có /api) — Dùng để resolve đường dẫn file tĩnh (audio, ảnh)
+export const BACKEND_URL = API_URL.replace(/\/api$/, "");
+
+/**
+ * Chuyển đổi đường dẫn tương đối (ví dụ: /uploads/audio/xxx.mp3) 
+ * thành URL đầy đủ trỏ về Backend (ví dụ: http://localhost:5135/uploads/audio/xxx.mp3)
+ * Trả về undefined nếu url rỗng/null — giúp thẻ <audio> không render khi không có file
+ */
+export const resolveMediaUrl = (url?: string | null): string | undefined => {
+  if (!url || url.trim() === "") return undefined;
+  if (url.startsWith("http")) return url;         // Đã là URL đầy đủ
+  if (url.startsWith("/")) return BACKEND_URL + url; // Đường dẫn tương đối → nối với Backend
+  return url;
+};
+
 export const api = async (url: string, method = "GET", body?: unknown): Promise<any> => {
   const token = localStorage.getItem("token");
 

@@ -109,8 +109,8 @@ export default function KanjiDetailPage() {
       ]);
 
       if (Array.isArray(levelLessonsData)) {
-        const filtered = levelLessonsData.filter(
-          (l: Lesson) => !l.skillType || l.skillType === "Hán tự" || l.skillType === "Kanji" || l.skillType === "Tự do"
+        const filtered = (levelLessonsData as Lesson[]).filter(
+          (l) => !l.skillType || l.skillType === "Kanji"
         );
         setLessons(filtered);
       }
@@ -118,7 +118,7 @@ export default function KanjiDetailPage() {
       if (lessonData?.lessonName) setLessonName(lessonData.lessonName);
 
       if (Array.isArray(allKanjisData)) {
-        setKanjis(allKanjisData.filter(k => k.lessonId === lessonId));
+        setKanjis((allKanjisData as KanjiItem[]).filter(k => k.lessonId === lessonId));
       }
     } catch (e) {
       console.error(e);
@@ -148,26 +148,23 @@ export default function KanjiDetailPage() {
 
   const toggleBookmark = useCallback(
     async (itemId: number, type: "Lesson" | "Kanji") => {
-      if (!userId) return;
-
-      // Lính gác chống lỗi 400 Bad Request
-      if (!itemId) {
-        alert(`Lỗi hệ thống: Không tìm thấy ID của ${type} này.`);
-        return;
-      }
+      if (!userId || !itemId) return;
 
       const loadingKey = `${type}-${itemId}`;
       setBookmarkLoadingKey(loadingKey);
 
       try {
         if (hasBookmark(itemId, type)) {
-          await api("/bookmark", "DELETE", { userId, itemId, type });
+          // FIX: Chuyển dữ liệu DELETE lên Query String để tránh lỗi 400 Bad Request ở .NET
+          await api(`/bookmark?userId=${userId}&itemId=${itemId}&type=${type}`, "DELETE");
         } else {
+          // POST vẫn dùng body bình thường
           await api("/bookmark", "POST", { userId, itemId, type });
         }
         await loadBookmarks(userId);
       } catch (e) {
-        alert("Lỗi khi lưu Bookmark!");
+        console.error("Error toggling bookmark:", e);
+        alert("Có lỗi khi cập nhật bookmark!");
       } finally {
         setBookmarkLoadingKey(null);
       }
@@ -232,7 +229,6 @@ export default function KanjiDetailPage() {
 
     setIsStartingFlashcard(true);
     try {
-      // Đánh dấu hoàn thành bài học khi bắt đầu Flashcard
       await api("/progress/upsert", "POST", {
         userId,
         lessonId,
@@ -253,7 +249,6 @@ export default function KanjiDetailPage() {
       setIsStartingFlashcard(false);
     }
   };
-
 
   if (isCheckingAuth) {
     return (
@@ -325,7 +320,7 @@ export default function KanjiDetailPage() {
             />
           </div>
 
-          {/* HIỂN THỊ KANJI (1 CHỮ / TRANG) */}
+          {/* HIỂN THỊ KANJI */}
           <div className="min-h-[400px]">
             {isLoading ? (
               <div className="flex flex-col items-center justify-center rounded-3xl border border-slate-200 bg-white py-32 shadow-sm">
@@ -339,12 +334,10 @@ export default function KanjiDetailPage() {
             ) : currentKanji ? (
               <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10 shadow-md relative overflow-hidden transition-all animate-in fade-in slide-in-from-bottom-4 duration-500">
 
-                {/* Ribbon Decor */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-bl-full -z-10 opacity-50"></div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 items-start">
 
-                  {/* TRÁI: Ô chữ Kanji khổng lồ */}
                   <div className="flex flex-col items-center gap-6">
                     <div className="relative flex h-56 w-full items-center justify-center rounded-3xl bg-slate-50 border-2 border-slate-100 shadow-inner overflow-hidden group">
                       <div className="absolute inset-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:50%_50%]"></div>
@@ -355,7 +348,6 @@ export default function KanjiDetailPage() {
                         {currentKanji.character}
                       </span>
 
-                      {/* FIX LỖI BOOKMARK 400 BẰNG CÁCH LẤY ID CHUẨN */}
                       {(() => {
                         const targetKanjiId = currentKanji.kanjiId || (currentKanji as any).id;
                         const isKanjiBookmarked = hasBookmark(targetKanjiId, "Kanji");
@@ -388,7 +380,6 @@ export default function KanjiDetailPage() {
                     </div>
                   </div>
 
-                  {/* PHẢI: Thông tin chi tiết */}
                   <div className="flex flex-col gap-8 pt-2">
                     <div>
                       <span className="block text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Nghĩa Hán Việt</span>
@@ -423,11 +414,9 @@ export default function KanjiDetailPage() {
             ) : null}
           </div>
 
-          {/* ĐIỀU HƯỚNG TỪNG CHỮ (TRƯỚC / TIẾP THEO) */}
+          {/* ĐIỀU HƯỚNG KANJI */}
           {!isLoading && kanjis.length > 0 && (
             <div className="flex flex-col gap-6">
-
-              {/* Thanh điều khiển chữ */}
               <div className="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
                 <button
                   onClick={() => setCurrentKanjiIndex(prev => prev - 1)}
@@ -450,7 +439,6 @@ export default function KanjiDetailPage() {
                 </button>
               </div>
 
-              {/* Nút Hoàn thành & Ôn tập Flashcard (Chỉ hiện khi xem đến chữ cuối cùng) */}
               {currentKanjiIndex === kanjis.length - 1 && (
                 <div className="mt-4 p-8 bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl border border-amber-200 text-center shadow-sm animate-in zoom-in-95 duration-500">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-amber-100 text-amber-500 mb-4 shadow-inner">
@@ -475,7 +463,7 @@ export default function KanjiDetailPage() {
             </div>
           )}
 
-          {/* NÚT CHUYỂN BÀI HỌC (TRƯỚC / SAU) */}
+          {/* ĐIỀU HƯỚNG BÀI HỌC */}
           {!isLoading && lessons.length > 0 && (
             <div className="mt-8 flex justify-between items-center gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex-wrap">
               <button
@@ -496,7 +484,6 @@ export default function KanjiDetailPage() {
             </div>
           )}
 
-          {/* MENU CÁC BÀI HỌC Ở DƯỚI CÙNG */}
           <div className="mt-4 flex flex-wrap justify-center gap-2 border-t border-slate-200 pt-8 pb-10">
             {sortedLessons.map((lesson, idx) => (
               <Link
@@ -515,7 +502,6 @@ export default function KanjiDetailPage() {
               </Link>
             ))}
           </div>
-
         </main>
       </div>
     </div>

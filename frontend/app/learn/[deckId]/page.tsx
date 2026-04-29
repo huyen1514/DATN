@@ -2,7 +2,7 @@
 
 import { useEffect, useState, use, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { api } from "@/lib/api";
+import { api, resolveMediaUrl } from "@/lib/api";
 import MainNavbar from "@/components/MainNavbar";
 import {
   ArrowLeft, RotateCcw, X, Check, Volume2, Sparkles, BookOpen,
@@ -426,9 +426,9 @@ export default function LearnPage({ params }: { params: Promise<{ deckId: string
                     <p className="text-base md:text-lg text-jp-ink/70 leading-relaxed whitespace-pre-line">{card.example}</p>
                   </div>
                 )}
-                {card.audioUrl && (
+                {card.audioUrl && card.audioUrl.trim() !== '' && (
                   <button
-                    onClick={(e) => { e.stopPropagation(); new Audio(card.audioUrl).play(); }}
+                    onClick={(e) => { e.stopPropagation(); const url = resolveMediaUrl(card.audioUrl); if (url) new Audio(url).play().catch(err => console.error(err)); }}
                     className="mt-auto w-14 h-14 bg-white rounded-full flex items-center justify-center text-jp-indigo hover:text-jp-red hover:bg-black/5 transition-all shadow-[0_4px_15px_rgba(0,0,0,0.05)] border border-jp-ink/5"
                   >
                     <Volume2 size={24} strokeWidth={2.5} />

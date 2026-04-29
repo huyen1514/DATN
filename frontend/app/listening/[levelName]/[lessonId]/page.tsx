@@ -170,7 +170,7 @@ export default function ListeningDetailPage() {
       if (Array.isArray(lessonsData)) {
         const filtered = lessonsData.filter(
           (l: Lesson) =>
-            (!l.skillType || l.skillType === "Nghe hiểu" || l.skillType === "Tự do")
+            (!l.skillType || l.skillType === "Nghe hiểu")
         );
         setLessons(filtered);
       }
@@ -495,7 +495,7 @@ export default function ListeningDetailPage() {
                         </div>
                       </div>
 
-                      {currentItem?.audioUrl && (
+                      {currentItem?.audioUrl && currentItem.audioUrl.trim() !== '' && (
                         <audio
                           ref={audioRef}
                           src={currentItem.audioUrl.startsWith('/') ? `${BACKEND_URL}${currentItem.audioUrl}` : currentItem.audioUrl}

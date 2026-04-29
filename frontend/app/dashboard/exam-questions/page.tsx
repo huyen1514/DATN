@@ -19,8 +19,8 @@ interface ExamQuestion {
 
 const SECTION_LABELS: Record<number, string> = { 0: "Từ vựng / Chữ Hán", 1: "Ngữ pháp", 2: "Đọc hiểu", 3: "Nghe hiểu" };
 
-const resolveUrl = (url?: string) => {
-  if (!url) return "";
+const resolveUrl = (url?: string): string | undefined => {
+  if (!url || url.trim() === '') return undefined;
   if (url.startsWith("http")) return url;
   return API_BASE + url;
 };
@@ -187,7 +187,7 @@ export default function AdminExamQuestions() {
                           <span className="text-[10px]">Không có ảnh</span>
                         </div>
                       )}
-                      {q.audioUrl && (
+                      {q.audioUrl && q.audioUrl.trim() !== '' && (
                         <audio controls src={resolveUrl(q.audioUrl)} className="w-full h-10" />
                       )}
                     </div>
@@ -288,7 +288,7 @@ export default function AdminExamQuestions() {
                       <Upload size={18} className="text-cyan-400 group-hover:text-cyan-600 transition-colors" />
                       {selectedAudioFile ? <span className="font-bold truncate">{selectedAudioFile.name}</span> : <span className="font-medium">{form.audioUrl ? "Thay đổi File Audio" : "Chọn tệp MP3 tải lên"}</span>}
                     </label>
-                    {(selectedAudioFile || form.audioUrl) && (
+                    {(selectedAudioFile || (form.audioUrl && form.audioUrl.trim() !== '')) && (
                       <audio controls src={selectedAudioFile ? URL.createObjectURL(selectedAudioFile) : resolveUrl(form.audioUrl)} className="w-full h-10 rounded-lg" />
                     )}
                   </div>

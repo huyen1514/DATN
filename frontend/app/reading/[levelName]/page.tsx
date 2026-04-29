@@ -72,7 +72,7 @@ export default function ReadingLessonsPage() {
 
         const validLessons = levelLessons.filter(
           (l: any) =>
-            (l.skillType === "Đọc hiểu" || l.skillType === "Tự do" || !l.skillType) &&
+            (l.skillType === "Đọc hiểu" || !l.skillType) &&
             pCounts[l.lessonId] &&
             pCounts[l.lessonId] > 0
         );

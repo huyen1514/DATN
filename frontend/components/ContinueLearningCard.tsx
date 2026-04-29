@@ -17,7 +17,7 @@ const PART_LABELS: Record<string, string> = {
   Grammar: "Ngữ pháp",
   Reading: "Đọc hiểu",
   Listening: "Nghe hiểu",
-  Kanji: "Hán tự",
+  Kanji: "Kanji",
 };
 
 export default function ContinueLearningCard({ userId }: { userId: number }) {

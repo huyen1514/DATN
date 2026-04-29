@@ -15,6 +15,9 @@ interface Lesson {
   createdAt: string;
 }
 
+// Khai báo mảng SKILLS ở đây để quản lý tập trung
+const SKILLS = ["Từ vựng", "Ngữ pháp", "Kanji", "Đọc hiểu", "Nghe hiểu"];
+
 export default function AdminLessons() {
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [levels, setLevels] = useState<Level[]>([]);
@@ -29,7 +32,7 @@ export default function AdminLessons() {
   const [editId, setEditId] = useState<number | null>(null);
   const [lessonName, setLessonName] = useState("");
   const [selectedLevelId, setSelectedLevelId] = useState<number>(0);
-  const [skillType, setSkillType] = useState<string>("Tự do");
+  const [skillType, setSkillType] = useState<string>(SKILLS[0]); // Mặc định là phần tử đầu tiên
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -47,11 +50,20 @@ export default function AdminLessons() {
     finally { setIsLoading(false); }
   };
 
+  const formatLevelName = (levelId: number) => {
+    const levelMap: Record<number, string> = {
+      1: "N5",
+      2: "N4",
+      3: "N3",
+    };
+    return levelMap[levelId] || `Level ${levelId}`;
+  };
+
   const openCreate = () => {
     setModalMode("create");
     setLessonName("");
     setSelectedLevelId(levels.length > 0 ? levels[0].levelId : 0);
-    setSkillType("Tự do");
+    setSkillType(SKILLS[0]);
     setEditId(null);
     setError("");
     setIsModalOpen(true);
@@ -61,7 +73,7 @@ export default function AdminLessons() {
     setModalMode("edit");
     setLessonName(lesson.lessonName);
     setSelectedLevelId(lesson.levelId);
-    setSkillType(lesson.skillType || "Tự do");
+    setSkillType(lesson.skillType || SKILLS[0]);
     setEditId(lesson.lessonId);
     setError("");
     setIsModalOpen(true);
@@ -96,7 +108,7 @@ export default function AdminLessons() {
   const filtered = lessons.filter(l => {
     const matchSearch = l.lessonName.toLowerCase().includes(search.toLowerCase());
     const matchLevel = filterLevel === "all" || l.levelId === filterLevel;
-    const matchSkill = filterSkillType === "all" || l.skillType === filterSkillType || (filterSkillType === "Tự do" && !l.skillType);
+    const matchSkill = filterSkillType === "all" || l.skillType === filterSkillType;
     return matchSearch && matchLevel && matchSkill;
   });
 
@@ -126,17 +138,14 @@ export default function AdminLessons() {
           <select value={filterLevel} onChange={(e) => setFilterLevel(e.target.value === "all" ? "all" : parseInt(e.target.value))}
             className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[160px]">
             <option value="all">Tất cả cấp độ</option>
-            {levels.map(l => <option key={l.levelId} value={l.levelId}>{l.levelName}</option>)}
+            {levels.map(l => <option key={l.levelId} value={l.levelId}>{formatLevelName(l.levelId)}</option>)}
           </select>
           <select value={filterSkillType} onChange={(e) => setFilterSkillType(e.target.value)}
             className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[160px]">
             <option value="all">Tất cả kỹ năng</option>
-            <option value="Tự do">Tự do (Kết hợp)</option>
-            <option value="Từ vựng">Từ vựng</option>
-            <option value="Ngữ pháp">Ngữ pháp</option>
-            <option value="Kanji">Kanji (Chữ Hán)</option>
-            <option value="Đọc hiểu">Đọc hiểu</option>
-            <option value="Nghe hiểu">Nghe hiểu</option>
+            {SKILLS.map(skill => (
+              <option key={skill} value={skill}>{skill}</option>
+            ))}
           </select>
         </div>
 
@@ -168,12 +177,12 @@ export default function AdminLessons() {
                     <td className="px-6 py-4"><span className="text-sm font-bold text-jp-indigo">{lesson.lessonName}</span></td>
                     <td className="px-6 py-4">
                       <span className="text-xs font-bold bg-violet-50 text-violet-600 px-3 py-1 rounded-full">
-                        {lesson.level?.levelName || `Level ${lesson.levelId}`}
+                        {formatLevelName(lesson.levelId)}
                       </span>
                     </td>
                     <td className="px-6 py-4">
                       <span className="text-xs font-bold bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full">
-                        {lesson.skillType || "Tự do"}
+                        {lesson.skillType || SKILLS[0]}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-sm text-neutral-400">{new Date(lesson.createdAt).toLocaleDateString("vi-VN")}</td>
@@ -211,19 +220,16 @@ export default function AdminLessons() {
                 <select value={selectedLevelId} onChange={(e) => setSelectedLevelId(parseInt(e.target.value))}
                   className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo text-sm">
                   <option value={0}>-- Chọn cấp độ --</option>
-                  {levels.map(l => <option key={l.levelId} value={l.levelId}>{l.levelName}</option>)}
+                  {levels.map(l => <option key={l.levelId} value={l.levelId}>{formatLevelName(l.levelId)}</option>)}
                 </select>
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-[0.1em] text-jp-indigo uppercase mb-2">Phân loại Kỹ năng</label>
                 <select value={skillType} onChange={(e) => setSkillType(e.target.value)}
                   className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo text-sm">
-                  <option value="Tự do">Tự do (Kết hợp)</option>
-                  <option value="Từ vựng">Từ vựng</option>
-                  <option value="Ngữ pháp">Ngữ pháp</option>
-                  <option value="Kanji">Kanji (Chữ Hán)</option>
-                  <option value="Đọc hiểu">Đọc hiểu</option>
-                  <option value="Nghe hiểu">Nghe hiểu</option>
+                  {SKILLS.map(skill => (
+                    <option key={skill} value={skill}>{skill}</option>
+                  ))}
                 </select>
               </div>
             </div>

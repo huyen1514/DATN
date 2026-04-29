@@ -7,8 +7,8 @@ import { Clock, Send, AlertTriangle, Play, Pause, Volume2, BookOpen, Layers, Inf
 //import MainNavbar from "@/components/MainNavbar";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL?.replace("/api", "") || "http://localhost:5135";
-const resolveMediaUrl = (url?: string) => {
-  if (!url) return "";
+const resolveMediaUrl = (url?: string): string | undefined => {
+  if (!url) return undefined;
   if (url.startsWith("http")) return url;
   return API_BASE + url;
 };

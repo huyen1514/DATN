@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { api } from "@/lib/api";
+import { api, resolveMediaUrl } from "@/lib/api";
 import Link from "next/link";
 import MainNavbar from "@/components/MainNavbar";
 import {
@@ -44,6 +44,13 @@ interface BookmarkItem {
   type: string;
   itemName?: string;
 }
+
+const isVocabularySkill = (skillType?: string) => {
+  if (!skillType) return true;
+  const raw = skillType.trim().toLowerCase();
+  const normalized = raw.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  return normalized === "tu vung" || normalized === "vocabulary" || raw === "từ vựng";
+};
 
 export default function VocabularyDetailPage() {
   const params = useParams();
@@ -88,11 +95,19 @@ export default function VocabularyDetailPage() {
         api(`/vocabularies?lessonId=${lessonId}`),
       ]);
 
-      if (Array.isArray(levelLessonsData)) {
-        const vocabLessons = (levelLessonsData as Lesson[]).filter(
-          (l) => !l.skillType || l.skillType === "Từ vựng" || l.skillType === "Tự do"
+      const normalizedLevelLessonsData = Array.isArray(levelLessonsData)
+        ? (levelLessonsData as Lesson[]).map((lesson) => ({
+            ...lesson,
+            skillType: isVocabularySkill(lesson.skillType) ? "Tá»« vá»±ng" : lesson.skillType,
+          }))
+        : [];
+
+      if (Array.isArray(normalizedLevelLessonsData)) {
+        const vocabLessons = normalizedLevelLessonsData.filter(
+          (l) => !l.skillType || l.skillType === "Từ vựng"
         );
         setLessons(vocabLessons);
+        setLessons((levelLessonsData as Lesson[]).filter((l) => isVocabularySkill(l.skillType)));
       }
 
       if (lessonData?.lessonName) setLessonName(lessonData.lessonName);
@@ -326,7 +341,7 @@ export default function VocabularyDetailPage() {
                 size={18} 
                 className={hasBookmark(lessonId, "Lesson") ? "fill-amber-500 text-amber-500" : ""} 
               />
-              {hasBookmark(lessonId, "Lesson") ? "Đã lưu bài học" : `Lưu bài ${lessonName || lessonId}`}
+              {hasBookmark(lessonId, "Lesson") ? "Đã lưu" : `Lưu ${lessonName || lessonId}`}
             </button>
           </div>
 
@@ -425,11 +440,14 @@ export default function VocabularyDetailPage() {
                   </div>
 
                   <div className="absolute right-3 top-3 flex flex-row items-center gap-2 text-slate-400 md:relative md:right-0 md:top-0 md:flex-col md:gap-3">
-                    {v.audioUrl && (
+                    {v.audioUrl && v.audioUrl.trim() !== '' && (
                       <button
                         onClick={() => {
-                          const audio = new Audio(v.audioUrl);
-                          audio.play().catch((e) => console.error(e));
+                          const fullUrl = resolveMediaUrl(v.audioUrl);
+                          if (fullUrl) {
+                            const audio = new Audio(fullUrl);
+                            audio.play().catch((e) => console.error(e));
+                          }
                         }}
                         className="rounded-full bg-slate-50 p-2 transition hover:bg-rose-50 hover:text-[#a71f48]"
                         title="Phát âm"

@@ -29,7 +29,7 @@ const PARTS = [
   { key: "Grammar", label: "Ngữ pháp" },
   { key: "Reading", label: "Đọc hiểu" },
   { key: "Listening", label: "Nghe hiểu" },
-  { key: "Kanji", label: "Hán tự" },
+  { key: "Kanji", label: "Kanji" },
 ];
 
 export default function LessonProgressSidebar({ lessonId, userId, levelName }: Props) {
@@ -116,16 +116,15 @@ export default function LessonProgressSidebar({ lessonId, userId, levelName }: P
           const status = currentProgress?.status || "NotStarted";
 
           return (
-            <Link 
-              key={part.key} 
+            <Link
+              key={part.key}
               href={`/${part.key.toLowerCase()}/${levelName}/${lessonId}`}
               className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100 cursor-pointer group"
             >
-              <span className={`text-sm transition-colors ${
-                status === "Completed" ? "font-bold text-green-600" 
-                : status === "InProgress" ? "font-bold text-[#a71f48]" 
-                : "font-medium text-gray-700 group-hover:text-gray-900"
-              }`}>
+              <span className={`text-sm transition-colors ${status === "Completed" ? "font-bold text-green-600"
+                : status === "InProgress" ? "font-bold text-[#a71f48]"
+                  : "font-medium text-gray-700 group-hover:text-gray-900"
+                }`}>
                 {part.label}
               </span>
               <div className="flex items-center gap-2">

@@ -93,9 +93,9 @@ export default function GrammarDetailPage() {
       ]);
 
       if (Array.isArray(levelLessonsData)) {
-        // Chỉ lấy bài học thuộc loại Ngữ pháp hoặc Tự do
+        // Chỉ lấy bài học thuộc loại Ngữ pháp
         const filtered = levelLessonsData.filter(
-          (l: Lesson) => !l.skillType || l.skillType === "Ngữ pháp" || l.skillType === "Tự do"
+          (l: Lesson) => !l.skillType || l.skillType === "Ngữ pháp"
         );
         setLessons(filtered);
       }

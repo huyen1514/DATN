@@ -139,7 +139,7 @@ export default function ReadingDetailPage() {
       if (Array.isArray(lessonsData)) {
         const filtered = lessonsData.filter(
           (l: Lesson) =>
-            (!l.skillType || l.skillType === "Đọc hiểu" || l.skillType === "Tự do")
+            (!l.skillType || l.skillType === "Đọc hiểu")
         );
         setLessons(filtered);
       }

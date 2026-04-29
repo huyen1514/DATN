@@ -102,7 +102,7 @@ interface RecommendationResponse {
 const SKILL_MAP: Record<string, { label: string; icon: any; path: string; bg: string; color: string }> = {
   Vocabulary: { label: "Từ vựng", icon: BookOpen, path: "/vocabulary", bg: "bg-blue-50", color: "text-blue-600" },
   Grammar: { label: "Ngữ pháp", icon: PenTool, path: "/grammar", bg: "bg-violet-50", color: "text-violet-600" },
-  Kanji: { label: "Hán tự", icon: Languages, path: "/kanji", bg: "bg-amber-50", color: "text-amber-600" },
+  Kanji: { label: "Kanji", icon: Languages, path: "/kanji", bg: "bg-amber-50", color: "text-amber-600" },
   Reading: { label: "Đọc hiểu", icon: FileText, path: "/reading", bg: "bg-emerald-50", color: "text-emerald-600" },
   Listening: { label: "Nghe hiểu", icon: Headphones, path: "/listening", bg: "bg-rose-50", color: "text-rose-600" },
 };

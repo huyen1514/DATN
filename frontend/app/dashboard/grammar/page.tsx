@@ -41,9 +41,18 @@ export default function AdminGrammar() {
     finally { setIsLoading(false); }
   };
 
+  // Chỉ lấy những bài học thuộc kỹ năng "Ngữ pháp"
+  const grammarLessons = lessons.filter(l => l.skillType === "Ngữ pháp");
+
   const openCreate = () => {
     setModalMode("create");
-    setForm({ grammarName: "", structure: "", meaning: "", example: "", lessonId: lessons[0]?.lessonId || 0 });
+    setForm({
+      grammarName: "",
+      structure: "",
+      meaning: "",
+      example: "",
+      lessonId: grammarLessons[0]?.lessonId || 0 // Mặc định chọn bài học ngữ pháp đầu tiên
+    });
     setEditId(null); setError(""); setIsModalOpen(true);
   };
 
@@ -55,6 +64,8 @@ export default function AdminGrammar() {
 
   const handleSave = async () => {
     if (!form.grammarName.trim() || !form.structure.trim()) { setError("Vui lòng nhập đầy đủ"); return; }
+    if (form.lessonId === 0) { setError("Vui lòng chọn bài học"); return; }
+
     setIsSaving(true); setError("");
     try {
       const res = modalMode === "create"
@@ -92,19 +103,26 @@ export default function AdminGrammar() {
           </button>
         </div>
 
+        {/* Bộ lọc */}
         <div className="flex gap-3 mb-6">
           <div className="relative flex-1">
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400" />
             <input type="text" placeholder="Tìm ngữ pháp..." value={search} onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white border border-black/10 rounded-xl text-sm" />
+              className="w-full pl-10 pr-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
           </div>
           <select value={filterLesson} onChange={(e) => setFilterLesson(e.target.value === "all" ? "all" : parseInt(e.target.value))}
-            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm min-w-[200px]">
+            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm min-w-[200px] focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo">
             <option value="all">Tất cả bài học</option>
-            {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
+            {/* Lặp qua mảng grammarLessons đã lọc */}
+            {grammarLessons.map(l => (
+              <option key={l.lessonId} value={l.lessonId}>
+                {l.lessonName} {l.levelName ? `(${l.levelName})` : ''}
+              </option>
+            ))}
           </select>
         </div>
 
+        {/* Bảng danh sách */}
         <div className="bg-white rounded-2xl border border-black/5 overflow-hidden shadow-sm">
           {isLoading ? <div className="p-8 text-center text-neutral-400">Đang tải...</div> : filtered.length === 0 ? (
             <div className="p-12 text-center"><PenTool size={48} className="mx-auto text-neutral-200 mb-4" /><p className="text-neutral-500">Chưa có ngữ pháp nào</p></div>
@@ -112,24 +130,30 @@ export default function AdminGrammar() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-black/5 bg-neutral-50/50">
+                  <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider w-[50px]">ID</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Tên</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Cấu trúc</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Nghĩa</th>
-                  <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Bài học</th>
-                  <th className="text-right px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Thao tác</th>
+                  <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider whitespace-nowrap">Bài học</th>
+                  <th className="text-right px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider whitespace-nowrap">Thao tác</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-black/5">
                 {filtered.map(g => (
-                  <tr key={g.grammarId} className="hover:bg-neutral-50/50">
+                  <tr key={g.grammarId} className="hover:bg-neutral-50/50 transition-colors">
+                    <td className="px-6 py-4 text-sm text-neutral-500">{g.grammarId}</td>
                     <td className="px-6 py-4 text-sm font-bold text-jp-indigo">{g.grammarName}</td>
                     <td className="px-6 py-4 text-sm text-neutral-600 font-mono">{g.structure}</td>
                     <td className="px-6 py-4 text-sm text-neutral-600 max-w-[200px] truncate">{g.meaning}</td>
-                    <td className="px-6 py-4"><span className="text-xs font-bold bg-blue-50 text-blue-600 px-3 py-1 rounded-full">{g.lesson?.lessonName || `Bài ${g.lessonId}`}</span></td>
-                    <td className="px-6 py-4 text-right">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="text-xs font-bold bg-blue-50 text-blue-600 px-3 py-1 rounded-full">
+                        {g.lesson?.lessonName || `Bài ${g.lessonId}`}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 text-right whitespace-nowrap">
                       <div className="flex items-center justify-end gap-2">
-                        <button onClick={() => openEdit(g)} className="p-2 text-neutral-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg"><Edit2 size={16} /></button>
-                        <button onClick={() => handleDelete(g.grammarId)} className="p-2 text-neutral-400 hover:text-red-600 hover:bg-red-50 rounded-lg"><Trash2 size={16} /></button>
+                        <button onClick={() => openEdit(g)} className="p-2 text-neutral-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"><Edit2 size={16} /></button>
+                        <button onClick={() => handleDelete(g.grammarId)} className="p-2 text-neutral-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"><Trash2 size={16} /></button>
                       </div>
                     </td>
                   </tr>
@@ -140,8 +164,9 @@ export default function AdminGrammar() {
         </div>
       </div>
 
+      {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-bold text-jp-indigo">{modalMode === "create" ? "Thêm Ngữ Pháp" : "Sửa Ngữ Pháp"}</h2>
@@ -151,36 +176,41 @@ export default function AdminGrammar() {
             <div className="space-y-4 mb-6">
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Tên ngữ pháp *</label>
-                <input type="text" value={form.grammarName} onChange={(e) => setForm({...form, grammarName: e.target.value})} placeholder="Ví dụ: ～てから"
-                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm" autoFocus />
+                <input type="text" value={form.grammarName} onChange={(e) => setForm({ ...form, grammarName: e.target.value })} placeholder="Ví dụ: ～てから"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" autoFocus />
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Cấu trúc *</label>
-                <input type="text" value={form.structure} onChange={(e) => setForm({...form, structure: e.target.value})} placeholder="Vて + から + V2"
-                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm font-mono" />
+                <input type="text" value={form.structure} onChange={(e) => setForm({ ...form, structure: e.target.value })} placeholder="Vて + から + V2"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm font-mono focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Nghĩa *</label>
-                <textarea value={form.meaning} onChange={(e) => setForm({...form, meaning: e.target.value})} placeholder="Sau khi... thì..."
-                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm resize-none h-20" />
+                <textarea value={form.meaning} onChange={(e) => setForm({ ...form, meaning: e.target.value })} placeholder="Sau khi... thì..."
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm resize-none h-20 focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Ví dụ *</label>
-                <textarea value={form.example} onChange={(e) => setForm({...form, example: e.target.value})} placeholder="食べてから、出かけます。"
-                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm resize-none h-20" />
+                <textarea value={form.example} onChange={(e) => setForm({ ...form, example: e.target.value })} placeholder="食べてから、出かけます。"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm resize-none h-20 focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Bài học *</label>
-                <select value={form.lessonId} onChange={(e) => setForm({...form, lessonId: parseInt(e.target.value)})}
-                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm">
+                <select value={form.lessonId} onChange={(e) => setForm({ ...form, lessonId: parseInt(e.target.value) })}
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo">
                   <option value={0}>-- Chọn --</option>
-                  {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
+                  {/* Lặp qua mảng grammarLessons đã lọc cho Modal */}
+                  {grammarLessons.map(l => (
+                    <option key={l.lessonId} value={l.lessonId}>
+                      {l.lessonName} {l.levelName ? `(${l.levelName})` : ''}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
             <div className="flex gap-3">
-              <button onClick={() => setIsModalOpen(false)} className="flex-1 py-3 border border-neutral-200 text-neutral-500 rounded-xl font-bold text-sm">Hủy</button>
-              <button disabled={isSaving} onClick={handleSave} className="flex-1 py-3 bg-jp-indigo text-white rounded-xl font-bold text-sm hover:bg-jp-red disabled:opacity-50">
+              <button onClick={() => setIsModalOpen(false)} className="flex-1 py-3 border border-neutral-200 text-neutral-500 rounded-xl font-bold text-sm hover:bg-neutral-50 transition-colors">Hủy</button>
+              <button disabled={isSaving} onClick={handleSave} className="flex-1 py-3 bg-jp-indigo text-white rounded-xl font-bold text-sm hover:bg-jp-red transition-colors disabled:opacity-50">
                 {isSaving ? "Đang lưu..." : modalMode === "create" ? "Thêm mới" : "Cập nhật"}
               </button>
             </div>

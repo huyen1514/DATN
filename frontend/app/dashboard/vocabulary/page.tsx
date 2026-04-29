@@ -6,12 +6,12 @@ import AdminLayout from "@/components/AdminLayout";
 import { BookA, Plus, Edit2, Trash2, Search, X, Upload, AudioLines } from "lucide-react";
 
 interface Level { levelId: number; levelName: string; }
-interface Lesson { 
-  lessonId: number; 
-  lessonName: string; 
-  levelId: number; 
-  levelName?: string; 
-  skillType?: string; 
+interface Lesson {
+  lessonId: number;
+  lessonName: string;
+  levelId: number;
+  levelName?: string;
+  skillType?: string;
 }
 interface Vocabulary {
   vocabularyId: number;
@@ -30,7 +30,7 @@ export default function AdminVocabulary() {
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [levels, setLevels] = useState<Level[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const [search, setSearch] = useState("");
   const [filterLevel, setFilterLevel] = useState<string>("all");
   const [filterLesson, setFilterLesson] = useState<string>("all");
@@ -48,7 +48,7 @@ export default function AdminVocabulary() {
   const loadData = async () => {
     try {
       const [vData, lData, lvData] = await Promise.all([
-        api("/vocabularies"), 
+        api("/vocabularies"),
         api("/lessons"),
         api("/levels")
       ]);
@@ -59,14 +59,20 @@ export default function AdminVocabulary() {
     finally { setIsLoading(false); }
   };
 
+  // Chỉ lấy những bài học thuộc kỹ năng "Từ vựng"
+  const vocabLessons = useMemo(() => {
+    return lessons.filter(l => l.skillType === "Từ vựng");
+  }, [lessons]);
+
+  // Lọc danh sách bài học dựa trên filterLevel được chọn
   const availableLessons = useMemo(() => {
-    if (filterLevel === "all") return lessons;
-    return lessons.filter(l => String(l.levelId) === filterLevel);
-  }, [lessons, filterLevel]);
+    if (filterLevel === "all") return vocabLessons;
+    return vocabLessons.filter(l => String(l.levelId) === filterLevel);
+  }, [vocabLessons, filterLevel]);
 
   const openCreate = () => {
     setModalMode("create");
-    setForm({ word: "", reading: "", meaning: "", example: "", partOfSpeech: "", audioUrl: "", lessonId: lessons[0]?.lessonId || 0 });
+    setForm({ word: "", reading: "", meaning: "", example: "", partOfSpeech: "", audioUrl: "", lessonId: vocabLessons[0]?.lessonId || 0 });
     setSelectedFile(null);
     setEditId(null); setError(""); setIsModalOpen(true);
   };
@@ -79,14 +85,14 @@ export default function AdminVocabulary() {
   };
 
   const handleSave = async () => {
-    if (!form.word.trim() || !form.meaning.trim() || form.lessonId === 0) { 
-      setError("Vui lòng nhập đầy đủ thông tin và chọn Bài học"); 
-      return; 
+    if (!form.word.trim() || !form.meaning.trim() || form.lessonId === 0) {
+      setError("Vui lòng nhập đầy đủ thông tin và chọn Bài học");
+      return;
     }
     setIsSaving(true); setError("");
     try {
       let finalAudioUrl = form.audioUrl;
-      
+
       if (selectedFile) {
         try {
           const uploadRes = await uploadAudio(selectedFile);
@@ -113,13 +119,13 @@ export default function AdminVocabulary() {
 
   const filtered = vocabs.filter(v => {
     const s = search.toLowerCase().trim();
-    const matchSearch = !s || 
-                        v.word.toLowerCase().includes(s) || 
-                        v.meaning.toLowerCase().includes(s) || 
-                        v.reading.toLowerCase().includes(s);
-    
+    const matchSearch = !s ||
+      v.word.toLowerCase().includes(s) ||
+      v.meaning.toLowerCase().includes(s) ||
+      v.reading.toLowerCase().includes(s);
+
     const matchLesson = filterLesson === "all" || String(v.lessonId) === filterLesson;
-    
+
     const lessonOfVocab = lessons.find(l => String(l.lessonId) === String(v.lessonId));
     const matchLevel = filterLevel === "all" || String(lessonOfVocab?.levelId) === filterLevel;
 
@@ -149,11 +155,11 @@ export default function AdminVocabulary() {
               className="w-full pl-10 pr-4 py-3 bg-white border border-black/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo text-sm" />
           </div>
 
-          <select 
-            value={filterLevel} 
+          <select
+            value={filterLevel}
             onChange={(e) => {
               setFilterLevel(e.target.value);
-              setFilterLesson("all"); 
+              setFilterLesson("all");
             }}
             className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[160px] cursor-pointer"
           >
@@ -161,15 +167,15 @@ export default function AdminVocabulary() {
             {levels.map(l => <option key={l.levelId} value={String(l.levelId)}>{l.levelName}</option>)}
           </select>
 
-          <select 
-            value={filterLesson} 
+          <select
+            value={filterLesson}
             onChange={(e) => setFilterLesson(e.target.value)}
             className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo min-w-[200px] cursor-pointer"
           >
             <option value="all">Tất cả bài học</option>
             {availableLessons.map(l => (
               <option key={l.lessonId} value={String(l.lessonId)}>
-                {l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}
+                {l.lessonName}
               </option>
             ))}
           </select>
@@ -182,26 +188,26 @@ export default function AdminVocabulary() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-black/5 bg-neutral-50/50">
+                  <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider w-[50px]">ID</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Từ</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Cách đọc</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Nghĩa</th>
                   <th className="text-left px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Loại từ</th>
-                  {/* Cột Bài học đã bị xóa ở đây */}
                   <th className="text-right px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase tracking-wider">Thao tác</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-black/5">
                 {filtered.map(v => (
-                  <tr key={v.vocabularyId} className="hover:bg-neutral-50/50">
+                  <tr key={v.vocabularyId} className="hover:bg-neutral-50/50 transition-colors">
+                    <td className="px-6 py-4 text-sm text-neutral-500">{v.vocabularyId}</td>
                     <td className="px-6 py-4 text-lg font-serif font-bold text-jp-indigo">{v.word}</td>
                     <td className="px-6 py-4 text-sm text-jp-red">{v.reading}</td>
                     <td className="px-6 py-4 text-sm text-neutral-600 max-w-[200px] truncate">{v.meaning}</td>
                     <td className="px-6 py-4 text-xs text-neutral-500">{v.partOfSpeech || "—"}</td>
-                    {/* Dữ liệu cột Bài học đã bị xóa ở đây */}
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
-                        <button onClick={() => openEdit(v)} className="p-2 text-neutral-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg"><Edit2 size={16} /></button>
-                        <button onClick={() => handleDelete(v.vocabularyId)} className="p-2 text-neutral-400 hover:text-red-600 hover:bg-red-50 rounded-lg"><Trash2 size={16} /></button>
+                        <button onClick={() => openEdit(v)} className="p-2 text-neutral-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"><Edit2 size={16} /></button>
+                        <button onClick={() => handleDelete(v.vocabularyId)} className="p-2 text-neutral-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"><Trash2 size={16} /></button>
                       </div>
                     </td>
                   </tr>
@@ -213,7 +219,7 @@ export default function AdminVocabulary() {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-bold text-jp-indigo">{modalMode === "create" ? "Thêm Từ Vựng" : "Sửa Từ Vựng"}</h2>
@@ -224,52 +230,52 @@ export default function AdminVocabulary() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Từ *</label>
-                  <input type="text" value={form.word} onChange={(e) => setForm({...form, word: e.target.value})} placeholder="食べる"
-                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm font-serif text-lg" autoFocus />
+                  <input type="text" value={form.word} onChange={(e) => setForm({ ...form, word: e.target.value })} placeholder="食べる"
+                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm font-serif text-lg focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" autoFocus />
                 </div>
                 <div>
                   <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Cách đọc *</label>
-                  <input type="text" value={form.reading} onChange={(e) => setForm({...form, reading: e.target.value})} placeholder="たべる"
-                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm" />
+                  <input type="text" value={form.reading} onChange={(e) => setForm({ ...form, reading: e.target.value })} placeholder="たべる"
+                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
                 </div>
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Nghĩa *</label>
-                <input type="text" value={form.meaning} onChange={(e) => setForm({...form, meaning: e.target.value})} placeholder="Ăn"
-                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm" />
+                <input type="text" value={form.meaning} onChange={(e) => setForm({ ...form, meaning: e.target.value })} placeholder="Ăn"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Loại từ</label>
-                  <input type="text" value={form.partOfSpeech} onChange={(e) => setForm({...form, partOfSpeech: e.target.value})} placeholder="Động từ"
-                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm" />
+                  <input type="text" value={form.partOfSpeech} onChange={(e) => setForm({ ...form, partOfSpeech: e.target.value })} placeholder="Động từ"
+                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
                 </div>
                 <div>
                   <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Bài học *</label>
-                  <select value={form.lessonId} onChange={(e) => setForm({...form, lessonId: parseInt(e.target.value)})}
-                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm">
+                  <select value={form.lessonId} onChange={(e) => setForm({ ...form, lessonId: parseInt(e.target.value) })}
+                    className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo">
                     <option value={0}>-- Chọn --</option>
-                    {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
+                    {vocabLessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName}</option>)}
                   </select>
                 </div>
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Ví dụ</label>
-                <textarea value={form.example} onChange={(e) => setForm({...form, example: e.target.value})} placeholder="毎日ご飯を食べます。"
-                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm resize-none h-20" />
+                <textarea value={form.example} onChange={(e) => setForm({ ...form, example: e.target.value })} placeholder="毎日ご飯を食べます。"
+                  className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm resize-none h-20 focus:outline-none focus:ring-2 focus:ring-jp-indigo/20 focus:border-jp-indigo" />
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Tải tệp âm thanh (.mp3)</label>
                 <div className="flex gap-2">
                   <div className="relative flex-1">
-                    <input 
-                      type="file" 
-                      accept="audio/*" 
+                    <input
+                      type="file"
+                      accept="audio/*"
                       onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
-                      className="hidden" 
+                      className="hidden"
                       id="audio-upload"
                     />
-                    <label 
+                    <label
                       htmlFor="audio-upload"
                       className="flex items-center gap-3 px-4 py-3 border-2 border-dashed border-neutral-200 rounded-xl text-sm text-neutral-500 cursor-pointer hover:border-jp-indigo/30 hover:bg-jp-indigo/5 transition-all w-full"
                     >
@@ -293,8 +299,8 @@ export default function AdminVocabulary() {
               </div>
             </div>
             <div className="flex gap-3">
-              <button onClick={() => setIsModalOpen(false)} className="flex-1 py-3 border border-neutral-200 text-neutral-500 rounded-xl font-bold text-sm">Hủy</button>
-              <button disabled={isSaving} onClick={handleSave} className="flex-1 py-3 bg-jp-indigo text-white rounded-xl font-bold text-sm hover:bg-jp-red disabled:opacity-50">
+              <button onClick={() => setIsModalOpen(false)} className="flex-1 py-3 border border-neutral-200 text-neutral-500 rounded-xl font-bold text-sm hover:bg-neutral-50 transition-colors">Hủy</button>
+              <button disabled={isSaving} onClick={handleSave} className="flex-1 py-3 bg-jp-indigo text-white rounded-xl font-bold text-sm hover:bg-jp-red transition-colors disabled:opacity-50">
                 {isSaving ? "Đang lưu..." : modalMode === "create" ? "Thêm mới" : "Cập nhật"}
               </button>
             </div>

@@ -9,13 +9,14 @@ import { Headphones, Plus, Edit2, Trash2, Search, X, Upload, Image as ImageIcon,
 const BACKEND_URL = API_URL.replace(/\/api$/, "");
 
 /* Hàm helper để nối URL cho ảnh và âm thanh */
-const getFullUrl = (url?: string) => {
-  if (!url) return "";
+const getFullUrl = (url?: string): string | undefined => {
+  if (!url || url.trim() === '') return undefined;
   return url.startsWith('/') ? `${BACKEND_URL}${url}` : url;
 };
 
 interface Lesson { lessonId: number; lessonName: string; levelName?: string; skillType?: string; }
 interface Listening {
+  lessonName: string;
   listeningId: number;
   audioUrl: string;
   imageUrl?: string;
@@ -208,7 +209,7 @@ export default function AdminListening() {
                           <span className="text-[10px]">Không có ảnh</span>
                         </div>
                       )}
-                      {item.audioUrl && (
+                      {item.audioUrl && item.audioUrl.trim() !== '' && (
                         <audio controls src={getFullUrl(item.audioUrl)} className="w-full h-10" />
                       )}
                     </div>
@@ -217,7 +218,7 @@ export default function AdminListening() {
                     <div className="flex-1 w-full">
                       <div className="flex items-center gap-2 mb-3">
                         <span className="text-xs font-bold bg-cyan-50 text-cyan-600 px-3 py-1 rounded-md tracking-wider">
-                          {item.lesson?.lessonName || `Bài ${item.lessonId}`}
+                          {item.lesson?.lessonName || `${item.lessonName}`}
                         </span>
                         <span className="text-xs font-bold bg-green-50 text-green-600 border border-green-200 px-3 py-1 rounded-md">
                           Đáp án: {item.correctAnswer}
@@ -300,7 +301,7 @@ export default function AdminListening() {
                       <Upload size={18} className="text-cyan-400 group-hover:text-cyan-600 transition-colors" />
                       {selectedFile ? <span className="font-bold truncate">{selectedFile.name}</span> : <span className="font-medium">{form.audioUrl ? "Thay đổi File Audio" : "Chọn tệp MP3 tải lên"}</span>}
                     </label>
-                    {(selectedFile || form.audioUrl) && (
+                    {(selectedFile || (form.audioUrl && form.audioUrl.trim() !== '')) && (
                       <audio controls src={selectedFile ? URL.createObjectURL(selectedFile) : getFullUrl(form.audioUrl)} className="w-full h-10 rounded-lg" />
                     )}
                   </div>

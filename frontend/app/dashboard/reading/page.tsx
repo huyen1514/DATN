@@ -195,10 +195,19 @@ export default function AdminReading() {
             <input type="text" placeholder="Tìm kiếm nội dung bài đọc hoặc câu hỏi..." value={search} onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-3 bg-white border border-black/10 rounded-xl text-sm" />
           </div>
-          <select value={filterLesson} onChange={(e) => setFilterLesson(e.target.value === "all" ? "all" : parseInt(e.target.value))}
-            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm min-w-[200px]">
+          <select
+            value={filterLesson}
+            onChange={(e) => setFilterLesson(e.target.value === "all" ? "all" : parseInt(e.target.value))}
+            className="px-4 py-3 bg-white border border-black/10 rounded-xl text-sm min-w-[200px]"
+          >
             <option value="all">Tất cả bài học</option>
-            {lessons.map(l => <option key={l.lessonId} value={l.lessonId}>{l.lessonName} {l.levelName ? `(${l.levelName}${l.skillType ? ` - ${l.skillType}` : ''})` : ''}</option>)}
+            {lessons
+              .filter(l => l.skillType === "Đọc hiểu")
+              .map(l => (
+                <option key={l.lessonId} value={l.lessonId}>
+                  {l.lessonName} {l.levelName ? `(${l.levelName})` : ''}
+                </option>
+              ))}
           </select>
         </div>
 

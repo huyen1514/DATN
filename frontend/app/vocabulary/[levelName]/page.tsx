@@ -34,8 +34,8 @@ export default function VocabularyLessonsPage() {
     const raw = skillType.trim().toLowerCase();
     const normalized = raw.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
     return (
-      normalized === "tu vung" || normalized === "tu do" || normalized === "vocabulary" ||
-      raw === "từ vựng" || raw === "tự do"
+      normalized === "tu vung" || normalized === "vocabulary" ||
+      raw === "từ vựng"
     );
   };
 
