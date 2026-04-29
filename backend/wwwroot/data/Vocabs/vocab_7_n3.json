@@ -1,0 +1,322 @@
+[
+    {
+        "Word": "素晴らしい",
+        "Reading": "すばらしい",
+        "Meaning": "tuyệt vời, tráng lệ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "富士山頂から見た日の出は素晴らしかった。\n(Cảnh bình minh nhìn từ đỉnh núi Phú Sĩ thật tuyệt vời.)"
+    },
+    {
+        "Word": "細かい",
+        "Reading": "こまかい",
+        "Meaning": "nhỏ, chi tiết, tiền lẻ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "新聞の字が細かくて読めない。\n(Chữ trên báo nhỏ quá tôi không đọc được.)"
+    },
+    {
+        "Word": "浅い",
+        "Reading": "あさい",
+        "Meaning": "nông, cạn",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "この川は浅いので、子どもが泳いでも大丈夫だ。\n(Con sông này nông nên trẻ con bơi cũng không sao.)"
+    },
+    {
+        "Word": "深い",
+        "Reading": "ふかい",
+        "Meaning": "sâu, sâu sắc",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "この湖は深い。\n(Cái hồ này sâu.)"
+    },
+    {
+        "Word": "濃い",
+        "Reading": "こい",
+        "Meaning": "đậm, đặc",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "色の濃い服。\n(Quần áo màu đậm.)"
+    },
+    {
+        "Word": "薄い",
+        "Reading": "うすい",
+        "Meaning": "mỏng, nhạt",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "薄い本。\n(Cuốn sách mỏng.)"
+    },
+    {
+        "Word": "柔らかい",
+        "Reading": "やわらかい",
+        "Meaning": "mềm",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "柔らかい布団。\n(Cái nệm mềm.)"
+    },
+    {
+        "Word": "固い / 硬い",
+        "Reading": "かたい",
+        "Meaning": "cứng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "このパンはとても固い。\n(Cái bánh mì này rất cứng.)"
+    },
+    {
+        "Word": "荒い / 激しい",
+        "Reading": "あらい / はげしい",
+        "Meaning": "hung bạo, dữ dội",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "今日は波が荒い。\n(Hôm nay sóng dữ dội.)"
+    },
+    {
+        "Word": "太い",
+        "Reading": "ふとい",
+        "Meaning": "béo, mập, to (dây)",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "太い指。\n(Ngón tay to/mập.)"
+    },
+    {
+        "Word": "細い",
+        "Reading": "ほそい",
+        "Meaning": "gầy, mảnh khảnh",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "細い足。\n(Đôi chân gầy/mảnh.)"
+    },
+    {
+        "Word": "厚い",
+        "Reading": "あつい",
+        "Meaning": "dày",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "厚い本。\n(Cuốn sách dày.)"
+    },
+    {
+        "Word": "薄い",
+        "Reading": "うすい",
+        "Meaning": "mỏng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "薄い紙。\n(Tờ giấy mỏng.)"
+    },
+    {
+        "Word": "まぶしい",
+        "Reading": "まぶしい",
+        "Meaning": "chói chang, rạng rỡ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "カーテンを開けたら、太陽がまぶしかった。\n(Mở rèm ra, ánh mặt trời thật chói chang.)"
+    },
+    {
+        "Word": "蒸し暑い",
+        "Reading": "むしあつい",
+        "Meaning": "nóng nực, oi bức",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "日本の夏は蒸し暑い。\n(Mùa hè ở Nhật rất oi bức.)"
+    },
+    {
+        "Word": "清潔な",
+        "Reading": "せいけつな",
+        "Meaning": "sạch sẽ, thanh khiết",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "清潔な服を身につける。\n(Mặc quần áo sạch sẽ.)"
+    },
+    {
+        "Word": "不潔な",
+        "Reading": "ふけつな",
+        "Meaning": "không sạch sẽ, dơ bẩn",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "不潔な手で傷口に触ってはいけない。\n(Không được chạm vào vết thương bằng tay bẩn.)"
+    },
+    {
+        "Word": "豊かな",
+        "Reading": "ゆたかな",
+        "Meaning": "giàu có, phong phú",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "豊かな資源。\n(Tài nguyên phong phú.)"
+    },
+    {
+        "Word": "立派な",
+        "Reading": "りっぱな",
+        "Meaning": "hào nhoáng, tuyệt vời, đáng kính",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "立派な建物。\n(Tòa nhà lộng lẫy.)"
+    },
+    {
+        "Word": "正確な",
+        "Reading": "せいかくな",
+        "Meaning": "chính xác",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "正確な時間は10時5分です。\n(Thời gian chính xác là 10 giờ 5 phút.)"
+    },
+    {
+        "Word": "確かな",
+        "Reading": "たのかな",
+        "Meaning": "đích thực, quả thật",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "確かな情報。\n(Thông tin xác thực.)"
+    },
+    {
+        "Word": "重要な",
+        "Reading": "じゅうような",
+        "Meaning": "quan trọng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "重要な書類。\n(Tài liệu quan trọng.)"
+    },
+    {
+        "Word": "必要な",
+        "Reading": "ひつような",
+        "Meaning": "cần thiết",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "必要な経費。\n(Chi phí cần thiết.)"
+    },
+    {
+        "Word": "もったいない",
+        "Reading": "もったいない",
+        "Meaning": "lãng phí",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "食べ物を捨てるのはもったいない。\n(Bỏ đồ ăn đi thì thật lãng phí.)"
+    },
+    {
+        "Word": "すごい",
+        "Reading": "すごい",
+        "Meaning": "kinh khủng, giỏi, tuyệt",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "君は英語が上手だね。すごいよ。\n(Tiếng Anh của em giỏi quá. Thật tuyệt.)"
+    },
+    {
+        "Word": "ひどい",
+        "Reading": "ひどい",
+        "Meaning": "tồi tệ, khủng khiếp",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "ひどいけが。\n(Vết thương nặng/tồi tệ.)"
+    },
+    {
+        "Word": "激しい",
+        "Reading": "はげしい",
+        "Meaning": "mãnh liệt, dữ dội",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "雨が激しい。\n(Mưa dữ dội.)"
+    },
+    {
+        "Word": "そっくりな",
+        "Reading": "そっくりな",
+        "Meaning": "giống hệt",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "彼はお父さんにそっくりだ。\n(Cậu ấy giống bố như đúc.)"
+    },
+    {
+        "Word": "急な",
+        "Reading": "きゅうな",
+        "Meaning": "vội vàng, đột ngột, dốc",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "急な用事。\n(Việc gấp.)"
+    },
+    {
+        "Word": "適当な",
+        "Reading": "てきとうな",
+        "Meaning": "phù hợp, thích đáng, qua loa",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "適当な材料。\n(Nguyên liệu phù hợp.)"
+    },
+    {
+        "Word": "特別な",
+        "Reading": "とくべつな",
+        "Meaning": "đặc biệt",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "特別な事情。\n(Lý do đặc biệt.)"
+    },
+    {
+        "Word": "完全な",
+        "Reading": "かんぜんな",
+        "Meaning": "hoàn toàn, đầy đủ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "完全な勝利。\n(Chiến thắng hoàn toàn.)"
+    },
+    {
+        "Word": "盛んな",
+        "Reading": "さかんな",
+        "Meaning": "thịnh hành, ưa chuộng, nhiệt tình",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "スポーツが盛んな学校。\n(Trường học có phong trào thể thao thịnh hành.)"
+    },
+    {
+        "Word": "様々な",
+        "Reading": "さまざまな",
+        "Meaning": "đa dạng, nhiều loại",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "様々な理由。\n(Nhiều lý do khác nhau.)"
+    },
+    {
+        "Word": "可能な",
+        "Reading": "かのうな",
+        "Meaning": "khả thi, có thể",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "可能な限り。\n(Trong giới hạn có thể.)"
+    },
+    {
+        "Word": "不可能な",
+        "Reading": "ふかのうな",
+        "Meaning": "không khả thi, không thể",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "不可能な計画。\n(Kế hoạch bất khả thi.)"
+    },
+    {
+        "Word": "基本的な",
+        "Reading": "きほんてきな",
+        "Meaning": "cơ bản",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "基本的な知識。\n(Kiến thức cơ bản.)"
+    },
+    {
+        "Word": "国際的な",
+        "Reading": "こくさいてきな",
+        "Meaning": "mang tính quốc tế",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "国際的な会議。\n(Hội nghị quốc tế.)"
+    },
+    {
+        "Word": "ばらばらな",
+        "Reading": "ばらばらな",
+        "Meaning": "rời rạc, tan tành",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "家族がばらばらになる。\n(Gia đình ly tán/mỗi người một nơi.)"
+    },
+    {
+        "Word": "ぼろぼろな",
+        "Reading": "ぼろぼろな",
+        "Meaning": "rách rưới, tơi tả, kiệt sức",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 281,
+        "Example": "ぼろぼろの服。\n(Quần áo rách nát.)"
+    }
+]

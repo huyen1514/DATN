@@ -1,0 +1,362 @@
+[
+    {
+        "Word": "やっと",
+        "Reading": "やっと",
+        "Meaning": "cuối cùng thì (sau nhiều nỗ lực)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "５年かかって、やっと橋が完成した。\n(Mất 5 năm, cuối cùng thì cây cầu cũng đã hoàn thành.)"
+    },
+    {
+        "Word": "とうとう",
+        "Reading": "とうとう",
+        "Meaning": "cuối cùng (kết quả sau một quá trình dài)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "かわいがっていた犬が、とうとう死んでしまった。\n(Chú chó tôi yêu quý cuối cùng đã chết rồi.)"
+    },
+    {
+        "Word": "ついに",
+        "Reading": "ついに",
+        "Meaning": "cuối cùng, rốt cuộc (thường cho kết quả lớn lao)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "若いころの夢を、ついに実現することができた。\n(Cuối cùng tôi cũng đã thực hiện được ước mơ thời trẻ.)"
+    },
+    {
+        "Word": "やはり",
+        "Reading": "やはり",
+        "Meaning": "quả nhiên, đúng như dự đoán",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "やはり田中さんは来なかった。\n(Quả nhiên là anh Tanaka đã không đến.)"
+    },
+    {
+        "Word": "結局",
+        "Reading": "けっきょく",
+        "Meaning": "kết cục, sau cùng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "いろいろ考えたが、結局行かないことにした。\n(Suy nghĩ nhiều rồi, nhưng kết cục tôi đã quyết định không đi.)"
+    },
+    {
+        "Word": "ついでに",
+        "Reading": "ついでに",
+        "Meaning": "nhân tiện, tiện thể",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "散歩に行くなら、ついでにこの手紙を出してきて。\n(Nếu đi tản bộ thì tiện thể gửi giúp tôi bức thư này luôn nhé.)"
+    },
+    {
+        "Word": "たまたま",
+        "Reading": "たまたま",
+        "Meaning": "tình cờ, ngẫu nhiên",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "たまたま駅で前の彼女に会った。\n(Tình cờ tôi gặp lại bạn gái cũ ở nhà ga.)"
+    },
+    {
+        "Word": "わざと",
+        "Reading": "わざと",
+        "Meaning": "cố tình, cố ý",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "わざと負けてあげた。\n(Tôi đã cố tình thua cho cô ấy vui.)"
+    },
+    {
+        "Word": "わざわざ",
+        "Reading": "わざわざ",
+        "Meaning": "cất công, có nhã ý",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "わざわざお越しいただいて、ありがとうございます。\n(Cảm ơn anh đã cất công ghé thăm.)"
+    },
+    {
+        "Word": "せっかく",
+        "Reading": "せっかく",
+        "Meaning": "đã mất công, khó khăn lắm mới...",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "せっかくのごちそうだから、全部食べよう。\n(Vì khó khăn lắm mới có bữa tiệc ngon thế này nên hãy ăn hết thôi.)"
+    },
+    {
+        "Word": "あいにく",
+        "Reading": "あいにく",
+        "Meaning": "đáng tiếc, không may",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "「田中さんはいますか」「あいにく外出しております」\n(Anh Tanaka có đó không? - Đáng tiếc là anh ấy đang ra ngoài rồi.)"
+    },
+    {
+        "Word": "案の定",
+        "Reading": "あんのじょう",
+        "Meaning": "quả nhiên, đúng như dự đoán (thường nghĩa xấu)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "案の定、不合格だった。\n(Quả nhiên là đã trượt rồi.)"
+    },
+    {
+        "Word": "いよいよ",
+        "Reading": "いよいよ",
+        "Meaning": "cuối cùng thì, càng ngày càng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "いよいよ明日、出発だ。\n(Cuối cùng thì ngày mai cũng khởi hành rồi.)"
+    },
+    {
+        "Word": "まさか",
+        "Reading": "まさか",
+        "Meaning": "không đời nào, không thể tin được",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "あの二人が結婚するなんて、まさか！\n(Hai người đó mà kết hôn á, thật không thể tin được!)"
+    },
+    {
+        "Word": "まさか / まさか（の）",
+        "Reading": "まさか",
+        "Meaning": "trường hợp xấu nhất",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "まさかの時のために、貯金している。\n(Tôi tiết kiệm tiền để phòng khi bất trắc.)"
+    },
+    {
+        "Word": "もしかしたら",
+        "Reading": "もしかしたら",
+        "Meaning": "có lẽ, biết đâu chừng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "もしかしたら、明日雨が降るかもしれない。\n(Có lẽ ngày mai trời sẽ mưa.)"
+    },
+    {
+        "Word": "恐らく",
+        "Reading": "おそらく",
+        "Meaning": "có lẽ, e rằng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "恐らく、彼は来ないだろう。\n(Có lẽ anh ấy sẽ không đến đâu.)"
+    },
+    {
+        "Word": "どうも",
+        "Reading": "どうも",
+        "Meaning": "có vẻ như, hình như",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "どうも、かぜをひいたみたいだ。\n(Hình như tôi bị cảm rồi.)"
+    },
+    {
+        "Word": "今にも",
+        "Reading": "いまにも",
+        "Meaning": "sắp sửa (ngay bây giờ)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "今にも雨が降り出しそうだ。\n(Trời trông có vẻ sắp mưa đến nơi rồi.)"
+    },
+    {
+        "Word": "突如",
+        "Reading": "とつじょ",
+        "Meaning": "đột nhiên",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "突如、地面が揺れた。\n(Đột nhiên mặt đất rung chuyển.)"
+    },
+    {
+        "Word": "一斉に",
+        "Reading": "いっせいに",
+        "Meaning": "cùng lúc, đồng loạt",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "みんな一斉に立ち上がった。\n(Mọi người đồng loạt đứng dậy.)"
+    },
+    {
+        "Word": "一端",
+        "Reading": "いったん",
+        "Meaning": "tạm thời, một khi",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "いったん休憩しよう。\n(Hãy tạm nghỉ một lát.)"
+    },
+    {
+        "Word": "いっそ",
+        "Reading": "いっそ",
+        "Meaning": "thà rằng, đành rằng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "こんなにつらいなら、いっそやめてしまいたい。\n(Nếu khổ thế này thì thà rằng bỏ quách đi cho xong.)"
+    },
+    {
+        "Word": "思い切り",
+        "Reading": "おもいきり",
+        "Meaning": "hết mình, quyết tâm",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "試験が終わったら、思い切り遊びたい。\n(Thi xong tôi muốn chơi cho đã đời.)"
+    },
+    {
+        "Word": "思い切って",
+        "Reading": "おもいきって",
+        "Meaning": "quyết tâm, dứt khoát",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "思い切って転職することにした。\n(Tôi đã dứt khoát quyết định chuyển việc.)"
+    },
+    {
+        "Word": "思わず",
+        "Reading": "おもわず",
+        "Meaning": "bất giác, không kìm được",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "あまりにおかしくて、思わず笑ってしまった。\n(Vì quá buồn cười nên tôi đã không kìm được mà cười phá lên.)"
+    },
+    {
+        "Word": "あらかじめ",
+        "Reading": "あらかじめ",
+        "Meaning": "trước, sẵn",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "あらかじめ準備しておく。\n(Chuẩn bị sẵn từ trước.)"
+    },
+    {
+        "Word": "しばしば",
+        "Reading": "しばしば",
+        "Meaning": "thường xuyên",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "しばしば彼に会うことがある。\n(Tôi thường xuyên gặp anh ấy.)"
+    },
+    {
+        "Word": "次々（に）",
+        "Reading": "つぎつぎに",
+        "Meaning": "liên tiếp, lần lượt",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "新しい商品が次々に発売される。\n(Sản phẩm mới lần lượt được tung ra thị trường.)"
+    },
+    {
+        "Word": "続々と",
+        "Reading": "ぞくぞくと",
+        "Meaning": "liên tục, nườm nượp",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "観客が続々と会場に集まってきた。\n(Khán giả nườm nượp kéo đến hội trường.)"
+    },
+    {
+        "Word": "絶えず",
+        "Reading": "たえず",
+        "Meaning": "không ngừng, liên tục",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "絶えず水が流れている。\n(Nước chảy không ngừng.)"
+    },
+    {
+        "Word": "再三",
+        "Reading": "さいさん",
+        "Meaning": "nhiều lần, dăm lần bảy lượt",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "再三注意したが、聞かなかった。\n(Tôi đã nhắc nhở nhiều lần rồi mà không thèm nghe.)"
+    },
+    {
+        "Word": "めったに",
+        "Reading": "めったに",
+        "Meaning": "hiếm khi",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "この辺りでは、雪はめったに降らない。\n(Ở vùng này hiếm khi có tuyết rơi.)"
+    },
+    {
+        "Word": "せいぜい",
+        "Reading": "せいぜい",
+        "Meaning": "tối đa, cùng lắm",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "歩いてもせいぜい１０分だ。\n(Đi bộ thì cùng lắm cũng chỉ mất 10 phút thôi.)"
+    },
+    {
+        "Word": "どうせ",
+        "Reading": "どうせ",
+        "Meaning": "đằng nào thì cũng, dù sao thì",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "どうせ間に合わないから、ゆっくり行こう。\n(Đằng nào thì cũng chẳng kịp đâu nên cứ thong thả mà đi.)"
+    },
+    {
+        "Word": "ぎっしり",
+        "Reading": "ぎっしり",
+        "Meaning": "đầy chặt, san sát",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "予定がぎっしり詰まっている。\n(Lịch trình đã kín mít rồi.)"
+    },
+    {
+        "Word": "ずらりと",
+        "Reading": "ずらりと",
+        "Meaning": "thành một hàng, san sát",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "本棚に本がずらりと並んでいる。\n(Sách được xếp thành một hàng dài trên giá sách.)"
+    },
+    {
+        "Word": "あっさり",
+        "Reading": "あっさり",
+        "Meaning": "đơn giản, nhẹ nhàng (vị), thanh đạm",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "今日の夕食は、あっさりしたものが食べたい。\n(Bữa tối nay tôi muốn ăn gì đó thanh đạm.)"
+    },
+    {
+        "Word": "しんと",
+        "Reading": "しんと",
+        "Meaning": "yên tĩnh, lặng như tờ",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "夜中で、家の中はしんとしている。\n(Đang giữa đêm nên trong nhà yên tĩnh lạ thường.)"
+    },
+    {
+        "Word": "ちゃんと",
+        "Reading": "ちゃんと",
+        "Meaning": "cẩn thận, nghiêm chỉnh",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "使ったものは、ちゃんともとの場所に戻しなさい。\n(Đồ đã dùng rồi thì phải để lại cẩn thận vào chỗ cũ.)"
+    },
+    {
+        "Word": "続々と",
+        "Reading": "ぞくぞくと",
+        "Meaning": "liên tục, nườm nượp",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "新しい情報が続々と入ってくる。\n(Thông tin mới liên tục được gửi đến.)"
+    },
+    {
+        "Word": "たっぷり",
+        "Reading": "たっぷり",
+        "Meaning": "đầy đủ, tràn đầy",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "時間はたっぷりある。\n(Thời gian còn đầy ra đó.)"
+    },
+    {
+        "Word": "うっかり",
+        "Reading": "うっかり",
+        "Meaning": "lơ đãng, vô ý",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "うっかりして、宿題を忘れてしまった。\n(Vì lơ đãng nên tôi đã quên béng mất bài tập về nhà.)"
+    },
+    {
+        "Word": "ちゃくちゃくと",
+        "Reading": "ちゃくちゃくと",
+        "Meaning": "vững chắc, đều đặn",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "準備はちゃくちゃくと進んでいる。\n(Việc chuẩn bị đang tiến triển rất đều đặn/thuận lợi.)"
+    },
+    {
+        "Word": "ふと",
+        "Reading": "ふと",
+        "Meaning": "đột nhiên, tình cờ",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 286,
+        "Example": "ふと窓の外を見た。\n(Tình cờ tôi nhìn ra ngoài cửa sổ.)"
+    }
+]

@@ -1,0 +1,642 @@
+[
+    {
+        "Word": "光る",
+        "Reading": "ひかる",
+        "Meaning": "sáng, tỏa sáng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "空に星が光っている。\n(Trên bầu trời những vì sao đang tỏa sáng.)"
+    },
+    {
+        "Word": "光らせる",
+        "Reading": "ひからせる",
+        "Meaning": "làm cho sáng, đánh bóng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "靴をぴかぴかに光らせる。\n(Đánh đôi giày sáng bóng loáng.)"
+    },
+    {
+        "Word": "脱ぐ",
+        "Reading": "ぬぐ",
+        "Meaning": "cởi (quần áo, giày dép)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "靴を脱いで上がる。\n(Cởi giày rồi bước lên nhà.)"
+    },
+    {
+        "Word": "脱がせる",
+        "Reading": "ぬがせる",
+        "Meaning": "cởi (cho ai đó)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "子どもを脱がせてお風呂に入れる。\n(Cởi đồ cho con rồi cho vào bồn tắm.)"
+    },
+    {
+        "Word": "歩く",
+        "Reading": "あるく",
+        "Meaning": "đi bộ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "駅まで歩く。\n(Đi bộ đến nhà ga.)"
+    },
+    {
+        "Word": "歩かせる",
+        "Reading": "あるかせる",
+        "Meaning": "cho đi bộ, bắt đi bộ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "犬を公園で歩かせる。\n(Cho chó đi dạo/đi bộ ở công viên.)"
+    },
+    {
+        "Word": "待つ",
+        "Reading": "まつ",
+        "Meaning": "đợi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "友だちを待つ。\n(Đợi bạn.)"
+    },
+    {
+        "Word": "待たせる",
+        "Reading": "またせる",
+        "Meaning": "bắt đợi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "お待たせして申し訳ありません。\n(Xin lỗi vì đã để anh phải đợi.)"
+    },
+    {
+        "Word": "磨く",
+        "Reading": "みがく",
+        "Meaning": "đánh bóng, chải (răng)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "歯を磨く。\n(Chải răng.)"
+    },
+    {
+        "Word": "磨かせる",
+        "Reading": "みがかせる",
+        "Meaning": "cho đánh (răng), bắt mài",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "子どもに歯を磨かせる。\n(Cho trẻ con đánh răng.)"
+    },
+    {
+        "Word": "しびれる",
+        "Reading": "しびれる",
+        "Meaning": "tê",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "正座をしていたら、足がしびれた。\n(Ngồi quỳ lâu nên chân đã bị tê.)"
+    },
+    {
+        "Word": "震える",
+        "Reading": "ふるえる",
+        "Meaning": "run rẩy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "寒さで体が震える。\n(Cơ thể run rẩy vì lạnh.)"
+    },
+    {
+        "Word": "輝く",
+        "Reading": "かがやく",
+        "Meaning": "tỏa sáng, lấp lánh",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "空に太陽が輝いている。\n(Mặt trời tỏa sáng trên bầu trời.)"
+    },
+    {
+        "Word": "片寄る / 偏る",
+        "Reading": "かたよる",
+        "Meaning": "dạt qua một bên, thiên kiến, mất cân bằng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "栄養が偏らないようにする。\n(Cố gắng để dinh dưỡng không bị mất cân bằng.)"
+    },
+    {
+        "Word": "怒鳴る",
+        "Reading": "どなる",
+        "Meaning": "gào thét, hét lên (giận dữ)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "父に「早く寝ろ」と怒鳴られた。\n(Tôi bị bố quát: Mau đi ngủ đi.)"
+    },
+    {
+        "Word": "叫ぶ",
+        "Reading": "さけぶ",
+        "Meaning": "kêu gào, hét lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "助けてと叫ぶ。\n(Hét lên kêu cứu.)"
+    },
+    {
+        "Word": "祈る",
+        "Reading": "いのる",
+        "Meaning": "cầu nguyện",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "合格を祈る。\n(Cầu nguyện thi đỗ.)"
+    },
+    {
+        "Word": "願う",
+        "Reading": "ねがう",
+        "Meaning": "mong ước, nguyện cầu",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "世界の平和を願う。\n(Cầu mong hòa bình thế giới.)"
+    },
+    {
+        "Word": "感じる",
+        "Reading": "かんじる",
+        "Meaning": "cảm thấy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "痛みを感じる。\n(Cảm thấy đau.)"
+    },
+    {
+        "Word": "信じる",
+        "Reading": "しんじる",
+        "Meaning": "tin tưởng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "自分を信じる。\n(Tin tưởng vào bản thân.)"
+    },
+    {
+        "Word": "通じる",
+        "Reading": "つうじる",
+        "Meaning": "thông qua, hiểu được, dẫn đến",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "言葉が通じない。\n(Không thông hiểu ngôn ngữ.)"
+    },
+    {
+        "Word": "過ごす",
+        "Reading": "すごす",
+        "Meaning": "trải qua (thời gian)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "週末を家族と過ごす。\n(Trải qua cuối tuần bên gia đình.)"
+    },
+    {
+        "Word": "過ごせる",
+        "Reading": "すごせる",
+        "Meaning": "có thể trải qua",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "ゆったりと過ごせる場所。\n(Nơi có thể trải qua thời gian thư thả.)"
+    },
+    {
+        "Word": "引き出す",
+        "Reading": "ひきだす",
+        "Meaning": "kéo ra, rút (tiền)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "銀行でお金を引き出す。\n(Rút tiền ở ngân hàng.)"
+    },
+    {
+        "Word": "引き下がる",
+        "Reading": "ひきさがる",
+        "Meaning": "rút lui, từ bỏ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "これ以上はもう引き下がれない。\n(Đã không thể từ bỏ/rút lui thêm nữa rồi.)"
+    },
+    {
+        "Word": "引き止める",
+        "Reading": "ひきとめる",
+        "Meaning": "níu kéo, ngăn cản",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "帰ろうとする客を引き止める。\n(Níu vị khách đang định ra về lại.)"
+    },
+    {
+        "Word": "引き返す",
+        "Reading": "ひきかえす",
+        "Meaning": "quay trở lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "忘れ物に気づいて、家を引き返した。\n(Nhận ra quên đồ nên đã quay lại nhà.)"
+    },
+    {
+        "Word": "持ち上げる",
+        "Reading": "もちあげる",
+        "Meaning": "nâng lên, nhấc lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "重い荷物を持ち上げる。\n(Nhấc hành lý nặng lên.)"
+    },
+    {
+        "Word": "持ち歩く",
+        "Reading": "もちあるく",
+        "Meaning": "mang theo bên mình",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "常に辞書を持ち歩いている。\n(Luôn mang theo từ điển bên mình.)"
+    },
+    {
+        "Word": "持ち寄る",
+        "Reading": "もちよる",
+        "Meaning": "mang đến (để cùng chia sẻ)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "みんなでお弁当を持ち寄ってピクニックをする。\n(Mọi người cùng mang cơm hộp đến và đi picnic.)"
+    },
+    {
+        "Word": "持ち替える",
+        "Reading": "もちかえる",
+        "Meaning": "đổi tay cầm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "右手の荷物を左手に持ち替える。\n(Đổi hành lý từ tay phải sang tay trái.)"
+    },
+    {
+        "Word": "振り返る",
+        "Reading": "ふりかえる",
+        "Meaning": "ngoảnh lại, nhìn lại (quá khứ)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "後ろを振り返る。\n(Ngoảnh lại phía sau.)"
+    },
+    {
+        "Word": "振り向く",
+        "Reading": "ふりむく",
+        "Meaning": "ngoảnh lại (khi nghe gọi)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "名前を呼ばれて振り向いた。\n(Được gọi tên nên tôi đã ngoảnh lại.)"
+    },
+    {
+        "Word": "振り分ける",
+        "Reading": "ふりわける",
+        "Meaning": "phân chia",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "仕事を分担して振り分ける。\n(Chia nhỏ công việc để phân công.)"
+    },
+    {
+        "Word": "差し出す",
+        "Reading": "さしだす",
+        "Meaning": "đưa ra, chìa ra",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "握手をしようと手を差し出した。\n(Chìa tay ra để bắt tay.)"
+    },
+    {
+        "Word": "差し引く",
+        "Reading": "さしひく",
+        "Meaning": "trừ đi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "給料から税金を差し引く。\n(Khấu trừ thuế từ tiền lương.)"
+    },
+    {
+        "Word": "差し込む",
+        "Reading": "さしこむ",
+        "Meaning": "chiếu vào, lồng vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "窓から光が差し込んでいる。\n(Ánh sáng chiếu qua cửa sổ vào phòng.)"
+    },
+    {
+        "Word": "差し支える",
+        "Reading": "さしつかえる",
+        "Meaning": "gây cản trở, gây bất tiện",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "仕事に差し支えるので、お酒は控える。\n(Vì gây cản trở công việc nên tôi hạn chế uống rượu.)"
+    },
+    {
+        "Word": "通りかかる",
+        "Reading": "とおりかかる",
+        "Meaning": "tình cờ đi ngang qua",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "事故の現場を通りかかった。\n(Tình cờ đi ngang qua hiện trường vụ tai nạn.)"
+    },
+    {
+        "Word": "通り過ぎる",
+        "Reading": "とおりすぎる",
+        "Meaning": "đi quá, vượt quá",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "目的の駅を通り過ぎてしまった。\n(Tôi đã đi quá nhà ga định xuống.)"
+    },
+    {
+        "Word": "乗り遅れる",
+        "Reading": "のりおくれる",
+        "Meaning": "lỡ (tàu, xe)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "電車に乗り遅れる。\n(Lỡ tàu điện.)"
+    },
+    {
+        "Word": "乗り越す",
+        "Reading": "のりこす",
+        "Meaning": "đi quá (ga cần xuống)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "居眠りをして駅を乗り越してしまった。\n(Ngủ gật nên đã đi quá ga.)"
+    },
+    {
+        "Word": "乗り越える",
+        "Reading": "のりこえる",
+        "Meaning": "vượt qua (khó khăn, rào cản)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "困難を乗り越える。\n(Vượt qua khó khăn.)"
+    },
+    {
+        "Word": "見送る",
+        "Reading": "みおくる",
+        "Meaning": "tiễn, đưa tiễn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "友だちを駅で見送る。\n(Tiễn bạn ở nhà ga.)"
+    },
+    {
+        "Word": "見上げる",
+        "Reading": "みあげる",
+        "Meaning": "ngước nhìn lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "空を見上げる。\n(Ngước nhìn bầu trời.)"
+    },
+    {
+        "Word": "見下ろす",
+        "Reading": "みおろす",
+        "Meaning": "nhìn xuống",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "山頂から街を見下ろす。\n(Từ đỉnh núi nhìn xuống thành phố.)"
+    },
+    {
+        "Word": "見慣れる",
+        "Reading": "みなれる",
+        "Meaning": "quen mắt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "見慣れた景色。\n(Phong cảnh quen mắt.)"
+    },
+    {
+        "Word": "見合わせる",
+        "Reading": "みあわせる",
+        "Meaning": "nhìn nhau, hoãn lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "出発を見合わせる。\n(Hoãn lại việc xuất phát.)"
+    },
+    {
+        "Word": "見つめる",
+        "Reading": "みつめる",
+        "Meaning": "nhìn chằm chằm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "相手の目を見つめる。\n(Nhìn chằm chằm vào mắt đối phương.)"
+    },
+    {
+        "Word": "見直す",
+        "Reading": "みなおす",
+        "Meaning": "xem lại, đánh giá lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "計画を見直す。\n(Xem xét lại kế hoạch.)"
+    },
+    {
+        "Word": "立ち上がる",
+        "Reading": "たちあがる",
+        "Meaning": "đứng dậy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "椅子から立ち上がる。\n(Đứng dậy từ ghế.)"
+    },
+    {
+        "Word": "立ち止まる",
+        "Reading": "たちどまる",
+        "Meaning": "dừng bước",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "足を止めて立ち止まる。\n(Dừng chân đứng lại.)"
+    },
+    {
+        "Word": "立ち寄る",
+        "Reading": "たちよる",
+        "Meaning": "ghé qua",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "帰りにスーパーに立ち寄る。\n(Trên đường về ghé qua siêu thị.)"
+    },
+    {
+        "Word": "立ち去る",
+        "Reading": "たちさる",
+        "Meaning": "rời đi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "何も言わずにその場を立ち去った。\n(Không nói lời nào mà rời khỏi nơi đó.)"
+    },
+    {
+        "Word": "割り込む",
+        "Reading": "わりこむ",
+        "Meaning": "chen ngang, xen vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "列に割り込む。\n(Chen ngang vào hàng.)"
+    },
+    {
+        "Word": "思い込む",
+        "Reading": "おもいこむ",
+        "Meaning": "đinh ninh, tin rằng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "今日は日曜日だと思い込んでいた。\n(Tôi cứ đinh ninh hôm nay là Chủ Nhật.)"
+    },
+    {
+        "Word": "思いつく",
+        "Reading": "おもいつく",
+        "Meaning": "nghĩ ra, nảy ra",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "いいアイデアを思いついた。\n(Nghĩ ra một ý tưởng hay.)"
+    },
+    {
+        "Word": "思いやる",
+        "Reading": "おもいやる",
+        "Meaning": "quan tâm, thông cảm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "病人を思いやる。\n(Quan tâm đến người bệnh.)"
+    },
+    {
+        "Word": "打ち明ける",
+        "Reading": "うちあける",
+        "Meaning": "thú nhận, trải lòng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "悩みを友だちに打ち明ける。\n(Trải lòng về những lo lắng với bạn.)"
+    },
+    {
+        "Word": "打ち切る",
+        "Reading": "うちきる",
+        "Meaning": "ngắt, dừng lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "会議を途中で打ち切る。\n(Ngắt quãng cuộc họp giữa chừng.)"
+    },
+    {
+        "Word": "打ち消す",
+        "Reading": "うちけす",
+        "Meaning": "phủ nhận, bác bỏ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "うわさを打ち消す。\n(Bác bỏ tin đồn.)"
+    },
+    {
+        "Word": "打ち合わせる",
+        "Reading": "うちあわせる",
+        "Meaning": "bàn bạc trước",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "会議の前に内容を打ち合わせる。\n(Bàn bạc trước nội dung trước khi họp.)"
+    },
+    {
+        "Word": "追いかける",
+        "Reading": "おいかける",
+        "Meaning": "đuổi theo",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "泥棒を追いかける。\n(Đuổi theo tên trộm.)"
+    },
+    {
+        "Word": "追い越す",
+        "Reading": "おいこす",
+        "Meaning": "vượt qua (xe khác, người khác)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "前の車を追い越す。\n(Vượt qua chiếc xe phía trước.)"
+    },
+    {
+        "Word": "追い出す",
+        "Reading": "おいだす",
+        "Meaning": "đuổi ra ngoài",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "部屋から追い出す。\n(Đuổi ra khỏi phòng.)"
+    },
+    {
+        "Word": "追い付く",
+        "Reading": "おいつく",
+        "Meaning": "đuổi kịp",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "走って前の人に追い付く。\n(Chạy đuổi kịp người đi trước.)"
+    },
+    {
+        "Word": "書き留める",
+        "Reading": "かきとめる",
+        "Meaning": "ghi chú lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "重要なことをメモに書き留める。\n(Ghi chú lại điều quan trọng vào biên bản.)"
+    },
+    {
+        "Word": "書き直す",
+        "Reading": "かきなおす",
+        "Meaning": "viết lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "作文を書き直す。\n(Viết lại bài văn.)"
+    },
+    {
+        "Word": "書き出す",
+        "Reading": "かきだす",
+        "Meaning": "viết ra",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "リストを書き出す。\n(Viết ra danh sách.)"
+    },
+    {
+        "Word": "書き込む",
+        "Reading": "かきこむ",
+        "Meaning": "viết vào, điền vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "手帳に予定を書き込む。\n(Viết dự định vào sổ tay.)"
+    },
+    {
+        "Word": "聞き取る",
+        "Reading": "ききとる",
+        "Meaning": "nghe hiểu",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "相手の話を聞き取る。\n(Nghe hiểu câu chuyện của đối phương.)"
+    },
+    {
+        "Word": "聞き直す",
+        "Reading": "ききなおす",
+        "Meaning": "nghe lại, hỏi lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "もう一度聞き直す。\n(Nghe lại thêm một lần nữa.)"
+    },
+    {
+        "Word": "聞き返す",
+        "Reading": "ききかえす",
+        "Meaning": "hỏi lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "意味がわからなくて、聞き返した。\n(Vì không hiểu ý nghĩa nên đã hỏi lại.)"
+    },
+    {
+        "Word": "聞き出す",
+        "Reading": "ききだす",
+        "Meaning": "nghe lấy thông tin, hỏi ra",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "相手から本心を聞き出す。\n(Hỏi ra được tâm địa thực sự của đối phương.)"
+    },
+    {
+        "Word": "話し合う",
+        "Reading": "はなしあう",
+        "Meaning": "thảo luận, bàn bạc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "問題を解決するために話し合う。\n(Bàn bạc để giải quyết vấn đề.)"
+    },
+    {
+        "Word": "話し込む",
+        "Reading": "はなしこむ",
+        "Meaning": "mải mê trò chuyện",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "友だちと夜遅くまで話し込んだ。\n(Mải mê trò chuyện với bạn đến tận đêm muộn.)"
+    },
+    {
+        "Word": "話し出す",
+        "Reading": "はなしだす",
+        "Meaning": "bắt đầu nói",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "沈黙を破って話し出した。\n(Phá vỡ im lặng và bắt đầu nói.)"
+    },
+    {
+        "Word": "話し掛ける",
+        "Reading": "はなしかける",
+        "Meaning": "bắt chuyện",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "知らない人に話し掛けられた。\n(Bị người lạ bắt chuyện.)"
+    },
+    {
+        "Word": "引っかける",
+        "Reading": "ひっかける",
+        "Meaning": "mắc vào, treo vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "釘に服を引っかけて破いてしまった。\n(Vướng áo vào đinh nên làm rách mất.)"
+    },
+    {
+        "Word": "引っかかる",
+        "Reading": "ひっかかる",
+        "Meaning": "bị vướng, bị mắc bẫy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 296,
+        "Example": "詐欺に引っかかる。\n(Bị mắc bẫy lừa đảo.)"
+    }
+]

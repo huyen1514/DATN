@@ -1,0 +1,322 @@
+[
+    {
+        "Word": "クラスメート",
+        "Reading": "クラスメート",
+        "Meaning": "bạn cùng lớp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "クラスメートと仲よくする。\n(Giữ quan hệ tốt với bạn cùng lớp.)"
+    },
+    {
+        "Word": "グループ",
+        "Reading": "グループ",
+        "Meaning": "nhóm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "3人のグループで旅行をする。\n(Đi du lịch theo nhóm 3 người.)"
+    },
+    {
+        "Word": "チーム",
+        "Reading": "チーム",
+        "Meaning": "đội, nhóm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "私たちのチームが勝った。\n(Đội của chúng tôi đã thắng.)"
+    },
+    {
+        "Word": "プロフェッショナル",
+        "Reading": "プロフェッショナル",
+        "Meaning": "chuyên nghiệp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "プロのサッカー選手になりたい。\n(Tôi muốn trở thành cầu thủ bóng đá chuyên nghiệp.)"
+    },
+    {
+        "Word": "アマチュア",
+        "Reading": "アマチュア",
+        "Meaning": "nghiệp dư",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "この絵はアマチュアの作品とは思えないほどすばらしい。\n(Bức tranh này tuyệt vời đến mức không nghĩ là tác phẩm của dân nghiệp dư.)"
+    },
+    {
+        "Word": "トレーニング",
+        "Reading": "トレーニング",
+        "Meaning": "tập luyện, huấn luyện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "勝つためには毎日のトレーニングが必要だ。\n(Để chiến thắng thì việc tập luyện mỗi ngày là cần thiết.)"
+    },
+    {
+        "Word": "マッサージ",
+        "Reading": "マッサージ",
+        "Meaning": "mát-xa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "頭をマッサージしてもらうと気持ちがいい。\n(Được mát-xa đầu cảm giác rất dễ chịu.)"
+    },
+    {
+        "Word": "アドバイス",
+        "Reading": "アドバイス",
+        "Meaning": "lời khuyên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "後輩に仕事のやり方についてアドバイスをする。\n(Đưa ra lời khuyên cho hậu bối về cách làm việc.)"
+    },
+    {
+        "Word": "アイデア",
+        "Reading": "アイデア",
+        "Meaning": "ý tưởng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "いいアイデアが浮かんだ。\n(Nảy ra một ý tưởng hay.)"
+    },
+    {
+        "Word": "トップ",
+        "Reading": "トップ",
+        "Meaning": "top, đứng đầu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "彼はクラスでトップの成績だ。\n(Cậu ấy có thành tích đứng đầu lớp.)"
+    },
+    {
+        "Word": "スピード",
+        "Reading": "スピード",
+        "Meaning": "tốc độ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "先生の話すスピードが速すぎて理解できない。\n(Tốc độ nói của giáo viên quá nhanh nên tôi không thể hiểu được.)"
+    },
+    {
+        "Word": "ラッシュ",
+        "Reading": "ラッシュ",
+        "Meaning": "giờ cao điểm, đông đúc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "年末年始は、帰省ラッシュでチケットがとりにくい。\n(Dịp cuối năm và đầu năm mới, do cao điểm về quê nên rất khó mua vé.)"
+    },
+    {
+        "Word": "バイク",
+        "Reading": "バイク",
+        "Meaning": "xe máy, xe mô tô",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "オートバイ。\n(Xe mô tô.)"
+    },
+    {
+        "Word": "ヘルメット",
+        "Reading": "ヘルメット",
+        "Meaning": "mũ bảo hiểm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "バイクに乗るときは、ヘルメットをかぶる。\n(Khi đi xe máy phải đội mũ bảo hiểm.)"
+    },
+    {
+        "Word": "コンタクトレンズ",
+        "Reading": "コンタクトレンズ",
+        "Meaning": "kính áp tròng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "コンタクトを入れる。\n(Đeo kính áp tròng.)"
+    },
+    {
+        "Word": "ガラス",
+        "Reading": "ガラス",
+        "Meaning": "kính, thủy tinh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "ボールをぶつけて窓ガラスを割ってしまった。\n(Tôi ném bóng trúng và làm vỡ kính cửa sổ mất rồi.)"
+    },
+    {
+        "Word": "プラスチック",
+        "Reading": "プラスチック",
+        "Meaning": "nhựa, plastic",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "「プラスチック製品は生ごみの中に入れないでください」\n(Xin đừng vứt đồ nhựa vào chung với rác sinh hoạt tươi sống.)"
+    },
+    {
+        "Word": "ベランダ",
+        "Reading": "ベランダ",
+        "Meaning": "ban công",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "ベランダに洗濯物を干す。\n(Phơi quần áo ngoài ban công.)"
+    },
+    {
+        "Word": "ペット",
+        "Reading": "ペット",
+        "Meaning": "thú cưng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "アパートなので、ペットが飼えない。\n(Vì là căn hộ chung cư nên không thể nuôi thú cưng.)"
+    },
+    {
+        "Word": "ベンチ",
+        "Reading": "ベンチ",
+        "Meaning": "ghế dài, ghế đá",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "公園のベンチで休む。\n(Nghỉ ngơi trên ghế đá công viên.)"
+    },
+    {
+        "Word": "デザイン",
+        "Reading": "デザイン",
+        "Meaning": "thiết kế",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "あのドレスは色もデザインもいい。\n(Chiếc váy kia cả màu sắc và thiết kế đều đẹp.)"
+    },
+    {
+        "Word": "バーゲンセール",
+        "Reading": "バーゲンセール",
+        "Meaning": "đợt giảm giá",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "デパートで今バーゲンセールをしている。\n(Trung tâm thương mại hiện đang có đợt giảm giá.)"
+    },
+    {
+        "Word": "パート",
+        "Reading": "パート",
+        "Meaning": "công việc bán thời gian",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "母は週三日、スーパーでパートをしている。\n(Mẹ tôi làm thêm bán thời gian ở siêu thị 3 ngày một tuần.)"
+    },
+    {
+        "Word": "コンビニエンスストア",
+        "Reading": "コンビニエンスストア",
+        "Meaning": "cửa hàng tiện lợi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "コンビニ。\n(Cửa hàng tiện lợi.)"
+    },
+    {
+        "Word": "レジ",
+        "Reading": "レジ",
+        "Meaning": "quầy thu ngân",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "スーパーでレジのアルバイトをしている。\n(Tôi đang làm thêm công việc thu ngân ở siêu thị.)"
+    },
+    {
+        "Word": "レシート",
+        "Reading": "レシート",
+        "Meaning": "biên lai, hóa đơn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "レジでお金を払って、レシートを受け取る。\n(Trả tiền ở quầy thu ngân và nhận biên lai.)"
+    },
+    {
+        "Word": "インスタント",
+        "Reading": "インスタント",
+        "Meaning": "ăn liền, tức thời",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "インスタント食品は便利だ。\n(Thực phẩm ăn liền rất tiện lợi.)"
+    },
+    {
+        "Word": "ファストフード",
+        "Reading": "ファストフード",
+        "Meaning": "đồ ăn nhanh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "そばは江戸時代のファストフードだった。\n(Mì Soba từng là đồ ăn nhanh của thời Edo.)"
+    },
+    {
+        "Word": "フルーツ",
+        "Reading": "フルーツ",
+        "Meaning": "trái cây",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "暖かいところには、いろいろなフルーツがある。\n(Ở những nơi có khí hậu ấm áp có rất nhiều loại trái cây.)"
+    },
+    {
+        "Word": "デザート",
+        "Reading": "デザート",
+        "Meaning": "món tráng miệng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "デザートにアイスクリームを食べる。\n(Ăn kem tráng miệng.)"
+    },
+    {
+        "Word": "インターネット",
+        "Reading": "インターネット",
+        "Meaning": "mạng internet",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "インターネットで世界の環境問題について調べた。\n(Tôi đã tìm hiểu về vấn đề môi trường thế giới trên mạng internet.)"
+    },
+    {
+        "Word": "チャイム",
+        "Reading": "チャイム",
+        "Meaning": "tiếng chuông",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "授業が始まるとき、チャイムが鳴る。\n(Khi giờ học bắt đầu, chuông sẽ reo.)"
+    },
+    {
+        "Word": "アナウンス",
+        "Reading": "アナウンス",
+        "Meaning": "thông báo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "電車の中でアナウンスを聞く。\n(Nghe thông báo trên xe điện.)"
+    },
+    {
+        "Word": "メッセージ",
+        "Reading": "メッセージ",
+        "Meaning": "tin nhắn, thông điệp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "留守番電話にメッセージをのこす。\n(Để lại tin nhắn ở hộp thư thoại.)"
+    },
+    {
+        "Word": "パンフレット",
+        "Reading": "パンフレット",
+        "Meaning": "tờ rơi, sách mỏng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "旅行会社でパンフレットをたくさんもらってきた。\n(Tôi đã nhận được rất nhiều tờ rơi ở công ty du lịch.)"
+    },
+    {
+        "Word": "カード",
+        "Reading": "カード",
+        "Meaning": "thẻ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "キャッシュカード。\n(Thẻ tiền mặt.)"
+    },
+    {
+        "Word": "インタビュー",
+        "Reading": "インタビュー",
+        "Meaning": "phỏng vấn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "勝ったチームの選手にインタビューする。\n(Phỏng vấn các cầu thủ của đội chiến thắng.)"
+    },
+    {
+        "Word": "アンケート",
+        "Reading": "アンケート",
+        "Meaning": "bản khảo sát",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "「アンケートにご協力ください」\n(Xin hãy hợp tác làm bản khảo sát.)"
+    },
+    {
+        "Word": "データ",
+        "Reading": "データ",
+        "Meaning": "dữ liệu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "研究のために、データを集めている。\n(Đang thu thập dữ liệu để phục vụ nghiên cứu.)"
+    },
+    {
+        "Word": "パーセント",
+        "Reading": "パーセント",
+        "Meaning": "phần trăm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 276,
+        "Example": "100パーセント。\n(100 phần trăm.)"
+    }
+]

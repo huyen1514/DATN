@@ -1,0 +1,322 @@
+[
+    {
+        "Word": "炊く",
+        "Reading": "たく",
+        "Meaning": "nấu (cơm)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "ごはんを炊く。\n(Nấu cơm.)"
+    },
+    {
+        "Word": "煮る",
+        "Reading": "にる",
+        "Meaning": "ninh, hầm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "鍋でおかずを煮る。\n(Ninh thức ăn bằng nồi.)"
+    },
+    {
+        "Word": "炒める",
+        "Reading": "いためる",
+        "Meaning": "xào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "フライパンで野菜を炒める。\n(Xào rau bằng chảo.)"
+    },
+    {
+        "Word": "焼く",
+        "Reading": "やく",
+        "Meaning": "nướng, rán",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "肉を焼く。\n(Nướng thịt.)"
+    },
+    {
+        "Word": "揚げる",
+        "Reading": "あげる",
+        "Meaning": "chiên, rán ngập dầu",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "天ぷらを揚げる。\n(Chiên Tempura.)"
+    },
+    {
+        "Word": "蒸す",
+        "Reading": "むす",
+        "Meaning": "hấp",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "シューマイを蒸す。\n(Hấp xíu mại.)"
+    },
+    {
+        "Word": "ゆでる",
+        "Reading": "ゆでる",
+        "Meaning": "luộc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "卵をゆでる。\n(Luộc trứng.)"
+    },
+    {
+        "Word": "熱する",
+        "Reading": "ねっする",
+        "Meaning": "làm nóng, đun nóng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "油を熱してから肉を入れる。\n(Làm nóng dầu rồi mới cho thịt vào.)"
+    },
+    {
+        "Word": "注ぐ",
+        "Reading": "そそぐ",
+        "Meaning": "rót",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "お茶を注ぐ。\n(Rót trà.)"
+    },
+    {
+        "Word": "練る",
+        "Reading": "ねる",
+        "Meaning": "nhào, trộn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 306,
+        "Example": "小麦粉を練る。\n(Nhào bột mì.)"
+    },
+    {
+        "Word": "しばしば",
+        "Reading": "しばしば",
+        "Meaning": "thường xuyên",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "彼とは仕事でしばしば会う。\n(Tôi thường xuyên gặp anh ấy vì công việc.)"
+    },
+    {
+        "Word": "たびたび",
+        "Reading": "たびたび",
+        "Meaning": "thường xuyên, nhiều lần",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "たびたびお電話して、すみません。\n(Xin lỗi vì đã gọi điện nhiều lần.)"
+    },
+    {
+        "Word": "いよいよ",
+        "Reading": "いよいよ",
+        "Meaning": "cuối cùng thì, càng ngày càng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "いよいよ明日が試験だ。\n(Cuối cùng thì ngày mai cũng thi rồi.)"
+    },
+    {
+        "Word": "いちいち",
+        "Reading": "いちいち",
+        "Meaning": "từng cái một, chi li",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "いちいち文句を言う。\n(Cứ hở ra là phàn nàn từng tí một.)"
+    },
+    {
+        "Word": "ふわふわ",
+        "Reading": "ふわふわ",
+        "Meaning": "mềm mại, bồng bềnh",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "ふわふわしたパン。\n(Cái bánh mì mềm xốp.)"
+    },
+    {
+        "Word": "まごまご",
+        "Reading": "まごまご",
+        "Meaning": "lúng túng, bối rối",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "使い方がわからず、まごまごする。\n(Không biết cách dùng nên lúng túng.)"
+    },
+    {
+        "Word": "ばらばら",
+        "Reading": "ばらばら",
+        "Meaning": "rời rạc, lung tung",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "家族がばらばらに住む。\n(Gia đình mỗi người sống một nơi.)"
+    },
+    {
+        "Word": "ぎりぎり",
+        "Reading": "ぎりぎり",
+        "Meaning": "sát nút, vừa vặn",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "電車にぎりぎり間に合った。\n(Vừa kịp sát nút chuyến tàu điện.)"
+    },
+    {
+        "Word": "ぴかぴか",
+        "Reading": "ぴかぴか",
+        "Meaning": "sáng bóng, lấp lánh",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "靴をぴかぴかに磨く。\n(Đánh giày sáng bóng.)"
+    },
+    {
+        "Word": "のろのろ",
+        "Reading": "のろのろ",
+        "Meaning": "chậm chạp",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "のろのろ歩く。\n(Đi bộ chậm chạp/như sên.)"
+    },
+    {
+        "Word": "ぺらぺら",
+        "Reading": "ぺらぺら",
+        "Meaning": "lưu loát, trôi chảy",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "英語がぺらぺらだ。\n(Nói tiếng Anh lưu loát.)"
+    },
+    {
+        "Word": "ぺこぺこ",
+        "Reading": "ぺこぺこ",
+        "Meaning": "đói meo, khúm núm",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "おなかがぺこぺこだ。\n(Bụng đói meo rồi.)"
+    },
+    {
+        "Word": "たまたま",
+        "Reading": "たまたま",
+        "Meaning": "tình cờ, ngẫu nhiên",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "たまたま駅で友だちに会った。\n(Tình cờ gặp bạn ở nhà ga.)"
+    },
+    {
+        "Word": "もしかすると",
+        "Reading": "もしかすると",
+        "Meaning": "có lẽ, biết đâu chừng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "もしかすると、彼は来ないかもしれない。\n(Biết đâu chừng anh ấy sẽ không đến.)"
+    },
+    {
+        "Word": "別々に",
+        "Reading": "べつべつに",
+        "Meaning": "riêng biệt",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "別々に包んでください。\n(Hãy gói riêng từng cái giúp tôi.)"
+    },
+    {
+        "Word": "たいして",
+        "Reading": "たいして",
+        "Meaning": "không... lắm (đi với phủ định)",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "その映画はたいして面白くなかった。\n(Bộ phim đó không hay cho lắm.)"
+    },
+    {
+        "Word": "恐らく",
+        "Reading": "おそらく",
+        "Meaning": "có lẽ, e rằng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "恐らく、明日は雨だろう。\n(Có lẽ ngày mai trời sẽ mưa.)"
+    },
+    {
+        "Word": "そんなに",
+        "Reading": "そんなに",
+        "Meaning": "đến mức đó, như thế",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 306,
+        "Example": "そんなに急がなくてもいいですよ。\n(Không cần phải vội đến mức đó đâu.)"
+    },
+    {
+        "Word": "あらゆる",
+        "Reading": "あらゆる",
+        "Meaning": "tất cả, mọi",
+        "PartOfSpeech": "Liên thể từ",
+        "LessonId": 306,
+        "Example": "あらゆる方法を試す。\n(Thử mọi phương pháp.)"
+    },
+    {
+        "Word": "たいした",
+        "Reading": "たいした",
+        "Meaning": "to tát, quan trọng",
+        "PartOfSpeech": "Liên thể từ",
+        "LessonId": 306,
+        "Example": "たいした病気ではない。\n(Không phải bệnh gì to tát đâu.)"
+    },
+    {
+        "Word": "いわゆる",
+        "Reading": "いわゆる",
+        "Meaning": "cái gọi là",
+        "PartOfSpeech": "Liên thể từ",
+        "LessonId": 306,
+        "Example": "彼はいわゆる天才だ。\n(Anh ấy đúng là cái gọi là thiên tài.)"
+    },
+    {
+        "Word": "ところが",
+        "Reading": "ところが",
+        "Meaning": "tuy nhiên, nhưng",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "天気予報は晴れだった。ところが、雨が降ってきた。\n(Dự báo thời tiết là nắng. Thế mà trời lại đổ mưa.)"
+    },
+    {
+        "Word": "しかも",
+        "Reading": "しかも",
+        "Meaning": "hơn nữa, vả lại",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "この靴は安くて、しかも丈夫だ。\n(Đôi giày này vừa rẻ, lại còn bền nữa.)"
+    },
+    {
+        "Word": "すると",
+        "Reading": "すると",
+        "Meaning": "thế là, ngay sau đó",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "ボタンを押した。すると、火が消えた。\n(Tôi nhấn nút. Thế là lửa tắt.)"
+    },
+    {
+        "Word": "なぜなら",
+        "Reading": "なぜなら",
+        "Meaning": "lý do là, vì",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "私は旅行に行かない。なぜなら、お金がないからだ。\n(Tôi không đi du lịch. Lý do là vì tôi không có tiền.)"
+    },
+    {
+        "Word": "だって",
+        "Reading": "だって",
+        "Meaning": "bởi vì, chả là (dùng trong văn nói)",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "「どうして食べないの？」「だって、嫌いなんだもん」\n(Tại sao không ăn? - Tại vì em ghét nó mà.)"
+    },
+    {
+        "Word": "ようするに",
+        "Reading": "ようするに",
+        "Meaning": "tóm lại là",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "要するに、彼は行きたくないのだ。\n(Tóm lại là anh ta không muốn đi.)"
+    },
+    {
+        "Word": "ついでに",
+        "Reading": "ついでに",
+        "Meaning": "nhân tiện",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "郵便局へ行くなら、ついでにこれも出してきて。\n(Nếu đi bưu điện thì nhân tiện gửi giúp tôi cái này luôn nhé.)"
+    },
+    {
+        "Word": "それとも",
+        "Reading": "それとも",
+        "Meaning": "hoặc là, hay là",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "コーヒーにしますか、それとも紅茶にしますか。\n(Anh dùng cà phê hay là trà?)"
+    },
+    {
+        "Word": "そのうえ",
+        "Reading": "そのうえ",
+        "Meaning": "hơn nữa, thêm vào đó",
+        "PartOfSpeech": "Liên từ",
+        "LessonId": 306,
+        "Example": "道に迷ってしまった。そのうえ、雨も降り出した。\n(Tôi bị lạc đường. Thêm vào đó trời còn bắt đầu mưa nữa.)"
+    }
+]

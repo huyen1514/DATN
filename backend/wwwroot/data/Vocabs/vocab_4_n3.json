@@ -1,0 +1,802 @@
+[
+    {
+        "Word": "世話",
+        "Reading": "せわ",
+        "Meaning": "chăm sóc, giúp đỡ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "うちではペットの世話は私の仕事だ。\n(Ở nhà, việc chăm sóc thú cưng là công việc của tôi.)"
+    },
+    {
+        "Word": "家庭",
+        "Reading": "かてい",
+        "Meaning": "gia đình",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "早く結婚して、あたたかい家庭を持ちたい。\n(Tôi muốn kết hôn sớm và xây dựng một gia đình đầm ấm.)"
+    },
+    {
+        "Word": "協力",
+        "Reading": "きょうりょく",
+        "Meaning": "hợp tác, hiệp lực",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "家族で協力して祖母の介護をした。\n(Cả gia đình đã hợp tác chăm sóc bà.)"
+    },
+    {
+        "Word": "感謝",
+        "Reading": "かんしゃ",
+        "Meaning": "cảm tạ, biết ơn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "アドバイスしてくれた先輩に、とても感謝している。\n(Tôi rất biết ơn tiền bối đã cho tôi lời khuyên.)"
+    },
+    {
+        "Word": "お礼",
+        "Reading": "おれい",
+        "Meaning": "cảm ơn, trả lễ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "お世話になった方にお礼をした。\n(Tôi đã gửi lời cảm ơn đến những người đã giúp đỡ mình.)"
+    },
+    {
+        "Word": "お詫び",
+        "Reading": "おわび",
+        "Meaning": "xin lỗi, tạ lỗi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "迷惑をかけた人におわびをした。\n(Tôi đã xin lỗi người mà tôi làm phiền.)"
+    },
+    {
+        "Word": "おじぎ",
+        "Reading": "おじぎ",
+        "Meaning": "cúi chào",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "「お客様にはていねいにおじぎをしましょう」\n(Hãy cúi chào khách hàng một cách lịch sự.)"
+    },
+    {
+        "Word": "握手",
+        "Reading": "あくしゅ",
+        "Meaning": "bắt tay",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "コンサートで歌手と握手した。\n(Tôi đã bắt tay với ca sĩ ở buổi hòa nhạc.)"
+    },
+    {
+        "Word": "いじわる",
+        "Reading": "いじわる",
+        "Meaning": "xấu tính, bắt nạt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "好きな子にはついいじわるしてしまう。\n(Tôi lỡ trêu chọc/bắt nạt cô bé mà tôi thích.)"
+    },
+    {
+        "Word": "いたずら",
+        "Reading": "いたずら",
+        "Meaning": "nghịch ngợm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "いたずらをして、先生に怒られた。\n(Vì nghịch ngợm nên tôi bị thầy mắng.)"
+    },
+    {
+        "Word": "節約",
+        "Reading": "せつやく",
+        "Meaning": "tiết kiệm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "生活費の節約。\n(Tiết kiệm chi phí sinh hoạt.)"
+    },
+    {
+        "Word": "経営",
+        "Reading": "けいえい",
+        "Meaning": "kinh doanh, quản lý",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "父はスーパーを経営している。\n(Bố tôi đang kinh doanh siêu thị.)"
+    },
+    {
+        "Word": "反省",
+        "Reading": "はんせい",
+        "Meaning": "kiểm điểm, phản tỉnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "１日の反省を日記に書く。\n(Tôi viết những kiểm điểm trong một ngày vào nhật ký.)"
+    },
+    {
+        "Word": "実行",
+        "Reading": "じっこう",
+        "Meaning": "thực hành, thực hiện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "この計画は実行が難しい。\n(Kế hoạch này rất khó thực hiện.)"
+    },
+    {
+        "Word": "進歩",
+        "Reading": "しんぽ",
+        "Meaning": "tiến bộ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "英語を勉強しているが、進歩がない。\n(Tôi đang học tiếng Anh nhưng không có sự tiến bộ.)"
+    },
+    {
+        "Word": "変化",
+        "Reading": "へんか",
+        "Meaning": "thay đổi, biến hóa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "大きな変化。\n(Sự thay đổi lớn.)"
+    },
+    {
+        "Word": "発達",
+        "Reading": "はったつ",
+        "Meaning": "phát triển",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "体や心が発達する。\n(Thể chất và tâm hồn phát triển.)"
+    },
+    {
+        "Word": "体力",
+        "Reading": "たいりょく",
+        "Meaning": "thể lực",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "若者の体力が低下している。\n(Thể lực của giới trẻ đang giảm sút.)"
+    },
+    {
+        "Word": "出場",
+        "Reading": "しゅつじょう",
+        "Meaning": "tham dự (trận đấu), ra sân",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "オリンピックへの出場が決まった。\n(Việc tham dự Olympic đã được quyết định.)"
+    },
+    {
+        "Word": "活躍",
+        "Reading": "かつやく",
+        "Meaning": "hoạt động tích cực, tỏa sáng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "田中選手の活躍を期待する。\n(Kỳ vọng vào màn trình diễn xuất sắc của cầu thủ Tanaka.)"
+    },
+    {
+        "Word": "競争",
+        "Reading": "きょうそう",
+        "Meaning": "cạnh tranh, thi đua",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "どちらがいい成績を取るか、友だちと競争した。\n(Tôi đã cạnh tranh với bạn xem ai giành thành tích tốt hơn.)"
+    },
+    {
+        "Word": "応援",
+        "Reading": "おうえん",
+        "Meaning": "cổ vũ, hỗ trợ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "自分の学校のチームを応援する。\n(Tôi cổ vũ cho đội của trường mình.)"
+    },
+    {
+        "Word": "拍手",
+        "Reading": "はくしゅ",
+        "Meaning": "vỗ tay",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "ステージの歌手に拍手をする。\n(Vỗ tay tán thưởng ca sĩ trên sân khấu.)"
+    },
+    {
+        "Word": "人気",
+        "Reading": "にんき",
+        "Meaning": "được yêu thích, hâm mộ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "彼はクラスで一番人気がある。\n(Cậu ấy được yêu thích nhất lớp.)"
+    },
+    {
+        "Word": "うわさ",
+        "Reading": "うわさ",
+        "Meaning": "tin đồn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "クラスメートのうわさをしていたら、そこに本人が現れた。\n(Đang đồn đại về bạn cùng lớp thì người đó xuất hiện.)"
+    },
+    {
+        "Word": "情報",
+        "Reading": "じょうほう",
+        "Meaning": "thông tin",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "テレビからいろいろな情報を得る。\n(Lấy được nhiều thông tin từ tivi.)"
+    },
+    {
+        "Word": "交換",
+        "Reading": "こうかん",
+        "Meaning": "trao đổi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "プレゼントを交換する。\n(Trao đổi quà tặng.)"
+    },
+    {
+        "Word": "流行",
+        "Reading": "りゅうこう",
+        "Meaning": "thịnh hành, lưu hành",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "新しい流行。\n(Trào lưu mới/Sự thịnh hành mới.)"
+    },
+    {
+        "Word": "宣伝",
+        "Reading": "せんでん",
+        "Meaning": "tuyên truyền, quảng bá",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "バーゲンセールの宣伝が始まった。\n(Việc quảng bá cho đợt bán hàng giảm giá đã bắt đầu.)"
+    },
+    {
+        "Word": "広告",
+        "Reading": "こうこく",
+        "Meaning": "quảng cáo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "新聞に新製品の広告がのっていた。\n(Quảng cáo sản phẩm mới được đăng trên báo.)"
+    },
+    {
+        "Word": "注目",
+        "Reading": "ちゅうもく",
+        "Meaning": "chú ý, quan tâm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "有名歌手の結婚が注目を集めている。\n(Đám cưới của ca sĩ nổi tiếng đang thu hút sự chú ý.)"
+    },
+    {
+        "Word": "通訳",
+        "Reading": "つうやく",
+        "Meaning": "thông dịch (nói)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "英語を日本語に通訳する。\n(Thông dịch tiếng Anh sang tiếng Nhật.)"
+    },
+    {
+        "Word": "翻訳",
+        "Reading": "ほんやく",
+        "Meaning": "biên dịch (viết)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "日本語の小説を英語に翻訳する。\n(Biên dịch tiểu thuyết tiếng Nhật sang tiếng Anh.)"
+    },
+    {
+        "Word": "伝言",
+        "Reading": "でんごん",
+        "Meaning": "lời nhắn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "留守番電話に伝言を残す。\n(Để lại lời nhắn trong hộp thư thoại.)"
+    },
+    {
+        "Word": "報告",
+        "Reading": "ほうこく",
+        "Meaning": "báo cáo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "出張の報告。\n(Báo cáo chuyến công tác.)"
+    },
+    {
+        "Word": "録画",
+        "Reading": "ろくが",
+        "Meaning": "ghi hình",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "テレビ番組をビデオに録画する。\n(Ghi hình chương trình tivi vào video.)"
+    },
+    {
+        "Word": "混雑",
+        "Reading": "こんざつ",
+        "Meaning": "đông đúc, hỗn tạp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "デパートは、大勢の人で混雑している。\n(Trung tâm thương mại đang đông đúc rất nhiều người.)"
+    },
+    {
+        "Word": "渋滞",
+        "Reading": "じゅうたい",
+        "Meaning": "tắc đường, kẹt xe",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "道路が渋滞していて、会議に遅刻した。\n(Đường bị tắc nên tôi đã đến cuộc họp muộn.)"
+    },
+    {
+        "Word": "衝突",
+        "Reading": "しょうとつ",
+        "Meaning": "va chạm, xung đột",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "電車の衝突の場面を見た。\n(Tôi đã thấy cảnh tàu điện va chạm.)"
+    },
+    {
+        "Word": "被害",
+        "Reading": "ひがい",
+        "Meaning": "thiệt hại",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "台風の被害。\n(Thiệt hại do bão.)"
+    },
+    {
+        "Word": "事故",
+        "Reading": "じこ",
+        "Meaning": "tai nạn, sự cố",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "事故の原因を調べる。\n(Điều tra nguyên nhân tai nạn.)"
+    },
+    {
+        "Word": "事件",
+        "Reading": "じけん",
+        "Meaning": "vụ án, sự kiện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "近所で子どもが次々と居なくなるという事件があった。\n(Có một vụ án trẻ em liên tiếp mất tích ở khu vực lân cận.)"
+    },
+    {
+        "Word": "故障",
+        "Reading": "こしょう",
+        "Meaning": "hỏng hóc, trục trặc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "洗濯機が故障したので、コインランドリーへ行った。\n(Máy giặt bị hỏng nên tôi đã đến tiệm giặt tự động.)"
+    },
+    {
+        "Word": "修理",
+        "Reading": "しゅうり",
+        "Meaning": "sửa chữa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "パソコンが壊れたので、修理に出した。\n(Máy tính bị hỏng nên tôi mang đi sửa.)"
+    },
+    {
+        "Word": "停電",
+        "Reading": "ていでん",
+        "Meaning": "mất điện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "雷が落ちて停電した。\n(Sét đánh nên mất điện.)"
+    },
+    {
+        "Word": "調子",
+        "Reading": "ちょうし",
+        "Meaning": "tình trạng, trạng thái",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "体の調子がいい。\n(Tình trạng cơ thể đang rất tốt.)"
+    },
+    {
+        "Word": "緊張",
+        "Reading": "きんちょう",
+        "Meaning": "căng thẳng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "面接では緊張して、うまく答えられなかった。\n(Trong buổi phỏng vấn tôi bị căng thẳng nên không trả lời tốt được.)"
+    },
+    {
+        "Word": "自信",
+        "Reading": "じしん",
+        "Meaning": "tự tin",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "体力に自信がある。\n(Tôi tự tin vào thể lực của mình.)"
+    },
+    {
+        "Word": "自慢",
+        "Reading": "じまん",
+        "Meaning": "tự hào, khoe khoang",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "自慢の料理を作る。\n(Nấu món ăn tủ/tự hào.)"
+    },
+    {
+        "Word": "関心",
+        "Reading": "かんしん",
+        "Meaning": "quan tâm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "チンさんの進歩の速さに関心した。\n(Tôi quan tâm/nể phục tốc độ tiến bộ của anh Chin.)"
+    },
+    {
+        "Word": "感動",
+        "Reading": "かんどう",
+        "Meaning": "cảm động",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "パラリンピックを見て、とても感動した。\n(Xem Paralympic tôi đã rất cảm động.)"
+    },
+    {
+        "Word": "興奮",
+        "Reading": "こうふん",
+        "Meaning": "hưng phấn, phấn khích",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "試合を見ていた観客たちは、興奮して大声を出した。\n(Các khán giả xem trận đấu đã hưng phấn và hét lớn.)"
+    },
+    {
+        "Word": "感想",
+        "Reading": "かんそう",
+        "Meaning": "cảm tưởng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "「ご感想はいかがですか」「すばらしかったです」\n(Cảm tưởng của bạn thế nào? - Tuyệt vời lắm ạ.)"
+    },
+    {
+        "Word": "予想",
+        "Reading": "よそう",
+        "Meaning": "dự đoán",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "選挙の結果を予想する。\n(Dự đoán kết quả bầu cử.)"
+    },
+    {
+        "Word": "専門",
+        "Reading": "せんもん",
+        "Meaning": "chuyên môn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "専門は言語学です。\n(Chuyên môn của tôi là ngôn ngữ học.)"
+    },
+    {
+        "Word": "研究",
+        "Reading": "けんきゅう",
+        "Meaning": "nghiên cứu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "私は大学で日本の政治を研究している。\n(Tôi đang nghiên cứu chính trị Nhật Bản ở trường đại học.)"
+    },
+    {
+        "Word": "調査",
+        "Reading": "ちょうさ",
+        "Meaning": "điều tra",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "調査を行う。\n(Tiến hành điều tra.)"
+    },
+    {
+        "Word": "原因",
+        "Reading": "げんいん",
+        "Meaning": "nguyên nhân",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "今、警察が事故の原因を調べている。\n(Bây giờ cảnh sát đang điều tra nguyên nhân vụ tai nạn.)"
+    },
+    {
+        "Word": "結果",
+        "Reading": "けっか",
+        "Meaning": "kết quả",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "１位になりたかったが、結果は３位だった。\n(Tôi muốn đứng thứ 1, nhưng kết quả lại là thứ 3.)"
+    },
+    {
+        "Word": "解決",
+        "Reading": "かいけつ",
+        "Meaning": "giải quyết",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "大きな問題が解決した。\n(Một vấn đề lớn đã được giải quyết.)"
+    },
+    {
+        "Word": "確認",
+        "Reading": "かくにん",
+        "Meaning": "xác nhận",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "間違いがないかどうか確認する。\n(Xác nhận xem có lỗi sai hay không.)"
+    },
+    {
+        "Word": "利用",
+        "Reading": "りよう",
+        "Meaning": "sử dụng, tận dụng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "水不足なので、水道の利用を減らした。\n(Vì thiếu nước nên đã giảm việc sử dụng nước máy.)"
+    },
+    {
+        "Word": "理解",
+        "Reading": "りかい",
+        "Meaning": "hiểu, lý giải",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "意味の理解が早い。\n(Việc hiểu ý nghĩa rất nhanh.)"
+    },
+    {
+        "Word": "発見",
+        "Reading": "はっけん",
+        "Meaning": "phát hiện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "大きな発見。\n(Phát hiện lớn.)"
+    },
+    {
+        "Word": "発明",
+        "Reading": "はつめい",
+        "Meaning": "phát minh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "ベルは電話を発明した。\n(Bell đã phát minh ra điện thoại.)"
+    },
+    {
+        "Word": "関係",
+        "Reading": "かんけい",
+        "Meaning": "quan hệ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "お二人の関係は？\n(Quan hệ của hai người là gì?)"
+    },
+    {
+        "Word": "団体",
+        "Reading": "だんたい",
+        "Meaning": "đoàn thể, nhóm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "博物館で団体のチケットを買う。\n(Mua vé theo đoàn ở viện bảo tàng.)"
+    },
+    {
+        "Word": "選挙",
+        "Reading": "せんきょ",
+        "Meaning": "bầu cử",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "１月に選挙が行われる。\n(Cuộc bầu cử sẽ được tiến hành vào tháng 1.)"
+    },
+    {
+        "Word": "税金",
+        "Reading": "ぜいきん",
+        "Meaning": "tiền thuế",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "年度末に税金を払う。\n(Nộp thuế vào cuối năm.)"
+    },
+    {
+        "Word": "責任",
+        "Reading": "せきにん",
+        "Meaning": "trách nhiệm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "この失敗はあなたの責任ではない。\n(Thất bại này không phải là trách nhiệm của bạn.)"
+    },
+    {
+        "Word": "書類",
+        "Reading": "しょるい",
+        "Meaning": "tài liệu, giấy tờ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "会議の書類を作る。\n(Làm tài liệu cho cuộc họp.)"
+    },
+    {
+        "Word": "題名",
+        "Reading": "だいめい",
+        "Meaning": "tiêu đề, nhan đề",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "コンクールに出す作品に題名をつける。\n(Đặt tiêu đề cho tác phẩm tham gia cuộc thi.)"
+    },
+    {
+        "Word": "条件",
+        "Reading": "じょうけん",
+        "Meaning": "điều kiện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "運転免許を持っていることが採用の条件だ。\n(Có bằng lái xe là điều kiện để được tuyển dụng.)"
+    },
+    {
+        "Word": "締め切り",
+        "Reading": "しめきり",
+        "Meaning": "hạn chót",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "レポートの締め切りは３０日です。\n(Hạn chót nộp báo cáo là ngày 30.)"
+    },
+    {
+        "Word": "期間",
+        "Reading": "きかん",
+        "Meaning": "thời gian, thời kỳ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "申し込み期間は１２月１日から３日までです。\n(Thời gian đăng ký là từ mùng 1 đến mùng 3 tháng 12.)"
+    },
+    {
+        "Word": "倍",
+        "Reading": "ばい",
+        "Meaning": "gấp đôi, lần",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "値段が倍になる。\n(Giá tăng gấp đôi.)"
+    },
+    {
+        "Word": "くじ",
+        "Reading": "くじ",
+        "Meaning": "rút thăm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "スーパーでくじをひいたら、テレビが当たった。\n(Bốc thăm ở siêu thị thì trúng được cái tivi.)"
+    },
+    {
+        "Word": "近道",
+        "Reading": "ちかみち",
+        "Meaning": "đường tắt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "駅への近道を通る。\n(Đi đường tắt đến nhà ga.)"
+    },
+    {
+        "Word": "中心",
+        "Reading": "ちゅうしん",
+        "Meaning": "trung tâm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "街の中心。\n(Trung tâm thành phố.)"
+    },
+    {
+        "Word": "辺り",
+        "Reading": "あたり",
+        "Meaning": "vùng lân cận, xung quanh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "この辺りは店が多くて便利だ。\n(Khu vực này có nhiều cửa hàng nên rất tiện lợi.)"
+    },
+    {
+        "Word": "周り / 回り",
+        "Reading": "まわり",
+        "Meaning": "xung quanh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "池の周りを歩く。\n(Đi bộ quanh hồ.)"
+    },
+    {
+        "Word": "穴",
+        "Reading": "あな",
+        "Meaning": "lỗ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "地面に穴を掘る。\n(Đào lỗ trên mặt đất.)"
+    },
+    {
+        "Word": "列",
+        "Reading": "れつ",
+        "Meaning": "hàng, dãy",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "入り口の前には長い列ができていた。\n(Có một hàng dài xếp trước lối vào.)"
+    },
+    {
+        "Word": "幅",
+        "Reading": "はば",
+        "Meaning": "chiều rộng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "道の幅が広い。\n(Chiều rộng của con đường lớn.)"
+    },
+    {
+        "Word": "範囲",
+        "Reading": "はんい",
+        "Meaning": "phạm vi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "テストの範囲。\n(Phạm vi bài kiểm tra.)"
+    },
+    {
+        "Word": "内容",
+        "Reading": "ないよう",
+        "Meaning": "nội dung",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "話の内容。\n(Nội dung câu chuyện.)"
+    },
+    {
+        "Word": "中身",
+        "Reading": "なかみ",
+        "Meaning": "nội dung bên trong",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "箱を開けて中身を見る。\n(Mở hộp ra xem bên trong.)"
+    },
+    {
+        "Word": "特徴",
+        "Reading": "とくちょう",
+        "Meaning": "đặc trưng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "商品の特徴を確かめる。\n(Xác nhận đặc trưng của sản phẩm.)"
+    },
+    {
+        "Word": "普通",
+        "Reading": "ふつう",
+        "Meaning": "bình thường",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "パスポートの申請には１週間ぐらいかかるのが普通だ。\n(Thông thường việc xin hộ chiếu mất khoảng 1 tuần.)"
+    },
+    {
+        "Word": "当たり前",
+        "Reading": "あたりまえ",
+        "Meaning": "đương nhiên, hiển nhiên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "そんなひどいことをされたら、怒るのが当たり前だ。\n(Bị làm chuyện tồi tệ như vậy, tức giận là điều đương nhiên.)"
+    },
+    {
+        "Word": "偽",
+        "Reading": "にせ",
+        "Meaning": "giả",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "偽の銀行員にだまされてお金を取られた。\n(Bị nhân viên ngân hàng giả lừa lấy mất tiền.)"
+    },
+    {
+        "Word": "別",
+        "Reading": "べつ",
+        "Meaning": "khác, riêng biệt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "「米」は「ごはん」とは別のものですか。\n(\"Gạo\" là thứ khác với \"Cơm\" à?)"
+    },
+    {
+        "Word": "国籍",
+        "Reading": "こくせき",
+        "Meaning": "quốc tịch",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "私はずっとアメリカで暮らしているが、国籍は日本だ。\n(Tôi sống ở Mỹ từ lâu nhưng quốc tịch là Nhật Bản.)"
+    },
+    {
+        "Word": "東洋",
+        "Reading": "とうよう",
+        "Meaning": "phương Đông",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "東洋の文化と西洋の文化を比べる。\n(So sánh văn hóa phương Đông và phương Tây.)"
+    },
+    {
+        "Word": "西洋",
+        "Reading": "せいよう",
+        "Meaning": "phương Tây",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "西洋の歴史を勉強する。\n(Học lịch sử phương Tây.)"
+    },
+    {
+        "Word": "国際",
+        "Reading": "こくさい",
+        "Meaning": "quốc tế",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "日本企業の海外支社でのトラブルが国際問題に発展した。\n(Rắc rối tại chi nhánh nước ngoài của doanh nghiệp Nhật đã phát triển thành vấn đề quốc tế.)"
+    },
+    {
+        "Word": "自然",
+        "Reading": "しぜん",
+        "Meaning": "tự nhiên, thiên nhiên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "山や海へ行って、自然の中で過ごす。\n(Đi lên núi hoặc ra biển và dành thời gian hòa mình vào thiên nhiên.)"
+    },
+    {
+        "Word": "景色",
+        "Reading": "けしき",
+        "Meaning": "phong cảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "初めて日本の山に行った。すばらしい景色だった。\n(Lần đầu đi núi ở Nhật. Phong cảnh thật tuyệt vời.)"
+    },
+    {
+        "Word": "宗教",
+        "Reading": "しゅうきょう",
+        "Meaning": "tôn giáo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "世界にはいろいろな宗教がある。\n(Trên thế giới có rất nhiều tôn giáo.)"
+    },
+    {
+        "Word": "愛",
+        "Reading": "あい",
+        "Meaning": "tình yêu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 266,
+        "Example": "私は家族を愛している。\n(Tôi yêu gia đình của mình.)"
+    }
+]

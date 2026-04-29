@@ -1,0 +1,418 @@
+[
+    {
+        "Word": "幸せな",
+        "Reading": "しあわせな",
+        "Meaning": "hạnh phúc",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "いい家族や友だちがいて、私は幸せだ。\n(Có gia đình và bạn bè tốt, tôi rất hạnh phúc.)"
+    },
+    {
+        "Word": "得意な",
+        "Reading": "とくいな",
+        "Meaning": "đắc ý, giỏi, tự hào",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "彼女はギターが得意だ。\n(Cô ấy rất giỏi guitar.)"
+    },
+    {
+        "Word": "苦手な",
+        "Reading": "にがてな",
+        "Meaning": "kém, không giỏi, không thoải mái",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "彼女は料理が苦手だ。\n(Cô ấy không giỏi nấu ăn.)"
+    },
+    {
+        "Word": "熱心な",
+        "Reading": "ねっしんな",
+        "Meaning": "nhiệt tình, say mê",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "熱心な仕事ぶりが認められて昇進した。\n(Sự làm việc nhiệt tình đã được công nhận và được thăng chức.)"
+    },
+    {
+        "Word": "夢中な",
+        "Reading": "むちゅうな",
+        "Meaning": "say sưa, miệt mài",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "子どものころ、SF漫画に夢中になった。\n(Hồi còn nhỏ, tôi đã say sưa với truyện tranh khoa học viễn tưởng.)"
+    },
+    {
+        "Word": "退屈な",
+        "Reading": "たいくつな",
+        "Meaning": "nhàm chán, buồn tẻ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "ほかの観客は笑いながら見ていたが、私には退屈な映画だった。\n(Những khán giả khác vừa xem vừa cười, nhưng với tôi đó là một bộ phim nhàm chán.)"
+    },
+    {
+        "Word": "健康な",
+        "Reading": "けんこうな",
+        "Meaning": "khỏe mạnh",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "心も体も健康な子どもを育てたい。\n(Tôi muốn nuôi dạy một đứa trẻ khỏe mạnh cả về thể chất lẫn tinh thần.)"
+    },
+    {
+        "Word": "苦しい",
+        "Reading": "くるしい",
+        "Meaning": "đau đớn, khổ cực, khó khăn",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "息が苦しい。\n(Khó thở.)"
+    },
+    {
+        "Word": "平気な",
+        "Reading": "へいきな",
+        "Meaning": "bình tĩnh, dửng dưng, không sao",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "彼女は、どんなに悪口を言われても平気な顔をしている。\n(Dù bị nói xấu thế nào cô ấy vẫn giữ khuôn mặt dửng dưng.)"
+    },
+    {
+        "Word": "悔しい",
+        "Reading": "くやしい",
+        "Meaning": "cay cú, bực tức, hối tiếc",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "何度練習してもうまくできなくて、悔しい。\n(Đã luyện tập bao nhiêu lần mà vẫn không làm tốt được, thật cay cú.)"
+    },
+    {
+        "Word": "羨ましい",
+        "Reading": "うらやましい",
+        "Meaning": "ghen tị, thèm muốn",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "才能の豊かな人がうらやましい。\n(Tôi ghen tị với những người tài năng.)"
+    },
+    {
+        "Word": "痒い",
+        "Reading": "かゆい",
+        "Meaning": "ngứa",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "蚊に刺されて首がかゆい。\n(Bị muỗi đốt nên cổ tôi rất ngứa.)"
+    },
+    {
+        "Word": "おとなしい",
+        "Reading": "おとなしい",
+        "Meaning": "hiền lành, ngoan ngoãn, trầm tính",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "彼はおとなしい人だ。\n(Anh ấy là một người hiền lành.)"
+    },
+    {
+        "Word": "我慢強い",
+        "Reading": "がまんづよい",
+        "Meaning": "kiên nhẫn, chịu đựng giỏi",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "チャンスがやって来るのをがまん強く待つ。\n(Kiên nhẫn chờ đợi cơ hội đến.)"
+    },
+    {
+        "Word": "正直な",
+        "Reading": "しょうじきな",
+        "Meaning": "trung thực, ngay thẳng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "彼は正直な人だから、うそをつくことができない。\n(Anh ấy là người trung thực nên không thể nói dối.)"
+    },
+    {
+        "Word": "けちな",
+        "Reading": "けちな",
+        "Meaning": "keo kiệt, bủn xỉn",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "あの人はとてもけちだ。\n(Người đó rất keo kiệt.)"
+    },
+    {
+        "Word": "わがままな",
+        "Reading": "わがままな",
+        "Meaning": "ích kỷ, bướng bỉnh",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "彼女はわがままだ。\n(Cô ấy rất ích kỷ/bướng bỉnh.)"
+    },
+    {
+        "Word": "積極的な",
+        "Reading": "せっきょくてきな",
+        "Meaning": "tích cực, chủ động",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "日本語を身につけるため、積極的に日本人の友だちを作った。\n(Để nắm vững tiếng Nhật, tôi đã chủ động kết bạn với người Nhật.)"
+    },
+    {
+        "Word": "消極的な",
+        "Reading": "しょうきょくてきな",
+        "Meaning": "tiêu cực, thụ động",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "今の首相は、教育問題に消極的だ。\n(Thủ tướng hiện nay khá thụ động trong vấn đề giáo dục.)"
+    },
+    {
+        "Word": "満足な",
+        "Reading": "まんぞくな",
+        "Meaning": "thỏa mãn, hài lòng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "アルバイトだけでは満足な収入は得られない。\n(Chỉ làm thêm thì không thể có được thu nhập thỏa mãn.)"
+    },
+    {
+        "Word": "不満な",
+        "Reading": "ふまんな",
+        "Meaning": "bất mãn, không hài lòng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "この仕事に不満な点はない。\n(Tôi không có điểm nào bất mãn về công việc này.)"
+    },
+    {
+        "Word": "不安な",
+        "Reading": "ふあんな",
+        "Meaning": "bất an, lo lắng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "最近、体の調子がよくない。悪い病気ではないかと不安だ。\n(Gần đây tình trạng cơ thể không được tốt. Tôi lo lắng không biết có phải là bệnh hiểm nghèo không.)"
+    },
+    {
+        "Word": "大変な",
+        "Reading": "たいへんな",
+        "Meaning": "vất vả, kinh khủng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "子育て中のお母さんは大変だ。\n(Người mẹ đang nuôi con thì rất vất vả.)"
+    },
+    {
+        "Word": "無理な",
+        "Reading": "むりな",
+        "Meaning": "vô lý, không thể, quá sức",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "たった100万円で家を建てるなんて無理な話だ。\n(Xây nhà chỉ với 1 triệu yên đúng là chuyện không tưởng.)"
+    },
+    {
+        "Word": "不注意な",
+        "Reading": "ふちゅういな",
+        "Meaning": "bất cẩn, không chú ý",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "疲れると不注意なミスが多くなる。\n(Khi mệt mỏi sẽ dễ mắc nhiều lỗi bất cẩn.)"
+    },
+    {
+        "Word": "楽な",
+        "Reading": "らくな",
+        "Meaning": "dễ chịu, thoải mái, nhàn nhã",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "もう少し楽な暮らしがしたい。\n(Tôi muốn sống một cuộc sống thoải mái hơn một chút.)"
+    },
+    {
+        "Word": "面倒な",
+        "Reading": "めんどうな",
+        "Meaning": "phiền phức, rắc rối",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "ご入会には面倒な手続きはいりません。\n(Việc gia nhập không cần những thủ tục phiền phức.)"
+    },
+    {
+        "Word": "失礼な",
+        "Reading": "しつれいな",
+        "Meaning": "thất lễ, vô lễ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "あいさつしても返事もしない。なんて失礼な人だろう。\n(Đã chào hỏi mà cũng không trả lời. Thật là một người vô lễ.)"
+    },
+    {
+        "Word": "当然な",
+        "Reading": "とうぜんな",
+        "Meaning": "đương nhiên, tất nhiên",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "お金を借りたら、返すのが当然だ。\n(Nếu mượn tiền thì trả lại là điều đương nhiên.)"
+    },
+    {
+        "Word": "意外な",
+        "Reading": "いがいな",
+        "Meaning": "ngoài dự tính, bất ngờ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "事故を調査するうちに意外な事実がわかった。\n(Trong lúc điều tra vụ tai nạn, một sự thật bất ngờ đã được làm sáng tỏ.)"
+    },
+    {
+        "Word": "結構な",
+        "Reading": "けっこうな",
+        "Meaning": "tốt, đủ, được",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "「お味はいかがですか」「大変けっこうです」\n(Mùi vị thế nào ạ? Rất ngon/Rất tuyệt.)"
+    },
+    {
+        "Word": "派手な",
+        "Reading": "はでな",
+        "Meaning": "lòe loẹt, sặc sỡ, phô trương",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "この服ははですぎる。\n(Bộ quần áo này quá sặc sỡ.)"
+    },
+    {
+        "Word": "地味な",
+        "Reading": "じみな",
+        "Meaning": "giản dị, mộc mạc",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "あの人は若いのに、地味なかっこうばかりしている。\n(Người đó tuy còn trẻ nhưng toàn ăn mặc giản dị.)"
+    },
+    {
+        "Word": "おしゃれな",
+        "Reading": "おしゃれな",
+        "Meaning": "thời trang, sành điệu, diện",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "彼女はとてもおしゃれだ。\n(Cô ấy rất sành điệu.)"
+    },
+    {
+        "Word": "変な",
+        "Reading": "へんな",
+        "Meaning": "kỳ lạ, kỳ quái",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "変なメールが届いたのですぐに消した。\n(Có một email kỳ lạ gửi đến nên tôi đã xóa ngay.)"
+    },
+    {
+        "Word": "不思議な",
+        "Reading": "ふしぎな",
+        "Meaning": "kỳ bí, kỳ lạ, huyền bí",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "この村には不思議な話が伝わっている。\n(Có một câu chuyện kỳ lạ đang được lưu truyền trong ngôi làng này.)"
+    },
+    {
+        "Word": "ましな",
+        "Reading": "ましな",
+        "Meaning": "tốt hơn, còn hơn",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "せきがひどかったが、うがいをしたら前よりましになった。\n(Ho rất nặng, nhưng sau khi súc miệng thì đã đỡ hơn trước.)"
+    },
+    {
+        "Word": "無駄な",
+        "Reading": "むだな",
+        "Meaning": "vô ích, lãng phí",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "落ちるとわかっているのに試験を受けるのは、むだなことだ。\n(Dù biết là sẽ trượt mà vẫn tham gia kỳ thi, đúng là chuyện vô ích.)"
+    },
+    {
+        "Word": "自由な",
+        "Reading": "じゆうな",
+        "Meaning": "tự do",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "赤ちゃんがいるので、自由な時間がほとんどない。\n(Vì có em bé nên hầu như không có thời gian tự do.)"
+    },
+    {
+        "Word": "不自由な",
+        "Reading": "ふじゆうな",
+        "Meaning": "bất tiện, tàn tật",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 261,
+        "Example": "地震でガスと電気が止まり、しばらく不自由な生活をした。\n(Do động đất nên ga và điện bị cắt, chúng tôi đã phải sống bất tiện một thời gian.)"
+    },
+    {
+        "Word": "暖まる / 温まる",
+        "Reading": "あたたまる",
+        "Meaning": "ấm lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "お風呂に入ると体が暖まる。\n(Vào bồn tắm thì cơ thể ấm lên.)"
+    },
+    {
+        "Word": "暖める / 温める",
+        "Reading": "あたためる",
+        "Meaning": "làm ấm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "エアコンをつけて部屋を暖める。\n(Bật điều hòa làm ấm phòng.)"
+    },
+    {
+        "Word": "高まる",
+        "Reading": "たかまる",
+        "Meaning": "cao lên, tăng lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "台風が近づき、波が高まっている。\n(Bão đang đến gần, sóng đang dâng cao.)"
+    },
+    {
+        "Word": "高める",
+        "Reading": "たかめる",
+        "Meaning": "nâng cao, làm tăng lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "若者はもっとコミュニケーション能力を高める必要がある。\n(Giới trẻ cần nâng cao kỹ năng giao tiếp hơn nữa.)"
+    },
+    {
+        "Word": "強まる",
+        "Reading": "つよまる",
+        "Meaning": "mạnh lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "台風の勢力はますます強まっている。\n(Thế lực của cơn bão ngày càng mạnh lên.)"
+    },
+    {
+        "Word": "強める",
+        "Reading": "つよめる",
+        "Meaning": "làm mạnh lên, tăng cường",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "火を強める。\n(Làm lửa to lên.)"
+    },
+    {
+        "Word": "弱まる",
+        "Reading": "よわまる",
+        "Meaning": "yếu đi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "疲れていると抵抗力が弱まって、かぜにかかりやすくなる。\n(Khi mệt mỏi sức đề kháng yếu đi, dễ bị cảm hơn.)"
+    },
+    {
+        "Word": "弱める",
+        "Reading": "よわめる",
+        "Meaning": "làm yếu đi, giảm bớt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "材料がやわらかくなったら、火を弱めてゆっくり煮込んでください。\n(Khi nguyên liệu đã mềm, hãy vặn nhỏ lửa và ninh từ từ.)"
+    },
+    {
+        "Word": "広まる",
+        "Reading": "ひろまる",
+        "Meaning": "lan rộng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "そのうわさは1日で会社中に広まった。\n(Tin đồn đó đã lan rộng khắp công ty chỉ trong 1 ngày.)"
+    },
+    {
+        "Word": "広める",
+        "Reading": "ひろめる",
+        "Meaning": "làm lan rộng, phổ biến",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "明治時代に、ヨーロッパから帰国した留学生たちが、日本に西洋文化を広めた。\n(Vào thời Minh Trị, các du học sinh về nước từ châu Âu đã phổ biến văn hóa phương Tây vào Nhật Bản.)"
+    },
+    {
+        "Word": "深まる",
+        "Reading": "ふかまる",
+        "Meaning": "sâu sắc thêm, sâu đậm thêm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "子どもができて、二人の愛情はますます深まった。\n(Có con rồi, tình yêu của hai người ngày càng sâu đậm.)"
+    },
+    {
+        "Word": "深める",
+        "Reading": "ふかめる",
+        "Meaning": "làm sâu sắc thêm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 261,
+        "Example": "交流を深め、相手の国のことを理解することが大切だ。\n(Làm sâu sắc thêm sự giao lưu và hiểu về đất nước của đối phương là điều quan trọng.)"
+    }
+]

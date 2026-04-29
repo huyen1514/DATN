@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DATN\\JapaneseLearning\\backend\\backend.csproj": {}
+    "/app/backend.csproj": {}
   },
   "projects": {
-    "D:\\DATN\\JapaneseLearning\\backend\\backend.csproj": {
+    "/app/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DATN\\JapaneseLearning\\backend\\backend.csproj",
+        "projectUniqueName": "/app/backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\DATN\\JapaneseLearning\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\DATN\\JapaneseLearning\\backend\\obj\\",
+        "projectPath": "/app/backend.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/app/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -108,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.420/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

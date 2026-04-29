@@ -1,0 +1,602 @@
+[
+    {
+        "Word": "生命",
+        "Reading": "せいめい",
+        "Meaning": "tính mạng, sinh mạng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "生命は大切にしなければならない。\n(Sinh mạng là thứ phải được trân trọng.)"
+    },
+    {
+        "Word": "一生",
+        "Reading": "いっしょう",
+        "Meaning": "suốt đời, cả đời",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "一生、君のことを忘れない。\n(Anh sẽ không bao giờ quên em suốt cả cuộc đời.)"
+    },
+    {
+        "Word": "希望",
+        "Reading": "きぼう",
+        "Meaning": "hy vọng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "希望を捨てるな。\n(Đừng từ bỏ hy vọng.)"
+    },
+    {
+        "Word": "意志 / 意思",
+        "Reading": "いし",
+        "Meaning": "ý chí, ý muốn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "彼は意志が強い。\n(Anh ấy là người có ý chí mạnh mẽ.)"
+    },
+    {
+        "Word": "感情",
+        "Reading": "かんじょう",
+        "Meaning": "tình cảm, cảm xúc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "感情を顔に出さない。\n(Không để cảm xúc lộ ra trên khuôn mặt.)"
+    },
+    {
+        "Word": "幸福",
+        "Reading": "こうふく",
+        "Meaning": "hạnh phúc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "幸福な人生を送る。\n(Sống một cuộc đời hạnh phúc.)"
+    },
+    {
+        "Word": "運",
+        "Reading": "うん",
+        "Meaning": "vận may, số phận",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "今日は運がいい。\n(Hôm nay tôi thật may mắn.)"
+    },
+    {
+        "Word": "講演",
+        "Reading": "こうえん",
+        "Meaning": "diễn thuyết, bài giảng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "有名な学者の講演を聞く。\n(Nghe bài diễn thuyết của học giả nổi tiếng.)"
+    },
+    {
+        "Word": "講義",
+        "Reading": "こうぎ",
+        "Meaning": "bài giảng (ở đại học)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "大学の講義を受ける。\n(Dự giờ học/bài giảng ở đại học.)"
+    },
+    {
+        "Word": "演説",
+        "Reading": "えんぜつ",
+        "Meaning": "diễn thuyết (trước công chúng)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "首相が演説する。\n(Thủ tướng diễn thuyết.)"
+    },
+    {
+        "Word": "討論",
+        "Reading": "とうろん",
+        "Meaning": "thảo luận, tranh luận",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "環境問題について討論する。\n(Thảo luận về vấn đề môi trường.)"
+    },
+    {
+        "Word": "対談",
+        "Reading": "たいだん",
+        "Meaning": "đối thoại, trò chuyện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "有名人の対談を読む。\n(Đọc bài trò chuyện của những người nổi tiếng.)"
+    },
+    {
+        "Word": "会議",
+        "Reading": "かいぎ",
+        "Meaning": "hội nghị, cuộc họp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "会議に出席する。\n(Tham dự cuộc họp.)"
+    },
+    {
+        "Word": "会合",
+        "Reading": "かいごう",
+        "Meaning": "cuộc họp mặt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "親戚の会合がある。\n(Có cuộc họp mặt họ hàng.)"
+    },
+    {
+        "Word": "相談",
+        "Reading": "そうだん",
+        "Meaning": "bàn bạc, thảo luận",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "先生に将来のことを相談する。\n(Bàn bạc với thầy giáo về chuyện tương lai.)"
+    },
+    {
+        "Word": "合図",
+        "Reading": "あいず",
+        "Meaning": "ám hiệu, ra hiệu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "目であいずを送る。\n(Ra hiệu bằng mắt.)"
+    },
+    {
+        "Word": "合唱",
+        "Reading": "がっしょう",
+        "Meaning": "hợp xướng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "みんなで合唱する。\n(Mọi người cùng hát hợp xướng.)"
+    },
+    {
+        "Word": "合奏",
+        "Reading": "がっそう",
+        "Meaning": "hợp tấu, hòa tấu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "ピアノとバイオリンの合奏。\n(Hòa tấu piano và violin.)"
+    },
+    {
+        "Word": "協力",
+        "Reading": "きょうりょく",
+        "Meaning": "hợp tác, hiệp lực",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "みんなで協力してがんばろう。\n(Mọi người hãy cùng hợp lực cố gắng nhé.)"
+    },
+    {
+        "Word": "共同",
+        "Reading": "きょうどう",
+        "Meaning": "cộng đồng, chung",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "共同の台所。\n(Nhà bếp chung.)"
+    },
+    {
+        "Word": "共有",
+        "Reading": "きょうゆう",
+        "Meaning": "sở hữu chung",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "情報を共有する。\n(Chia sẻ/Dùng chung thông tin.)"
+    },
+    {
+        "Word": "共通",
+        "Reading": "きょうつう",
+        "Meaning": "thông thường, chung",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "二人の共通の趣味。\n(Sở thích chung của hai người.)"
+    },
+    {
+        "Word": "典型",
+        "Reading": "てんけい",
+        "Meaning": "điển hình",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "典型的なサラリーマン。\n(Một nhân viên văn phòng điển hình.)"
+    },
+    {
+        "Word": "形式",
+        "Reading": "けいしき",
+        "Meaning": "hình thức",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "形式にこだわらない。\n(Không câu nệ hình thức.)"
+    },
+    {
+        "Word": "比例",
+        "Reading": "ひれい",
+        "Meaning": "tỷ lệ thuận",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "収入に比例して支出も増える。\n(Chi tiêu cũng tăng lên tỷ lệ thuận với thu nhập.)"
+    },
+    {
+        "Word": "構成",
+        "Reading": "こうせい",
+        "Meaning": "cấu thành, cấu trúc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "この本は３つの章で構成されている。\n(Cuốn sách này được cấu thành từ 3 chương.)"
+    },
+    {
+        "Word": "組織",
+        "Reading": "そしき",
+        "Meaning": "tổ chức",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "組織を作る。\n(Thành lập tổ chức.)"
+    },
+    {
+        "Word": "組合",
+        "Reading": "くみあい",
+        "Meaning": "nghiệp đoàn, công đoàn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "労働組合。\n(Công đoàn lao động.)"
+    },
+    {
+        "Word": "体制",
+        "Reading": "たいせい",
+        "Meaning": "thể chế, hệ thống",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "古い体制を変える。\n(Thay đổi hệ thống cũ.)"
+    },
+    {
+        "Word": "制度",
+        "Reading": "せいど",
+        "Meaning": "chế độ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "教育制度を見直す。\n(Xem xét lại chế độ giáo dục.)"
+    },
+    {
+        "Word": "権利",
+        "Reading": "けんり",
+        "Meaning": "quyền lợi",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "自分の権利を主張する。\n(Đòi quyền lợi của bản thân.)"
+    },
+    {
+        "Word": "義務",
+        "Reading": "ぎむ",
+        "Meaning": "nghĩa vụ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "国民の義務を果たす。\n(Hoàn thành nghĩa vụ của công dân.)"
+    },
+    {
+        "Word": "許可",
+        "Reading": "きょか",
+        "Meaning": "cho phép, cấp phép",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "許可を得る。\n(Nhận được sự cho phép.)"
+    },
+    {
+        "Word": "禁止",
+        "Reading": "きんし",
+        "Meaning": "cấm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "立ち入り禁止。\n(Cấm vào.)"
+    },
+    {
+        "Word": "合法",
+        "Reading": "ごうほう",
+        "Meaning": "hợp pháp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "合法的な手段。\n(Biện pháp hợp pháp.)"
+    },
+    {
+        "Word": "違法",
+        "Reading": "いほう",
+        "Meaning": "vi phạm pháp luật",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "違法な行為。\n(Hành vi phạm pháp.)"
+    },
+    {
+        "Word": "規則",
+        "Reading": "きそく",
+        "Meaning": "quy tắc",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "学校の規則を守る。\n(Tuân thủ quy tắc của nhà trường.)"
+    },
+    {
+        "Word": "法律",
+        "Reading": "ほうりつ",
+        "Meaning": "pháp luật",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "法律を守る。\n(Tuân thủ pháp luật.)"
+    },
+    {
+        "Word": "政策",
+        "Reading": "せいさく",
+        "Meaning": "chính sách",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "新しい政策を打ち出す。\n(Đưa ra chính sách mới.)"
+    },
+    {
+        "Word": "背景",
+        "Reading": "はいけい",
+        "Meaning": "bối cảnh, phông nền",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "美しい背景。\n(Bối cảnh/Phông nền đẹp.)"
+    },
+    {
+        "Word": "風景",
+        "Reading": "ふうけい",
+        "Meaning": "phong cảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "懐かしい風景。\n(Phong cảnh gợi nhớ kỷ niệm.)"
+    },
+    {
+        "Word": "景色",
+        "Reading": "けしき",
+        "Meaning": "phong cảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "ここからの景色は最高だ。\n(Phong cảnh nhìn từ đây là tuyệt nhất.)"
+    },
+    {
+        "Word": "眺め",
+        "Reading": "ながめ",
+        "Meaning": "tầm nhìn, khung cảnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "山頂からの眺めがいい。\n(Tầm nhìn từ đỉnh núi rất đẹp.)"
+    },
+    {
+        "Word": "現場",
+        "Reading": "げんば",
+        "Meaning": "hiện trường",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "事故の現場。\n(Hiện trường vụ tai nạn.)"
+    },
+    {
+        "Word": "立場",
+        "Reading": "たちば",
+        "Meaning": "lập trường, vị trí",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "相手の立場になって考える。\n(Đứng trên lập trường của đối phương để suy nghĩ.)"
+    },
+    {
+        "Word": "位置",
+        "Reading": "いち",
+        "Meaning": "vị trí",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "自分の位置を確かめる。\n(Xác nhận vị trí của bản thân.)"
+    },
+    {
+        "Word": "役割",
+        "Reading": "やくわり",
+        "Meaning": "vai trò",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "重要な役割を果たす。\n(Đóng vai trò quan trọng.)"
+    },
+    {
+        "Word": "地位",
+        "Reading": "ちい",
+        "Meaning": "địa vị",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "高い地位につく。\n(Đạt được địa vị cao.)"
+    },
+    {
+        "Word": "場面",
+        "Reading": "ばめん",
+        "Meaning": "cảnh (trong phim), tình huống",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "感動的な場面。\n(Cảnh tượng cảm động.)"
+    },
+    {
+        "Word": "状況",
+        "Reading": "じょうきょう",
+        "Meaning": "tình trạng, tình hình",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "現在の状況を説明する。\n(Giải thích tình hình hiện tại.)"
+    },
+    {
+        "Word": "事態",
+        "Reading": "じたい",
+        "Meaning": "tình hình (thường nghĩa xấu)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "最悪の事態になる。\n(Rơi vào tình trạng tồi tệ nhất.)"
+    },
+    {
+        "Word": "現象",
+        "Reading": "げんしょう",
+        "Meaning": "hiện tượng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "不思議な現象が起きる。\n(Hiện tượng kỳ lạ xảy ra.)"
+    },
+    {
+        "Word": "事件",
+        "Reading": "じけん",
+        "Meaning": "sự việc, vụ án",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "大きな事件が起きた。\n(Một vụ án lớn đã xảy ra.)"
+    },
+    {
+        "Word": "事実",
+        "Reading": "じじつ",
+        "Meaning": "sự thật",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "事実をありのままに話す。\n(Nói sự thật đúng như nó vốn có.)"
+    },
+    {
+        "Word": "事情",
+        "Reading": "じじょう",
+        "Meaning": "sự tình, lý do",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "特別な事情がある。\n(Có lý do đặc biệt.)"
+    },
+    {
+        "Word": "事柄",
+        "Reading": "ことがら",
+        "Meaning": "sự việc, vấn đề",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "重要な事柄をメモする。\n(Ghi chú lại những vấn đề quan trọng.)"
+    },
+    {
+        "Word": "出来事",
+        "Reading": "できごと",
+        "Meaning": "sự kiện, việc đã xảy ra",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "忘れられない出来事。\n(Một sự kiện không thể quên.)"
+    },
+    {
+        "Word": "様子",
+        "Reading": "ようす",
+        "Meaning": "vẻ bề ngoài, trạng thái",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "外の様子を見てくる。\n(Đi xem tình hình bên ngoài thế nào.)"
+    },
+    {
+        "Word": "状態",
+        "Reading": "じょうたい",
+        "Meaning": "trạng thái",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "保存状態がいい。\n(Trạng thái bảo quản tốt.)"
+    },
+    {
+        "Word": "形態",
+        "Reading": "けいたい",
+        "Meaning": "hình thái",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "生活の形態。\n(Hình thái sinh hoạt.)"
+    },
+    {
+        "Word": "姿",
+        "Reading": "すがた",
+        "Meaning": "dáng vẻ, hình bóng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "後ろ姿を見送る。\n(Nhìn theo bóng dáng từ phía sau.)"
+    },
+    {
+        "Word": "形",
+        "Reading": "かたち",
+        "Meaning": "hình dáng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "おもしろい形の石。\n(Hòn đá có hình dáng thú vị.)"
+    },
+    {
+        "Word": "格好",
+        "Reading": "かっこう",
+        "Meaning": "diện mạo, vẻ bề ngoài",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "格好がいい。\n(Vẻ ngoài bảnh bao/đẹp.)"
+    },
+    {
+        "Word": "スタイル",
+        "Reading": "すたいる",
+        "Meaning": "phong cách, vóc dáng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "彼女はスタイルがいい。\n(Cô ấy có vóc dáng đẹp.)"
+    },
+    {
+        "Word": "特徴",
+        "Reading": "とくちょう",
+        "Meaning": "đặc trưng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "この製品の最大の特徴。\n(Đặc trưng lớn nhất của sản phẩm này.)"
+    },
+    {
+        "Word": "特色",
+        "Reading": "とくしょく",
+        "Meaning": "đặc sắc, điểm nổi bật",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "地域の特色を活かす。\n(Phát huy điểm nổi bật của địa phương.)"
+    },
+    {
+        "Word": "柄",
+        "Reading": "がら",
+        "Meaning": "hoa văn, họa tiết",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "花柄のワンピース。\n(Váy hoa văn hình hoa.)"
+    },
+    {
+        "Word": "模様",
+        "Reading": "もよう",
+        "Meaning": "mẫu mã, hoa văn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "きれいな模様の布。\n(Vải có hoa văn đẹp.)"
+    },
+    {
+        "Word": "印",
+        "Reading": "しるし",
+        "Meaning": "dấu hiệu, biểu tượng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "地図の印。\n(Ký hiệu trên bản đồ.)"
+    },
+    {
+        "Word": "記号",
+        "Reading": "きごう",
+        "Meaning": "ký hiệu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "数式の記号。\n(Ký hiệu toán học.)"
+    },
+    {
+        "Word": "信号",
+        "Reading": "しんごう",
+        "Meaning": "tín hiệu, đèn giao thông",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "信号が赤に変わる。\n(Đèn giao thông chuyển sang màu đỏ.)"
+    },
+    {
+        "Word": "標識",
+        "Reading": "ひょうしき",
+        "Meaning": "biển báo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "道路標識。\n(Biển báo giao thông.)"
+    },
+    {
+        "Word": "方向",
+        "Reading": "ほうこう",
+        "Meaning": "phương hướng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "逆の方向へ行く。\n(Đi theo hướng ngược lại.)"
+    },
+    {
+        "Word": "方角",
+        "Reading": "ほうがく",
+        "Meaning": "phương hướng (đông tây nam bắc)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "方角を調べる。\n(Xác định phương hướng.)"
+    },
+    {
+        "Word": "方面",
+        "Reading": "ほうめん",
+        "Meaning": "vùng, khu vực",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 291,
+        "Example": "新宿方面の電車。\n(Tàu đi về hướng/khu vực Shinjuku.)"
+    }
+]

@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using Constants;
 using Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -79,7 +80,7 @@ namespace Services
 
             var lessonNumber = int.Parse(match.Groups["lesson"].Value);
             var levelName = match.Groups["level"].Success
-                ? match.Groups["level"].Value.ToUpperInvariant()
+                ? JlptLevels.Normalize(match.Groups["level"].Value)
                 : null;
 
             return (lessonNumber, levelName);

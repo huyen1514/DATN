@@ -1,44 +1,39 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using System.Text.Json;
 using System.Security.Claims;
+using System.Text;
+using Constants;
 using Data;
-using Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.IdentityModel.Tokens;
 using Models;
 using Repositories;
-using System.Text.Json.Serialization; 
-using Microsoft.AspNetCore.Http.Features; // MỚI THÊM: Thư viện cấu hình FormOptions cho Upload File lớn
-
-using Microsoft.Extensions.FileProviders; // Cần thiết cho PhysicalFileProvider
+using Services;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = args,
-    WebRootPath = "wwwroot" // Cấu hình WebRootPath ngay từ đầu
+    WebRootPath = "wwwroot"
 });
 
-// Add DbContext
+var shouldSeed = args.Contains("--seed", StringComparer.OrdinalIgnoreCase);
+//var shouldSeed = true;
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<JwtService>();
-
 builder.Services.AddScoped<VocabImportService>();
 builder.Services.AddScoped<GrammarImportService>();
 builder.Services.AddScoped<KanjiImportService>();
-
-//Đăng ký ReadImportService
 builder.Services.AddScoped<ReadImportService>();
-
 builder.Services.AddScoped<ListenImportService>();
 builder.Services.AddScoped<ExamPdfImportService>();
 builder.Services.AddScoped<ExamJsonImportService>();
 builder.Services.AddScoped<EmailService>();
 
-// Register Repositories
 builder.Services.AddScoped<IProgressRepository, ProgressRepository>();
 builder.Services.AddScoped<IExamSessionRepository, ExamSessionRepository>();
 builder.Services.AddScoped<IUserProgressRepository, UserProgressRepository>();
@@ -51,7 +46,6 @@ builder.Services.AddScoped<IExamResultRepository, ExamResultRepository>();
 builder.Services.AddScoped<IUserExamRepository, UserExamRepository>();
 builder.Services.AddScoped<IExamSessionAnswerRepository, ExamSessionAnswerRepository>();
 
-// Register Services
 builder.Services.AddScoped<IProgressService, ProgressService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IRecommendationService, RecommendationService>();
@@ -65,7 +59,6 @@ builder.Services.AddScoped<IUserExamService, UserExamService>();
 builder.Services.AddMemoryCache();
 builder.Services.AddHttpContextAccessor();
 
-// Add Authentication with JWT Bearer
 var jwtKey = builder.Configuration["Jwt:Key"]
     ?? throw new InvalidOperationException("Jwt:Key is missing from configuration.");
 
@@ -81,12 +74,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
-
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
-
             RoleClaimType = ClaimTypes.Role
         };
 
@@ -94,12 +84,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         {
             OnAuthenticationFailed = context =>
             {
-                Console.WriteLine("❌ Token failed: " + context.Exception.Message);
+                Console.WriteLine("Token failed: " + context.Exception.Message);
                 return Task.CompletedTask;
             },
-            OnTokenValidated = context =>
+            OnTokenValidated = _ =>
             {
-                Console.WriteLine("✅ Token valid");
+                Console.WriteLine("Token valid");
                 return Task.CompletedTask;
             },
             OnChallenge = context =>
@@ -112,33 +102,27 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Add Authorization (BẮT BUỘC khi dùng app.UseAuthorization)
 builder.Services.AddAuthorization();
 
-// Add CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
-        policy.WithOrigins("http://localhost:3000")
+        policy.WithOrigins("http://localhost:3000", "http://127.0.0.1:3000")
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials()
-    );
+              .AllowCredentials());
 });
 
-// THÊM IGNORECYCLES ĐỂ FIX LỖI VÒNG LẶP JSON CHO READING (1-N)
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 
-// MỚI THÊM: TĂNG GIỚI HẠN UPLOAD FILE CHO AUDIO/IMAGE (Ví dụ: 50MB)
 builder.Services.Configure<FormOptions>(options =>
 {
-    options.MultipartBodyLengthLimit = 52428800; // 50MB tính bằng bytes
+    options.MultipartBodyLengthLimit = 52428800;
 });
 
-// Add Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -155,7 +139,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "bearer",
         BearerFormat = "JWT",
         In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-        Description = "Nhập token theo định dạng: Bearer {token}"
+        Description = "Nhap token theo dinh dang: Bearer {token}"
     });
 
     c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
@@ -176,58 +160,45 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Use static files (wwwroot mặc định)
 app.UseStaticFiles();
 
-// SERVE THƯ MỤC UPLOADS: Cho phép truy cập file tĩnh (audio, ảnh) qua đường dẫn /uploads
-// Ví dụ: http://localhost:5135/uploads/audio/ten-file.mp3
+var webRootPath = app.Environment.WebRootPath
+    ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot");
+var uploadsPath = Path.Combine(webRootPath, "uploads");
+
+if (!Directory.Exists(uploadsPath))
 {
-    var webRootPath = app.Environment.WebRootPath 
-        ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot");
-    var uploadsPath = Path.Combine(webRootPath, "uploads");
-
-    // Tự động tạo thư mục nếu chưa tồn tại (tránh crash app)
-    if (!Directory.Exists(uploadsPath))
-    {
-        Directory.CreateDirectory(uploadsPath);
-        Console.WriteLine($"📁 Created uploads directory: {uploadsPath}");
-    }
-
-    app.UseStaticFiles(new StaticFileOptions
-    {
-        FileProvider = new PhysicalFileProvider(uploadsPath),
-        RequestPath = "/uploads",
-        ServeUnknownFileTypes = false, // Bảo mật: Không serve file không rõ loại
-        ContentTypeProvider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider(
-            new Dictionary<string, string>
-            {
-                { ".mp3", "audio/mpeg" },
-                { ".wav", "audio/wav" },
-                { ".m4a", "audio/mp4" },
-                { ".ogg", "audio/ogg" },
-                { ".jpg", "image/jpeg" },
-                { ".jpeg", "image/jpeg" },
-                { ".png", "image/png" },
-                { ".webp", "image/webp" },
-                { ".gif", "image/gif" }
-            }
-        )
-    });
-    Console.WriteLine($"✅ Static file serving enabled for /uploads -> {uploadsPath}");
+    Directory.CreateDirectory(uploadsPath);
 }
 
-// Swagger
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(uploadsPath),
+    RequestPath = "/uploads",
+    ServeUnknownFileTypes = false,
+    ContentTypeProvider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider(
+        new Dictionary<string, string>
+        {
+            { ".mp3", "audio/mpeg" },
+            { ".wav", "audio/wav" },
+            { ".m4a", "audio/mp4" },
+            { ".ogg", "audio/ogg" },
+            { ".jpg", "image/jpeg" },
+            { ".jpeg", "image/jpeg" },
+            { ".png", "image/png" },
+            { ".webp", "image/webp" },
+            { ".gif", "image/gif" }
+        })
+});
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Use CORS
+app.UseRouting();
 app.UseCors("AllowFrontend");
-
-// Middleware pipeline
-app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -235,156 +206,188 @@ app.MapControllers();
 
 using (var scope = app.Services.CreateScope())
 {
-    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    
-    // MỚI THÊM: Lấy IWebHostEnvironment để xử lý thư mục
-    var env = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>(); 
-
-    // MỚI THÊM: TỰ ĐỘNG TẠO CÁC THƯ MỤC CẦN THIẾT CHO LISTENING VÀ UPLOAD NẾU CHƯA CÓ
-    string[] requiredDirectories = {
-        Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "data", "Listenings"),
-        Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "uploads", "audio"),
-        Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "uploads", "images")
-    };
-
-    foreach (var dir in requiredDirectories)
+    if (shouldSeed)
     {
-        if (!Directory.Exists(dir))
+        var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var env = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>();
+        var seedWebRootPath = env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot");
+
+        string[] requiredDirectories =
+        [
+            Path.Combine(seedWebRootPath, "data", "Listenings"),
+            Path.Combine(seedWebRootPath, "uploads", "audio"),
+            Path.Combine(seedWebRootPath, "uploads", "images")
+        ];
+
+        foreach (var directory in requiredDirectories)
         {
-            Directory.CreateDirectory(dir);
-            Console.WriteLine($"📁 Created directory: {dir}");
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
         }
-    }
 
-    // Retry logic: đợi SQL Server sẵn sàng (đặc biệt quan trọng trong Docker)
-    var maxRetries = 10;
-    for (int i = 0; i < maxRetries; i++)
-    {
+        const int maxRetries = 10;
+        for (var attempt = 0; attempt < maxRetries; attempt++)
+        {
+            try
+            {
+                context.Database.Migrate();
+                Console.WriteLine("Database migration completed.");
+                break;
+            }
+            catch (Exception ex)
+            {
+                if (attempt == maxRetries - 1)
+                {
+                    Console.WriteLine($"Database migration failed after {maxRetries} retries: {ex.Message}");
+                    throw;
+                }
+
+                Console.WriteLine($"Database not ready (attempt {attempt + 1}/{maxRetries}). Retrying in 5 seconds.");
+                await Task.Delay(5000);
+            }
+        }
+
+        var existingLevels = await context.Levels.ToListAsync();
+        foreach (var levelName in JlptLevels.SeedOrder)
+        {
+            if (existingLevels.All(level => level.LevelName != levelName))
+            {
+                var level = new Level { LevelName = levelName };
+                context.Levels.Add(level);
+                existingLevels.Add(level);
+            }
+        }
+
+        await context.SaveChangesAsync();
+
+        var levelsByName = await context.Levels
+            .Where(level => JlptLevels.SeedOrder.Contains(level.LevelName))
+            .ToDictionaryAsync(level => level.LevelName, level => level);
+
+        string[] skills = ["Từ vựng", "Ngữ pháp", "Nghe hiểu", "Đọc hiểu", "Kanji"];
+        var lessonSeeds = new[]
+        {
+            new { LevelName = JlptLevels.N5, Start = 1, End = 25 },
+            new { LevelName = JlptLevels.N4, Start = 26, End = 50 },
+            new { LevelName = JlptLevels.N3, Start = 1, End = 12 }
+        };
+
+        var existingLessonKeys = await context.Lessons
+            .Select(lesson => new { lesson.LevelId, lesson.LessonName, lesson.SkillType })
+            .ToListAsync();
+
+        foreach (var lessonSeed in lessonSeeds)
+        {
+            var level = levelsByName[lessonSeed.LevelName];
+
+            for (var lessonNumber = lessonSeed.Start; lessonNumber <= lessonSeed.End; lessonNumber++)
+            {
+                var lessonName = $"Bài {lessonNumber}";
+
+                foreach (var skill in skills)
+                {
+                    var lessonExists = existingLessonKeys.Any(existing =>
+                        existing.LevelId == level.LevelId &&
+                        existing.LessonName == lessonName &&
+                        existing.SkillType == skill);
+
+                    if (lessonExists)
+                    {
+                        continue;
+                    }
+
+                    context.Lessons.Add(new Lesson
+                    {
+                        LessonName = lessonName,
+                        SkillType = skill,
+                        LevelId = level.LevelId,
+                    });
+
+                    existingLessonKeys.Add(new
+                    {
+                        level.LevelId,
+                        LessonName = lessonName,
+                        SkillType = skill
+                    });
+                }
+            }
+        }
+
+        await context.SaveChangesAsync();
+
+        if (!context.Users.Any(u => u.Role == "Admin"))
+        {
+            var admin = new User
+            {
+                UserName = "admin",
+                Email = "admin@gmail.com",
+                PassWord = BCrypt.Net.BCrypt.HashPassword("123456"),
+                FullName = "Admin",
+                Role = "Admin",
+                IsActive = true,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            context.Users.Add(admin);
+            context.SaveChanges();
+        }
+
+        var vocabImporter = scope.ServiceProvider.GetRequiredService<VocabImportService>();
         try
         {
-            context.Database.Migrate();
-            Console.WriteLine("✅ Database migration completed successfully.");
-            break;
+            await vocabImporter.ImportAllFromFolderAsync();
+            Console.WriteLine("Vocab import completed.");
         }
         catch (Exception ex)
         {
-            if (i == maxRetries - 1)
-            {
-                Console.WriteLine($"❌ Database migration failed after {maxRetries} retries: {ex.Message}");
-                throw; // Crash nếu không kết nối được sau tất cả retries
-            }
-            Console.WriteLine($"⏳ Database not ready (attempt {i + 1}/{maxRetries}), retrying in 5s... ({ex.Message})");
-            await Task.Delay(5000);
+            Console.WriteLine("Vocab import failed: " + ex.Message);
         }
-    }
 
-    // Seed Levels và Lessons nếu chưa có
-    if (!context.Levels.Any())
-    {
-        context.Levels.AddRange(
-            new Level { LevelName = "N5" },
-            new Level { LevelName = "N4" },
-            new Level { LevelName = "N3" }
-        );
-        context.SaveChanges();
-    }
-
-    if (!context.Lessons.Any())
-    {
-        var levelN5 = context.Levels.FirstOrDefault(l => l.LevelName == "N5");
-        var levelN4 = context.Levels.FirstOrDefault(l => l.LevelName == "N4");
-        
-        string[] skills = { "Từ vựng", "Ngữ pháp", "Nghe hiểu", "Đọc hiểu", "Kanji" };
-
-        for (int i = 1; i <= 25; i++)
+        var grammarImporter = scope.ServiceProvider.GetRequiredService<GrammarImportService>();
+        try
         {
-            foreach (var skill in skills)
-            {
-                context.Lessons.Add(new Lesson { LessonName = $"Bài {i}", SkillType = skill, LevelId = levelN5?.LevelId ?? 1 });
-            }
+            await grammarImporter.ImportAllFromFolderAsync();
+            Console.WriteLine("Grammar import completed.");
         }
-        for (int i = 26; i <= 50; i++)
+        catch (Exception ex)
         {
-            foreach (var skill in skills)
-            {
-                context.Lessons.Add(new Lesson { LessonName = $"Bài {i}", SkillType = skill, LevelId = levelN4?.LevelId ?? 2 });
-            }
+            Console.WriteLine("Grammar import failed: " + ex.Message);
         }
-        context.SaveChanges();
-        Console.WriteLine("Seeded Levels and Lessons successfully.");
-    }
 
-    if (!context.Users.Any(u => u.Role == "Admin"))
-    {
-        var admin = new User
+        var kanjiImporter = scope.ServiceProvider.GetRequiredService<KanjiImportService>();
+        try
         {
-            UserName = "admin",
-            Email = "admin@gmail.com",
-            PassWord = BCrypt.Net.BCrypt.HashPassword("123456"),
-            FullName = "Admin",
-            Role = "Admin",
-            IsActive = true,
-            CreatedAt = DateTime.UtcNow
-        };
+            await kanjiImporter.ImportAllFromFolderAsync();
+            Console.WriteLine("Kanji import completed.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Kanji import failed: " + ex.Message);
+        }
 
-        context.Users.Add(admin);
-        context.SaveChanges();
-    }
+        var readingImporter = scope.ServiceProvider.GetRequiredService<ReadImportService>();
+        try
+        {
+            await readingImporter.ImportAllFromFolderAsync();
+            Console.WriteLine("Reading import completed.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Reading import failed: " + ex.Message);
+        }
 
-    var importer = scope.ServiceProvider.GetRequiredService<VocabImportService>();
-    try 
-    {
-        await importer.ImportAllFromFolderAsync();
-        Console.WriteLine("Vocab Import check completed.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("Vocab Import failed: " + ex.Message);
-    }
-
-    var grammarImporter = scope.ServiceProvider.GetRequiredService<GrammarImportService>();
-    try 
-    {
-        await grammarImporter.ImportAllFromFolderAsync(); 
-        Console.WriteLine("Grammar Import check completed.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("Grammar Import failed: " + ex.Message);
-    }
-
-    var kanjiImporter = scope.ServiceProvider.GetRequiredService<KanjiImportService>();
-    try 
-    {
-        await kanjiImporter.ImportAllFromFolderAsync(); 
-        Console.WriteLine("Kanji Import check completed.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("Kanji Import failed: " + ex.Message);
-    }
-
-    // Import Đọc hiểu 
-    var readImporter = scope.ServiceProvider.GetRequiredService<ReadImportService>();
-    try 
-    {
-        await readImporter.ImportAllFromFolderAsync(); 
-        Console.WriteLine("Reading Import check completed.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("Reading Import failed: " + ex.Message);
-    }
-
-    var listenImporter = scope.ServiceProvider.GetRequiredService<ListenImportService>();
-    try 
-    {
-        await listenImporter.ImportAllFromFolderAsync(); 
-        Console.WriteLine("Listening Import check completed.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("Listening Import failed: " + ex.Message);
+        var listeningImporter = scope.ServiceProvider.GetRequiredService<ListenImportService>();
+        try
+        {
+            await listeningImporter.ImportAllFromFolderAsync();
+            Console.WriteLine("Listening import completed.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Listening import failed: " + ex.Message);
+        }
     }
 }
 

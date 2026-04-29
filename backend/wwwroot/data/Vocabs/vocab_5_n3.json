@@ -1,0 +1,802 @@
+[
+    {
+        "Word": "届く",
+        "Reading": "とどく",
+        "Meaning": "được giao đến, tới nơi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "父から手紙が届いた。\n(Bức thư từ bố đã được giao tới.)"
+    },
+    {
+        "Word": "届ける",
+        "Reading": "とどける",
+        "Meaning": "giao đến, thông báo",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "隣の家に旅行のおみやげ'を届けた。\n(Tôi đã mang quà du lịch sang giao cho nhà hàng xóm.)"
+    },
+    {
+        "Word": "かく",
+        "Reading": "かく",
+        "Meaning": "gãi, đổ (mồ hôi)",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "頭をかく。\n(Gãi đầu.)"
+    },
+    {
+        "Word": "つかむ",
+        "Reading": "つかむ",
+        "Meaning": "tóm, chộp, nắm bắt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "電車で突然腕をつかまれてびっくりした。\n(Trên tàu điện đột nhiên bị tóm lấy cánh tay nên tôi đã giật mình.)"
+    },
+    {
+        "Word": "握る",
+        "Reading": "にぎる",
+        "Meaning": "nắm chặt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "子どもはこわがって母親の手を強くにぎった。\n(Đứa trẻ sợ hãi nên đã nắm chặt lấy tay mẹ.)"
+    },
+    {
+        "Word": "押さえる",
+        "Reading": "おさえる",
+        "Meaning": "giữ, đè nén",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "あの人はおなかを押さえて座っている。腹痛だろうか。\n(Người kia đang ôm chặt bụng và ngồi. Có lẽ bị đau bụng chăng?)"
+    },
+    {
+        "Word": "近づく",
+        "Reading": "ちかづく",
+        "Meaning": "đến gần",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "目的地が近づいてきた。\n(Đã đến gần đích rồi.)"
+    },
+    {
+        "Word": "近づける",
+        "Reading": "ちかづける",
+        "Meaning": "mang đến gần",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "車を道のわきに近づける。\n(Kéo xe lại gần lề đường.)"
+    },
+    {
+        "Word": "合う",
+        "Reading": "あう",
+        "Meaning": "hợp, phù hợp",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ふと顔を上げると、先生と目が合ってしまった。\n(Đột nhiên ngẩng mặt lên thì vô tình bắt gặp ánh mắt của thầy giáo.)"
+    },
+    {
+        "Word": "合わせる",
+        "Reading": "あわせる",
+        "Meaning": "kết hợp, điều chỉnh",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "みんなで力を合わせてがんばりましょう。\n(Mọi người hãy cùng hợp lực và cố gắng nhé.)"
+    },
+    {
+        "Word": "当たる",
+        "Reading": "あたる",
+        "Meaning": "trúng, va chạm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ボールが当たって窓ガラスが割れた。\n(Quả bóng đập trúng làm vỡ kính cửa sổ.)"
+    },
+    {
+        "Word": "当てる",
+        "Reading": "あてる",
+        "Meaning": "đánh trúng, áp vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "相手選手のボールが速いので、ラケットに当てるのも大変だ。\n(Bóng của đối thủ rất nhanh nên việc đánh trúng vợt cũng rất vất vả.)"
+    },
+    {
+        "Word": "比べる",
+        "Reading": "くらべる",
+        "Meaning": "so sánh",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "東京と大阪の面積を比べる。\n(So sánh diện tích của Tokyo và Osaka.)"
+    },
+    {
+        "Word": "似合う",
+        "Reading": "にあう",
+        "Meaning": "hợp, vừa vặn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "彼女は着物がよく似合う。\n(Cô ấy rất hợp với kimono.)"
+    },
+    {
+        "Word": "似る",
+        "Reading": "にる",
+        "Meaning": "giống",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "彼女は母親によく似ている。\n(Cô ấy rất giống mẹ.)"
+    },
+    {
+        "Word": "似せる",
+        "Reading": "にせる",
+        "Meaning": "bắt chước, làm cho giống",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "アイドルに髪型を似せる。\n(Làm kiểu tóc bắt chước thần tượng.)"
+    },
+    {
+        "Word": "分かれる",
+        "Reading": "わかれる",
+        "Meaning": "được chia ra, phân chia",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "トイレは、男性用と女性用に分かれている。\n(Nhà vệ sinh được chia thành phòng dành cho nam và phòng dành cho nữ.)"
+    },
+    {
+        "Word": "分ける",
+        "Reading": "わける",
+        "Meaning": "chia",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "財産を３人の子どもに分ける。\n(Chia tài sản cho 3 người con.)"
+    },
+    {
+        "Word": "足す",
+        "Reading": "たす",
+        "Meaning": "cộng, thêm vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "味が薄かったので塩を足した。\n(Vị nhạt nên tôi đã thêm muối vào.)"
+    },
+    {
+        "Word": "引く",
+        "Reading": "ひく",
+        "Meaning": "kéo, trừ đi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "このドアは押すのではなく、引いて開けるんです。\n(Cái cửa này không phải đẩy mà là kéo để mở.)"
+    },
+    {
+        "Word": "増える",
+        "Reading": "ふえる",
+        "Meaning": "tăng lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "貯金が増える。\n(Tiền tiết kiệm tăng lên.)"
+    },
+    {
+        "Word": "増やす",
+        "Reading": "ふやす",
+        "Meaning": "làm tăng lên",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "貯金を増やす。\n(Làm tăng tiền tiết kiệm.)"
+    },
+    {
+        "Word": "減る",
+        "Reading": "へる",
+        "Meaning": "giảm xuống",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "貯金が減る。\n(Tiền tiết kiệm giảm xuống.)"
+    },
+    {
+        "Word": "減らす",
+        "Reading": "へらす",
+        "Meaning": "làm giảm xuống",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "貯金を減らす。\n(Làm giảm tiền tiết kiệm.)"
+    },
+    {
+        "Word": "変わる",
+        "Reading": "かわる",
+        "Meaning": "thay đổi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "季節が変わる。\n(Mùa thay đổi.)"
+    },
+    {
+        "Word": "変える",
+        "Reading": "かえる",
+        "Meaning": "làm thay đổi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "髪型を変える。\n(Thay đổi kiểu tóc.)"
+    },
+    {
+        "Word": "代わる / 替わる / 換わる",
+        "Reading": "かわる",
+        "Meaning": "được thay thế",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "４月に店長が代わった。\n(Tháng 4 cửa hàng trưởng đã thay đổi.)"
+    },
+    {
+        "Word": "代える / 替える / 換える",
+        "Reading": "かえる",
+        "Meaning": "thay thế, đổi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "千円札を百円玉に換えてもらった。\n(Tôi đã đổi tờ 1000 yên lấy các đồng 100 yên.)"
+    },
+    {
+        "Word": "返る",
+        "Reading": "かえる",
+        "Meaning": "được trả lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "友だちに貸したお金が返ってきた。\n(Tiền cho bạn mượn đã được trả lại.)"
+    },
+    {
+        "Word": "返す",
+        "Reading": "かえす",
+        "Meaning": "trả lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "この本は２週間以内に図書館に返さなければならない。\n(Cuốn sách này phải trả lại thư viện trong vòng 2 tuần.)"
+    },
+    {
+        "Word": "譲る",
+        "Reading": "ゆずる",
+        "Meaning": "nhường",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "電車の中で、お年寄りに席をゆずった。\n(Trong tàu điện, tôi đã nhường ghế cho người già.)"
+    },
+    {
+        "Word": "助かる",
+        "Reading": "たすかる",
+        "Meaning": "được cứu, được giúp",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "飛行機が落ちたが、３人が助かった。\n(Máy bay rơi nhưng 3 người đã được cứu sống.)"
+    },
+    {
+        "Word": "助ける",
+        "Reading": "たすける",
+        "Meaning": "cứu, giúp đỡ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "川に落ちた子どもを助けた。\n(Đã cứu đứa trẻ bị rơi xuống sông.)"
+    },
+    {
+        "Word": "いじめる",
+        "Reading": "いじめる",
+        "Meaning": "bắt nạt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "弟をいじめる。\n(Bắt nạt em trai.)"
+    },
+    {
+        "Word": "だます",
+        "Reading": "だます",
+        "Meaning": "lừa gạt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "彼は「独身だ」とだまして５人の女性とつきあっていた。\n(Anh ta lừa rằng \"mình độc thân\" và hẹn hò với 5 cô gái.)"
+    },
+    {
+        "Word": "盗む",
+        "Reading": "ぬすむ",
+        "Meaning": "ăn cắp, ăn trộm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "留守中にどろぼうに入られて、お金を盗まれてしまった。\n(Khi đi vắng đã bị trộm vào nhà và bị lấy cắp tiền.)"
+    },
+    {
+        "Word": "刺さる",
+        "Reading": "ささる",
+        "Meaning": "bị đâm, mắc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "指にとげが刺さって痛い。\n(Bị gai đâm vào ngón tay nên đau.)"
+    },
+    {
+        "Word": "刺す",
+        "Reading": "さす",
+        "Meaning": "đâm, châm, đốt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "指にとげを刺してしまった。\n(Đã lỡ đâm gai vào ngón tay.)"
+    },
+    {
+        "Word": "殺す",
+        "Reading": "ころす",
+        "Meaning": "giết",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ゴキブリをスリッパでたたいて殺した。\n(Đập con gián bằng dép lê và giết nó.)"
+    },
+    {
+        "Word": "隠れる",
+        "Reading": "かくれる",
+        "Meaning": "ẩn náu, trốn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "逃げた犯人は空き家に隠れていた。\n(Tên tội phạm bỏ trốn đã trốn trong một ngôi nhà hoang.)"
+    },
+    {
+        "Word": "隠す",
+        "Reading": "かくす",
+        "Meaning": "giấu, che giấu",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "お金を引き出しの奥に隠した。\n(Tôi đã giấu tiền vào sâu trong ngăn kéo.)"
+    },
+    {
+        "Word": "埋まる",
+        "Reading": "うまる",
+        "Meaning": "bị chôn lấp",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "山がくずれて家が埋まってしまった。\n(Núi lở nên ngôi nhà đã bị chôn lấp.)"
+    },
+    {
+        "Word": "埋める",
+        "Reading": "うめる",
+        "Meaning": "chôn, lấp",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "あなを掘ってごみをうめた。\n(Đào hố và lấp/chôn rác.)"
+    },
+    {
+        "Word": "囲む",
+        "Reading": "かこむ",
+        "Meaning": "bao quanh, bao bọc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "テーブルを囲んで座る。\n(Ngồi bao quanh chiếc bàn.)"
+    },
+    {
+        "Word": "詰まる",
+        "Reading": "つまる",
+        "Meaning": "bị tắc, nghẽn, đầy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "かばんにたくさん荷物が詰まっていて重い。\n(Trong cặp nhồi nhét rất nhiều đồ nên rất nặng.)"
+    },
+    {
+        "Word": "詰める",
+        "Reading": "つめる",
+        "Meaning": "nhét vào, tống vào",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "かばんに荷物を詰める。\n(Nhồi nhét hành lý vào cặp.)"
+    },
+    {
+        "Word": "開く",
+        "Reading": "ひらく",
+        "Meaning": "mở",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ドアが開く。\n(Cửa mở.)"
+    },
+    {
+        "Word": "閉じる",
+        "Reading": "とじる",
+        "Meaning": "đóng, khép",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "エレベーターのドアが閉じた。\n(Cửa thang máy đã đóng.)"
+    },
+    {
+        "Word": "飛ぶ",
+        "Reading": "とぶ",
+        "Meaning": "bay",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "鳥が空を飛んでいる。\n(Con chim đang bay trên trời.)"
+    },
+    {
+        "Word": "飛ばす",
+        "Reading": "とばす",
+        "Meaning": "làm cho bay, phóng đi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "紙飛行機を飛ばす。\n(Làm máy bay giấy bay.)"
+    },
+    {
+        "Word": "振る",
+        "Reading": "ふる",
+        "Meaning": "vẫy, rắc, từ chối",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "手を振る。\n(Vẫy tay.)"
+    },
+    {
+        "Word": "めくる",
+        "Reading": "めくる",
+        "Meaning": "lật lên, bóc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "カレンダーをめくる。\n(Lật tờ lịch.)"
+    },
+    {
+        "Word": "見かける",
+        "Reading": "みかける",
+        "Meaning": "bắt gặp, tình cờ thấy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "街で偶然、昔の友だちを見かけた。\n(Tình cờ trên phố tôi đã nhìn thấy người bạn ngày xưa.)"
+    },
+    {
+        "Word": "確かめる",
+        "Reading": "たしかめる",
+        "Meaning": "xác nhận, kiểm tra lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ファックスが届いたかどうか、相手に電話して確かめた。\n(Tôi gọi điện cho đối tác để xác nhận xem bản fax đã đến nơi hay chưa.)"
+    },
+    {
+        "Word": "試す",
+        "Reading": "ためす",
+        "Meaning": "thử nghiệm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "洋服が似合うかどうか、着て試してみた。\n(Tôi đã thử mặc chiếc áo xem có hợp hay không.)"
+    },
+    {
+        "Word": "繰り返す",
+        "Reading": "くりかえす",
+        "Meaning": "lặp lại",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "同じ失敗を繰り返してはいけません。\n(Không được lặp lại những thất bại tương tự.)"
+    },
+    {
+        "Word": "訳す",
+        "Reading": "やくす",
+        "Meaning": "dịch",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "英語を日本語に訳す。\n(Dịch tiếng Anh sang tiếng Nhật.)"
+    },
+    {
+        "Word": "行う",
+        "Reading": "おこなう",
+        "Meaning": "tiến hành, tổ chức",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "試験を行う。\n(Tiến hành kỳ thi.)"
+    },
+    {
+        "Word": "間違う",
+        "Reading": "まちがう",
+        "Meaning": "sai, nhầm lẫn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "この計算は間違っている。\n(Phép tính này sai rồi.)"
+    },
+    {
+        "Word": "間違える",
+        "Reading": "まちがえる",
+        "Meaning": "làm sai, nhầm lẫn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "テストの答えを間違えた。\n(Đã trả lời nhầm câu hỏi kiểm tra.)"
+    },
+    {
+        "Word": "許す",
+        "Reading": "ゆるす",
+        "Meaning": "tha thứ, cho phép",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ひどいことを言われたが、彼を許してあげた。\n(Bị nói những lời tồi tệ nhưng tôi đã tha thứ cho anh ấy.)"
+    },
+    {
+        "Word": "慣れる",
+        "Reading": "なれる",
+        "Meaning": "quen với",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "日本での生活に慣れた。\n(Tôi đã quen với cuộc sống ở Nhật.)"
+    },
+    {
+        "Word": "慣らす",
+        "Reading": "ならす",
+        "Meaning": "làm cho quen",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "準備運動をして体を慣らしてから泳ぎ始めた。\n(Tôi vận động chuẩn bị cho cơ thể quen rồi mới bắt đầu bơi.)"
+    },
+    {
+        "Word": "立つ",
+        "Reading": "たつ",
+        "Meaning": "đứng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "名前を呼ばれたら立ってください。\n(Khi được gọi tên hãy đứng dậy.)"
+    },
+    {
+        "Word": "立てる",
+        "Reading": "たてる",
+        "Meaning": "dựng đứng, lập",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "屋根の上にアンテナを立てる。\n(Dựng ăng-ten trên mái nhà.)"
+    },
+    {
+        "Word": "建つ",
+        "Reading": "たつ",
+        "Meaning": "được xây dựng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "家の前に大きなビルが建った。\n(Một tòa nhà lớn đã được xây dựng trước nhà.)"
+    },
+    {
+        "Word": "建てる",
+        "Reading": "たてる",
+        "Meaning": "xây dựng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "都心に家を建てるのは大変だ。\n(Xây nhà ở trung tâm thành phố rất vất vả.)"
+    },
+    {
+        "Word": "育つ",
+        "Reading": "そだつ",
+        "Meaning": "lớn lên, phát triển",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "雨が多い年は、米がよく育つ。\n(Năm nào mưa nhiều, lúa sẽ phát triển tốt.)"
+    },
+    {
+        "Word": "育てる",
+        "Reading": "そだてる",
+        "Meaning": "nuôi dưỡng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "母は一生懸命私たちを育ててくれた。\n(Mẹ đã hết lòng nuôi nấng chúng tôi.)"
+    },
+    {
+        "Word": "生える",
+        "Reading": "はえる",
+        "Meaning": "mọc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "赤ちゃんの歯が生えてきた。\n(Răng của em bé đã bắt đầu mọc.)"
+    },
+    {
+        "Word": "生やす",
+        "Reading": "はやす",
+        "Meaning": "nuôi (râu), trồng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ひげを生やす。\n(Nuôi râu.)"
+    },
+    {
+        "Word": "汚れる",
+        "Reading": "よごれる",
+        "Meaning": "bị bẩn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "空気の汚れたところには住みたくない。\n(Tôi không muốn sống ở nơi không khí bị ô nhiễm.)"
+    },
+    {
+        "Word": "汚す",
+        "Reading": "よごす",
+        "Meaning": "làm bẩn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "どろ遊びをして服を汚した。\n(Chơi bùn nên đã làm bẩn quần áo.)"
+    },
+    {
+        "Word": "壊れる",
+        "Reading": "こわれる",
+        "Meaning": "bị hỏng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "パソコンが壊れた。\n(Máy tính bị hỏng.)"
+    },
+    {
+        "Word": "壊す",
+        "Reading": "こわす",
+        "Meaning": "làm hỏng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "不注意で時計を壊してしまった。\n(Do bất cẩn nên tôi đã làm hỏng đồng hồ.)"
+    },
+    {
+        "Word": "割れる",
+        "Reading": "われる",
+        "Meaning": "bị vỡ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "コップが割れた。\n(Cái cốc bị vỡ.)"
+    },
+    {
+        "Word": "割る",
+        "Reading": "わる",
+        "Meaning": "làm vỡ, chia",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "卵を割ってボウルに入れる。\n(Đập trứng cho vào bát.)"
+    },
+    {
+        "Word": "折れる",
+        "Reading": "おれる",
+        "Meaning": "bị gãy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "強い風で木の枝が折れた。\n(Cành cây bị gãy do gió mạnh.)"
+    },
+    {
+        "Word": "折る",
+        "Reading": "おる",
+        "Meaning": "làm gãy, gấp",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "スキーをして足の骨を折った。\n(Đi trượt tuyết và bị gãy xương chân.)"
+    },
+    {
+        "Word": "破れる",
+        "Reading": "やぶれる",
+        "Meaning": "bị rách",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "紙が破れる。\n(Giấy bị rách.)"
+    },
+    {
+        "Word": "破る",
+        "Reading": "やぶる",
+        "Meaning": "làm rách, phá vỡ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ノートのページを破る。\n(Xé trang vở.)"
+    },
+    {
+        "Word": "曲がる",
+        "Reading": "まがる",
+        "Meaning": "rẽ, cong, uốn cong",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "この角を右に曲がって50mほど行くと、銀行があります。\n(Rẽ phải ở góc này đi khoảng 50m nữa là đến ngân hàng.)"
+    },
+    {
+        "Word": "曲げる",
+        "Reading": "まげる",
+        "Meaning": "uốn cong, bẻ cong",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "針金を曲げる。\n(Uốn cong sợi dây thép.)"
+    },
+    {
+        "Word": "外れる",
+        "Reading": "はずれる",
+        "Meaning": "bị tuột, bị chệch",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "ボタンが外れている。\n(Cái khuy bị tuột.)"
+    },
+    {
+        "Word": "外す",
+        "Reading": "はずす",
+        "Meaning": "tháo ra, rời khỏi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "メガネを外す。\n(Tháo kính.)"
+    },
+    {
+        "Word": "揺れる",
+        "Reading": "ゆれる",
+        "Meaning": "rung lắc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "風でカーテンが揺れている。\n(Rèm cửa đang rung rinh trong gió.)"
+    },
+    {
+        "Word": "揺らす",
+        "Reading": "ゆらす",
+        "Meaning": "làm rung lắc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "子どもの乗っているブランコを揺らして遊んでやった。\n(Tôi đã đẩy/lắc chiếc xích đu con đang ngồi để chơi cùng.)"
+    },
+    {
+        "Word": "流れる",
+        "Reading": "ながれる",
+        "Meaning": "chảy, trôi",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "川が流れる。\n(Dòng sông chảy.)"
+    },
+    {
+        "Word": "流す",
+        "Reading": "ながす",
+        "Meaning": "làm cho chảy, xả",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "汚れた水を川に流してはいけない。\n(Không được xả nước bẩn ra sông.)"
+    },
+    {
+        "Word": "濡れる",
+        "Reading": "ぬれる",
+        "Meaning": "bị ướt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "雨に濡れて風邪をひいた。\n(Bị ướt mưa nên tôi đã bị cảm.)"
+    },
+    {
+        "Word": "濡らす",
+        "Reading": "ぬらす",
+        "Meaning": "làm ướt",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "水をこぼして服を濡らしてしまった。\n(Tôi làm đổ nước nên đã làm ướt quần áo.)"
+    },
+    {
+        "Word": "迷う",
+        "Reading": "まよう",
+        "Meaning": "lạc đường, phân vân",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "道に迷う。\n(Lạc đường.)"
+    },
+    {
+        "Word": "悩む",
+        "Reading": "なやむ",
+        "Meaning": "lo nghĩ, phiền muộn",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "就職するか進学するか悩んでいる。\n(Tôi đang lo nghĩ xem nên đi làm hay học tiếp.)"
+    },
+    {
+        "Word": "慌てる",
+        "Reading": "あわてる",
+        "Meaning": "vội vàng, luống cuống",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "火事だ！慌てて外へ飛び出した。\n(Cháy kìa! Tôi luống cuống lao ra ngoài.)"
+    },
+    {
+        "Word": "覚める",
+        "Reading": "さめる",
+        "Meaning": "tỉnh giấc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "昨夜は暑くて、夜中に何度も目が覚めた。\n(Đêm qua trời nóng nên nửa đêm tôi đã tỉnh giấc nhiều lần.)"
+    },
+    {
+        "Word": "覚ます",
+        "Reading": "さます",
+        "Meaning": "đánh thức",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "目を覚ます。\n(Tỉnh giấc/Mở mắt.)"
+    },
+    {
+        "Word": "眠る",
+        "Reading": "ねむる",
+        "Meaning": "ngủ",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "入試の前、緊張してぐっすり眠れなかった。\n(Trước kỳ thi đầu vào, vì căng thẳng nên tôi đã không thể ngủ ngon.)"
+    },
+    {
+        "Word": "祈る",
+        "Reading": "いのる",
+        "Meaning": "cầu nguyện",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "家族の健康を神に祈った。\n(Tôi đã cầu nguyện thần linh cho gia đình khỏe mạnh.)"
+    },
+    {
+        "Word": "祝う",
+        "Reading": "いわう",
+        "Meaning": "chúc mừng",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "新年を祝う。\n(Chúc mừng năm mới.)"
+    },
+    {
+        "Word": "感じる",
+        "Reading": "かんじる",
+        "Meaning": "cảm thấy",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 271,
+        "Example": "寒さを感じる。\n(Cảm thấy lạnh.)"
+    }
+]

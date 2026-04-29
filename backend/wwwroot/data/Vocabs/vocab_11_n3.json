@@ -1,0 +1,322 @@
+[
+    {
+        "Word": "インタビュー",
+        "Reading": "インタビュー",
+        "Meaning": "phỏng vấn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "勝ったばかりの選手にインタビューする。\n(Phỏng vấn cầu thủ vừa mới giành chiến thắng.)"
+    },
+    {
+        "Word": "アンケート",
+        "Reading": "アンケート",
+        "Meaning": "bản điều tra, phiếu thăm dò",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "アンケートにご協力ください。\n(Xin hãy hợp tác làm bản điều tra này.)"
+    },
+    {
+        "Word": "データ",
+        "Reading": "データ",
+        "Meaning": "dữ liệu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "パソコンにデータを保存する。\n(Lưu dữ liệu vào máy tính.)"
+    },
+    {
+        "Word": "パーセント",
+        "Reading": "パーセント",
+        "Meaning": "phần trăm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "数字をパーセントで表す。\n(Biểu thị con số bằng phần trăm.)"
+    },
+    {
+        "Word": "グラフ",
+        "Reading": "グラフ",
+        "Meaning": "biểu đồ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "グラフに表すとわかりやすい。\n(Nếu biểu thị bằng biểu đồ thì sẽ dễ hiểu.)"
+    },
+    {
+        "Word": "プリンター",
+        "Reading": "プリンター",
+        "Meaning": "máy in",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "プリンターのインクが切れた。\n(Máy in đã hết mực.)"
+    },
+    {
+        "Word": "コンセント",
+        "Reading": "コンセント",
+        "Meaning": "ổ cắm điện",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "コンセントにプラグを差し込む。\n(Cắm phích cắm vào ổ điện.)"
+    },
+    {
+        "Word": "ソフト",
+        "Reading": "ソフト",
+        "Meaning": "phần mềm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "新しいソフトをインストールする。\n(Cài đặt phần mềm mới.)"
+    },
+    {
+        "Word": "キーボード",
+        "Reading": "キーボード",
+        "Meaning": "bàn phím",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "キーボードで入力する。\n(Nhập bằng bàn phím.)"
+    },
+    {
+        "Word": "モニター",
+        "Reading": "モニター",
+        "Meaning": "màn hình, người quan sát",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "モニターの画面が消えた。\n(Màn hình giám sát đã tắt.)"
+    },
+    {
+        "Word": "ディスプレイ",
+        "Reading": "ディスプレイ",
+        "Meaning": "màn hình, trưng bày",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "大きなディスプレイ。\n(Màn hình lớn.)"
+    },
+    {
+        "Word": "カーソル",
+        "Reading": "カーソル",
+        "Meaning": "con trỏ chuột",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "カーソルを動かす。\n(Di chuyển con trỏ chuột.)"
+    },
+    {
+        "Word": "ファイル",
+        "Reading": "ファイル",
+        "Meaning": "tệp tin, hồ sơ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "ファイルをフォルダに分ける。\n(Chia các tệp tin vào thư mục.)"
+    },
+    {
+        "Word": "フォルダ",
+        "Reading": "フォルダ",
+        "Meaning": "thư mục",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "新しいフォルダを作る。\n(Tạo thư mục mới.)"
+    },
+    {
+        "Word": "ウイルス",
+        "Reading": "ウイルス",
+        "Meaning": "virus",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "パソコンがウイルスに感染した。\n(Máy tính đã bị nhiễm virus.)"
+    },
+    {
+        "Word": "ソフト",
+        "Reading": "ソフト",
+        "Meaning": "mềm mỏng, nhẹ nhàng",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 301,
+        "Example": "ソフトな肌触り。\n(Cảm giác tiếp xúc mềm mại.)"
+    },
+    {
+        "Word": "プログラム",
+        "Reading": "プログラム",
+        "Meaning": "chương trình",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "プログラムを組む。\n(Lập trình/Xây dựng chương trình.)"
+    },
+    {
+        "Word": "バグ",
+        "Reading": "バグ",
+        "Meaning": "lỗi (phần mềm)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "プログラムのバグを探す。\n(Tìm lỗi chương trình.)"
+    },
+    {
+        "Word": "キー",
+        "Reading": "キー",
+        "Meaning": "chìa khóa, phím",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "エンターキーを押す。\n(Nhấn phím Enter.)"
+    },
+    {
+        "Word": "ログイン",
+        "Reading": "ログイン",
+        "Meaning": "đăng nhập",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "サイトにログインする。\n(Đăng nhập vào trang web.)"
+    },
+    {
+        "Word": "ログアウト",
+        "Reading": "ログアウト",
+        "Meaning": "đăng xuất",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "使い終わったらログアウトする。\n(Dùng xong thì đăng xuất.)"
+    },
+    {
+        "Word": "パスワード",
+        "Reading": "パスワード",
+        "Meaning": "mật khẩu",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "パスワードを入力する。\n(Nhập mật khẩu.)"
+    },
+    {
+        "Word": "サーバー",
+        "Reading": "サーバー",
+        "Meaning": "máy chủ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "サーバーがダウンした。\n(Máy chủ đã bị sập.)"
+    },
+    {
+        "Word": "リンク",
+        "Reading": "リンク",
+        "Meaning": "liên kết",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "リンクをクリックする。\n(Click vào đường link.)"
+    },
+    {
+        "Word": "アイコン",
+        "Reading": "アイコン",
+        "Meaning": "biểu tượng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "デスクトップのアイコン。\n(Biểu tượng trên màn hình máy tính.)"
+    },
+    {
+        "Word": "ドライブ",
+        "Reading": "ドライブ",
+        "Meaning": "lái xe, ổ đĩa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "週末はドライブに行く。\n(Cuối tuần đi lái xe dạo chơi.)"
+    },
+    {
+        "Word": "デスクトップ",
+        "Reading": "デスクトップ",
+        "Meaning": "màn hình nền, máy tính để bàn",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "デスクトップパソコンを購入する。\n(Mua máy tính để bàn.)"
+    },
+    {
+        "Word": "マウス",
+        "Reading": "マウス",
+        "Meaning": "con chuột (máy tính)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "マウスを操作する。\n(Thao tác chuột.)"
+    },
+    {
+        "Word": "クリック",
+        "Reading": "クリック",
+        "Meaning": "nhấp chuột",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "ダブルクリック。\n(Nhấp đúp chuột.)"
+    },
+    {
+        "Word": "インターネット",
+        "Reading": "インターネット",
+        "Meaning": "mạng internet",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "インターネットで調べる。\n(Tra cứu trên internet.)"
+    },
+    {
+        "Word": "サイト",
+        "Reading": "サイト",
+        "Meaning": "trang web",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "公式サイトを見る。\n(Xem trang web chính thức.)"
+    },
+    {
+        "Word": "ブラウザ",
+        "Reading": "ブラウザ",
+        "Meaning": "trình duyệt",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "ブラウザを立ち上げる。\n(Khởi động trình duyệt.)"
+    },
+    {
+        "Word": "メール",
+        "Reading": "メール",
+        "Meaning": "thư điện tử",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "メールを送る。\n(Gửi email.)"
+    },
+    {
+        "Word": "添付",
+        "Reading": "てんぷ",
+        "Meaning": "đính kèm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "ファイルを添付する。\n(Đính kèm tệp tin.)"
+    },
+    {
+        "Word": "ダウンロード",
+        "Reading": "ダウンロード",
+        "Meaning": "tải xuống",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "音楽をダウンロードする。\n(Tải nhạc về.)"
+    },
+    {
+        "Word": "アップロード",
+        "Reading": "アップロード",
+        "Meaning": "tải lên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "動画をアップロードする。\n(Tải video lên.)"
+    },
+    {
+        "Word": "削除",
+        "Reading": "さくじょ",
+        "Meaning": "xóa",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "不要なデータを削除する。\n(Xóa dữ liệu không cần thiết.)"
+    },
+    {
+        "Word": "転送",
+        "Reading": "てんそう",
+        "Meaning": "chuyển tiếp",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "メールを転送する。\n(Chuyển tiếp email.)"
+    },
+    {
+        "Word": "返信",
+        "Reading": "へんしん",
+        "Meaning": "hồi âm, trả lời",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "すぐに返信を出す。\n(Gửi hồi âm ngay lập tức.)"
+    },
+    {
+        "Word": "コピー / ペースト",
+        "Reading": "コピー / ペースト",
+        "Meaning": "sao chép / dán",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 301,
+        "Example": "文章をコピーしてペーストする。\n(Sao chép đoạn văn rồi dán vào.)"
+    }
+]
