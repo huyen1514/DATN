@@ -41,13 +41,12 @@ namespace Repositories
             return await _context.Kanjis.AnyAsync(x => x.KanjiId == kanjiId);
         }
 
-        // Đã cập nhật sang ReadingPassage và PassageId
         public async Task<bool> ReadingExistsAsync(int readingId)
         {
             return await _context.ReadingPassages.AnyAsync(x => x.PassageId == readingId);
         }
 
-        // Đã sửa: ListeningExercises -> Listenings
+
         public async Task<bool> ListeningExistsAsync(int listeningId)
         {
             return await _context.Listenings.AnyAsync(x => x.ListeningId == listeningId);
@@ -91,7 +90,7 @@ namespace Repositories
                 .FirstOrDefaultAsync();
         }
 
-        // Đã cập nhật trả về Content của đoạn văn thay vì Title
+
         public async Task<string?> GetReadingNameAsync(int readingId)
         {
             return await _context.ReadingPassages
@@ -100,7 +99,7 @@ namespace Repositories
                 .FirstOrDefaultAsync();
         }
 
-        // Đã sửa: ListeningExercises -> Listenings
+    
         public async Task<string?> GetListeningNameAsync(int listeningId)
         {
             return await _context.Listenings

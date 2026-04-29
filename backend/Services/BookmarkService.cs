@@ -29,7 +29,7 @@ namespace Services
             _bookmarkRepository = bookmarkRepository;
         }
 
-        // Tối ưu Use case: Xử lý Toggle (Bấm lần 1 là Lưu, bấm lại là Bỏ lưu)
+
         public async Task<bool> ToggleAsync(CreateBookmarkRequest request)
         {
             var normalizedType = NormalizeType(request.Type);
@@ -44,7 +44,7 @@ namespace Services
             if (existingBookmark != null)
             {
                 await _bookmarkRepository.DeleteAsync(existingBookmark);
-                return false; // False = Đã bỏ lưu (Un-bookmarked)
+                return false; 
             }
 
             var bookmark = new Bookmark

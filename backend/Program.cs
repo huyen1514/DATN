@@ -11,6 +11,8 @@ using Repositories;
 using System.Text.Json.Serialization; 
 using Microsoft.AspNetCore.Http.Features; // MỚI THÊM: Thư viện cấu hình FormOptions cho Upload File lớn
 
+using Microsoft.Extensions.FileProviders; // Cần thiết cho PhysicalFileProvider
+
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = args,
@@ -174,8 +176,45 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Use static files
+// Use static files (wwwroot mặc định)
 app.UseStaticFiles();
+
+// SERVE THƯ MỤC UPLOADS: Cho phép truy cập file tĩnh (audio, ảnh) qua đường dẫn /uploads
+// Ví dụ: http://localhost:5135/uploads/audio/ten-file.mp3
+{
+    var webRootPath = app.Environment.WebRootPath 
+        ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot");
+    var uploadsPath = Path.Combine(webRootPath, "uploads");
+
+    // Tự động tạo thư mục nếu chưa tồn tại (tránh crash app)
+    if (!Directory.Exists(uploadsPath))
+    {
+        Directory.CreateDirectory(uploadsPath);
+        Console.WriteLine($"📁 Created uploads directory: {uploadsPath}");
+    }
+
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(uploadsPath),
+        RequestPath = "/uploads",
+        ServeUnknownFileTypes = false, // Bảo mật: Không serve file không rõ loại
+        ContentTypeProvider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider(
+            new Dictionary<string, string>
+            {
+                { ".mp3", "audio/mpeg" },
+                { ".wav", "audio/wav" },
+                { ".m4a", "audio/mp4" },
+                { ".ogg", "audio/ogg" },
+                { ".jpg", "image/jpeg" },
+                { ".jpeg", "image/jpeg" },
+                { ".png", "image/png" },
+                { ".webp", "image/webp" },
+                { ".gif", "image/gif" }
+            }
+        )
+    });
+    Console.WriteLine($"✅ Static file serving enabled for /uploads -> {uploadsPath}");
+}
 
 // Swagger
 if (app.Environment.IsDevelopment())
@@ -255,7 +294,7 @@ using (var scope = app.Services.CreateScope())
         var levelN5 = context.Levels.FirstOrDefault(l => l.LevelName == "N5");
         var levelN4 = context.Levels.FirstOrDefault(l => l.LevelName == "N4");
         
-        string[] skills = { "Từ vựng", "Ngữ pháp", "Nghe hiểu", "Đọc hiểu", "Hán tự" };
+        string[] skills = { "Từ vựng", "Ngữ pháp", "Nghe hiểu", "Đọc hiểu", "Kanji" };
 
         for (int i = 1; i <= 25; i++)
         {

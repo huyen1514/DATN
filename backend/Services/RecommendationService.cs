@@ -24,11 +24,11 @@ namespace Services
             ["Doc hieu"] = "Tu vung",
             ["Ngu phap"] = "Doc hieu",
             ["Han tu"] = "Tu vung",
-            ["Từ vựng"] = "Hán tự",
+            ["Từ vựng"] = "Kanji",
             ["Nghe hiểu"] = "Ngữ pháp",
             ["Đọc hiểu"] = "Từ vựng",
             ["Ngữ pháp"] = "Đọc hiểu",
-            ["Hán tự"] = "Từ vựng"
+            ["Kanji"] = "Từ vựng"
         };
 
         private readonly IUserProgressRepository _userProgressRepository;

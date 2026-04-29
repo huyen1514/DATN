@@ -18,7 +18,7 @@ namespace Models
         [Required]
         [StringLength(50)]
         [Column(TypeName = "nvarchar(50)")]
-        public string SkillType { get; set; } = "Chung";
+        public string SkillType { get; set; }
 
         [Required]
         [ForeignKey("LevelId")]

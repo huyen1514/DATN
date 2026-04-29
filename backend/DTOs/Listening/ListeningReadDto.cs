@@ -15,6 +15,7 @@ namespace DTOs.Listening
         public string CorrectAnswer { get; set; } = string.Empty; 
         
         public int LessonId { get; set; }
+        public string? LessonName { get; set; }
         public DateTime CreatedAt { get; set; }
     }
 }

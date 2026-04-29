@@ -30,7 +30,7 @@ namespace Data
         public DbSet<ExamResult> ExamResults { get; set; }
 
         // --- MODULE THANH TOÁN & QUYỀN TRUY CẬP (ĐÃ CẬP NHẬT) ---
-        public DbSet<UserExam> UserExams { get; set; } // [CẬP NHẬT] Đổi thành số ít UserExam
+        public DbSet<UserExam> UserExams { get; set; }
         public DbSet<Payment> Payments { get; set; }
 
         // --- MODULE TIẾN ĐỘ & TƯƠNG TÁC ---
@@ -51,7 +51,6 @@ namespace Data
                 .HasIndex(x => new { x.UserId, x.ItemId, x.Type })
                 .IsUnique();
 
-            // [SỬA LẠI] Phải dùng NoAction để giải quyết triệt để lỗi Multiple Cascade Paths của SQL Server
             // --- ExamQuestion ---
             modelBuilder.Entity<ExamQuestion>()
                 .HasOne(q => q.QuestionGroup)

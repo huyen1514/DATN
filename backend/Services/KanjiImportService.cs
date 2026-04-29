@@ -63,7 +63,7 @@ namespace Services
             int lessonNumber = 0;
             if (match.Success) lessonNumber = int.Parse(match.Value);
 
-            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Hán tự");
+            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Kanji");
             if (targetLesson == null)
             {
                 Console.WriteLine($"[Kanji Cảnh báo] Target lesson not found for file {fileName}. Skipping.");

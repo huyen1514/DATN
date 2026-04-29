@@ -46,7 +46,8 @@ namespace Controllers
                     x.LessonName,
                     x.SkillType,
                     x.LevelId,
-                    LevelName = x.Level != null ? x.Level.LevelName : null
+                    LevelName = x.Level != null ? x.Level.LevelName : null,
+                    x.CreatedAt // ĐÃ THÊM DÒNG NÀY ĐỂ FIX LỖI INVALID DATE
                 })
                 .ToListAsync();
 
@@ -82,7 +83,8 @@ namespace Controllers
                     x.LessonName,
                     x.SkillType,
                     x.LevelId,
-                    VocabularyCount = x.Vocabularies.Count // Đếm trực tiếp số từ vựng thuộc bài học này
+                    VocabularyCount = x.Vocabularies.Count, // Đếm trực tiếp số từ vựng thuộc bài học này
+                    x.CreatedAt // ĐÃ THÊM DÒNG NÀY Ở ĐÂY NỮA
                 })
                 .ToListAsync();
 

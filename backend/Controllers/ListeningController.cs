@@ -3,7 +3,7 @@ using DTOs.Listening;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
-using Services; // Thêm namespace này để gọi ListenImportService
+using Services; 
 
 namespace Controllers
 {
@@ -46,6 +46,9 @@ namespace Controllers
             _context.Listenings.Add(listening);
             await _context.SaveChangesAsync();
 
+            // Load thêm thông tin Lesson để trả về sau khi tạo mới
+            _context.Entry(listening).Reference(x => x.Lesson).Load();
+
             var readDto = MapToReadDto(listening);
 
             return CreatedAtAction(nameof(GetById), new { id = listening.ListeningId }, readDto);
@@ -54,7 +57,8 @@ namespace Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int? lessonId)
         {
-            var query = _context.Listenings.AsQueryable();
+            // THÊM: .Include(x => x.Lesson) để join với bảng Lesson
+            var query = _context.Listenings.Include(x => x.Lesson).AsQueryable();
 
             if (lessonId.HasValue)
                 query = query.Where(x => x.LessonId == lessonId.Value);
@@ -72,6 +76,7 @@ namespace Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var listening = await _context.Listenings
+                .Include(x => x.Lesson) // THÊM: .Include(x => x.Lesson) ở đây nữa
                 .FirstOrDefaultAsync(x => x.ListeningId == id);
 
             if (listening == null)
@@ -110,6 +115,9 @@ namespace Controllers
 
             await _context.SaveChangesAsync();
 
+            // Load thêm thông tin Lesson để map DTO trả về chính xác
+            _context.Entry(listening).Reference(x => x.Lesson).Load();
+
             return Ok(MapToReadDto(listening));
         }
 
@@ -127,7 +135,7 @@ namespace Controllers
         }
 
         // ==========================================
-        // MỚI THÊM: API IMPORT DỮ LIỆU TỪ THƯ MỤC
+        // API IMPORT DỮ LIỆU TỪ THƯ MỤC
         // ==========================================
         [HttpPost("import-data")]
         public async Task<IActionResult> ImportFromFolder([FromServices] ListenImportService importService)
@@ -160,7 +168,9 @@ namespace Controllers
                 OptionD = listening.OptionD,
                 CorrectAnswer = listening.CorrectAnswer,
                 LessonId = listening.LessonId,
-                CreatedAt = listening.CreatedAt
+                CreatedAt = listening.CreatedAt,
+                // THÊM DÒNG NÀY ĐỂ MAP TÊN BÀI HỌC VÀO DTO
+                LessonName = listening.Lesson?.LessonName 
             };
         }
 
