@@ -152,6 +152,9 @@ export default function ReadingDetailPage() {
   const [answers, setAnswers] = useState<(number | null)[]>([]);
   const [showResult, setShowResult] = useState(false);
 
+  /* ==== [ĐÃ SỬA]: Thêm useRef để chống việc gọi API 2 lần (Race Condition) ==== */
+  const initializedLesson = useRef<number | null>(null);
+
   /* ---- Fetch Data & Mapping Logic ---- */
   const loadData = useCallback(async () => {
     try {
@@ -211,10 +214,21 @@ export default function ReadingDetailPage() {
     } catch (e) { console.error(e); }
   }, []);
 
-  const updateStatus = useCallback(async (status: string, score: number | null = null) => {
+  /* ==== [ĐĐÃ SỬA]: Ép kiểu safeLessonId để phòng chống lỗi payload gửi lên Backend ==== */
+  const updateStatus = useCallback(async (status: string, score: number = 0) => {
     if (!userId) return;
+
+    const safeLessonId = Number(lessonId);
+    if (isNaN(safeLessonId)) return;
+
     try {
-      await api("/progress/upsert", "POST", { userId, lessonId, partType: "Reading", status, score });
+      await api("/progress/upsert", "POST", {
+        userId,
+        lessonId: safeLessonId,
+        partType: "Reading",
+        status,
+        score
+      });
     } catch (e) { console.error(e); }
   }, [userId, lessonId]);
 
@@ -226,8 +240,13 @@ export default function ReadingDetailPage() {
       void loadBookmarks(u.userId);
     }
     void loadData();
-    updateStatus("InProgress");
-  }, [loadBookmarks, loadData, updateStatus]);
+
+    /* ==== [ĐÃ SỬA]: Chỉ gọi hàm cập nhật InProgress MỘT LẦN DUY NHẤT cho mỗi bài học ==== */
+    if (initializedLesson.current !== lessonId) {
+      updateStatus("InProgress");
+      initializedLesson.current = lessonId; // Đánh dấu bài này đã gọi API
+    }
+  }, [loadBookmarks, loadData, updateStatus, lessonId]);
 
   /* ---- Tính toán Bài tiếp theo ---- */
   const sortedLessons = useMemo(() => [...lessons].sort((a, b) => a.lessonId - b.lessonId), [lessons]);
@@ -259,7 +278,7 @@ export default function ReadingDetailPage() {
     if (!userId || !currentReading?.readingId) return;
     setBookmarkLoading(true);
     try {
-      await api("/bookmark/toggle", "POST", {
+      await api("/bookmark", "POST", {
         userId,
         itemId: currentReading.readingId,
         type: "Reading"
@@ -420,7 +439,7 @@ export default function ReadingDetailPage() {
           </div>
 
           {!showResult && (
-            <div className="mt-8 max-w-2xl">
+            <div className="mt-8">
               <div className="flex justify-between text-xs font-bold text-slate-500 mb-3 tracking-widest">
                 <span>TIẾN TRÌNH: {answeredCount} / {totalQuestions} CÂU ĐÃ TRẢ LỜI</span>
                 <span className="text-jp-red">{progressPercent}%</span>

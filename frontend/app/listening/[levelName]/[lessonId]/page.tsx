@@ -149,7 +149,7 @@ export default function ListeningDetailPage() {
   const [listenings, setListenings] = useState<ListeningItemUI[]>([]);
   const [lessonName, setLessonName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [userId, setUserId] = useState<number>(1);
+  const [userId, setUserId] = useState<number>(0); // Sửa: Khởi tạo là 0
   const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
   const [bookmarkLoading, setBookmarkLoading] = useState(false);
 
@@ -244,13 +244,15 @@ export default function ListeningDetailPage() {
     } catch (e) { console.error(e); }
   }, []);
 
-  const updateStatus = useCallback(async (status: string, score: number | null = null) => {
+  // Sửa: Bỏ null, mặc định score = 0
+  const updateStatus = useCallback(async (status: string, score: number = 0) => {
     if (!userId) return;
     try {
       await api("/progress/upsert", "POST", { userId, lessonId, partType: "Listening", status, score });
     } catch (e) { console.error(e); }
   }, [userId, lessonId]);
 
+  // Sửa: Tách useEffect load user và load data
   useEffect(() => {
     const userStr = localStorage.getItem("user");
     if (userStr) {
@@ -259,14 +261,21 @@ export default function ListeningDetailPage() {
       void loadBookmarks(u.userId);
     }
     void loadData();
-    updateStatus("InProgress");
-  }, [loadBookmarks, loadData, updateStatus]);
+  }, [loadBookmarks, loadData]);
+
+  // Sửa: Đảm bảo chỉ gọi API InProgress khi đã có userId thật
+  useEffect(() => {
+    if (userId > 0) {
+      updateStatus("InProgress");
+    }
+  }, [userId, updateStatus]);
 
   /* ---- Tính toán Bài tiếp theo ---- */
   const sortedLessons = useMemo(() => [...lessons].sort((a, b) => a.lessonId - b.lessonId), [lessons]);
 
   const handleNextLesson = async () => {
-    const currentScore = listenings.length > 0 ? Math.round((correctCount / listenings.length) * 100) : null;
+    // Sửa: Trả về 0 thay vì null nếu mảng rỗng
+    const currentScore = listenings.length > 0 ? Math.round((correctCount / listenings.length) * 100) : 0;
     await updateStatus("Completed", currentScore);
 
     const currentIdxMatch = sortedLessons.findIndex(l => Number(l.lessonId) === Number(lessonId));
@@ -324,7 +333,6 @@ export default function ListeningDetailPage() {
     setSelectedOption(optionNum);
     setIsAnswered(true);
 
-    // Kiểm tra câu trả lời và Cập nhật điểm ngay lập tức
     const isThisCorrect = currentItem && optionNum === currentItem.correctOption;
 
     setAnsweredCount(prev => prev + 1);
@@ -336,7 +344,6 @@ export default function ListeningDetailPage() {
       return next;
     });
 
-    // Nếu là câu cuối cùng, gọi API cập nhật điểm
     if (answeredCount + 1 === totalQuestions) {
       const finalCorrect = correctCount + (isThisCorrect ? 1 : 0);
       const finalScore = Math.round((finalCorrect / totalQuestions) * 100);
