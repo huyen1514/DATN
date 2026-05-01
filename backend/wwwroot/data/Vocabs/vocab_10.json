@@ -4,7 +4,7 @@
         "Reading": "あります",
         "Meaning": "có (tồn tại đồ vật)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "あそこに でんわが あります。\n(Ở kia có cái điện thoại.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "います",
         "Meaning": "có (tồn tại người, động vật)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "ろびーに さとうさんが います。\n(Ở đại sảnh có anh Sato.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "いろいろな",
         "Meaning": "nhiều, đa dạng",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "にわに いろいろな はなが あります。\n(Trong vườn có nhiều loại hoa.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "おとこのひと",
         "Meaning": "người đàn ông",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "あそこに おとこのひとが います。\n(Ở đằng kia có người đàn ông.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "おんなのひと",
         "Meaning": "người phụ nữ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "あそこに おんなのひとが います。\n(Ở đằng kia có người phụ nữ.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "おとこのこ",
         "Meaning": "cậu bé",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "おとこのこが ひとり います。\n(Có một cậu bé.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "おんなのこ",
         "Meaning": "cô bé",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "おんなのこが ふたり います。\n(Có hai cô bé.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "いぬ",
         "Meaning": "con chó",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "にわに いぬが います。\n(Trong vườn có con chó.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "ねこ",
         "Meaning": "con mèo",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "つくえの したに ねこが います。\n(Dưới gầm bàn có con mèo.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "き",
         "Meaning": "cây, gỗ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "あそこに おおきい きが あります。\n(Ở đằng kia có cái cây lớn.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "もの",
         "Meaning": "vật, đồ vật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "はこの なかに なにが ありますか。\n(Trong hộp có vật gì vậy?)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "でんち",
         "Meaning": "pin",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "でんちを かいました。\n(Tôi đã mua pin.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "はこ",
         "Meaning": "cái hộp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "はこの なかに しゃしんが あります。\n(Trong hộp có bức ảnh.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "れいぞうこ",
         "Meaning": "tủ lạnh",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "れいぞうこの なかに たべものが あります。\n(Trong tủ lạnh có đồ ăn.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "たな",
         "Meaning": "giá, kệ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "たなの うえに ほんが あります。\n(Trên giá có sách.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "どあ",
         "Meaning": "cửa ra vào",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "どあを あけます。\n(Tôi mở cửa.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "まど",
         "Meaning": "cửa sổ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "まどを しめます。\n(Tôi đóng cửa sổ.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "ぽすと",
         "Meaning": "hòm thư",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "ぽすとへ てがみを いれます。\n(Tôi bỏ thư vào hòm thư.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "びる",
         "Meaning": "tòa nhà",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "あそこに おおきい びるが あります。\n(Ở đằng kia có tòa nhà lớn.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "こうえん",
         "Meaning": "công viên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "こうえんで さんぽします。\n(Tôi đi dạo ở công viên.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "きっさてん",
         "Meaning": "quán cà phê",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "あそこに きっさてんが あります。\n(Ở đằng kia có quán cà phê.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "ほんや",
         "Meaning": "hiệu sách",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "ほんやで ほんを かいました。\n(Tôi đã mua sách ở hiệu sách.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "のりば",
         "Meaning": "điểm dừng xe, bến xe",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "たきしーの のりばは どこですか。\n(Điểm dừng taxi ở đâu vậy?)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "けん",
         "Meaning": "tỉnh",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "ここは なにけんですか。\n(Ở đây là tỉnh gì vậy?)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "うえ",
         "Meaning": "trên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "つくえの うえに ほんが あります。\n(Trên bàn có cuốn sách.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "した",
         "Meaning": "dưới",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "いすの したに ねこが います。\n(Dưới ghế có con mèo.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "まえ",
         "Meaning": "trước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "ぎんこうの まえに ぽすとが あります。\n(Trước ngân hàng có hòm thư.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "うしろ",
         "Meaning": "sau",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "わたしの うしろに だれか いますか。\n(Sau lưng tôi có ai không?)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "みぎ",
         "Meaning": "phải",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "あさのさんの みぎに さとうさんが います。\n(Bên phải anh Asano là anh Sato.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "ひだり",
         "Meaning": "trái",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "ひだりに まがります。\n(Rẽ bên trái.)"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "なか",
         "Meaning": "trong",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "はこの なかに なにが ありますか。\n(Trong hộp có cái gì vậy?)"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "そと",
         "Meaning": "ngoài",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "そとに いぬが います。\n(Bên ngoài có con chó.)"
     },
     {
@@ -260,7 +260,7 @@
         "Reading": "となり",
         "Meaning": "bên cạnh",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "きっさてんの となりに ほんやが あります。\n(Bên cạnh quán cà phê có hiệu sách.)"
     },
     {
@@ -268,7 +268,7 @@
         "Reading": "ちかく",
         "Meaning": "gần",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "うちの ちかくに こうえんが あります。\n(Gần nhà tôi có công viên.)"
     },
     {
@@ -276,7 +276,7 @@
         "Reading": "あいだ",
         "Meaning": "giữa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 15,
+        "LessonId": 46,
         "Example": "ぎんこうと ゆうびんきょくの あいだに あります。\n(Nó nằm ở giữa ngân hàng và bưu điện.)"
     }
 ]

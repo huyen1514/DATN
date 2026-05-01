@@ -1,0 +1,370 @@
+[
+    {
+        "Word": "診ます",
+        "Reading": "みます",
+        "Meaning": "xem, khám bệnh",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "びょういんで せんせいに みてもらいます。\n(Tôi được bác sĩ khám bệnh ở bệnh viện.)"
+    },
+    {
+        "Word": "探します",
+        "Reading": "さがします",
+        "Meaning": "tìm, tìm kiếm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "かばんを さがしています。\n(Tôi đang tìm cái cặp.)"
+    },
+    {
+        "Word": "遅れます",
+        "Reading": "おくれます",
+        "Meaning": "chậm, muộn [cuộc hẹn, v.v.]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "じかんに おくれました。\n(Tôi đã bị muộn giờ.)"
+    },
+    {
+        "Word": "間に合います",
+        "Reading": "まにあいます",
+        "Meaning": "kịp [cuộc hẹn, v.v.]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "かいぎに まにあいました。\n(Tôi đã kịp giờ họp.)"
+    },
+    {
+        "Word": "やります",
+        "Reading": "やります",
+        "Meaning": "làm",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "にちようびは なにを やりますか。\n(Chủ nhật bạn làm gì?)"
+    },
+    {
+        "Word": "参加します",
+        "Reading": "さんかします",
+        "Meaning": "tham gia, dự [buổi tiệc]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "パーティーに さんかします。\n(Tôi tham gia bữa tiệc.)"
+    },
+    {
+        "Word": "申し込みます",
+        "Reading": "もうしこみます",
+        "Meaning": "đăng ký",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "しけんに もうしこみます。\n(Tôi đăng ký dự thi.)"
+    },
+    {
+        "Word": "都合がいい",
+        "Reading": "つごうがいい",
+        "Meaning": "có thời gian, thuận tiện",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "あしたは つごうが いいですか。\n(Ngày mai bạn có thuận tiện không?)"
+    },
+    {
+        "Word": "都合が悪い",
+        "Reading": "つごうがわるい",
+        "Meaning": "không có thời gian, bận, không thuận tiện",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "きょうは つごうが わるいです。\n(Hôm nay tôi không thuận tiện/bận rồi.)"
+    },
+    {
+        "Word": "気分がいい",
+        "Reading": "きぶんがいい",
+        "Meaning": "cảm thấy tốt, cảm thấy khỏe",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "おさけを のんで、きぶんが いいです。\n(Uống rượu xong tôi thấy sảng khoái.)"
+    },
+    {
+        "Word": "気分が悪い",
+        "Reading": "きぶんがわるい",
+        "Meaning": "cảm thấy không tốt, cảm thấy mệt",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "びょうきで きぶんが わるいです。\n(Vì bị bệnh nên tôi cảm thấy mệt.)"
+    },
+    {
+        "Word": "新聞社",
+        "Reading": "しんぶんしゃ",
+        "Meaning": "công ty phát hành báo, tòa soạn báo",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "ちちは しんぶんしゃで はたらいています。\n(Bố tôi làm việc ở tòa soạn báo.)"
+    },
+    {
+        "Word": "柔道",
+        "Reading": "じゅうどう",
+        "Meaning": "judo (nhu đạo)",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "じゅうどうを れんしゅうします。\n(Tôi tập Judo.)"
+    },
+    {
+        "Word": "運動会",
+        "Reading": "うんどうかい",
+        "Meaning": "hội thi thể thao",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "らいげつ うんどうかいが あります。\n(Tháng sau có hội thi thể thao.)"
+    },
+    {
+        "Word": "場所",
+        "Reading": "ばしょ",
+        "Meaning": "địa điểm",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "かいぎの ばしょは どこですか。\n(Địa điểm họp ở đâu?)"
+    },
+    {
+        "Word": "ボランティア",
+        "Reading": "ボランティア",
+        "Meaning": "tình nguyện viên",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "ボランティアに さんかしたいです。\n(Tôi muốn tham gia tình nguyện.)"
+    },
+    {
+        "Word": "〜弁",
+        "Reading": "〜べん",
+        "Meaning": "tiếng, giọng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "わたなべさんは おおさかべんを はなします。\n(Chị Watanabe nói giọng Osaka.)"
+    },
+    {
+        "Word": "今度",
+        "Reading": "こんど",
+        "Meaning": "lần tới",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "こんどの にちようび、あそびに きませんか。\n(Chủ nhật tới anh đến chơi nhé?)"
+    },
+    {
+        "Word": "ずいぶん",
+        "Reading": "ずいぶん",
+        "Meaning": "khá, tương đối",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 126,
+        "Example": "きょうは ずいぶん さむいですね。\n(Hôm nay trời khá lạnh nhỉ.)"
+    },
+    {
+        "Word": "直接",
+        "Reading": "ちょくせつ",
+        "Meaning": "trực tiếp",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 126,
+        "Example": "せんせいに ちょくせつ きいて ください。\n(Hãy hỏi trực tiếp thầy giáo.)"
+    },
+    {
+        "Word": "いつでも",
+        "Reading": "いつでも",
+        "Meaning": "lúc nào cũng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 126,
+        "Example": "いつでも あそびに きて ください。\n(Lúc nào cũng hãy đến chơi nhé.)"
+    },
+    {
+        "Word": "どこでも",
+        "Reading": "どこでも",
+        "Meaning": "ở đâu cũng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 126,
+        "Example": "どこでも すきな ところへ いって ください。\n(Hãy đi đến bất cứ đâu bạn thích.)"
+    },
+    {
+        "Word": "だれでも",
+        "Reading": "だれでも",
+        "Meaning": "ai cũng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 126,
+        "Example": "だれでも わかる と おモいます。\n(Tôi nghĩ là ai cũng hiểu.)"
+    },
+    {
+        "Word": "何でも",
+        "Reading": "なんでも",
+        "Meaning": "cái gì cũng",
+        "PartOfSpeech": "Phó từ",
+        "LessonId": 126,
+        "Example": "なんでも たべられます。\n(Cái gì tôi cũng ăn được.)"
+    },
+    {
+        "Word": "こんな〜",
+        "Reading": "こんな",
+        "Meaning": "như thế này",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "こんな かばんが ほしいです。\n(Tôi muốn một cái cặp như thế này.)"
+    },
+    {
+        "Word": "そんな〜",
+        "Reading": "そんな",
+        "Meaning": "như thế đó (gần người nghe)",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "そんな ことが ありましたか。\n(Có chuyện như thế đó hả?)"
+    },
+    {
+        "Word": "あんな〜",
+        "Reading": "あんな",
+        "Meaning": "như thế kia (xa cả người nói và người nghe)",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "あんな うちに すみたいです。\n(Tôi muốn sống trong một ngôi nhà như thế kia.)"
+    },
+    {
+        "Word": "片づきます",
+        "Reading": "かたづきます",
+        "Meaning": "được dọn dẹp ngăn nắp, gọn gàng [đồ đạc]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "にもつが かたづきました。\n(Đồ đạc đã được dọn dẹp xong.)"
+    },
+    {
+        "Word": "ごみ",
+        "Reading": "ごみ",
+        "Meaning": "rác",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "ここに ごみを すてないで ください。\n(Đừng vứt rác ở đây.)"
+    },
+    {
+        "Word": "出します",
+        "Reading": "だします",
+        "Meaning": "đổ, để [rác]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "あした ごみを だします。\n(Ngày mai tôi sẽ đổ rác.)"
+    },
+    {
+        "Word": "燃えます",
+        "Reading": "もえます",
+        "Meaning": "cháy được [rác]",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "これは もえる ごみですか。\n(Cái này là rác cháy được à?)"
+    },
+    {
+        "Word": "置き場",
+        "Reading": "おきば",
+        "Meaning": "nơi để",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "ごみの おきばは どこですか。\n(Nơi để rác ở đâu?)"
+    },
+    {
+        "Word": "横",
+        "Reading": "よこ",
+        "Meaning": "bên cạnh",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "びんの よこに かんを おいて ください。\n(Hãy để vỏ lon bên cạnh cái chai.)"
+    },
+    {
+        "Word": "瓶",
+        "Reading": "びん",
+        "Meaning": "cái chai",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "びんを すてます。\n(Vứt chai lọ.)"
+    },
+    {
+        "Word": "缶",
+        "Reading": "かん",
+        "Meaning": "cái lon, hộp kim loại",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "かんを すてます。\n(Vứt vỏ lon.)"
+    },
+    {
+        "Word": "お湯",
+        "Reading": "おゆ",
+        "Meaning": "nước nóng",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "おゆが でません。\n(Nước nóng không chảy ra.)"
+    },
+    {
+        "Word": "ガス",
+        "Reading": "ガス",
+        "Meaning": "ga",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "ガスが とまっています。\n(Gas đã bị ngắt.)"
+    },
+    {
+        "Word": "〜会社",
+        "Reading": "〜かいしゃ",
+        "Meaning": "công ty",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "ガスがいしゃに れんらくして ください。\n(Hãy liên lạc với công ty gas.)"
+    },
+    {
+        "Word": "連絡します",
+        "Reading": "れんらくします",
+        "Meaning": "liên lạc",
+        "PartOfSpeech": "Động từ",
+        "LessonId": 126,
+        "Example": "ともだちに れんらくします。\n(Liên lạc với bạn bè.)"
+    },
+    {
+        "Word": "困ったなあ",
+        "Reading": "こまったなあ",
+        "Meaning": "Làm thế nào đây!/ Căng quá nhỉ!/ Gay quá!",
+        "PartOfSpeech": "Cụm từ",
+        "LessonId": 126,
+        "Example": "さいふが なくて、こまったなあ。\n(Không có ví, gay quá nhỉ.)"
+    },
+    {
+        "Word": "電子メール",
+        "Reading": "でんしめーる",
+        "Meaning": "thư điện tử, e-mail",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "まいにち でんしメールを かきます。\n(Hàng ngày tôi viết thư điện tử.)"
+    },
+    {
+        "Word": "宇宙",
+        "Reading": "うちゅう",
+        "Meaning": "vũ trụ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "うちゅうへ いきたいです。\n(Tôi muốn đi vào vũ trụ.)"
+    },
+    {
+        "Word": "怖い",
+        "Reading": "こわい",
+        "Meaning": "sợ",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "へびは こわいです。\n(Rắn thì đáng sợ.)"
+    },
+    {
+        "Word": "宇宙船",
+        "Reading": "うちゅうせん",
+        "Meaning": "tàu vũ trụ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "うちゅうせんに のります。\n(Lên tàu vũ trụ.)"
+    },
+    {
+        "Word": "別の",
+        "Reading": "べつの",
+        "Meaning": "khác",
+        "PartOfSpeech": "Tính từ",
+        "LessonId": 126,
+        "Example": "べつの かばんを みせて ください。\n(Cho tôi xem cái cặp khác.)"
+    },
+    {
+        "Word": "宇宙飛行士",
+        "Reading": "うちゅうひこうし",
+        "Meaning": "nhà du hành vũ trụ",
+        "PartOfSpeech": "Danh từ",
+        "LessonId": 126,
+        "Example": "わたしは うちゅうひこうしに なりたいです。\n(Tôi muốn trở thành nhà du hành vũ trụ.)"
+    }
+]

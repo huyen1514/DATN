@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "仕",
+        "Meaning": "Sĩ (Làm việc, hầu hạ)",
+        "Onyomi": "シ",
+        "Kunyomi": "つか-える",
+        "Example": "仕事 (shigoto): Công việc; 仕える (tsukaeru): Phụng sự",
+        "LessonId": 330
+    },
+    {
+        "Character": "職",
+        "Meaning": "Chức (Nghề nghiệp, chức vụ)",
+        "Onyomi": "ショク",
+        "Kunyomi": "-",
+        "Example": "職業 (shokugyou): Nghề nghiệp; 辞職 (jishoku): Từ chức",
+        "LessonId": 330
+    },
+    {
+        "Character": "求",
+        "Meaning": "Cầu (Yêu cầu, tìm kiếm)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "もと-める",
+        "Example": "求人 (kyuujin): Tuyển người; 求める (motomeru): Yêu cầu",
+        "LessonId": 330
+    },
+    {
+        "Character": "探",
+        "Meaning": "Thám (Tìm kiếm)",
+        "Onyomi": "タン",
+        "Kunyomi": "さが-す",
+        "Example": "探す (sagasu): Tìm kiếm; 探検 (tanken): Thám hiểm",
+        "LessonId": 330
+    },
+    {
+        "Character": "常",
+        "Meaning": "Thường (Bình thường, luôn luôn)",
+        "Onyomi": "ジョウ",
+        "Kunyomi": "つね, とこ",
+        "Example": "常識 (joushiki): Kiến thức thông thường; 日常 (nichijou): Hàng ngày",
+        "LessonId": 330
+    },
+    {
+        "Character": "識",
+        "Meaning": "Thức (Tri thức, nhận thức)",
+        "Onyomi": "シキ",
+        "Kunyomi": "-",
+        "Example": "知識 (chishiki): Tri thức; 意識 (ishiki): Ý thức",
+        "LessonId": 330
+    },
+    {
+        "Character": "失",
+        "Meaning": "Thất (Mất, thất lễ)",
+        "Onyomi": "シツ",
+        "Kunyomi": "うしな-う",
+        "Example": "失礼 (shitsurei): Thất lễ; 失敗 (shippai): Thất bại",
+        "LessonId": 330
+    },
+    {
+        "Character": "礼",
+        "Meaning": "Lễ (Lễ nghĩa, cảm ơn)",
+        "Onyomi": "レイ, ライ",
+        "Kunyomi": "-",
+        "Example": "お礼 (orei): Sự cảm ơn; 失礼 (shitsurei): Thất lễ",
+        "LessonId": 330
+    },
+    {
+        "Character": "労",
+        "Meaning": "Lao (Lao động, vất vả)",
+        "Onyomi": "ロウ",
+        "Kunyomi": "-",
+        "Example": "労働 (roudou): Lao động; 苦労 (kurou): Gian khổ",
+        "LessonId": 330
+    },
+    {
+        "Character": "働",
+        "Meaning": "Động (Làm việc)",
+        "Onyomi": "ドウ",
+        "Kunyomi": "はたら-く",
+        "Example": "働く (hataraku): Làm việc; 労働 (roudou): Lao động",
+        "LessonId": 330
+    },
+    {
+        "Character": "員",
+        "Meaning": "Viên (Thành viên)",
+        "Onyomi": "イン",
+        "Kunyomi": "-",
+        "Example": "社員 (shain): Nhân viên công ty; 員 (in): Thành viên",
+        "LessonId": 330
+    },
+    {
+        "Character": "官",
+        "Meaning": "Quan (Quan lại, chính phủ)",
+        "Onyomi": "カン",
+        "Kunyomi": "-",
+        "Example": "外交官 (gaikoukan): Nhà ngoại giao; 官庁 (kanchou): Cơ quan chính phủ",
+        "LessonId": 330
+    },
+    {
+        "Character": "局",
+        "Meaning": "Cục (Bộ phận, cục bưu điện)",
+        "Onyomi": "キョク",
+        "Kunyomi": "-",
+        "Example": "郵便局 (yuubinkyoku): Bưu điện; 結局 (kekkyoku): Kết cục",
+        "LessonId": 330
+    },
+    {
+        "Character": "辞",
+        "Meaning": "Từ (Từ bỏ, từ ngữ)",
+        "Onyomi": "ジ",
+        "Kunyomi": "や-める",
+        "Example": "辞める (yameru): Nghỉ việc; 辞書 (jisho): Từ điển",
+        "LessonId": 330
+    },
+    {
+        "Character": "退",
+        "Meaning": "Thoái (Lùi lại, nghỉ việc)",
+        "Onyomi": "タイ",
+        "Kunyomi": "しりぞ-く, しりぞ-ける",
+        "Example": "退職 (taishoku): Nghỉ việc; 退歩 (taipo): Thoái bộ",
+        "LessonId": 330
+    },
+    {
+        "Character": "積",
+        "Meaning": "Tích (Tích lũy, tích tụ)",
+        "Onyomi": "セキ",
+        "Kunyomi": "つ-む, つ-もる",
+        "Example": "面積 (menseki): Diện tích; 積もる (tsumoru): Tích tụ",
+        "LessonId": 330
+    },
+    {
+        "Character": "給",
+        "Meaning": "Cấp (Cung cấp, tiền lương)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "-",
+        "Example": "給料 (kyuuryou): Tiền lương; 支給 (shikyuu): Cung cấp/chi trả",
+        "LessonId": 330
+    },
+    {
+        "Character": "収",
+        "Meaning": "Thu (Thu nhập, thu gọn)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "おさ-まる, おさ-める",
+        "Example": "収入 (shuunyuu): Thu nhập; 吸収 (kyuushuu): Hấp thụ",
+        "LessonId": 330
+    },
+    {
+        "Character": "支",
+        "Meaning": "Chi (Chi trả, hỗ trợ)",
+        "Onyomi": "シ",
+        "Kunyomi": "ささ-える",
+        "Example": "支払う (shiharau): Chi trả; 支店 (shiten): Chi nhánh",
+        "LessonId": 330
+    },
+    {
+        "Character": "厚",
+        "Meaning": "Hậu (Dày, nồng hậu)",
+        "Onyomi": "コウ",
+        "Kunyomi": "あつ-い",
+        "Example": "厚い (atsui): Dày; 厚遇 (kouguu): Hậu đãi",
+        "LessonId": 330
+    }
+]

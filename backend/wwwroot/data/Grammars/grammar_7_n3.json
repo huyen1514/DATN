@@ -1,0 +1,72 @@
+[
+    {
+        "GrammarName": "〜ますと / 〜ですと",
+        "Structure": "Po + と [Chỉ có thì/thể hiện tại]",
+        "Meaning": "Được sử dụng khi trình bày một cách lịch sự những điều kiện trong cửa hàng chẳng hạn[cite: 2].",
+        "Example": "今週ですと、水曜の午後なら空いています。\n(Nếu là tuần này thì chiều thứ tư đang trống lịch[cite: 2].)",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜ようなら / 〜ようだったら",
+        "Structure": "PI + ようなら / ようだったら [なAな / Nの]",
+        "Meaning": "Sử dụng khi quan sát tình hình hoặc trạng thái hiện tại để đưa ra lời khuyên. Thể lịch sự '〜ようでしたら' cũng thường được sử dụng[cite: 2].",
+        "Example": "熱が下がらないようだったら病院に行ったほうがいいですよ。\n(Nếu tình trạng sốt không giảm thì nên đi bệnh viện[cite: 2].)",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜てくる",
+        "Structure": "V-て + くる",
+        "Meaning": "Sử dụng khi một cái gì đó từ trước tới giờ không có nay xuất hiện hoặc một cái gì đó đã bắt đầu[cite: 2].",
+        "Example": "朝から降っていた雨がやんで、ちょっと晴れてきた。\n(Cơn mưa rơi từ sáng đã tạnh và trời bắt đầu hửng nắng rồi[cite: 2].)",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜もので / 〜ものですから",
+        "Structure": "PI + もので / ものですから [なAな / Nな]",
+        "Meaning": "Sử dụng khi giải thích một cách lịch sự sự việc vì có lý do từ phía mình mới dẫn đến tình trạng như hiện tại. Trong hội thoại bạn bè thường dùng '~もんで / 〜もんだから'[cite: 2].",
+        "Example": "出張中だったもので、先日の会議に出席できなくて、申し訳ございませんでした。\n(Vì tôi đang đi công tác nên đã không thể tham gia cuộc họp hôm trước, thành thật xin lỗi[cite: 2].)",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜なんか / 〜なんて",
+        "Structure": "N + なんか",
+        "Meaning": "Dùng thay cho '~など'. Sử dụng khi bạn muốn đưa ra gợi ý nhẹ nhàng với kiểu để cho đối phương tự phán đoán, quyết định cái khác cũng được[cite: 2].",
+        "Example": "運動したいと思うんですけど、なかなか…。\nーだれにでも簡単にできて、楽しめるスポーツもありますよ。ボウリングなんかいいんじゃないですか。\n(Tôi định tập thể thao nhưng mà... ー Có những môn thể thao ai cũng làm được và vui vẻ đấy. Bowling chẳng hạn, được không?[cite: 2])",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜かと思う",
+        "Structure": "PI + かと思う [なAだ / Nだ]",
+        "Meaning": "Sử dụng khi nói lên suy nghĩ của mình với sự e ngại. Thường được sử dụng trong ngữ cảnh tiếp khách hoặc giao dịch kinh doanh[cite: 2].",
+        "Example": "こちらのほうがとお似合いかと思いますよ。\n(Tôi nghĩ là cái này hợp với quý khách hơn đấy[cite: 2].)",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜うちに",
+        "Structure": "V-る / V-ている / V-ない / Aい / なAな / Nの + うちに",
+        "Meaning": "Sử dụng khi nói rằng trong lúc đang làm cái gì đó thì tự nhiên có sự thay đổi. Cũng có thể dùng khi nói về một chuyện trước đó không có nhưng đã xảy ra[cite: 2].",
+        "Example": "何度も会っているうちに、相手のことがよくわかるようになった。\n(Trong lúc gặp gỡ nhiều lần, tôi đã dần hiểu rõ về đối phương[cite: 2].)",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜たばかり",
+        "Structure": "V-た + ばかり",
+        "Meaning": "Sử dụng khi hầu như thời gian không trôi qua kể từ khi làm việc gì đó. Cũng dùng khi người nói cảm thấy thời gian trôi qua chưa bao lâu[cite: 2].",
+        "Example": "大学卒業したばかりなんだから、家賃、安いほうがいいんじゃない?\n(Vì vừa mới tốt nghiệp đại học nên tiền thuê nhà rẻ một chút sẽ tốt hơn đúng không?[cite: 2])",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜ばいいのに",
+        "Structure": "V-ば / Aいければ / なAなら / Nなら + いいのに",
+        "Meaning": "Nói lên cảm giác thấy thất vọng về tình trạng hiện tại khi nó khác với mong muốn của bản thân. Cũng dùng để phê phán nhẹ nhàng hoặc thúc giục đối phương làm gì đó[cite: 2].",
+        "Example": "またコンビニ弁当? たまには自分で作ればいいのに…。\n(Lại cơm hộp cửa hàng tiện lợi à? Thỉnh thoảng tự nấu thì tốt biết mấy...[cite: 2])",
+        "LessonId": 282
+    },
+    {
+        "GrammarName": "〜てもらってもいいですか",
+        "Structure": "V-て + もらってもいいですか",
+        "Meaning": "Sử dụng khi muốn nói '~てください' nhưng với tâm trạng thấy có lỗi vì đã nhờ vả đối phương[cite: 2].",
+        "Example": "すみませんが、もう一度説明していただいてもいいですか。\n(Xin lỗi, anh có thể giải thích lại một lần nữa cho tôi được không?[cite: 2])",
+        "LessonId": 282
+    }
+]

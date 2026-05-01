@@ -4,7 +4,7 @@
         "Reading": "りようします",
         "Meaning": "sử dụng, tận dụng",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "エレベーターを ご<ruby>利用<rt>りよう</rt></ruby>に なりますか。\n(Anh/Chị có sử dụng thang máy không?)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "めしあがります",
         "Meaning": "ăn, uống (tôn kính ngữ của たべます và のみます)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "どうぞ、<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がってください。\n(Xin mời anh/chị dùng bữa.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "いらっしゃいます",
         "Meaning": "ở, đi, đến (tôn kính ngữ của います, いきます và きます)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "<ruby>明日<rt>あした</rt></ruby> <ruby>会社<rt>かいしゃ</rt></ruby>に いらっしゃいますか。\n(Ngày mai anh/chị có ở công ty không?)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "おっしゃいます",
         "Meaning": "nói (tôn kính ngữ của いいます)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "<ruby>社長<rt>しゃちょう</rt></ruby>が そう おっしゃいました。\n(Giám đốc đã nói như vậy.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "なさいます",
         "Meaning": "làm (tôn kính ngữ của します)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "お<ruby>仕事<rt>しごと</rt></ruby>は <ruby>何<rt>なに</rt></ruby>を なさっていますか。\n(Anh/Chị đang làm công việc gì ạ?)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "ごらんになります",
         "Meaning": "xem, nhìn (tôn kính ngữ của みます)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "もう <ruby>新<rt>あたら</rt></ruby>しい <ruby>映画<rt>えいが</rt></ruby>を ご<ruby>覧<rt>らん</rt></ruby>に なりましたか。\n(Anh/Chị đã xem bộ phim mới chưa?)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "ごぞんじです",
         "Meaning": "biết (tôn kính ngữ của しっています)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "あの方を ご<ruby>存<rt>ぞん</rt></ruby>じですか。\n(Anh/Chị có biết vị kia không?)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "おやすみになります",
         "Meaning": "nghỉ ngơi, ngủ (tôn kính ngữ của やすみます)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "ゆうべは よく お<ruby>休<rt>やす</rt></ruby>みに なりましたか。\n(Tối qua anh/chị có ngủ ngon không?)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "ございます",
         "Meaning": "có (cách nói lịch sự của あります)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "あちらに <ruby>電話<rt>でんわ</rt></ruby>が ございます。\n(Ở đằng kia có điện thoại ạ.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "〜でございます",
         "Meaning": "là (cách nói lịch sự của です)",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "わたしは ミラーで ございます。\n(Tôi là Miller ạ.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "りょかん",
         "Meaning": "nhà trọ kiểu Nhật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "きれいな <ruby>旅館<rt>りょかん</rt></ruby>に <ruby>泊<rt>と</rt></ruby>まりたいです。\n(Tôi muốn ở tại một nhà trọ kiểu Nhật đẹp.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "バスてい",
         "Meaning": "điểm dừng xe buýt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "<ruby>バス停<rt>てい</rt></ruby>で <ruby>部長<rt>ぶちょう</rt></ruby>に <ruby>会<rt>あ</rt></ruby>いました。\n(Tôi đã gặp trưởng phòng ở điểm dừng xe buýt.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "おくさま",
         "Meaning": "vợ của người khác (tôn kính ngữ của おくさん)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "<ruby>部長<rt>ぶちょう</rt></ruby>の <ruby>奥様<rt>おくさま</rt></ruby>は お元気ですか。\n(Vợ của trưởng phòng có khỏe không ạ?)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "〜さま",
         "Meaning": "ngài, vị (tôn kính ngữ của 〜さん)",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "ミラー<ruby>様<rt>さま</rt></ruby>で いらっしゃいますか。\n(Có phải là ngài Miller không ạ?)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "たまに",
         "Meaning": "đôi khi, thỉnh thoảng",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "たまに <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。\n(Thỉnh thoảng tôi đi xem phim.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "どなたでも",
         "Meaning": "bất cứ ai (tôn kính ngữ của だれでも)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "どなたでも <ruby>自由<rt>じゆう</rt></ruby>に ご<ruby>利用<rt>りよう</rt></ruby>になれます。\n(Bất cứ ai cũng có thể tự do sử dụng.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "〜といいます",
         "Meaning": "tên là 〜",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "あの方は なんと おっしゃいますか。\n(Vị kia tên là gì ạ?)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "よろしくおつたえください",
         "Meaning": "Cho tôi gửi lời hỏi thăm",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "<ruby>奥様<rt>おくさま</rt></ruby>に よろしく お<ruby>伝<rt>つた</rt></ruby>え ください。\n(Cho tôi gửi lời hỏi thăm tới vợ anh/chị.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "しつれいいたします",
         "Meaning": "Xin phép (khiêm nhường ngữ của しつれいします)",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 75,
+        "LessonId": 241,
         "Example": "では、<ruby>失礼<rt>しつれい</rt></ruby>いたします。\n(Vậy tôi xin phép ạ.)"
     }
 ]

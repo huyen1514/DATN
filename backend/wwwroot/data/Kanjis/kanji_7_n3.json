@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "結",
+        "Meaning": "Kết (Buộc, kết nối)",
+        "Onyomi": "ケツ",
+        "Kunyomi": "むす-ぶ, ゆう, ゆ-わえる",
+        "Example": "結婚 (Kết hôn), 結局 (Kết cục)",
+        "LessonId": 285
+    },
+    {
+        "Character": "婚",
+        "Meaning": "Hôn (Kết hôn)",
+        "Onyomi": "コン",
+        "Kunyomi": "-",
+        "Example": "新婚 (Tân hôn), 婚約 (Hôn ước)",
+        "LessonId": 285
+    },
+    {
+        "Character": "紹",
+        "Meaning": "Thiệu (Giới thiệu)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "-",
+        "Example": "紹介 (Giới thiệu)",
+        "LessonId": 285
+    },
+    {
+        "Character": "介",
+        "Meaning": "Giới (Ở giữa, giới thiệu)",
+        "Onyomi": "カイ",
+        "Kunyomi": "-",
+        "Example": "自己紹介 (Tự giới thiệu), 魚介類 (Hải sản)",
+        "LessonId": 285
+    },
+    {
+        "Character": "独",
+        "Meaning": "Độc (Một mình, cô đơn)",
+        "Onyomi": "ドク",
+        "Kunyomi": "ひとり",
+        "Example": "独身 (Độc thân), 独立 (Độc lập)",
+        "LessonId": 285
+    },
+    {
+        "Character": "身",
+        "Meaning": "Thân (Thân thể, bản thân)",
+        "Onyomi": "シン",
+        "Kunyomi": "み",
+        "Example": "出身 (Xuất thân), 身長 (Chiều cao)",
+        "LessonId": 285
+    },
+    {
+        "Character": "貯",
+        "Meaning": "Trữ (Tích trữ)",
+        "Onyomi": "チョ",
+        "Kunyomi": "-",
+        "Example": "貯金 (Tiết kiệm tiền), 貯蔵 (Lưu trữ)",
+        "LessonId": 285
+    },
+    {
+        "Character": "期",
+        "Meaning": "Kỳ (Thời kỳ, kỳ hạn)",
+        "Onyomi": "キ, ゴ",
+        "Kunyomi": "-",
+        "Example": "期待 (Kỳ vọng), 学期 (Học kỳ)",
+        "LessonId": 285
+    },
+    {
+        "Character": "約",
+        "Meaning": "Ước (Lời hứa, khoảng chừng)",
+        "Onyomi": "ヤク",
+        "Kunyomi": "-",
+        "Example": "予約 (Đặt trước), 婚約 (Hôn ước)",
+        "LessonId": 285
+    },
+    {
+        "Character": "束",
+        "Meaning": "Thúc (Bó, buộc)",
+        "Onyomi": "ソク",
+        "Kunyomi": "たば",
+        "Example": "約束 (Lời hứa), 花束 (Bó hoa)",
+        "LessonId": 285
+    },
+    {
+        "Character": "必",
+        "Meaning": "Tất (Tất yếu, nhất định)",
+        "Onyomi": "ヒツ",
+        "Kunyomi": "かならず",
+        "Example": "必要 (Cần thiết), 必死 (Quyết tâm)",
+        "LessonId": 285
+    },
+    {
+        "Character": "守",
+        "Meaning": "Thủ (Bảo vệ, giữ gìn)",
+        "Onyomi": "シュ, ス",
+        "Kunyomi": "まも-る, もり",
+        "Example": "守る (Bảo vệ), 留守 (Vắng nhà)",
+        "LessonId": 285
+    },
+    {
+        "Character": "式",
+        "Meaning": "Thức (Hình thức, lễ)",
+        "Onyomi": "シキ",
+        "Kunyomi": "-",
+        "Example": "結婚式 (Lễ cưới), 正式 (Chính thức)",
+        "LessonId": 285
+    },
+    {
+        "Character": "列",
+        "Meaning": "Liệt (Hàng lối)",
+        "Onyomi": "レッ",
+        "Kunyomi": "-",
+        "Example": "行列 (Xếp hàng), 列車 (Tàu hỏa)",
+        "LessonId": 285
+    },
+    {
+        "Character": "祝",
+        "Meaning": "Chúc (Chúc mừng)",
+        "Onyomi": "シュク, シュウ",
+        "Kunyomi": "いわ-う",
+        "Example": "お祝い (Sự chúc mừng), 祝日 (Ngày lễ)",
+        "LessonId": 285
+    },
+    {
+        "Character": "酔",
+        "Meaning": "Túy (Say rượu)",
+        "Onyomi": "スイ",
+        "Kunyomi": "よ-う",
+        "Example": "二日酔い (Say rượu sau một đêm), 酔っ払い (Người say)",
+        "LessonId": 285
+    },
+    {
+        "Character": "永",
+        "Meaning": "Vĩnh (Vĩnh cửu)",
+        "Onyomi": "エイ",
+        "Kunyomi": "なが-い",
+        "Example": "永遠 (Vĩnh viễn), 永住 (Vĩnh trú)",
+        "LessonId": 285
+    },
+    {
+        "Character": "幸",
+        "Meaning": "Hạnh (Hạnh phúc, may mắn)",
+        "Onyomi": "コウ",
+        "Kunyomi": "さいわ-い, さち, しあわ-せ",
+        "Example": "幸福 (Hạnh phúc), 幸運 (May mắn)",
+        "LessonId": 285
+    },
+    {
+        "Character": "願",
+        "Meaning": "Nguyện (Cầu nguyện, nhờ vả)",
+        "Onyomi": "ガン",
+        "Kunyomi": "ねが-う",
+        "Example": "願書 (Đơn đăng ký), 願う (Cầu mong)",
+        "LessonId": 285
+    },
+    {
+        "Character": "福",
+        "Meaning": "Phúc (Phúc lợi, may mắn)",
+        "Onyomi": "フク",
+        "Kunyomi": "-",
+        "Example": "福祉 (Phúc lợi), 祝福 (Chúc phúc)",
+        "LessonId": 285
+    }
+]

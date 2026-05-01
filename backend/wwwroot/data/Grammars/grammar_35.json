@@ -4,27 +4,27 @@
         "Structure": "Nhóm 1: u -> e + ば | Nhóm 2: ます -> れば | Nhóm 3: きます -> くれば, します -> すれば | Tính từ đuôi い: i -> ければ | Tính từ đuôi な/Danh từ: + なら(ば)",
         "Meaning": "Dùng để diễn tả một điều kiện cần thiết để một sự việc nào đó xảy ra. 'Nếu... thì...'. Khác với 「～たら」, thể điều kiện nhấn mạnh vào mối quan hệ nhân quả hoặc điều kiện logic hơn.",
         "Example": "<ruby>安<rt>やす</rt></ruby>ければ、<ruby>買<rt>か</rt></ruby>います。\n(Nếu rẻ thì tôi sẽ mua.)",
-        "LessonId": 86
+        "LessonId": 172
     },
     {
         "GrammarName": "Cấu trúc Danh từ + なら",
         "Structure": "N + なら",
         "Meaning": "Dùng để đưa ra lời khuyên hoặc gợi ý dựa trên chủ đề mà đối phương vừa nhắc tới. Có nghĩa là 'Nếu là N / Nếu nói về N... thì...'.",
         "Example": "<ruby>温泉<rt>おんせん</rt></ruby>なら、<ruby>白骨<rt>しらほね</rt></ruby>が <ruby>有名<rt>ゆうめい</rt></ruby>です。\n(Nếu là suối nước nóng thì suối Shirahone rất nổi tiếng đấy.)",
-        "LessonId": 86
+        "LessonId": 172
     },
     {
         "GrammarName": "Từ nghi vấn + Thể điều kiện + いいですか",
         "Structure": "[Từ nghi vấn] + V-ba + いいですか",
         "Meaning": "Dùng khi người nói muốn xin lời khuyên hoặc sự hướng dẫn về một việc gì đó. Cấu trúc này tương đương với 「～たらいいですか」 nhưng mang sắc thái trang trọng hơn một chút.",
         "Example": "<ruby>本<rt>ほん</rt></ruby>を <ruby>借<rt>か</rt></ruby>りたいんですが、どうすれば いいですか。\n(Tôi muốn mượn sách, tôi nên làm thế nào thì được ạ?)",
-        "LessonId": 86
+        "LessonId": 172
     },
     {
         "GrammarName": "Cấu trúc ～ば ～ほど",
         "Structure": "V1-ba + V1-từ điển + ほど | A-i-kereba + A-i + ほど | A-na-nara + A-na + な + ほど",
         "Meaning": "Dùng để diễn tả sự thay đổi tương ứng về mức độ: 'Càng... càng...'. Khi mức độ của vế trước tăng lên thì mức độ của vế sau cũng thay đổi theo.",
         "Example": "<ruby>操作<rt>そうさ</rt></ruby>は <ruby>簡単<rt>かんたん</rt></ruby>なら <ruby>簡単<rt>かんたん</rt></ruby>な ほど いいです。\n(Thao tác càng đơn giản thì càng tốt.)",
-        "LessonId": 86
+        "LessonId": 172
     }
 ]

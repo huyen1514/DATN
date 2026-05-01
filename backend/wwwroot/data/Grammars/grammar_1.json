@@ -1,44 +1,44 @@
-[
+﻿[
     {
         "GrammarName": "Danh từ 1 は Danh từ 2 です",
         "Structure": "N1 は N2 です",
         "Meaning": "Trợ từ 「は」 dùng để biểu thị danh từ đứng trước nó (N1) là chủ đề của câu. Danh từ 2 (N2) đi kèm với 「です」 đóng vai trò là vị ngữ. 「です」 biểu thị sự khẳng định, đồng thời thể hiện thái độ lịch sự của người nói đối với người nghe. Trong mẫu câu này, N1 và N2 có quan hệ tương đương (N1 là N2).",
         "Example": "わたしは まいく・みらーです。\n(Tôi là Mike Miller.)",
-        "LessonId": 3
+        "LessonId": 2
     },
     {
         "GrammarName": "Danh từ 1 は Danh từ 2 じゃありません",
         "Structure": "N1 は N2 じゃ (では) ありません",
         "Meaning": "Đây là dạng phủ định của 「です」. 「じゃ ありません」 là hình thức thường được dùng trong hội thoại giao tiếp hàng ngày. Trong khi đó, 「では ありません」 là hình thức trang trọng hơn, thường dùng trong văn viết hoặc các bài phát biểu chính thức. Lưu ý: Trợ từ 「は」 trong 「では」 được phát âm là 'wa'.",
         "Example": "さとうさんは がくせいじゃ ありません。\n(Chị Sato không phải là sinh viên.)",
-        "LessonId": 3
+        "LessonId": 2
     },
     {
         "GrammarName": "Câu hỏi: Danh từ 1 は Danh từ 2 ですか",
         "Structure": "N1 は N2 ですか",
         "Meaning": "Trợ từ 「か」 đặt ở cuối câu để biến câu khẳng định thành câu hỏi. Người nói dùng trợ từ này để biểu thị sự nghi vấn hoặc chưa chắc chắn. Để trả lời cho câu hỏi xác nhận đúng/sai, nếu đúng ta dùng 「はい、そうです」, nếu sai ta dùng 「いいえ、ちがいます」 hoặc phủ định lại danh từ đó bằng mẫu câu phủ định đã học.",
         "Example": "みらーさんは かいしゃいんですか。\n(Anh Miller có phải là nhân viên công ty không?)",
-        "LessonId": 3
+        "LessonId": 2
     },
     {
         "GrammarName": "Trợ từ も (Cũng)",
         "Structure": "Danh từ も",
         "Meaning": "Trợ từ 「も」 được dùng khi danh từ đứng trước nó có cùng một tính chất, trạng thái hoặc hành động với một danh từ đã được nhắc đến trước đó. Khi dùng 「も」, chúng ta thay thế hoàn toàn cho trợ từ 「は」. Nó mang ý nghĩa tương đương với 'cũng' trong tiếng Việt.",
         "Example": "みらーさんは かいしゃいんです。ぐぷたさんも かいしゃいんです。\n(Anh Miller là nhân viên công ty. Anh Gupta cũng là nhân viên công ty.)",
-        "LessonId": 3
+        "LessonId": 2
     },
     {
         "GrammarName": "Trợ từ の (Của / Thuộc về)",
         "Structure": "Danh từ 1 の Danh từ 2",
         "Meaning": "Trợ từ 「の」 dùng để nối hai danh từ, trong đó danh từ 1 bổ nghĩa cho danh từ 2. Trong phạm vi bài 1, mẫu câu này dùng để biểu thị quan hệ sở hữu hoặc biểu thị danh từ 2 là thành viên, thuộc về tổ chức (như công ty, trường học) mà danh từ 1 đại diện.",
         "Example": "わたしは IMCの しゃいんです。\n(Tôi là nhân viên của công ty IMC.)",
-        "LessonId": 3
+        "LessonId": 2
     },
     {
         "GrammarName": "Hậu tố ～さん (Ngài / Anh / Chị)",
         "Structure": "Tên người + さん",
         "Meaning": "Trong tiếng Nhật, người ta thêm 「さん」 vào ngay sau họ hoặc tên của người nghe hoặc người thứ ba để thể hiện sự kính trọng và lịch sự. Đây là quy tắc tối quan trọng trong giao tiếp của người Nhật. Tuyệt đối lưu ý: không bao giờ được thêm 「さん」 vào sau tên của chính bản thân mình.",
         "Example": "あのかたは さとうさんです。\n(Vị kia là chị Sato.)",
-        "LessonId": 3
+        "LessonId": 2
     }
 ]

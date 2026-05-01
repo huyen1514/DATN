@@ -1,0 +1,194 @@
+[
+    {
+        "Character": "荷",
+        "Meaning": "Hàng hóa, Hành lý (Hà)",
+        "Onyomi": "カ",
+        "Kunyomi": "に",
+        "Example": "荷物 (にもつ): Hành lý; 手荷物 (てにもつ): Hành lý xách tay",
+        "LessonId": 140
+    },
+    {
+        "Character": "送",
+        "Meaning": "Gửi (Tống)",
+        "Onyomi": "ソウ",
+        "Kunyomi": "おく-る",
+        "Example": "送る (おくる): Gửi; 送別会 (そうべつかい): Tiệc chia tay",
+        "LessonId": 140
+    },
+    {
+        "Character": "宅",
+        "Meaning": "Nhà ở (Trạch)",
+        "Onyomi": "タク",
+        "Kunyomi": "-",
+        "Example": "お宅 (おたく): Nhà của ngài; 住宅 (じゅうたく): Nhà ở/Trú xá",
+        "LessonId": 140
+    },
+    {
+        "Character": "急",
+        "Meaning": "Gấp, Vội (Cấp)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "いそ-ぐ",
+        "Example": "急行 (きゅうこう): Tàu tốc hành; 急に (きゅうに): Đột nhiên",
+        "LessonId": 140
+    },
+    {
+        "Character": "速",
+        "Meaning": "Nhanh (Tốc)",
+        "Onyomi": "ソク",
+        "Kunyomi": "はや-i",
+        "Example": "速い (はやい): Nhanh; 時速 (じそく): Tốc độ theo giờ",
+        "LessonId": 140
+    },
+    {
+        "Character": "遅",
+        "Meaning": "Chậm, Muộn (Trì)",
+        "Onyomi": "チ",
+        "Kunyomi": "おそ-い, おく-れる",
+        "Example": "遅れる (おくれる): Trễ/Muộn; 遅刻 (ちこく): Đến muộn",
+        "LessonId": 140
+    },
+    {
+        "Character": "重",
+        "Meaning": "Nặng, Chồng chất (Trọng)",
+        "Onyomi": "ジュウ, チョウ",
+        "Kunyomi": "おmo-i, かさ-ねる",
+        "Example": "重い (おもい): Nặng; 体重 (たいじゅう): Cân nặng",
+        "LessonId": 140
+    },
+    {
+        "Character": "軽",
+        "Meaning": "Nhẹ (Khinh)",
+        "Onyomi": "ケイ",
+        "Kunyomi": "かる-い",
+        "Example": "軽い (かるい): Nhẹ; 軽食 (けいしょく): Bữa ăn nhẹ",
+        "LessonId": 140
+    },
+    {
+        "Character": "住",
+        "Meaning": "Sinh sống (Trú)",
+        "Onyomi": "ジュウ",
+        "Kunyomi": "す-む",
+        "Example": "住所 (じゅうしょ): Địa chỉ; 住む (すむ): Sống/Trú ngụ",
+        "LessonId": 140
+    },
+    {
+        "Character": "所",
+        "Meaning": "Nơi chốn (Sở)",
+        "Onyomi": "ショ",
+        "Kunyomi": "ところ",
+        "Example": "場所 (ばしょ): Địa điểm; 長所 (ちょうしょ): Sở trường",
+        "LessonId": 140
+    },
+    {
+        "Character": "様",
+        "Meaning": "Ngài, Tình trạng (Dạng)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "さま",
+        "Example": "お客様 (おきゃくさま): Quý khách; 様子 (ようす): Tình hình/Dáng vẻ",
+        "LessonId": 140
+    },
+    {
+        "Character": "主",
+        "Meaning": "Chủ nhân (Chủ)",
+        "Onyomi": "シュ",
+        "Kunyomi": "ぬし",
+        "Example": "ご主人 (ごしゅじん): Chồng (người khác); 持ち主 (もちぬし): Người sở hữu",
+        "LessonId": 140
+    },
+    {
+        "Character": "番",
+        "Meaning": "Số, Thứ tự (Phiên)",
+        "Onyomi": "バン",
+        "Kunyomi": "-",
+        "Example": "番号 (ばんごう): Số hiệu; 一番 (いちばん): Số một/Nhất",
+        "LessonId": 140
+    },
+    {
+        "Character": "地",
+        "Meaning": "Đất (Địa)",
+        "Onyomi": "チ, ジ",
+        "Kunyomi": "-",
+        "Example": "地下 (ちか): Dưới lòng đất; 地名 (ちめい): Địa danh",
+        "LessonId": 140
+    },
+    {
+        "Character": "号",
+        "Meaning": "Số hiệu (Hiệu)",
+        "Onyomi": "ゴウ",
+        "Kunyomi": "-",
+        "Example": "信号 (しんごう): Đèn giao thông; 101号室 (いちまるいちごうしつ): Phòng 101",
+        "LessonId": 140
+    },
+    {
+        "Character": "京",
+        "Meaning": "Kinh đô (Kinh)",
+        "Onyomi": "キョウ",
+        "Kunyomi": "みやこ",
+        "Example": "東京 (とうきょう): Tokyo; 京都 (きょうと): Kyoto",
+        "LessonId": 140
+    },
+    {
+        "Character": "国",
+        "Meaning": "Quốc gia (Quốc)",
+        "Onyomi": "コク",
+        "Kunyomi": "くに",
+        "Example": "外国 (がいこく): Nước ngoài; 国籍 (こくせき): Quốc tịch",
+        "LessonId": 140
+    },
+    {
+        "Character": "都",
+        "Meaning": "Đô thị (Đô)",
+        "Onyomi": "ト, ツ",
+        "Kunyomi": "みやこ",
+        "Example": "首都 (しゅと): Thủ đô; 都会 (とかい): Thành thị",
+        "LessonId": 140
+    },
+    {
+        "Character": "道",
+        "Meaning": "Con đường (Đạo)",
+        "Onyomi": "ドウ",
+        "Kunyomi": "みち",
+        "Example": "道路 (どうろ): Đường bộ; 北海道 (ほっかいどう): Hokkaido",
+        "LessonId": 140
+    },
+    {
+        "Character": "府",
+        "Meaning": "Phủ (Phủ)",
+        "Onyomi": "フ",
+        "Kunyomi": "-",
+        "Example": "大阪府 (おおさかふ): Phủ Osaka; 京都府 (きょうとふ): Phủ Kyoto",
+        "LessonId": 140
+    },
+    {
+        "Character": "県",
+        "Meaning": "Tỉnh (Huyện)",
+        "Onyomi": "ケン",
+        "Kunyomi": "-",
+        "Example": "県庁 (けんちょう): Cơ quan tỉnh; 山口県 (やまぐちけん): Tỉnh Yamaguchi",
+        "LessonId": 140
+    },
+    {
+        "Character": "市",
+        "Meaning": "Thành phố, Chợ (Thị)",
+        "Onyomi": "シ",
+        "Kunyomi": "いち",
+        "Example": "市長 (しちょう): Thị trưởng; 市場 (いちば): Cái chợ",
+        "LessonId": 140
+    },
+    {
+        "Character": "区",
+        "Meaning": "Quận (Khu)",
+        "Onyomi": "ク",
+        "Kunyomi": "-",
+        "Example": "区役所 (くやくしょ): Ủy ban quận; 区内 (くない): Trong quận",
+        "LessonId": 140
+    },
+    {
+        "Character": "村",
+        "Meaning": "Ngôi làng (Thôn)",
+        "Onyomi": "ソン",
+        "Kunyomi": "むら",
+        "Example": "村長 (そんちょう): Trưởng thôn; 市町村 (しちょうそん): Các cấp chính quyền địa phương",
+        "LessonId": 140
+    }
+]

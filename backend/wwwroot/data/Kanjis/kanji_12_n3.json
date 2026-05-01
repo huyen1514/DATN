@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "授",
+        "Meaning": "Thụ (Trao cho, giảng dạy)",
+        "Onyomi": "ジュ",
+        "Kunyomi": "さず-かる, さず-ける",
+        "Example": "授業 (Giờ học); 教授 (Giáo sư)",
+        "LessonId": 310
+    },
+    {
+        "Character": "級",
+        "Meaning": "Cấp (Cấp bậc)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "-",
+        "Example": "初級 (Sơ cấp); 同級生 (Bạn cùng lớp)",
+        "LessonId": 310
+    },
+    {
+        "Character": "業",
+        "Meaning": "Nghiệp (Công việc, bài học)",
+        "Onyomi": "ギョウ, ゴウ",
+        "Kunyomi": "わざ",
+        "Example": "授業 (Giờ học); 卒業 (Tốt nghiệp)",
+        "LessonId": 310
+    },
+    {
+        "Character": "卒",
+        "Meaning": "Tốt (Tốt nghiệp)",
+        "Onyomi": "ソッ",
+        "Kunyomi": "-",
+        "Example": "卒業 (Tốt nghiệp); 脳卒中 (Đột quỵ)",
+        "LessonId": 310
+    },
+    {
+        "Character": "欠",
+        "Meaning": "Khiếm (Thiếu, vắng mặt)",
+        "Onyomi": "ケツ",
+        "Kunyomi": "か-ける, か-く",
+        "Example": "欠席 (Vắng mặt); 欠点 (Khuyết điểm)",
+        "LessonId": 310
+    },
+    {
+        "Character": "席",
+        "Meaning": "Tịch (Chỗ ngồi)",
+        "Onyomi": "セキ",
+        "Kunyomi": "-",
+        "Example": "出席 (Hiện diện); 自分の席 (Chỗ ngồi của mình)",
+        "LessonId": 310
+    },
+    {
+        "Character": "由",
+        "Meaning": "Do (Lý do, tự do)",
+        "Onyomi": "ユ, ユウ, ユイ",
+        "Kunyomi": "よし",
+        "Example": "理由 (Lý do); 自由 (Tự do)",
+        "LessonId": 310
+    },
+    {
+        "Character": "訳",
+        "Meaning": "Dịch (Giải thích, dịch thuật)",
+        "Onyomi": "ヤク",
+        "Kunyomi": "わけ",
+        "Example": "訳 (Lý do/ý nghĩa); 翻訳 (Dịch thuật)",
+        "LessonId": 310
+    },
+    {
+        "Character": "例",
+        "Meaning": "Lệ (Ví dụ)",
+        "Onyomi": "レイ",
+        "Kunyomi": "たと-える",
+        "Example": "例えば (Ví dụ); 例外 (Ngoại lệ)",
+        "LessonId": 310
+    },
+    {
+        "Character": "易",
+        "Meaning": "Dịch/Dị (Dễ dàng)",
+        "Onyomi": "エキ, イ",
+        "Kunyomi": "やさ-しい",
+        "Example": "易しい (Dễ); 安易 (Dễ dãi/sơ sài)",
+        "LessonId": 310
+    },
+    {
+        "Character": "解",
+        "Meaning": "Giải (Giải thích, tháo gỡ)",
+        "Onyomi": "カイ, ゲ",
+        "Kunyomi": "と-ける, と-く, と-かす",
+        "Example": "理解 (Lý giải/Hiểu); 解決 (Giải quyết)",
+        "LessonId": 310
+    },
+    {
+        "Character": "説",
+        "Meaning": "Thuyết (Giải thích, học thuyết)",
+        "Onyomi": "セツ, ゼイ",
+        "Kunyomi": "と-く",
+        "Example": "説明 (Thuyết minh); 伝説 (Truyền thuyết)",
+        "LessonId": 310
+    },
+    {
+        "Character": "覚",
+        "Meaning": "Giác (Nhớ, thức giấc)",
+        "Onyomi": "カク",
+        "Kunyomi": "おぼ-える, さ-ます, さ-める",
+        "Example": "覚える (Nhớ); 目を覚ます (Thức giấc)",
+        "LessonId": 310
+    },
+    {
+        "Character": "忘",
+        "Meaning": "Vong (Quên)",
+        "Onyomi": "ボウ",
+        "Kunyomi": "わす-れる",
+        "Example": "忘れる (Quên); 忘年会 (Tiệc tất niên)",
+        "LessonId": 310
+    },
+    {
+        "Character": "努",
+        "Meaning": "Nỗ (Nỗ lực, cố gắng)",
+        "Onyomi": "ド",
+        "Kunyomi": "つと-める",
+        "Example": "努力 (Nỗ lực); 努力家 (Người nỗ lực)",
+        "LessonId": 310
+    },
+    {
+        "Character": "続",
+        "Meaning": "Tục (Tiếp tục)",
+        "Onyomi": "ゾク",
+        "Kunyomi": "つづ-く, つづ-ける",
+        "Example": "続ける (Tiếp tục); 連続 (Liên tục)",
+        "LessonId": 310
+    },
+    {
+        "Character": "要",
+        "Meaning": "Yếu (Cần thiết, quan trọng)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "い-る, かなめ",
+        "Example": "必要 (Cần thiết); 要約 (Tóm tắt)",
+        "LessonId": 310
+    },
+    {
+        "Character": "復",
+        "Meaning": "Phục (Ôn tập, phục hồi)",
+        "Onyomi": "フク",
+        "Kunyomi": "-",
+        "Example": "復習 (Ôn tập); 回復 (Hồi phục)",
+        "LessonId": 310
+    },
+    {
+        "Character": "補",
+        "Meaning": "Bổ (Bổ sung)",
+        "Onyomi": "ホ",
+        "Kunyomi": "おぎな-う",
+        "Example": "補習 (Học bổ sung); 補給 (Bổ sung/tiếp tế)",
+        "LessonId": 310
+    },
+    {
+        "Character": "効",
+        "Meaning": "Hiệu (Hiệu quả, tác dụng)",
+        "Onyomi": "コウ",
+        "Kunyomi": "き-く",
+        "Example": "効果 (Hiệu quả); 効き目 (Hiệu quả/tác dụng)",
+        "LessonId": 310
+    }
+]

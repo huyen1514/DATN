@@ -1,0 +1,100 @@
+[
+    {
+        "GrammarName": "V-ます + 始める",
+        "Structure": "V-ます + 始める",
+        "Meaning": "Sử dụng khi bạn nói rõ về sự bắt đầu của một việc làm gì đó mà cần có thời gian.",
+        "Example": "日本語を習い始めたのは半年前です。\n(Tôi bắt đầu học tiếng Nhật là nửa năm trước.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "V-ます + 終わる",
+        "Structure": "V-ます + 終わる",
+        "Meaning": "Sử dụng khi bạn nói rõ sự kết thúc của việc gì đó.",
+        "Example": "その本、読み終わったら貸してもらえませんか。\n(Cuốn sách đó, đọc xong cho tôi mượn được không?)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "ように言う",
+        "Structure": "V-る/V-ない + ように言う",
+        "Meaning": "Sử dụng khi bạn truyền đạt lại nội dung của một mệnh lệnh, nghiêm cấm, chỉ thị, hay tư vấn như là 'しろ・するな', 'してください' hay 'したほうがいい'.",
+        "Example": "先生に宿題を忘れないように注意された。\n(Tôi bị thầy giáo nhắc nhở chú ý đừng quên làm bài tập.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "という",
+        "Structure": "PI + という + N",
+        "Meaning": "Thường được sử dụng khi bạn mô tả nội dung như là '台風が来るというニュース'.",
+        "Example": "彼が有名な音楽家だということはあまり知られていない。\n(Việc anh ấy là một nhạc sĩ nổi tiếng không mấy ai biết.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "だろうと思う",
+        "Structure": "PI + だろうと思う",
+        "Meaning": "Là thể thông thường của '〜でしょう'. Sử dụng khi bạn nói với người khác về điều mà bạn nghĩ có lẽ là như thế nhưng không chắc lắm.",
+        "Example": "たぶんこの雨は1時間ぐらいでやむだろうと思います。\n(Tôi nghĩ cơn mưa này chắc khoảng 1 tiếng sẽ tạnh.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "なさそうだ",
+        "Structure": "Aい (bỏ い) + く + なさそうだ\nなA / N + じゃ + なさそうだ",
+        "Meaning": "Sử dụng khi bạn nhìn một cái gì đó rồi cảm nhận, dự đoán, nghĩ rằng không '~'.",
+        "Example": "このカレーはあまり辛くなさそうですね。\n(Món cà ri này trông có vẻ không cay lắm nhỉ.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "そうもない / そうにない / そうにもない",
+        "Structure": "V-ます + そうもない / そうにない / そうにもない",
+        "Meaning": "Dùng trong trường hợp của các động từ như '増えそうだ' để thể hiện sự không có khả năng xảy ra.",
+        "Example": "こんな難しそうな本、1週間では読めそうもない。\n(Cuốn sách trông có vẻ khó thế này thì 1 tuần tôi không thể đọc xong nổi.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "と",
+        "Structure": "V-る + と",
+        "Meaning": "Sử dụng khi bạn nhận ra điều mà trước đó mình không nhận ra. Nó cũng thường được sử dụng để bày tỏ điều bạn không ngờ đến và cuối câu thường là thì quá khứ vì lúc đó bạn đã nhận ra. Không sử dụng trong trường hợp phần sau là dự định của người nói sẽ làm trong tương lai.",
+        "Example": "気がつくと、外はすっかり暗くなっていた。\n(Khi tôi nhận ra thì bên ngoài trời đã tối đen rồi.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "たら",
+        "Structure": "V-たら",
+        "Meaning": "Cũng có cách dùng giống như 'と' (nhận ra điều mà trước đó mình không nhận ra, bày tỏ điều không ngờ đến).",
+        "Example": "屋上に上がったら、東京スカイツリーが見えた。\n(Khi tôi lên sân thượng thì nhìn thấy tháp Tokyo Skytree.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "ほど",
+        "Structure": "V-る/V-ない + ほど\nN + ほど",
+        "Meaning": "Sử dụng khi bạn dùng một ví dụ '~' để nói lên trạng thái hoặc mức độ của '...' không bình thường như là '歩けないほど強い風'.",
+        "Example": "山に登って、下りてきたときは、もう一歩も歩けないほど疲れていた。\n(Sau khi leo núi và xuống núi, tôi đã mệt mỏi đến mức không thể bước đi nổi nữa.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "ていく",
+        "Structure": "V-て + いく",
+        "Meaning": "Sử dụng khi nói về một sự di chuyển nào đó ngày càng dời ra xa như là '歩いていく', hoặc để nói là sau khi làm một động tác nào đó bạn sẽ di chuyển đến chỗ khác như là '買っていく'. Cũng có thể sử dụng khi nói một sự việc gì đó sẽ tiếp diễn hướng tới tương lai.",
+        "Example": "冬になると渡り鳥は南のほうへ飛んでいく。\n(Cứ đến mùa đông là chim di trú lại bay về phía nam.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "てくる",
+        "Structure": "V-て + くる",
+        "Meaning": "Sử dụng khi một cái gì đó tiến gần tới mình. Cũng sử dụng khi nói một hành động hoặc sự thay đổi nào đó đang tiếp diễn từ quá khứ đến hiện tại.",
+        "Example": "申し込みのときに、身分証明書を持ってきてください。\n(Khi đến đăng ký, xin vui lòng mang theo giấy chứng minh nhân dân.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "続ける",
+        "Structure": "V-ます + 続ける",
+        "Meaning": "Sử dụng khi nhấn mạnh sự lặp đi lặp lại như một thói quen hoặc tiếp tục duy trì suốt một hành động nào đó.",
+        "Example": "あの人は歯医者に1年以上通い続けているそうです。\n(Người đó nghe nói đã đi nha sĩ suốt hơn 1 năm nay rồi.)",
+        "LessonId": 252
+    },
+    {
+        "GrammarName": "なら",
+        "Structure": "V-る(の) + なら",
+        "Meaning": "Giới hạn phạm vi như 'trường hợp ~ thì' rồi đưa ra lời khuyên hoặc đề nghị.",
+        "Example": "台湾へ旅行に行くなら、11月がいちばんいいと思いますよ。\n(Nếu đi du lịch Đài Loan thì tôi nghĩ tháng 11 là tuyệt nhất.)",
+        "LessonId": 252
+    }
+]

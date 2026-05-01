@@ -4,34 +4,34 @@
         "Structure": "N1 は N2 に N3 を [あげます / もらいます / くれます]",
         "Meaning": "Mở rộng từ bài 7, bài này nhấn mạnh vào từ 「くれます」:\n1. あげます: N1 tặng cho N2 (hướng đi ra từ phía người nói).\n2. もらいます: N1 nhận từ N2 (hướng đi vào phía người nói).\n3. くれます: Ai đó tặng cho TÔI hoặc người thân của tôi. Điểm khác biệt là chủ ngữ luôn là người tặng, và hành động hướng về phía người nói.",
         "Example": "さとうさんは わたしに はなを くれました。\n(Chị Sato đã tặng hoa cho tôi.)",
-        "LessonId": 53
+        "LessonId": 117
     },
     {
         "GrammarName": "Làm giúp ai việc gì: ～てあげます",
         "Structure": "Động từ (thể て) + あげます",
         "Meaning": "Dùng khi người nói thực hiện một hành động nào đó với ý chí muốn giúp đỡ hoặc mang lại lợi ích cho người khác. \n- Lưu ý: Không nên dùng mẫu này trực tiếp với người trên hoặc người không thân thiết vì nó có thể tạo cảm giác như mình đang ban ơn.",
         "Example": "わたしは きむらさんに ほんを かしてあげました。\n(Tôi đã cho chị Kimura mượn sách.)",
-        "LessonId": 53
+        "LessonId": 117
     },
     {
         "GrammarName": "Được ai đó làm giúp: ～てもらいます",
         "Structure": "Động từ (thể て) + もらいます",
         "Meaning": "Dùng để diễn tả việc người nói nhận được một hành động giúp đỡ từ người khác. Trợ từ 「に」 được đặt sau người thực hiện hành động. Mẫu câu này thể hiện sự biết ơn sâu sắc của người nhận đối với người làm.",
         "Example": "わたしは ミラーさんに じを おしえてもらいました。\n(Tôi đã được anh Miller dạy chữ Hán cho.)",
-        "LessonId": 53
+        "LessonId": 117
     },
     {
         "GrammarName": "Ai đó làm giúp mình: ～てくれます",
         "Structure": "Động từ (thể て) + くれます",
         "Meaning": "Tương tự như 「～てもらいます」, mẫu câu này cũng nói về việc ai đó làm gì cho mình, nhưng chủ ngữ trong câu này là NGƯỜI THỰC HIỆN. Nó nhấn mạnh vào tấm lòng hoặc sự chủ động của người làm giúp đối với người nói.",
         "Example": "たなかさんは わたしの にもつを もってくれました。\n(Anh Tanaka đã mang giúp hành lý cho tôi.)",
-        "LessonId": 53
+        "LessonId": 117
     },
     {
         "GrammarName": "Trợ từ が trong câu cho nhận",
         "Structure": "Danh từ (người) が Động từ",
         "Meaning": "Trong các câu sử dụng 「くれます」 hoặc các mẫu câu tương tự, khi người thực hiện hành động được đưa ra như một thông tin mới hoặc muốn nhấn mạnh chính xác là ai, chúng ta sử dụng trợ từ 「が」 thay vì 「は」.",
         "Example": "だれが てつだってくれましたか。\nーサントスさんが てつだってくれました。\n(Ai đã giúp đỡ bạn thế?\n-Anh Santos đã giúp tôi.)",
-        "LessonId": 53
+        "LessonId": 117
     }
 ]

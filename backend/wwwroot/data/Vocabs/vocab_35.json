@@ -4,7 +4,7 @@
         "Reading": "さきます",
         "Meaning": "nở [hoa ~]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>春<rt>はる</rt></ruby>が <ruby>来<rt>く</rt></ruby>れば、<ruby>桜<rt>さくら</rt></ruby>が <ruby>咲<rt>さ</rt></ruby>きます。\n(Nếu mùa xuân đến thì hoa anh đào sẽ nở.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "かわります",
         "Meaning": "thay đổi, đổi [màu ~]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>秋<rt>あき</rt></ruby>に なれば、<ruby>木<rt>き</rt></ruby>の <ruby>葉<rt>は</rt></ruby>の <ruby>色<rt>いろ</rt></ruby>が <ruby>変<rt>か</rt></ruby>わります。\n(Nếu đến mùa thu, màu lá cây sẽ thay đổi.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "こまります",
         "Meaning": "rắc rối, khó xử, có vấn đề",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>故障<rt>こしょう</rt></ruby>すれば、<ruby>困<rt>こま</rt></ruby>ります。\n(Nếu bị hỏng thì sẽ rắc rối lắm.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "つけます",
         "Meaning": "vẽ, đánh dấu [tròn]",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>正<rt>ただ</rt></ruby>しい <ruby>答<rt>こた</rt></ruby>えに <ruby>丸<rt>まる</rt></ruby>を <ruby>付<rt>つ</rt></ruby>けて ください。\n(Hãy đánh dấu tròn vào câu trả lời đúng.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "ひろいます",
         "Meaning": "nhặt, nhặt lên",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>道<rt>みち</rt></ruby>で <ruby>財布<rt>さいふ</rt></ruby>を <ruby>拾<rt>ひろ</rt></ruby>いました。\n(Tôi đã nhặt được cái ví trên đường.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "かかります",
         "Meaning": "có [điện thoại]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>友達<rt>ともだち</rt></ruby>から <ruby>電話<rt>でんわ</rt></ruby>が かかりました。\n(Đã có điện thoại từ bạn gọi đến.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "らく",
         "Meaning": "thoải mái, nhàn hạ, dễ dàng",
         "PartOfSpeech": "Tính từ đuôi な",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>操作<rt>そうさ</rt></ruby>が <ruby>簡単<rt>かんたん</rt></ruby>なら、<ruby>楽<rt>らく</rt></ruby>です。\n(Nếu thao tác đơn giản thì sẽ nhàn hạ.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "ただしい",
         "Meaning": "đúng, chính xác",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>正<rt>ただ</rt></ruby>しい <ruby>方法<rt>ほうほう</rt></ruby>を <ruby>教<rt>おし</rt></ruby>えて ください。\n(Hãy chỉ cho tôi phương pháp đúng.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "めずらしい",
         "Meaning": "hiếm, hiếm có",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "これは <ruby>珍<rt>めずら</rt></ruby>しい <ruby>花<rt>はな</rt></ruby>ですね。\n(Đây là loài hoa hiếm nhỉ.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "かた",
         "Meaning": "vị, người (kính trọng của ひと)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "あの方は <ruby>誰<rt>だれ</rt></ruby>ですか。\n(Vị kia là ai vậy?)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "むこう",
         "Meaning": "bên kia, bên đấy, phía đằng kia",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>向<rt>む</rt></ruby>こうに <ruby>島<rt>しま</rt></ruby>が <ruby>見<rt>み</rt></ruby>えます。\n(Có thể nhìn thấy hòn đảo ở phía đằng kia.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "しま",
         "Meaning": "đảo, hòn đảo",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>夏休み<rt>なつやすみ</rt></ruby>に <ruby>島<rt>しま</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きたいです。\n(Tôi muốn đi ra đảo vào kỳ nghỉ hè.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "みなと",
         "Meaning": "cảng, bến cảng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>港<rt>みなと</rt></ruby>に <ruby>船<rt>ふね</rt></ruby>が あります。\n(Có thuyền ở cảng.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "きんじょ",
         "Meaning": "hàng xóm, khu vực lân cận",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>近所<rt>きんじょ</rt></ruby>の <ruby>公園<rt>こうえん</rt></ruby>で <ruby>散歩<rt>さんぽ</rt></ruby>します。\n(Tôi đi dạo ở công viên gần nhà.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "おくじょう",
         "Meaning": "mái nhà, nóc nhà",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>屋上<rt>おくじょう</rt></ruby>から <ruby>町<rt>まち</rt></ruby>が <ruby>見<rt>み</rt></ruby>えます。\n(Từ sân thượng có thể nhìn thấy phố xá.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "かいがい",
         "Meaning": "nước ngoài, hải ngoại",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>将来<rt>しょうらい</rt></ruby> <ruby>海外<rt>かいがい</rt></ruby>で <ruby>働<rt>はたら</rt></ruby>きたいです。\n(Tương lai tôi muốn làm việc ở nước ngoài.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "やまのぼり",
         "Meaning": "leo núi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>山登り<rt>やまのぼり</rt></ruby>は <ruby>楽<rt>たの</rt></ruby>しいです。\n(Leo núi rất vui.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "きかい",
         "Meaning": "cơ hội",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <ruby>機会<rt>きかい</rt></ruby>が あれば、<ruby>行<rt>い</rt></ruby>きたいです。\n(Nếu có cơ hội đi Nhật, tôi muốn đi.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "きょか",
         "Meaning": "phép, giấy phép",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>許可<rt>きょか</rt></ruby>が なければ、<ruby>入<rt>はい</rt></ruby>れません。\n(Nếu không có phép thì không được vào.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "まる",
         "Meaning": "tròn, vòng tròn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "ここに <ruby>丸<rt>まる</rt></ruby>を <ruby>書<rt>か</rt></ruby>いて ください。\n(Hãy vẽ một vòng tròn vào đây.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "そうさ",
         "Meaning": "thao tác",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "この <ruby>機械<rt>きかい</rt></ruby>は <ruby>操作<rt>そうさ</rt></ruby>が <ruby>簡単<rt>かんたん</rt></ruby>です。\n(Cái máy này thao tác đơn giản.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "ほうほう",
         "Meaning": "phương pháp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "いい <ruby>方法<rt>ほうほう</rt></ruby>を <ruby>考<rt>かんが</rt></ruby>えています。\n(Tôi đang suy nghĩ về một phương pháp tốt.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "せつび",
         "Meaning": "thiết bị",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "この <ruby>工場<rt>こうじょう</rt></ruby>は <ruby>設備<rt>せつび</rt></ruby>が いいです。\n(Nhà máy này thiết bị tốt.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "は",
         "Meaning": "cái lá",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>木<rt>き</rt></ruby>の <ruby>葉<rt>は</rt></ruby>が <ruby>赤<rt>あか</rt></ruby>く なりました。\n(Lá cây đã trở nên đỏ.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "きょく",
         "Meaning": "bài hát, bản nhạc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "この <ruby>曲<rt>きょく</rt></ruby>は とても きれいです。\n(Bản nhạc này rất hay.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "たのしみ",
         "Meaning": "niềm vui, điều vui",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>くのが <ruby>楽<rt>たの</rt></ruby>しみです。\n(Tôi đang mong đợi được đi Nhật.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "もっと",
         "Meaning": "hơn, nữa",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>日本語<rt>にほんご</rt></ruby>が もっと <ruby>上手<rt>じょうず</rt></ruby>に なりたいです。\n(Tôi muốn giỏi tiếng Nhật hơn nữa.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "はじめに",
         "Meaning": "đầu tiên, trước hết",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>始<rt>はじ</rt></ruby>めに <ruby>名前<rt>なまえ</rt></ruby>を <ruby>書<rt>か</rt></ruby>いて ください。\n(Trước hết hãy viết tên vào.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "ひつよう",
         "Meaning": "cần thiết",
         "PartOfSpeech": "Tính từ đuôi な",
-        "LessonId": 61,
+        "LessonId": 171,
         "Example": "<ruby>辞書<rt>じしょ</rt></ruby>は <ruby>勉強<rt>べんきょう</rt></ruby>に <ruby>必要<rt>ひつよう</rt></ruby>です。\n(Từ điển rất cần thiết cho việc học.)"
     }
 ]

@@ -1,0 +1,162 @@
+[
+  {
+    "Character": "希",
+    "Meaning": "Hy (Hy vọng)",
+    "Onyomi": "キ",
+    "Kunyomi": "-",
+    "Example": "希望 (Hy vọng); 希少 (Hiếm có)",
+    "LessonId": 305
+  },
+  {
+    "Character": "望",
+    "Meaning": "Vọng (Hy vọng, mong đợi)",
+    "Onyomi": "ボウ, モウ",
+    "Kunyomi": "のぞ-む",
+    "Example": "希望 (Hy vọng); 望遠鏡 (Kính viễn vọng)",
+    "LessonId": 305
+  },
+  {
+    "Character": "夢",
+    "Meaning": "Mộng (Giấc mơ)",
+    "Onyomi": "ム",
+    "Kunyomi": "ゆめ",
+    "Example": "夢中 (Say sưa); 悪夢 (Ác mộng)",
+    "LessonId": 305
+  },
+  {
+    "Character": " đích",
+    "Meaning": "Đích (Đích, mục tiêu)",
+    "Onyomi": "テキ",
+    "Kunyomi": "まと",
+    "Example": "目的 (Mục đích); 的中 (Trúng đích)",
+    "LessonId": 305
+  },
+  {
+    "Character": "可",
+    "Meaning": "Khả (Có thể)",
+    "Onyomi": "カ",
+    "Kunyomi": "-",
+    "Example": "可能 (Khả năng); 不可 (Không thể)",
+    "LessonId": 305
+  },
+  {
+    "Character": "能",
+    "Meaning": "Năng (Năng lực)",
+    "Onyomi": "ノウ",
+    "Kunyomi": "-",
+    "Example": "能力 (Năng lực); 性能 (Tính năng)",
+    "LessonId": 305
+  },
+  {
+    "Character": "調",
+    "Meaning": "Điều (Điều tra, điều chỉnh)",
+    "Onyomi": "チョウ",
+    "Kunyomi": "しら-べる, ととの-う, ととの-える",
+    "Example": "調査 (Điều tra); 体調 (Tình trạng cơ thể)",
+    "LessonId": 305
+  },
+  {
+    "Character": "選",
+    "Meaning": "Tuyển (Lựa chọn)",
+    "Onyomi": "セン",
+    "Kunyomi": "えら-ぶ",
+    "Example": "選挙 (Bầu cử); 選手 (Tuyển thủ)",
+    "LessonId": 305
+  },
+  {
+    "Character": "面",
+    "Meaning": "Diện (Mặt, diện mạo)",
+    "Onyomi": "メン",
+    "Kunyomi": "おも, おもて, つら",
+    "Example": "面接 (Phỏng vấn); 画面 (Màn hình)",
+    "LessonId": 305
+  },
+  {
+    "Character": "接",
+    "Meaning": "Tiếp (Tiếp xúc, phỏng vấn)",
+    "Onyomi": "セツ",
+    "Kunyomi": "つ-ぐ",
+    "Example": "面接 (Phỏng vấn); 接近 (Tiếp cận)",
+    "LessonId": 305
+  },
+  {
+    "Character": "受",
+    "Meaning": "Thụ (Nhận, dự thi)",
+    "Onyomi": "ジュ",
+    "Kunyomi": "う-ける, う-かる",
+    "Example": "受験 (Dự thi); 受信 (Nhận tin)",
+    "LessonId": 305
+  },
+  {
+    "Character": "落",
+    "Meaning": "Lạc (Rơi, rớt)",
+    "Onyomi": "ラク",
+    "Kunyomi": "お-ちる, お-とす",
+    "Example": "落第 (Thi trượt); 落ち着く (Bình tĩnh)",
+    "LessonId": 305
+  },
+  {
+    "Character": "倍",
+    "Meaning": "Bội (Gấp bội)",
+    "Onyomi": "バイ",
+    "Kunyomi": "-",
+    "Example": "二倍 (Gấp đôi); 倍率 (Tỷ lệ chọi)",
+    "LessonId": 305
+  },
+  {
+    "Character": "率",
+    "Meaning": "Suất (Tỷ lệ)",
+    "Onyomi": "ソツ, リツ",
+    "Kunyomi": "ひき-いる",
+    "Example": "確率 (Xác suất); 効率 (Hiệu suất)",
+    "LessonId": 305
+  },
+  {
+    "Character": "平",
+    "Meaning": "Bình (Bình thường, bằng phẳng)",
+    "Onyomi": "ヘイ, ビョウ",
+    "Kunyomi": "たい-ら, ひら",
+    "Example": "平日 (Ngày thường); 平均 (Trung bình)",
+    "LessonId": 305
+  },
+  {
+    "Character": "均",
+    "Meaning": "Quân (Quân bình)",
+    "Onyomi": "キン",
+    "Kunyomi": "-",
+    "Example": "平均 (Trung bình); 均一 (Đồng nhất)",
+    "LessonId": 305
+  },
+  {
+    "Character": "成",
+    "Meaning": "Thành (Trở thành, hoàn thành)",
+    "Onyomi": "セイ, ジョウ",
+    "Kunyomi": "な-る, な-す",
+    "Example": "成績 (Thành tích); 成功 (Thành công)",
+    "LessonId": 305
+  },
+  {
+    "Character": "績",
+    "Meaning": "Tích (Thành tích)",
+    "Onyomi": "セキ",
+    "Kunyomi": "-",
+    "Example": "成績 (Thành tích); 業績 (Thành quả kinh doanh)",
+    "LessonId": 305
+  },
+  {
+    "Character": "良",
+    "Meaning": "Lương (Tốt)",
+    "Onyomi": "リョウ",
+    "Kunyomi": "よ-い",
+    "Example": "良好 (Tốt đẹp); 良心 (Lương tâm)",
+    "LessonId": 305
+  },
+  {
+    "Character": "悪",
+    "Meaning": "Ác (Xấu, tệ)",
+    "Onyomi": "アク, オ",
+    "Kunyomi": "わる-い",
+    "Example": "悪口 (Nói xấu); 悪化 (Xấu đi)",
+    "LessonId": 305
+  }
+]

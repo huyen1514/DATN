@@ -4,7 +4,7 @@
         "Reading": "できます",
         "Meaning": "có thể",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "すきーが できます。\n(Tôi có thể trượt tuyết.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "あらいます",
         "Meaning": "rửa",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "てを あらいます。\n(Tôi rửa tay.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "ひきます",
         "Meaning": "chơi (nhạc cụ dây, piano...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "ぴあのを ひく ことが できます。\n(Tôi có thể chơi đàn piano.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "うたいます",
         "Meaning": "hát",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "うたを うたいます。\n(Tôi hát một bài hát.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "あつめます",
         "Meaning": "sưu tầm, thu thập",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "きってを あつめるのが しゅみです。\n(Sở thích của tôi là sưu tầm tem.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "すてます",
         "Meaning": "vứt, bỏ đi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "ここに ごみを すてないで ください。\n(Làm ơn đừng vứt rác ở đây.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "かえます",
         "Meaning": "đổi, trao đổi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "おかねを かえます。\n(Tôi đổi tiền.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "うんてんします",
         "Meaning": "lái xe",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "くるまを うんてんする ことが できますか。\n(Bạn có thể lái xe ô tô không?)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "よやくします",
         "Meaning": "đặt trước, hẹn trước",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "ほてるを よやくします。\n(Tôi đặt trước khách sạn.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "けんがくします",
         "Meaning": "tham quan học tập",
         "PartOfSpeech": "Động từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "こうじょうを けんがくします。\n(Tôi đi tham quan nhà máy.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "ぴあの",
         "Meaning": "đàn piano",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "ぴあのを ひきます。\n(Tôi chơi đàn piano.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "めーとる",
         "Meaning": "mét",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "50めーとる およぐ ことが できます。\n(Tôi có thể bơi được 50 mét.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "こくさい～",
         "Meaning": "quốc tế ~",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "こくさいかいぎが あります。\n(Có một hội nghị quốc tế.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "げんきん",
         "Meaning": "tiền mặt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "げんきんで はらいます。\n(Tôi trả bằng tiền mặt.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "しゅみ",
         "Meaning": "sở thích",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "しゅみは なんですか。\n(Sở thích của bạn là gì?)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "にっき",
         "Meaning": "nhật ký",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "まいにち にっきを かいています。\n(Mỗi ngày tôi đều viết nhật ký.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "おいのり",
         "Meaning": "việc cầu nguyện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "おいのりを します。\n(Tôi cầu nguyện.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "かちょう",
         "Meaning": "tổ trưởng, trưởng nhóm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "かちょうは どこですか。\n(Tổ trưởng ở đâu vậy?)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "ぶちょう",
         "Meaning": "trưởng phòng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "ぶちょうに ほうこくします。\n(Tôi báo cáo với trưởng phòng.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "しゃちょう",
         "Meaning": "giám đốc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "しゃちょうに あいます。\n(Tôi gặp giám đốc.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "どうぶつ",
         "Meaning": "động vật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "どうぶつが すきですか。\n(Bạn có thích động vật không?)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "うま",
         "Meaning": "con ngựa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "うまに のった ことが ありますか。\n(Bạn đã từng cưỡi ngựa chưa?)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "なかなか",
         "Meaning": "mãi mà, không dễ dàng (dùng với phủ định)",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "にほんでは なかなか うまを みる ことが できません。\n(Ở Nhật Bản mãi mà chẳng thể thấy được ngựa.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "ぜひ",
         "Meaning": "nhất định",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 23,
+        "LessonId": 86,
         "Example": "ぜひ あそびに きて ください。\n(Nhất định hãy đến chơi nhé.)"
     }
 ]

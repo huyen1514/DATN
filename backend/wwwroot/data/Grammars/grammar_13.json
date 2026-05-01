@@ -4,34 +4,34 @@
         "Structure": "Danh từ が ほしいです",
         "Meaning": "Mẫu câu này dùng để diễn tả nguyện vọng muốn sở hữu một đồ vật hoặc một đối tượng nào đó của người nói. \n- Trợ từ 「が」 được dùng để chỉ đối tượng mong muốn. \n- Phủ định: 「ほしい」 chia như tính từ đuôi い thành 「ほしくない です」.\n- Lưu ý: Không dùng mẫu này để nói về mong muốn của người thứ ba và không dùng để mời mọc người khác (ví dụ: không nói 'Bạn muốn cà phê không?' bằng mẫu này).",
         "Example": "わたしは あたらしい ぱそこんが ほしいです。\nーいま なにが いちばん ほしいですか。\n(Tôi muốn có một cái máy tính mới.\n-Bây giờ bạn muốn cái gì nhất?)",
-        "LessonId": 42
+        "LessonId": 62
     },
     {
         "GrammarName": "Mong muốn thực hiện hành động: Động từ thể ます + たいです",
         "Structure": "V (bỏ ます) + たいです",
         "Meaning": "Dùng để diễn tả mong muốn thực hiện một hành động nào đó của người nói. \n- Cách chia: Bỏ đuôi 「ます」 của động từ và thêm 「たいです」. \n- Trợ từ: Với mẫu câu này, trợ từ 「を」 có thể được thay thế bằng 「が」, còn các trợ từ khác như に, へ, と thì giữ nguyên.\n- Cách chia phủ định/quá khứ: Chia giống hệt tính từ đuôi い (Vたい -> Vたくない / Vたかったです).",
         "Example": "にほんへ いきたいです。\nーおなかが いたいですから, なにも たべたくないです。\n(Tôi muốn đi Nhật.\n-Vì đau bụng nên tôi không muốn ăn gì cả.)",
-        "LessonId": 42
+        "LessonId": 62
     },
     {
         "GrammarName": "Mục đích của chuyển động: [Địa điểm] へ [Mục đích] に いきます",
         "Structure": "N (địa điểm) へ [V bỏ ます / N danh động từ] に いきます / きます / かえります",
         "Meaning": "Dùng để diễn tả mục đích của việc đi/đến/về một nơi nào đó. \n- Phần mục đích đứng trước trợ từ 「に」 có thể là một động từ bỏ đuôi 「ます」 hoặc một danh từ (thường là danh động từ - các từ có thể đi với 'suru').\n- Trợ từ 「に」 ở đây biểu thị mục đích hành động.",
         "Example": "こうえんへ さんぽに いきます。\nーにほんへ びじゅつの べんきょうに きました。\n(Tôi đi dạo ở công viên.\n-Tôi đã đến Nhật để học về mỹ thuật.)",
-        "LessonId": 42
+        "LessonId": 62
     },
     {
         "GrammarName": "Đại từ bất định: どこか / なにか",
         "Structure": "どこか / なにか",
         "Meaning": "Khi thêm trợ từ 「か」 vào sau các nghi vấn từ, chúng ta sẽ được các đại từ bất định. \n- 「どこか」: Một nơi nào đó.\n- 「なにか」: Một cái gì đó.\n- Điểm đặc biệt: Các trợ từ như 「へ」, 「が」, 「を」 có thể được lược bỏ khi đứng sau các từ này.",
         "Example": "ふゆやすみは どこかへ いきましたか。\nーのどが かわきましたから, なにか のみたいです。\n(Kỳ nghỉ đông bạn có đi đâu đó không?\n-Vì khát nước nên tôi muốn uống cái gì đó.)",
-        "LessonId": 42
+        "LessonId": 62
     },
     {
         "GrammarName": "Mẫu câu đề nghị: Động từ ましょうか",
         "Structure": "Động từ (thể ます) ましょうか",
         "Meaning": "Dùng khi người nói muốn đưa ra lời đề nghị làm một việc gì đó cho người nghe (giúp đỡ). \n- Trả lời khi đồng ý: 「すみません. おねがいします」(Cảm ơn, nhờ bạn nhé).\n- Trả lời khi từ chối khéo: 「いいえ, けっこうです」(Không, tôi ổn rồi).",
         "Example": "あついですね. まどを あけましょうか。\nーすみません. おねがいします。\n(Nóng nhỉ. Tôi mở cửa sổ giúp bạn nhé?\n-Cảm ơn, nhờ bạn nhé.)",
-        "LessonId": 42
+        "LessonId": 62
     }
 ]

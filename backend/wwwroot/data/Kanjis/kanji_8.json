@@ -5,7 +5,7 @@
         "Onyomi": "フ",
         "Kunyomi": "ちち",
         "Example": "父の日 (ちちのひ): Ngày của Cha; 祖父 (そふ): Ông ",
-        "LessonId": 1009
+        "LessonId": 40
     },
     {
         "Character": "母",
@@ -13,7 +13,7 @@
         "Onyomi": "ボ",
         "Kunyomi": "はは",
         "Example": "母の日 (ははのひ): Ngày của Mẹ; 祖母 (そぼ): Bà ",
-        "LessonId": 1009
+        "LessonId": 40
     },
     {
         "Character": "子",
@@ -21,7 +21,7 @@
         "Onyomi": "シ, ス",
         "Kunyomi": "こ",
         "Example": "子ども (こども): Trẻ em; お子さん (おこさん): Con (của người khác) ",
-        "LessonId": 1009
+        "LessonId": 40
     },
     {
         "Character": "男",
@@ -29,7 +29,7 @@
         "Onyomi": "ダン, ナン",
         "Kunyomi": "おとこ",
         "Example": "男の人 (おとこのひと): Người đàn ông; 男の子 (おとこのこ): Bé trai ",
-        "LessonId": 1009
+        "LessonId": 40
     },
     {
         "Character": "女",
@@ -37,7 +37,7 @@
         "Onyomi": "ジョ",
         "Kunyomi": "おんな",
         "Example": "女の人 (おんなのひと): Người phụ nữ; 彼女 (かのじょ): Cô ấy/Bạn gái [cite: 32, 132]",
-        "LessonId": 1009
+        "LessonId": 40
     },
     {
         "Character": "犬",
@@ -45,7 +45,7 @@
         "Onyomi": "ケン",
         "Kunyomi": "いぬ",
         "Example": "犬 (いぬ): Con chó; 子犬 (こいぬ): Chó con [cite: 33, 133]",
-        "LessonId": 1009
+        "LessonId": 40
     },
     {
         "Character": "鳥",
@@ -53,6 +53,6 @@
         "Onyomi": "チョウ",
         "Kunyomi": "とり",
         "Example": "小鳥 (ことり): Chim nhỏ; 白鳥 (はくちょう): Thiên nga [cite: 33, 133]",
-        "LessonId": 1009
+        "LessonId": 40
     }
 ]

@@ -1,0 +1,186 @@
+[
+    {
+        "Character": "家",
+        "Meaning": "Nhà, Gia đình (Gia)",
+        "Onyomi": "カ, ケ",
+        "Kunyomi": "いえ, や",
+        "Example": "家族 (かぞく): Gia đình; 大家 (おおや): Chủ nhà",
+        "LessonId": 130
+    },
+    {
+        "Character": "族",
+        "Meaning": "Gia tộc, Họ hàng (Tộc)",
+        "Onyomi": "ゾク",
+        "Kunyomi": "",
+        "Example": "家族 (かぞく): Gia đình; 水族館 (すいぞくかん): Thủy cung",
+        "LessonId": 130
+    },
+    {
+        "Character": "兄",
+        "Meaning": "Anh trai (Huynh)",
+        "Onyomi": "キョウ, ケイ",
+        "Kunyomi": "あに",
+        "Example": "兄弟 (きょうだい): Anh em; 義兄 (ぎけい): Anh rể",
+        "LessonId": 130
+    },
+    {
+        "Character": "弟",
+        "Meaning": "Em trai (Đệ)",
+        "Onyomi": "テイ, ダイ, デ",
+        "Kunyomi": "おとうと",
+        "Example": "兄弟 (きょうだい): Anh em; 義弟 (ぎてい): Em rể",
+        "LessonId": 130
+    },
+    {
+        "Character": "姉",
+        "Meaning": "Chị gái (Tỷ)",
+        "Onyomi": "シ",
+        "Kunyomi": "あね",
+        "Example": "姉妹 (しまい): Chị em; お姉さん (おねえさん): Chị gái",
+        "LessonId": 130
+    },
+    {
+        "Character": "妹",
+        "Meaning": "Em gái (Muội)",
+        "Onyomi": "マイ",
+        "Kunyomi": "いもうと",
+        "Example": "姉妹 (しまい): Chị em; 妹 (いもうと): Em gái",
+        "LessonId": 130
+    },
+    {
+        "Character": "私",
+        "Meaning": "Tôi, Cá nhân (Tư)",
+        "Onyomi": "シ",
+        "Kunyomi": "わたし, わたくし",
+        "Example": "私立 (しりつ): Tư thục; 私 (わたし): Tôi",
+        "LessonId": 130
+    },
+    {
+        "Character": "育",
+        "Meaning": "Nuôi dưỡng, Giáo dục (Dục)",
+        "Onyomi": "イク",
+        "Kunyomi": "そだ-つ, そだ-てる",
+        "Example": "体育 (たいいく): Thể dục; 子育て (こそだて): Việc nuôi con",
+        "LessonId": 130
+    },
+    {
+        "Character": "部",
+        "Meaning": "Bộ phận, Câu lạc bộ (Bộ)",
+        "Onyomi": "ブ",
+        "Kunyomi": "",
+        "Example": "学部 (がくぶ): Khoa/Ngành học; 部長 (ぶちょう): Trưởng phòng",
+        "LessonId": 130
+    },
+    {
+        "Character": "屋",
+        "Meaning": "Cửa hàng, Mái nhà (Ốc)",
+        "Onyomi": "オク",
+        "Kunyomi": "や",
+        "Example": "部屋 (へや): Căn phòng; 屋上 (おくじょう): Sân thượng",
+        "LessonId": 130
+    },
+    {
+        "Character": "広",
+        "Meaning": "Rộng rãi (Quảng)",
+        "Onyomi": "コウ",
+        "Kunyomi": "ひろ-い, ひろ-がる, ひろ-げる",
+        "Example": "広い (ひろい): Rộng; 広大 (こうだい): Rộng lớn",
+        "LessonId": 130
+    },
+    {
+        "Character": "低",
+        "Meaning": "Thấp (Đê)",
+        "Onyomi": "テイ",
+        "Kunyomi": "ひく-い",
+        "Example": "低い (ひくい): Thấp; 低下 (ていか): Sự suy giảm",
+        "LessonId": 130
+    },
+    {
+        "Character": "近",
+        "Meaning": "Gần (Cận)",
+        "Onyomi": "キン",
+        "Kunyomi": "ちか-い",
+        "Example": "近い (ちかい): Gần; 最近 (さいきん): Gần đây",
+        "LessonId": 130
+    },
+    {
+        "Character": "遠",
+        "Meaning": "Xa (Viễn)",
+        "Onyomi": "エン, オン",
+        "Kunyomi": "とお-い",
+        "Example": "遠い (とおい): Xa; 遠慮 (えんりょ): Ngần ngại/Khách sáo",
+        "LessonId": 130
+    },
+    {
+        "Character": "静",
+        "Meaning": "Yên tĩnh (Tĩnh)",
+        "Onyomi": "セイ, ジョウ",
+        "Kunyomi": "しず-か, しず-まる",
+        "Example": "静か (しずか): Yên tĩnh; 冷静 (れいせい): Bình tĩnh",
+        "LessonId": 130
+    },
+    {
+        "Character": "洋",
+        "Meaning": "Đại dương, Phương Tây (Dương)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "",
+        "Example": "洋服 (ようふく): Âu phục; 西洋 (せいよう): Phương Tây",
+        "LessonId": 130
+    },
+    {
+        "Character": "服",
+        "Meaning": "Quần áo, Phục tùng (Phục)",
+        "Onyomi": "フク",
+        "Kunyomi": "",
+        "Example": "洋服 (ようふく): Âu phục; 制服 (せいふく): Đồng phục",
+        "LessonId": 130
+    },
+    {
+        "Character": "短",
+        "Meaning": "Ngắn (Đoản)",
+        "Onyomi": "タン",
+        "Kunyomi": "みじか-い",
+        "Example": "短い (みじかい): Ngắn; 短気 (たんき): Nóng nảy",
+        "LessonId": 130
+    },
+    {
+        "Character": "玉",
+        "Meaning": "Quả cầu, Ngọc (Ngọc)",
+        "Onyomi": "ギョク",
+        "Kunyomi": "たま",
+        "Example": "水玉 (みずたま): Chấm bi; 十円玉 (じゅうえんだま): Đồng 10 yên",
+        "LessonId": 130
+    },
+    {
+        "Character": "毛",
+        "Meaning": "Lông, Tóc (Mao)",
+        "Onyomi": "モウ",
+        "Kunyomi": "け",
+        "Example": "髪の毛 (かみのけ): Sợi tóc; 毛布 (もうふ): Chăn",
+        "LessonId": 130
+    },
+    {
+        "Character": "糸",
+        "Meaning": "Sợi chỉ (Mịch)",
+        "Onyomi": "シ",
+        "Kunyomi": "いと",
+        "Example": "毛糸 (けいと): Sợi len; 糸 (いと): Sợi chỉ",
+        "LessonId": 130
+    },
+    {
+        "Character": "光",
+        "Meaning": "Ánh sáng (Quang)",
+        "Onyomi": "コウ",
+        "Kunyomi": "ひか-る, ひかり",
+        "Example": "光る (ひかる): Tỏa sáng; 日光 (にっこう): Ánh nắng",
+        "LessonId": 130
+    },
+    {
+        "Character": "衣",
+        "Meaning": "Áo, Y phục (Y)",
+        "Onyomi": "イ",
+        "Kunyomi": "ころも",
+        "Example": "衣服 (いふく): Y phục; 衣替え (ころもがえ): Thay đổi trang phục theo mùa",
+        "LessonId": 130
+    }
+]

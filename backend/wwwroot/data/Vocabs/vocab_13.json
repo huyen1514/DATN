@@ -4,7 +4,7 @@
         "Reading": "あそびます",
         "Meaning": "chơi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "どこへ あそびに いきますか。\n(Bạn đi đâu chơi vậy?)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "およぎます",
         "Meaning": "bơi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "ぷーるで およぎます。\n(Tôi bơi ở bể bơi.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "むかえます",
         "Meaning": "đón",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "えきへ ともだちを むかえに いきます。\n(Tôi đi đến nhà ga để đón bạn.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "つかれます",
         "Meaning": "mệt",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "しごとで つかれました。\n(Tôi đã mệt vì công việc.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "だします",
         "Meaning": "gửi [thư]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "てがみを だします。\n(Tôi gửi thư.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "はいります",
         "Meaning": "vào [quán giải khát]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "きっさてんに はいります。\n(Tôi vào quán giải khát.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "でます",
         "Meaning": "ra khỏi [quán giải khát]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "きっさてんを でます。\n(Tôi rời khỏi quán giải khát.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "けっこんします",
         "Meaning": "kết hôn",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "らいねん けっこんします。\n(Sang năm tôi sẽ kết hôn.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "かいものします",
         "Meaning": "mua sắm",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "デパートで かいものします。\n(Tôi mua sắm ở cửa hàng bách hóa.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "しょくじします",
         "Meaning": "ăn cơm, dùng bữa",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "いっしょに しょくじしませんか。\n(Cùng dùng bữa với tôi không?)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "さんぽします",
         "Meaning": "đi dạo [ở công viên]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "こうえんを さんぽします。\n(Tôi đi dạo ở công viên.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "たいへん",
         "Meaning": "vất vả, ghê gớm",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "しごとは たいへんですか。\n(Công việc có vất vả không?)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "ほしい",
         "Meaning": "muốn có [đồ vật]",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "くるまが ほしいです。\n(Tôi muốn có một chiếc ô tô.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "ひろい",
         "Meaning": "rộng",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "わたしの へやは ひろいです。\n(Phòng của tôi rộng.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "せまい",
         "Meaning": "hẹp",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "この みちは せまいですね。\n(Con đường này hẹp nhỉ.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "しやくしょ",
         "Meaning": "văn phòng hành chính thành phố",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "しやくしょへ いきます。\n(Tôi đi đến văn phòng thành phố.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "ぷーる",
         "Meaning": "bể bơi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "ぷーるに はいります。\n(Tôi vào bể bơi.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "かわ",
         "Meaning": "sông",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "かわで およぎます。\n(Tôi bơi ở sông.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "けいざい",
         "Meaning": "kinh tế",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "だいがくで けいざいを べんきょうします。\n(Tôi học kinh tế ở đại học.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "びじゅつ",
         "Meaning": "mỹ thuật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "びじゅつかんへ いきます。\n(Tôi đi đến bảo tàng mỹ thuật.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "つり",
         "Meaning": "việc câu cá",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "つりを します。\n(Tôi đi câu cá.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "すきー",
         "Meaning": "việc trượt tuyết",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "ふゆに すきーを します。\n(Tôi trượt tuyết vào mùa đông.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "しゅうまつ",
         "Meaning": "cuối tuần",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "しゅうまつ なにを しますか。\n(Cuối tuần bạn làm gì?)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "なにか",
         "Meaning": "cái gì đó",
         "PartOfSpeech": "Đại từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "なにか のみたいです。\n(Tôi muốn uống cái gì đó.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "どこか",
         "Meaning": "đâu đó",
         "PartOfSpeech": "Đại từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "どこかへ いきたいです。\n(Tôi muốn đi đâu đó chơi.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "おなかがすきました",
         "Meaning": "đói bụng",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "おなかが すきましたね。\n(Đói bụng rồi nhỉ.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "おなかがいっぱいです",
         "Meaning": "no bụng",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "おなかが いっぱいです。\n(Tôi no bụng rồi.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "のどがかわきました",
         "Meaning": "khát nước",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "のどが かわきました。\n(Tôi khát nước.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "そうしましょう",
         "Meaning": "nhất trí, chúng ta hãy làm như thế",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "ええ、そうしましょう。\n(Vâng, chúng ta hãy làm như thế.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "ごちゅうもんは",
         "Meaning": "anh/chị dùng món gì?",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 18,
+        "LessonId": 61,
         "Example": "ごちゅうもんは なににしますか。\n(Anh/chị dùng món gì ạ?)"
     }
 ]

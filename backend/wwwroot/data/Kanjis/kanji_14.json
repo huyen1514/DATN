@@ -5,7 +5,7 @@
         "Onyomi": "ジ",
         "Kunyomi": "とき",
         "Example": "九時 (くじ): 9 giờ; 時々 (ときどき): Thỉnh thoảng; 時間 (じかん): Thời gian",
-        "LessonId": 1015
+        "LessonId": 70
     },
     {
         "Character": "間",
@@ -13,7 +13,7 @@
         "Onyomi": "カン, ケン",
         "Kunyomi": "あいだ, ま",
         "Example": "時間 (じかん): Thời gian; 間 (あいだ): Ở giữa; 一週間 (いっしゅうかん): 1 tuần",
-        "LessonId": 1015
+        "LessonId": 70
     },
     {
         "Character": "半",
@@ -21,7 +21,7 @@
         "Onyomi": "ハン",
         "Kunyomi": "なか.ば",
         "Example": "九時半 (くじはん): 9 giờ rưỡi; 半分 (はんぶん): Một nửa; 半年 (はんとし): Nửa năm",
-        "LessonId": 1015
+        "LessonId": 70
     },
     {
         "Character": "分",
@@ -29,7 +29,7 @@
         "Onyomi": "フン, ブン, ブ",
         "Kunyomi": "わ.ける, わ.かる",
         "Example": "五分 (ごふん): 5 phút; 十分 (じゅうぶん/じっぷん): 10 phút/Đầy đủ; 分かる (わかる): Hiểu",
-        "LessonId": 1015
+        "LessonId": 70
     },
     {
         "Character": "今",
@@ -37,7 +37,7 @@
         "Onyomi": "コン, キン",
         "Kunyomi": "いま",
         "Example": "今 (いま): Bây giờ; 今日 (きょう): Hôm nay; 今月 (こんげつ): Tháng này",
-        "LessonId": 1015
+        "LessonId": 70
     },
     {
         "Character": "何",
@@ -45,7 +45,7 @@
         "Onyomi": "カ",
         "Kunyomi": "なに, なん",
         "Example": "何時 (なんじ): Mấy giờ; 何人 (なんにん): Mấy người; 何 (なに): Cái gì",
-        "LessonId": 1015
+        "LessonId": 70
     },
     {
         "Character": "夕",
@@ -53,7 +53,7 @@
         "Onyomi": "セキ",
         "Kunyomi": "ゆう",
         "Example": "夕方 (ゆうがた): Chiều tà; 夕食 (ゆうしょく): Bữa tối; 夕日 (ゆうひ): Hoàng hôn",
-        "LessonId": 1015
+        "LessonId": 70
     },
     {
         "Character": "方",
@@ -61,6 +61,6 @@
         "Onyomi": "ホウ",
         "Kunyomi": "かた",
         "Example": "夕方 (ゆうがた): Chiều tà; あの方 (あのかた): Vị kia; 読み方 (よみかた): Cách đọc",
-        "LessonId": 1015
+        "LessonId": 70
     }
 ]

@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "角",
+        "Meaning": "Gác (Góc, sừng)",
+        "Onyomi": "カク",
+        "Kunyomi": "かど, つの",
+        "Example": "角度 (かくど): Góc độ; 角 (かど): Góc đường",
+        "LessonId": 325
+    },
+    {
+        "Character": "曲",
+        "Meaning": "Khúc (Cong, rẽ, ca khúc)",
+        "Onyomi": "キョク",
+        "Kunyomi": "ま-がる, ま-げる",
+        "Example": "曲がる (まがる): Rẽ/Cong; 名曲 (めいきょく): Bản nhạc nổi tiếng",
+        "LessonId": 325
+    },
+    {
+        "Character": "折",
+        "Meaning": "Chiết (Bẻ, gập)",
+        "Onyomi": "セツ",
+        "Kunyomi": "お-れる, お-る, お-り",
+        "Example": "左折 (させつ): Rẽ trái; 折り紙 (おりがみ): Nghệ thuật xếp giấy",
+        "LessonId": 325
+    },
+    {
+        "Character": "路",
+        "Meaning": "Lộ (Đường xá)",
+        "Onyomi": "ロ",
+        "Kunyomi": "じ",
+        "Example": "道路 (どうろ): Con đường; 線路 (せんろ): Đường ray",
+        "LessonId": 325
+    },
+    {
+        "Character": "転",
+        "Meaning": "Chuyển (Lăn, ngã, chuyển động)",
+        "Onyomi": "テン",
+        "Kunyomi": "ころ-がる, ころ-がす, ころ-ぶ",
+        "Example": "運転 (うんてん): Lái xe; 自転車 (じてんしゃ): Xe đạp",
+        "LessonId": 325
+    },
+    {
+        "Character": "倒",
+        "Meaning": "Đảo (Đổ, ngã)",
+        "Onyomi": "トウ",
+        "Kunyomi": "たお-れる, たお-す",
+        "Example": "倒れる (たおれる): Bị đổ/ngã; 圧倒的 (あっとうてき): Một cách áp đảo",
+        "LessonId": 325
+    },
+    {
+        "Character": "突",
+        "Meaning": "Đột (Đâm, chọc, đột nhiên)",
+        "Onyomi": "トツ",
+        "Kunyomi": "つ-く",
+        "Example": "衝突 (しょうとつ): Xung đột/Va chạm; 突然 (とつぜん): Đột nhiên",
+        "LessonId": 325
+    },
+    {
+        "Character": "追",
+        "Meaning": "Truy (Đuổi theo)",
+        "Onyomi": "ツイ",
+        "Kunyomi": "お-う",
+        "Example": "追突 (ついとつ): Đâm từ phía sau; 追い越す (おいこす): Vượt qua",
+        "LessonId": 325
+    },
+    {
+        "Character": "置",
+        "Meaning": "Trí (Đặt, để)",
+        "Onyomi": "チ",
+        "Kunyomi": "お-く",
+        "Example": "位置 (いち): Vị trí; 設置 (せっち): Thiết lập/Cài đặt",
+        "LessonId": 325
+    },
+    {
+        "Character": "位",
+        "Meaning": "Vị (Vị trí, khoảng chừng)",
+        "Onyomi": "イ",
+        "Kunyomi": "くらい",
+        "Example": "首位 (しゅい): Vị trí đứng đầu; 第一位 (だいいちい): Vị trí thứ nhất",
+        "LessonId": 325
+    },
+    {
+        "Character": "横",
+        "Meaning": "Hoành (Chiều ngang, bên cạnh)",
+        "Onyomi": "オウ",
+        "Kunyomi": "よこ",
+        "Example": "横断 (おうだん): Băng qua; 横 (よこ): Bên cạnh/Chiều ngang",
+        "LessonId": 325
+    },
+    {
+        "Character": "央",
+        "Meaning": "Ương (Trung tâm)",
+        "Onyomi": "オウ",
+        "Kunyomi": "-",
+        "Example": "中央 (ちゅうおう): Trung tâm",
+        "LessonId": 325
+    },
+    {
+        "Character": "直",
+        "Meaning": "Trực (Thẳng, sửa chữa)",
+        "Onyomi": "チョク, ジキ",
+        "Kunyomi": "ただ-ちに, なお-る, なお-す",
+        "Example": "正直 (しょうじき): Thành thật; trực tiếp (ちょくせつ): Trực tiếp",
+        "LessonId": 325
+    },
+    {
+        "Character": "線",
+        "Meaning": "Tuyến (Đường kẻ, tuyến đường)",
+        "Onyomi": "セン",
+        "Kunyomi": "-",
+        "Example": "直線 (ちょくせん): Đường thẳng; 下線 (かせん): Đường gạch chân",
+        "LessonId": 325
+    },
+    {
+        "Character": "逆",
+        "Meaning": "Nghịch (Ngược lại)",
+        "Onyomi": "ギャク",
+        "Kunyomi": "さか, さか-らう",
+        "Example": "逆 (ぎゃく): Ngược lại; 逆転 (ぎゃくてん): Đảo ngược tình thế",
+        "LessonId": 325
+    },
+    {
+        "Character": "側",
+        "Meaning": "Trắc (Phía, bên)",
+        "Onyomi": "ソク",
+        "Kunyomi": "がわ",
+        "Example": "右側 (みぎがわ): Phía bên phải; 側面 (そくめん): Mặt bên",
+        "LessonId": 325
+    },
+    {
+        "Character": "注",
+        "Meaning": "Chú (Rót, chú ý)",
+        "Onyomi": "チュウ",
+        "Kunyomi": "そそ-ぐ",
+        "Example": "注意 (ちゅうい): Chú ý; 注目 (ちゅうもく): Chú ý/Quan tâm",
+        "LessonId": 325
+    },
+    {
+        "Character": "意",
+        "Meaning": "Ý (Ý nghĩa, ý chí)",
+        "Onyomi": "イ",
+        "Kunyomi": "-",
+        "Example": "意味 (いみ): Ý nghĩa; 意志 (いし): Ý chí",
+        "LessonId": 325
+    },
+    {
+        "Character": "橋",
+        "Meaning": "Kiều (Cái cầu)",
+        "Onyomi": "キョウ",
+        "Kunyomi": "はし",
+        "Example": "歩道橋 (ほどうきょう): Cầu vượt bộ hành; 橋 (はし): Cái cầu",
+        "LessonId": 325
+    },
+    {
+        "Character": "進",
+        "Meaning": "Tiến (Tiến lên)",
+        "Onyomi": "シン",
+        "Kunyomi": "すす-む, すすす-める",
+        "Example": "進歩 (しんぽ): Tiến bộ; 進む (すすむ): Tiến lên",
+        "LessonId": 325
+    }
+]

@@ -4,7 +4,7 @@
         "Reading": "つけます",
         "Meaning": "bật (điện, máy điều hòa...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "でんきを つけます。\n(Tôi bật điện.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "けします",
         "Meaning": "tắt (điện, máy điều hòa...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "てれびを けして ください。\n(Hãy tắt tivi đi.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "あけます",
         "Meaning": "mở (cửa, cửa sổ...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "どあを あけます。\n(Tôi mở cửa.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "しめます",
         "Meaning": "đóng (cửa, cửa sổ...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "まどを しめて ください。\n(Hãy đóng cửa sổ lại.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "いそぎます",
         "Meaning": "vội, gấp",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "いそいで ください。\n(Hãy nhanh lên/Hãy khẩn trương lên.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "まちます",
         "Meaning": "đợi, chờ",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "ちょっと まって ください。\n(Hãy chờ một chút.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "もちます",
         "Meaning": "cầm, mang",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "にもつを もちます。\n(Tôi cầm hành lý.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "とります",
         "Meaning": "lấy, chuyển (giúp ai đó đồ vật)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "しおを とって ください。\n(Hãy lấy giúp tôi lọ muối.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "てつだいます",
         "Meaning": "giúp, giúp đỡ",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "しごとを てつだいます。\n(Tôi giúp đỡ công việc.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "よびます",
         "Meaning": "gọi (taxi, gọi tên...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "たくしーを よびます。\n(Tôi gọi taxi.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "はなします",
         "Meaning": "nói chuyện",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "にほんごで はなします。\n(Nói chuyện bằng tiếng Nhật.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "つかいます",
         "Meaning": "dùng, sử dụng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "ぱそこんを つかいます。\n(Tôi sử dụng máy tính.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "とめます",
         "Meaning": "dừng, đỗ",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "ここに くるまを とめて ください。\n(Hãy đỗ xe ở đây.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "みせます",
         "Meaning": "cho xem",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "ぱすぽーとを みせて ください。\n(Hãy cho tôi xem hộ chiếu.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "おしえます",
         "Meaning": "dạy, nói cho biết (địa chỉ...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "じゅうしょを おしえます。\n(Tôi nói cho biết địa chỉ.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "すわります",
         "Meaning": "ngồi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "そこに すわって ください。\n(Hãy ngồi xuống đó.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "たちます",
         "Meaning": "đứng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "たって ください。\n(Làm ơn hãy đứng lên.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "はいります",
         "Meaning": "vào [quán cà phê]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "きっさてんに はいります。\n(Tôi vào quán cà phê.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "でます",
         "Meaning": "ra khỏi [quán cà phê]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "きっさてんを でます。\n(Tôi ra khỏi quán cà phê.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "ふります",
         "Meaning": "rơi (mưa, tuyết...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "あめが ふっています。\n(Trời đang mưa.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "こぴーします",
         "Meaning": "copy, photocopy",
         "PartOfSpeech": "Động từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "これを 10まい こぴーして ください。\n(Hãy photocopy cái này thành 10 bản.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "でんき",
         "Meaning": "điện, đèn điện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "でんきを けしました。\n(Tôi đã tắt điện.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "えあこん",
         "Meaning": "máy điều hòa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "えあこんを つけます。\n(Tôi bật máy điều hòa.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "ぱすぽーと",
         "Meaning": "hộ chiếu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "ぱすぽーとを もっています。\n(Tôi đang cầm hộ chiếu.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "なまえ",
         "Meaning": "tên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "なまえを かいて ください。\n(Hãy viết tên vào đây.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "じゅうしょ",
         "Meaning": "địa chỉ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "じゅうしょは どこですか。\n(Địa chỉ của bạn ở đâu?)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "ちず",
         "Meaning": "bản đồ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "ちずを かきます。\n(Tôi vẽ bản đồ.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "しお",
         "Meaning": "muối",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "しおを とって ください。\n(Hãy lấy giúp tôi lọ muối.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "さとう",
         "Meaning": "đường",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "こーひーに さとうを いれます。\n(Cho đường vào cà phê.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "よみかた",
         "Meaning": "cách đọc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "この かんじの よみかたを おしえて ください。\n(Hãy chỉ cho tôi cách đọc chữ Kanji này.)"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "～かた",
         "Meaning": "cách ~",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "つかいかたが わかりますか。\n(Bạn có biết cách dùng không?)"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "ゆっくり",
         "Meaning": "chậm, thong thả",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "ゆっくり はなして ください。\n(Làm ơn hãy nói chậm lại.)"
     },
     {
@@ -260,7 +260,7 @@
         "Reading": "すぐ",
         "Meaning": "ngay lập tức",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "すぐ いきます。\n(Tôi đi ngay đây.)"
     },
     {
@@ -268,7 +268,7 @@
         "Reading": "また",
         "Meaning": "lại (đến, gặp lại...)",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "また あした きて ください。\n(Ngày mai hãy lại đến nhé.)"
     },
     {
@@ -276,7 +276,7 @@
         "Reading": "あとで",
         "Meaning": "sau đây, sau đó",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "あとで でんわを かけます。\n(Tôi sẽ gọi điện thoại sau.)"
     },
     {
@@ -284,7 +284,7 @@
         "Reading": "もうすこし",
         "Meaning": "thêm một chút nữa",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "もうすこし まって ください。\n(Hãy chờ thêm một chút nữa.)"
     },
     {
@@ -292,7 +292,7 @@
         "Reading": "もう～",
         "Meaning": "thêm ~",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 19,
+        "LessonId": 66,
         "Example": "もう いちど おねがいします。\n(Làm ơn xin hãy lặp lại một lần nữa.)"
     }
 ]

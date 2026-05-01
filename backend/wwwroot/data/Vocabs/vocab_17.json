@@ -4,7 +4,7 @@
         "Reading": "おぼえます",
         "Meaning": "nhớ, thuộc lòng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "かんじを おぼえます。\n(Tôi học thuộc chữ Kanji.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "わすれます",
         "Meaning": "quên",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "かさを わすれました。\n(Tôi đã quên ô.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "はらいます",
         "Meaning": "trả tiền",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "おかねを はらいます。\n(Tôi trả tiền.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "かえします",
         "Meaning": "trả lại",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "ほんを かえして ください。\n(Hãy trả lại sách cho tôi.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "でかけます",
         "Meaning": "ra ngoài",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "ひとりで でかけます。\n(Tôi đi ra ngoài một mình.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "ぬぎます",
         "Meaning": "cởi (quần áo, giày...)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "ここで くつを ぬいで ください。\n(Hãy cởi giày ở đây.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "もっていきます",
         "Meaning": "mang đi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "かさを もっていきます。\n(Tôi mang ô đi.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "もってきます",
         "Meaning": "mang đến",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "しゃしんを もってきて ください。\n(Hãy mang ảnh đến đây.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "しんぱいします",
         "Meaning": "lo lắng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "しんぱいしないで ください。\n(Đừng lo lắng quá.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "ざんぎょうします",
         "Meaning": "làm thêm giờ",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "きょうは ざんぎょうします。\n(Hôm nay tôi làm thêm giờ.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "しゅっちょうします",
         "Meaning": "đi công tác",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "らいしゅう おおさかへ しゅっちょうします。\n(Tuần sau tôi đi công tác ở Osaka.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "のみます",
         "Meaning": "uống [thuốc]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "くすりを のんで ください。\n(Hãy uống thuốc đi.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "はいります",
         "Meaning": "tắm [bồn tắm]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "おふろに はいります。\n(Tôi đi tắm bồn.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "たいせつ",
         "Meaning": "quan trọng",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "これは たいせつな しりょうです。\n(Đây là tài liệu quan trọng.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "だいじょうぶ",
         "Meaning": "không sao, ổn",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "だいじょうぶですよ。\n(Không sao đâu mà.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "あぶない",
         "Meaning": "nguy hiểm",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "あぶないですから、 きを つけて ください。\n(Vì nguy hiểm nên hãy cẩn thận.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "もんだい",
         "Meaning": "vấn đề, câu hỏi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "もんだいを よみます。\n(Tôi đọc câu hỏi.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "こたえ",
         "Meaning": "câu trả lời",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "こたえを かいて ください。\n(Hãy viết câu trả lời.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "きんえん",
         "Meaning": "cấm hút thuốc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "ここは きんえんです。\n(Ở đây cấm hút thuốc.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "[けんこう]ほけんしょう",
         "Meaning": "thẻ bảo hiểm [y tế]",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "ほけんしょうを みせて ください。\n(Hãy cho tôi xem thẻ bảo hiểm.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "かぜ",
         "Meaning": "cảm lạnh, cảm cúm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "かぜを ひきました。\n(Tôi bị cảm rồi.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "ねつ",
         "Meaning": "sốt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "ねつが ありますか。\n(Bạn có bị sốt không?)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "びょうき",
         "Meaning": "bệnh, ốm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "びょうきに なりました。\n(Tôi bị ốm rồi.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "くすり",
         "Meaning": "thuốc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "まいにち くすりを のみます。\n(Mỗi ngày tôi đều uống thuốc.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "[お]ふろ",
         "Meaning": "bồn tắm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "おふろに はいりたいです。\n(Tôi muốn đi tắm bồn.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "うわぎ",
         "Meaning": "áo khoác",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "うわぎを ぬぎます。\n(Tôi cởi áo khoác.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "したぎ",
         "Meaning": "quần áo lót",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "したぎを かいました。\n(Tôi đã mua quần áo lót.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "～までに",
         "Meaning": "trước ~ (chỉ thời hạn)",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "5じまでに かえらなければ なりません。\n(Tôi phải về trước 5 giờ.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "ですから",
         "Meaning": "vì thế, vì vậy",
         "PartOfSpeech": "Liên từ",
-        "LessonId": 22,
+        "LessonId": 81,
         "Example": "あめです。 ですから、 でかけません。\n(Trời mưa. Vì thế tôi không đi ra ngoài.)"
     }
 ]

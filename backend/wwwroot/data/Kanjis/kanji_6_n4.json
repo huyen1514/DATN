@@ -1,0 +1,178 @@
+[
+    {
+        "Character": "研",
+        "Meaning": "Nghiên cứu (Nghiên)",
+        "Onyomi": "ケン",
+        "Kunyomi": "と-ぐ",
+        "Example": "研究 (けんきゅう): Nghiên cứu; 研修 (けんしゅう): Tu nghiệp",
+        "LessonId": 155
+    },
+    {
+        "Character": "究",
+        "Meaning": "Nghiên cứu (Cứu)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "きわ-める",
+        "Example": "研究 (けんきゅう): Nghiên cứu; 究極 (きゅうきょく): Cuối cùng/Cùng cực",
+        "LessonId": 155
+    },
+    {
+        "Character": "語",
+        "Meaning": "Ngôn ngữ (Ngữ)",
+        "Onyomi": "ゴ",
+        "Kunyomi": "かた-る",
+        "Example": "日本語 (にほんご): Tiếng Nhật; 単語 (たんご): Từ vựng",
+        "LessonId": 155
+    },
+    {
+        "Character": "文",
+        "Meaning": "Văn chương, Chữ nghĩa (Văn)",
+        "Onyomi": "ブン, モン",
+        "Kunyomi": "ふみ",
+        "Example": "文学 (ぶんがく): Văn học; 文法 (ぶんぽう): Ngữ pháp",
+        "LessonId": 155
+    },
+    {
+        "Character": "英",
+        "Meaning": "Anh hùng, Nước Anh (Anh)",
+        "Onyomi": "エイ",
+        "Kunyomi": "-",
+        "Example": "英語 (えいご): Tiếng Anh; 英国 (えいこk): Nước Anh",
+        "LessonId": 155
+    },
+    {
+        "Character": "化",
+        "Meaning": "Biến hóa (Hóa)",
+        "Onyomi": "カ, ケ",
+        "Kunyomi": "ば-ける",
+        "Example": "文化 (ぶんか): Văn hóa; 化学 (かがく): Hóa học",
+        "LessonId": 155
+    },
+    {
+        "Character": "数",
+        "Meaning": "Con số, Số lượng (Số)",
+        "Onyomi": "スウ",
+        "Kunyomi": "かず, かぞ-える",
+        "Example": "数学 (すうがく): Toán học; 数字 (すうじ): Con số",
+        "LessonId": 155
+    },
+    {
+        "Character": "心",
+        "Meaning": "Trái tim, Tâm hồn (Tâm)",
+        "Onyomi": "シン",
+        "Kunyomi": "こころ",
+        "Example": "安心 (あんしん): Yên tâm; 中心 (ちゅうしん): Trung tâm",
+        "LessonId": 155
+    },
+    {
+        "Character": "若",
+        "Meaning": "Trẻ trung (Nhược)",
+        "Onyomi": "ジャク",
+        "Kunyomi": "わか-い",
+        "Example": "若い (わかい): Trẻ; 若者 (わかもの): Người trẻ",
+        "LessonId": 155
+    },
+    {
+        "Character": "集",
+        "Meaning": "Tập hợp, Thu thập (Tập)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "あつ-まる, あつ-める",
+        "Example": "集める (あつめる): Thu thập; 集中 (しゅうちゅう): Tập trung",
+        "LessonId": 155
+    },
+    {
+        "Character": "知",
+        "Meaning": "Biết (Tri)",
+        "Onyomi": "チ",
+        "Kunyomi": "し-る",
+        "Example": "知る (しる): Biết; 知人 (ちじん): Người quen",
+        "LessonId": 155
+    },
+    {
+        "Character": "酒",
+        "Meaning": "Rượu (Tửu)",
+        "Onyomi": "シュ",
+        "Kunyomi": "さけ, さか",
+        "Example": "お酒 (おさけ): Rượu; 日本酒 (にほんしゅ): Rượu Nhật",
+        "LessonId": 155
+    },
+    {
+        "Character": "歌",
+        "Meaning": "Bài hát (Ca)",
+        "Onyomi": "カ",
+        "Kunyomi": "うた, うた-う",
+        "Example": "歌う (うたう): Hát; 歌手 (かしゅ): Ca sĩ",
+        "LessonId": 155
+    },
+    {
+        "Character": "声",
+        "Meaning": "Tiếng, Giọng nói (Thanh)",
+        "Onyomi": "セイ, ショウ",
+        "Kunyomi": "こえ",
+        "Example": "声 (こえ): Giọng nói; 発声 (はっせい): Phát âm",
+        "LessonId": 155
+    },
+    {
+        "Character": "楽",
+        "Meaning": "Vui vẻ, Âm nhạc (Lạc/Nhạc)",
+        "Onyomi": "ガク, ラク",
+        "Kunyomi": "たの-しい, たの-しむ",
+        "Example": "音楽 (おんがく): Âm nhạc; 楽しい (たのしい): Vui vẻ",
+        "LessonId": 155
+    },
+    {
+        "Character": "味",
+        "Meaning": "Hương vị (Vị)",
+        "Onyomi": "ミ",
+        "Kunyomi": "あじ, あじ-わう",
+        "Example": "意味 (いみ): Ý nghĩa; 趣味 (しゅみ): Sở thích",
+        "LessonId": 155
+    },
+    {
+        "Character": "油",
+        "Meaning": "Dầu (Du)",
+        "Onyomi": "ユ",
+        "Kunyomi": "あぶら",
+        "Example": "しょう油 (しょうゆ): Nước tương; 石油 (せきゆ): Dầu mỏ",
+        "LessonId": 155
+    },
+    {
+        "Character": "太",
+        "Meaning": "To, Béo (Thái)",
+        "Onyomi": "タイ, タ",
+        "Kunyomi": "ふto-い, ふと-る",
+        "Example": "太い (ふとい): Mập/Dày; 太陽 (たいよう): Mặt trời",
+        "LessonId": 155
+    },
+    {
+        "Character": "細",
+        "Meaning": "Thon nhỏ, Chi tiết (Tế)",
+        "Onyomi": "サイ",
+        "Kunyomi": "ほそ-い, こま-かい",
+        "Example": "細い (ほそい): Gầy/Mảnh; 細かい (こまかい): Chi tiết",
+        "LessonId": 155
+    },
+    {
+        "Character": "皿",
+        "Meaning": "Cái đĩa (Mãnh)",
+        "Onyomi": "-",
+        "Kunyomi": "さら",
+        "Example": "お皿 (おさら): Cái đĩa; 灰皿 (はいざら): Gạt tàn",
+        "LessonId": 155
+    },
+    {
+        "Character": "飯",
+        "Meaning": "Cơm, Bữa ăn (Phạn)",
+        "Onyomi": "ハン",
+        "Kunyomi": "めし",
+        "Example": "ご飯 (ごはん): Bữa ăn; 晩飯 (ばんめし): Bữa tối",
+        "LessonId": 155
+    },
+    {
+        "Character": "麦",
+        "Meaning": "Lúa mạch (Mạch)",
+        "Onyomi": "バク",
+        "Kunyomi": "むぎ",
+        "Example": "小麦粉 (こむぎこ): Bột mì; 麦茶 (むぎちゃ): Trà lúa mạch",
+        "LessonId": 155
+    }
+]

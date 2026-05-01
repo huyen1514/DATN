@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "種",
+        "Meaning": "Chủng (Chủng loại, hạt giống)",
+        "Onyomi": "シュ",
+        "Kunyomi": "たね",
+        "Example": "種類 (Chủng loại); 種 (Hạt giống)",
+        "LessonId": 315
+    },
+    {
+        "Character": "類",
+        "Meaning": "Loại (Chủng loại)",
+        "Onyomi": "ルイ",
+        "Kunyomi": "-",
+        "Example": "書類 (Giấy tờ/Tài liệu); 種類 (Chủng loại)",
+        "LessonId": 315
+    },
+    {
+        "Character": "存",
+        "Meaning": "Tồn (Tồn tại)",
+        "Onyomi": "ソン, ゾン",
+        "Kunyomi": "-",
+        "Example": "存在 (Tồn tại); 保存 (Bảo tồn/Lưu trữ)",
+        "LessonId": 315
+    },
+    {
+        "Character": "在",
+        "Meaning": "Tại (Ở, tồn tại)",
+        "Onyomi": "ザイ",
+        "Kunyomi": "あ-る",
+        "Example": "存在 (Tồn tại); 在学 (Đang học)",
+        "LessonId": 315
+    },
+    {
+        "Character": "陽",
+        "Meaning": "Dương (Mặt trời)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "-",
+        "Example": "太陽 (Mặt trời); 陽気 (Vui vẻ/Sảng khoái)",
+        "LessonId": 315
+    },
+    {
+        "Character": "巨",
+        "Meaning": "Cự (Khổng lồ)",
+        "Onyomi": "キョ",
+        "Kunyomi": "-",
+        "Example": "巨大 (Khổng lồ); 巨万 (Hàng vạn/Rất nhiều)",
+        "LessonId": 315
+    },
+    {
+        "Character": "氷",
+        "Meaning": "Băng (Nước đá)",
+        "Onyomi": "ヒョウ",
+        "Kunyomi": "こおり, ひ",
+        "Example": "氷河 (Sông băng); 氷点下 (Dưới điểm đóng băng)",
+        "LessonId": 315
+    },
+    {
+        "Character": "河",
+        "Meaning": "Hà (Sông)",
+        "Onyomi": "カ",
+        "Kunyomi": "かわ",
+        "Example": "河川 (Sông ngòi); 運河 (Kênh đào)",
+        "LessonId": 315
+    },
+    {
+        "Character": "季",
+        "Meaning": "Quý (Mùa)",
+        "Onyomi": "キ",
+        "Kunyomi": "-",
+        "Example": "四季 (Bốn mùa); 季節 (Mùa)",
+        "LessonId": 315
+    },
+    {
+        "Character": "候",
+        "Meaning": "Hậu (Khí hậu, chờ đợi)",
+        "Onyomi": "コウ",
+        "Kunyomi": "-",
+        "Example": "気候 (Khí hậu); 天候 (Thời tiết)",
+        "LessonId": 315
+    },
+    {
+        "Character": "暖",
+        "Meaning": "Noãn (Ấm áp)",
+        "Onyomi": "ダン",
+        "Kunyomi": "あたた-まる, あたた-める, あたた-かい",
+        "Example": "地球温暖化 (Sự nóng lên toàn cầu); 暖房 (Lò sưởi)",
+        "LessonId": 315
+    },
+    {
+        "Character": "流",
+        "Meaning": "Lưu (Chảy, trôi)",
+        "Onyomi": "リュウ, ル",
+        "Kunyomi": "なが-れる, なが-す",
+        "Example": "流行 (Lưu hành/Xu hướng); 流れ (Dòng chảy)",
+        "LessonId": 315
+    },
+    {
+        "Character": "形",
+        "Meaning": "Hình (Hình dáng)",
+        "Onyomi": "ケイ, ギョウ",
+        "Kunyomi": "かたち, かた",
+        "Example": "地形 (Địa hình); 形式 (Hình thức)",
+        "LessonId": 315
+    },
+    {
+        "Character": "底",
+        "Meaning": "Đế (Đáy)",
+        "Onyomi": "テイ",
+        "Kunyomi": "そこ",
+        "Example": "海底 (Đáy biển); 徹底的 (Triệt để)",
+        "LessonId": 315
+    },
+    {
+        "Character": "深",
+        "Meaning": "Thâm (Sâu)",
+        "Onyomi": "シン",
+        "Kunyomi": "ふか-まる, ふか-める, ふか-い",
+        "Example": "深刻 (Nghiêm trọng); 深夜 (Đêm khuya)",
+        "LessonId": 315
+    },
+    {
+        "Character": "浅",
+        "Meaning": "Thiển (Nông)",
+        "Onyomi": "セン",
+        "Kunyomi": "あさ-い",
+        "Example": "浅い (Nông); 浅薄 (Nông cạn)",
+        "LessonId": 315
+    },
+    {
+        "Character": "島",
+        "Meaning": "Đảo (Hòn đảo)",
+        "Onyomi": "トウ",
+        "Kunyomi": "しま",
+        "Example": "島国 (Quốc gia hải đảo); 無人島 (Đảo không người)",
+        "LessonId": 315
+    },
+    {
+        "Character": "陸",
+        "Meaning": "Lục (Lục địa, đất liền)",
+        "Onyomi": "リク",
+        "Kunyomi": "-",
+        "Example": "陸上 (Trên mặt đất); 着陸 (Hạ cánh)",
+        "LessonId": 315
+    },
+    {
+        "Character": "岸",
+        "Meaning": "Ngạn (Bờ)",
+        "Onyomi": "ガン",
+        "Kunyomi": "きし",
+        "Example": "海岸 (Bờ biển); 岸 (Bờ sông/biển)",
+        "LessonId": 315
+    },
+    {
+        "Character": "坂",
+        "Meaning": "Phản (Cái dốc)",
+        "Onyomi": "ハン",
+        "Kunyomi": "さか",
+        "Example": "坂道 (Đường dốc); 上り坂 (Dốc lên)",
+        "LessonId": 315
+    }
+]

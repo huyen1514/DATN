@@ -4,7 +4,7 @@
         "Reading": "いります",
         "Meaning": "cần",
         "PartOfSpeech": "Động từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "びざが いります。\n(Cần visa.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "しらべます",
         "Meaning": "tra cứu, tìm hiểu, kiểm tra",
         "PartOfSpeech": "Động từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "じしょで しらべます。\n(Tra bằng từ điển.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "なおします",
         "Meaning": "sửa, chữa",
         "PartOfSpeech": "Động từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "まちがいを なおします。\n(Sửa lỗi sai.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "しゅうりします",
         "Meaning": "sửa chữa, tu sửa",
         "PartOfSpeech": "Động từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "くるまを しゅうりします。\n(Sửa chữa ô tô.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "でんわします",
         "Meaning": "gọi điện thoại",
         "PartOfSpeech": "Động từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "あとで でんわする。\n(Tí nữa tớ sẽ gọi điện thoại - Thể thông thường.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "ぼく",
         "Meaning": "tôi (cách xưng hô thân mật của nam giới)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "ぼくは がくせいだ。\n(Tớ là sinh viên.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "きみ",
         "Meaning": "bạn (cách gọi thân mật)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "きみも いく？\n(Cậu cũng đi chứ?)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "～くん",
         "Meaning": "cậu ~, bé ~ (hậu tố sau tên nam giới trẻ tuổi)",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "さとうくんは どこ？\n(Cậu Sato ở đâu thế?)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "うん",
         "Meaning": "ừ (cách nói thân mật của はい)",
         "PartOfSpeech": "Từ cảm thán",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "うん、わかった。\n(Ừ, tớ biết rồi.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "ううん",
         "Meaning": "không (cách nói thân mật của いいえ)",
         "PartOfSpeech": "Từ cảm thán",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "ううん、しらない。\n(Không, tớ không biết.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "さらりーまん",
         "Meaning": "nhân viên văn phòng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "さらりーまんに なりたい。\n(Tớ muốn trở thành nhân viên văn phòng.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "ことば",
         "Meaning": "từ ngữ, ngôn ngữ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "にほんの ことばを べんきょうする。\n(Học ngôn ngữ Nhật Bản.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "ぶっか",
         "Meaning": "giá cả, vật giá",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "にほんは ぶっかが たかい。\n(Ở Nhật giá cả đắt đỏ.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "きもの",
         "Meaning": "Kimono (trang phục truyền thống Nhật)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "きものを きたい。\n(Tớ muốn mặc Kimono.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "びざ",
         "Meaning": "thị thực (Visa)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "びざが いる。\n(Cần visa.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "はじめ",
         "Meaning": "ban đầu, đầu tiên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "はじめに なまえを かく。\n(Viết tên trước tiên.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "おわり",
         "Meaning": "kết thúc, hết",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "これで おわりだ。\n(Đến đây là hết rồi.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "こっち",
         "Meaning": "phía này, chỗ này (thân mật của こちら)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "こっちへ おいで。\n(Lại phía này đi.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "そっち",
         "Meaning": "phía đó, chỗ đó (thân mật của そちら)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "そっちは どう？\n(Chỗ đó thì thế nào?)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "あっち",
         "Meaning": "phía kia, chỗ kia (thân mật của あちら)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "あっちを みて。\n(Nhìn phía kia kìa.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "どっち",
         "Meaning": "cái nào, phía nào (thân mật của どちら)",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "どっちが いい？\n(Cái nào thì tốt?)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "このあいだ",
         "Meaning": "vừa rồi, hôm nọ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "このあいだ、ともだちに あった。\n(Hôm nọ tớ đã gặp bạn.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "みんなで",
         "Meaning": "mọi người cùng nhau",
         "PartOfSpeech": "Trạng từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "みんなで ごはんを たべる。\n(Mọi người cùng nhau ăn cơm.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "～けど",
         "Meaning": "nhưng (thân mật của ～が)",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 25,
+        "LessonId": 96,
         "Example": "おいしいけど、たかい。\n(Ngon nhưng đắt.)"
     }
 ]

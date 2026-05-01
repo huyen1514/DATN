@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "報",
+        "Meaning": "Báo (Báo cáo, tin tức)",
+        "Onyomi": "ホウ",
+        "Kunyomi": "むく-いる",
+        "Example": "天気予報 (Dự báo thời tiết); 報告 (Báo cáo)",
+        "LessonId": 345
+    },
+    {
+        "Character": "告",
+        "Meaning": "Cáo (Thông báo)",
+        "Onyomi": "コク",
+        "Kunyomi": "つ-げる",
+        "Example": "広告 (Quảng cáo); 報告 (Báo cáo)",
+        "LessonId": 345
+    },
+    {
+        "Character": "記",
+        "Meaning": "Ký (Ghi chép)",
+        "Onyomi": "キ",
+        "Kunyomi": "しる-す",
+        "Example": "記事 (Bài báo); 記者 (Phóng viên)",
+        "LessonId": 345
+    },
+    {
+        "Character": "録",
+        "Meaning": "Lục (Ghi lại)",
+        "Onyomi": "ロク",
+        "Kunyomi": "-",
+        "Example": "録画 (Ghi hình); 記録 (Kỷ lục/Ghi chép)",
+        "LessonId": 345
+    },
+    {
+        "Character": "掲",
+        "Meaning": "Yết (Niêm yết, treo lên)",
+        "Onyomi": "ケイ",
+        "Kunyomi": "かか-げる",
+        "Example": "掲示板 (Bảng tin); 掲載 (Đăng bài)",
+        "LessonId": 345
+    },
+    {
+        "Character": "載",
+        "Meaning": "Tái (Đăng tải, chất lên)",
+        "Onyomi": "サイ",
+        "Kunyomi": "の-る, の-せる",
+        "Example": "掲載 (Đăng bài); 載る (Được đăng tải)",
+        "LessonId": 345
+    },
+    {
+        "Character": "刊",
+        "Meaning": "San (Ấn bản, xuất bản)",
+        "Onyomi": "カン",
+        "Kunyomi": "-",
+        "Example": "週刊誌 (Tạp chí hàng tuần); 朝刊 (Báo sáng)",
+        "LessonId": 345
+    },
+    {
+        "Character": "巻",
+        "Meaning": "Quyển (Cuộn, quyển sách)",
+        "Onyomi": "カン",
+        "Kunyomi": "ま-く, まき",
+        "Example": "全巻 (Toàn tập); 巻く (Cuộn/Quấn)",
+        "LessonId": 345
+    },
+    {
+        "Character": "著",
+        "Meaning": "Trứ (Tác giả, nổi bật)",
+        "Onyomi": "チョ, チャク",
+        "Kunyomi": "あらわ-す, いちじる-しい",
+        "Example": "著者 (Tác giả); 著しい (Đáng kể/Nổi bật)",
+        "LessonId": 345
+    },
+    {
+        "Character": "誌",
+        "Meaning": "Chí (Tạp chí)",
+        "Onyomi": "シ",
+        "Kunyomi": "-",
+        "Example": "雑誌 (Tạp chí); 日誌 (Nhật ký công việc)",
+        "LessonId": 345
+    },
+    {
+        "Character": "購",
+        "Meaning": "Cấu (Mua)",
+        "Onyomi": "コウ",
+        "Kunyomi": "-",
+        "Example": "購読 (Mua báo/đăng ký đọc); 購入 (Mua vào)",
+        "LessonId": 345
+    },
+    {
+        "Character": "読",
+        "Meaning": "Độc (Đọc)",
+        "Onyomi": "ドク, トク, トウ",
+        "Kunyomi": "よ-む",
+        "Example": "読書 (Đọc sách); 読者 (Độc giả)",
+        "LessonId": 345
+    },
+    {
+        "Character": "演",
+        "Meaning": "Diễn (Diễn thuyết, biểu diễn)",
+        "Onyomi": "エン",
+        "Kunyomi": "-",
+        "Example": "講演 (Bài diễn thuyết); 演劇 (Diễn kịch)",
+        "LessonId": 345
+    },
+    {
+        "Character": "芸",
+        "Meaning": "Nghệ (Nghệ thuật)",
+        "Onyomi": "ゲイ",
+        "Kunyomi": "-",
+        "Example": "芸術 (Nghệ thuật); 芸能人 (Nghệ sĩ/Người nổi tiếng)",
+        "LessonId": 345
+    },
+    {
+        "Character": "展",
+        "Meaning": "Triển (Triển lãm)",
+        "Onyomi": "テン",
+        "Kunyomi": "-",
+        "Example": "展示会 (Triển lãm); 展開 (Triển khai)",
+        "LessonId": 345
+    },
+    {
+        "Character": "覧",
+        "Meaning": "Lãm (Nhìn, xem)",
+        "Onyomi": "ラン",
+        "Kunyomi": "-",
+        "Example": "閲覧 (Duyệt/Xem); 展覧会 (Cuộc triển lãm)",
+        "LessonId": 345
+    },
+    {
+        "Character": "劇",
+        "Meaning": "Kịch (Vở kịch)",
+        "Onyomi": "ゲキ",
+        "Kunyomi": "-",
+        "Example": "劇場 (Nhà hát); 悲劇 (Bi kịch)",
+        "LessonId": 345
+    },
+    {
+        "Character": "踊",
+        "Meaning": "Dũng (Nhảy múa)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "おど-る, おど-り",
+        "Example": "踊り (Điệu nhảy); 踊る (Nhảy)",
+        "LessonId": 345
+    },
+    {
+        "Character": "催",
+        "Meaning": "Thôi (Tổ chức, thúc giục)",
+        "Onyomi": "サイ",
+        "Kunyomi": "もよお-す",
+        "Example": "開催 (Tổ chức); 主催 (Chủ trì)",
+        "LessonId": 345
+    },
+    {
+        "Character": "詰",
+        "Meaning": "Cật (Đóng gói, dồn vào)",
+        "Onyomi": "キツ",
+        "Kunyomi": "つ-める, つ-まる",
+        "Example": "缶詰 (Đồ hộp); 詰める (Đóng gói/Nhồi nhét)",
+        "LessonId": 345
+    }
+]

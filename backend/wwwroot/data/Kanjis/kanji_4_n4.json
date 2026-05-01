@@ -1,0 +1,178 @@
+[
+    {
+        "Character": "毎",
+        "Meaning": "Mỗi (Mỗi)",
+        "Onyomi": "マイ",
+        "Kunyomi": "-",
+        "Example": "毎日 (まいにち): Hàng ngày; 毎週 (まいしゅう): Hàng tuần",
+        "LessonId": 145
+    },
+    {
+        "Character": "週",
+        "Meaning": "Tuần (Chu)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "-",
+        "Example": "来週 (らいしゅう): Tuần sau; 週末 (しゅうまつ): Cuối tuần",
+        "LessonId": 145
+    },
+    {
+        "Character": "映",
+        "Meaning": "Chiếu, Phản chiếu (Ánh)",
+        "Onyomi": "エイ",
+        "Kunyomi": "うつ-る, うつ-す",
+        "Example": "映画 (えいが): Phim ảnh; 映る (うつる): Được chiếu/Phản chiếu",
+        "LessonId": 145
+    },
+    {
+        "Character": "画",
+        "Meaning": "Họa, Họa sĩ, Kế hoạch (Họa/Hoạch)",
+        "Onyomi": "ガ, カク",
+        "Kunyomi": "-",
+        "Example": "画家 (がか): Họa sĩ; 計画 (けいかく): Kế hoạch",
+        "LessonId": 145
+    },
+    {
+        "Character": "館",
+        "Meaning": "Tòa nhà, Hội quán (Quán)",
+        "Onyomi": "カン",
+        "Kunyomi": "-",
+        "Example": "映画館 (えいがかん): Rạp chiếu phim; 大使館 (たいしかん): Đại sứ quán",
+        "LessonId": 145
+    },
+    {
+        "Character": "公",
+        "Meaning": "Công cộng, Công khai (Công)",
+        "Onyomi": "コウ",
+        "Kunyomi": "おおやけ",
+        "Example": "公園 (こうえん): Công viên; 公立 (こうりつ): Công lập",
+        "LessonId": 145
+    },
+    {
+        "Character": "園",
+        "Meaning": "Vườn (Viên)",
+        "Onyomi": "エン",
+        "Kunyomi": "-",
+        "Example": "動物園 (どうぶつえん): Vườn bách thú; 遊園地 (ゆうえんち): Khu vui chơi",
+        "LessonId": 145
+    },
+    {
+        "Character": "夫",
+        "Meaning": "Chồng (Phu)",
+        "Onyomi": "フ, フウ",
+        "Kunyomi": "おっと",
+        "Example": "夫妻 (ふさい): Vợ chồng; 丈夫 (じょうぶ): Bền/Chắc chắn",
+        "LessonId": 145
+    },
+    {
+        "Character": "妻",
+        "Meaning": "Vợ (Thê)",
+        "Onyomi": "サイ",
+        "Kunyomi": "つま",
+        "Example": "夫妻 (ふさい): Vợ chồng; 愛妻家 (あいさいか): Người yêu vợ",
+        "LessonId": 145
+    },
+    {
+        "Character": "特",
+        "Meaning": "Đặc biệt (Đặc)",
+        "Onyomi": "トク",
+        "Kunyomi": "-",
+        "Example": "特に (とくに): Đặc biệt là; 特急 (とっきゅう): Tàu tốc hành",
+        "LessonId": 145
+    },
+    {
+        "Character": "思",
+        "Meaning": "Suy nghĩ (Tư)",
+        "Onyomi": "シ",
+        "Kunyomi": "おも-う",
+        "Example": "思う (おもう): Suy nghĩ; 思い出 (おもいで): Kỷ niệm",
+        "LessonId": 145
+    },
+    {
+        "Character": "料",
+        "Meaning": "Nguyên liệu, Phí (Liệu)",
+        "Onyomi": "リョウ",
+        "Kunyomi": "-",
+        "Example": "料理 (りょうり): Món ăn; 料金 (りょうきん): Chi phí",
+        "LessonId": 145
+    },
+    {
+        "Character": "理",
+        "Meaning": "Lý do, Lý luận (Lý)",
+        "Onyomi": "リ",
+        "Kunyomi": "-",
+        "Example": "理由 (りゆう): Lý do; 物理 (ぶつり): Vật lý",
+        "LessonId": 145
+    },
+    {
+        "Character": "有",
+        "Meaning": "Có, Tồn tại (Hữu)",
+        "Onyomi": "ユウ",
+        "Kunyomi": "-",
+        "Example": "有名 (ゆうめい): Nổi tiếng; 有料 (ゆうりょう): Có phí",
+        "LessonId": 145
+    },
+    {
+        "Character": "会",
+        "Meaning": "Gặp gỡ, Hội (Hội)",
+        "Onyomi": "カイ",
+        "Kunyomi": "あ-う",
+        "Example": "会社 (かいしゃ): Công ty; 会話 (かいわ): Hội thoại",
+        "LessonId": 145
+    },
+    {
+        "Character": "社",
+        "Meaning": "Công ty, Đền thờ (Xã)",
+        "Onyomi": "シャ",
+        "Kunyomi": "-",
+        "Example": "社会 (しゃかい): Xã hội; 社長 (しゃちょう): Giám đốc",
+        "LessonId": 145
+    },
+    {
+        "Character": "働",
+        "Meaning": "Làm việc (Động)",
+        "Onyomi": "ドウ",
+        "Kunyomi": "はたら-く",
+        "Example": "労働 (ろうどう): Lao động; 働く (はたらく): Làm việc",
+        "LessonId": 145
+    },
+    {
+        "Character": "作",
+        "Meaning": "Chế biến, Làm ra (Tác)",
+        "Onyomi": "サク, サ",
+        "Kunyomi": "つく-る",
+        "Example": "作文 (さくぶん): Bài văn; 作家 (さっか): Tác giả",
+        "LessonId": 145
+    },
+    {
+        "Character": "工",
+        "Meaning": "Công trường, Thủ công (Công)",
+        "Onyomi": "コウ, ク",
+        "Kunyomi": "-",
+        "Example": "工場 (こうじょう): Nhà máy; 工事 (こうじ): Công trường",
+        "LessonId": 145
+    },
+    {
+        "Character": "場",
+        "Meaning": "Địa điểm (Trường)",
+        "Onyomi": "ジョウ",
+        "Kunyomi": "ば",
+        "Example": "場所 (ばしょ): Địa điểm; 場合 (ばあい): Trường hợp",
+        "LessonId": 145
+    },
+    {
+        "Character": "始",
+        "Meaning": "Bắt đầu (Thủy)",
+        "Onyomi": "シ",
+        "Kunyomi": "はじ-める, はじ-まる",
+        "Example": "開始 (かいし): Bắt đầu; 始める (はじめる): Bắt đầu cái gì đó",
+        "LessonId": 145
+    },
+    {
+        "Character": "終",
+        "Meaning": "Kết thúc (Chung)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "お-わる, お-える",
+        "Example": "終電 (しゅうでん): Chuyến tàu cuối; 終わる (おわる): Kết thúc",
+        "LessonId": 145
+    }
+]

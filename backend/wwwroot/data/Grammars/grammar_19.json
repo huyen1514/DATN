@@ -4,34 +4,34 @@
         "Structure": "Động từ chia về thể た",
         "Meaning": "Cách chia thể た hoàn toàn giống với cách chia thể て (Te-form). \n- Nhóm 1: [い,ち,り] -> [った]; [に,び,み] -> [んだ]; [き] -> [いた]; [ぎ] -> [いだ]; [し] -> [した]. Ngoại lệ: [いきます] -> [いった].\n- Nhóm 2: Bỏ [ます] thêm [た].\n- Nhóm 3: [します] -> [した]; [きます] -> [きた].",
         "Example": "かきます -> かいた\nのみます -> のんだ\nたべます -> たべた\n(Viết -> Đã viết / Uống -> Đã uống...)",
-        "LessonId": 48
+        "LessonId": 92
     },
     {
         "GrammarName": "Nói về kinh nghiệm: ～た ことがあります",
         "Structure": "Động từ (thể た) + ことがあります",
         "Meaning": "Mẫu câu này dùng để nói về một hành động hoặc sự việc mà ai đó đã từng trải qua trong quá khứ. Thường dịch là 'Đã từng...'.\n- Lưu ý: Không dùng mẫu này cho những hành động mang tính hiển nhiên hoặc thói quen thường ngày trong quá khứ.",
         "Example": "わたしは ふじさんに のぼった ことがあります。\nーうまに のった ことがありますか。\n(Tôi đã từng leo núi Phú Sĩ.\n-Bạn đã từng cưỡi ngựa bao giờ chưa?)",
-        "LessonId": 48
+        "LessonId": 92
     },
     {
         "GrammarName": "Liệt kê hành động không theo trình tự: ～たり、～たりします",
         "Structure": "V1 (thể た)り, V2 (thể た)り します",
         "Meaning": "Dùng để liệt kê một vài hành động tiêu biểu trong số nhiều hành động mà chủ thể thực hiện. Khác với thể て (liệt kê theo thứ tự thời gian), mẫu 「～たり」 không quan trọng việc hành động nào xảy ra trước. \n- Thì của câu được quyết định bởi động từ 「します」 ở cuối câu.",
         "Example": "にちようびは てにすを したり, さんぽしたり します。\nーきのうは かいものを したり, えいがを みたり しました。\n(Chủ nhật tôi thường khi thì chơi tennis, khi thì đi dạo.\n-Hôm qua tôi đã lúc thì đi mua sắm, lúc thì xem phim.)",
-        "LessonId": 48
+        "LessonId": 92
     },
     {
         "GrammarName": "Diễn tả sự thay đổi trạng thái: ～なります",
         "Structure": "[I-adj: ～く] / [Na-adj: ～に] / [Noun: ～に] + なります",
         "Meaning": "Dùng để biểu thị một trạng thái hoặc tính chất đã thay đổi so với trước đó. Mang nghĩa là 'Trở nên / Trở thành'.\n- Tính từ đuôi い: Bỏ [い] thêm [く].\n- Tính từ đuôi な: Thêm [に].\n- Danh từ: Thêm [ni].",
         "Example": "さむくなります。\nーげんきに なりました。\nー25さいに なります。\n(Trời trở nên lạnh.\n-Tôi đã trở nên khỏe mạnh.\n-Tôi sẽ sang tuổi 25.)",
-        "LessonId": 48
+        "LessonId": 92
     },
     {
         "GrammarName": "Trợ từ nhấn mạnh: そうですね",
         "Structure": "そうですね",
         "Meaning": "Được dùng để bày tỏ sự đồng tình hoặc xác nhận lại ý kiến của đối phương khi họ đưa ra một nhận xét nào đó về tình hình hiện tại.",
         "Example": "さむくなりましたね。\nーそうですね。\n(Trời đã trở nên lạnh rồi nhỉ.\n-Đúng vậy nhỉ.)",
-        "LessonId": 48
+        "LessonId": 92
     }
 ]

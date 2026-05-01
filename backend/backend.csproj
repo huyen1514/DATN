@@ -24,6 +24,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="UglyToad.PdfPig" Version="1.7.0-custom-5" />
     <Watch Include="wwwroot\data\Vocabs\**\*.json" />
+    <Watch Include="wwwroot\data\Grammars\**\*.json" /> 
+    <Watch Include="wwwroot\data\Readings\**\*.json" />
+    <Watch Include="wwwroot\data\Kanjis\**\*.json" />
+    <Watch Include="wwwroot\data\Listenings\**\*.json" />
   </ItemGroup>
 
 </Project>

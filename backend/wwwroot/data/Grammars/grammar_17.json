@@ -4,41 +4,41 @@
         "Structure": "Động từ chia về thể ない",
         "Meaning": "Thể ない được dùng làm cơ sở cho nhiều mẫu câu phủ định quan trọng. Cách chia theo nhóm:\n- Nhóm 1: Chuyển âm cuối hàng [i] sang hàng [a] rồi thêm [ない]. Riêng đuôi [い] chuyển thành [わ] (Ví dụ: あいます -> あわない).\n- Nhóm 2: Bỏ [ます] thêm [ない].\n- Nhóm 3: [します] -> [しない]; [きます] -> [こない].",
         "Example": "かきます -> かかない\nのみます -> のまない\nたべます -> たべない\n(Viết -> Không viết / Uống -> Không uống...)",
-        "LessonId": 46
+        "LessonId": 82
     },
     {
         "GrammarName": "Yêu cầu đừng làm gì: ～ないでください",
         "Structure": "Động từ (thể ない) + でください",
         "Meaning": "Mẫu câu này dùng để yêu cầu hoặc nhờ vả ai đó một cách lịch sự rằng không được thực hiện một hành động nào đó. Thường dùng trong các trường hợp khuyên bảo hoặc chỉ dẫn an toàn.",
         "Example": "ここで しゃしんを とらないでください。\n(Xin đừng chụp ảnh ở đây.)",
-        "LessonId": 46
+        "LessonId": 82
     },
     {
         "GrammarName": "Phải làm gì (Nghĩa vụ): ～なければなりません",
         "Structure": "Động từ (thể ない - bỏ い) + ければなりません",
         "Meaning": "Mẫu câu này dùng để biểu thị một hành động mà chủ thể bắt buộc phải thực hiện, không phụ thuộc vào ý muốn của người nói. Mang ý nghĩa là 'Phải...'.\n- Lưu ý: Tuy có đuôi [ない] nhưng mẫu câu này mang nghĩa khẳng định.",
         "Example": "くすりを のまなければなりません。\n(Tôi phải uống thuốc.)",
-        "LessonId": 46
+        "LessonId": 82
     },
     {
         "GrammarName": "Không cần làm gì cũng được: ～なくてもいいです",
         "Structure": "Động từ (thể ない - bỏ い) + くてもいいです",
         "Meaning": "Mẫu câu này dùng để biểu thị rằng một hành động nào đó không nhất thiết phải thực hiện, chủ thể có làm hay không cũng không sao. Mang nghĩa 'Không cần... cũng được'.",
         "Example": "あしたは こなくてもいいです。\n(Ngày mai bạn không cần đến cũng được.)",
-        "LessonId": 46
+        "LessonId": 82
     },
     {
         "GrammarName": "Đưa tân ngữ lên làm chủ đề: Danh từ (tân ngữ) は",
         "Structure": "Danh từ を -> Danh từ は",
         "Meaning": "Trong các câu mang tính chất hướng dẫn hoặc nhắc nhở, người Nhật thường thay thế trợ từ 「を」 bằng 「は」 để đưa đối tượng đó lên làm chủ đề chính của câu, giúp nhấn mạnh vật đang được nói đến.",
         "Example": "ここに にもつは おかないでください。\n(Hành lý thì xin đừng đặt ở đây.)",
-        "LessonId": 46
+        "LessonId": 82
     },
     {
         "GrammarName": "Giới hạn thời gian: Danh từ (thời gian) までに",
         "Structure": "Danh từ (thời gian) までに Động từ",
         "Meaning": "Trợ từ 「までに」 chỉ thời hạn cuối cùng mà một hành động phải được thực hiện. Hành động đó có thể diễn ra bất cứ lúc nào từ bây giờ cho đến trước thời điểm đó.\n- Phân biệt với 「まで」: Chỉ sự kéo dài liên tục của hành động/trạng thái cho đến một mốc thời gian.",
         "Example": "どようびまでに ほんを かえさなければなりません。\n(Phải trả sách trước (muộn nhất là) thứ Bảy.)",
-        "LessonId": 46
+        "LessonId": 82
     }
 ]

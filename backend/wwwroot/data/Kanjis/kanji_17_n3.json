@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "経",
+        "Meaning": "Kinh (Kinh qua, kinh tế)",
+        "Onyomi": "ケイ, キョウ",
+        "Kunyomi": "へ-る",
+        "Example": "経済 (Kinh tế); 経験 (Kinh nghiệm)",
+        "LessonId": 335
+    },
+    {
+        "Character": "済",
+        "Meaning": "Tế (Kinh tế, kết thúc)",
+        "Onyomi": "サイ, ゼイ",
+        "Kunyomi": "す-む, す-ます",
+        "Example": "経済 (Kinh tế); 済み (Đã xong)",
+        "LessonId": 335
+    },
+    {
+        "Character": "算",
+        "Meaning": "Toán (Tính toán)",
+        "Onyomi": "サン",
+        "Kunyomi": "-",
+        "Example": "予算 (Dự toán/Ngân sách); 計算 (Tính toán)",
+        "LessonId": 335
+    },
+    {
+        "Character": "税",
+        "Meaning": "Thuế (Thuế khóa)",
+        "Onyomi": "ゼイ",
+        "Kunyomi": "-",
+        "Example": "税金 (Tiền thuế); 消費税 (Thuế tiêu dùng)",
+        "LessonId": 335
+    },
+    {
+        "Character": "価",
+        "Meaning": "Giá (Giá cả, giá trị)",
+        "Onyomi": "カ",
+        "Kunyomi": "あたい",
+        "Example": "価格 (Giá cả); 物価 (Vật giá)",
+        "LessonId": 335
+    },
+    {
+        "Character": "格",
+        "Meaning": "Cách (Tư cách, khung)",
+        "Onyomi": "カク, コウ",
+        "Kunyomi": "-",
+        "Example": "価格 (Giá cả); 合格 (Thi đỗ)",
+        "LessonId": 335
+    },
+    {
+        "Character": "振",
+        "Meaning": "Chấn (Lắc, vung, chuyển khoản)",
+        "Onyomi": "シン",
+        "Kunyomi": "ふ-る, ふ-るう, ふ-れる",
+        "Example": "振込 (Chuyển khoản); 振る (Vẫy/Đá bồ)",
+        "LessonId": 335
+    },
+    {
+        "Character": "込",
+        "Meaning": "Vào (Nhét vào, tính cả)",
+        "Onyomi": "-",
+        "Kunyomi": "こ-む, こ-める",
+        "Example": "振込 (Chuyển khoản); 税込 (Đã bao gồm thuế)",
+        "LessonId": 335
+    },
+    {
+        "Character": "替",
+        "Meaning": "Thế (Thay thế, đổi)",
+        "Onyomi": "タイ",
+        "Kunyomi": "か-わる, か-える",
+        "Example": "両替 (Đổi tiền); 取り替える (Thay thế)",
+        "LessonId": 335
+    },
+    {
+        "Character": "貯",
+        "Meaning": "Trữ (Tích trữ)",
+        "Onyomi": "チョ",
+        "Kunyomi": "た-める, た-まる",
+        "Example": "貯金 (Tiết kiệm tiền); 貯蔵 (Dự trữ)",
+        "LessonId": 335
+    },
+    {
+        "Character": "札",
+        "Meaning": "Trát/Sát (Tờ tiền, thẻ, nhãn)",
+        "Onyomi": "サツ",
+        "Kunyomi": "ふだ",
+        "Example": "千円札 (Tờ 1000 yên); 改札 (Soát vé)",
+        "LessonId": 335
+    },
+    {
+        "Character": "帳",
+        "Meaning": "Trướng (Sổ tay, bức màn)",
+        "Onyomi": "チョウ",
+        "Kunyomi": "-",
+        "Example": "通帳 (Sổ tài khoản ngân hàng); 手帳 (Sổ tay)",
+        "LessonId": 335
+    },
+    {
+        "Character": "預",
+        "Meaning": "Dự (Gửi tiền, giao phó)",
+        "Onyomi": "ヨ",
+        "Kunyomi": "あず-ける, あず-かる",
+        "Example": "預金 (Tiền gửi tiết kiệm); 預ける (Gửi)",
+        "LessonId": 335
+    },
+    {
+        "Character": "額",
+        "Meaning": "Ngạch (Số tiền, cái trán)",
+        "Onyomi": "ガク",
+        "Kunyomi": "ひたい",
+        "Example": "金額 (Số tiền); 額 (Cái trán)",
+        "LessonId": 335
+    },
+    {
+        "Character": "費",
+        "Meaning": "Phí (Chi phí, tiêu hao)",
+        "Onyomi": "ヒ",
+        "Kunyomi": "つい-やす, つい-える",
+        "Example": "費用 (Chi phí); 生活費 (Phí sinh hoạt)",
+        "LessonId": 335
+    },
+    {
+        "Character": "務",
+        "Meaning": "Vụ (Công việc, nhiệm vụ)",
+        "Onyomi": "ム",
+        "Kunyomi": "つと-める",
+        "Example": "義務 (Nghĩa vụ); 事務 (Công việc văn phòng)",
+        "LessonId": 335
+    },
+    {
+        "Character": "収",
+        "Meaning": "Thu (Thu nhập, thu nạp)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "おさ-まる, おさ-める",
+        "Example": "収入 (Thu nhập); 収穫 (Thu hoạch)",
+        "LessonId": 335
+    },
+    {
+        "Character": "支",
+        "Meaning": "Chi (Chi trả, hỗ trợ)",
+        "Onyomi": "シ",
+        "Kunyomi": "ささ-える",
+        "Example": "支出 (Chi tiêu); 支払う (Chi trả)",
+        "LessonId": 335
+    },
+    {
+        "Character": "占",
+        "Meaning": "Chiếm/Chiêm (Chiếm giữ, xem bói)",
+        "Onyomi": "セン",
+        "Kunyomi": "し-める, うらな-う",
+        "Example": "占める (Chiếm tỷ lệ); 占い (Xem bói)",
+        "LessonId": 335
+    },
+    {
+        "Character": "権",
+        "Meaning": "Quyền (Quyền lợi, quyền lực)",
+        "Onyomi": "ケン, コン",
+        "Kunyomi": "-",
+        "Example": "権利 (Quyền lợi); 政権 (Chính quyền)",
+        "LessonId": 335
+    }
+]

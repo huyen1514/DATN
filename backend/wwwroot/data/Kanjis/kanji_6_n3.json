@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "感",
+        "Meaning": "Cảm (Cảm giác)",
+        "Onyomi": "カン",
+        "Kunyomi": "-",
+        "Example": "感情 (かんじょう): Cảm xúc; 感動 (かんどう): Cảm động",
+        "LessonId": 280
+    },
+    {
+        "Character": "情",
+        "Meaning": "Tình (Tình cảm)",
+        "Onyomi": "ジョウ, セイ",
+        "Kunyomi": "なさけ",
+        "Example": "表情 (ひょうじょう): Biểu cảm; 友情 (ゆうじょう): Tình bạn",
+        "LessonId": 280
+    },
+    {
+        "Character": "恋",
+        "Meaning": "Luyến (Tình yêu)",
+        "Onyomi": "レン",
+        "Kunyomi": "こい, こい-しい",
+        "Example": "恋人 (こいびと): Người yêu; 恋愛 (れんあい): Tình yêu nam nữ",
+        "LessonId": 280
+    },
+    {
+        "Character": "愛",
+        "Meaning": "Ái (Yêu)",
+        "Onyomi": "アイ",
+        "Kunyomi": "-",
+        "Example": "愛情 (あいじょう): Tình thương; 愛用 (あいよう): Thường dùng",
+        "LessonId": 280
+    },
+    {
+        "Character": "信",
+        "Meaning": "Tín (Tin tưởng)",
+        "Onyomi": "シン",
+        "Kunyomi": "-",
+        "Example": "信号 (しんごう): Đèn giao thông; 自信 (じしん): Tự tin",
+        "LessonId": 280
+    },
+    {
+        "Character": "想",
+        "Meaning": "Tưởng (Nghĩ/Tưởng tượng)",
+        "Onyomi": "ソウ, ソ",
+        "Kunyomi": "-",
+        "Example": "予想 (よそう): Dự đoán; 理想 (りそう): Lý tưởng",
+        "LessonId": 280
+    },
+    {
+        "Character": "伝",
+        "Meaning": "Truyền (Truyền đạt)",
+        "Onyomi": "デン",
+        "Kunyomi": "つた-わる, つた-える",
+        "Example": "伝説 (denせつ): Truyền thuyết; 伝言 (でんごん): Lời nhắn",
+        "LessonId": 280
+    },
+    {
+        "Character": "欲",
+        "Meaning": "Dục (Muốn/Ham muốn)",
+        "Onyomi": "ヨク",
+        "Kunyomi": "ほ-しい, ほっ-する",
+        "Example": "食欲 (しょくよく): Sự thèm ăn; 意欲 (いよく): Động lực",
+        "LessonId": 280
+    },
+    {
+        "Character": "苦",
+        "Meaning": "Khổ (Khổ sở/Đắng)",
+        "Onyomi": "ク",
+        "Kunyomi": "くる-しい, にが-い",
+        "Example": "苦労 (くろう): Gian khổ; 苦手 (にがて): Yếu/Kém",
+        "LessonId": 280
+    },
+    {
+        "Character": "悩",
+        "Meaning": "Não (Khổ não)",
+        "Onyomi": "ノウ",
+        "Kunyomi": "なや-む",
+        "Example": "悩み (なやみ): Sự lo lắng; 苦悩 (くのう): Khổ não",
+        "LessonId": 280
+    },
+    {
+        "Character": "困",
+        "Meaning": "Khốn (Khó khăn)",
+        "Onyomi": "コン",
+        "Kunyomi": "こま-る",
+        "Example": "困難 (こんなん): Khó khăn; 困る (こまる): Gặp khó khăn",
+        "LessonId": 280
+    },
+    {
+        "Character": "難",
+        "Meaning": "Nan (Khó)",
+        "Onyomi": "ナン",
+        "Kunyomi": "むずか-しい",
+        "Example": "難しい (むずかしい): Khó; 難問 (なんもん): Vấn đề nan giải",
+        "LessonId": 280
+    },
+    {
+        "Character": "怒",
+        "Meaning": "Nộ (Tức giận)",
+        "Onyomi": "ド",
+        "Kunyomi": "おこ-る, いか-る",
+        "Example": "怒る (おこる): Nổi giận; 激怒 (げきど): Phẫn nộ",
+        "LessonId": 280
+    },
+    {
+        "Character": "悲",
+        "Meaning": "Bi (Buồn)",
+        "Onyomi": "ヒ",
+        "Kunyomi": "かな-しい, かな-しむ",
+        "Example": "悲しい (かなしい): Buồn; 悲劇 (ひげき): Bi kịch",
+        "LessonId": 280
+    },
+    {
+        "Character": "笑",
+        "Meaning": "Tiếu (Cười)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "わら-う, え-む",
+        "Example": "笑う (わらう): Cười; 笑顔 (えがお): Khuôn mặt tươi cười",
+        "LessonId": 280
+    },
+    {
+        "Character": "喜",
+        "Meaning": "Hỷ (Vui mừng)",
+        "Onyomi": "キ",
+        "Kunyomi": "よろこ-ぶ",
+        "Example": "喜ぶ (よろこぶ): Vui mừng; 大喜び (おおよろこび): Rất vui mừng",
+        "LessonId": 280
+    },
+    {
+        "Character": "残",
+        "Meaning": "Tàn (Còn lại)",
+        "Onyomi": "ザン",
+        "Kunyomi": "のこ-る, のこ-す",
+        "Example": "残念 (ざんねん): Đáng tiếc; 残る (のこる): Còn lại",
+        "LessonId": 280
+    },
+    {
+        "Character": "念",
+        "Meaning": "Niệm (Ý niệm/Tâm niệm)",
+        "Onyomi": "ネン",
+        "Kunyomi": "-",
+        "Example": "信念 (しんねん): Niềm tin; 記念 (きねん): Kỷ niệm",
+        "LessonId": 280
+    },
+    {
+        "Character": "泣",
+        "Meaning": "Khóc",
+        "Onyomi": "キュウ",
+        "Kunyomi": "な-く",
+        "Example": "泣く (なく): Khóc; 号泣 (ごうきゅう): Khóc nức nở",
+        "LessonId": 280
+    },
+    {
+        "Character": "涙",
+        "Meaning": "Lệ (Nước mắt)",
+        "Onyomi": "ルイ",
+        "Kunyomi": "なみだ",
+        "Example": "涙 (なみだ): Nước mắt; 涙声 (なみだごえ): Giọng nói nghẹn ngào",
+        "LessonId": 280
+    }
+]

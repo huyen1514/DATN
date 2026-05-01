@@ -4,34 +4,34 @@
         "Structure": "[V-plain / Adj / N-no] + とき",
         "Meaning": "Dùng để nối hai mệnh đề, biểu thị thời điểm mà hành động ở mệnh đề chính xảy ra.\n- Động từ: Chia về thể thông thường (V-ru, V-nai, V-ta).\n- Tính từ đuôi い: Giữ nguyên [い].\n- Tính từ đuôi な: Giữ nguyên [な].\n- Danh từ: Thêm trợ từ [の].",
         "Example": "にほんへ いくとき, たくさん しゃしんを とりました。\nーひまなとき, 本を よみます。\n(Khi đi Nhật, tôi đã chụp rất nhiều ảnh.\n-Khi rảnh rỗi, tôi thường đọc sách.)",
-        "LessonId": 52
+        "LessonId": 112
     },
     {
         "GrammarName": "Phân biệt V-ru とき và V-ta とき",
         "Structure": "V-jisho とき / V-ta とき",
         "Meaning": "Đây là điểm quan trọng về trình tự thời gian:\n- [V-ru とき]: Hành động ở mệnh đề chính xảy ra TRƯỚC hoặc ĐANG TRONG KHI hành động V xảy ra.\n- [V-ta とき]: Hành động ở mệnh đề chính xảy ra SAU KHI hành động V đã kết thúc hoàn toàn.",
         "Example": "くにへ かえるとき, かばんを かいました。(Mua cặp trên đường về/trước khi về)\nーくにへ かえったとき, かばんを かいました。(Về đến nước rồi mới mua cặp)",
-        "LessonId": 52
+        "LessonId": 112
     },
     {
         "GrammarName": "Hệ quả tất yếu: ～と (Hễ mà... / Nếu... thì...)",
         "Structure": "Động từ thể từ điển + と, [Mệnh đề kết quả]",
         "Meaning": "Dùng để diễn tả một kết quả tất yếu, hiển nhiên sẽ xảy ra khi một hành động nào đó được thực hiện. Thường dùng cho:\n- Các hiện tượng tự nhiên.\n- Cách sử dụng máy móc, thiết bị.\n- Chỉ đường.\nLưu ý: Mệnh đề sau không được chứa ý chí, lời mời hay sự ra lệnh của người nói.",
         "Example": "この ボタンを おすと, おかねが 出ます。\nーこれを まわすと, おとが おおきくなります。\n(Hễ ấn cái nút này thì tiền sẽ ra.\n-Hễ vặn cái này thì âm thanh sẽ to lên.)",
-        "LessonId": 52
+        "LessonId": 112
     },
     {
         "GrammarName": "Chỉ đường với ～と",
         "Structure": "Địa điểm / Hướng + [Trợ từ] + と",
         "Meaning": "Trong việc chỉ đường, người Nhật thường dùng mẫu câu 「～と」 để chỉ ra rằng nếu đi theo hướng đó hoặc đến điểm đó thì một địa điểm khác sẽ hiện ra một cách hiển nhiên.",
         "Example": "あそこを みぎへ まがると, ぎんこうが あります。\n(Hễ rẽ phải ở chỗ kia thì sẽ thấy ngân hàng.)",
-        "LessonId": 52
+        "LessonId": 112
     },
     {
         "GrammarName": "Trợ từ を chỉ không gian di chuyển",
         "Structure": "Danh từ (địa điểm) を Động từ (di chuyển)",
         "Meaning": "Trợ từ 「を」 được dùng sau danh từ chỉ địa điểm khi động từ đi sau là các từ chỉ sự di chuyển như: [あるきます - đi bộ], [わたります - băng qua], [さんぽします - đi dạo], [まがります - rẽ]. Nó biểu thị không gian mà hành động đó đi xuyên qua.",
         "Example": "こうえんを さんぽします。\nーはしを わたります。\n(Đi dạo trong công viên.\n-Băng qua cầu.)",
-        "LessonId": 52
+        "LessonId": 112
     }
 ]

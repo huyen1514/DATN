@@ -4,7 +4,7 @@
         "Reading": "おもいます",
         "Meaning": "nghĩ",
         "PartOfSpeech": "Động từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "にほんは きれいだと おもいます。\n(Tôi nghĩ Nhật Bản đẹp.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "いいます",
         "Meaning": "nói",
         "PartOfSpeech": "Động từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "ねる まえに おやすみなさいと いいます。\n(Trước khi ngủ thì nói chúc ngủ ngon.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "たります",
         "Meaning": "đủ",
         "PartOfSpeech": "Động từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "じかんが たりますか。\n(Có đủ thời gian không?)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "かちます",
         "Meaning": "thắng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "しあいに かちました。\n(Tôi đã thắng trận đấu.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "まけます",
         "Meaning": "thua",
         "PartOfSpeech": "Động từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "しあいに まけました。\n(Tôi đã thua trận đấu.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "やくにたちます",
         "Meaning": "có ích, giúp ích",
         "PartOfSpeech": "Động từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "この じしょは やくにたちます。\n(Cuốn từ điển này có ích.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "むだ",
         "Meaning": "lãng phí, vô ích",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "むだな おかねを つかいません。\n(Tôi không tiêu tiền lãng phí.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "ふべん",
         "Meaning": "bất tiện",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "ここは ふべんな ところです。\n(Nơi đây là một nơi bất tiện.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "おなじ",
         "Meaning": "giống nhau",
         "PartOfSpeech": "Tính từ đuôi na/Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "かれと おなじ かばんを かいました。\n(Tôi đã mua cái cặp giống anh ấy.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "すごい",
         "Meaning": "ghê gớm, tuyệt vời",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "すごいですね。\n(Tuyệt quá nhỉ / Ghê thật đấy nhỉ.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "しゅしょう",
         "Meaning": "thủ tướng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "にほんの しゅしょうは だれですか。\n(Thủ tướng Nhật Bản là ai vậy?)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "だいとうりょう",
         "Meaning": "tổng thống",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "あめりかの だいとうりょうに あいました。\n(Tôi đã gặp tổng thống Mỹ.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "せいじ",
         "Meaning": "chính trị",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "せいじの はなしは むずかしいです。\n(Chuyện chính trị thì khó.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "にゅうす",
         "Meaning": "tin tức, bản tin",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "まいにち にゅうすを みます。\n(Mỗi ngày tôi đều xem tin tức.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "すぴーち",
         "Meaning": "bài diễn văn (speech)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "すぴーちを します。\n(Tôi làm bài diễn thuyết.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "しあい",
         "Meaning": "trận đấu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "あした さっかーの しあいが あります。\n(Ngày mai có trận đấu bóng đá.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "いけん",
         "Meaning": "ý kiến",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "いけんを いって ください。\n(Hãy nói ý kiến của bạn đi.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "おはなし",
         "Meaning": "câu chuyện, bài nói chuyện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "せんせいの おはなしを ききます。\n(Nghe câu chuyện của thầy giáo.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "ゆーもあ",
         "Meaning": "hài hước (humor)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "かれは ゆーもあが あります。\n(Anh ấy có tính hài hước.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "でざいん",
         "Meaning": "thiết kế (design)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "この しゃつの でざいんは いいですね。\n(Thiết kế của cái áo này đẹp nhỉ.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "こうつう",
         "Meaning": "giao thông",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "にほんは こうつうが べんりです。\n(Giao thông ở Nhật tiện lợi.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "さいきん",
         "Meaning": "gần đây",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "さいきん とても あついです。\n(Gần đây trời rất nóng.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "たぶん",
         "Meaning": "có lẽ, chắc là",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "あしたは たぶん あめでしょう。\n(Ngày mai có lẽ sẽ mưa.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "きっと",
         "Meaning": "nhất định, chắc chắn",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "かれは きっと きます。\n(Anh ấy nhất định sẽ đến.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "ほんとうに",
         "Meaning": "thật sự",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "にほんごは ほんとうに おもしろいです。\n(Tiếng Nhật thật sự rất thú vị.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "そんなに",
         "Meaning": "đến mức như thế (dùng với phủ định)",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "そんなに むずかしくないです。\n(Không khó đến mức như thế đâu.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "～について",
         "Meaning": "về ~",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 26,
+        "LessonId": 101,
         "Example": "にほんの せいかつに ついて はなします。\n(Nói về cuộc sống ở Nhật.)"
     }
 ]

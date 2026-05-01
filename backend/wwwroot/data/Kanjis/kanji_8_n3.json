@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "関",
+        "Meaning": "Quan (Quan hệ)",
+        "Onyomi": "カン",
+        "Kunyomi": "せき, かか-わる",
+        "Example": "関係 (かんけい): Quan hệ; 関わる (かかわる): Liên quan đến",
+        "LessonId": 290
+    },
+    {
+        "Character": "係",
+        "Meaning": "Hệ (Hệ lụy, phụ trách)",
+        "Onyomi": "ケイ",
+        "Kunyomi": "かか-る, かかり",
+        "Example": "係員 (かかりいん): Người phụ trách; 関係者 (かんけいしゃ): Người liên quan",
+        "LessonId": 290
+    },
+    {
+        "Character": "和",
+        "Meaning": "Hòa (Hòa bình, tiếng Nhật)",
+        "Onyomi": "ワ, オ",
+        "Kunyomi": "やわ-らぐ, なご-む",
+        "Example": "和食 (わしょく): Món ăn Nhật; 平和 (へいわ): Hòa bình",
+        "LessonId": 290
+    },
+    {
+        "Character": "付",
+        "Meaning": "Phụ (Đính kèm, gắn vào)",
+        "Onyomi": "フ",
+        "Kunyomi": "つ-く, つ-ける",
+        "Example": "付近 (ふきん): Vùng lân cận; 付き合う (つきあう): Hẹn hò/Giao tiếp",
+        "LessonId": 290
+    },
+    {
+        "Character": "娘",
+        "Meaning": "Nương (Con gái)",
+        "Onyomi": "-",
+        "Kunyomi": "むすめ",
+        "Example": "娘 (むすめ): Con gái; 箱入り娘 (はこいりむすめ): Con gái rượu",
+        "LessonId": 290
+    },
+    {
+        "Character": "老",
+        "Meaning": "Lão (Già)",
+        "Onyomi": "ロウ",
+        "Kunyomi": "お-いる, ふ-ける",
+        "Example": "老後 (ろうご): Tuổi già; 敬老 (けいろう): Kính lão",
+        "LessonId": 290
+    },
+    {
+        "Character": "婦",
+        "Meaning": "Phụ (Phụ nữ)",
+        "Onyomi": "フ",
+        "Kunyomi": "-",
+        "Example": "主婦 (しゅふ): Nội trợ; 婦人 (ふじん): Phụ nữ/Quý bà",
+        "LessonId": 290
+    },
+    {
+        "Character": "姓",
+        "Meaning": "Tánh (Họ)",
+        "Onyomi": "セイ, ショウ",
+        "Kunyomi": "-",
+        "Example": "姓 (せい): Họ; 姓名 (せいめい): Họ tên",
+        "LessonId": 290
+    },
+    {
+        "Character": "仲",
+        "Meaning": "Trọng (Quan hệ, ở giữa)",
+        "Onyomi": "チュウ",
+        "Kunyomi": "なか",
+        "Example": "仲間 (なかま): Bạn bè/Đồng nghiệp; 仲良し (なかよし): Thân thiết",
+        "LessonId": 290
+    },
+    {
+        "Character": "君",
+        "Meaning": "Quân (Cậu, em)",
+        "Onyomi": "クン",
+        "Kunyomi": "きみ",
+        "Example": "山田君 (やまだくん): Cậu Yamada; 君 (きみ): Em/Cậu",
+        "LessonId": 290
+    },
+    {
+        "Character": "彼",
+        "Meaning": "Bỉ (Anh ấy, cô ấy)",
+        "Onyomi": "ヒ",
+        "Kunyomi": "かれ, かの",
+        "Example": "彼 (かれ): Anh ấy; 彼女 (かのじょ): Cô ấy",
+        "LessonId": 290
+    },
+    {
+        "Character": "他",
+        "Meaning": "Tha (Khác)",
+        "Onyomi": "タ",
+        "Kunyomi": "ほか",
+        "Example": "他人 (たにん): Người lạ; その他 (そのた): Cái khác",
+        "LessonId": 290
+    },
+    {
+        "Character": "初",
+        "Meaning": "Sơ (Đầu tiên)",
+        "Onyomi": "ショ",
+        "Kunyomi": "はじ-めて, はつ, そ-める",
+        "Example": "初めて (はじめて): Lần đầu tiên; 最初 (さいしょ): Đầu tiên",
+        "LessonId": 290
+    },
+    {
+        "Character": "再",
+        "Meaning": "Tái (Lại, lần nữa)",
+        "Onyomi": "サイ, サ",
+        "Kunyomi": "ふたた-び",
+        "Example": "再会 (さいかい): Tái ngộ; 再来年 (さらいねん): Năm sau nữa",
+        "LessonId": 290
+    },
+    {
+        "Character": "久",
+        "Meaning": "Cửu (Lâu)",
+        "Onyomi": "キュウ, ク",
+        "Kunyomi": "ひさ-しい",
+        "Example": "久しぶり (ひさしぶり): Lâu rồi không gặp; 永久 (えいきゅう): Vĩnh cửu",
+        "LessonId": 290
+    },
+    {
+        "Character": "達",
+        "Meaning": "Đạt (Đạt được, số nhiều)",
+        "Onyomi": "タツ",
+        "Kunyomi": "-",
+        "Example": "友達 (ともだち): Bạn bè; 上達 (じょうたつ): Tiến bộ",
+        "LessonId": 290
+    },
+    {
+        "Character": "個",
+        "Meaning": "Cá (Cá nhân, đơn vị đếm vật nhỏ)",
+        "Onyomi": "コ",
+        "Kunyomi": "-",
+        "Example": "個人 (こじん): Cá nhân; 個性 (こせい): Cá tính",
+        "LessonId": 290
+    },
+    {
+        "Character": "性",
+        "Meaning": "Tính (Tính cách, giới tính)",
+        "Onyomi": "セイ, ショウ",
+        "Kunyomi": "-",
+        "Example": "性格 (せいかく): Tính cách; 男性 (だんせい): Nam giới",
+        "LessonId": 290
+    },
+    {
+        "Character": "各",
+        "Meaning": "Các (Mọi, các)",
+        "Onyomi": "カク",
+        "Kunyomi": "おのおの",
+        "Example": "各自 (かくじ): Mỗi người; 各国 (かっこく): Các nước",
+        "LessonId": 290
+    },
+    {
+        "Character": "格",
+        "Meaning": "Cách (Phẩm cách, khung)",
+        "Onyomi": "カク, コウ",
+        "Kunyomi": "-",
+        "Example": "合格 (ごうかく): Thi đỗ; 資格 (しかく): Bằng cấp/Tư cách",
+        "LessonId": 290
+    }
+]

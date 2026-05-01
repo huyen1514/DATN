@@ -4,7 +4,7 @@
         "Reading": "います",
         "Meaning": "có (con), ở",
         "PartOfSpeech": "Động từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "こどもが ふたり います。\n(Tôi có hai đứa con.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "かかります",
         "Meaning": "tốn (thời gian, tiền bạc)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "うちから えきまで 15ふん かかります。\n(Từ nhà đến ga tốn 15 phút.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "やすみます",
         "Meaning": "nghỉ (làm việc, học)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "かいしゃを やすみます。\n(Tôi nghỉ làm.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "ひとつ",
         "Meaning": "1 cái (đồ vật)",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "りんごを ひとつ かいました。\n(Tôi đã mua một quả táo.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "ふたつ",
         "Meaning": "2 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "たまごを ふたつ たべました。\n(Tôi đã ăn hai quả trứng.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "みっつ",
         "Meaning": "3 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "みっつ ください。\n(Cho tôi 3 cái.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "よっつ",
         "Meaning": "4 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "いすが よっつ あります。\n(Có 4 cái ghế.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "いつつ",
         "Meaning": "5 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "みかんを いつつ かいました。\n(Tôi đã mua 5 quả quýt.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "むっつ",
         "Meaning": "6 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "むっつ あります。\n(Có 6 cái.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "ななつ",
         "Meaning": "7 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "ななつ かいました。\n(Tôi đã mua 7 cái.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "やっつ",
         "Meaning": "8 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "やっつ あります。\n(Có 8 cái.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "ここのつ",
         "Meaning": "9 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "ここのつ あります。\n(Có 9 cái.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "とお",
         "Meaning": "10 cái",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "とお あります。\n(Có 10 cái.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "いくつ",
         "Meaning": "mấy cái, bao nhiêu cái",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "みかんを いくつ かいましたか。\n(Bạn đã mua mấy quả quýt?)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "ひとり",
         "Meaning": "1 người",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "ひとりで いきます。\n(Tôi đi một mình.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "ふたり",
         "Meaning": "2 người",
         "PartOfSpeech": "Số từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "ふたりで いきます。\n(Hai người cùng đi.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "～にん",
         "Meaning": "~ người",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "がくせいが 5にん います。\n(Có 5 sinh viên.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "～だい",
         "Meaning": "~ chiếc (máy móc, xe cộ)",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "くるまが 2だい あります。\n(Có 2 chiếc ô tô.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "～まい",
         "Meaning": "~ tờ, tấm (vật mỏng)",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "きってを 3まい かいました。\n(Tôi đã mua 3 tờ tem.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "～かい",
         "Meaning": "~ lần",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "1か月に 2かい びじゅつかんへ いきます。\n(Một tháng tôi đi bảo tàng mỹ thuật 2 lần.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "りんご",
         "Meaning": "táo",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "あかい りんごを たべます。\n(Tôi ăn quả táo đỏ.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "みかん",
         "Meaning": "quýt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "みかんを いつつ たべました。\n(Tôi đã ăn 5 quả quýt.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "きって",
         "Meaning": "tem",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "きってを 5まい かいました。\n(Tôi đã mua 5 tờ tem.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "はがき",
         "Meaning": "bưu thiếp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "はがきを おくります。\n(Tôi gửi bưu thiếp.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "ふうとう",
         "Meaning": "phong bì",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "ふうとうが ありますか。\n(Có phong bì không?)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "りょうしん",
         "Meaning": "bố mẹ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "りょうしんは べとなむに います。\n(Bố mẹ tôi ở Việt Nam.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "きょうだい",
         "Meaning": "anh chị em",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "きょうだいが 3にん います。\n(Tôi có 3 anh chị em.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "あに",
         "Meaning": "anh trai (của mình)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "あにが ひとりで にほんへ いきました。\n(Anh trai tôi đã đi Nhật một mình.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "あね",
         "Meaning": "chị gái (của mình)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "あねは ぎんこうで はたらいています。\n(Chị gái tôi đang làm việc ở ngân hàng.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "おとうと",
         "Meaning": "em trai (của mình)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "おとうとが ひとり います。\n(Tôi có một người em trai.)"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "いもうと",
         "Meaning": "em gái (của mình)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "いもうとは がくせいです。\n(Em gái tôi là sinh viên.)"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "がいこく",
         "Meaning": "nước ngoài",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "がいこくへ いきたいです。\n(Tôi muốn đi nước ngoài.)"
     },
     {
@@ -260,7 +260,7 @@
         "Reading": "～じかん",
         "Meaning": "~ tiếng (đồng hồ)",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "まいにち 8じかん はたらきます。\n(Mỗi ngày tôi làm việc 8 tiếng.)"
     },
     {
@@ -268,7 +268,7 @@
         "Reading": "～しゅうかん",
         "Meaning": "~ tuần",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "2しゅうかん やすみます。\n(Tôi nghỉ 2 tuần.)"
     },
     {
@@ -276,7 +276,7 @@
         "Reading": "～かげつ",
         "Meaning": "~ tháng",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "3かげつ にほんごを べんきょうしました。\n(Tôi đã học tiếng Nhật 3 tháng.)"
     },
     {
@@ -284,7 +284,7 @@
         "Reading": "～ねん",
         "Meaning": "~ năm",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "1ねん らいにちしました。\n(Tôi đã đến Nhật được 1 năm.)"
     },
     {
@@ -292,7 +292,7 @@
         "Reading": "～くらい",
         "Meaning": "khoảng ~",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "30ぷん くらい かかります。\n(Tốn khoảng 30 phút.)"
     },
     {
@@ -300,7 +300,7 @@
         "Reading": "どのくらい",
         "Meaning": "bao lâu, bao nhiêu",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "どのくらい べんきょうしましたか。\n(Bạn đã học được bao lâu rồi?)"
     },
     {
@@ -308,7 +308,7 @@
         "Reading": "ぜんぶで",
         "Meaning": "tổng cộng",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "ぜんぶで 500えんです。\n(Tổng cộng là 500 yên.)"
     },
     {
@@ -316,7 +316,7 @@
         "Reading": "みんな",
         "Meaning": "tất cả, mọi người",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "みんなで ぱーてぃーを します。\n(Mọi người cùng nhau tổ chức tiệc.)"
     },
     {
@@ -324,7 +324,7 @@
         "Reading": "～だけ",
         "Meaning": "chỉ ~",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 16,
+        "LessonId": 51,
         "Example": "ひとつ だけ あります。\n(Chỉ có 1 cái thôi.)"
     }
 ]

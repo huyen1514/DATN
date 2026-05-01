@@ -4,7 +4,7 @@
         "Reading": "きます",
         "Meaning": "mặc (áo sơ mi, v.v.)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "しゃつを きます。\n(Tôi mặc áo sơ mi.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "はきます",
         "Meaning": "mặc (quần, váy), đi (giày, tất)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "くつを はきます。\n(Tôi đi giày.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "かぶります",
         "Meaning": "đội (mũ, v.v.)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "ぼうしを かぶります。\n(Tôi đội mũ.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "かけます",
         "Meaning": "đeo [kính]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "めがねを かけます。\n(Tôi đeo kính.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "うまれます",
         "Meaning": "sinh ra",
         "PartOfSpeech": "Động từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "1990ねんに うまれました。\n(Tôi sinh năm 1990.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "こーと",
         "Meaning": "áo khoác",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "こーとを きます。\n(Mặc áo khoác.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "せーたー",
         "Meaning": "áo len",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "あかい せーたーを かいました。\n(Tôi đã mua cái áo len màu đỏ.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "すーつ",
         "Meaning": "bộ com-lê",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "すーつを きて います。\n(Tôi đang mặc com-lê.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "ぼうし",
         "Meaning": "mũ, nón",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "ぼうしを かぶって います。\n(Tôi đang đội mũ.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "めがね",
         "Meaning": "kính",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "めがねを かけて います。\n(Tôi đang đeo kính.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "よく",
         "Meaning": "hay, thường (tần suất)",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "よく えいがを みに いきます。\n(Tôi hay đi xem phim.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "おめでとうございます",
         "Meaning": "chúc mừng",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "たんじょうび おめでとうございます。\n(Chúc mừng sinh nhật.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "うち",
         "Meaning": "nhà",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "わたしの うちは あそこです。\n(Nhà của tôi ở kia.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "けーき",
         "Meaning": "bánh ngọt, bánh ga-tô",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "けーきを たべます。\n(Tôi ăn bánh ngọt.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "おべんとう",
         "Meaning": "cơm hộp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "おべんとうを つくりました。\n(Tôi đã làm cơm hộp.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "ろぼっと",
         "Meaning": "rô-bốt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "ろぼっとが あります。\n(Có con rô-bốt.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "ゆーもあ",
         "Meaning": "hài hước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "ゆーもあが ありますね。\n(Bạn hài hước nhỉ.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "つごう",
         "Meaning": "sự thuận tiện (về thời gian)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "つごうが いいです。\n(Thời gian thuận tiện.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "さがしにいきます",
         "Meaning": "đi tìm",
         "PartOfSpeech": "Động từ",
-        "LessonId": 27,
+        "LessonId": 106,
         "Example": "うちを さがしに いきます。\n(Tôi đi tìm nhà.)"
     }
 ]

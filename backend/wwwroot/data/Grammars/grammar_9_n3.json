@@ -1,0 +1,72 @@
+[
+    {
+        "GrammarName": "〜てからでなければ / 〜てからでないと",
+        "Structure": "V-て + からでなければ / からでないと[cite: 2]",
+        "Meaning": "Sử dụng khi nói rằng một việc gì đó không thể thực hiện nếu điều kiện ở vế trước chưa hoàn thành. Vế sau thường là các mẫu câu mang tính phủ định như 'khó', 'không thể'[cite: 2].",
+        "Example": "この会社では、3か月の研修を受けてからでなければ正社員になれません。[cite: 2]\n(Ở công ty này, nếu không trải qua 3 tháng thực tập thì không thể trở thành nhân viên chính thức[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜かのよう / 〜かのように",
+        "Structure": "V-PI + かのようだ / かのように / かのような + N[cite: 2]\n*Tính từ な / Danh từ + であるかのように cũng được sử dụng[cite: 2].",
+        "Meaning": "Sử dụng khi nói rằng thực tế không phải như thế nhưng bạn cảm thấy dường như là như thế[cite: 2].",
+        "Example": "リンさんの部屋はまるで泥棒が入ったかのように散らかっている。[cite: 2]\n(Phòng của Lin bừa bộn hệt như là có trộm đột nhập vào vậy[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜うちに",
+        "Structure": "V-ない / V-ている / Aい / なAな / Nの + うちに[cite: 2]",
+        "Meaning": "Sử dụng khi muốn nói rằng hãy, muốn hoặc nên làm một việc gì đó trước khi một trạng thái hiện tại thay đổi hoặc trước khi một sự việc khác xảy ra[cite: 2].",
+        "Example": "アイスクリームが溶けないうちに食べよう。[cite: 2]\n(Hãy ăn kem trước khi nó bị tan chảy nhé[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜向け",
+        "Structure": "N + 向けだ / 向けに / 向けの + N[cite: 2]",
+        "Meaning": "Sử dụng khi muốn nói một sự vật, sự việc nào đó được tạo ra dành riêng cho một đối tượng, nhóm người hoặc mục đích cụ thể nào đó[cite: 2].",
+        "Example": "これは子ども向けの映画だが、大人にも人気がある。[cite: 2]\n(Đây là bộ phim dành cho trẻ em nhưng cũng rất được người lớn ưa chuộng[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜向き",
+        "Structure": "N + 向き[cite: 2]",
+        "Meaning": "Sử dụng khi nói về tính chất vốn có của một sự vật, sự việc nào đó là phù hợp với một đối tượng cụ thể[cite: 2].",
+        "Example": "彼女はアニメの声優向きの声をしている。[cite: 2]\n(Cô ấy có giọng nói rất phù hợp với công việc diễn viên lồng tiếng phim hoạt hình[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜によって (Sự khác biệt / Phụ thuộc)",
+        "Structure": "N + によって / による + N[cite: 2]",
+        "Meaning": "Sử dụng để diễn đạt rằng mỗi thứ sẽ có sự khác nhau tùy thuộc vào đối tượng người, địa điểm, thời gian hoặc trường hợp cụ thể[cite: 2].",
+        "Example": "人によって好みや考え方が違うのは当然だ。[cite: 2]\n(Việc sở thích và cách suy nghĩ khác nhau tùy vào mỗi người là chuyện đương nhiên[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜最中に / 〜最中だ",
+        "Structure": "V-ている / Nの + 最中に / 最中だ[cite: 2]",
+        "Meaning": "Sử dụng khi đúng vào lúc đang làm một việc gì đó thì có một sự việc không ngờ tới xảy ra. Thường dùng trong những tình huống mà người nói không muốn bị làm phiền[cite: 2].",
+        "Example": "面接の最中におなかが鳴ってしまった。[cite: 2]\n(Đúng lúc đang phỏng vấn thì bụng tôi lại reo lên[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜かけ / 〜かける",
+        "Structure": "V-ます (bỏ ます) + かけだ / かけの + N[cite: 2]",
+        "Meaning": "Sử dụng khi nói về một trạng thái công việc đã bắt đầu thực hiện nhưng vẫn còn dở dang, chưa hoàn thành xong[cite: 2].",
+        "Example": "弟の部屋には作りかけのプラモデルがいくつもある。[cite: 2]\n(Trong phòng của em trai tôi có rất nhiều mô hình nhựa đang lắp ráp dở[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜ずにはいられない",
+        "Structure": "V-ない (bỏ ない) + ずにはいられない[cite: 2]\n*Lưu ý: する → せず[cite: 2].",
+        "Meaning": "Sử dụng khi diễn tả một tình huống mà bản thân không thể chịu đựng được, dù thế nào đi nữa cũng không kìm nén được mà phải thực hiện hành động đó[cite: 2].",
+        "Example": "人の間違いを笑わずにはいられなかった。[cite: 2]\n(Tôi đã không thể nhịn cười được trước lỗi sai của người khác[cite: 2].)",
+        "LessonId": 292
+    },
+    {
+        "GrammarName": "〜ないではいられない",
+        "Structure": "V-ない + ではいられない[cite: 2]",
+        "Meaning": "Cách dùng và ý nghĩa tương tự như mẫu câu '〜ずにはいられない'[cite: 2].",
+        "Example": "お祭りだと言われると、行かないではいられなくなってしまう。[cite: 2]\n(Cứ nghe nói đến lễ hội là tôi lại không thể nào không đi được[cite: 2].)",
+        "LessonId": 292
+    }
+]

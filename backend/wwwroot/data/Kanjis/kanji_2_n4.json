@@ -1,0 +1,178 @@
+[
+    {
+        "Character": "店",
+        "Meaning": "Cửa hàng (Điếm)",
+        "Onyomi": "テン",
+        "Kunyomi": "みせ",
+        "Example": "店員 (てんいn): Nhân viên; 店長 (てんちょう): Cửa hàng trưởng",
+        "LessonId": 135
+    },
+    {
+        "Character": "客",
+        "Meaning": "Khách hàng (Khách)",
+        "Onyomi": "キャク",
+        "Kunyomi": "-",
+        "Example": "お客さん (おきゃくさん): Khách hàng; 乗客 (じょうきゃく): Hành khách",
+        "LessonId": 135
+    },
+    {
+        "Character": "親",
+        "Meaning": "Bố mẹ, Thân thiết (Thân)",
+        "Onyomi": "シン",
+        "Kunyomi": "おや, した-しい",
+        "Example": "親切 (しんせつ): Tốt bụng; 両親 (りょうしん): Bố mẹ",
+        "LessonId": 135
+    },
+    {
+        "Character": "切",
+        "Meaning": "Cắt (Thiết)",
+        "Onyomi": "セツ",
+        "Kunyomi": "き-る",
+        "Example": "親切 (しんせつ): Thân thiện; 切手 (きって): Tem",
+        "LessonId": 135
+    },
+    {
+        "Character": "売",
+        "Meaning": "Bán (Mại)",
+        "Onyomi": "バイ",
+        "Kunyomi": "う-る, う-れる",
+        "Example": "売店 (ばいてん): Quầy bán hàng; 売り切れ (うりきれ): Bán hết",
+        "LessonId": 135
+    },
+    {
+        "Character": "当",
+        "Meaning": "Trúng, Đúng (Đương)",
+        "Onyomi": "トウ",
+        "Kunyomi": "あ-たる, あ-てる",
+        "Example": "本当 (ほんとう): Sự thật; お弁当 (おべんとう): Cơm hộp",
+        "LessonId": 135
+    },
+    {
+        "Character": "品",
+        "Meaning": "Hàng hóa (Phẩm)",
+        "Onyomi": "ヒン",
+        "Kunyomi": "しな",
+        "Example": "商品 (しょうひん): Sản phẩm; 品物 (しなもの): Đồ vật",
+        "LessonId": 135
+    },
+    {
+        "Character": "便",
+        "Meaning": "Tiện lợi, Thư (Tiện)",
+        "Onyomi": "ベン, ビン",
+        "Kunyomi": "たよ-り",
+        "Example": "便利 (べんり): Tiện lợi; 郵便局 (ゆうびんきょく): Bưu điện",
+        "LessonId": 135
+    },
+    {
+        "Character": "利",
+        "Meaning": "Lợi ích (Lợi)",
+        "Onyomi": "リ",
+        "Kunyomi": "-",
+        "Example": "利用 (りよう): Sử dụng; 利子 (りし): Lãi suất",
+        "LessonId": 135
+    },
+    {
+        "Character": "使",
+        "Meaning": "Sử dụng (Sử)",
+        "Onyomi": "シ",
+        "Kunyomi": "つか-う",
+        "Example": "使用 (しよう): Sử dụng; 大使館 (たいしかん): Đại sứ quán",
+        "LessonId": 135
+    },
+    {
+        "Character": "銀",
+        "Meaning": "Bạc (Ngân)",
+        "Onyomi": "ギン",
+        "Kunyomi": "-",
+        "Example": "銀行 (ぎんこう): Ngân hàng; 銀メダル (ぎんめだる): Huy chương bạc",
+        "LessonId": 135
+    },
+    {
+        "Character": "白",
+        "Meaning": "Trắng (Bạch)",
+        "Onyomi": "ハク",
+        "Kunyomi": "しろ, しろ-い",
+        "Example": "白黒 (しろくろ): Trắng đen; 白衣 (はくい): Áo blouse trắng",
+        "LessonId": 135
+    },
+    {
+        "Character": "黒",
+        "Meaning": "Đen (Hắc)",
+        "Onyomi": "コク",
+        "Kunyomi": "くろ, くろ-い",
+        "Example": "黒板 (こくばん): Bảng đen; 真っ黒 (まっくろ): Đen kịt",
+        "LessonId": 135
+    },
+    {
+        "Character": "紙",
+        "Meaning": "Giấy (Chỉ)",
+        "Onyomi": "シ",
+        "Kunyomi": "かみ",
+        "Example": "新聞紙 (しんぶんし): Giấy báo; 折り紙 (おりがみ): Nghệ thuật xếp giấy",
+        "LessonId": 135
+    },
+    {
+        "Character": "朝",
+        "Meaning": "Buổi sáng (Triều)",
+        "Onyomi": "チョウ",
+        "Kunyomi": "あさ",
+        "Example": "朝食 (ちょうしょく): Bữa sáng; 今朝 (けさ): Sáng nay",
+        "LessonId": 135
+    },
+    {
+        "Character": "晩",
+        "Meaning": "Buổi tối (Vãn)",
+        "Onyomi": "バン",
+        "Kunyomi": "-",
+        "Example": "晩ごはん (ばんごはん): Bữa tối; 今晩 (こんばん): Tối nay",
+        "LessonId": 135
+    },
+    {
+        "Character": "昼",
+        "Meaning": "Buổi trưa (Trú)",
+        "Onyomi": "チュウ",
+        "Kunyomi": "ひる",
+        "Example": "昼食 (ちゅうしょく): Bữa trưa; 昼休み (ひるやすみ): Nghỉ trưa",
+        "LessonId": 135
+    },
+    {
+        "Character": "夜",
+        "Meaning": "Ban đêm (Dạ)",
+        "Onyomi": "ヤ",
+        "Kunyomi": "よる, よ",
+        "Example": "夜食 (やしょく): Ăn đêm; 今夜 (こんや): Đêm nay",
+        "LessonId": 135
+    },
+    {
+        "Character": "前",
+        "Meaning": "Trước (Tiền)",
+        "Onyomi": "ゼン",
+        "Kunyomi": "まえ",
+        "Example": "名前 (なまえ): Tên; 前半 (ぜんはん): Hiệp một",
+        "LessonId": 135
+    },
+    {
+        "Character": "後",
+        "Meaning": "Sau (Hậu)",
+        "Onyomi": "ゴ, コウ",
+        "Kunyomi": "うし-ろ, あと, おく-れる",
+        "Example": "後半 (こうはん): Hiệp hai; 午後 (ごご): Buổi chiều",
+        "LessonId": 135
+    },
+    {
+        "Character": "午",
+        "Meaning": "Ngọ (Ngọ)",
+        "Onyomi": "ゴ",
+        "Kunyomi": "-",
+        "Example": "午前 (ごぜん): Sáng (AM); 午後 (ごご): Chiều (PM)",
+        "LessonId": 135
+    },
+    {
+        "Character": "早",
+        "Meaning": "Sớm (Tảo)",
+        "Onyomi": "ソウ",
+        "Kunyomi": "はや-い",
+        "Example": "早朝 (そうちょう): Sáng sớm; 早口 (はやくち): Nói nhanh",
+        "LessonId": 135
+    }
+]

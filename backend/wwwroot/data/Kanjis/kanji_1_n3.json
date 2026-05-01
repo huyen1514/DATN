@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "起",
+        "Meaning": "Thức dậy, Xảy ra (Khởi)",
+        "Onyomi": "キ",
+        "Kunyomi": "お-きる, おこ-る, おこ-す",
+        "Example": "起きる (おきる): Thức dậy; 起こる (おこる): Xảy ra",
+        "LessonId": 255
+    },
+    {
+        "Character": "寝",
+        "Meaning": "Ngủ (Tẩm)",
+        "Onyomi": "シン",
+        "Kunyomi": "ね-る, ね-かす",
+        "Example": "寝室 (しんしつ): Phòng ngủ; 寝台車 (しんだいしゃ): Xe giường nằm",
+        "LessonId": 255
+    },
+    {
+        "Character": "浴",
+        "Meaning": "Tắm (Dục)",
+        "Onyomi": "ヨク",
+        "Kunyomi": "あ-びる, あび-せる",
+        "Example": "シャワーを浴びる: Tắm vòi sen; 日光浴 (にっこうよく): Tắm nắng",
+        "LessonId": 255
+    },
+    {
+        "Character": "湯",
+        "Meaning": "Nước nóng (Thang)",
+        "Onyomi": "トウ",
+        "Kunyomi": "ゆ",
+        "Example": "お湯 (おゆ): Nước nóng; 熱湯 (ねっとう): Nước sôi",
+        "LessonId": 255
+    },
+    {
+        "Character": "洗",
+        "Meaning": "Rửa (Tẩy)",
+        "Onyomi": "セン",
+        "Kunyomi": "あら-う",
+        "Example": "洗う (あらう): Rửa; 洗剤 (せんざい): Chất tẩy rửa",
+        "LessonId": 255
+    },
+    {
+        "Character": "濯",
+        "Meaning": "Giặt giũ (Trạc)",
+        "Onyomi": "タク",
+        "Kunyomi": "-",
+        "Example": "洗濯 (せんたく): Giặt giũ",
+        "LessonId": 255
+    },
+    {
+        "Character": "干",
+        "Meaning": "Phơi, Khô (Can)",
+        "Onyomi": "カン",
+        "Kunyomi": "ほ-す, ひ-る",
+        "Example": "干す (ほす): Phơi; 干物 (ひもの): Đồ khô",
+        "LessonId": 255
+    },
+    {
+        "Character": "活",
+        "Meaning": "Hoạt động, Sống (Hoạt)",
+        "Onyomi": "カツ",
+        "Kunyomi": "-",
+        "Example": "生活 (せいかつ): Cuộc sống; 活動 (かつどう): Hoạt động",
+        "LessonId": 255
+    },
+    {
+        "Character": "拾",
+        "Meaning": "Nhặt (Thập)",
+        "Onyomi": "シュウ, ジュウ",
+        "Kunyomi": "ひろ-う",
+        "Example": "拾う (ひろう): Nhặt; 拾得物 (しゅうとくぶつ): Vật nhặt được",
+        "LessonId": 255
+    },
+    {
+        "Character": "捨",
+        "Meaning": "Vứt bỏ (Xá)",
+        "Onyomi": "シャ",
+        "Kunyomi": "す-てる",
+        "Example": "捨てる (すてる): Vứt bỏ; 四捨五入 (ししゃごにゅう): Làm tròn số",
+        "LessonId": 255
+    },
+    {
+        "Character": "燃",
+        "Meaning": "Đốt cháy (Nhiên)",
+        "Onyomi": "ネン",
+        "Kunyomi": "も-える, も-やす, も-す",
+        "Example": "燃える (もえる): Cháy; 燃料 (ねんりょう): Nhiên liệu",
+        "LessonId": 255
+    },
+    {
+        "Character": "袋",
+        "Meaning": "Túi (Đại)",
+        "Onyomi": "タイ",
+        "Kunyomi": "ふくろ",
+        "Example": "袋 (ふくろ): Cái túi; 紙袋 (かみぶくろ): Túi giấy",
+        "LessonId": 255
+    },
+    {
+        "Character": "曜",
+        "Meaning": "Ngày trong tuần (Diệu)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "-",
+        "Example": "日曜日 (にちようび): Chủ nhật; 火曜日 (かようび): Thứ ba",
+        "LessonId": 255
+    },
+    {
+        "Character": "末",
+        "Meaning": "Cuối (Mạt)",
+        "Onyomi": "マツ, バツ",
+        "Kunyomi": "すえ",
+        "Example": "週末 (しゅうまつ): Cuối tuần; 月末 (げつまつ): Cuối tháng",
+        "LessonId": 255
+    },
+    {
+        "Character": "昨",
+        "Meaning": "Trước, Hôm qua (Tạc)",
+        "Onyomi": "サク",
+        "Kunyomi": "-",
+        "Example": "昨晩 (さくばん): Tối qua; 昨年 (さくねん): Năm ngoái",
+        "LessonId": 255
+    },
+    {
+        "Character": "翌",
+        "Meaning": "Kế tiếp (Dực)",
+        "Onyomi": "ヨク",
+        "Kunyomi": "-",
+        "Example": "翌朝 (よくあさ): Sáng hôm sau; 翌日 (よくじつ): Ngày hôm sau",
+        "LessonId": 255
+    },
+    {
+        "Character": "予",
+        "Meaning": "Trước (Dự)",
+        "Onyomi": "ヨ",
+        "Kunyomi": "-",
+        "Example": "予定 (よてい): Dự định; 予報 (よほう): Dự báo",
+        "LessonId": 255
+    },
+    {
+        "Character": "定",
+        "Meaning": "Quyết định (Định)",
+        "Onyomi": "テイ, ジョウ",
+        "Kunyomi": "さだ-まる, さだ-める",
+        "Example": "予定 (よてい): Dự định; 定年 (ていねん): Tuổi nghỉ hưu",
+        "LessonId": 255
+    },
+    {
+        "Character": "用",
+        "Meaning": "Sử dụng (Dụng)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "もち-いる",
+        "Example": "用事 (ようじ): Công chuyện; 利用 (りよう): Sử dụng",
+        "LessonId": 255
+    },
+    {
+        "Character": "事",
+        "Meaning": "Việc (Sự)",
+        "Onyomi": "ジ, ズ",
+        "Kunyomi": "こと",
+        "Example": "用事 (ようじ): Công chuyện; 大事 (だいじ): Quan trọng",
+        "LessonId": 255
+    }
+]

@@ -4,7 +4,7 @@
         "Reading": "おきます",
         "Meaning": "thức dậy",
         "PartOfSpeech": "Động từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "わたしは 6じに おきます。\n(Tôi thức dậy lúc 6 giờ.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "ねます",
         "Meaning": "ngủ, đi ngủ",
         "PartOfSpeech": "Động từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "11じに ねます。\n(Tôi đi ngủ lúc 11 giờ.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "はたらきます",
         "Meaning": "làm việc",
         "PartOfSpeech": "Động từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ぎんこうで はたらきます。\n(Tôi làm việc ở ngân hàng.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "やすみます",
         "Meaning": "nghỉ, nghỉ ngơi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "12じから やすみます。\n(Nghỉ ngơi từ 12 giờ.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "べんきょうします",
         "Meaning": "học, học tập",
         "PartOfSpeech": "Động từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "まいばん べんきょうします。\n(Tối nào tôi cũng học bài.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "おわります",
         "Meaning": "hết, kết thúc",
         "PartOfSpeech": "Động từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "しごとは 5じに おわります。\n(Công việc kết thúc lúc 5 giờ.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "デパート",
         "Meaning": "cửa hàng bách hóa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "デパートは 10じから です。\n(Cửa hàng bách hóa mở cửa từ 10 giờ.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "ぎんこう",
         "Meaning": "ngân hàng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ぎんこうは 9じから 3じまでです。\n(Ngân hàng mở cửa từ 9 giờ đến 3 giờ.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "ゆうびんきょく",
         "Meaning": "bưu điện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ゆうびんきょくへ いきます。\n(Tôi đi đến bưu điện.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "としょかん",
         "Meaning": "thư viện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "としょかんで ほんを よみます。\n(Tôi đọc sách ở thư viện.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "びじゅつかん",
         "Meaning": "bảo tàng mỹ thuật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "びじゅつかんは どこですか。\n(Bảo tàng mỹ thuật ở đâu vậy?)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "いま",
         "Meaning": "bây giờ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "いま なんじですか。\n(Bây giờ là mấy giờ?)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "～じ",
         "Meaning": "~ giờ",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "いま 8じです。\n(Bây giờ là 8 giờ.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "～ふん / ぷん",
         "Meaning": "~ phút",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "10じ 15ふんです。\n(10 giờ 15 phút.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "はん",
         "Meaning": "rưỡi, nửa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "7じはんに おきます。\n(Tôi thức dậy lúc 7 giờ rưỡi.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "なんじ",
         "Meaning": "mấy giờ",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "なんじに ねますか。\n(Bạn ngủ lúc mấy giờ?)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "なんぷん",
         "Meaning": "mấy phút",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "いま なんじ なんぷんですか。\n(Bây giờ là mấy giờ mấy phút?)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "ごぜん",
         "Meaning": "sáng (AM)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ごぜん 8じに べんきょうします。\n(Tôi học bài lúc 8 giờ sáng.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "ごご",
         "Meaning": "chiều (PM)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ごご 10じに ねます。\n(Tôi ngủ lúc 10 giờ tối.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "あさ",
         "Meaning": "buổi sáng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "あさ なにを たべますか。\n(Buổi sáng bạn ăn gì?)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "ひる",
         "Meaning": "buổi trưa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ひるごはんを たべます。\n(Tôi ăn cơm trưa.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "ばん",
         "Meaning": "buổi tối",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ばん テレビを みます。\n(Buổi tối tôi xem tivi.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "きのう",
         "Meaning": "hôm qua",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "きのう べんきょうしました。\n(Hôm qua tôi đã học bài.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "きょう",
         "Meaning": "hôm nay",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "きょうは どようびです。\n(Hôm nay là thứ bảy.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "あした",
         "Meaning": "ngày mai",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "あした どこへ いきますか。\n(Ngày mai bạn đi đâu?)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "やすみ",
         "Meaning": "ngày nghỉ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "ぎんこうの やすみは どようびです。\n(Ngày nghỉ của ngân hàng là thứ bảy.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "まいあさ",
         "Meaning": "mỗi sáng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "まいあさ コーヒーを のみます。\n(Mỗi sáng tôi đều uống cà phê.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "まいばん",
         "Meaning": "mỗi tối",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "まいばん おんがくを ききます。\n(Mỗi tối tôi đều nghe nhạc.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "まいにち",
         "Meaning": "mỗi ngày",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "まいにち べんきょうします。\n(Mỗi ngày tôi đều học bài.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "ばんごう",
         "Meaning": "số (điện thoại...)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "でんわばんごうは なんばんですか。\n(Số điện thoại là số mấy?)"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "～から",
         "Meaning": "từ ~",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "9じから はたらきます。\n(Làm việc từ 9 giờ.)"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "～まで",
         "Meaning": "đến ~",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 9,
+        "LessonId": 16,
         "Example": "5じまで べんきょうします。\n(Học bài đến 5 giờ.)"
     }
 ]

@@ -4,48 +4,48 @@
         "Structure": "これ / それ / あれ は Danh từ です",
         "Meaning": "Đây là các đại từ chỉ thị đóng vai trò làm chủ ngữ trong câu. \n- 「これ」: Chỉ vật ở gần người nói.\n- 「それ」: Chỉ vật ở gần người nghe.\n- 「あれ」: Chỉ vật ở xa cả người nói và người nghe.\nChúng được dùng để chỉ trực tiếp đồ vật mà không cần danh từ đi kèm ngay sau đó.",
         "Example": "それは わたしの かばんです。\n(Đó là cái cặp của tôi.)",
-        "LessonId": 31
+        "LessonId": 7
     },
     {
         "GrammarName": "Đại từ chỉ thị: この / その / あの",
         "Structure": "この / その / あの + Danh từ は ~ です",
         "Meaning": "Tương tự như Kore/Sore/Are về khoảng cách, nhưng các từ này là 'Liên thể từ', bắt buộc phải có một Danh từ đi kèm ngay sau để bổ nghĩa cho danh từ đó.\n- 「この Danh từ」: Cái Danh từ này (gần người nói).\n- 「その Danh từ」: Cái Danh từ đó (gần người nghe).\n- 「あの Danh từ」: Cái Danh từ kia (xa cả hai).",
         "Example": "この ほんは わたしのです。\n(Cuốn sách này là của tôi.)",
-        "LessonId": 31
+        "LessonId": 7
     },
     {
         "GrammarName": "Câu trả lời xác nhận: そうです / そうじゃありません",
         "Structure": "はい、そうです / いいえ、そうじゃありません",
         "Meaning": "Trong câu hỏi Danh từ (N1 は N2 ですか), để tránh việc lặp lại danh từ vị ngữ quá nhiều lần, người ta dùng 「そうです」 (Đúng vậy) hoặc 「そうじゃ ありません」 (Không phải vậy). Lưu ý: Cách trả lời này không dùng được cho câu hỏi có Động từ hay Tính từ.",
         "Example": "それは かめらですか。\nーはい、そうです。\n(Đó là cái máy ảnh phải không?\n-Vâng, đúng vậy.)",
-        "LessonId": 31
+        "LessonId": 7
     },
     {
         "GrammarName": "Câu hỏi lựa chọn: Câu 1 か、Câu 2 か",
         "Structure": "S1 か、S2 か",
         "Meaning": "Dùng để hỏi về sự lựa chọn của người nghe giữa hai hay nhiều đối tượng. Người nói đưa ra các khả năng và người nghe sẽ chọn một trong số đó. Khi trả lời cho mẫu câu này, tuyệt đối không dùng 「はい」 (Vâng) hay 「いいえ」 (Không) mà phải trả lời trực tiếp lựa chọn được chọn.",
         "Example": "これは 「9」ですか、「7」ですか。\nー「9」です。\n(Đây là số 9 hay số 7 vậy?\n-Là số 9.)",
-        "LessonId": 31
+        "LessonId": 7
     },
     {
         "GrammarName": "Trợ từ の (Nội dung / Sở hữu)",
         "Structure": "Danh từ 1 の Danh từ 2",
         "Meaning": "Ở bài 2, trợ từ 「の」 mở rộng thêm hai ý nghĩa quan trọng:\n1. Giải thích Danh từ 2 nói về cái gì (Nội dung): 「これは コンピューターの ほんです」(Đây là sách về máy tính).\n2. Giải thích Danh từ 2 thuộc về ai (Sở hữu): 「それは わたしの じしょです」(Đó là từ điển của tôi).",
         "Example": "これは なんの ざっしですか。\n(Đây là tạp chí về cái gì vậy?)",
-        "LessonId": 31
+        "LessonId": 7
     },
     {
         "GrammarName": "Chữ 「の」 thay thế cho Danh từ",
         "Structure": "Danh từ の",
         "Meaning": "Khi danh từ đã được nhắc đến ở trước hoặc đã rõ ràng trong ngữ cảnh, ta có thể thay thế cụm [N1 の N2] bằng [N1 の] để tránh lặp từ. Tuy nhiên, lưu ý không dùng cách thay thế này khi danh từ bị thay thế (N2) là từ chỉ người.",
         "Example": "あれは だれの かばんですか。\nーさとうさんの です。\n(Kia là cặp của ai vậy?\n-Là của chị Sato.)",
-        "LessonId": 31
+        "LessonId": 7
     },
     {
         "GrammarName": "Tiếp nhận thông tin: そうですか",
         "Structure": "そうですか",
         "Meaning": "Được dùng khi người nói nhận được một thông tin mới và muốn thể hiện rằng mình đã hiểu hoặc tiếp nhận thông tin đó. Khi nói, ngữ điệu thường xuống ở cuối câu (khác với câu hỏi xác nhận thường lên giọng ở chữ Ka).",
         "Example": "この かさは あなたのですか。\nーいいえ、ミラーさんのです。\nーそうですか。\n(Cái ô này của bạn à?\n-Không, của anh Miller.\n-À, ra vậy.)",
-        "LessonId": 31
+        "LessonId": 7
     }
 ]

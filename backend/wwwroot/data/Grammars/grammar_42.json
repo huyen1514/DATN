@@ -4,34 +4,34 @@
         "Structure": "V-(từ điển) + ために | N + の + ために",
         "Meaning": "Dùng để biểu thị mục đích: 'Để...' hoặc 'Vì...'. Khác với 「～ように」, vế trước của 「～ために」 phải là động từ mang tính ý chí (ishiteki). Nếu là danh từ, nó biểu thị lợi ích hoặc đối tượng hướng đến.",
         "Example": "<ruby>家<rt>うち</rt></ruby>を <ruby>買<rt>か</rt></ruby>う ために、<ruby>貯金<rt>ちょきん</rt></ruby>して います。\n(Tôi tiết kiệm tiền để mua nhà.)",
-        "LessonId": 92
+        "LessonId": 207
     },
     {
         "GrammarName": "Cấu trúc ～のに (Công dụng/Mục đích sử dụng)",
         "Structure": "V-(từ điển) + のに + [つかいます/べんりです/じかんがかかります]",
         "Meaning": "Dùng để biểu thị mục đích hoặc công dụng của một đồ vật hay một việc gì đó. Thường đi kèm với các từ chỉ sự đánh giá (tiện lợi, cần thiết) hoặc tiêu tốn (thời gian, tiền bạc).",
         "Example": "この <ruby>鋏<rt>はさみ</rt></ruby>は <ruby>花<rt>はな</rt></ruby>を <ruby>切<rt>き</rt></ruby>る のに <ruby>使<rt>つか</rt></ruby>います。\n(Cái kéo này dùng để cắt hoa.)",
-        "LessonId": 92
+        "LessonId": 207
     },
     {
         "GrammarName": "Cấu trúc Danh từ + に (Công dụng/Mục đích sử dụng)",
         "Structure": "N + に + [つかいます/べんりです/いいです]",
         "Meaning": "Tương tự như 「～のに」, nhưng đi trực tiếp với danh từ để chỉ mục đích sử dụng hoặc đối tượng mà sự vật đó có tác dụng tốt/tiện lợi.",
         "Example": "この <ruby>鞄<rt>かばん</rt></ruby>は <ruby>旅行<rt>りょこう</rt></ruby>に <ruby>便利<rt>べんり</rt></ruby>です。\n(Cái cặp này rất tiện cho việc đi du lịch.)",
-        "LessonId": 92
+        "LessonId": 207
     },
     {
         "GrammarName": "Trợ từ は đi kèm con số (Tối thiểu)",
         "Structure": "[Số lượng/Thời gian/Tiền bạc] + は",
         "Meaning": "Khi trợ từ 「は」 đứng sau một từ chỉ số lượng, nó mang nghĩa nhấn mạnh mức tối thiểu cần thiết để thực hiện một việc gì đó (ít nhất là...).",
         "Example": "<ruby>日本<rt>にほん</rt></ruby>で <ruby>結婚式<rt>けっこんしき</rt></ruby>を あげる のに、200<ruby>万<rt>まん</rt></ruby><ruby>円<rt>えん</rt></ruby>は <ruby>必要<rt>ひつよう</rt></ruby>です。\n(Để tổ chức đám cưới ở Nhật thì cần ít nhất là 2 triệu Yên.)",
-        "LessonId": 92
+        "LessonId": 207
     },
     {
         "GrammarName": "Trợ từ も đi kèm con số (Nhấn mạnh mức độ nhiều)",
         "Structure": "[Số lượng/Thời gian/Tiền bạc] + も",
         "Meaning": "Khi trợ từ 「も」 đứng sau một từ chỉ số lượng, nó dùng để nhấn mạnh rằng con số đó là rất nhiều, vượt quá mong đợi hoặc mức bình thường (đến mức..., tận...).",
         "Example": "<ruby>家<rt>うち</rt></ruby>を <ruby>建<rt>た</rt></ruby>てる のに、3000<ruby>万<rt>まん</rt></ruby><ruby>円<rt>えん</rt></ruby>も かかりました。\n(Để xây nhà đã tốn tận 30 triệu Yên.)",
-        "LessonId": 92
+        "LessonId": 207
     }
 ]

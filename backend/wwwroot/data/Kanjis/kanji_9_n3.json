@@ -1,0 +1,66 @@
+[
+    {
+        "Character": "単",
+        "Meaning": "Đơn (Đơn giản, đơn lẻ)",
+        "Onyomi": "タン",
+        "Kunyomi": "-",
+        "Example": "単独 (Hành động độc lập); 簡単 (Đơn giản)",
+        "LessonId": 295
+    },
+    {
+        "Character": "複",
+        "Meaning": "Phức (Số nhiều, phức tạp)",
+        "Onyomi": "フク",
+        "Kunyomi": "-",
+        "Example": "複数 (Số nhiều); 重複 (Trùng lặp)",
+        "LessonId": 295
+    },
+    {
+        "Character": "全",
+        "Meaning": "Toàn (Toàn bộ)",
+        "Onyomi": "ゼン",
+        "Kunyomi": "まった-く, すべ-て",
+        "Example": "全部 (Toàn bộ); 全然 (Hoàn toàn)",
+        "LessonId": 295
+    },
+    {
+        "Character": "以",
+        "Meaning": "Dĩ (Mốc giới hạn)",
+        "Onyomi": "イ",
+        "Kunyomi": "-",
+        "Example": "以後 (Từ sau đó); 以下 (Trở xuống)",
+        "LessonId": 295
+    },
+    {
+        "Character": "未",
+        "Meaning": "Vị (Chưa đến, tương lai)",
+        "Onyomi": "ミ",
+        "Kunyomi": "-",
+        "Example": "未来 (Tương lai); 未満 (Dưới mức/Chưa đầy)",
+        "LessonId": 295
+    },
+    {
+        "Character": "満",
+        "Meaning": "Mãn (Đầy, thỏa mãn)",
+        "Onyomi": "マン",
+        "Kunyomi": "み-ちる, み-たす",
+        "Example": "満ちる (Đầy); 満足 (Thỏa mãn)",
+        "LessonId": 295
+    },
+    {
+        "Character": "無",
+        "Meaning": "Vô (Không có)",
+        "Onyomi": "ム, ブ",
+        "Kunyomi": "な-い",
+        "Example": "無い (Không có); 無事 (Bình an)",
+        "LessonId": 295
+    },
+    {
+        "Character": "非",
+        "Meaning": "Phi (Sai trái, không phải)",
+        "Onyomi": "ヒ",
+        "Kunyomi": "-",
+        "Example": "非常識 (Thiếu ý thức); 非難 (Trách móc)",
+        "LessonId": 295
+    }
+]

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using Data;
-using DTOs.Reading; 
+using DTOs.Reading;
 
 namespace Services
 {
@@ -25,7 +25,6 @@ namespace Services
 
         public async Task ImportAllFromFolderAsync()
         {
-            // Trỏ thẳng vào wwwroot/data/Readings
             var webRoot = _env.WebRootPath ?? Path.Combine(_env.ContentRootPath, "wwwroot");
             var folderPath = Path.Combine(webRoot, "data", "Readings"); 
             
@@ -35,7 +34,7 @@ namespace Services
                 return;
             }
 
-            var files = Directory.GetFiles(folderPath, "*.json");
+            var files = Directory.GetFiles(folderPath, "*.json", SearchOption.AllDirectories);
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
             foreach (var file in files)
@@ -43,32 +42,57 @@ namespace Services
                 try
                 {
                     var json = await File.ReadAllTextAsync(file);
-                    
                     var dtos = JsonSerializer.Deserialize<List<ReadingImportDto>>(json, options);
 
                     if (dtos == null) continue;
 
+                    // Chuẩn bị sẵn dữ liệu fallback từ tên file (Chỉ xử lý chuỗi, chưa gọi DB)
+                    var fileNameWithoutExt = Path.GetFileNameWithoutExtension(file).ToLower();
+                    var parts = fileNameWithoutExt.Split('_');
+                    
+                    string targetLevelName = "N5"; 
+                    string targetLessonName = fileNameWithoutExt;
+
+                    if (parts.Length >= 2 && parts[0] == "read" && int.TryParse(parts[1], out int lessonNum))
+                    {
+                        targetLessonName = $"Bài {lessonNum}"; 
+                        if (parts.Length >= 3)
+                        {
+                            if (parts[2] == "n4") targetLevelName = "N4";
+                            else if (parts[2] == "n3") targetLevelName = "N3";
+                        }
+                    }
+
                     foreach (var dto in dtos)
                     {
                         Lesson? lesson = null;
+
+                        // --- CÁCH 1: Tìm bằng LessonId từ file JSON ---
                         if (dto.LessonId > 0)
                         {
                             lesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonId == dto.LessonId);
                         }
                         
-                        // Fallback: Nếu không tìm thấy bằng LessonId (do ID có thể khác biệt giữa JSON và DB thực tế), tìm theo Tên
-                        if (lesson == null && !string.IsNullOrEmpty(dto.LessonName))
+                        // --- CÁCH 2: CHỈ DÙNG KHI CÁCH 1 THẤT BẠI ---
+                        // (Tức là trong JSON không có ID, hoặc ID truyền vào không tồn tại trong DB hiện tại)
+                        if (lesson == null)
                         {
-                            lesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == dto.LessonName && l.SkillType == "Đọc hiểu");
+                            lesson = await _context.Lessons
+                                .Include(l => l.Level)
+                                .FirstOrDefaultAsync(l => 
+                                    l.Level.LevelName == targetLevelName && 
+                                    l.LessonName == targetLessonName && 
+                                    l.SkillType == "Đọc hiểu");
                         }
 
+                        // Nếu cả 2 cách đều không tìm thấy bài học tương ứng thì bỏ qua
                         if (lesson == null) 
                         {
-                            Console.WriteLine($"Bỏ qua: Không tìm thấy Lesson ID '{dto.LessonId}' (Tên: {dto.LessonName}).");
+                            Console.WriteLine($"Bỏ qua: Không tìm thấy Lesson cho file '{Path.GetFileName(file)}'. ID trong JSON: {dto.LessonId} - Fallback dự kiến: {targetLevelName} - {targetLessonName}.");
                             continue;
                         }
 
-                        // 2. Tránh import trùng lặp đoạn văn
+                        // Tránh import trùng lặp đoạn văn
                         var exists = await _context.ReadingPassages
                             .AnyAsync(p => p.LessonId == lesson.LessonId && p.Content == dto.Content);
 

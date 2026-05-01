@@ -4,41 +4,41 @@
         "Structure": "Nhóm 1: u -> e | Nhóm 2: ます -> ろ | Nhóm 3: きます -> こい, します -> しろ",
         "Meaning": "Dùng để ra lệnh hoặc yêu cầu ai đó thực hiện hành động một cách quyết liệt. Mẫu câu này có sắc thái rất mạnh, thường chỉ dùng trong các tình huống khẩn cấp, trong quân đội, cổ vũ thể thao hoặc nam giới dùng với người dưới.",
         "Example": "<ruby>早<rt>はや</rt></ruby>く <ruby>寝<rt>ね</rt></ruby>ろ。\n(Hãy đi ngủ sớm đi! - Mệnh lệnh mạnh)",
-        "LessonId": 84
+        "LessonId": 162
     },
     {
         "GrammarName": "Thể cấm chỉ (禁止形 - Kinshikei)",
         "Structure": "Động từ thể từ điển + な",
         "Meaning": "Dùng để ra lệnh cho ai đó tuyệt đối không được thực hiện một hành động nào đó. Sắc thái của nó rất mạnh và áp đặt, tương tự như thể mệnh lệnh.",
         "Example": "ここに <ruby>入<rt>はい</rt></ruby>るな。\n(Cấm vào đây.)",
-        "LessonId": 84
+        "LessonId": 162
     },
     {
         "GrammarName": "Cấu trúc ～と 書いてあります / ～と 読みます",
         "Structure": "[Câu/Từ] + と 書いてあります / 読みます",
         "Meaning": "Dùng để trích dẫn nội dung được viết hoặc cách đọc của một bảng hiệu, ký hiệu hay văn bản nào đó.",
         "Example": "あそこに 「<ruby>止<rt>と</rt></ruby>まれ」と <ruby>書<rt>か</rt></ruby>いて あります。\n(Ở đằng kia có viết là \"Dừng lại\".)",
-        "LessonId": 84
+        "LessonId": 162
     },
     {
         "GrammarName": "Cấu trúc ～という 意味です",
         "Structure": "[Từ/Cụm từ] + は ～という <ruby>意味<rt>いみ</rt></ruby>です",
         "Meaning": "Dùng để giải thích ý nghĩa của một từ ngữ, ký hiệu hoặc một thông điệp nào đó. Khi muốn hỏi ý nghĩa, ta dùng 「どういう意味ですか」.",
         "Example": "「<ruby>立入禁止<rt>たちいりきんし</rt></ruby>」は <ruby>入<rt>はい</rt></ruby>るなという <ruby>意味<rt>いみ</rt></ruby>です。\n(\"Tachiiri-kinshi\" có nghĩa là cấm vào.)",
-        "LessonId": 84
+        "LessonId": 162
     },
     {
         "GrammarName": "Cấu trúc ～と言っていました",
         "Structure": "[Câu trích dẫn] + と <ruby>言<rt>い</rt></ruby>っていました",
         "Meaning": "Dùng để truyền đạt lại một lời nhắn hoặc thông tin mà một người thứ ba đã nói trước đó. So với 「と言いました」, mẫu câu này nhấn mạnh vào việc thuật lại lời nói của người khác.",
         "Example": "ワンさんは 「<ruby>明日<rt>あした</rt></ruby> <ruby>休<rt>やす</rt></ruby>みたい」と <ruby>言<rt>い</rt></ruby>っていました。\n(Anh Wang đã nói là ngày mai muốn nghỉ.)",
-        "LessonId": 84
+        "LessonId": 162
     },
     {
         "GrammarName": "Cấu trúc ～と 伝えて いただけませんか",
         "Structure": "[Lời nhắn] + と <ruby>伝<rt>つた</rt></ruby>えて いただけませんか",
         "Meaning": "Dùng để nhờ vả một cách lịch sự ai đó truyền đạt lại nội dung lời nhắn cho một người khác.",
         "Example": "すみませんが、<ruby>渡辺<rt>わたなべ</rt></ruby>さんに <ruby>明日<rt>あした</rt></ruby>の <ruby>パーティー<rt></rt></ruby>は 6<ruby>時<rt>じ</rt></ruby>からだと <ruby>伝<rt>つた</rt></ruby>えて いただけませんか。\n(Xin lỗi, anh/chị có thể nhắn lại với chị Watanabe là bữa tiệc ngày mai bắt đầu từ 6 giờ được không?)",
-        "LessonId": 84
+        "LessonId": 162
     }
 ]

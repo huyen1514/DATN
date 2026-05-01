@@ -4,7 +4,7 @@
         "Reading": "わかります",
         "Meaning": "hiểu, nắm vũng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "わたしは にほんごが わかります。\n(Tôi hiểu tiếng Nhật.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "あります",
         "Meaning": "có (sở hữu đồ vật)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "おかねが あります。\n(Tôi có tiền.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "すき",
         "Meaning": "thích",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "わたしは りんごが すきです。\n(Tôi thích táo.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "きらい",
         "Meaning": "ghét, không thích",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "さかなが きらいです。\n(Tôi ghét cá.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "じょうず",
         "Meaning": "giỏi, khéo",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "さとうさんは りょうりが じょうずです。\n(Anh Sato nấu ăn giỏi.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "へた",
         "Meaning": "kém, dở",
         "PartOfSpeech": "Tính từ đuôi na",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "わたしは うたが へたです。\n(Tôi hát dở.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "りょうり",
         "Meaning": "món ăn, việc nấu ăn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "にほんの りょうりは おいしいです。\n(Món ăn Nhật Bản ngon.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "のみもの",
         "Meaning": "đồ uống",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "なにか のみものを かいます。\n(Tôi sẽ mua cái gì đó để uống.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "すぽーつ",
         "Meaning": "thể thao",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "すぽーつが すきですか。\n(Bạn có thích thể thao không?)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "やきゅう",
         "Meaning": "bóng chày",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "やきゅうを します。\n(Tôi chơi bóng chày.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "だんす",
         "Meaning": "nhảy, khiêu vũ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "だんすが じょうずですね。\n(Bạn nhảy giỏi nhỉ.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "おんがく",
         "Meaning": "âm nhạc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "おんがくを ききます。\n(Tôi nghe nhạc.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "うた",
         "Meaning": "bài hát",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "うたを うたいます。\n(Tôi hát một bài hát.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "くらしっく",
         "Meaning": "nhạc cổ điển",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "くらしっくが すきです。\n(Tôi thích nhạc cổ điển.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "じゃず",
         "Meaning": "nhạc jazz",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "じゃずを ききます。\n(Tôi nghe nhạc jazz.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "こんさーと",
         "Meaning": "buổi hòa nhạc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "こんさーとへ いきます。\n(Tôi đi xem hòa nhạc.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "からおけ",
         "Meaning": "karaoke",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "いっしょに からおけへ いきませんか。\n(Cùng đi karaoke với tôi không?)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "かぶき",
         "Meaning": "kịch Kabuki",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "かぶきは おもしろいですか。\n(Kịch Kabuki có thú vị không?)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "え",
         "Meaning": "tranh, hội họa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "えを かきます。\n(Tôi vẽ tranh.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "じ",
         "Meaning": "chữ, chữ cái",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "じを かきます。\n(Tôi viết chữ.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "かんじ",
         "Meaning": "chữ Hán (Kanji)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "かんじが わかりますか。\n(Bạn có hiểu chữ Kanji không?)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "ひらがな",
         "Meaning": "chữ Hiragana",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "ひらがなを かきました。\n(Tôi đã viết chữ Hiragana.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "かたかな",
         "Meaning": "chữ Katakana",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "かたかなを ならいます。\n(Tôi học chữ Katakana.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "ろーまじ",
         "Meaning": "chữ La-mã (Romaji)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "ろーまじで かいて ください。\n(Hãy viết bằng chữ La-mã.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "こまかいおかね",
         "Meaning": "tiền lẻ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "こまかい おかねが ありますか。\n(Bạn có tiền lẻ không?)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "ちけっと",
         "Meaning": "vé (xem phim, hòa nhạc...)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "ちけっとを かいました。\n(Tôi đã mua vé.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "じかん",
         "Meaning": "thời gian",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "じかんが ありません。\n(Tôi không có thời gian.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "ようじ",
         "Meaning": "việc bận, công chuyện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "きょうは ようじが あります。\n(Hôm nay tôi có việc bận.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "やくそく",
         "Meaning": "cuộc hẹn, lời hứa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "ともだちと やくそくが あります。\n(Tôi có hẹn với bạn.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "ごしゅじん",
         "Meaning": "chồng (của người khác)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "ごしゅじんは おげんきですか。\n(Chồng của bạn có khỏe không?)"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "おくさん",
         "Meaning": "vợ (của người khác)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "おくさんは しんせつです。\n(Vợ của bạn thật thân thiện.)"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "こども",
         "Meaning": "con cái",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "こどもが います。\n(Tôi có con.)"
     },
     {
@@ -260,7 +260,7 @@
         "Reading": "よく",
         "Meaning": "rất, rõ (tần suất, mức độ)",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "にほんごが よく わかります。\n(Tôi hiểu rất rõ tiếng Nhật.)"
     },
     {
@@ -268,7 +268,7 @@
         "Reading": "だいたい",
         "Meaning": "đại khái",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "だいたい わかります。\n(Tôi hiểu đại khái.)"
     },
     {
@@ -276,7 +276,7 @@
         "Reading": "たくさん",
         "Meaning": "nhiều",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "たくさん たべました。\n(Tôi đã ăn rất nhiều.)"
     },
     {
@@ -284,7 +284,7 @@
         "Reading": "すこし",
         "Meaning": "ít, một chút",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "すこし わかります。\n(Tôi hiểu một chút.)"
     },
     {
@@ -292,7 +292,7 @@
         "Reading": "ぜんぜん",
         "Meaning": "hoàn toàn không (dùng với phủ định)",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "ぜんぜん わかりません。\n(Tôi hoàn toàn không hiểu.)"
     },
     {
@@ -300,7 +300,7 @@
         "Reading": "はやく",
         "Meaning": "sớm, nhanh",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 14,
+        "LessonId": 41,
         "Example": "はやく かえります。\n(Tôi về sớm.)"
     }
 ]

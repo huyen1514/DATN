@@ -4,7 +4,7 @@
         "Reading": "くれます",
         "Meaning": "cho, tặng (tôi hoặc người thân của tôi)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "さとうさんは わたしに はなを くれました。\n(Chị Sato đã tặng hoa cho tôi.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "なおします",
         "Meaning": "sửa, chữa",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "じてんしゃを なおして くれました。\n(Bạn ấy đã sửa xe đạp giúp tôi.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "つれていきます",
         "Meaning": "dẫn đi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "こどもを こうえんへ つれていきます。\n(Tôi dẫn con đi công viên.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "つれてきます",
         "Meaning": "dẫn đến",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "ともだちを うちへ つれてきました。\n(Tôi đã dẫn bạn về nhà.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "おくります",
         "Meaning": "đưa đi, tiễn [người]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "えきまで ともだちを おくります。\n(Tôi tiễn bạn đến tận nhà ga.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "しょうかいします",
         "Meaning": "giới thiệu",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "ともだちを しょうかいします。\n(Tôi giới thiệu bạn bè.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "あんないします",
         "Meaning": "hướng dẫn, dẫn đường",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "まちを あんないして くれました。\n(Anh ấy đã dẫn đường quanh thành phố cho tôi.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "せつめいします",
         "Meaning": "giải thích",
         "PartOfSpeech": "Động từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "つかいかたを せつめいします。\n(Tôi giải thích cách sử dụng.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "おじいさん",
         "Meaning": "ông nội, ông ngoại, ông cụ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "おじいさんは おげんきですか。\n(Ông của bạn có khỏe không?)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "おばあさん",
         "Meaning": "bà nội, bà ngoại, bà cụ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "おばあさんは りょうりが じょうずです。\n(Bà của tôi nấu ăn rất giỏi.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "じゅんび",
         "Meaning": "việc chuẩn bị",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "りょこうの じゅんびを します。\n(Tôi chuẩn bị cho chuyến đi du lịch.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "いみ",
         "Meaning": "ý nghĩa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "この ことばの いみを おしえて ください。\n(Hãy chỉ cho tôi ý nghĩa của từ này.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "[お]かし",
         "Meaning": "bánh kẹo",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "おかしを たべました。\n(Tôi đã ăn bánh kẹo.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "ぜんぶ",
         "Meaning": "tất cả",
         "PartOfSpeech": "Danh từ/Phó từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "ぜんぶで いくらですか。\n(Tất cả là bao nhiêu tiền?)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "じぶんで",
         "Meaning": "tự mình",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "じぶんで べんきょうします。\n(Tôi tự mình học bài.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "ほかに",
         "Meaning": "ngoài ra, bên cạnh đó",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "ほかに なにが ありますか。\n(Ngoài ra còn cái gì nữa không?)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "おべんとう",
         "Meaning": "cơm hộp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "ははが おべんとうを つくって くれました。\n(Mẹ đã làm cơm hộp cho tôi.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "ははのひ",
         "Meaning": "Ngày của Mẹ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 29,
+        "LessonId": 116,
         "Example": "ははのひに はなを あげました。\n(Tôi đã tặng hoa vào Ngày của Mẹ.)"
     }
 ]

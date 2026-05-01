@@ -4,7 +4,7 @@
         "Reading": "そだてます",
         "Meaning": "nuôi, trồng",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>庭<rt>にわ</rt></ruby>で <ruby>花<rt>はな</rt></ruby>を <ruby>育<rt>そだ</rt></ruby>てています。\n(Tôi đang trồng hoa ở vườn.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "はこびます",
         "Meaning": "vận chuyển",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>荷物<rt>にもつ</rt></ruby>を <ruby>運<rt>はこ</rt></ruby>びます。\n(Vận chuyển hành lý.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "なくなります",
         "Meaning": "mất, qua đời (cách nói trang trọng của しにます)",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>祖父<rt>そふ</rt></ruby>は <ruby>去年<rt>きょねん</rt></ruby> <ruby>亡<rt>な</rt></ruby>くなりました。\n(Ông tôi đã qua đời vào năm ngoái.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "にゅういんします",
         "Meaning": "nhập viện",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>病気<rt>びょうき</rt></ruby>で <ruby>入院<rt>にゅういん</rt></ruby>しました。\n(Tôi đã nhập viện vì bị ốn.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "たいいんします",
         "Meaning": "xuất viện",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>明日<rt>あした</rt></ruby> <ruby>退院<rt>たいいん</rt></ruby>します。\n(Ngày mai tôi sẽ xuất viện.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "いれます",
         "Meaning": "bật [công tắc điện ~]",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>電源<rt>でんげん</rt></ruby>を <ruby>入<rt>い</rt></ruby>れます。\n(Bật nguồn điện.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "きります",
         "Meaning": "tắt [công tắc điện ~]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>電源<rt>でんげん</rt></ruby>を <ruby>切<rt>き</rt></ruby>ってください。\n(Hãy tắt nguồn điện.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "かけます",
         "Meaning": "khóa [chìa khóa ~]",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>鍵<rt>かぎ</rt></ruby>を <ruby>掛<rt>か</rt></ruby>けるのを <ruby>忘<rt>わす</rt></ruby>れました。\n(Tôi đã quên khóa cửa.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "きもちがいい",
         "Meaning": "dễ chịu, thư thái",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>朝<rt>あさ</rt></ruby>の <ruby>散歩<rt>さんぽ</rt></ruby>は <ruby>気持<rt>きも</rt></ruby>ちが いいです。\n(Đi dạo buổi sáng thật là dễ chịu.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "きもちがわるい",
         "Meaning": "khó chịu, kinh tởm",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>気分<rt>きぶん</rt></ruby>が <ruby>悪<rt>わる</rt></ruby>いです。\n(Tôi cảm thấy trong người khó chịu.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "おおきな",
         "Meaning": "to, lớn",
         "PartOfSpeech": "Liên thể từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>大<rt>おお</rt></ruby>きな <ruby>声<rt>こえ</rt></ruby>で <ruby>話<rt>はな</rt></ruby>さないで ください。\n(Đừng nói bằng giọng lớn.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "ちいさな",
         "Meaning": "nhỏ, bé",
         "PartOfSpeech": "Liên thể từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>小<rt>ちい</rt></ruby>さな <ruby>家<rt>いえ</rt></ruby>に <ruby>住<rt>す</rt></ruby>んでいます。\n(Tôi đang sống trong một ngôi nhà nhỏ.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "あかちゃん",
         "Meaning": "em bé",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>赤<rt>あか</rt></ruby>ちゃんが <ruby>生<rt>う</rt></ruby>まれました。\n(Em bé đã chào đời.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "しょうがっこう",
         "Meaning": "trường tiểu học",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>弟<rt>おとうto</rt></ruby>は <ruby>小学校<rt>しょうがっこう</rt></ruby>の <ruby>先生<rt>せんせい</rt></ruby>です。\n(Em trai tôi là giáo viên tiểu học.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "ちゅうがっこう",
         "Meaning": "trường trung học cơ sở",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>中学校<rt>ちゅうがっこう</rt></ruby>から <ruby>英語<rt>えいご</rt></ruby>を <ruby>勉<rt>べん</rt></ruby>きょうしました。\n(Tôi học tiếng Anh từ hồi cấp 2.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "えきまえ",
         "Meaning": "trước ga",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>駅前<rt>えきまえ</rt></ruby>で <ruby>友達<rt>ともだち</rt></ruby>に <ruby>会<rt>あ</rt></ruby>います。\n(Tôi gặp bạn ở trước ga.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "かいがん",
         "Meaning": "bờ biển",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>海岸<rt>かいがん</rt></ruby>を <ruby>散歩<rt>さんぽ</rt></ruby>するのが <ruby>好<rt>す</rt></ruby>きです。\n(Tôi thích đi dạo bờ biển.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "こうじょう",
         "Meaning": "nhà máy",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>車<rt>くるま</rt></ruby>の <ruby>工場<rt>こうじょう</rt></ruby>で <ruby>働<rt>はたら</rt></ruby>いています。\n(Tôi đang làm việc ở nhà máy ô tô.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "むら",
         "Meaning": "làng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "ここは <ruby>静<rt>しず</rt></ruby>かな <ruby>村<rt>むら</rt></ruby>です。\n(Đây là một ngôi làng yên tĩnh.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "ゆびわ",
         "Meaning": "nhẫn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>結婚指輪<rt>けっこんゆびわ</rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。\n(Tôi đã mua nhẫn cưới.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "でんげん",
         "Meaning": "nguồn điện, công tắc điện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>電源<rt>でんげん</rt></ruby>を <ruby>確認<rt>かくにん</rt></ruby>して ください。\n(Hãy xác nhận lại nguồn điện.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "しゅうかん",
         "Meaning": "tập quán",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>習慣<rt>しゅうかん</rt></ruby>に <ruby>慣<rt>な</rt></ruby>れました。\n(Tôi đã quen với tập quán của Nhật Bản.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "kenkou",
         "Meaning": "sức khỏe",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>健康<rt>けんこう</rt></ruby>に <ruby>注意<rt>ちゅうい</rt></ruby>して ください。\n(Hãy chú ý đến sức khỏe.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "～せい",
         "Meaning": "sản xuất tại ~",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "これは <ruby>日本<rt>にほん</rt></ruby><ruby>製<rt>せい</rt></ruby>の <ruby>時計<rt>とけい</rt></ruby>です。\n(Đây là đồng hồ sản xuất tại Nhật Bản.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "おととし",
         "Meaning": "năm kia",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 64,
+        "LessonId": 186,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>へ <ruby>来<rt>き</rt></ruby>たのは おととしです。\n(Tôi đến Nhật vào năm kia.)"
     }
 ]

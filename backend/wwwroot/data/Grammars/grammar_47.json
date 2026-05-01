@@ -4,20 +4,20 @@
         "Structure": "Thể thông thường + そうです",
         "Meaning": "Dùng để thuật lại thông tin mà người nói nghe được từ một nguồn khác (tivi, báo chí, người khác nói...). Khác với bài 43 (phỏng đoán), ở cấu trúc này, Tính từ đuôi な và Danh từ vẫn giữ nguyên 「だ」 trước khi thêm 「そうです」. Nguồn thông tin thường đi kèm với cụm 「～に よると」.",
         "Example": "<ruby>天気予報<rt>てんきよほう</rt></ruby>に よると、<ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>るそうです。\n(Theo dự báo thời tiết, nghe nói ngày mai trời sẽ mưa.)",
-        "LessonId": 97
+        "LessonId": 232
     },
     {
         "GrammarName": "Cấu trúc ～ようです (Phỏng đoán dựa trên cảm giác/thị giác)",
         "Structure": "Thể thông thường (A-na + な / N + の) + ようです",
         "Meaning": "Dùng để diễn tả sự suy luận, phỏng đoán của người nói dựa trên những gì trực tiếp quan sát hoặc cảm nhận được qua các giác quan. Nó mang sắc thái 'hình như là...', 'có vẻ như là...'.",
         "Example": "<ruby>咳<rt>せき</rt></ruby>も <ruby>出<rt>で</rt></ruby>ているし、<ruby>熱<rt>ねつ</rt></ruby>も あるし、<ruby>風邪<rt>かぜ</rt></ruby>を ひいた ようです。\n(Vừa bị ho, lại vừa bị sốt, hình như tôi bị cảm rồi.)",
-        "LessonId": 97
+        "LessonId": 232
     },
     {
         "GrammarName": "Cấu trúc Danh từ + が します (Có mùi, âm thanh, vị...)",
         "Structure": "N (Mùi/Âm thanh/Vị) + が します",
         "Meaning": "Dùng để diễn tả những cảm nhận của con người thông qua các giác quan như khứu giác, thính giác, vị giác. Ví dụ như: có mùi thơm, có tiếng động lạ, có vị ngọt...",
         "Example": "<ruby>隣<rt>となり</rt></ruby>の <ruby>部屋<rt>へや</rt></ruby>で <ruby>変<rt>へん</rt></ruby>な <ruby>音<rt>おと</rt></ruby>が します。\n(Ở phòng bên cạnh có tiếng động lạ.)",
-        "LessonId": 97
+        "LessonId": 232
     }
 ]

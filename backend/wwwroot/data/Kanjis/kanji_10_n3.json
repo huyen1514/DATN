@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "幼",
+        "Meaning": "Thơ ấu (Ấu)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "おさな-い",
+        "Example": "幼稚園 (Trường mầm non), 幼友達 (Bạn nối khố)",
+        "LessonId": 300
+    },
+    {
+        "Character": "児",
+        "Meaning": "Nhi đồng, trẻ nhỏ (Nhi)",
+        "Onyomi": "ジ, ニ",
+        "Kunyomi": "-",
+        "Example": "小児科 (Khoa nhi), 育児 (Nuôi dạy trẻ)",
+        "LessonId": 300
+    },
+    {
+        "Character": "童",
+        "Meaning": "Trẻ em (Đồng)",
+        "Onyomi": "ドウ",
+        "Kunyomi": "わらべ",
+        "Example": "童話 (Truyện cổ tích), 童歌 (Bài hát đồng dao)",
+        "LessonId": 300
+    },
+    {
+        "Character": "徒",
+        "Meaning": "Học trò, người đi bộ (Đồ)",
+        "Onyomi": "ト",
+        "Kunyomi": "-",
+        "Example": "教徒 (Tín đồ), 徒歩 (Đi bộ)",
+        "LessonId": 300
+    },
+    {
+        "Character": "担",
+        "Meaning": "Đảm đương, gánh vác (Đảm)",
+        "Onyomi": "タン",
+        "Kunyomi": "かつ-ぐ, にな-う",
+        "Example": "担当 (Đảm nhận), 負担 (Gánh vác)",
+        "LessonId": 300
+    },
+    {
+        "Character": "任",
+        "Meaning": "Phó thác, trách nhiệm (Nhiệm)",
+        "Onyomi": "ニン",
+        "Kunyomi": "まか-せる, まか-す",
+        "Example": "担任 (Chủ nhiệm), 辞任 (Từ chức)",
+        "LessonId": 300
+    },
+    {
+        "Character": "師",
+        "Meaning": "Thầy giáo, chuyên gia (Sư)",
+        "Onyomi": "シ",
+        "Kunyomi": "-",
+        "Example": "医師 (Bác sĩ), 恩師 (Ân sư)",
+        "LessonId": 300
+    },
+    {
+        "Character": "組",
+        "Meaning": "Tổ chức, lắp ráp (Tổ)",
+        "Onyomi": "ソ",
+        "Kunyomi": "く-む, くみ",
+        "Example": "番組 (Chương trình), 組織 (Tổ chức)",
+        "LessonId": 300
+    },
+    {
+        "Character": "机",
+        "Meaning": "Cái bàn (Cơ)",
+        "Onyomi": "キ",
+        "Kunyomi": "つくえ",
+        "Example": "机 (Cái bàn), 学習机 (Bàn học)",
+        "LessonId": 300
+    },
+    {
+        "Character": "座",
+        "Meaning": "Chỗ ngồi (Tọa)",
+        "Onyomi": "ザ",
+        "Kunyomi": "すわ-る",
+        "Example": "座る (Ngồi), 星座 (Chòm sao)",
+        "LessonId": 300
+    },
+    {
+        "Character": "板",
+        "Meaning": "Tấm ván (Bản)",
+        "Onyomi": "ハン, バン",
+        "Kunyomi": "いた",
+        "Example": "黒板 (Bảng đen), まな板 (Thớt)",
+        "LessonId": 300
+    },
+    {
+        "Character": "筆",
+        "Meaning": "Bút viết (Bút)",
+        "Onyomi": "ヒツ",
+        "Kunyomi": "ふで",
+        "Example": "鉛筆 (Bút chì), 筆者 (Tác giả)",
+        "LessonId": 300
+    },
+    {
+        "Character": "貸",
+        "Meaning": "Cho mượn (Thải)",
+        "Onyomi": "タイ",
+        "Kunyomi": "か-す",
+        "Example": "貸す (Cho mượn), 貸借 (Vay mượn)",
+        "LessonId": 300
+    },
+    {
+        "Character": "借",
+        "Meaning": "Mượn, vay (Tá)",
+        "Onyomi": "シャク",
+        "Kunyomi": "か-りる",
+        "Example": "借りる (Mượn), 借金 (Tiền nợ)",
+        "LessonId": 300
+    },
+    {
+        "Character": "返",
+        "Meaning": "Trả lại (Phản)",
+        "Onyomi": "ヘン",
+        "Kunyomi": "かえ-る, かえ-す",
+        "Example": "返す (Trả lại), 返信 (Phản hồi)",
+        "LessonId": 300
+    },
+    {
+        "Character": "冊",
+        "Meaning": "Quyển - đếm sách (Sách)",
+        "Onyomi": "サツ, サク",
+        "Kunyomi": "-",
+        "Example": "三冊 (Ba quyển), 別冊 (Tập đính kèm)",
+        "LessonId": 300
+    },
+    {
+        "Character": "具",
+        "Meaning": "Công cụ, đạo cụ (Cụ)",
+        "Onyomi": "グ",
+        "Kunyomi": "-",
+        "Example": "道具 (Dụng cụ), 家具 (Đồ nội thất)",
+        "LessonId": 300
+    },
+    {
+        "Character": "箱",
+        "Meaning": "Cái hộp (Tương)",
+        "Onyomi": "-",
+        "Kunyomi": "はこ",
+        "Example": "ゴミ箱 (Thùng rác), 本箱 (Tủ sách)",
+        "LessonId": 300
+    },
+    {
+        "Character": "棒",
+        "Meaning": "Cái gậy (Bổng)",
+        "Onyomi": "ボウ",
+        "Kunyomi": "-",
+        "Example": "棒 (Cái gậy), 鉄棒 (Xà đơn)",
+        "LessonId": 300
+    },
+    {
+        "Character": "伸",
+        "Meaning": "Kéo dài, phát triển (Thân)",
+        "Onyomi": "シン",
+        "Kunyomi": "のびる, のばす, のべる",
+        "Example": "伸びる (Phát triển/dài ra), 屈伸 (Co duỗi)",
+        "LessonId": 300
+    }
+]

@@ -1,0 +1,107 @@
+[
+    {
+        "GrammarName": "〜気味",
+        "Structure": "V-ます (bỏ ます) / N + 気味[cite: 2]",
+        "Meaning": "Có cảm giác là..., hơi... (thường dùng cho các trạng thái không tốt)[cite: 2].",
+        "Example": "最近、残業続きで疲れ気味だ。[cite: 2]\n(Dạo này do tăng ca liên tục nên tôi hơi mệt[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜てなんかいられない",
+        "Structure": "V-て + なんかいられない[cite: 2]",
+        "Meaning": "Không thể cứ mãi... (diễn tả tâm trạng vội vã, không có thời gian để tiếp tục trạng thái đó)[cite: 2].",
+        "Example": "忙しくて、テレビを見てなんかいられない。[cite: 2]\n(Vì bận rộn nên không thể cứ ngồi xem TV mãi được[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜さえ",
+        "Structure": "N (+ trợ từ) + さえ[cite: 2]",
+        "Meaning": "Ngay cả..., thậm chí... (đưa ra ví dụ cực đoan để nhấn mạnh tính chất của sự việc)[cite: 2].",
+        "Example": "忙しくて、昼ご飯を食べる時間さえありません。[cite: 2]\n(Vì bận rộn nên ngay cả thời gian ăn trưa cũng không có[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜くらい / 〜ぐらい",
+        "Structure": "PI / N + くらい / ぐらい [なAな][cite: 2]",
+        "Meaning": "Đến mức..., cỡ như... (dùng để so sánh mức độ hoặc nêu ví dụ đơn giản)[cite: 2].",
+        "Example": "昨日は、一歩も歩けないくらい疲れました。[cite: 2]\n(Hôm qua tôi mệt đến mức không thể bước đi nổi một bước nào[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜っぱなし",
+        "Structure": "V-ます (bỏ ます) + っぱなし[cite: 2]",
+        "Meaning": "Cứ để nguyên như thế... (làm dở việc gì đó hoặc giữ nguyên một trạng thái mà lẽ ra phải thay đổi, thường mang nghĩa tiêu cực)[cite: 2].",
+        "Example": "ドアを開けっぱなしにしないでください。[cite: 2]\n(Đừng có để cửa mở nguyên như thế[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜だらけ",
+        "Structure": "N + だらけ[cite: 2]",
+        "Meaning": "Toàn là..., đầy rẫy... (thường dùng cho những thứ bẩn, mang tính tiêu cực)[cite: 2].",
+        "Example": "この靴は泥だらけだ。[cite: 2]\n(Đôi giày này toàn là bùn[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜たりして",
+        "Structure": "PI + りして[cite: 2]",
+        "Meaning": "Có lẽ là..., không chừng... (dùng khi tự nói với bản thân hoặc dự đoán nhẹ nhàng)[cite: 2].",
+        "Example": "急に雨が降ってきたりして。[cite: 2]\n(Không chừng trời sẽ đột ngột đổ mưa[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜らしい",
+        "Structure": "N + らしい[cite: 2]",
+        "Meaning": "Đậm chất..., đúng nghĩa là... (đưa ra ví dụ điển hình mang tính chất vốn có của danh từ đó)[cite: 2].",
+        "Example": "今日は、春らしい暖かい日ですね。[cite: 2]\n(Hôm nay là một ngày ấm áp đúng chất mùa xuân nhỉ[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜かと思った",
+        "Structure": "PI + かと思った[cite: 2]",
+        "Meaning": "Cứ ngỡ là..., cứ tưởng là... (nói về sự nhầm lẫn hoặc dự đoán sai trong quá khứ)[cite: 2].",
+        "Example": "ベルが鳴ったので、だれか来たのかと思った。[cite: 2]\n(Vì chuông reo nên tôi cứ tưởng có ai đó đến[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜とか〜とか",
+        "Structure": "N / V-る + とか[cite: 2]",
+        "Meaning": "Liệt kê ví dụ như là... (thường dùng trong văn nói)[cite: 2].",
+        "Example": "休みの日には、映画を見に行くとか、買い物をするとかします。[cite: 2]\n(Vào ngày nghỉ, tôi thường làm những việc như là đi xem phim hoặc đi mua sắm[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜ついでに",
+        "Structure": "V-る / V-た / Nの + ついでに[cite: 2]",
+        "Meaning": "Nhân tiện..., tiện thể... (tận dụng một dịp nào đó để làm thêm một việc khác)[cite: 2].",
+        "Example": "散歩のついでに、手紙を出してきた。[cite: 2]\n(Nhân tiện đi dạo, tôi đã đi gửi thư luôn[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜に違いない / 〜に相違ない",
+        "Structure": "PI + に違いない / に相違ない [なA / N bỏ だ][cite: 2]",
+        "Meaning": "Chắc chắn là..., không sai vào đâu được... (đưa ra phán đoán chắc chắn từ một căn cứ nào đó)[cite: 2].",
+        "Example": "あの人は、昨日寝ていないに違いない。[cite: 2]\n(Người đó chắc chắn là hôm qua đã không ngủ[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜ほど 〜ない",
+        "Structure": "N + ほど 〜ない[cite: 2]",
+        "Meaning": "Không... bằng... (diễn tả mức độ so sánh cao nhất)[cite: 2].",
+        "Example": "これほどつらい風邪はひいたことがない。[cite: 2]\n(Tôi chưa từng bị trận cảm nào đau đớn như thế này[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜ぬきで / 〜ぬきにして",
+        "Structure": "N + ぬきで / ぬきにして / ぬきの + N[cite: 2]",
+        "Meaning": "Bỏ qua..., không có... (thực hiện một hành động mà thiếu đi một yếu tố thường có)[cite: 2].",
+        "Example": "今日は、冗談ぬきで真面目に話し合おう。[cite: 2]\n(Hôm nay chúng ta hãy bàn bạc nghiêm túc, không có đùa cợt gì cả[cite: 2].)",
+        "LessonId": 302
+    },
+    {
+        "GrammarName": "〜てしょうがない / 〜てたまらない",
+        "Structure": "V-て / Aい-くて / なA-で + しょうがない / たまらない[cite: 2]",
+        "Meaning": "... không chịu nổi, ... vô cùng (diễn tả cảm xúc hoặc trạng thái mức độ cao không kìm nén được)[cite: 2].",
+        "Example": "おなかがすいてしかたがない。[cite: 2]\n(Đói không chịu nổi[cite: 2].)",
+        "LessonId": 302
+    }
+]

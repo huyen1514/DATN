@@ -4,34 +4,34 @@
         "Structure": "Nhóm 1: u -> a + せます | Nhóm 2: ます -> させます | Nhóm 3: きます -> こさせます, します -> させます",
         "Meaning": "Dùng để diễn tả việc một người (chủ thể) bắt buộc hoặc cho phép một người khác thực hiện một hành động nào đó. Tùy vào ngữ cảnh và mối quan hệ mà nó mang nghĩa là 'bắt làm' hoặc 'cho phép làm'.",
         "Example": "<ruby>先生<rt>せんせい</rt></ruby>は <ruby>学生<rt>がくせい</rt></ruby>に <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>ませました。\n(Thầy giáo bắt sinh viên đọc sách.)",
-        "LessonId": 98
+        "LessonId": 237
     },
     {
         "GrammarName": "Cấu trúc sai khiến với tự động từ (Trợ từ を)",
         "Structure": "N1 は N2 を V-(tự động từ sai khiến)",
         "Meaning": "Khi động từ là tự động từ (không có tân ngữ trực tiếp như: đi, chạy, nghỉ ngơi...), chúng ta dùng trợ từ 「を」 để chỉ người thực hiện hành động bị sai khiến.",
         "Example": "<ruby>部長<rt>ぶちょう</rt></ruby>は <ruby>加藤<rt>かとう</rt></ruby>さんを <ruby>大阪<rt>おおさか</rt></ruby>へ <ruby>出張<rt>しゅっちょう</rt></ruby>させました。\n(Trưởng phòng bắt anh Kato đi công tác ở Osaka.)",
-        "LessonId": 98
+        "LessonId": 237
     },
     {
         "GrammarName": "Cấu trúc sai khiến với tha động từ (Trợ từ に)",
         "Structure": "N1 は N2 に [Vật] を V-(tha động từ sai khiến)",
         "Meaning": "Khi động từ là tha động từ (có tân ngữ đi kèm như: ăn cơm, đọc báo...), chúng ta dùng trợ từ 「に」 để chỉ người thực hiện hành động bị sai khiến nhằm tránh lặp lại trợ từ 「を」 trong câu.",
         "Example": "<ruby>母<rt>はは</rt></ruby>は <ruby>子供<rt>こども</rt></ruby>に <ruby>野菜<rt>やさい</rt></ruby>を <ruby>食<rt>た</rt></ruby>べさせました。\n(Mẹ bắt con ăn rau.)",
-        "LessonId": 98
+        "LessonId": 237
     },
     {
         "GrammarName": "Cấu trúc ～させて いただけませんか (Xin phép làm gì đó)",
         "Structure": "V-(thể sai khiến) + て + いただけませんか",
         "Meaning": "Đây là mẫu câu xin phép cực kỳ lịch sự, dùng khi bạn muốn người trên cho phép mình thực hiện một hành động nào đó. Nó có nghĩa là: 'Làm ơn cho phép tôi làm... có được không?'.",
         "Example": "<ruby>気分<rt>きぶん</rt></ruby>が <ruby>悪<rt>わる</rt></ruby>いので、<ruby>早<rt>はや</rt></ruby>く <ruby>帰<rt>かえ</rt></ruby>らせて いただけませんか。\n(Vì trong người thấy không khỏe, làm ơn cho phép tôi về sớm có được không?)",
-        "LessonId": 98
+        "LessonId": 237
     },
     {
         "GrammarName": "Sai khiến biểu thị cảm xúc",
         "Structure": "N は [Người] を V-(sai khiến chỉ cảm xúc)",
         "Meaning": "Dùng với một số động từ chỉ cảm xúc (ngạc nhiên, lo lắng, thất vọng, vui mừng) để diễn tả việc một sự việc hoặc một người nào đó làm cho người khác nảy sinh cảm xúc đó.",
         "Example": "<ruby>合格<rt>ごうかく</rt></ruby>して、<ruby>両親<rt>りょうしん</rt></ruby>を <ruby>安心<rt>あんしん</rt></ruby>させました。\n(Vì đã thi đỗ nên tôi đã làm cho bố mẹ yên tâm.)",
-        "LessonId": 98
+        "LessonId": 237
     }
 ]

@@ -4,34 +4,34 @@
         "Structure": "[V / A-i / A-na / N] Thể thông thường + んです",
         "Meaning": "Mẫu câu này dùng để nhấn mạnh ý nghĩa giải thích về nguyên nhân, lý do hoặc căn cứ của một sự việc. Thường dùng nhiều trong văn nói. Lưu ý: Với Tính từ đuôi な và Danh từ ở thể hiện tại khẳng định, ta thay 「だ」 bằng 「な」 rồi mới thêm 「んです」 (Ví dụ: 好きなんです, 休みなんです).",
         "Example": "どうして <ruby>遅<rt>おく</rt></ruby>れたんですか。...<ruby>道<rt>みち</rt></ruby>が <ruby>混<rt>こ</rt></ruby>んでいたんです。\n(Tại sao anh/chị lại đến muộn thế? ...Vì đường đã bị đông/tắc ạ.)",
-        "LessonId": 77
+        "LessonId": 127
     },
     {
         "GrammarName": "Cấu trúc ～んですが、～",
         "Structure": "V-thông thường / A-i / A-na / N + んですが、[Câu đề nghị/Nhờ vả]",
         "Meaning": "Dùng để giới thiệu một chủ đề, tạo tiền đề hoặc bối cảnh trước khi người nói đưa ra một lời đề nghị, mời mọc hoặc nhờ vả. Trợ từ 「が」 ở đây mang sắc thái ngập ngừng, giúp câu văn trở nên mềm mỏng và lịch sự hơn.",
         "Example": "<ruby>日本語<rt>にほんご</rt></ruby>で <ruby>手紙<rt>てがみ</rt></ruby>を <ruby>書<rt>か</rt></ruby>いたんですが、ちょっと <ruby>見<rt>み</rt></ruby>て いただけませんか。\n(Tôi đã viết một bức thư bằng tiếng Nhật, anh/chị có thể xem giúp tôi một chút được không?)",
-        "LessonId": 77
+        "LessonId": 127
     },
     {
         "GrammarName": "Động từ thể ～ていただけませんか",
         "Structure": "V-te + いただけませんか",
         "Meaning": "Đây là mẫu câu nhờ vả với mức độ lịch sự cao hơn so với 「～てください」. Nó mang ý nghĩa 'Anh/chị có thể làm ơn giúp tôi... có được không?'.",
         "Example": "<ruby>良<rt>い</rt></ruby>い <ruby>先生<rt>せんせい</rt></ruby>を <ruby>紹介<rt>しょうかい</rt></ruby>して いただけませんか。\n(Anh/chị làm ơn giới thiệu cho tôi một giáo viên tốt có được không?)",
-        "LessonId": 77
+        "LessonId": 127
     },
     {
         "GrammarName": "Từ nghi vấn + ～たらいいですか",
         "Structure": "[Từ nghi vấn] + V-tara + いいですか",
         "Meaning": "Dùng khi muốn xin lời khuyên hoặc sự hướng dẫn từ người nghe về một việc mình nên làm. Có nghĩa là 'Tôi nên làm... thì tốt nhỉ?' hoặc 'Tôi nên làm... như thế nào?'.",
         "Example": "どこで <ruby>カメラ<rt></rt></ruby>を <ruby>買<rt>か</rt></ruby>ったら いいですか。\n(Tôi nên mua máy ảnh ở đâu thì tốt nhỉ?)",
-        "LessonId": 77
+        "LessonId": 127
     },
     {
         "GrammarName": "Sử dụng trợ từ は để nhấn mạnh tân ngữ",
         "Structure": "N (Tân ngữ) + は",
         "Meaning": "Trong mẫu câu có sử dụng 「～んです」, để nhấn mạnh một đối tượng cụ thể hoặc đưa nó lên làm chủ đề thảo luận, người ta thay trợ từ 「を」 bằng trợ từ 「は」.",
         "Example": "<ruby>運動会<rt>うんどうかい</rt></ruby>に <ruby>参加<rt>さんか</rt></ruby>しますか。...いいえ、<ruby>遺動<rt>うんどう</rt></ruby>は あまり <ruby>好<rt>す</rt></ruby>きじゃないんです。\n(Anh có tham gia hội thao không? ...Không, vận động thì tôi không thích lắm.)",
-        "LessonId": 77
+        "LessonId": 127
     }
 ]

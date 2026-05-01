@@ -4,39 +4,39 @@
         "Reading": "だんせい",
         "Meaning": "nam giới",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
-        "Example": "理想の男性と結婚する。\n(Kết hôn với người đàn ông lý tưởng.) [1]"
+        "LessonId": 251,
+        "Example": "理想の男性と結婚する。\n(Kết hôn với người đàn ông lý tưởng.)"
     },
     {
         "Word": "女性",
         "Reading": "じょせい",
         "Meaning": "nữ giới",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
-        "Example": "「あの女性はだれですか」\n(Người phụ nữ kia là ai?) [1]"
+        "LessonId": 251,
+        "Example": "「あの女性はだれですか」\n(Người phụ nữ kia là ai?)"
     },
     {
         "Word": "高齢",
         "Reading": "こうれい",
         "Meaning": "cao tuổi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
-        "Example": "祖母は高齢だが、まだとても元気だ。\n(Bà tôi đã cao tuổi nhưng vẫn còn rất khỏe.) [1]"
+        "LessonId": 251,
+        "Example": "祖母は高齢だが、まだとても元気だ。\n(Bà tôi đã cao tuổi nhưng vẫn còn rất khỏe.)"
     },
     {
         "Word": "年上",
         "Reading": "としうえ",
         "Meaning": "lớn tuổi hơn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
-        "Example": "彼女は私より三つ年上だ。\n(Cô ấy lớn hơn tôi 3 tuổi.) [1]"
+        "LessonId": 251,
+        "Example": "彼女は私より三つ年上だ。\n(Cô ấy lớn hơn tôi 3 tuổi.)"
     },
     {
         "Word": "目上",
         "Reading": "めうえ",
         "Meaning": "bề trên, người lớn tuổi hơn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "目上の人には敬語で話したほうがいい。\n(Nên nói chuyện bằng kính ngữ với người bề trên.) [1]"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "せんぱい",
         "Meaning": "tiền bối, đàn anh/chị",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "田中さんと私は同じ年だが、職場では彼のほうが先輩だ。\n(Anh Tanaka và tôi cùng tuổi nhưng ở nơi làm việc thì anh ấy là tiền bối.) [1]"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "こうはい",
         "Meaning": "hậu bối, đàn em",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "田中さんと私は同じ年だが、職場では彼のほうが先輩だ。\n(Anh Tanaka và tôi cùng tuổi nhưng ở nơi làm việc thì anh ấy là tiền bối.) [1]"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "じょうし",
         "Meaning": "cấp trên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "上司に相談してから決定する。\n(Sau khi thảo luận với cấp trên tôi sẽ quyết định.) [1]"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "あいて",
         "Meaning": "đối phương",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "相手の目を見て話す。\n(Nhìn vào mắt đối phương để nói chuyện.) [1]"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "しりあい",
         "Meaning": "người quen",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "知り合いに息部の就職を頼む。\n(Nhờ người quen xin việc cho con trai.) [1]"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "ゆうじん",
         "Meaning": "bạn bè",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「田中さんを知っていますか」「ええ、学生時代の友人です」\n(Bạn có biết anh Tanaka không? Vâng, là bạn thời sinh viên.) [2]"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "なか",
         "Meaning": "mối quan hệ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "私は山本さんと仲がいい。\n(Tôi có quan hệ tốt với anh Yamamoto.) [2]"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "せいねんがっぴ",
         "Meaning": "ngày tháng năm sinh",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "書類に生年月日を記入する。\n(Điền ngày tháng năm sinh vào tài liệu.) [2]"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "たんじょう",
         "Meaning": "sự ra đời",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "新しい命の誕生を祝う。\n(Chào mừng sự ra đời của một sinh mệnh mới.) [2]"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "とし",
         "Meaning": "năm, tuổi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "年の初めに１年の計画を立てる。\n(Lên kế hoạch cho một năm vào dịp đầu năm.) [2]"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "しゅっしん",
         "Meaning": "xuất thân, quê quán",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「ご出身はどちらですか」「東京です」\n(Quê bạn ở đâu? Ở Tokyo.) [2]"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "こきょう",
         "Meaning": "quê hương, cố hương",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "仕事が忙しくて、もう何年も故郷に帰っていない。\n(Công việc bận rộn nên đã mấy năm rồi tôi chưa về quê.) [2]"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "せいちょう",
         "Meaning": "sự trưởng thành, phát triển",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "子どもの成長を喜ぶ。\n(Vui mừng trước sự trưởng thành của con cái.) [3]"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "せいじん",
         "Meaning": "người trưởng thành",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "日本では二十歳以上の人を成人という。\n(Ở Nhật Bản, người từ 20 tuổi trở lên được gọi là người trưởng thành.) [3]"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "ごうかく",
         "Meaning": "thi đỗ, trúng tuyển",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "大学に合格する。\n(Thi đỗ vào đại học.) [3]"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "しんがく",
         "Meaning": "học lên (đại học, cao học)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "子どもの進学について考える。\n(Suy nghĩ về việc học lên của con cái.) [3]"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "たいがく",
         "Meaning": "bỏ học, thôi học",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "退学の理由を説明する。\n(Giải thích lý do bỏ học.) [3]"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "しゅうしょく",
         "Meaning": "tìm việc, nhận việc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "旅行会社に就職する。\n(Nhận việc ở công ty du lịch.) [3]"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "たいしょく",
         "Meaning": "nghỉ việc, từ chức",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "母の介護のため、退職を決めた。\n(Tôi đã quyết định nghỉ việc để chăm sóc mẹ.) [3]"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "しつぎょう",
         "Meaning": "thất nghiệp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "会社が倒産して失業した。\n(Công ty phá sản nên tôi đã thất nghiệp.) [3]"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "ざんぎょう",
         "Meaning": "làm thêm giờ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "残業が多くて疲れた。\n(Làm thêm giờ nhiều nên tôi rất mệt.) [3]"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "せいかつ",
         "Meaning": "cuộc sống, sinh hoạt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "健康的な生活を送る。\n(Sống một cuộc sống lành mạnh.) [4]"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "つうきん",
         "Meaning": "đi làm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "私は毎日1時間かけて通勤している。\n(Mỗi ngày tôi mất 1 tiếng để đi làm.) [4]"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "がくれき",
         "Meaning": "quá trình học tập, bằng cấp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "学歴が高くても、実力があるかどうかわからない。\n(Dù bằng cấp cao nhưng cũng không biết là có thực lực hay không.) [4]"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "きゅうりょう",
         "Meaning": "tiền lương",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "会社から給料をもらう。\n(Nhận lương từ công ty.) [4]"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "めんせつ",
         "Meaning": "phỏng vấn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "きょう、会社の人との面接がある。\n(Hôm nay tôi có buổi phỏng vấn với người của công ty.) [4]"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "きゅうけい",
         "Meaning": "nghỉ ngơi, giải lao",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「ではここで、10分間の休憩です」\n(Vậy chúng ta sẽ nghỉ giải lao 10 phút tại đây.) [4]"
     },
     {
@@ -260,7 +260,7 @@
         "Reading": "かんこう",
         "Meaning": "tham quan, du lịch",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "来日の目的は観光です。\n(Mục đích đến Nhật Bản là để tham quan.) [4]"
     },
     {
@@ -268,7 +268,7 @@
         "Reading": "きこく",
         "Meaning": "về nước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "今度の正月には帰国するつもりだ。\n(Tết này tôi dự định sẽ về nước.) [4]"
     },
     {
@@ -276,7 +276,7 @@
         "Reading": "きせい",
         "Meaning": "về quê",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "お盆にはふるさとに帰省する日本人が多い。\n(Vào dịp lễ Obon, có rất nhiều người Nhật về quê.) [5]"
     },
     {
@@ -284,7 +284,7 @@
         "Reading": "きたく",
         "Meaning": "về nhà",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "毎日忙しくて帰宅が遅い。\n(Ngày nào cũng bận rộn nên về nhà muộn.) [5]"
     },
     {
@@ -292,7 +292,7 @@
         "Reading": "さんか",
         "Meaning": "tham gia",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "ボランティア活動に参加する。\n(Tham gia hoạt động tình nguyện.) [5]"
     },
     {
@@ -300,7 +300,7 @@
         "Reading": "しゅっせき",
         "Meaning": "có mặt, tham dự",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "ミーティングに出席する。\n(Tham dự cuộc họp.) [5]"
     },
     {
@@ -308,7 +308,7 @@
         "Reading": "けっせき",
         "Meaning": "vắng mặt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "授業を欠席する。\n(Vắng mặt ở buổi học.) [5]"
     },
     {
@@ -316,7 +316,7 @@
         "Reading": "ちこく",
         "Meaning": "đến muộn, trễ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "寝坊して授業に遅刻する。\n(Vì ngủ quên nên đến lớp muộn.) [5]"
     },
     {
@@ -324,7 +324,7 @@
         "Reading": "けしょう",
         "Meaning": "trang điểm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「あなたは毎日、お化粧に何分ぐらいかけていますか」\n(Mỗi ngày bạn dành khoảng bao nhiêu phút để trang điểm?) [5]"
     },
     {
@@ -332,7 +332,7 @@
         "Reading": "けいさん",
         "Meaning": "tính toán",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "私は計算が苦手だ。\n(Tôi rất kém trong việc tính toán.) [5]"
     },
     {
@@ -340,7 +340,7 @@
         "Reading": "けいかく",
         "Meaning": "kế hoạch",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "来年の計画を立てる。\n(Lên kế hoạch cho năm sau.) [5]"
     },
     {
@@ -348,7 +348,7 @@
         "Reading": "せいこう",
         "Meaning": "thành công",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "実験に成功する。\n(Thử nghiệm thành công.) [6]"
     },
     {
@@ -356,7 +356,7 @@
         "Reading": "しっぱい",
         "Meaning": "thất bại",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "実験の失敗で、計画は中止になった。\n(Vì thử nghiệm thất bại nên kế hoạch đã bị đình chỉ.) [6]"
     },
     {
@@ -364,7 +364,7 @@
         "Reading": "じゅんび",
         "Meaning": "chuẩn bị",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "引っ越しの準備が終わった。\n(Đã hoàn tất việc chuẩn bị chuyển nhà.) [6]"
     },
     {
@@ -372,7 +372,7 @@
         "Reading": "せいり",
         "Meaning": "sắp xếp, vứt bỏ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "資料の整理。\n(Sắp xếp tài liệu.) [6]"
     },
     {
@@ -380,7 +380,7 @@
         "Reading": "ちゅうもん",
         "Meaning": "đặt hàng, gọi món",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "注文の品が届く。\n(Món hàng đã đặt được giao đến.) [6]"
     },
     {
@@ -388,7 +388,7 @@
         "Reading": "ちょきん",
         "Meaning": "tiết kiệm tiền",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "貯金が増える。\n(Tiền tiết kiệm tăng lên.) [6]"
     },
     {
@@ -396,7 +396,7 @@
         "Reading": "てつや",
         "Meaning": "thức trắng đêm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "徹夜が続く。\n(Tiếp tục thức trắng đêm.) [6]"
     },
     {
@@ -404,7 +404,7 @@
         "Reading": "ひっこし",
         "Meaning": "chuyển nhà",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "引っ越しを手伝う。\n(Giúp đỡ việc chuyển nhà.) [6]"
     },
     {
@@ -412,7 +412,7 @@
         "Reading": "しんちょう",
         "Meaning": "chiều cao",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "身長を測る。\n(Đo chiều cao.) [6]"
     },
     {
@@ -420,7 +420,7 @@
         "Reading": "たいじゅう",
         "Meaning": "cân nặng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "体重を測る。\n(Đo cân nặng.) [7]"
     },
     {
@@ -428,7 +428,7 @@
         "Reading": "けが",
         "Meaning": "vết thương, bị thương",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "小さなけが。\n(Vết thương nhỏ.) [7]"
     },
     {
@@ -436,7 +436,7 @@
         "Reading": "かい",
         "Meaning": "tiệc, hội",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "忘年会を開く。\n(Tổ chức tiệc tất niên.) [7]"
     },
     {
@@ -444,7 +444,7 @@
         "Reading": "しゅみ",
         "Meaning": "sở thích",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "趣味は読書です。\n(Sở thích của tôi là đọc sách.) [7]"
     },
     {
@@ -452,7 +452,7 @@
         "Reading": "きょうみ",
         "Meaning": "hứng thú, quan tâm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "私は歴史に興味がある。\n(Tôi có hứng thú với lịch sử.) [7]"
     },
     {
@@ -460,7 +460,7 @@
         "Reading": "おもいで",
         "Meaning": "kỷ niệm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "子どものころの思い出。\n(Kỷ niệm thời thơ ấu.) [7]"
     },
     {
@@ -468,7 +468,7 @@
         "Reading": "じょうだん",
         "Meaning": "nói đùa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "冗談を言ったら、みんなが本気にした。\n(Chỉ nói đùa thôi mà mọi người lại tưởng thật.) [7]"
     },
     {
@@ -476,7 +476,7 @@
         "Reading": "もくてき",
         "Meaning": "mục đích",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "日本に来た目的は大学への入学だ。\n(Mục đích tôi đến Nhật là để vào đại học.) [7]"
     },
     {
@@ -484,7 +484,7 @@
         "Reading": "やくそく",
         "Meaning": "lời hứa, cuộc hẹn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "彼と結婚の約束をした。\n(Tôi đã hứa kết hôn với anh ấy.) [8]"
     },
     {
@@ -492,7 +492,7 @@
         "Reading": "おしゃべり",
         "Meaning": "nói chuyện, tán gẫu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "授業中に隣の人とおしゃべりしていて、先生に怒られた。\n(Tôi bị giáo viên mắng vì mải nói chuyện với người bên cạnh trong giờ học.) [8]"
     },
     {
@@ -500,7 +500,7 @@
         "Reading": "えんりょ",
         "Meaning": "ngại ngùng, khách sáo",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「遠慮しないで食べてください」\n(Xin đừng ngại, hãy ăn đi.) [8]"
     },
     {
@@ -508,7 +508,7 @@
         "Reading": "がまん",
         "Meaning": "chịu đựng, nhẫn nhịn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "痛くても我慢する。\n(Dù đau nhưng vẫn cố chịu đựng.) [8]"
     },
     {
@@ -516,7 +516,7 @@
         "Reading": "めいわく",
         "Meaning": "phiền phức, làm phiền",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "人に迷惑をかけてはいけない。\n(Không được làm phiền người khác.) [8]"
     },
     {
@@ -524,7 +524,7 @@
         "Reading": "きぼう",
         "Meaning": "hy vọng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "最後まで希望を捨ててはいけない。\n(Không được từ bỏ hy vọng cho đến phút cuối.) [8]"
     },
     {
@@ -532,7 +532,7 @@
         "Reading": "ゆめ",
         "Meaning": "giấc mơ, ước mơ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "きのう、こわい夢を見た。\n(Hôm qua tôi đã thấy một giấc mơ đáng sợ.) [9]"
     },
     {
@@ -540,7 +540,7 @@
         "Reading": "さんせい",
         "Meaning": "tán thành, đồng ý",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「賛成の人は手を挙げてください」\n(Ai tán thành xin hãy giơ tay lên.) [9]"
     },
     {
@@ -548,7 +548,7 @@
         "Reading": "はんたい",
         "Meaning": "phản đối, ngược lại",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "プラスの反対はマイナスだ。\n(Ngược lại của dấu cộng là dấu trừ.) [9]"
     },
     {
@@ -556,7 +556,7 @@
         "Reading": "そうぞう",
         "Meaning": "tưởng tượng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "想像と現実は違う。\n(Tưởng tượng và hiện thực khác nhau.) [9]"
     },
     {
@@ -564,7 +564,7 @@
         "Reading": "どりょく",
         "Meaning": "nỗ lực, cố gắng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "一生懸命、努力をする。\n(Cố gắng nỗ lực hết mình.) [9]"
     },
     {
@@ -572,7 +572,7 @@
         "Reading": "たいよう",
         "Meaning": "mặt trời",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "太陽が昇って、暖かくなった。\n(Mặt trời mọc lên nên trời trở nên ấm áp.) [10]"
     },
     {
@@ -580,7 +580,7 @@
         "Reading": "ちきゅう",
         "Meaning": "trái đất",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "地球の環境が悪化している。\n(Môi trường trái đất đang ngày càng xấu đi.) [10]"
     },
     {
@@ -588,7 +588,7 @@
         "Reading": "おんど",
         "Meaning": "nhiệt độ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "温度を測る。\n(Đo nhiệt độ.) [10]"
     },
     {
@@ -596,7 +596,7 @@
         "Reading": "しつど",
         "Meaning": "độ ẩm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "今年の夏は特に湿度が高い。\n(Mùa hè năm nay độ ẩm đặc biệt cao.) [10]"
     },
     {
@@ -604,7 +604,7 @@
         "Reading": "しっけ",
         "Meaning": "hơi ẩm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "日本の夏は湿気が多い。\n(Mùa hè ở Nhật có rất nhiều hơi ẩm.) [10]"
     },
     {
@@ -612,7 +612,7 @@
         "Reading": "つゆ",
         "Meaning": "mùa mưa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "6月から7月は梅雨の時期だ。\n(Từ tháng 6 đến tháng 7 là thời điểm mùa mưa.) [10]"
     },
     {
@@ -620,7 +620,7 @@
         "Reading": "かび",
         "Meaning": "nấm mốc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "梅雨の時期はかびがはえやすい。\n(Vào mùa mưa rất dễ mọc nấm mốc.) [10]"
     },
     {
@@ -628,7 +628,7 @@
         "Reading": "だんぼう",
         "Meaning": "máy sưởi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "寒いので暖房をつける。\n(Vì lạnh nên tôi bật máy sưởi.) [10]"
     },
     {
@@ -636,7 +636,7 @@
         "Reading": "かわ",
         "Meaning": "vỏ, da",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "くだもの／やさい／動物 ･･･ の皮\n(Vỏ của trái cây / rau / da của động vật.) [11]"
     },
     {
@@ -644,7 +644,7 @@
         "Reading": "かん",
         "Meaning": "lon, hộp thiếc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "お菓子をカンに入れて保存する。\n(Cho bánh kẹo vào hộp thiếc để bảo quản.) [11]"
     },
     {
@@ -652,7 +652,7 @@
         "Reading": "がめん",
         "Meaning": "màn hình",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "パソコンの画面をずっと見ていると、目が疲れる。\n(Nếu nhìn liên tục vào màn hình máy tính thì mắt sẽ mệt mỏi.) [11]"
     },
     {
@@ -660,7 +660,7 @@
         "Reading": "ばんぐみ",
         "Meaning": "chương trình",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "テレビの番組を見る。\n(Xem chương trình TV.) [11]"
     },
     {
@@ -668,7 +668,7 @@
         "Reading": "きじ",
         "Meaning": "bài báo, ký sự",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "この記事によると、日本に住む外国人が増えているそうだ。\n(Theo bài báo này thì có vẻ người nước ngoài sống tại Nhật đang tăng lên.) [11]"
     },
     {
@@ -676,7 +676,7 @@
         "Reading": "きんじょ",
         "Meaning": "hàng xóm, láng giềng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "近所の人とは仲良くしたほうがいい。\n(Nên giữ quan hệ tốt với những người hàng xóm.) [11]"
     },
     {
@@ -684,7 +684,7 @@
         "Reading": "けいさつ",
         "Meaning": "cảnh sát",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "自転車を盗まれたので、警察に届けた。\n(Vì bị mất cắp xe đạp nên tôi đã báo cảnh sát.) [11]"
     },
     {
@@ -692,7 +692,7 @@
         "Reading": "はんにん",
         "Meaning": "tội phạm, hung thủ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "事件の犯人。\n(Hung thủ của vụ án.) [11]"
     },
     {
@@ -700,7 +700,7 @@
         "Reading": "こぜに",
         "Meaning": "tiền lẻ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "バスに乗ってから小銭がないことに気がつき、とても困った。\n(Lên xe buýt rồi mới nhận ra không có tiền lẻ, thật là rắc rối.) [11]"
     },
     {
@@ -708,7 +708,7 @@
         "Reading": "ごちそう",
         "Meaning": "bữa ăn ngon, khao",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "家族みんなでごちそうを食べて、祖父の誕生日を祝った。\n(Cả gia đình cùng ăn một bữa ngon để chúc mừng sinh nhật ông nội.) [12]"
     },
     {
@@ -716,7 +716,7 @@
         "Reading": "さくしゃ",
         "Meaning": "tác giả",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "小説／詩／絵／彫刻 ･･･ の作者\n(Tác giả của tiểu thuyết / thơ / tranh / tượng điêu khắc.) [12]"
     },
     {
@@ -724,7 +724,7 @@
         "Reading": "さくひん",
         "Meaning": "tác phẩm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "学生の作品をロビーに展示する。\n(Trưng bày tác phẩm của sinh viên ở hành lang.) [12]"
     },
     {
@@ -732,7 +732,7 @@
         "Reading": "せいふく",
         "Meaning": "đồng phục",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "日本の中学校には制服のある学校が多い。\n(Các trường cấp 2 ở Nhật Bản đa số đều có quy định về đồng phục.) [12]"
     },
     {
@@ -740,7 +740,7 @@
         "Reading": "せんざい",
         "Meaning": "chất tẩy rửa, bột giặt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "洗剤で食器を洗う。\n(Rửa chén bằng nước rửa chén bát.) [12]"
     },
     {
@@ -748,7 +748,7 @@
         "Reading": "そこ",
         "Meaning": "đáy",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "くつの底に穴があく。\n(Có một lỗ thủng dưới đế giày.) [12]"
     },
     {
@@ -756,7 +756,7 @@
         "Reading": "ちか",
         "Meaning": "tầng hầm, dưới mặt đất",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "大都市は地下の開発が進んでいる。\n(Ở các thành phố lớn việc khai thác không gian ngầm đang tiến triển.) [12]"
     },
     {
@@ -764,7 +764,7 @@
         "Reading": "てら",
         "Meaning": "chùa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "寺にまいる。\n(Đi viếng chùa.) [12]"
     },
     {
@@ -772,7 +772,7 @@
         "Reading": "どうろ",
         "Meaning": "con đường",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "道路が込む。\n(Đường đông đúc.) [13]"
     },
     {
@@ -780,7 +780,7 @@
         "Reading": "さか",
         "Meaning": "con dốc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "坂を上る。\n(Leo dốc.) [13]"
     },
     {
@@ -788,7 +788,7 @@
         "Reading": "けむり",
         "Meaning": "khói",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「火事のときは、煙に注意して逃げてください」\n(Khi có hỏa hoạn, xin hãy chú ý đến khói khi chạy trốn.) [13]"
     },
     {
@@ -796,7 +796,7 @@
         "Reading": "はい",
         "Meaning": "tro, tàn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "たばこの灰\n(Tàn thuốc lá.) [13]"
     },
     {
@@ -804,7 +804,7 @@
         "Reading": "はん",
         "Meaning": "con dấu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "書類に判を押す。\n(Đóng dấu vào tài liệu.) [13]"
     },
     {
@@ -812,7 +812,7 @@
         "Reading": "めいし",
         "Meaning": "danh thiếp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "名刺を交換する。\n(Trao đổi danh thiếp.) [13]"
     },
     {
@@ -820,7 +820,7 @@
         "Reading": "めんきょ",
         "Meaning": "bằng cấp, giấy phép",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "レストランを開くには、調理師の免許が必要だ。\n(Để mở nhà hàng, cần thiết phải có bằng đầu bếp.) [13]"
     },
     {
@@ -828,7 +828,7 @@
         "Reading": "おおく",
         "Meaning": "nhiều",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "オリンピックには多くの国が参加した。\n(Đã có rất nhiều quốc gia tham gia kỳ Thế vận hội Olympic.) [13]"
     },
     {
@@ -836,7 +836,7 @@
         "Reading": "ぜんはん",
         "Meaning": "nửa đầu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "映画の前半はたいくつだった。\n(Nửa đầu của bộ phim khá nhàm chán.) [13]"
     },
     {
@@ -844,7 +844,7 @@
         "Reading": "こうはん",
         "Meaning": "nửa sau",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "映画の前半はたいくつだっただが、後半はおもしろかった。\n(Nửa đầu bộ phim thì nhàm chán nhưng nửa sau lại rất thú vị.) [13]"
     },
     {
@@ -852,7 +852,7 @@
         "Reading": "さいこう",
         "Meaning": "tốt nhất, cao nhất",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "最高気温\n(Nhiệt độ cao nhất.) [14]"
     },
     {
@@ -860,7 +860,7 @@
         "Reading": "さいてい",
         "Meaning": "thấp nhất, tệ nhất",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "最低気温\n(Nhiệt độ thấp nhất.) [14]"
     },
     {
@@ -868,7 +868,7 @@
         "Reading": "さいしょ",
         "Meaning": "đầu tiên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "最初にひらがなを、次にカタカナを勉強した。\n(Đầu tiên học Hiragana, sau đó là học Katakana.) [14]"
     },
     {
@@ -876,7 +876,7 @@
         "Reading": "さいご",
         "Meaning": "cuối cùng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "「あとから来た人は列の最後に並んでください」\n(Những người đến sau xin hãy xếp hàng ở vị trí cuối cùng.) [14]"
     },
     {
@@ -884,7 +884,7 @@
         "Reading": "じどう",
         "Meaning": "tự động",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "このドアは自動だから、手で開けなくてもいい。\n(Cánh cửa này là tự động nên không cần dùng tay mở.) [14]"
     },
     {
@@ -892,7 +892,7 @@
         "Reading": "しゅるい",
         "Meaning": "chủng loại",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "公園にはいろいろな種類の花がある。\n(Trong công viên có rất nhiều loại hoa khác nhau.) [14]"
     },
     {
@@ -900,7 +900,7 @@
         "Reading": "せいかく",
         "Meaning": "tính cách",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "あの人は性格がいいので、みんなに好かれている。\n(Người đó tính cách rất tốt nên được mọi người yêu quý.) [14]"
     },
     {
@@ -908,7 +908,7 @@
         "Reading": "せいしつ",
         "Meaning": "tính chất, thuộc tính",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "この布は燃えにくい性質を持っている。\n(Loại vải này có đặc tính khó cháy.) [15]"
     },
     {
@@ -916,7 +916,7 @@
         "Reading": "じゅんばん",
         "Meaning": "thứ tự",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "発表の順番を決める。\n(Quyết định thứ tự phát biểu.) [15]"
     },
     {
@@ -924,7 +924,7 @@
         "Reading": "ばん",
         "Meaning": "lượt, số",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "次は私の番だ。\n(Tiếp theo là đến lượt của tôi.) [15]"
     },
     {
@@ -932,7 +932,7 @@
         "Reading": "ほうほう",
         "Meaning": "phương pháp, cách thức",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "いい方法を探す。\n(Tìm kiếm một phương pháp tốt.) [15]"
     },
     {
@@ -940,7 +940,7 @@
         "Reading": "せいひん",
         "Meaning": "sản phẩm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "完成した製品を検査する。\n(Kiểm tra sản phẩm đã hoàn thiện.) [15]"
     },
     {
@@ -948,7 +948,7 @@
         "Reading": "ねあがり",
         "Meaning": "tăng giá",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "食品の値上がり。\n(Sự tăng giá của thực phẩm.) [15]"
     },
     {
@@ -956,7 +956,7 @@
         "Reading": "なま",
         "Meaning": "sống, tươi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 2002,
+        "LessonId": 251,
         "Example": "生の魚\n(Cá sống.) [15]"
     }
 ]

@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "政",
+        "Meaning": "Chính (Chính trị)",
+        "Onyomi": "セイ, ショウ",
+        "Kunyomi": "まつりごと",
+        "Example": "政治 (せいじ): Chính trị; 政策 (せいさく): Chính sách",
+        "LessonId": 340
+    },
+    {
+        "Character": "治",
+        "Meaning": "Trị (Cai trị, chữa trị)",
+        "Onyomi": "ジ, チ",
+        "Kunyomi": "おさ-まる, おさ-める, なお-る, なお-す",
+        "Example": "自治 (じち): Tự trị; 治療 (ちりょう): Điều trị",
+        "LessonId": 340
+    },
+    {
+        "Character": "際",
+        "Meaning": "Tế (Quốc tế, dịp)",
+        "Onyomi": "サイ",
+        "Kunyomi": "きわ",
+        "Example": "国際 (こくさい): Quốc tế; 際 (きわ): Ven/Rìa",
+        "LessonId": 340
+    },
+    {
+        "Character": "議",
+        "Meaning": "Nghị (Hội nghị, thảo luận)",
+        "Onyomi": "ギ",
+        "Kunyomi": "-",
+        "Example": "会議 (かいぎ): Hội nghị; 議員 (ぎいん): Nghị viên",
+        "LessonId": 340
+    },
+    {
+        "Character": "党",
+        "Meaning": "Đảng (Chính đảng)",
+        "Onyomi": "トウ",
+        "Kunyomi": "-",
+        "Example": "政党 (せいとう): Chính đảng; 与党 (よとう): Đảng cầm quyền",
+        "LessonId": 340
+    },
+    {
+        "Character": "法",
+        "Meaning": "Pháp (Pháp luật, phương pháp)",
+        "Onyomi": "ホウ, ハッ, ホッ",
+        "Kunyomi": "-",
+        "Example": "法律 (ほうりつ): Pháp luật; 方法 (ほうほう): Phương pháp",
+        "LessonId": 340
+    },
+    {
+        "Character": "律",
+        "Meaning": "Luật (Quy luật, luật lệ)",
+        "Onyomi": "リツ, リチ",
+        "Kunyomi": "-",
+        "Example": "規律 (きりつ): Quy luật; 法律 (ほうりつ): Pháp luật",
+        "LessonId": 340
+    },
+    {
+        "Character": "憲",
+        "Meaning": "Hiến (Hiến pháp)",
+        "Onyomi": "ケン",
+        "Kunyomi": "-",
+        "Example": "憲法 (けんぽう): Hiến pháp; 違憲 (いけん): Vi hiến",
+        "LessonId": 340
+    },
+    {
+        "Character": "義",
+        "Meaning": "Nghĩa (Nghĩa vụ, ý nghĩa)",
+        "Onyomi": "ギ",
+        "Kunyomi": "-",
+        "Example": "義務 (ぎむ): Nghĩa vụ; 正義 (せいぎ): Chính nghĩa",
+        "LessonId": 340
+    },
+    {
+        "Character": "役",
+        "Meaning": "Dịch (Chức vụ, vai trò)",
+        "Onyomi": "ヤク, エキ",
+        "Kunyomi": "-",
+        "Example": "役所 (やくしょ): Công sở; 役割 (やくわり): Vai trò",
+        "LessonId": 340
+    },
+    {
+        "Character": "府",
+        "Meaning": "Phủ (Chính phủ)",
+        "Onyomi": "フ",
+        "Kunyomi": "-",
+        "Example": "政府 (せいふ): Chính phủ; 京都府 (きょうとふ): Phủ Kyoto",
+        "LessonId": 340
+    },
+    {
+        "Character": "県",
+        "Meaning": "Huyện (Tỉnh)",
+        "Onyomi": "ケン",
+        "Kunyomi": "-",
+        "Example": "県庁 (けんちょう): Tòa thị chính tỉnh; 県内 (けんない): Trong tỉnh",
+        "LessonId": 340
+    },
+    {
+        "Character": "市",
+        "Meaning": "Thị (Thành phố, chợ)",
+        "Onyomi": "シ",
+        "Kunyomi": "いち",
+        "Example": "市長 (しちょう): Thị trưởng; 市場 (いちば): Chợ",
+        "LessonId": 340
+    },
+    {
+        "Character": "区",
+        "Meaning": "Khu (Khu vực, quận)",
+        "Onyomi": "ク",
+        "Kunyomi": "-",
+        "Example": "区役所 (くやくしょ): Ủy ban quận; 区分 (くぶん): Phân chia",
+        "LessonId": 340
+    },
+    {
+        "Character": "村",
+        "Meaning": "Thôn (Làng)",
+        "Onyomi": "ソン",
+        "Kunyomi": "むら",
+        "Example": "村長 (そんちょう): Trưởng thôn; 農村 (のうそん): Nông thôn",
+        "LessonId": 340
+    },
+    {
+        "Character": "警",
+        "Meaning": "Cảnh (Cảnh báo, cảnh sát)",
+        "Onyomi": "ケイ",
+        "Kunyomi": "-",
+        "Example": "警察 (けいさつ): Cảnh sát; 警告 (けいこく): Cảnh báo",
+        "LessonId": 340
+    },
+    {
+        "Character": "察",
+        "Meaning": "Sát (Quan sát, cảnh sát)",
+        "Onyomi": "サツ",
+        "Kunyomi": "-",
+        "Example": "観察 (かんさつ): Quan sát; 警察 (けいさつ): Cảnh sát",
+        "LessonId": 340
+    },
+    {
+        "Character": "署",
+        "Meaning": "Thự (Trụ sở, đồn)",
+        "Onyomi": "ショ",
+        "Kunyomi": "-",
+        "Example": "消防署 (しょうぼうしょ): Đồn cứu hỏa; 署名 (しょめい): Ký tên",
+        "LessonId": 340
+    },
+    {
+        "Character": "犯",
+        "Meaning": "Phạm (Phạm tội, vi phạm)",
+        "Onyomi": "ハン",
+        "Kunyomi": "おか-す",
+        "Example": "犯人 (はんにん): Hung thủ; 犯罪 (はんざい): Tội phạm",
+        "LessonId": 340
+    },
+    {
+        "Character": "罪",
+        "Meaning": "Tội (Tội lỗi)",
+        "Onyomi": "ザイ",
+        "Kunyomi": "つみ",
+        "Example": "有罪 (ゆうざい): Có tội; 罪 (つみ): Tội ác",
+        "LessonId": 340
+    }
+]

@@ -4,7 +4,7 @@
         "Reading": "おきます",
         "Meaning": "đặt, để",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "ここに にもつを おいて ください。\n(Hãy đặt hành lý ở đây.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "つくります",
         "Meaning": "làm, chế tạo, sản xuất",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "わたしは りょうりを つくります。\n(Tôi nấu ăn.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "うります",
         "Meaning": "bán",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "あの みせで ほんを うっています。\n(Cửa hàng kia đang bán sách.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "しります",
         "Meaning": "biết",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "しやくしょの でんわばんごうを しっていますか。\n(Bạn có biết số điện thoại của văn phòng hành chính thành phố không?)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "すみます",
         "Meaning": "sống, ở",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "わたしは はのいに すんでいます。\n(Tôi đang sống ở Hà Nội.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "けんきゅうします",
         "Meaning": "nghiên cứu",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "だいがくで にほんの けいざいを けんきゅうしています。\n(Tôi đang nghiên cứu kinh tế Nhật Bản ở trường đại học.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "しりょう",
         "Meaning": "tài liệu, tư liệu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "この しりょうを みて ください。\n(Hãy xem tài liệu này.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "かたろぐ",
         "Meaning": "ca-ta-lô",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "かたろぐを もらいました。\n(Tôi đã nhận được cuốn ca-ta-lô.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "じこくひょう",
         "Meaning": "bảng giờ tàu chạy",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "えきで じこくひょうを もらいます。\n(Tôi nhận bảng giờ tàu ở nhà ga.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "ふく",
         "Meaning": "quần áo",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "あたらしい ふくを かいました。\n(Tôi đã mua quần áo mới.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "せいひん",
         "Meaning": "sản phẩm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "にほんの せいひんは とても いいです。\n(Sản phẩm của Nhật Bản rất tốt.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "そふと",
         "Meaning": "phần mềm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "あたらしい そふとを つかいます。\n(Tôi sử dụng phần mềm mới.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "でんしじしょ",
         "Meaning": "từ điển điện tử",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "でんしじしょで かんじを しらべます。\n(Tôi tra chữ Kanji bằng từ điển điện tử.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "けいざい",
         "Meaning": "kinh tế",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "けいざいの ほんを よみます。\n(Tôi đọc sách về kinh tế.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "しやくしょ",
         "Meaning": "văn phòng hành chính thành phố",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "しやくしょは どこですか。\n(Văn phòng hành chính thành phố ở đâu vậy?)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "こうこう",
         "Meaning": "trường trung học phổ thông",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "こうこうで えいごを おしえています。\n(Tôi đang dạy tiếng Anh ở trường cấp 3.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "はいしゃ",
         "Meaning": "nha sĩ, phòng khám răng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "きのう はいしゃへ いきました。\n(Hôm qua tôi đã đi khám răng.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "どくしん",
         "Meaning": "độc thân",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "わたしは どくしんです。\n(Tôi vẫn còn độc thân.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "すみません",
         "Meaning": "xin lỗi (khi làm phiền ai đó)",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "すみませんが、ちょっと てつだって ください。\n(Xin lỗi, hãy giúp tôi một chút.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "おもいだします",
         "Meaning": "nhớ lại, hồi tưởng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "かぞくを おもいだします。\n(Tôi nhớ về gia đình.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "ごかぞく",
         "Meaning": "gia đình (của người khác)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "ごかぞくは おげんきですか。\n(Gia đình của bạn có khỏe không?)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "いらっしゃいます",
         "Meaning": "có, ở (kính ngữ của います)",
         "PartOfSpeech": "Động từ",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "せんせいは いらっしゃいますか。\n(Có thầy giáo ở đó không ạ?)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "にほんばし",
         "Meaning": "Nihonbashi (tên một khu phố ở Tokyo)",
         "PartOfSpeech": "Danh từ riêng",
-        "LessonId": 20,
+        "LessonId": 71,
         "Example": "にほんばしへ いきました。\n(Tôi đã đi đến Nihonbashi.)"
     }
 ]

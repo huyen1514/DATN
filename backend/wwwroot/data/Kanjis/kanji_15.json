@@ -5,7 +5,7 @@
         "Onyomi": "チョウ",
         "Kunyomi": "なが.い",
         "Example": "長い (ながい): Dài; 校長 (こうちょう): Hiệu trưởng; 市長 (しちょう): Thị trưởng",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "短",
@@ -13,7 +13,7 @@
         "Onyomi": "タン",
         "Kunyomi": "みじか.い",
         "Example": "短い (みじかい): Ngắn; 短大 (たんだい): Trường cao đẳng; 短期 (たんき): Ngắn hạn",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "高",
@@ -21,7 +21,7 @@
         "Onyomi": "コウ",
         "Kunyomi": "たか.い",
         "Example": "高い (たかい): Cao/Đắt; 高校 (こうこう): Trường cấp 3; 最高 (さいこう): Cao nhất/Tuyệt nhất",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "安",
@@ -29,7 +29,7 @@
         "Onyomi": "アン",
         "Kunyomi": "やす.い",
         "Example": "安い (やすい): Rẻ; 安心 (あんしん): An tâm; 安全 (あんぜん): An toàn",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "低",
@@ -37,7 +37,7 @@
         "Onyomi": "テイ",
         "Kunyomi": "ひく.い",
         "Example": "低い (ひくい): Thấp; 低温 (ていおん): Nhiệt độ thấp; 低下 (ていか): Sự giảm sút",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "暗",
@@ -45,7 +45,7 @@
         "Onyomi": "アン",
         "Kunyomi": "くら.い",
         "Example": "暗い (くらい): Tối; 真っ暗 (まっくら): Tối đen như mực; 暗号 (あんごう): Mật mã",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "明",
@@ -53,7 +53,7 @@
         "Onyomi": "メイ, ミョウ",
         "Kunyomi": "あか.るい, あ.ける",
         "Example": "明るい (あかるい): Sáng sủa; 明日 (あした): Ngày mai; 説明 (せつめい): Giải thích",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "多",
@@ -61,7 +61,7 @@
         "Onyomi": "タ",
         "Kunyomi": "おお.い",
         "Example": "多い (おおい): Nhiều; 多分 (たぶん): Có lẽ; 多数 (たすう): Đa số",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "少",
@@ -69,7 +69,7 @@
         "Onyomi": "ショウ",
         "Kunyomi": "すく.ない, すこ.し",
         "Example": "少ない (すくない): Ít; 少し (すこし): Một chút; 少年 (しょうねん): Thiếu niên",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "新",
@@ -77,7 +77,7 @@
         "Onyomi": "シン",
         "Kunyomi": "あたら.しい",
         "Example": "新しい (あたらしい): Mới; 新聞 (しんぶん): Tờ báo; 新幹線 (しんかんせん): Tàu Shinkansen",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "古",
@@ -85,7 +85,7 @@
         "Onyomi": "コ",
         "Kunyomi": "ふる.い",
         "Example": "古い (ふるい): Cũ; 中古 (ちゅうこ): Đồ cũ/Đồ đã qua sử dụng; 古本 (ふるほん): Sách cũ",
-        "LessonId": 1016
+        "LessonId": 75
     },
     {
         "Character": "早",
@@ -93,6 +93,6 @@
         "Onyomi": "ソウ",
         "Kunyomi": "はや.い",
         "Example": "早い (はやい): Sớm; 早退 (そうたい): Về sớm; 早朝 (そうちょう): Sáng sớm",
-        "LessonId": 1016
+        "LessonId": 75
     }
 ]

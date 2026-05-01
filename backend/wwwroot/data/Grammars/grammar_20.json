@@ -4,34 +4,34 @@
         "Structure": "Thể thông thường (Plain Form)",
         "Meaning": "Trong tiếng Nhật, thể thông thường được dùng khi nói chuyện với bạn bè, người thân, hoặc người có địa vị thấp hơn mình. Ngoài ra, đây cũng là nền tảng để xây dựng các cấu trúc ngữ pháp phức tạp hơn ở trình độ N4, N3. \n- Động từ: Dùng thể Từ điển (V-ru), thể ない (V-nai), thể た (V-ta).\n- Tính từ đuôi い: Giữ nguyên, bỏ 「です」.\n- Tính từ đuôi な / Danh từ: Thay 「です」 bằng 「だ」.",
         "Example": "ごはんを たべる？\nーうん、たべる。\n(Ăn cơm không?\n-Ừ, ăn.)",
-        "LessonId": 49
+        "LessonId": 97
     },
     {
         "GrammarName": "Cách chia Thể thông thường của Động từ",
         "Structure": "V-masu -> V-plain",
         "Meaning": "Chuyển đổi từ thể lịch sự sang thông thường:\n- Vます (Hiện tại) -> V-ru (Thể từ điển).\n- Vません (Phủ định) -> V-nai (Thể ない).\n- Vました (Quá khứ) -> V-ta (Thể た).\n- Vませんでした (Quá khứ phủ định) -> V-nakatta (Thể ない bỏ い thêm かった).",
         "Example": "いきます -> いく\nいかない -> いかない\nいった -> いった\nいかなかった -> いかなかった\n(Đi -> Không đi / Đã đi -> Đã không đi)",
-        "LessonId": 49
+        "LessonId": 97
     },
     {
         "GrammarName": "Cách chia Thể thông thường của Tính từ và Danh từ",
         "Structure": "Adj / Noun -> Plain Form",
         "Meaning": "- Tính từ đuôi い: Bỏ 「です」 ở tất cả các thì.\n- Tính từ đuôi な và Danh từ: Thay 「です」 bằng 「だ」. Tuy nhiên, ở dạng phủ định (ja arimasen) sẽ chuyển thành 「じゃ ない」, và quá khứ phủ định thành 「じゃ なかった」.\n*Lưu ý: Trong hội thoại thân mật, chữ 「だ」 ở cuối câu khẳng định thường được lược bỏ.",
         "Example": "あつい です -> あつい\nひま です -> ひま(だ)\nあめ です -> あめ(だ)\n(Nóng -> Rảnh -> Mưa)",
-        "LessonId": 49
+        "LessonId": 97
     },
     {
         "GrammarName": "Hội thoại thể thông thường: Câu hỏi và Trả lời",
         "Structure": "Câu hỏi (lên giọng) / Trả lời (うん / ううん)",
         "Meaning": "Trong thể thông thường:\n- Câu hỏi: Lược bỏ trợ từ 「か」 ở cuối và lên giọng ở từ cuối cùng. Trợ từ 「は」, 「を」, 「へ」 thường xuyên bị lược bỏ nếu ý nghĩa vẫn rõ ràng.\n- Trả lời: Thay 「はい」 bằng 「うん」 và 「いいえ」 bằng 「ううn」.",
         "Example": "こんびんに いく？\nーううん、いかない。\n(Có đi cửa hàng tiện lợi không?\n-Không, không đi.)",
-        "LessonId": 49
+        "LessonId": 97
     },
     {
         "GrammarName": "Trường hợp đặc biệt: Thể thông thường của あります và です",
         "Structure": "あります -> ある / です -> だ",
         "Meaning": "- Động từ 「あります」 khi chia sang thể thông thường phủ định sẽ là 「ない」 (không dùng 'aranai').\n- Trợ từ nối câu 「が」 (nhưng) vẫn giữ nguyên trong thể thông thường.",
         "Example": "じかんが ある？\nーううん、ない。\n(Có thời gian không?\n-Không, không có.)",
-        "LessonId": 49
+        "LessonId": 97
     }
 ]

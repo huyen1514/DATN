@@ -1,0 +1,194 @@
+[
+    {
+        "Character": "運",
+        "Meaning": "Vận chuyển (Vận)",
+        "Onyomi": "ウン",
+        "Kunyomi": "はこ-bu",
+        "Example": "運動 (うんどう): Vận động; 運転 (うんてん): Lái xe",
+        "LessonId": 170
+    },
+    {
+        "Character": "動",
+        "Meaning": "Hoạt động (Động)",
+        "Onyomi": "ドウ",
+        "Kunyomi": "うご-く",
+        "Example": "動物 (どうぶつ): Động vật; 自動車 (じどうしゃ): Ô tô",
+        "LessonId": 170
+    },
+    {
+        "Character": "練",
+        "Meaning": "Luyện tập (Luyện)",
+        "Onyomi": "レン",
+        "Kunyomi": "ね-る",
+        "Example": "練習 (れんしゅう): Luyện tập",
+        "LessonId": 170
+    },
+    {
+        "Character": "習",
+        "Meaning": "Học tập (Tập)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "なら-う",
+        "Example": "練習 (れんしゅう): Luyện tập; 習う (ならう): Học",
+        "LessonId": 170
+    },
+    {
+        "Character": "走",
+        "Meaning": "Chạy (Tẩu)",
+        "Onyomi": "ソウ",
+        "Kunyomi": "はし-る",
+        "Example": "走る (はしる): Chạy; 走行 (そうこう): Chạy xe",
+        "LessonId": 170
+    },
+    {
+        "Character": "歩",
+        "Meaning": "Đi bộ (Bộ)",
+        "Onyomi": "ホ",
+        "Kunyomi": "ある-く",
+        "Example": "歩く (あるく): Đi bộ; 散歩 (さんぽ): Đi dạo",
+        "LessonId": 170
+    },
+    {
+        "Character": "泳",
+        "Meaning": "Bơi (Vịnh)",
+        "Onyomi": "エイ",
+        "Kunyomi": "およ-ぐ",
+        "Example": "泳ぐ (およぐ): Bơi; 水泳 (すいえい): Bơi lội",
+        "LessonId": 170
+    },
+    {
+        "Character": "才",
+        "Meaning": "Tuổi (Tài)",
+        "Onyomi": "サイ",
+        "Kunyomi": "-",
+        "Example": "天才 (てんさい): Thiên tài; 20才 (にじゅっさい): 20 tuổi",
+        "LessonId": 170
+    },
+    {
+        "Character": "自",
+        "Meaning": "Tự thân (Tự)",
+        "Onyomi": "ジ, シ",
+        "Kunyomi": "みずか-ら",
+        "Example": "自分 (じぶん): Bản thân; 自由 (じゆう): Tự do",
+        "LessonId": 170
+    },
+    {
+        "Character": "然",
+        "Meaning": "Tự nhiên (Nhiên)",
+        "Onyomi": "ゼン",
+        "Kunyomi": "-",
+        "Example": "自然 (しぜん): Tự nhiên; 全然 (ぜんぜん): Hoàn toàn không",
+        "LessonId": 170
+    },
+    {
+        "Character": "草",
+        "Meaning": "Cỏ (Thảo)",
+        "Onyomi": "ソウ",
+        "Kunyomi": "くさ",
+        "Example": "草原 (そうげん): Thảo nguyên; 草 (くさ): Cỏ",
+        "LessonId": 170
+    },
+    {
+        "Character": "原",
+        "Meaning": "Cánh đồng (Nguyên)",
+        "Onyomi": "ゲン",
+        "Kunyomi": "はら",
+        "Example": "原因 (げんいん): Nguyên nhân; 野原 (のはら): Cánh đồng",
+        "LessonId": 170
+    },
+    {
+        "Character": "湖",
+        "Meaning": "Cái hồ (Hồ)",
+        "Onyomi": "コ",
+        "Kunyomi": "みずうみ",
+        "Example": "湖 (みずうみ): Cái hồ",
+        "LessonId": 170
+    },
+    {
+        "Character": "谷",
+        "Meaning": "Thung lũng (Cốc)",
+        "Onyomi": "コク",
+        "Kunyomi": "たに",
+        "Example": "谷 (たに): Thung lũng",
+        "LessonId": 170
+    },
+    {
+        "Character": "海",
+        "Meaning": "Biển (Hải)",
+        "Onyomi": "カイ",
+        "Kunyomi": "うみ",
+        "Example": "海 (うみ): Biển; 海外 (かいガイ): Nước ngoài",
+        "LessonId": 170
+    },
+    {
+        "Character": "辺",
+        "Meaning": "Vùng lân cận (Biên)",
+        "Onyomi": "ヘン",
+        "Kunyomi": "あた-り",
+        "Example": "海辺 (うみべ): Ven biển; この辺 (このあたり): Vùng này",
+        "LessonId": 170
+    },
+    {
+        "Character": "里",
+        "Meaning": "Làng quê (Lý)",
+        "Onyomi": "リ",
+        "Kunyomi": "さと",
+        "Example": "里 (さと): Làng quê; 里帰り (さとがえり): Về quê",
+        "LessonId": 170
+    },
+    {
+        "Character": "野",
+        "Meaning": "Cánh đồng (Dã)",
+        "Onyomi": "ヤ",
+        "Kunyomi": "の",
+        "Example": "野菜 (やさい): Rau; 野球 (やきゅう): Bóng chày",
+        "LessonId": 170
+    },
+    {
+        "Character": "緑",
+        "Meaning": "Màu xanh lá (Lục)",
+        "Onyomi": "リョク",
+        "Kunyomi": "みどり",
+        "Example": "緑 (みどり): Màu xanh lá; 緑茶 (りょくちゃ): Trà xanh",
+        "LessonId": 170
+    },
+    {
+        "Character": "池",
+        "Meaning": "Cái ao (Trì)",
+        "Onyomi": "チ",
+        "Kunyomi": "いけ",
+        "Example": "池 (いけ): Cái ao; 電池 (でんち): Pin",
+        "LessonId": 170
+    },
+    {
+        "Character": "鳥",
+        "Meaning": "Con chim (Điểu)",
+        "Onyomi": "チョウ",
+        "Kunyomi": "とり",
+        "Example": "鳥 (とり): Con chim; 小鳥 (ことり): Chim nhỏ",
+        "LessonId": 170
+    },
+    {
+        "Character": "羽",
+        "Meaning": "Lông vũ (Vũ)",
+        "Onyomi": "ウ",
+        "Kunyomi": "はね",
+        "Example": "羽 (はね): Cánh; 二羽 (にわ): 2 con chim",
+        "LessonId": 170
+    },
+    {
+        "Character": "馬",
+        "Meaning": "Con ngựa (Mã)",
+        "Onyomi": "バ",
+        "Kunyomi": "うま",
+        "Example": "馬 (うま): Con ngựa; 乗馬 (じょうば): Cưỡi ngựa",
+        "LessonId": 170
+    },
+    {
+        "Character": "鳴",
+        "Meaning": "Hót, Kêu (Minh)",
+        "Onyomi": "メイ",
+        "Kunyomi": "な-く",
+        "Example": "鳴く (なく): Kêu/Hót; 悲鳴 (ひめい): Tiếng hét",
+        "LessonId": 170
+    }
+]

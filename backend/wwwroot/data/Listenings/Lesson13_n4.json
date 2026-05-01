@@ -1,0 +1,62 @@
+[
+  {
+    "LessonId": 188,
+    "Question": "Câu hỏi nghe số 1",
+    "OptionA": "1",
+    "OptionB": "2",
+    "OptionC": "3",
+    "OptionD": "4",
+    "CorrectAnswer": "C",
+    "AudioUrl": "/uploads/audio/n4_bai13_q1.mp3",
+    "ImageUrl": "/uploads/images/listenings/n4_bai13_q1.jpg",
+    "Transcript": "Link PDF: https://japanesetest4you.com/pdf/n4-listening-13.pdf"
+  },
+  {
+    "LessonId": 188,
+    "Question": "Câu hỏi nghe số 2",
+    "OptionA": "1",
+    "OptionB": "2",
+    "OptionC": "3",
+    "OptionD": "4",
+    "CorrectAnswer": "D",
+    "AudioUrl": "/uploads/audio/n4_bai13_q2.mp3",
+    "ImageUrl": "/uploads/images/listenings/n4_bai13_q2.jpg",
+    "Transcript": "Link PDF: https://japanesetest4you.com/pdf/n4-listening-13.pdf"
+  },
+  {
+    "LessonId": 188,
+    "Question": "Câu hỏi nghe số 3",
+    "OptionA": "1",
+    "OptionB": "2",
+    "OptionC": "3",
+    "OptionD": "4",
+    "CorrectAnswer": "B",
+    "AudioUrl": "/uploads/audio/n4_bai13_q3.mp3",
+    "ImageUrl": "/uploads/images/listenings/n4_bai13_q3.jpg",
+    "Transcript": "Link PDF: https://japanesetest4you.com/pdf/n4-listening-13.pdf"
+  },
+  {
+    "LessonId": 188,
+    "Question": "Câu hỏi nghe số 4",
+    "OptionA": "1",
+    "OptionB": "2",
+    "OptionC": "3",
+    "OptionD": "4",
+    "CorrectAnswer": "B",
+    "AudioUrl": "/uploads/audio/n4_bai13_q4.mp3",
+    "ImageUrl": "/uploads/images/listenings/n4_bai13_q4.jpg",
+    "Transcript": "Link PDF: https://japanesetest4you.com/pdf/n4-listening-13.pdf"
+  },
+  {
+    "LessonId": 188,
+    "Question": "Câu hỏi nghe số 5",
+    "OptionA": "1",
+    "OptionB": "2",
+    "OptionC": "3",
+    "OptionD": "4",
+    "CorrectAnswer": "C",
+    "AudioUrl": "/uploads/audio/n4_bai13_q5.mp3",
+    "ImageUrl": "/uploads/images/listenings/n4_bai13_q5.jpg",
+    "Transcript": "Link PDF: https://japanesetest4you.com/pdf/n4-listening-13.pdf"
+  }
+]

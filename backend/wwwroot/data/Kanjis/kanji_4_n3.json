@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "頭",
+        "Meaning": "Cái đầu (Đầu)",
+        "Onyomi": "トウ, ズ, ト",
+        "Kunyomi": "あたま, かしら",
+        "Example": "頭痛 (ずつう): Đau đầu; 頭 (あたま): Cái đầu",
+        "LessonId": 270
+    },
+    {
+        "Character": "首",
+        "Meaning": "Cái cổ (Thủ)",
+        "Onyomi": "シュ",
+        "Kunyomi": "くび",
+        "Example": "首位 (しゅい): Vị trí đầu bảng; 首 (くび): Cái cổ",
+        "LessonId": 270
+    },
+    {
+        "Character": "顔",
+        "Meaning": "Khuôn mặt (Nhan)",
+        "Onyomi": "ガン",
+        "Kunyomi": "かお",
+        "Example": "顔面 (がんめん): Nét mặt/Khuôn mặt; 笑顔 (えがお): Khuôn mặt tươi cười",
+        "LessonId": 270
+    },
+    {
+        "Character": "鼻",
+        "Meaning": "Cái mũi (Tị)",
+        "Onyomi": "ビ",
+        "Kunyomi": "はな",
+        "Example": "耳鼻科 (じびか): Khoa tai mũi họng; 鼻水 (はなみず): Nước mũi",
+        "LessonId": 270
+    },
+    {
+        "Character": "呼",
+        "Meaning": "Gọi, Thở (Hô)",
+        "Onyomi": "コ",
+        "Kunyomi": "よ-ぶ",
+        "Example": "呼吸 (こきゅう): Hô hấp; 呼ぶ (よぶ): Gọi",
+        "LessonId": 270
+    },
+    {
+        "Character": "吸",
+        "Meaning": "Hít, Hút (Hấp)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "す-う",
+        "Example": "深呼吸 (しんこきゅう): Hít thở sâu; 吸う (すう): Hít/Hút",
+        "LessonId": 270
+    },
+    {
+        "Character": "息",
+        "Meaning": "Hơi thở (Tức)",
+        "Onyomi": "ソク",
+        "Kunyomi": "いき",
+        "Example": "利息 (りそく): Lãi suất; 息子 (むすこ): Con trai",
+        "LessonId": 270
+    },
+    {
+        "Character": "汗",
+        "Meaning": "Mồ hôi (Hãn)",
+        "Onyomi": "カン",
+        "Kunyomi": "あせ",
+        "Example": "発汗 (はっかん): Sự đổ mồ hôi; 汗 (あせ): Mồ hôi",
+        "LessonId": 270
+    },
+    {
+        "Character": "検",
+        "Meaning": "Kiểm tra (Kiểm)",
+        "Onyomi": "ケン",
+        "Kunyomi": "-",
+        "Example": "検査 (けんさ): Kiểm tra; 点検 (てんけん): Kiểm điểm/Kiểm tra",
+        "LessonId": 270
+    },
+    {
+        "Character": "査",
+        "Meaning": "Tra xét (Tra)",
+        "Onyomi": "サ",
+        "Kunyomi": "-",
+        "Example": "調査 (ちょうさ): Điều tra; 査証 (さしょう): Thị thực/Visa",
+        "LessonId": 270
+    },
+    {
+        "Character": "歯",
+        "Meaning": "Răng (Xỉ)",
+        "Onyomi": "シ",
+        "Kunyomi": "は",
+        "Example": "歯科 (しか): Nha khoa; 虫歯 (むしば): Răng sâu",
+        "LessonId": 270
+    },
+    {
+        "Character": "痛",
+        "Meaning": "Đau (Thống)",
+        "Onyomi": "ツウ",
+        "Kunyomi": "いた-い, いた-む, いた-める",
+        "Example": "激痛 (げきつう): Đau dữ dội; 痛い (いたい): Đau",
+        "LessonId": 270
+    },
+    {
+        "Character": "血",
+        "Meaning": "Máu (Huyết)",
+        "Onyomi": "ケツ",
+        "Kunyomi": "ち",
+        "Example": "血液型 (けつえきがた): Nhóm máu; 出血 (しゅっけつ): Xuất huyết",
+        "LessonId": 270
+    },
+    {
+        "Character": "液",
+        "Meaning": "Chất lỏng (Dịch)",
+        "Onyomi": "エキ",
+        "Kunyomi": "-",
+        "Example": "液体 (えきたい): Chất lỏng; 血液 (けつえき): Máu/Huyết dịch",
+        "LessonId": 270
+    },
+    {
+        "Character": "包",
+        "Meaning": "Bọc, Gói (Bao)",
+        "Onyomi": "ホウ",
+        "Kunyomi": "つつ-む",
+        "Example": "包帯 (ほうたい): Băng gạc; 包む (つつむ): Gói/Bọc",
+        "LessonId": 270
+    },
+    {
+        "Character": "帯",
+        "Meaning": "Đai (Đới)",
+        "Onyomi": "タイ",
+        "Kunyomi": "おび, お-びる",
+        "Example": "携帯電話 (けいたいでんわ): Điện thoại di động; 帯 (おび): Thắt lưng Kimono",
+        "LessonId": 270
+    },
+    {
+        "Character": "救",
+        "Meaning": "Cứu giúp (Cứu)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "すく-う",
+        "Example": "救急車 (きゅうきゅうしゃ): Xe cấp cứu; 救う (すくう): Cứu giúp",
+        "LessonId": 270
+    },
+    {
+        "Character": "助",
+        "Meaning": "Trợ giúp (Trợ)",
+        "Onyomi": "ジョ",
+        "Kunyomi": "たす-ける, たす-かる, すけ",
+        "Example": "救助 (きゅうじょ): Cứu trợ; 助ける (たすける): Giúp đỡ",
+        "LessonId": 270
+    },
+    {
+        "Character": "死",
+        "Meaning": "Chết (Tử)",
+        "Onyomi": "シ",
+        "Kunyomi": "し-ぬ",
+        "Example": "死守 (ししゅ): Thủ vững đến chết; 死ぬ (しぬ): Chết",
+        "LessonId": 270
+    },
+    {
+        "Character": "亡",
+        "Meaning": "Mất, Chết (Vong)",
+        "Onyomi": "ボウ, モウ",
+        "Kunyomi": "な-くなる",
+        "Example": "死亡 (しぼう): Tử vong; 亡くなる (なくなる): Mất/Qua đời",
+        "LessonId": 270
+    }
+]

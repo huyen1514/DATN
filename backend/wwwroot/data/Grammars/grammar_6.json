@@ -4,48 +4,48 @@
         "Structure": "Danh từ を Động từ",
         "Meaning": "Trợ từ 「を」 (phát âm là 'o') được dùng để biểu thị đối tượng trực tiếp của ngoại động từ (hành động tác động lên vật). \nLưu ý: Chữ 「を」 chỉ được dùng làm trợ từ, không dùng trong từ vựng thông thường.",
         "Example": "じゅうすを のみます。\n(Tôi uống nước trái cây.)",
-        "LessonId": 35
+        "LessonId": 27
     },
     {
         "GrammarName": "Danh từ を します",
         "Structure": "Danh từ を します",
         "Meaning": "Động từ 「します」 có phạm vi sử dụng rất rộng, dùng để biểu thị việc thực hiện một hành động nào đó. Thường dùng với:\n- Các môn thể thao, trò chơi (Saka-, Tenisu, Ka-do...).\n- Các sự kiện, buổi tiệc (Pa-ti-, Kaigi...).\n- Các công việc hoặc yêu cầu (Shukudai, Shigoto...).",
         "Example": "さっかーを します。\n(Tôi chơi bóng đá.)",
-        "LessonId": 35
+        "LessonId": 27
     },
     {
         "GrammarName": "Nghi vấn từ: なにを しますか",
         "Structure": "なにを しますか",
         "Meaning": "Đây là câu hỏi dùng để hỏi về hành động của một ai đó. \n- Để trả lời, ta nêu cụm [Danh từ を Động từ].\n- Khi muốn hỏi về thời điểm cụ thể, ta thêm danh từ thời gian vào đầu câu.",
         "Example": "あした なにを しますか。\nーしゅくだいを します。\n(Ngày mai bạn làm gì?\n-Tôi sẽ làm bài tập về nhà.)",
-        "LessonId": 35
+        "LessonId": 27
     },
     {
         "GrammarName": "Trợ từ で (Địa điểm hành động)",
         "Structure": "Danh từ (địa điểm) で Động từ",
         "Meaning": "Trợ từ 「で」 được đặt sau danh từ chỉ địa điểm để biểu thị nơi mà một hành động nào đó diễn ra. \nPhân biệt: Bài 5 dùng 「へ」 để chỉ hướng di chuyển, còn Bài 6 dùng 「で」 để chỉ nơi thực hiện hành động cụ thể tại đó.",
         "Example": "えきで しんぶんを かいました。\n(Tôi đã mua báo ở nhà ga.)",
-        "LessonId": 35
+        "LessonId": 27
     },
     {
         "GrammarName": "Mẫu câu mời mọc: Động từ ませんか",
         "Structure": "Động từ (thể ます) ませんか",
         "Meaning": "Mẫu câu này dùng khi người nói muốn mời người nghe cùng thực hiện một hành động nào đó. Cách nói này thể hiện sự lịch sự và tôn trọng người nghe vì nó tạo không gian cho người nghe có thể từ chối.",
         "Example": "いっしょに こうえんへ いきませんか。\n(Bạn có muốn cùng đi công viên với tôi không?)",
-        "LessonId": 35
+        "LessonId": 27
     },
     {
         "GrammarName": "Mẫu câu đề nghị: Động từ ましょう",
         "Structure": "Động từ (thể ます) ましょう",
         "Meaning": "Dùng khi người nói muốn đề nghị người nghe cùng làm việc gì đó với mình. \n- So với 「ませんか」, mẫu này mang tính chủ động và lôi kéo hơn.\n- Thường dùng để đáp lại lời mời nếu người nghe đồng ý.",
         "Example": "ちょっと やすみましょう。\n(Chúng ta cùng nghỉ một lát nào.)",
-        "LessonId": 35
+        "LessonId": 27
     },
     {
         "GrammarName": "Sự khác nhau giữa なん và なに",
         "Structure": "なん / なに",
         "Meaning": "Cả hai đều nghĩa là \"Cái gì\", nhưng cách dùng khác nhau:\n- Dùng 「なん」: Khi từ tiếp theo bắt đầu bằng các âm thuộc hàng d, n, t (như です, の) hoặc khi đi kèm với từ chỉ số đếm.\n- Dùng 「なに」: Trong các trường hợp còn lại (như đứng trước trợ từ を, が).",
         "Example": "それは なんですか。\nーなんの ざっしですか。\n(Đó là cái gì?\n-Tạp chí về cái gì vậy?)",
-        "LessonId": 35
+        "LessonId": 27
     }
 ]

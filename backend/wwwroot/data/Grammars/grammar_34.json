@@ -4,27 +4,27 @@
         "Structure": "V1 (Thể từ điển / Thể た) + とおりに, V2 | N の + とおりに, V2",
         "Meaning": "Dùng để diễn tả việc thực hiện một hành động (V2) theo đúng như những gì đã nghe, đã thấy hoặc theo đúng như một tiêu chuẩn, một mẫu có sẵn (V1 hoặc N).",
         "Example": "<ruby>私<rt>わたし</rt></ruby>が <ruby>言<rt>い</rt></ruby>った とおりに、<ruby>書<rt>か</rt></ruby>いて ください。\n(Hãy viết đúng theo những gì tôi đã nói.)",
-        "LessonId": 85
+        "LessonId": 167
     },
     {
         "GrammarName": "Cấu trúc ～あとで (Sau khi...)",
         "Structure": "V1 (Thể た) + あとで, V2 | N の + あとで, V2",
         "Meaning": "Dùng để diễn tả trình tự thời gian, trong đó hành động V2 được thực hiện sau khi hành động V1 hoặc sự kiện N đã kết thúc hoàn toàn. So với 「V-te kara」, cấu trúc này nhấn mạnh rõ hơn về mốc thời gian trước sau.",
         "Example": "<ruby>仕事<rt>しごと</rt></ruby>が <ruby>終<rt>お</rt></ruby>わった あとで、<ruby>飲<rt>の</rt></ruby>みに <ruby>行<rt>い</rt></ruby>きませんか。\n(Sau khi xong việc, chúng ta đi uống chút gì đó không?)",
-        "LessonId": 85
+        "LessonId": 167
     },
     {
         "GrammarName": "Cấu trúc V1-te, V2 (Làm V2 trong trạng thái V1)",
         "Structure": "V1-te, V2",
         "Meaning": "Diễn tả hành động V2 được thực hiện trong một trạng thái đi kèm là V1. V1 đóng vai trò mô tả cách thức hoặc điều kiện để thực hiện V2.",
         "Example": "<ruby>醬油<rt>しょうゆ</rt></ruby>を つけて <ruby>食<rt>た</rt></ruby>べます。\n(Chấm xì dầu rồi mới ăn.)",
-        "LessonId": 85
+        "LessonId": 167
     },
     {
         "GrammarName": "Cấu trúc V1-naide, V2 (Làm V2 mà không làm V1)",
         "Structure": "V1 (Thể ない) + で, V2",
         "Meaning": "Diễn tả việc thực hiện hành động V2 mà bỏ qua, không thực hiện hành động V1 (hành động lẽ ra thường sẽ làm trong tình huống đó).",
         "Example": "<ruby>傘<rt>かさ</rt></ruby>を <ruby>持<rt>も</rt></ruby>たないで <ruby>出<rt>出</rt></ruby>かけました。\n(Tôi đã đi ra ngoài mà không mang theo ô.)",
-        "LessonId": 85
+        "LessonId": 167
     }
 ]

@@ -4,41 +4,41 @@
         "Structure": "Động từ chia về thể từ điển",
         "Meaning": "Thể từ điển là dạng cơ bản nhất của động từ. Cách chia theo nhóm:\n- Nhóm 1: Chuyển âm cuối hàng [i] sang hàng [u] (Ví dụ: かきます -> かく).\n- Nhóm 2: Bỏ [ます] thêm [る] (Ví dụ: たべます -> たべる).\n- Nhóm 3: [します] -> [する]; [きます] -> [くる].",
         "Example": "かきます -> かく\nのみます -> のむ\nたべます -> たべる\n(Viết -> Viết / Uống -> Uống...)",
-        "LessonId": 47
+        "LessonId": 87
     },
     {
         "GrammarName": "Diễn đạt khả năng: ～ことができます",
         "Structure": "Danh từ / [Động từ thể từ điển + こと] が できます",
         "Meaning": "Mẫu câu này dùng để biểu thị năng lực của bản thân hoặc một khả năng khách quan (có thể thực hiện được việc gì đó).\n- Nếu dùng với danh từ: Danh từ đó phải mang tính hành động (như Ski, Piano).\n- Nếu dùng với động từ: Phải chia về thể từ điển và thêm 「こと」 để danh từ hóa động từ đó.",
         "Example": "みらーさんは じを よむことが できます。\nーかーどで はらうことが できます。\n(Anh Miller có thể đọc được chữ Hán.\n-Có thể thanh toán bằng thẻ.)",
-        "LessonId": 47
+        "LessonId": 87
     },
     {
         "GrammarName": "Nói về sở thích: わたしの しゅみは ～ことです",
         "Structure": "わたしの しゅみは [Danh từ] / [V-jisho + こと] です",
         "Meaning": "Dùng để giới thiệu về sở thích của bản thân một cách cụ thể. Tương tự như mẫu câu trên, khi dùng động từ để nói về sở thích, chúng ta phải thêm 「こと」 sau thể từ điển để biến nó thành một cụm danh từ.",
         "Example": "わたしの しゅみは えを かくことです。\nーわたしの しゅみは おんがくです。\n(Sở thích của tôi là vẽ tranh.\n-Sở thích của tôi là âm nhạc.)",
-        "LessonId": 47
+        "LessonId": 87
     },
     {
         "GrammarName": "Trước khi làm gì đó: ～まえに",
         "Structure": "[V-jisho / Danh từ の / Khoảng thời gian] まえに, V2",
         "Meaning": "Dùng để diễn tả hành động 2 xảy ra trước hành động 1 (hoặc trước một mốc thời gian nào đó).\n- Với động từ: Luôn luôn dùng thể từ điển (không phụ thuộc vào thì của câu).\n- Với danh từ: Thêm trợ từ 「の」.\n- Với khoảng thời gian: Đặt trực tiếp trước 「まえに」.",
         "Example": "ねるまえに, にっきを かきます。\nーしょくじの まえに, てを あらいます。\n(Trước khi đi ngủ, tôi viết nhật ký.\n-Trước bữa ăn, tôi rửa tay.)",
-        "LessonId": 47
+        "LessonId": 87
     },
     {
         "GrammarName": "Cách dùng なかなか (Mãi mà không...)",
         "Structure": "なかなか + Động từ (phủ định)",
         "Meaning": "Phó từ 「なかなか」 khi đi với thể phủ định biểu thị ý nghĩa một việc gì đó mãi mà không thực hiện được như ý muốn hoặc khó có thể xảy ra.",
         "Example": "にほんに いますから, なかなか じゅうに あうことが できません。\n(Vì ở Nhật nên tôi mãi mà không thể gặp được gia đình.)",
-        "LessonId": 47
+        "LessonId": 87
     },
     {
         "GrammarName": "Nhấn mạnh: ぜひ (Nhất định)",
         "Structure": "ぜひ + Mẫu câu mong muốn (Vたい / Vてください)",
         "Meaning": "Dùng để nhấn mạnh ý muốn hoặc lời mời, lời yêu cầu của mình đối với người khác. Thường dịch là 'Nhất định'.",
         "Example": "ぜひ ほっかいどうへ いきたいです。\n(Tôi nhất định muốn đi Hokkaido.)",
-        "LessonId": 47
+        "LessonId": 87
     }
 ]

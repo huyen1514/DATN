@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "押",
+        "Meaning": "Đẩy (Âu)",
+        "Onyomi": "オウ",
+        "Kunyomi": "お-す, お-さえる",
+        "Example": "押す (おす): Đẩy; 押印 (おういん): Đóng dấu",
+        "LessonId": 260
+    },
+    {
+        "Character": "引",
+        "Meaning": "Kéo (Dẫn)",
+        "Onyomi": "イン",
+        "Kunyomi": "ひ-く, ひ-ける",
+        "Example": "引く (ひく): Kéo; 引用 (いんよう): Trích dẫn",
+        "LessonId": 260
+    },
+    {
+        "Character": "取",
+        "Meaning": "Lấy (Thủ)",
+        "Onyomi": "シュ",
+        "Kunyomi": "と-る",
+        "Example": "取る (とる): Lấy; 取材 (しゅざい): Thu thập tin tức",
+        "LessonId": 260
+    },
+    {
+        "Character": "消",
+        "Meaning": "Tắt, Xóa (Tiêu)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "き-える, け-す",
+        "Example": "消える (きえる): Bị tắt; 消防車 (しょうぼうしゃ): Xe cứu hỏa",
+        "LessonId": 260
+    },
+    {
+        "Character": "戸",
+        "Meaning": "Cánh cửa (Hộ)",
+        "Onyomi": "コ",
+        "Kunyomi": "と",
+        "Example": "戸 (と): Cánh cửa; 一戸建て (いっこだて): Nhà nguyên căn",
+        "LessonId": 260
+    },
+    {
+        "Character": "窓",
+        "Meaning": "Cửa sổ (Song)",
+        "Onyomi": "ソウ",
+        "Kunyomi": "まど",
+        "Example": "窓 (まど): Cửa sổ; 車窓 (しゃそう): Cửa sổ xe",
+        "LessonId": 260
+    },
+    {
+        "Character": "階",
+        "Meaning": "Tầng (Giai)",
+        "Onyomi": "カイ",
+        "Kunyomi": "-",
+        "Example": "六階 (ろっかい): Tầng 6; 階段 (かいだん): Cầu thang",
+        "LessonId": 260
+    },
+    {
+        "Character": "段",
+        "Meaning": "Bậc, Giai đoạn (Đoạn)",
+        "Onyomi": "ダン",
+        "Kunyomi": "-",
+        "Example": "階段 (かいだん): Cầu thang; 手段 (しゅだん): Cách thức",
+        "LessonId": 260
+    },
+    {
+        "Character": "植",
+        "Meaning": "Trồng (Thực)",
+        "Onyomi": "ショク",
+        "Kunyomi": "う-わる, う-える",
+        "Example": "植える (うえる): Trồng; 植物 (しょくぶつ): Thực vật",
+        "LessonId": 260
+    },
+    {
+        "Character": "葉",
+        "Meaning": "Lá (Diệp)",
+        "Onyomi": "ヨウ",
+        "Kunyomi": "は",
+        "Example": "葉 (は): Lá; 紅葉 (こうよう): Lá đỏ",
+        "LessonId": 260
+    },
+    {
+        "Character": "実",
+        "Meaning": "Quả, Sự thật (Thực)",
+        "Onyomi": "ジッ",
+        "Kunyomi": "みの-る, み",
+        "Example": "実 (み): Quả; 実現 (じつげん): Thực hiện",
+        "LessonId": 260
+    },
+    {
+        "Character": "根",
+        "Meaning": "Rễ (Căn)",
+        "Onyomi": "コン",
+        "Kunyomi": "ね",
+        "Example": "根 (ね): Rễ; 根本 (こんぽん): Căn bản",
+        "LessonId": 260
+    },
+    {
+        "Character": "建",
+        "Meaning": "Xây dựng (Kiến)",
+        "Onyomi": "ケン, コン",
+        "Kunyomi": "た-つ, た-てる",
+        "Example": "建てる (たてる): Xây dựng; 建築 (けんちく): Kiến trúc",
+        "LessonId": 260
+    },
+    {
+        "Character": "築",
+        "Meaning": "Xây cất (Trúc)",
+        "Onyomi": "チク",
+        "Kunyomi": "きず-く",
+        "Example": "築く (きずく): Xây dựng; 新築 (しんちく): Xây mới",
+        "LessonId": 260
+    },
+    {
+        "Character": "構",
+        "Meaning": "Cấu tạo (Cấu)",
+        "Onyomi": "コウ",
+        "Kunyomi": "かま-う, かま-える",
+        "Example": "構える (かまえる): Lập nên; 構造 (こうぞう): Cấu tạo",
+        "LessonId": 260
+    },
+    {
+        "Character": "造",
+        "Meaning": "Chế tạo (Tạo)",
+        "Onyomi": "ゾウ",
+        "Kunyomi": "つく-る",
+        "Example": "造る (つくる): Chế tạo; 木造 (もくぞう): Làm bằng gỗ",
+        "LessonId": 260
+    },
+    {
+        "Character": "設",
+        "Meaning": "Thiết lập (Thiết)",
+        "Onyomi": "セツ",
+        "Kunyomi": "もう-ける",
+        "Example": "設ける (もうける): Thiết lập; 建設 (けんせつ): Xây dựng",
+        "LessonId": 260
+    },
+    {
+        "Character": "庫",
+        "Meaning": "Kho (Khố)",
+        "Onyomi": "コ, ク",
+        "Kunyomi": "-",
+        "Example": "金庫 (きんこ): Két sắt; 車庫 (しゃこ): Nhà để xe",
+        "LessonId": 260
+    },
+    {
+        "Character": "柱",
+        "Meaning": "Cột (Trụ)",
+        "Onyomi": "チュウ",
+        "Kunyomi": "はしら",
+        "Example": "柱 (はしら): Cột; 電柱 (でんchu): Cột điện",
+        "LessonId": 260
+    },
+    {
+        "Character": "向",
+        "Meaning": "Hướng (Hướng)",
+        "Onyomi": "コウ",
+        "Kunyomi": "む-く, む-ける, む-かう, む-こう",
+        "Example": "向かう (むかう): Hướng về; 方向 (ほうこう): Phương hướng",
+        "LessonId": 260
+    }
+]

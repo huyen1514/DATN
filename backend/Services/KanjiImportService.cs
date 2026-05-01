@@ -1,12 +1,24 @@
+using System.Globalization;
+using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
+using Constants; // Chứa JlptLevels (giống các service trước)
+using Data;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Data; // Đảm bảo namespace này khớp với project của bạn
-using Models; // Đảm bảo namespace này khớp với project của bạn
+using Models;
 
 namespace Services
 {
     public class KanjiImportService
     {
+        private sealed class KanjiFileDefinition
+        {
+            public required string FileName { get; init; }
+            public required Lesson TargetLesson { get; init; }
+            public required Dictionary<string, Kanji> EntriesByKey { get; init; }
+        }
+
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;
 
@@ -16,9 +28,165 @@ namespace Services
             _env = env;
         }
 
+        #region Helpers
+        private static string NormalizeAscii(string? input)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return string.Empty;
+
+            var normalized = input.Trim().ToLowerInvariant().Normalize(NormalizationForm.FormD);
+            var builder = new StringBuilder(normalized.Length);
+
+            foreach (var ch in normalized)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(ch) != UnicodeCategory.NonSpacingMark)
+                {
+                    builder.Append(ch);
+                }
+            }
+
+            return builder.ToString();
+        }
+
+        private static bool IsKanjiSkillType(string? skillType)
+        {
+            var ascii = NormalizeAscii(skillType);
+            return ascii == "kanji" || ascii == "chu han";
+        }
+
+        private static int? ExtractLessonNumber(string? lessonName)
+        {
+            if (string.IsNullOrWhiteSpace(lessonName)) return null;
+            var match = Regex.Match(lessonName, @"(\d+)");
+            return match.Success ? int.Parse(match.Value) : null;
+        }
+
+        private static (int? LessonNumber, string? LevelName) ParseFileMetadata(string fileName)
+        {
+            var match = Regex.Match(
+                fileName,
+                @"^kanji_(?<lesson>\d+)(?:_(?<level>n\d+))?$",
+                RegexOptions.IgnoreCase);
+
+            if (!match.Success) return (null, null);
+
+            var lessonNumber = int.Parse(match.Groups["lesson"].Value);
+            var levelName = match.Groups["level"].Success
+                ? JlptLevels.Normalize(match.Groups["level"].Value)
+                : null;
+
+            return (lessonNumber, levelName);
+        }
+
+        // Với Kanji, dùng Character (Chữ Hán) làm Key đối soát chính
+        private static string BuildKey(string? character) => character?.Trim() ?? string.Empty;
+
+        private static void ApplyKanjiValues(Kanji target, Kanji source)
+        {
+            target.Character = source.Character;
+            target.Meaning = source.Meaning;
+            target.Onyomi = source.Onyomi;
+            target.Kunyomi = source.Kunyomi;
+            target.Example = source.Example;
+            // Không gán UpdatedAt vì Model Kanji không có trường này
+        }
+        #endregion
+
+        private async Task<List<KanjiFileDefinition>> LoadDefinitionsAsync(IEnumerable<string> jsonFiles)
+        {
+            var definitions = new List<KanjiFileDefinition>();
+
+            foreach (var filePath in jsonFiles)
+            {
+                try
+                {
+                    var jsonData = await File.ReadAllTextAsync(filePath);
+                    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                    var kanjiList = JsonSerializer.Deserialize<List<Kanji>>(jsonData, options);
+
+                    if (kanjiList == null || kanjiList.Count == 0) continue;
+
+                    var fileName = Path.GetFileNameWithoutExtension(filePath);
+                    var (lessonNumberFromFile, levelNameFromFile) = ParseFileMetadata(fileName);
+                    Lesson? targetLesson = null;
+
+                    var jsonLessonId = kanjiList.FirstOrDefault()?.LessonId ?? 0;
+                    if (jsonLessonId > 0)
+                    {
+                        var lessonById = await _context.Lessons
+                            .Include(l => l.Level)
+                            .FirstOrDefaultAsync(l => l.LessonId == jsonLessonId);
+
+                        if (lessonById != null &&
+                            IsKanjiSkillType(lessonById.SkillType) &&
+                            (!lessonNumberFromFile.HasValue || ExtractLessonNumber(lessonById.LessonName) == lessonNumberFromFile) &&
+                            (string.IsNullOrWhiteSpace(levelNameFromFile) ||
+                             string.Equals(lessonById.Level?.LevelName, levelNameFromFile, StringComparison.OrdinalIgnoreCase)))
+                        {
+                            targetLesson = lessonById;
+                        }
+                    }
+
+                    if (targetLesson == null && lessonNumberFromFile.HasValue)
+                    {
+                        var lessonCandidates = await _context.Lessons
+                            .Include(l => l.Level)
+                            .Where(l => string.IsNullOrWhiteSpace(levelNameFromFile) ||
+                                        (l.Level != null && l.Level.LevelName == levelNameFromFile))
+                            .ToListAsync();
+
+                        targetLesson = lessonCandidates.FirstOrDefault(l =>
+                            IsKanjiSkillType(l.SkillType) &&
+                            ExtractLessonNumber(l.LessonName) == lessonNumberFromFile);
+                    }
+
+                    // Fallback theo định dạng tên file cũ (chỉ có số)
+                    if (targetLesson == null)
+                    {
+                        var match = Regex.Match(fileName, @"\d+");
+                        if (match.Success)
+                        {
+                            int fallbackLessonNumber = int.Parse(match.Value);
+                            var fallbackCandidates = await _context.Lessons.ToListAsync();
+                            targetLesson = fallbackCandidates.FirstOrDefault(l => 
+                                ExtractLessonNumber(l.LessonName) == fallbackLessonNumber && 
+                                IsKanjiSkillType(l.SkillType));
+                        }
+                    }
+
+                    if (targetLesson == null)
+                    {
+                        Console.WriteLine($"[Kanji Error] Target lesson not found for file {fileName}. Skipping.");
+                        continue;
+                    }
+
+                    var entriesByKey = new Dictionary<string, Kanji>();
+                    foreach (var item in kanjiList)
+                    {
+                        var key = BuildKey(item.Character);
+                        if (string.IsNullOrWhiteSpace(key)) continue;
+
+                        item.LessonId = targetLesson.LessonId;
+                        entriesByKey[key] = item;
+                    }
+
+                    definitions.Add(new KanjiFileDefinition
+                    {
+                        FileName = fileName,
+                        TargetLesson = targetLesson,
+                        EntriesByKey = entriesByKey
+                    });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[Kanji Error] Lỗi xử lý file {Path.GetFileName(filePath)}: {ex.Message}");
+                }
+            }
+
+            return definitions;
+        }
+
         public async Task ImportAllFromFolderAsync()
         {
-            // Trỏ vào folder wwwroot/data/Kanjis
             string folderPath = Path.Combine(_env.WebRootPath, "data", "Kanjis");
 
             if (!Directory.Exists(folderPath))
@@ -27,93 +195,152 @@ namespace Services
                 return;
             }
 
-            var files = Directory.GetFiles(folderPath, "*.json");
-            Console.WriteLine($"[Kanji] Tìm thấy {files.Length} file JSON.");
-
-            foreach (var file in files)
+            var jsonFiles = Directory.GetFiles(folderPath, "*.json");
+            if (jsonFiles.Length == 0)
             {
-                try 
+                Console.WriteLine("[Kanji] Không tìm thấy file .json nào trong wwwroot/data/Kanjis.");
+                return;
+            }
+
+            var definitions = await LoadDefinitionsAsync(jsonFiles);
+            if (definitions.Count == 0)
+            {
+                Console.WriteLine("[Kanji] Không có định dạng Kanji hợp lệ nào được tải.");
+                return;
+            }
+
+            var desiredLessonIds = definitions
+                .Select(d => d.TargetLesson.LessonId)
+                .Distinct()
+                .ToHashSet();
+
+            var desiredByLesson = definitions
+                .GroupBy(d => d.TargetLesson.LessonId)
+                .ToDictionary(
+                    g => g.Key,
+                    g => g
+                        .SelectMany(d => d.EntriesByKey)
+                        .GroupBy(x => x.Key)
+                        .ToDictionary(x => x.Key, x => x.Last().Value));
+
+            var expectedLessonsByKey = new Dictionary<string, HashSet<int>>();
+            foreach (var definition in definitions)
+            {
+                foreach (var key in definition.EntriesByKey.Keys)
                 {
-                    var (imported, skipped) = await ImportKanjiFromJsonAsync(file);
-                    if (imported > 0 || skipped > 0)
+                    if (!expectedLessonsByKey.TryGetValue(key, out var lessonIds))
                     {
-                        Console.WriteLine($"[Kanji] File: {Path.GetFileName(file)} -> Nhập mới: {imported}, Cập nhật: {skipped}");
+                        lessonIds = new HashSet<int>();
+                        expectedLessonsByKey[key] = lessonIds;
                     }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[Kanji] Lỗi khi xử lý file {Path.GetFileName(file)}: {ex.Message}");
+                    lessonIds.Add(definition.TargetLesson.LessonId);
                 }
             }
-        }
 
-        public async Task<(int imported, int skipped)> ImportKanjiFromJsonAsync(string filePath)
-        {
-            if (!File.Exists(filePath)) return (0, 0);
-
-            var jsonString = await File.ReadAllTextAsync(filePath);
-            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            
-            var kanjiList = JsonSerializer.Deserialize<List<Kanji>>(jsonString, options);
-
-            if (kanjiList == null || !kanjiList.Any()) return (0, 0);
-
-            var fileName = Path.GetFileNameWithoutExtension(filePath);
-            var match = System.Text.RegularExpressions.Regex.Match(fileName, @"\d+");
-            int lessonNumber = 0;
-            if (match.Success) lessonNumber = int.Parse(match.Value);
-
-            var targetLesson = await _context.Lessons.FirstOrDefaultAsync(l => l.LessonName == $"Bài {lessonNumber}" && l.SkillType == "Kanji");
-            if (targetLesson == null)
-            {
-                Console.WriteLine($"[Kanji Cảnh báo] Target lesson not found for file {fileName}. Skipping.");
-                return (0, 0);
-            }
-
-            int imported = 0;
-            int skipped = 0;
-
-            // Tối ưu hóa N+1: Lấy trước tất cả kanji có thể trùng lặp
-            var characters = kanjiList.Select(k => k.Character).Distinct().ToList();
             var existingKanjis = await _context.Kanjis
-                .Where(k => characters.Contains(k.Character))
+                .Where(v => desiredLessonIds.Contains(v.LessonId))
                 .ToListAsync();
 
-            foreach (var kanji in kanjiList)
+            var fulfilledKeysByLesson = existingKanjis
+                .GroupBy(v => v.LessonId)
+                .ToDictionary(
+                    g => g.Key,
+                    g => g.Select(v => BuildKey(v.Character)).ToHashSet());
+
+            var recycledRows = new HashSet<int>();
+            var addedCount = 0;
+            var movedCount = 0;
+            var updatedCount = 0;
+
+            // 1. Thực hiện Thêm, Sửa, và Di chuyển
+            foreach (var (lessonId, desiredEntries) in desiredByLesson)
             {
-                kanji.LessonId = targetLesson.LessonId;
+                fulfilledKeysByLesson.TryAdd(lessonId, new HashSet<string>());
 
-                // Kiểm tra xem chữ Hán này đã tồn tại chưa (chỉ theo Character, không phụ thuộc LessonId)
-                var existingKanji = existingKanjis
-                    .FirstOrDefault(k => k.Character == kanji.Character);
+                foreach (var (key, desired) in desiredEntries)
+                {
+                    var inLesson = existingKanjis
+                        .FirstOrDefault(v => v.LessonId == lessonId && BuildKey(v.Character) == key);
 
-                if (existingKanji == null)
-                {
-                    // Thêm mới nếu chưa có
-                    kanji.CreatedAt = DateTime.UtcNow;
-                    _context.Kanjis.Add(kanji);
-                    existingKanjis.Add(kanji);
-                    imported++;
-                }
-                else
-                {
-                    // Cập nhật thông tin nếu đã tồn tại (bao gồm cả LessonId)
-                    existingKanji.Meaning = kanji.Meaning ?? existingKanji.Meaning;
-                    existingKanji.Onyomi = kanji.Onyomi ?? existingKanji.Onyomi;
-                    existingKanji.Kunyomi = kanji.Kunyomi ?? existingKanji.Kunyomi;
-                    existingKanji.Example = kanji.Example ?? existingKanji.Example;
-                    existingKanji.LessonId = kanji.LessonId;
-                    skipped++;
+                    if (inLesson != null)
+                    {
+                        ApplyKanjiValues(inLesson, desired);
+                        fulfilledKeysByLesson[lessonId].Add(key);
+                        updatedCount++;
+                        continue;
+                    }
+
+                    var donor = existingKanjis.FirstOrDefault(v =>
+                        !recycledRows.Contains(v.KanjiId) &&
+                        BuildKey(v.Character) == key &&
+                        expectedLessonsByKey.TryGetValue(key, out var expectedLessons) &&
+                        !expectedLessons.Contains(v.LessonId));
+
+                    if (donor != null)
+                    {
+                        donor.LessonId = lessonId;
+                        ApplyKanjiValues(donor, desired);
+                        fulfilledKeysByLesson.TryAdd(donor.LessonId, new HashSet<string>());
+                        fulfilledKeysByLesson[lessonId].Add(key);
+                        recycledRows.Add(donor.KanjiId);
+                        movedCount++;
+                        continue;
+                    }
+
+                    var newKanji = new Kanji
+                    {
+                        Character = desired.Character,
+                        Meaning = desired.Meaning,
+                        Onyomi = desired.Onyomi,
+                        Kunyomi = desired.Kunyomi,
+                        Example = desired.Example,
+                        LessonId = lessonId,
+                        CreatedAt = DateTime.UtcNow
+                    };
+
+                    _context.Kanjis.Add(newKanji);
+                    existingKanjis.Add(newKanji);
+                    fulfilledKeysByLesson[lessonId].Add(key);
+                    addedCount++;
                 }
             }
 
-            // Chỉ gọi SaveChanges khi thực sự có dữ liệu hợp lệ cần thêm hoặc cập nhật
-            if (imported > 0 || skipped > 0)
+            // 2. Thực hiện Xóa các bản ghi thừa
+            var rowsToDelete = new List<Kanji>();
+            foreach (var lessonGroup in existingKanjis.GroupBy(v => v.LessonId))
             {
-                await _context.SaveChangesAsync();
+                if (!desiredByLesson.TryGetValue(lessonGroup.Key, out var desiredEntries))
+                {
+                    continue;
+                }
+
+                var seenKeys = new HashSet<string>();
+                foreach (var kanji in lessonGroup.OrderBy(v => v.KanjiId))
+                {
+                    var key = BuildKey(kanji.Character);
+                    var isDesiredInLesson = desiredEntries.ContainsKey(key);
+
+                    if (isDesiredInLesson && seenKeys.Add(key))
+                    {
+                        continue;
+                    }
+
+                    if (!expectedLessonsByKey.ContainsKey(key))
+                    {
+                        rowsToDelete.Add(kanji);
+                    }
+                }
             }
-            
-            return (imported, skipped);
+
+            if (rowsToDelete.Count > 0)
+            {
+                _context.Kanjis.RemoveRange(rowsToDelete);
+            }
+
+            await _context.SaveChangesAsync();
+
+            Console.WriteLine(
+                $"[Kanji] Đối soát hoàn tất. Files={definitions.Count}, Added={addedCount}, Moved={movedCount}, Updated={updatedCount}, Deleted={rowsToDelete.Count}");
         }
     }
 }

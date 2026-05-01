@@ -4,34 +4,34 @@
         "Structure": "V-(từ điển) + のは + Tính từ + です",
         "Meaning": "Dùng để biến một cụm động từ thành chủ ngữ trong câu nhằm miêu tả tính chất, trạng thái của hành động đó (ví dụ: khó, dễ, vui, nguy hiểm...).",
         "Example": "<ruby>テニス<rt></rt></ruby>を するのは おもしろいです。\n(Việc chơi tennis thì rất thú vị.)",
-        "LessonId": 89
+        "LessonId": 187
     },
     {
         "GrammarName": "Danh từ hóa động từ với の (V-dictionary form + のが + Adj)",
         "Structure": "V-(từ điển) + のが + Tính từ + です",
         "Meaning": "Dùng khi các tính từ chỉ sở thích, năng khiếu (như suki, kirai, jouzu, heta...) có bổ ngữ là một hành động. Chữ 「の」 giúp biến hành động đó thành một cụm danh từ để đi với trợ từ 「が」.",
         "Example": "<ruby>花<rt>はな</rt></ruby>を <ruby>育<rt>そだ</rt></ruby>てるのが <ruby>好<rt>す</rt></ruby>きです。\n(Tôi thích việc trồng hoa.)",
-        "LessonId": 89
+        "LessonId": 187
     },
     {
         "GrammarName": "Cấu trúc ～のを 忘れました (Quên làm việc gì đó)",
         "Structure": "V-(từ điển) + のを 忘れました",
         "Meaning": "Dùng để diễn tả việc bạn đã quên thực hiện một hành động nào đó. Chữ 「の」 thay thế cho danh từ đóng vai trò là tân ngữ của động từ 'quên'.",
         "Example": "<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を <ruby>買<rt>か</rt></ruby>うのを <ruby>忘<rt>わす</rt></ruby>れました。\n(Tôi đã quên mua sữa mất rồi.)",
-        "LessonId": 89
+        "LessonId": 187
     },
     {
         "GrammarName": "Cấu trúc ～のを 知っていますか (Biết về một sự việc)",
         "Structure": "Thể thông thường + のを 知っていますか",
         "Meaning": "Dùng để hỏi xem người nghe có biết về một sự việc, một tin tức nào đó đã hoặc sẽ xảy ra hay không. Lưu ý: nếu biết thì trả lời là 「しっています」, nếu không biết thì là 「しりません」.",
         "Example": "<ruby>木村<rt>きむら</rt></ruby>さんに <ruby>赤<rt>あか</rt></ruby>ちゃんが <ruby>生<rt>う</rt></ruby>まれたのを <ruby>知<rt>し</rt></ruby>っていますか。\n(Bạn có biết việc chị Kimura đã sinh em bé không?)",
-        "LessonId": 89
+        "LessonId": 187
     },
     {
         "GrammarName": "Cấu trúc nhấn mạnh thông tin (～のは N です)",
         "Structure": "Thể thông thường + のは + Danh từ + です",
         "Meaning": "Dùng khi người nói muốn thay đổi tiêu điểm của câu văn, đưa thông tin quan trọng nhất (như thời gian, địa điểm, lý do...) ra phía sau cùng để nhấn mạnh.",
         "Example": "<ruby>娘<rt>むすめ</rt></ruby>が <ruby>生<rt>う</rt></ruby>まれたのは <ruby>北海道<rt>ほっかいどう</rt></ruby>です。\n(Nơi con gái tôi sinh ra là ở Hokkaido.)",
-        "LessonId": 89
+        "LessonId": 187
     }
 ]

@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "然",
+        "Meaning": "Nhiên (Tự nhiên, tất nhiên)",
+        "Onyomi": "ゼン, ネン",
+        "Kunyomi": "-",
+        "Example": "自然 (tự nhiên); 全然 (hoàn toàn)",
+        "LessonId": 350
+    },
+    {
+        "Character": "態",
+        "Meaning": "Thái (Trạng thái, thái độ)",
+        "Onyomi": "タイ",
+        "Kunyomi": "-",
+        "Example": "状態 (trạng thái); 態度 (thái độ)",
+        "LessonId": 350
+    },
+    {
+        "Character": "設",
+        "Meaning": "Thiết (Thiết lập, thiết kế)",
+        "Onyomi": "セツ",
+        "Kunyomi": "もう-ける",
+        "Example": "建設 (kiến thiết/xây dựng); 設計 (thiết kế)",
+        "LessonId": 350
+    },
+    {
+        "Character": "換",
+        "Meaning": "Hoán (Hoán đổi, thay thế)",
+        "Onyomi": "カン",
+        "Kunyomi": "か-える, か-わる",
+        "Example": "交換 (giao đổi/thay thế); 換気 (thông gió)",
+        "LessonId": 350
+    },
+    {
+        "Character": "向",
+        "Meaning": "Hướng (Hướng tới, phía đối diện)",
+        "Onyomi": "コウ",
+        "Kunyomi": "む-く, む-ける, む-かう, む-こう",
+        "Example": "方向 (phương hướng); 向こう (phía bên kia)",
+        "LessonId": 350
+    },
+    {
+        "Character": "遣",
+        "Meaning": "Khiển (Sử dụng, phái đi)",
+        "Onyomi": "ケン",
+        "Kunyomi": "つか-う, つか-わす",
+        "Example": "小遣い (tiền tiêu vặt); 派遣 (phái cử)",
+        "LessonId": 350
+    },
+    {
+        "Character": "暇",
+        "Meaning": "Hạ (Rảnh rỗi)",
+        "Onyomi": "カ",
+        "Kunyomi": "ひま",
+        "Example": "休暇 (kỳ nghỉ); 暇 (rảnh rỗi)",
+        "LessonId": 350
+    },
+    {
+        "Character": "祈",
+        "Meaning": "Kì (Cầu nguyện)",
+        "Onyomi": "キ",
+        "Kunyomi": "いの-る",
+        "Example": "祈る (cầu nguyện); 祈願 (cầu khấn)",
+        "LessonId": 350
+    },
+    {
+        "Character": "招",
+        "Meaning": "Chiêu (Mời, vẫy gọi)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "まね-く",
+        "Example": "招待 (chiêu đãi/mời); 招く (vẫy mời)",
+        "LessonId": 350
+    },
+    {
+        "Character": "活",
+        "Meaning": "Hoạt (Hoạt động, sinh hoạt)",
+        "Onyomi": "カツ",
+        "Kunyomi": "-",
+        "Example": "活動 (hoạt động); 生活 (sinh hoạt/cuộc sống)",
+        "LessonId": 350
+    },
+    {
+        "Character": "予",
+        "Meaning": "Dự (Dự báo, dự định)",
+        "Onyomi": "ヨ",
+        "Kunyomi": "-",
+        "Example": "予定 (dự định); 予報 (dự báo)",
+        "LessonId": 350
+    },
+    {
+        "Character": "険",
+        "Meaning": "Hiểm (Hiểm trở, nguy hiểm)",
+        "Onyomi": "ケン",
+        "Kunyomi": "けわ-しい",
+        "Example": "危険 (nguy hiểm); 険しい (hiểm trở)",
+        "LessonId": 350
+    },
+    {
+        "Character": "害",
+        "Meaning": "Hại (Tác hại, gây hại)",
+        "Onyomi": "ガイ",
+        "Kunyomi": "-",
+        "Example": "公害 (ô nhiễm); 害虫 (côn trùng có hại)",
+        "LessonId": 350
+    },
+    {
+        "Character": "災",
+        "Meaning": "Tai (Tai họa, thiên tai)",
+        "Onyomi": "サイ",
+        "Kunyomi": "わざわ-い",
+        "Example": "災害 (tai họa/thảm họa); 震災 (thảm họa động đất)",
+        "LessonId": 350
+    },
+    {
+        "Character": "防",
+        "Meaning": "Phòng (Phòng vệ, phòng tránh)",
+        "Onyomi": "ボウ",
+        "Kunyomi": "ふせ-ぐ",
+        "Example": "防止 (phòng ngừa); 予防 (dự phòng)",
+        "LessonId": 350
+    },
+    {
+        "Character": "震",
+        "Meaning": "Chấn (Địa chấn, rung lắc)",
+        "Onyomi": "シン",
+        "Kunyomi": "ふる-える, ふる-う",
+        "Example": "地震 (động đất); 震える (run rẩy)",
+        "LessonId": 350
+    },
+    {
+        "Character": "波",
+        "Meaning": "Ba (Sóng, làn sóng)",
+        "Onyomi": "ハ",
+        "Kunyomi": "なみ",
+        "Example": "津波 (sóng thần); 電波 (sóng điện từ)",
+        "LessonId": 350
+    },
+    {
+        "Character": "幅",
+        "Meaning": "Phúc (Chiều rộng, phạm vi)",
+        "Onyomi": "フク",
+        "Kunyomi": "はば",
+        "Example": "道幅 (chiều rộng mặt đường); 幅 (độ rộng)",
+        "LessonId": 350
+    },
+    {
+        "Character": "囲",
+        "Meaning": "Vi (Bao quanh, phạm vi)",
+        "Onyomi": "イ",
+        "Kunyomi": "かこ-む, かこ-う",
+        "Example": "周囲 (chu vi/xung quanh); 囲む (bao quanh)",
+        "LessonId": 350
+    },
+    {
+        "Character": "圏",
+        "Meaning": "Quyển (Phạm vi, khu vực)",
+        "Onyomi": "ケン",
+        "Kunyomi": "-",
+        "Example": "首都圏 (vùng thủ đô); 圏外 (ngoài vùng phủ sóng)",
+        "LessonId": 350
+    }
+]

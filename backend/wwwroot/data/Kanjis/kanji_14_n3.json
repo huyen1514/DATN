@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "準",
+        "Meaning": "Chuẩn (Chuẩn bị)",
+        "Onyomi": "ジュン",
+        "Kunyomi": "-",
+        "Example": "準備 (Chuẩn bị); 準決勝 (Bán kết)",
+        "LessonId": 320
+    },
+    {
+        "Character": "備",
+        "Meaning": "Bị (Trang bị)",
+        "Onyomi": "ビ",
+        "Kunyomi": "そな-える, そな-わる",
+        "Example": "準備 (Chuẩn bị); 設備 (Thiết bị)",
+        "LessonId": 320
+    },
+    {
+        "Character": "迎",
+        "Meaning": "Nghênh (Đón)",
+        "Onyomi": "ゲイ",
+        "Kunyomi": "むか-える",
+        "Example": "歓迎 (Hoan nghênh); 迎える (Đón)",
+        "LessonId": 320
+    },
+    {
+        "Character": "変",
+        "Meaning": "Biến (Thay đổi)",
+        "Onyomi": "ヘン",
+        "Kunyomi": "か-わる, か-える",
+        "Example": "変化 (Biến đổi); 大変 (Vất vả/Nghiêm trọng)",
+        "LessonId": 320
+    },
+    {
+        "Character": "飛",
+        "Meaning": "Phi (Bay)",
+        "Onyomi": "ヒ",
+        "Kunyomi": "と-ぶ, と-ばす",
+        "Example": "飛行機 (Máy bay); 飛ぶ (Bay)",
+        "LessonId": 320
+    },
+    {
+        "Character": "移",
+        "Meaning": "Di (Di chuyển)",
+        "Onyomi": "イ",
+        "Kunyomi": "うつ-る, うつ-す",
+        "Example": "移動 (Di chuyển); 移住 (Di cư)",
+        "LessonId": 320
+    },
+    {
+        "Character": "登",
+        "Meaning": "Đăng (Leo, lên)",
+        "Onyomi": "トウ, ト",
+        "Kunyomi": "のぼ-る",
+        "Example": "登山 (Leo núi); 登場 (Xuất hiện)",
+        "LessonId": 320
+    },
+    {
+        "Character": "泊",
+        "Meaning": "Bạc (Trú lại)",
+        "Onyomi": "ハク",
+        "Kunyomi": "と-まる, と-める",
+        "Example": "宿泊 (Trọ lại); 三泊 (Trọ lại 3 đêm)",
+        "LessonId": 320
+    },
+    {
+        "Character": "団",
+        "Meaning": "Đoàn (Đoàn thể)",
+        "Onyomi": "ダン, トン",
+        "Kunyomi": "-",
+        "Example": "団体 (Đoàn thể); 団結 (Đoàn kết)",
+        "LessonId": 320
+    },
+    {
+        "Character": "程",
+        "Meaning": "Trình (Lộ trình, khoảng)",
+        "Onyomi": "テイ",
+        "Kunyomi": "ほど",
+        "Example": "日程 (Lịch trình); 程度 (Mức độ)",
+        "LessonId": 320
+    },
+    {
+        "Character": "欧",
+        "Meaning": "Âu (Châu Âu)",
+        "Onyomi": "オウ",
+        "Kunyomi": "-",
+        "Example": "欧州 (Châu Âu); 欧米 (Âu Mỹ)",
+        "LessonId": 320
+    },
+    {
+        "Character": "州",
+        "Meaning": "Châu (Tỉnh, châu)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "す",
+        "Example": "欧州 (Châu Âu); 九州 (Kyushu)",
+        "LessonId": 320
+    },
+    {
+        "Character": "観",
+        "Meaning": "Quan (Quan sát)",
+        "Onyomi": "カン",
+        "Kunyomi": "-",
+        "Example": "観光 (Tham quan); 観客 (Khán giả)",
+        "LessonId": 320
+    },
+    {
+        "Character": "舟",
+        "Meaning": "Chu (Thuyền)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "ふね, ふな",
+        "Example": "舟 (Thuyền); 小舟 (Thuyền nhỏ)",
+        "LessonId": 320
+    },
+    {
+        "Character": "芸",
+        "Meaning": "Nghệ (Nghệ thuật)",
+        "Onyomi": "ゲイ",
+        "Kunyomi": "-",
+        "Example": "芸術 (Nghệ thuật); 園芸 (Làm vườn)",
+        "LessonId": 320
+    },
+    {
+        "Character": "演",
+        "Meaning": "Diễn (Diễn xuất)",
+        "Onyomi": "エン",
+        "Kunyomi": "-",
+        "Example": "演劇 (Diễn kịch); 演説 (Diễn thuyết)",
+        "LessonId": 320
+    },
+    {
+        "Character": "仏",
+        "Meaning": "Phật (Phật giáo)",
+        "Onyomi": "ブツ",
+        "Kunyomi": "ほとけ",
+        "Example": "仏教 (Phật giáo); 仏様 (Đức Phật)",
+        "LessonId": 320
+    },
+    {
+        "Character": "神",
+        "Meaning": "Thần (Thần thánh)",
+        "Onyomi": "シン, ジン",
+        "Kunyomi": "かみ, かん, こう",
+        "Example": "神社 (Đền thờ); 神様 (Thần thánh)",
+        "LessonId": 320
+    },
+    {
+        "Character": "祭",
+        "Meaning": "Tế (Lễ hội)",
+        "Onyomi": "サイ",
+        "Kunyomi": "まつ-る, まつ-り",
+        "Example": "祭り (Lễ hội); 文化祭 (Lễ hội văn hóa)",
+        "LessonId": 320
+    },
+    {
+        "Character": "絵",
+        "Meaning": "Hội (Tranh)",
+        "Onyomi": "カイ, エ",
+        "Kunyomi": "-",
+        "Example": "絵画 (Hội họa); 絵 (Tranh)",
+        "LessonId": 320
+    }
+]

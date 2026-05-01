@@ -1,0 +1,72 @@
+[
+    {
+        "GrammarName": "〜による / 〜によって",
+        "Structure": "N + によって / N + による + N",
+        "Meaning": "Thể hiện phương pháp, cách thức, phương tiện khi làm cái gì đó[cite: 2].",
+        "Example": "大学はアンケートによる満足度調査の結果を発表した。\n(Trường đại học đã công bố kết quả điều tra độ hài lòng thông qua bảng câu hỏi[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜に対して / 〜に対する",
+        "Structure": "N + に対して(は/も) / N + に対する + N",
+        "Meaning": "Sử dụng khi nói về thái độ như là “やさしい”, “失礼だ” hoặc những hành động trực tiếp hướng đến người khác. Cũng sử dụng khi phản đối hoặc đáp ứng lại ý kiến, vấn đề, yêu cầu[cite: 2].",
+        "Example": "彼女はだれに対しても親切です。\n(Cô ấy thân thiện với bất cứ ai[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜ため(に)",
+        "Structure": "PI + ため(に) [なAな / Nの]",
+        "Meaning": "Sử dụng khi nói rằng ~ là nguyên nhân, lý do. Lưu ý: Không sử dụng “〜たい・〜つもりだ” ở cuối câu[cite: 2].",
+        "Example": "雨のためにハイキングは中止になりました。\n(Vì trời mưa nên chuyến đi bộ đường dài đã bị hủy[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜につき",
+        "Structure": "N + につき",
+        "Meaning": "Sử dụng khi nói cứ mỗi “~” là “...”. Ví dụ như “使用料は1時間につき1000円” có nghĩa là “Phí sử dụng thì cứ mỗi 1 tiếng là 1000 yên”[cite: 2].",
+        "Example": "スポーツクラブ会員以外の方でも、1回につき2,000円で施設をご利用いただけます。\n(Ngay cả những người không phải là hội viên câu lạc bộ thể thao cũng có thể sử dụng cơ sở vật chất với giá 2.000 yên cho mỗi lần[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜とおり(に) / 〜どおり",
+        "Structure": "V-る / V-た + とおりだ\nNの + とおり(に)\nN + どおり",
+        "Meaning": "Sử dụng khi nói cái gì đó xảy ra giống như đã nói hoặc đã dự đoán[cite: 2].",
+        "Example": "初めて見た富士山は私が想像していたとおりにきれいだった。\n(Núi Phú Sĩ lần đầu tiên tôi nhìn thấy đẹp đúng như tôi đã tưởng tượng[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜を通して / 〜を通じて",
+        "Structure": "N + を通して / N + を通じて",
+        "Meaning": "Sử dụng khi làm một cái gì đó không trực tiếp mà thông qua người khác, cách thức khác, sự việc khác[cite: 2].",
+        "Example": "私たちは読書を通していろいろな人の考え方を知ることができます。\n(Chúng ta có thể biết được cách suy nghĩ của nhiều người khác nhau thông qua việc đọc sách[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜のように / 〜のような",
+        "Structure": "N + のように / N + のような + N",
+        "Meaning": "Sử dụng khi đưa ra một ví dụ điển hình[cite: 2].",
+        "Example": "われわれのようなプロのスポーツ選手には食事も練習と同じぐらい大切です。\n(Đối với các tuyển thủ thể thao chuyên nghiệp như chúng tôi, bữa ăn cũng quan trọng ngang với việc tập luyện[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜によれば / 〜によると",
+        "Structure": "N + によれば / N + によると",
+        "Meaning": "Sử dụng khi muốn nói bạn đã biết cái thông tin gì đó từ đâu, do đâu. Cuối câu thường là mẫu “〜そうだ / 〜ということだ”[cite: 2].",
+        "Example": "今朝の天気予報によると、今週はずっと晴れるそうだ。\n(Theo dự báo thời tiết sáng nay, nghe nói tuần này trời sẽ nắng suốt[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜ということだ / 〜とのことだ",
+        "Structure": "PI + ということだ / とのことだ",
+        "Meaning": "Sử dụng khi nói với người khác nội dung thông tin mình đã nghe[cite: 2].",
+        "Example": "ニュースでは、今年は水不足の心配はないということです。\n(Theo tin tức thì năm nay không phải lo lắng về việc thiếu nước[cite: 2].)",
+        "LessonId": 262
+    },
+    {
+        "GrammarName": "〜について / 〜についての",
+        "Structure": "N + について(は/も) / N + についての + N",
+        "Meaning": "Sử dụng khi bạn trình bày nội dung lấy làm chủ đề, đề tài, suy nghĩ hoặc điều tra[cite: 2].",
+        "Example": "兄は大学院で、アジアの経済について研究しています。\n(Anh trai tôi đang nghiên cứu về kinh tế Châu Á ở trường cao học[cite: 2].)",
+        "LessonId": 262
+    }
+]

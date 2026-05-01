@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "熱",
+        "Meaning": "Nhiệt (Nóng, sốt)",
+        "Onyomi": "ネツ",
+        "Kunyomi": "あつ-い",
+        "Example": "熱いコーヒー (Cà phê nóng); 高熱 (Sốt cao)",
+        "LessonId": 265
+    },
+    {
+        "Character": "冷",
+        "Meaning": "Lãnh (Lạnh, nguội)",
+        "Onyomi": "レイ",
+        "Kunyomi": "ひ-える, ひ-やす, さ-める, さ-ます, つめ-たい",
+        "Example": "冷たい水 (Nước lạnh); 気持ちが冷める (Nguội lạnh tình cảm)",
+        "LessonId": 265
+    },
+    {
+        "Character": "温",
+        "Meaning": "Ôn (Ấm áp)",
+        "Onyomi": "オン",
+        "Kunyomi": "あたた-まる, あたた-める, あたた-かい",
+        "Example": "温かいスープ (Súp ấm); 温度 (Nhiệt độ)",
+        "LessonId": 265
+    },
+    {
+        "Character": "度",
+        "Meaning": "Độ (Mức độ, lần)",
+        "Onyomi": "ド, ト, タク",
+        "Kunyomi": "たび",
+        "Example": "温度 (Nhiệt độ); 今度 (Lần này)",
+        "LessonId": 265
+    },
+    {
+        "Character": "材",
+        "Meaning": "Tài (Nguyên liệu, tài liệu)",
+        "Onyomi": "ザイ",
+        "Kunyomi": "-",
+        "Example": "材料 (Nguyên liệu); 木材 (Gỗ/Mộc tài)",
+        "LessonId": 265
+    },
+    {
+        "Character": "型",
+        "Meaning": "Hình (Khuôn, kiểu)",
+        "Onyomi": "ケイ",
+        "Kunyomi": "かた",
+        "Example": "典型的な (Điển hình); 模型 (Mô hình)",
+        "LessonId": 265
+    },
+    {
+        "Character": "焼",
+        "Meaning": "Thiêu (Nướng, cháy)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "や-ける, や-く",
+        "Example": "焼いたパン (Bánh mì nướng); 日焼け (Cháy nắng)",
+        "LessonId": 265
+    },
+    {
+        "Character": "器",
+        "Meaning": "Khí (Bát đĩa, khí cụ)",
+        "Onyomi": "キ",
+        "Kunyomi": "うつわ",
+        "Example": "食器 (Bát đĩa); 容器 (Đồ đựng/Dung khí)",
+        "LessonId": 265
+    },
+    {
+        "Character": "卵",
+        "Meaning": "Noãn (Trứng)",
+        "Onyomi": "ラン",
+        "Kunyomi": "たまご",
+        "Example": "卵白 (Lòng trắng trứng); 産卵 (Sự đẻ trứng)",
+        "LessonId": 265
+    },
+    {
+        "Character": "乳",
+        "Meaning": "Nhũ (Sữa)",
+        "Onyomi": "ニュウ",
+        "Kunyomi": "ちち, ち",
+        "Example": "牛乳 (Sữa bò); 乳歯 (Răng sữa)",
+        "LessonId": 265
+    },
+    {
+        "Character": "粉",
+        "Meaning": "Phấn (Bột)",
+        "Onyomi": "フン",
+        "Kunyomi": "こな, こ",
+        "Example": "小麦粉 (Bột mì); 粉末 (Dạng bột)",
+        "LessonId": 265
+    },
+    {
+        "Character": "塩",
+        "Meaning": "Diêm (Muối)",
+        "Onyomi": "エン",
+        "Kunyomi": "しお",
+        "Example": "塩味 (Vị muối); 塩素 (Clo)",
+        "LessonId": 265
+    },
+    {
+        "Character": "菜",
+        "Meaning": "Thái (Rau)",
+        "Onyomi": "サイ",
+        "Kunyomi": "な",
+        "Example": "野菜 (Rau củ); 菜の花 (Hoa cải)",
+        "LessonId": 265
+    },
+    {
+        "Character": "果",
+        "Meaning": "Quả (Hoa quả, thành quả)",
+        "Onyomi": "カ",
+        "Kunyomi": "は-たす",
+        "Example": "果物 (Trái cây); 成果 (Thành quả)",
+        "LessonId": 265
+    },
+    {
+        "Character": "豆",
+        "Meaning": "Đậu (Hạt đậu)",
+        "Onyomi": "トウ, ズ",
+        "Kunyomi": "まめ",
+        "Example": "豆腐 (Đậu phụ); 大豆 (Đậu nành)",
+        "LessonId": 265
+    },
+    {
+        "Character": "缶",
+        "Meaning": "Phẫu (Cái lon, đồ hộp)",
+        "Onyomi": "カン",
+        "Kunyomi": "-",
+        "Example": "缶コーヒー (Cà phê lon); 缶詰 (Đồ hộp)",
+        "LessonId": 265
+    },
+    {
+        "Character": "杯",
+        "Meaning": "Bôi (Cái chén, đơn vị đếm cốc)",
+        "Onyomi": "ハイ",
+        "Kunyomi": "さかずき",
+        "Example": "乾杯 (Cạn ly); 一杯 (Một cốc/đầy)",
+        "LessonId": 265
+    },
+    {
+        "Character": "枚",
+        "Meaning": "Mai (Đơn vị đếm vật mỏng)",
+        "Onyomi": "マイ",
+        "Kunyomi": "-",
+        "Example": "枚数 (Số tờ/số tấm); 二枚目 (Anh chàng đẹp trai)",
+        "LessonId": 265
+    },
+    {
+        "Character": "匹",
+        "Meaning": "Thất (Đơn vị đếm động vật nhỏ)",
+        "Onyomi": "ヒツ",
+        "Kunyomi": "ひき",
+        "Example": "二匹 (Hai con); 匹敵する (Đương đầu/Sánh với)",
+        "LessonId": 265
+    },
+    {
+        "Character": "量",
+        "Meaning": "Lượng (Đo lường, khối lượng)",
+        "Onyomi": "リョウ",
+        "Kunyomi": "はか-る",
+        "Example": "計量 (Sự đo lường); 分量 (Phân lượng/Liều lượng)",
+        "LessonId": 265
+    }
+]

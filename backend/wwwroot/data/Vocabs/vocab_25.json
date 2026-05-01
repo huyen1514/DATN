@@ -4,7 +4,7 @@
         "Reading": "かんがえます",
         "Meaning": "suy nghĩ, cân nhắc",
         "PartOfSpeech": "Động từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "いろいろ かんがえます。\n(Tôi suy nghĩ nhiều thứ.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "つきます",
         "Meaning": "đến [ga]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "えきに ついたら、でんわして ください。\n(Khi nào đến ga hãy gọi điện cho tôi.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "りゅうがくします",
         "Meaning": "đi du học",
         "PartOfSpeech": "Động từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "にほんへ りゅうがくしたいです。\n(Tôi muốn đi du học Nhật Bản.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "としをとります",
         "Meaning": "thêm tuổi, già đi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "としを とっても、しごとを したいです。\n(Dù có tuổi rồi tôi vẫn muốn làm việc.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "いなか",
         "Meaning": "quê, nông thôn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "いなかへ かえりたいです。\n(Tôi muốn về quê.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "たいしかん",
         "Meaning": "đại sứ quán",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "たいしかんへ いきます。\n(Tôi đi đến đại sứ quán.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "ぐるーぷ",
         "Meaning": "nhóm, đoàn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "ぐるーぷで りょこうします。\n(Chúng tôi đi du lịch theo nhóm.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "ちゃんす",
         "Meaning": "cơ hội",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "ちゃんすが あったら、にほんへ いきたいです。\n(Nếu có cơ hội, tôi muốn đi Nhật.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "おく",
         "Meaning": "một trăm triệu",
         "PartOfSpeech": "Số từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "1おくえん あったら、なにを しますか。\n(Nếu có 1 trăm triệu yên, bạn sẽ làm gì?)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "もし",
         "Meaning": "nếu",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "もし 1おくえん あったら、うちを かいます。\n(Nếu có 1 trăm triệu yên, tôi sẽ mua nhà.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "いくら",
         "Meaning": "bao nhiêu đi chăng nữa",
         "PartOfSpeech": "Phó từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "いくら かんがえても、わかりません。\n(Dù có suy nghĩ bao nhiêu đi nữa tôi cũng không hiểu.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "てんきん",
         "Meaning": "việc chuyển công tác",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "てんきんしても、がんばります。\n(Dù có chuyển công tác tôi cũng sẽ cố gắng.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "いっぱいのみましょう",
         "Meaning": "chúng ta cùng uống một ly nhé",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "いっしょに いっぱい のみましょう。\n(Chúng ta cùng uống một ly nhé.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "おせわになりました",
         "Meaning": "cảm ơn anh/chị đã giúp đỡ",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "いろいろ おせわに なりました。\n(Cảm ơn anh/chị đã giúp đỡ tôi rất nhiều.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "がんばります",
         "Meaning": "cố gắng",
         "PartOfSpeech": "Động từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "これからも がんばります。\n(Từ giờ tôi cũng sẽ cố gắng.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "どうぞおげんきで",
         "Meaning": "chúc anh/chị mạnh khỏe (dùng khi chia tay)",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 30,
+        "LessonId": 121,
         "Example": "どうぞ おげんきで。\n(Chúc anh/chị mạnh khỏe.)"
     }
 ]

@@ -4,7 +4,7 @@
         "Reading": "かぞえます",
         "Meaning": "đếm",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>荷物<rt>にもつ</rt></ruby>の <ruby>数<rt>かず</rt></ruby>を <ruby>数<rt>かぞ</rt></ruby>えてください。\n(Hãy đếm số lượng hành lý.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "はかります",
         "Meaning": "đo, cân [chiều dài, trọng lượng]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>山<rt>やま</rt></ruby>の <ruby>高<rt>たか</rt></ruby>さを どうやって <ruby>測<rt>はか</rt></ruby>るか、<ruby>知<rt>し</rt></ruby>っていますか。\n(Bạn có biết người ta đo chiều cao của núi bằng cách nào không?)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "たしかめます",
         "Meaning": "xác nhận, kiểm tra lại",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "まちがいがないかどうか、<ruby>確<rt>たしか</rt></ruby>めてください。\n(Hãy kiểm tra xem có sai sót gì không.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "あいます",
         "Meaning": "vừa, hợp [kích thước ~]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "サイズが <ruby>合<rt>あ</rt></ruby>うかどうか、<ruby>着<rt>き</rt></ruby>てみます。\n(Tôi mặc thử xem có vừa kích cỡ hay không.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "しゅっぱつします",
         "Meaning": "xuất phát, khởi hành",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "JL107<ruby>便<rt>びん</rt></ruby>が <ruby>何時<rt>なんじ</rt></ruby>に <ruby>出発<rt>しゅっぱつ</rt></ruby>するか、<ruby>調<rt>しら</rt></ruby>べてください。\n(Hãy tra xem chuyến bay JL107 xuất phát lúc mấy giờ.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "とうちゃくします",
         "Meaning": "đến nơi",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>飛行機<rt>ひこうき</rt></ruby>が <ruby>何時<rt>なんじ</rt></ruby>に <ruby>到着<rt>とうちゃく</rt></ruby>するか、わかりません。\n(Tôi không biết máy bay sẽ đến nơi lúc mấy giờ.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "よいます",
         "Meaning": "say [rượu]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>酔<rt>よ</rt></ruby>いましたから、どこへ <ruby>行<rt>い</rt></ruby>ったか <ruby>覚<rt>おぼ</rt></ruby>えていません。\n(Vì say nên tôi không nhớ mình đã đi đâu.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "きけん",
         "Meaning": "nguy hiểm",
         "PartOfSpeech": "Tính từ đuôi な",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>危険<rt>きけん</rt></ruby>な <ruby>物<rt>もの</rt></ruby>を <ruby>持<rt>も</rt></ruby>っていないか、<ruby>確<rt>たしか</rt></ruby>めます。\n(Kiểm tra xem có mang theo vật nguy hiểm hay không.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "ひつよう",
         "Meaning": "cần thiết",
         "PartOfSpeech": "Tính từ đuôi な",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>願書<rt>がんしょ</rt></ruby>を <ruby>出<rt>だ</rt></ruby>すとき、<ruby>写真<rt>しゃしん</rt></ruby>が <ruby>必要<rt>ひつよう</rt></ruby>です。\n(Khi nộp đơn cần phải có ảnh.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "うちゅう",
         "Meaning": "vũ trụ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>宇宙<rt>うちゅう</rt></ruby>から <ruby>地球<rt>ちきゅう</rt></ruby>を <ruby>見<rt>み</rt></ruby>てみたいです。\n(Tôi muốn thử ngắm nhìn Trái Đất từ vũ trụ.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "ぼうねんかい",
         "Meaning": "tiệc tất niên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>忘年会<rt>ぼうねんかい</rt></ruby>に <ruby>出席<rt>しゅっせき</rt></ruby>するかどうか、<ruby>教<rt>おし</rt></ruby>えてください。\n(Hãy cho tôi biết bạn có tham dự tiệc tất niên hay không.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "しんねんかい",
         "Meaning": "tiệc tân niên",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>新年会<rt>しんねんかい</rt></ruby>は いつがいいか、<ruby>相談<rt>そうだん</rt></ruby>しましょう。\n(Chúng ta cùng thảo luận xem tiệc tân niên tổ chức khi nào thì tốt.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "にじかい",
         "Meaning": "bữa tiệc thứ hai, \"tăng hai\"",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>二次会<rt>にじかい</rt></ruby>は どこへ <ruby>行<rt>い</rt></ruby>きましたか。\n(Tăng hai mọi người đã đi đâu thế?)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "たいかい",
         "Meaning": "đại hội, cuộc thi lớn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "スピーチ<ruby>大会<rt>たいかい</rt></ruby>に <ruby>出<rt>で</rt></ruby>ます。\n(Tham gia cuộc thi hùng biện.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "おもて",
         "Meaning": "mặt trước, phía trước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "カードの <ruby>表<rt>おもて</rt></ruby>に <ruby>名前<rt>なまえ</rt></ruby>を <ruby>書<rt>か</rt></ruby>いてください。\n(Hãy viết tên vào mặt trước của thẻ.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "うら",
         "Meaning": "mặt sau, phía sau",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>裏<rt>うら</rt></ruby>も <ruby>見<rt>み</rt></ruby>てください。\n(Hãy nhìn cả mặt sau nữa.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "へんじ",
         "Meaning": "hồi âm, trả lời",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "20<ruby>日<rt>にち</rt></ruby>までに <ruby>返事<rt>へんじ</rt></ruby>をください。\n(Hãy cho tôi câu trả lời trước ngày 20.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "もうしこみ",
         "Meaning": "việc đăng ký",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "マラソンの <ruby>申<rt>もう</rt></ruby>し<ruby>込<rt>こ</rt></ruby>みは いつまでですか。\n(Việc đăng ký chạy marathon là đến khi nào?)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "きず",
         "Meaning": "vết thương, vết trầy xước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>車<rt>くるま</rt></ruby>に <ruby>傷<rt>きず</rt></ruby>が ついてしまいました。\n(Chiếc xe bị trầy xước mất rồi.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "ながさ",
         "Meaning": "chiều dài",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "この <ruby>橋<rt>はし</rt></ruby>の <ruby>長<rt>なが</rt></ruby>さは 3,911メートルです。\n(Chiều dài của cây cầu này là 3.911 mét.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "おもさ",
         "Meaning": "cân nặng, trọng lượng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "この <ruby>荷物<rt>にもつ</rt></ruby>の <ruby>重<rt>おも</rt></ruby>さは どのくらいですか。\n(Trọng lượng của kiện hàng này là bao nhiêu?)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "たかさ",
         "Meaning": "chiều cao",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>富士山<rt>ふじさん</rt></ruby>の <ruby>高<rt>たか</rt></ruby>さは 3,776メートルです。\n(Chiều cao của núi Phú Sĩ là 3.776 mét.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "おおきさ",
         "Meaning": "cỡ, kích thước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "<ruby>大<rt>おお</rt></ruby>きさが <ruby>合<rt>あ</rt></ruby>いません。\n(Kích cỡ không vừa.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "いじょう",
         "Meaning": "trở lên, trên",
         "PartOfSpeech": "Danh từ / Hậu tố",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "18<ruby>歳<rt>さい</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>の <ruby>人<rt>ひと</rt></ruby>が <ruby>入<rt>はい</rt></ruby>れます。\n(Người từ 18 tuổi trở lên mới được vào.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "いか",
         "Meaning": "trở xuống, dưới",
         "PartOfSpeech": "Danh từ / Hậu tố",
-        "LessonId": 66,
+        "LessonId": 196,
         "Example": "1,000<ruby>円<rt>えん</rt></ruby><ruby>以下<rt>いか</rt></ruby>の <ruby>物<rt>もの</rt></ruby>を <ruby>探<rt>さが</rt></ruby>しています。\n(Tôi đang tìm đồ giá từ 1.000 yên trở xuống.)"
     }
 ]

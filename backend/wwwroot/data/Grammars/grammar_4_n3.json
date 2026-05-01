@@ -1,0 +1,79 @@
+[
+    {
+        "GrammarName": "Cách nói rút gọn (〜てる / 〜とく / 〜ちゃう / 〜なきゃ)",
+        "Structure": "V-ている → 〜てる\nV-ておく → 〜とく\nV-てしまう → 〜ちゃう / 〜じゃう\nV-なければ → 〜なきゃ",
+        "Meaning": "Các âm được rút ngắn lại để nói chuyện ngắn gọn và tự nhiên hơn trong hội thoại hàng ngày[cite: 2].",
+        "Example": "あ、あそこにきれいな花が咲いてるよ。\n(Ô kìa, đằng kia có hoa đẹp đang nở đấy[cite: 2].)",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "Câu lược bỏ phần cuối",
+        "Structure": "V-て (ください)\nV-たら (どうですか)\n~かも (しれない)\n~なきゃ (いけない)",
+        "Meaning": "Sử dụng khi không cần nói hết câu mà người nghe vẫn có thể hiểu được ý nghĩa thông qua ngữ cảnh[cite: 2].",
+        "Example": "あ! 大変! 宿題しなきゃ。\n(A! Chết rồi! Phải làm bài tập thôi[cite: 2].)",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜っけ",
+        "Structure": "PI / Po + っけ",
+        "Meaning": "Sử dụng khi muốn xác nhận lại một điều gì đó mà bản thân không rõ hoặc đã nghe rồi nhưng nhất thời quên mất[cite: 2].",
+        "Example": "クリーニング屋、何時までだっけ。\n(Tiệm giặt ủi mở cửa đến mấy giờ ấy nhỉ?[cite: 2])",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜たりして",
+        "Structure": "PI + りして",
+        "Meaning": "Diễn đạt một khả năng có thể xảy ra, mang ý nghĩa tương đương với '〜かもしれない' (có lẽ là, không chừng là)[cite: 2].",
+        "Example": "もしかして寝てたりして…。\n(Có lẽ là đang ngủ không chừng...[cite: 2])",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜たって / 〜なくたって",
+        "Structure": "V-た / Aい-くた / なA-じゃなくた / N-じゃなくた + って",
+        "Meaning": "Sử dụng với ý nghĩa tương tự như '〜ても' (cho dù là..., dẫu có... cũng không)[cite: 2].",
+        "Example": "お金持ちだって、幸せじゃない人もいます。\n(Cho dù là người giàu thì cũng có những người không hạnh phúc[cite: 2].)",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜に決まっている",
+        "Structure": "PI + に決まっている [なA / N bỏ だ]",
+        "Meaning": "Dùng khi muốn khẳng định mạnh mẽ ý kiến của bản thân về một việc gì đó là nhất định hoặc chắc chắn như vậy[cite: 2].",
+        "Example": "そんな有名なホテル、高いに決まってるよ。\n(Khách sạn nổi tiếng như thế thì chắc chắn là đắt rồi[cite: 2].)",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜じゃない",
+        "Structure": "PI + じゃない",
+        "Meaning": "Sử dụng để xác nhận điều mình nghĩ người nghe cũng biết hoặc cùng ý kiến; hoặc dùng để chê trách, phát hiện điều gì đó. Khi nói sẽ xuống giọng ở cuối câu[cite: 2].",
+        "Example": "だめじゃない。ちゃんと連絡しなきゃ。\n(Không được đâu nhé. Phải liên lạc đàng hoàng chứ[cite: 2].)",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜って (Thay thế cho は)",
+        "Structure": "N + って",
+        "Meaning": "Sử dụng thay cho trợ từ '〜は' khi đưa ra một chủ đề để nói chuyện[cite: 2].",
+        "Example": "山田さんって親切よね。\n(Anh Yamada thì thân thiện nhỉ[cite: 2].)",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜みたい",
+        "Structure": "PI + みたい(だ) [なA / N bỏ だ]",
+        "Meaning": "Diễn đạt sự suy đoán của người nói dựa trên tình hình thực tế, tương đương với nghĩa của '〜よう'[cite: 2].",
+        "Example": "なんか疲れてるみたいだけど、仕事忙しいの?\n(Trông bạn có vẻ mệt mỏi, công việc bận lắm à?[cite: 2])",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜ばよかった",
+        "Structure": "V-ば / V-なければ + よかった",
+        "Meaning": "Sử dụng khi hối hận vì bản thân đã không làm gì đó dẫn đến kết quả không tốt, hoặc cảm thấy tiếc nuối về việc người khác đã không thực hiện[cite: 2].",
+        "Example": "カメラを持ってくればよかったね。\n(Biết thế thì mang theo máy ảnh thì tốt rồi nhỉ[cite: 2].)",
+        "LessonId": 267
+    },
+    {
+        "GrammarName": "〜ばかり",
+        "Structure": "N / V-て + ばかり",
+        "Meaning": "Diễn đạt sự chỉ trích khi ai đó chỉ toàn làm một việc gì đó hoặc việc đó diễn ra quá nhiều gây phiền toái[cite: 2].",
+        "Example": "ゲームばかりしていると、目が悪くなりますよ。\n(Nếu cứ chỉ toàn chơi game thì mắt sẽ bị xấu đi đấy[cite: 2].)",
+        "LessonId": 267
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "GrammarName": "わけがない / はずがない",
+        "Structure": "PI + わけがない / はずがない [なAだな / Nだの][cite: 2]",
+        "Meaning": "Sử dụng khi muốn phủ định mạnh mẽ rằng chuyện như thế tuyệt đối không thể nghĩ tới[cite: 2]. '〜はずがない' cũng được sử dụng với ý nghĩa tương tự[cite: 2].",
+        "Example": "相手は世界でトップのチームだし、がんばったって、勝てるわけがない。[cite: 2]\n(Đối thủ là đội hàng đầu thế giới nên dẫu có cố gắng thì cũng không thể thắng nổi đâu.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "しかない / ほか（は）ない",
+        "Structure": "V-る / N + しかない[cite: 2]\nV-る + ほか（は）ない[cite: 2]",
+        "Meaning": "Sử dụng khi nói rằng không còn cách nào khác ngoài cách này, đây là cách tốt nhất[cite: 2]. Thường được sử dụng với tâm trạng đành chịu vậy thôi[cite: 2].",
+        "Example": "入学試験まであと1週間。とにかくがんばるしかありません。[cite: 2]\n(Chỉ còn một tuần nữa là đến kỳ thi nhập học. Dù sao thì cũng chỉ còn cách cố gắng hết sức mà thôi.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "からこそ",
+        "Structure": "PI + からこそ[cite: 2]",
+        "Meaning": "Sử dụng khi muốn nhấn mạnh một lý do vì đó là lý do đặc biệt hoặc lý do quan trọng[cite: 2].",
+        "Example": "大変なときだからこそ、協力することが大切なんです。[cite: 2]\n(Chính vì vào những lúc khó khăn nên việc hợp tác với nhau mới là điều quan trọng.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "なんか / なんて",
+        "Structure": "N + なんか / なんて[cite: 2]",
+        "Meaning": "Sử dụng khi nói về một điều gì đó mà bạn nghĩ là không quan trọng lắm hoặc sử dụng khi muốn khiêm tốn[cite: 2].",
+        "Example": "N3なんか、ちゃんと準備すれば簡単だよ。[cite: 2]\n(Cỡ như N3 ấy mà, nếu chuẩn bị kỹ càng thì đơn giản thôi.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "っこない",
+        "Structure": "V-ます (bỏ ます) + っこない[cite: 2]",
+        "Meaning": "Dùng để phủ định mạnh mẽ khả năng xảy ra của một sự việc nào đó[cite: 2]. Đây là cách nói mang tính khẩu ngữ[cite: 2].",
+        "Example": "演劇なんかしても、生活できっこないでしょう。[cite: 2]\n(Dẫu có diễn kịch đi chăng nữa thì chắc chắn là không thể sống nổi đâu.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "からといって",
+        "Structure": "PI + からといって[cite: 2]",
+        "Meaning": "Dùng để nói rằng cho dù lý do là... thì cũng không hẳn kết luận là... (vế sau thường đi kèm với phủ định)[cite: 2].",
+        "Example": "大学を出たからといって、就職できるとは限らない。[cite: 2]\n(Không phải cứ tốt nghiệp đại học là chắc chắn sẽ tìm được việc làm.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "とは限らない",
+        "Structure": "PI + とは限らない[cite: 2]",
+        "Meaning": "Sử dụng khi muốn nói rằng không phải lúc nào cũng vậy hoặc không chắc chắn 100% trường hợp đều như thế[cite: 2].",
+        "Example": "大学を出たからといって、就職できるとは限らない。[cite: 2]\n(Không phải cứ tốt nghiệp đại học là chắc chắn sẽ tìm được việc làm.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "ことといったら",
+        "Structure": "N + ことといったら[cite: 2]",
+        "Meaning": "Dùng để nhấn mạnh mức độ không bình thường của một sự việc hoặc tính chất nào đó[cite: 2].",
+        "Example": "がんこなことといったら、本当に困ります。[cite: 2]\n(Nói về độ bảo thủ thì thật là hết cách.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "くくせに",
+        "Structure": "PI + くせに [なAな / Nの][cite: 2]",
+        "Meaning": "Dùng khi muốn bày tỏ thái độ trách móc, khinh miệt về việc dẫu là trạng thái đó nhưng thực tế lại không phù hợp[cite: 2].",
+        "Example": "何も知らないくせに、偉そうなことを言わないでください。[cite: 2]\n(Đừng có nói giọng bề trên trong khi bản thân chẳng biết cái gì cả.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "っぽい",
+        "Structure": "V-ます (bỏ ます) / N + っぽい[cite: 2]",
+        "Meaning": "Diễn tả tính chất mang vẻ giống như hoặc có cảm giác giống như một sự vật, sự việc nào đó (thường mang nghĩa tiêu cực)[cite: 2].",
+        "Example": "そんな子どもっぽい夢をいつまでも見ていないでください。[cite: 2]\n(Đừng có mãi mơ mộng những giấc mơ trẻ con như thế nữa.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "せい",
+        "Structure": "PI + せい[cite: 2]\n[なAな / Nの][cite: 2]",
+        "Meaning": "Sử dụng khi nói về nguyên nhân dẫn đến một kết quả xấu hoặc tình huống không hay[cite: 2].",
+        "Example": "お父さんのせいですよ。[cite: 2]\n(Đó là tại bố đấy.[cite: 2])",
+        "LessonId": 297
+    },
+    {
+        "GrammarName": "のことだから",
+        "Structure": "N + のことだから[cite: 2]",
+        "Meaning": "Dùng khi đưa ra phán đoán về một sự việc dựa trên đặc điểm hoặc tính cách quen thuộc của một người[cite: 2].",
+        "Example": "ゆきのことだから、きっと大丈夫だよ。[cite: 2]\n(Vì là Yuki nên chắc chắn sẽ ổn thôi.[cite: 2])",
+        "LessonId": 297
+    }
+]

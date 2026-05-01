@@ -4,34 +4,34 @@
         "Structure": "N / Na-adj [でした / じゃ ありませんでした]",
         "Meaning": "Để chuyển Danh từ hoặc Tính từ đuôi な sang thì quá khứ:\n- Khẳng định: Thay 「です」 bằng 「でした」.\n- Phủ định: Thay 「じゃ ありません」 bằng 「じゃ ありませんでした」 (Văn viết dùng 「では ありませんでした」).",
         "Example": "きのうは あめでした。\nーきょねんの やすみは ひまじゃ ありませんでした。\n(Hôm qua trời đã mưa.\n-Kỳ nghỉ năm ngoái tôi đã không rảnh rỗi.)",
-        "LessonId": 41
+        "LessonId": 57
     },
     {
         "GrammarName": "Thì quá khứ của Tính từ đuôi い",
         "Structure": "I-adj [～かったです / ～くなかったです]",
         "Meaning": "Cách chia thì quá khứ của tính từ đuôi い phức tạp hơn một chút:\n- Khẳng định: Bỏ đuôi 「い」 và thêm 「かったです」.\n- Phủ định: Bỏ đuôi 「い」 và thêm 「くなかったです」.\nLưu ý đặc biệt: Tính từ 「いい」 (tốt) sẽ chia thành 「よかったです」 và 「よくなかったです」.",
         "Example": "きのうの ぱーてぃーは たのしかったです。\nーてんきは あまり よくなかったです。\n(Bữa tiệc hôm qua đã rất vui.\n-Thời tiết đã không tốt lắm.)",
-        "LessonId": 41
+        "LessonId": 57
     },
     {
         "GrammarName": "So sánh hơn: Danh từ 1 は Danh từ 2 より [Tính từ] です",
         "Structure": "N1 は N2 より Adj です",
         "Meaning": "Mẫu câu này dùng để so sánh giữa hai vật, hai người hoặc hai địa điểm. \n- N1 là chủ thể được đưa ra so sánh.\n- N2 là tiêu chuẩn để so sánh. \n- Trợ từ 「より」 đặt sau vật làm chuẩn, tương đương với từ 'hơn' trong tiếng Việt.",
         "Example": "この くるまは あの くるまより はやいです。\n(Cái xe này nhanh hơn cái xe kia.)",
-        "LessonId": 41
+        "LessonId": 57
     },
     {
         "GrammarName": "So sánh lựa chọn: Danh từ 1 と Danh từ 2 と どちら가 [Tính từ] ですか",
         "Structure": "N1 と N2 と どちらが Adj ですか",
         "Meaning": "Dùng để hỏi sự lựa chọn giữa hai đối tượng. \n- 「どちら」 là nghi vấn từ dùng để chọn 1 trong 2. \n- Cách trả lời: Luôn dùng cụm 「[N1/N2] の ほうが [Tính từ] です」 (Cái N... thì [tính từ] hơn).",
         "Example": "さっかーと やきゅうと どちらが おもしろいですか。\nーさっかーの ほうが おもしろいです。\n(Bóng đá và bóng chày, môn nào thú vị hơn?\n-Bóng đá thú vị hơn.)",
-        "LessonId": 41
+        "LessonId": 57
     },
     {
         "GrammarName": "So sánh nhất: [Phạm vi] で [Nghi vấn từ] が いちばん [Tính từ] ですか",
         "Structure": "N [phạm vi] で なに/どこ/だれ/いつ が いちばん Adj ですか",
         "Meaning": "Mẫu câu này dùng để hỏi về đối tượng ưu việt nhất trong một phạm vi hoặc một nhóm.\n- Trợ từ 「で」 giới hạn phạm vi so sánh.\n- 「いちばん」 mang nghĩa là 'nhất'. \n- Nghi vấn từ thay đổi tùy theo đối tượng: 「なに」(vật), 「どこ」(địa điểm), 「だれ」(người), 「いつ」(thời gian).",
         "Example": "1ねんで いつが いchばん さむいですか。\nー2がつが いちばん さむいです。\n(Trong 1 năm, khi nào là lạnh nhất?\n-Tháng 2 là lạnh nhất.)",
-        "LessonId": 41
+        "LessonId": 57
     }
 ]

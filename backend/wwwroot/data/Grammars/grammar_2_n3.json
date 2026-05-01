@@ -1,0 +1,72 @@
+[
+    {
+        "GrammarName": "〜って",
+        "Structure": "N1 + って + N2",
+        "Meaning": "Sử dụng thay cho '~という' để nói tên của người hoặc vật, sự việc nào đó[cite: 2].",
+        "Example": "さっき、木村さんって人が訪ねてきましたよ。お知り合いですか。\n(Vừa nãy có người tên là Kimura đến thăm đấy. Anh có quen không?[cite: 2])",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜させてもらう / 〜させてくれる",
+        "Structure": "V-させる + て + もらう / くれる",
+        "Meaning": "Sử dụng khi xin phép người khác cho mình làm gì đó hoặc cảm ơn vì đã được cho phép làm điều đó[cite: 2].",
+        "Example": "ここに荷物を置かせてもらってもいいですか。\n(Tôi có thể xin phép để hành lý ở đây được không?[cite: 2])",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜させられる",
+        "Structure": "V-させられる (Thể bị sai khiến)",
+        "Meaning": "Sử dụng khi bị người khác bắt làm một việc mà bản thân mình không muốn làm nhưng vẫn phải thực hiện[cite: 2].",
+        "Example": "中学生のとき、先生にグラウンドを何周も走らされた。\n(Hồi học cấp hai, tôi bị thầy giáo bắt chạy nhiều vòng quanh sân vận động[cite: 2].)",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜がる",
+        "Structure": "Aい (bỏ い) / なA + がる",
+        "Meaning": "Sử dụng khi cảm xúc, mong muốn của một người thể hiện ra bộ dạng hoặc lời nói. Thông thường không dùng để nói về cảm xúc của chính mình[cite: 2].",
+        "Example": "妹は車をほしがっているが、父は絶対許さないと言っている。\n(Em gái tôi đang rất muốn có xe hơi, nhưng bố tôi nói tuyệt đối không cho phép[cite: 2].)",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜たとたん",
+        "Structure": "V-たとたん(に)",
+        "Meaning": "Giải thích tình huống hành động sau xảy ra ngay lập tức sau hành động trước. Lưu ý: không dùng nếu vế sau là ý chí của người nói[cite: 2].",
+        "Example": "立ち上がったとたん、目の前が暗くなった。\n(Vừa mới đứng dậy thì trước mắt tối sầm lại[cite: 2].)",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜出す",
+        "Structure": "V-ます + 出す",
+        "Meaning": "Sử dụng khi một hành động đột nhiên xảy ra hoặc bắt đầu một cách bất thình lình[cite: 2].",
+        "Example": "突然大雨が降り出し、人々はあわてて建物の中に入った。\n(Đột nhiên mưa lớn trút xuống, mọi người vội vàng chạy vào trong tòa nhà[cite: 2].)",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜ようとする / 〜ようとしない",
+        "Structure": "V-よう + とする",
+        "Meaning": "'〜ようとする' dùng khi định làm gì hoặc đang cố gắng làm gì. '〜ようとしない' bộc lộ sự chỉ trích khi ai đó không chịu làm gì đó[cite: 2].",
+        "Example": "生まれたばかりの馬の赤ちゃんが、一生けんめい立とうとしている。\n(Chú ngựa con vừa mới sinh đang cố gắng hết sức để đứng dậy[cite: 2].)",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜ことがある",
+        "Structure": "V-る / V-ない + ことがある",
+        "Meaning": "Sử dụng để nói rằng thỉnh thoảng hoặc đôi khi có một sự việc nào đó xảy ra[cite: 2].",
+        "Example": "この地方では4月でも雪が降ることがある。\n(Ở vùng này ngay cả tháng 4 thỉnh thoảng vẫn có tuyết rơi[cite: 2].)",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜させておく",
+        "Structure": "V-させる + て + おく",
+        "Meaning": "Chỉ thị ai đó tiếp tục hành động hoặc cứ để nguyên trạng thái hành động của ai đó mà không can thiệp. Thường dùng cho người dưới hoặc động vật[cite: 2].",
+        "Example": "夏に車の中で子どもを待たせておくのは危険ですよ。\n(Để trẻ con đợi trong xe hơi vào mùa hè là nguy hiểm đấy[cite: 2].)",
+        "LessonId": 257
+    },
+    {
+        "GrammarName": "〜られてしまう",
+        "Structure": "V-られる + て + しまう",
+        "Meaning": "Diễn tả việc bị người khác làm điều gì đó khiến mình cảm thấy phiền toái, khó chịu hoặc đáng tiếc[cite: 2].",
+        "Example": "あとで食べようと思っていたケーキを妹に食べられてしまった。\n(Cái bánh định để lát nữa ăn đã bị em gái ăn mất tiêu rồi[cite: 2].)",
+        "LessonId": 257
+    }
+]

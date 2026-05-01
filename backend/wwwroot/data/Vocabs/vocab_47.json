@@ -4,7 +4,7 @@
         "Reading": "あつまります",
         "Meaning": "tập trung, tập hợp [người ~]",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>駅<rt>えき</rt></ruby>の <ruby>前<rt>まえ</rt></ruby>に <ruby>人<rt>ひと</rt></ruby>が <ruby>集<rt>あつ</rt></ruby>まっています。\n(Mọi người đang tập trung ở trước ga.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "わかれます",
         "Meaning": "chia tay, ly hôn [người ~]",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>空港<rt>くうこう</rt></ruby>で <ruby>友達<rt>ともだち</rt></ruby>と <ruby>別<rt>わか</rt></ruby>れました。\n(Tôi đã chia tay bạn bè tại sân bay.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "ながいきします",
         "Meaning": "sống thọ, sống lâu",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>祖父<rt>そふ</rt></ruby>は <ruby>長生<rt>ながい</rt></ruby>きしました。\n(Ông tôi đã sống rất thọ.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "します",
         "Meaning": "có [âm thanh, mùi, vị]",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "いい <ruby>匂<rt>にお</rt></ruby>いが します。\n(Có mùi thơm.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "ひどい",
         "Meaning": "tồi tệ, kinh khủng, nghiêm trọng",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "ひどい <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>って います。\n(Trời đang mưa rất kinh khủng.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "こわい",
         "Meaning": "sợ, đáng sợ",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>夜<rt>よる</rt></ruby> <ruby>一人<rt>ひとり</rt></ruby>で <ruby>歩<rt>ある</rt></ruby>くのは <ruby>怖<rt>こわ</rt></ruby>いです。\n(Đi bộ một mình vào ban đêm thật đáng sợ.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "じっけん",
         "Meaning": "thí nghiệm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>科学<rt>かがく</rt></ruby>の <ruby>実験<rt>じっけん</rt></ruby>を します。\n(Làm thí nghiệm khoa học.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "データ",
         "Meaning": "dữ liệu, số liệu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "新しい <ruby>データ<rt></rt></ruby>を <ruby>集<rt>あつ</rt></ruby>めて います。\n(Tôi đang thu thập dữ liệu mới.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "じんこう",
         "Meaning": "dân số",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>人口<rt>じんこう</rt></ruby>が <ruby>減<rt>へ</rt></ruby>って います。\n(Dân số Nhật Bản đang giảm.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "におい",
         "Meaning": "mùi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "どこかで <ruby>変<rt>へん</rt></ruby>な <ruby>匂<rt>にお</rt></ruby>いが します。\n(Ở đâu đó có mùi lạ.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "かがく",
         "Meaning": "khoa học",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>科学<rt>かがく</rt></ruby>の <ruby>進歩<rt>しんぽ</rt></ruby>は <ruby>速<rt>はや</rt></ruby>いです。\n(Sự tiến bộ của khoa học rất nhanh.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "いがく",
         "Meaning": "y học",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>大学<rt>だいがく</rt></ruby>で <ruby>医学<rt>いがく</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>して います。\n(Tôi đang học y học tại trường đại học.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "ぶんがく",
         "Meaning": "văn học",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>文学<rt>ぶんがく</rt></ruby>に <ruby>興味<rt>きょうみ</rt></ruby>が あります。\n(Tôi có hứng thú với văn học Nhật Bản.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "パトカー",
         "Meaning": "xe tuần tra (của cảnh sát)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>パトカー<rt></rt></ruby>が <ruby>来<rt>き</rt></ruby>ました。\n(Xe tuần tra đã đến.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "きゅうきゅうしゃ",
         "Meaning": "xe cấp cứu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>を <ruby>呼<rt>よ</rt></ruby>んで ください。\n(Hãy gọi xe cấp cứu.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "さんせい",
         "Meaning": "tán thành, đồng ý",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "その <ruby>意見<rt>いけん</rt></ruby>に <ruby>賛成<rt>さんせい</rt></ruby>です。\n(Tôi tán thành với ý kiến đó.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "はんたい",
         "Meaning": "phản đối",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "その <ruby>計画<rt>けいかく</rt></ruby>に <ruby>反対<rt>はんたい</rt></ruby>です。\n(Tôi phản đối kế hoạch đó.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "だいとうりょう",
         "Meaning": "tổng thống",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "アメリカの <ruby>大統領<rt>だいとうりょう</rt></ruby>が <ruby>来日<rt>らいにち</rt></ruby>します。\n(Tổng thống Mỹ sẽ sang thăm Nhật Bản.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "～によると",
         "Meaning": "theo như ~ (nguồn tin)",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>天気予報<rt>てんきよほう</rt></ruby>に よると、<ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>だそうです。\n(Theo dự báo thời tiết, nghe nói ngày mai trời sẽ mưa.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "こんやくします",
         "Meaning": "đính hôn",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 73,
+        "LessonId": 231,
         "Example": "<ruby>二人<rt>ふたり</rt></ruby>は <ruby>婚約<rt>こんやく</rt></ruby>したそうです。\n(Nghe nói hai người họ đã đính hôn.)"
     }
 ]

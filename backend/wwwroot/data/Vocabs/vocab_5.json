@@ -4,7 +4,7 @@
         "Reading": "いきます",
         "Meaning": "đi",
         "PartOfSpeech": "Động từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "ぎんこうへ いきます。\n(Tôi đi đến ngân hàng.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "きます",
         "Meaning": "đến",
         "PartOfSpeech": "Động từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "あした ここへ きます。\n(Ngày mai tôi sẽ đến đây.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "かえります",
         "Meaning": "về",
         "PartOfSpeech": "Động từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "うちへ かえります。\n(Tôi đi về nhà.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "がっこう",
         "Meaning": "trường học",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "がっこうへ いきます。\n(Tôi đi đến trường.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "スーパー",
         "Meaning": "siêu thị",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "スーパーへ かいに いきます。\n(Tôi đi siêu thị mua đồ.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "えき",
         "Meaning": "nhà ga",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "えきは どこですか。\n(nhà ga ở đâu vậy?)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "ひこうき",
         "Meaning": "máy bay",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "ひこうきで 日本へ いきます。\n(Tôi đi Nhật bằng máy bay.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "ふね",
         "Meaning": "thuyền, tàu thủy",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "ふねで いきます。\n(Tôi đi bằng tàu thủy.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "でんしゃ",
         "Meaning": "tàu điện",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "でんしゃで かいしゃへ いきます。\n(Tôi đi làm bằng tàu điện.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "ちかてつ",
         "Meaning": "tàu điện ngầm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "ちかてつに のります。\n(Tôi lên tàu điện ngầm.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "しんかんせん",
         "Meaning": "tàu siêu tốc Shinkansen",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "しんかんせんで おおさかへ いきます。\n(Tôi đi Osaka bằng tàu Shinkansen.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "バス",
         "Meaning": "xe buýt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "バスで がっこうへ いきます。\n(Tôi đi học bằng xe buýt.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "タクシー",
         "Meaning": "xe taxi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "タクシーで うちへ かえりました。\n(Tôi đã về nhà bằng taxi.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "じてんしゃ",
         "Meaning": "xe đạp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "じてんしゃで スーパーへ いきます。\n(Tôi đi siêu thị bằng xe đạp.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "あるいて",
         "Meaning": "đi bộ",
         "PartOfSpeech": "Trạng từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "あるいて えきへ いきます。\n(Tôi đi bộ đến nhà ga.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "ひと",
         "Meaning": "người",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "あの ひとは だれですか。\n(Người kia là ai vậy?)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "ともだち",
         "Meaning": "bạn bè",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "ともだちと 日本へ きました。\n(Tôi đã đến Nhật cùng với bạn.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "かれ",
         "Meaning": "anh ấy, bạn trai",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "かれと えいがを みます。\n(Tôi đi xem phim với anh ấy.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "かのじょ",
         "Meaning": "cô ấy, bạn gái",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "かのじょと デパートへ いきます。\n(Tôi đi bách hóa với bạn gái.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "かぞく",
         "Meaning": "gia đình",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "かぞくと にほんへ きました。\n(Tôi đã đến Nhật cùng gia đình.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "ひとりで",
         "Meaning": "một mình",
         "PartOfSpeech": "Trạng từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "ひとりで にほんへ きました。\n(Tôi đã đến Nhật một mình.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "せんしゅう",
         "Meaning": "tuần trước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "せんしゅう どこへ いきましたか。\n(Tuần trước bạn đã đi đâu?)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "こんしゅう",
         "Meaning": "tuần này",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "こんしゅうは いそがしいです。\n(Tuần này tôi bận.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "らいしゅう",
         "Meaning": "tuần sau",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "らいしゅう きょうとへ いきます。\n(Tuần sau tôi đi Kyoto.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "せんげつ",
         "Meaning": "tháng trước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "せんげつ にほんへ きました。\n(Tôi đã đến Nhật tháng trước.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "こんげつ",
         "Meaning": "tháng này",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "こんげつは とても あついです。\n(Tháng này trời rất nóng.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "らいげつ",
         "Meaning": "tháng sau",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "らいげつ べトナムへ かえります。\n(Tháng sau tôi về Việt Nam.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "きょねん",
         "Meaning": "năm ngoái",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "きょねん 日本へ きました。\n(Tôi đã đến Nhật năm ngoái.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "ことし",
         "Meaning": "năm nay",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "ことしは 2026ねんです。\n(Năm nay là năm 2026.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "らいねん",
         "Meaning": "năm sau",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "らいねん けっこんします。\n(Năm sau tôi sẽ kết hôn.)"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "なんねん",
         "Meaning": "năm mấy",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "なんねんに にほんへ きましたか。\n(Bạn đã đến Nhật vào năm mấy?)"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "なんがつ",
         "Meaning": "tháng mấy",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "いま なんがつですか。\n(Bây giờ là tháng mấy?)"
     },
     {
@@ -260,7 +260,7 @@
         "Reading": "いつ",
         "Meaning": "khi nào",
         "PartOfSpeech": "Đại từ nghi vấn",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "いつ べんきょうしますか。\n(Khi nào bạn học bài?)"
     },
     {
@@ -268,7 +268,7 @@
         "Reading": "たんじょうび",
         "Meaning": "sinh nhật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 10,
+        "LessonId": 21,
         "Example": "たんじょうびは いつですか。\n(Sinh nhật bạn là khi nào?)"
     }
 ]

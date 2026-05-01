@@ -4,7 +4,7 @@
         "Reading": "のります",
         "Meaning": "lên [tàu]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "でんしゃに のります。\n(Tôi lên tàu điện.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "おります",
         "Meaning": "xuống [tàu]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "えきで おります。\n(Tôi xuống ở nhà ga.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "のりかえます",
         "Meaning": "chuyển, đổi [tàu]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "とうきょうで のりかえます。\n(Tôi chuyển tàu ở Tokyo.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "あびます",
         "Meaning": "tắm [vòi hoa sen]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "しゃわーを あびます。\n(Tôi tắm vòi hoa sen.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "いれます",
         "Meaning": "cho vào, bỏ vào",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "かばんに ほんを いれます。\n(Tôi cho sách vào cặp.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "だします",
         "Meaning": "lấy ra, rút [tiền]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "おかねを だします。\n(Tôi rút tiền.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "はいります",
         "Meaning": "vào [đại học]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "だいがくに はいります。\n(Tôi vào đại học.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "でます",
         "Meaning": "ra, tốt nghiệp [đại học]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "だいがくを でます。\n(Tôi tốt nghiệp đại học.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "やめます",
         "Meaning": "bỏ, thôi [việc]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "かいしゃを やめます。\n(Tôi nghỉ việc ở công ty.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "おします",
         "Meaning": "bấm, ấn [nút]",
         "PartOfSpeech": "Động từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "ぼたんを おして ください。\n(Hãy ấn nút.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "わかい",
         "Meaning": "trẻ",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "あの ひとは わかいです。\n(Người kia trẻ.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "ながい",
         "Meaning": "dài",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "かみが ながいです。\n(Tóc dài.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "みじかい",
         "Meaning": "ngắn",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "ぺんが みじかいです。\n(Cái bút ngắn.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "あかるい",
         "Meaning": "sáng sủa",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "へやが あかるいです。\n(Phòng sáng sủa.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "くらい",
         "Meaning": "tối",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "へやが くらいです。\n(Phòng tối.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "せがたかい",
         "Meaning": "cao (dáng người)",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "あの ひとは せがたかいです。\n(Người kia cao.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "あたまがいい",
         "Meaning": "thông minh",
         "PartOfSpeech": "Tính từ đuôi i",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "かのじょは あたまが いいです。\n(Cô ấy thông minh.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "からだ",
         "Meaning": "cơ thể",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "からだに いいです。\n(Tốt cho cơ thể.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "あたま",
         "Meaning": "đầu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "あたまが いたいです。\n(Đau đầu.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "かみ",
         "Meaning": "tóc",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "かみを きります。\n(Cắt tóc.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "かお",
         "Meaning": "khuôn mặt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "かおを あらいます。\n(Rửa mặt.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "め",
         "Meaning": "mắt",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "めが おおきいです。\n(Mắt to.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "みみ",
         "Meaning": "tai",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "みみが いたいです。\n(Đau tai.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "くち",
         "Meaning": "miệng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "くちを あけて ください。\n(Hãy mở miệng ra.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "は",
         "Meaning": "răng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "はを みがきます。\n(Đánh răng.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "おなか",
         "Meaning": "bụng",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "おなかが すきました。\n(Đói bụng.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "あし",
         "Meaning": "chân",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "あしが ながいですね。\n(Chân dài nhỉ.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "さーびす",
         "Meaning": "dịch vụ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "さーびすが いいです。\n(Dịch vụ tốt.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "じょぎんぐ",
         "Meaning": "chạy bộ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "まいあさ じょぎんぐを します。\n(Mỗi sáng tôi chạy bộ.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "しゃわー",
         "Meaning": "vòi hoa sen",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 21,
+        "LessonId": 76,
         "Example": "しゃわーを あびました。\n(Tôi đã tắm vòi hoa sen rồi.)"
     }
 ]

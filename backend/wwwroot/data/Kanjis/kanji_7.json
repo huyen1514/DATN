@@ -5,7 +5,7 @@
         "Onyomi": "ダイ, タイ",
         "Kunyomi": "おお.きい",
         "Example": "大きい (おおきい): To, lớn; 大学 (だいがく): Trường đại học",
-        "LessonId": 1008
+        "LessonId": 35
     },
     {
         "Character": "小",
@@ -13,7 +13,7 @@
         "Onyomi": "ショウ",
         "Kunyomi": "ちい.さい, こ, お",
         "Example": "小さい (ちいさい): Nhỏ; 小学生 (しょうがくせい): Học sinh tiểu học",
-        "LessonId": 1008
+        "LessonId": 35
     },
     {
         "Character": "高",
@@ -21,7 +21,7 @@
         "Onyomi": "コウ",
         "Kunyomi": "たか.い",
         "Example": "高い (たかい): Cao, đắt; 高校 (こうこう): Trường cấp 3",
-        "LessonId": 1008
+        "LessonId": 35
     },
     {
         "Character": "友",
@@ -29,7 +29,7 @@
         "Onyomi": "ユウ",
         "Kunyomi": "とも",
         "Example": "友だち (ともだち): Bạn bè; 親友 (しんゆう): Bạn thân",
-        "LessonId": 1008
+        "LessonId": 35
     },
     {
         "Character": "入",
@@ -37,7 +37,7 @@
         "Onyomi": "ニュウ",
         "Kunyomi": "はい.る, い.れる",
         "Example": "入る (はい.る): Đi vào; 入り口 (いりぐち): Lối vào",
-        "LessonId": 1008
+        "LessonId": 35
     },
     {
         "Character": "出",
@@ -45,7 +45,7 @@
         "Onyomi": "シュツ, シュッ",
         "Kunyomi": "で.る, だ.す",
         "Example": "出る (でる): Đi ra; 出口 (でぐち): Lối ra",
-        "LessonId": 1008
+        "LessonId": 35
     },
     {
         "Character": "門",
@@ -53,6 +53,6 @@
         "Onyomi": "モン",
         "Kunyomi": "かど",
         "Example": "門 (もん): Cổng; 専門 (せんもん): Chuyên môn",
-        "LessonId": 1008
+        "LessonId": 35
     }
 ]

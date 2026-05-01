@@ -1,0 +1,194 @@
+[
+    {
+        "Character": "駅",
+        "Meaning": "Nhà ga (Dịch)",
+        "Onyomi": "エキ",
+        "Kunyomi": "-",
+        "Example": "駅員 (えきいん): Nhân viên nhà ga; 東京駅 (とうきょうえき): Ga Tokyo",
+        "LessonId": 150
+    },
+    {
+        "Character": "鉄",
+        "Meaning": "Sắt, Thép (Thiết)",
+        "Onyomi": "テツ",
+        "Kunyomi": "-",
+        "Example": "鉄道 (てつどう): Đường sắt; 地下鉄 (ちかてつ): Tàu điện ngầm",
+        "LessonId": 150
+    },
+    {
+        "Character": "乗",
+        "Meaning": "Lên xe, Cưỡi (Thừa)",
+        "Onyomi": "ジョウ",
+        "Kunyomi": "の-る, の-せる",
+        "Example": "乗客 (じょうきゃく): Hành khách; 乗り換える (のりかえる): Đổi xe",
+        "LessonId": 150
+    },
+    {
+        "Character": "降",
+        "Meaning": "Xuống xe, Rơi (Giáng/Hàng)",
+        "Onyomi": "コウ",
+        "Kunyomi": "お-りる, お-ろす, ふ-る",
+        "Example": "降車 (こうしゃ): Xuống xe; 雨が降る (あめがふる): Trời mưa",
+        "LessonId": 150
+    },
+    {
+        "Character": "開",
+        "Meaning": "Mở (Khai)",
+        "Onyomi": "カイ",
+        "Kunyomi": "あ-く, あ-ける, ひら-く",
+        "Example": "開始 (かいし): Bắt đầu; 開く (あく): Mở",
+        "LessonId": 150
+    },
+    {
+        "Character": "閉",
+        "Meaning": "Đóng (Bế)",
+        "Onyomi": "ヘイ",
+        "Kunyomi": "し-まる, し-める",
+        "Example": "閉店 (へいてん): Đóng cửa hàng; 閉める (しめる): Đóng",
+        "LessonId": 150
+    },
+    {
+        "Character": "発",
+        "Meaning": "Rời đi, Phát sinh (Phát)",
+        "Onyomi": "ハツ, ホツ",
+        "Kunyomi": "-",
+        "Example": "出発 (しゅっぱつ): Xuất phát; 発表 (はっぴょう): Phát biểu",
+        "LessonId": 150
+    },
+    {
+        "Character": "着",
+        "Meaning": "Đến, Mặc (Trước)",
+        "Onyomi": "チャク",
+        "Kunyomi": "き-る, つ-く",
+        "Example": "到着 (とうちゃく): Đến nơi; 着る (きる): Mặc",
+        "LessonId": 150
+    },
+    {
+        "Character": "通",
+        "Meaning": "Đi qua, Đi học (Thông)",
+        "Onyomi": "ツウ",
+        "Kunyomi": "とお-る, とお-す, かよ-う",
+        "Example": "交通 (こうつう): Giao thông; 通う (かよう): Đi lại (đều đặn)",
+        "LessonId": 150
+    },
+    {
+        "Character": "交",
+        "Meaning": "Giao nhau, Trao đổi (Giao)",
+        "Onyomi": "コウ",
+        "Kunyomi": "まじ-わる",
+        "Example": "交差点 (こうさてん): Ngã tư; 交番 (こうばん): Đồn cảnh sát",
+        "LessonId": 150
+    },
+    {
+        "Character": "台",
+        "Meaning": "Cái giá, Bệ, Đơn vị đếm máy móc (Đài)",
+        "Onyomi": "ダイ, タイ",
+        "Kunyomi": "-",
+        "Example": "台所 (だいどころ): Nhà bếp; 二台 (にだい): 2 chiếc (máy móc)",
+        "LessonId": 150
+    },
+    {
+        "Character": "止",
+        "Meaning": "Dừng lại (Chỉ)",
+        "Onyomi": "シ",
+        "Kunyomi": "と-まる, と-める",
+        "Example": "中止 (ちゅうし): Hủy bỏ; 止まる (とまる): Dừng lại",
+        "LessonId": 150
+    },
+    {
+        "Character": "色",
+        "Meaning": "Màu sắc (Sắc)",
+        "Onyomi": "ショク, シキ",
+        "Kunyomi": "いろ",
+        "Example": "景色 (けしき): Phong cảnh; 色 (いろ): Màu sắc",
+        "LessonId": 150
+    },
+    {
+        "Character": "赤",
+        "Meaning": "Màu đỏ (Xích)",
+        "Onyomi": "セキ",
+        "Kunyomi": "あか, あか-い",
+        "Example": "赤字 (あかじ): Lỗ/Thâm hụt; 赤ちゃん (あかちゃん): Em bé",
+        "LessonId": 150
+    },
+    {
+        "Character": "黄",
+        "Meaning": "Màu vàng (Hoàng)",
+        "Onyomi": "コウ",
+        "Kunyomi": "き",
+        "Example": "黄金 (おうごん): Vàng; 黄色 (きいろ): Màu vàng",
+        "LessonId": 150
+    },
+    {
+        "Character": "青",
+        "Meaning": "Màu xanh (Thanh)",
+        "Onyomi": "セイ",
+        "Kunyomi": "あお, あお-い",
+        "Example": "青年 (せいねん): Thanh niên; 青空 (あおぞら): Bầu trời xanh",
+        "LessonId": 150
+    },
+    {
+        "Character": "病",
+        "Meaning": "Bệnh (Bệnh)",
+        "Onyomi": "ビョウ",
+        "Kunyomi": "やまい",
+        "Example": "病院 (びょういん): Bệnh viện; 病気 (びょうき): Bệnh tật",
+        "LessonId": 150
+    },
+    {
+        "Character": "院",
+        "Meaning": "Viện (Viện)",
+        "Onyomi": "イン",
+        "Kunyomi": "-",
+        "Example": "入院 (にゅういん): Nhập viện; 大学院 (だいがくいん): Cao học",
+        "LessonId": 150
+    },
+    {
+        "Character": "医",
+        "Meaning": "Y học, Thầy thuốc (Y)",
+        "Onyomi": "イ",
+        "Kunyomi": "-",
+        "Example": "医者 (いしゃ): Bác sĩ; 医学 (いがく): Y học",
+        "LessonId": 150
+    },
+    {
+        "Character": "科",
+        "Meaning": "Khoa, Ngành (Khoa)",
+        "Onyomi": "カ",
+        "Kunyomi": "-",
+        "Example": "外科 (げか): Ngoại khoa; 教科書 (きょうかしょ): Sách giáo khoa",
+        "LessonId": 150
+    },
+    {
+        "Character": "薬",
+        "Meaning": "Thuốc (Dược)",
+        "Onyomi": "ヤク",
+        "Kunyomi": "くすり",
+        "Example": "薬局 (やっきょく): Hiệu thuốc; 薬 (くすり): Thuốc",
+        "LessonId": 150
+    },
+    {
+        "Character": "待",
+        "Meaning": "Đợi (Đãi)",
+        "Onyomi": "タイ",
+        "Kunyomi": "ま-つ",
+        "Example": "期待 (きたい): Kỳ vọng; 待つ (まつ): Đợi",
+        "LessonId": 150
+    },
+    {
+        "Character": "合",
+        "Meaning": "Hợp, Phù hợp (Hợp)",
+        "Onyomi": "ゴウ",
+        "Kunyomi": "あ-う, あ-わせる",
+        "Example": "試合 (しあい): Trận đấu; 間に合う (まにあう): Kịp lúc",
+        "LessonId": 150
+    },
+    {
+        "Character": "計",
+        "Meaning": "Kế hoạch, Đo đạc (Kế)",
+        "Onyomi": "ケイ",
+        "Kunyomi": "はか-る",
+        "Example": "時計 (とけい): Đồng hồ; 計画 (けいかく): Kế hoạch",
+        "LessonId": 150
+    }
+]

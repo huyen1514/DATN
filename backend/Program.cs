@@ -266,32 +266,67 @@ using (var scope = app.Services.CreateScope())
             .Where(level => JlptLevels.SeedOrder.Contains(level.LevelName))
             .ToDictionaryAsync(level => level.LevelName, level => level);
 
-        string[] skills = ["Từ vựng", "Ngữ pháp", "Nghe hiểu", "Đọc hiểu", "Kanji"];
+        // --- BẮT ĐẦU PHẦN ĐÃ SỬA ---
+        // Thay vì dùng string[] skills chung cho mọi level, ta định nghĩa chi tiết cho từng Level và từng Skill
         var lessonSeeds = new[]
         {
-            new { LevelName = JlptLevels.N5, Start = 1, End = 25 },
-            new { LevelName = JlptLevels.N4, Start = 26, End = 50 },
-            new { LevelName = JlptLevels.N3, Start = 1, End = 12 }
+            new 
+            { 
+                LevelName = JlptLevels.N5, 
+                SkillConfigs = new[] 
+                {
+                    new { SkillName = "Từ vựng", Start = 1, End = 25 },
+                    new { SkillName = "Ngữ pháp", Start = 1, End = 25 },
+                    new { SkillName = "Kanji", Start = 1, End = 24 },
+                    new { SkillName = "Đọc hiểu", Start = 1, End = 10 }, 
+                    new { SkillName = "Nghe hiểu", Start = 1, End = 15 }  
+                }
+            },
+            new 
+            { 
+                LevelName = JlptLevels.N4, 
+                SkillConfigs = new[] 
+                {
+                    new { SkillName = "Từ vựng", Start = 26, End = 50 },
+                    new { SkillName = "Ngữ pháp", Start = 26, End = 50 },
+                    new { SkillName = "Kanji", Start = 1, End = 9 },
+                    new { SkillName = "Đọc hiểu", Start = 1, End = 10 }, 
+                    new { SkillName = "Nghe hiểu", Start = 1, End = 15 }  
+                }
+            },
+            new 
+            { 
+                LevelName = JlptLevels.N3, 
+                SkillConfigs = new[] 
+                {
+                    new { SkillName = "Từ vựng", Start = 1, End = 12 },
+                    new { SkillName = "Ngữ pháp", Start = 1, End = 11 },
+                    new { SkillName = "Kanji", Start = 1, End = 20 },
+                    new { SkillName = "Đọc hiểu", Start = 1, End = 10 }, 
+                    new { SkillName = "Nghe hiểu", Start = 1, End = 15 }  
+                }
+            }
         };
 
         var existingLessonKeys = await context.Lessons
             .Select(lesson => new { lesson.LevelId, lesson.LessonName, lesson.SkillType })
             .ToListAsync();
 
-        foreach (var lessonSeed in lessonSeeds)
+        foreach (var levelSeed in lessonSeeds)
         {
-            var level = levelsByName[lessonSeed.LevelName];
+            var level = levelsByName[levelSeed.LevelName];
 
-            for (var lessonNumber = lessonSeed.Start; lessonNumber <= lessonSeed.End; lessonNumber++)
+            // Duyệt qua từng cấu hình kỹ năng (SkillConfig) thay vì mảng skills chung
+            foreach (var skillConfig in levelSeed.SkillConfigs)
             {
-                var lessonName = $"Bài {lessonNumber}";
-
-                foreach (var skill in skills)
+                for (var lessonNumber = skillConfig.Start; lessonNumber <= skillConfig.End; lessonNumber++)
                 {
+                    var lessonName = $"Bài {lessonNumber}";
+
                     var lessonExists = existingLessonKeys.Any(existing =>
                         existing.LevelId == level.LevelId &&
                         existing.LessonName == lessonName &&
-                        existing.SkillType == skill);
+                        existing.SkillType == skillConfig.SkillName);
 
                     if (lessonExists)
                     {
@@ -301,7 +336,7 @@ using (var scope = app.Services.CreateScope())
                     context.Lessons.Add(new Lesson
                     {
                         LessonName = lessonName,
-                        SkillType = skill,
+                        SkillType = skillConfig.SkillName,
                         LevelId = level.LevelId,
                     });
 
@@ -309,13 +344,14 @@ using (var scope = app.Services.CreateScope())
                     {
                         level.LevelId,
                         LessonName = lessonName,
-                        SkillType = skill
+                        SkillType = skillConfig.SkillName
                     });
                 }
             }
         }
 
         await context.SaveChangesAsync();
+        // --- KẾT THÚC PHẦN ĐÃ SỬA ---
 
         if (!context.Users.Any(u => u.Role == "Admin"))
         {

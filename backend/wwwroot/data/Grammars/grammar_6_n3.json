@@ -1,0 +1,79 @@
+[
+    {
+        "GrammarName": "〜おかげで",
+        "Structure": "PI + おかげ / [なAだな / Nだの]",
+        "Meaning": "Sử dụng khi nói lên tâm trạng vui mừng, sự biết ơn vì nhờ có “~” là nguyên nhân đưa đến kết quả tốt[cite: 2].",
+        "Example": "みんなが手伝ってくれたおかげで、引っ越しが早く済んだ。\n(Nhờ mọi người giúp đỡ mà việc chuyển nhà đã xong sớm[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜を通じて / 〜を通して (Thời gian)",
+        "Structure": "[時間の言葉] + を通じて / を通して",
+        "Meaning": "Dùng kết hợp với các từ chỉ thời gian khi muốn nói rằng một trạng thái nào đó diễn ra suốt trong khoảng thời gian đó[cite: 2].",
+        "Example": "京都は1年を通じてたくさんの観光客が訪れる。\n(Kyoto có rất nhiều khách du lịch ghé thăm suốt cả năm[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜ませんか / 〜ないですか / 〜ありませんか",
+        "Structure": "V-ます + ませんか / [Aく / なじゃ / Nじゃ] + ないですか",
+        "Meaning": "Sử dụng khi đòi hỏi sự đồng ý ở người nghe kiểu như là “Tôi nghĩ, bạn cũng nghĩ giống như vậy đúng không?”[cite: 2].",
+        "Example": "最近、自転車通勤する人が増えていませんか。\n(Gần đây số người đi làm bằng xe đạp đang tăng lên đúng không?[cite: 2])",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜というと / 〜といえば / 〜といったら",
+        "Structure": "N + というと / といえば / といったら",
+        "Meaning": "Khi nói tới “~” thì nhiều người sẽ hình dung ra điều gì đó, hoặc liên tưởng tới cái đặc trưng nhất của sự vật đó. Thường nêu ra những cái nổi tiếng hoặc tiêu biểu[cite: 2].",
+        "Example": "日本の花というと、桜がすぐ頭に浮かぶ。\n(Nói đến hoa của Nhật Bản là tôi nghĩ ngay đến hoa anh đào[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜べき / 〜べきだった",
+        "Structure": "V-る + べきだ / べき + N",
+        "Meaning": "“〜べき” dùng khi nói việc gì đó là đương nhiên hoặc đúng đắn. “〜べきだった” dùng khi hối hận về việc nên làm mà đã không làm[cite: 2].",
+        "Example": "人にお金を借りたらすぐに返すべきだ。\n(Nếu vay tiền người khác thì nên trả ngay[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜にとって",
+        "Structure": "N + にとって",
+        "Meaning": "Sử dụng khi nói điều bạn cảm thấy khi đứng trên quan điểm ở cương vị của “~” mà xem xét[cite: 2].",
+        "Example": "だれにとってもいちばん大切なものは健康だと思います。\n(Tôi nghĩ đối với bất kỳ ai, sức khỏe là điều quan trọng nhất[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜ば 〜ほど",
+        "Structure": "[V-ば + V-る / Aければ + Aい / ななら + なな] + ほど",
+        "Meaning": "Sử dụng khi nói một sự việc gì khác sẽ thay đổi tương ứng với mức độ của một sự việc gì đó[cite: 2].",
+        "Example": "言葉を勉強すればするほどその国への理解 cũng深まると言われている。\n(Người ta nói rằng càng học ngôn ngữ thì sự hiểu biết về quốc gia đó càng sâu sắc[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜による / 〜によって (Nguyên nhân)",
+        "Structure": "N + による + N / によって",
+        "Meaning": "Sử dụng khi nói rằng ~ là nguyên nhân, lý do làm cho một sự việc nào đó xảy ra[cite: 2].",
+        "Example": "今回の大事故はスピードの出しすぎによるものだそうだ。\n(Nghe nói vụ tai nạn lớn lần này là do chạy quá tốc độ[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜ばかりでなく",
+        "Structure": "PI + ばかりでなく [なAだな / Nだ]",
+        "Meaning": "Sử dụng với ý nghĩa “không chỉ A mà B cũng”[cite: 2].",
+        "Example": "当社の社員食堂は安くておいしいばかりでなく、栄養のバランスもいいので評判になっています。\n(Nhà ăn của công ty chúng tôi không chỉ rẻ và ngon mà còn nổi tiếng vì cân bằng dinh dưỡng tốt[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜たび(に)",
+        "Structure": "V-る / Nの + たび(に)",
+        "Meaning": "Sử dụng để nói về một việc được thực hiện lặp đi lặp lại mỗi khi làm một hành động nào đó[cite: 2].",
+        "Example": "父は出張のたびにお土産を買ってきてくれる。\n(Mỗi lần đi công tác bố tôi đều mua quà về cho[cite: 2].)",
+        "LessonId": 277
+    },
+    {
+        "GrammarName": "〜はず",
+        "Structure": "PI + はず [なAだな / Nだの]",
+        "Meaning": "Sử dụng khi muốn nói rằng vì có lý do xác thực nào đó nên chắc chắn kết quả là “~”[cite: 2].",
+        "Example": "昨日速達で出しましたから、遅くても明日には着くはずです。\n(Vì hôm qua tôi đã gửi chuyển phát nhanh nên muộn nhất là ngày mai chắc chắn sẽ tới[cite: 2].)",
+        "LessonId": 277
+    }
+]

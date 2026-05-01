@@ -5,7 +5,7 @@
         "Onyomi": "ショク",
         "Kunyomi": "た.べる",
         "Example": "食べる (たべる): Ăn; 食事 (しょくじ): Bữa ăn; 食べ物 (たべもの): Đồ ăn",
-        "LessonId": 1013
+        "LessonId": 60
     },
     {
         "Character": "飲",
@@ -13,7 +13,7 @@
         "Onyomi": "イン",
         "Kunyomi": "の.む",
         "Example": "飲む (のむ): Uống; 飲み物 (のみもの): Đồ uống; 飲食店 (いんしょくてん): Cửa hàng ăn uống",
-        "LessonId": 1013
+        "LessonId": 60
     },
     {
         "Character": "買",
@@ -21,7 +21,7 @@
         "Onyomi": "バイ",
         "Kunyomi": "か.う",
         "Example": "買う (かう): Mua; 買い物 (かいもの): Mua sắm; 売買 (ばいばい): Mua bán",
-        "LessonId": 1013
+        "LessonId": 60
     },
     {
         "Character": "書",
@@ -29,7 +29,7 @@
         "Onyomi": "ショ",
         "Kunyomi": "か.く",
         "Example": "書く (かく): Viết; 読書 (どくしょ): Đọc sách; 図書館 (としょかん): Thư viện",
-        "LessonId": 1013
+        "LessonId": 60
     },
     {
         "Character": "読",
@@ -37,7 +37,7 @@
         "Onyomi": "ドク",
         "Kunyomi": "よ.む",
         "Example": "読む (よむ): Đọc; 読書 (どくしょ): Việc đọc sách; 読解 (どっかい): Đọc hiểu",
-        "LessonId": 1013
+        "LessonId": 60
     },
     {
         "Character": "話",
@@ -45,7 +45,7 @@
         "Onyomi": "ワ",
         "Kunyomi": "はな.す, はなし",
         "Example": "話す (はなす): Nói chuyện; 電話 (でんわ): Điện thoại; 会話 (かいわ): Hội thoại",
-        "LessonId": 1013
+        "LessonId": 60
     },
     {
         "Character": "語",
@@ -53,6 +53,6 @@
         "Onyomi": "ゴ",
         "Kunyomi": "かた.る",
         "Example": "日本語 (にほんご): Tiếng Nhật; 外国語 (がいこくご): Ngoại ngữ; 物語 (ものがたり): Truyện/Tiểu thuyết",
-        "LessonId": 1013
+        "LessonId": 60
     }
 ]

@@ -1,0 +1,162 @@
+[
+    {
+        "Character": "戦",
+        "Meaning": "Chiến đấu, cuộc chiến (Chiến)",
+        "Onyomi": "セン",
+        "Kunyomi": "たたか-う, いくさ",
+        "Example": "試合で戦う (Chiến đấu trong trận đấu); 作戦 (Tác chiến/Chiến thuật)",
+        "LessonId": 275
+    },
+    {
+        "Character": "決",
+        "Meaning": "Quyết định (Quyết)",
+        "Onyomi": "ケツ",
+        "Kunyomi": "き-まる, き-める",
+        "Example": "決定 (Quyết định); 決意 (Quyết tâm/Quyết ý)",
+        "LessonId": 275
+    },
+    {
+        "Character": "勝",
+        "Meaning": "Thắng, vượt trội (Thắng)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "か-つ, まさ-る",
+        "Example": "優勝 (Vô địch); 決勝 (Trận chung kết)",
+        "LessonId": 275
+    },
+    {
+        "Character": "負",
+        "Meaning": "Thua, mang vác (Phụ)",
+        "Onyomi": "フ",
+        "Kunyomi": "ま-ける, まか-す, お-う",
+        "Example": "負ける (Thua); 負担 (Gánh nặng/Phụ đảm)",
+        "LessonId": 275
+    },
+    {
+        "Character": "代",
+        "Meaning": "Thay thế, thời đại, giá cả (Đại)",
+        "Onyomi": "ダイ, タイ",
+        "Kunyomi": "か-わる, か-える, よ, しろ",
+        "Example": "時代 (Thời đại); 代金 (Tiền thanh toán)",
+        "LessonId": 275
+    },
+    {
+        "Character": "表",
+        "Meaning": "Biểu hiện, mặt ngoài (Biểu)",
+        "Onyomi": "ヒョウ",
+        "Kunyomi": "あらわ-れる, あらわ-す, おもて",
+        "Example": "代表 (Đại biểu); 発表 (Phát biểu)",
+        "LessonId": 275
+    },
+    {
+        "Character": "第",
+        "Meaning": "Thứ (đếm số thứ tự) (Đệ)",
+        "Onyomi": "ダイ",
+        "Kunyomi": "-",
+        "Example": "第一 (Thứ nhất); Thứ nhất (だいいち)",
+        "LessonId": 275
+    },
+    {
+        "Character": "回",
+        "Meaning": "Vòng, lần (Hồi)",
+        "Onyomi": "カイ, エ",
+        "Kunyomi": "まわ-る, まわ-す",
+        "Example": "回る (Xoay quanh); 今回 (Lần này)",
+        "LessonId": 275
+    },
+    {
+        "Character": "記",
+        "Meaning": "Ghi chép (Ký)",
+        "Onyomi": "キ",
+        "Kunyomi": "しる-す",
+        "Example": "日記 (Nhật ký); 記事 (Phóng sự/Bài báo)",
+        "LessonId": 275
+    },
+    {
+        "Character": "録",
+        "Meaning": "Ghi lại (Lục)",
+        "Onyomi": "ロク",
+        "Kunyomi": "-",
+        "Example": "記録 (Kỷ lục/Ghi chép); 録画 (Ghi hình)",
+        "LessonId": 275
+    },
+    {
+        "Character": "優",
+        "Meaning": "Ưu tú, hiền lành (Ưu)",
+        "Onyomi": "ユウ",
+        "Kunyomi": "すぐ-れる, やさ-しい",
+        "Example": "優勝 (Vô địch); 優先 (Ưu tiên)",
+        "LessonId": 275
+    },
+    {
+        "Character": "賞",
+        "Meaning": "Giải thưởng (Thưởng)",
+        "Onyomi": "ショウ",
+        "Kunyomi": "-",
+        "Example": "賞状 (Bằng khen); 賞金 (Tiền thưởng)",
+        "LessonId": 275
+    },
+    {
+        "Character": "秒",
+        "Meaning": "Giây (Miểu)",
+        "Onyomi": "ビョウ",
+        "Kunyomi": "-",
+        "Example": "秒読み (Đếm ngược); 毎秒 (Mỗi giây)",
+        "LessonId": 275
+    },
+    {
+        "Character": "差",
+        "Meaning": "Sự khác biệt, khoảng cách (Sai)",
+        "Onyomi": "サ",
+        "Kunyomi": "さ-す",
+        "Example": "時差 (Chênh lệch múi giờ); 差別 (Phân biệt đối xử)",
+        "LessonId": 275
+    },
+    {
+        "Character": "測",
+        "Meaning": "Đo đạc (Trắc)",
+        "Onyomi": "ソク",
+        "Kunyomi": "はか-る",
+        "Example": "測定 (Đo lường); 予測 (Dự đoán)",
+        "LessonId": 275
+    },
+    {
+        "Character": "順",
+        "Meaning": "Thứ tự (Thuận)",
+        "Onyomi": "ジュン",
+        "Kunyomi": "-",
+        "Example": "順番 (Thứ tự); 順序 (Trình tự)",
+        "LessonId": 275
+    },
+    {
+        "Character": "球",
+        "Meaning": "Hình cầu, quả bóng (Cầu)",
+        "Onyomi": "キュウ",
+        "Kunyomi": "たま",
+        "Example": "地球 (Trái Đất); 電球 (Bóng đèn tròn)",
+        "LessonId": 275
+    },
+    {
+        "Character": "投",
+        "Meaning": "Ném, quăng (Đầu)",
+        "Onyomi": "トウ",
+        "Kunyomi": "な-げる",
+        "Example": "投手 (Cầu thủ ném bóng); 投書 (Thư gửi tòa soạn)",
+        "LessonId": 275
+    },
+    {
+        "Character": "打",
+        "Meaning": "Đánh, gõ (Đả)",
+        "Onyomi": "ダ",
+        "Kunyomi": "う-つ",
+        "Example": "打球 (Cú đánh bóng); 代打 (Người đánh thay)",
+        "LessonId": 275
+    },
+    {
+        "Character": "点",
+        "Meaning": "Điểm (Điểm)",
+        "Onyomi": "テン",
+        "Kunyomi": "-",
+        "Example": "満点 (Điểm tối đa); 欠点 (Khuyết điểm)",
+        "LessonId": 275
+    }
+]

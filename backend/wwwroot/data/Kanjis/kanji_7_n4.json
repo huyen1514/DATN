@@ -1,0 +1,186 @@
+[
+    {
+        "Character": "春",
+        "Meaning": "Mùa xuân (Xuân)",
+        "Onyomi": "シュン",
+        "Kunyomi": "はる",
+        "Example": "春休み (はるやすみ): Kỳ nghỉ xuân; 春分 (しゅんぶん): Xuân phân",
+        "LessonId": 160
+    },
+    {
+        "Character": "夏",
+        "Meaning": "Mùa hè (Hạ)",
+        "Onyomi": "カ",
+        "Kunyomi": "なつ",
+        "Example": "夏休み (なつやすみ): Kỳ nghỉ hè; 夏服 (なつふく): Quần áo mùa hè",
+        "LessonId": 160
+    },
+    {
+        "Character": "秋",
+        "Meaning": "Mùa thu (Thu)",
+        "Onyomi": "シュウ",
+        "Kunyomi": "あき",
+        "Example": "秋分 (しゅうぶん): Thu phân; 秋祭り (あきまつり): Lễ hội mùa thu",
+        "LessonId": 160
+    },
+    {
+        "Character": "冬",
+        "Meaning": "Mùa đông (Đông)",
+        "Onyomi": "トウ",
+        "Kunyomi": "ふゆ",
+        "Example": "冬休み (ふゆやすみ): Kỳ nghỉ đông; 暖冬 (だんとう): Mùa đông ấm áp",
+        "LessonId": 160
+    },
+    {
+        "Character": "空",
+        "Meaning": "Bầu trời (Không)",
+        "Onyomi": "クウ",
+        "Kunyomi": "そら, あ-く",
+        "Example": "空港 (くうこう): Sân bay; 空 (そら): Bầu trời",
+        "LessonId": 160
+    },
+    {
+        "Character": "星",
+        "Meaning": "Ngôi sao (Tinh)",
+        "Onyomi": "セイ",
+        "Kunyomi": "ほし",
+        "Example": "星空 (ほしぞら): Bầu trời sao; 明星 (みょうじょう): Sao Kim",
+        "LessonId": 160
+    },
+    {
+        "Character": "雲",
+        "Meaning": "Mây (Vân)",
+        "Onyomi": "ウン",
+        "Kunyomi": "くも",
+        "Example": "雲 (くも): Mây; 雨雲 (あまぐも): Mây mưa",
+        "LessonId": 160
+    },
+    {
+        "Character": "去",
+        "Meaning": "Quá khứ, Rời đi (Khứ)",
+        "Onyomi": "キョ, コ",
+        "Kunyomi": "さ-る",
+        "Example": "去年 (きょねん): Năm ngoái; 過去 (かこ): Quá khứ",
+        "LessonId": 160
+    },
+    {
+        "Character": "天",
+        "Meaning": "Trời (Thiên)",
+        "Onyomi": "テン",
+        "Kunyomi": "あま",
+        "Example": "天気 (てんき): Thời tiết; 天国 (てんごく): Thiên đường",
+        "LessonId": 160
+    },
+    {
+        "Character": "晴",
+        "Meaning": "Nắng (Tình)",
+        "Onyomi": "セイ",
+        "Kunyomi": "は-れる, は-れ",
+        "Example": "晴天 (せいてん): Trời nắng; 晴れる (はれる): Nắng lên",
+        "LessonId": 160
+    },
+    {
+        "Character": "雪",
+        "Meaning": "Tuyết (Tuyết)",
+        "Onyomi": "セツ",
+        "Kunyomi": "ゆき",
+        "Example": "大雪 (おおゆき): Tuyết lớn; 雪祭り (ゆきまつり): Lễ hội tuyết",
+        "LessonId": 160
+    },
+    {
+        "Character": "風",
+        "Meaning": "Gió (Phong)",
+        "Onyomi": "フウ",
+        "Kunyomi": "かぜ",
+        "Example": "台風 (たいふう): Bão; お風呂 (おふろ): Bồn tắm",
+        "LessonId": 160
+    },
+    {
+        "Character": "強",
+        "Meaning": "Mạnh (Cường)",
+        "Onyomi": "キョウ",
+        "Kunyomi": "つよ-い",
+        "Example": "強力 (きょうりょく): Mạnh mẽ; 強い (つよい): Mạnh",
+        "LessonId": 160
+    },
+    {
+        "Character": "弱",
+        "Meaning": "Yếu (Nhược)",
+        "Onyomi": "ジャク",
+        "Kunyomi": "よわ-い",
+        "Example": "弱点 (じゃくてん): Điểm yếu; 弱い (よわい): Yếu",
+        "LessonId": 160
+    },
+    {
+        "Character": "暑",
+        "Meaning": "Nóng - thời tiết (Thử)",
+        "Onyomi": "ショ",
+        "Kunyomi": "あつ-い",
+        "Example": "暑い (あつい): Nóng; 猛暑 (もうしょ): Nắng nóng gay gắt",
+        "LessonId": 160
+    },
+    {
+        "Character": "寒",
+        "Meaning": "Lạnh - thời tiết (Hàn)",
+        "Onyomi": "カン",
+        "Kunyomi": "さむ-い",
+        "Example": "寒気 (かんき): Khí lạnh; 寒い (さむい): Lạnh",
+        "LessonId": 160
+    },
+    {
+        "Character": "旅",
+        "Meaning": "Chuyến đi (Lữ)",
+        "Onyomi": "リョ",
+        "Kunyomi": "たび",
+        "Example": "旅行 (りょこう): Du lịch; 旅 (たび): Chuyến đi",
+        "LessonId": 160
+    },
+    {
+        "Character": "持",
+        "Meaning": "Cầm, Nắm (Trì)",
+        "Onyomi": "ジ",
+        "Kunyomi": "も-つ",
+        "Example": "持つ (もつ): Cầm; 金持ち (かねもち): Người giàu",
+        "LessonId": 160
+    },
+    {
+        "Character": "世",
+        "Meaning": "Thế giới, Đời (Thế)",
+        "Onyomi": "セイ, セ",
+        "Kunyomi": "よ",
+        "Example": "世界 (せかい): Thế giới; 世話 (せわ): Chăm sóc",
+        "LessonId": 160
+    },
+    {
+        "Character": "界",
+        "Meaning": "Thế giới, Giới hạn (Giới)",
+        "Onyomi": "カイ",
+        "Kunyomi": "-",
+        "Example": "世界 (せかい): Thế giới; 限界 (げんかい): Giới hạn",
+        "LessonId": 160
+    },
+    {
+        "Character": "船",
+        "Meaning": "Thuyền (Thuyền)",
+        "Onyomi": "セン",
+        "Kunyomi": "ふね",
+        "Example": "船 (ふね): Thuyền; 船便 (ふなびん): Gửi bằng đường tàu",
+        "LessonId": 160
+    },
+    {
+        "Character": "写",
+        "Meaning": "Chụp, Miêu tả (Tả)",
+        "Onyomi": "シャ",
+        "Kunyomi": "うつ-す",
+        "Example": "写真 (しゃしん): Ảnh; 写生 (しゃせい): Vẽ phác thảo",
+        "LessonId": 160
+    },
+    {
+        "Character": "真",
+        "Meaning": "Chân thực, Đúng (Chân)",
+        "Onyomi": "シン",
+        "Kunyomi": "ま",
+        "Example": "真ん中 (まんなか): Ở giữa; 写真 (しゃしん): Ảnh",
+        "LessonId": 160
+    }
+]

@@ -1,0 +1,186 @@
+[
+    {
+        "Character": "勉",
+        "Meaning": "Cố gắng (Miễn)",
+        "Onyomi": "ベン",
+        "Kunyomi": "つと-める",
+        "Example": "勉強 (べんきょう): Học tập",
+        "LessonId": 165
+    },
+    {
+        "Character": "漢",
+        "Meaning": "Hán (Hán)",
+        "Onyomi": "カン",
+        "Kunyomi": "-",
+        "Example": "漢字 (かんじ): Chữ Hán",
+        "LessonId": 165
+    },
+    {
+        "Character": "宿",
+        "Meaning": "Trọ lại (Túc)",
+        "Onyomi": "シュク",
+        "Kunyomi": "やど",
+        "Example": "宿題 (しゅくだい): Bài tập về nhà; 宿泊 (しゅくはく): Ngủ trọ",
+        "LessonId": 165
+    },
+    {
+        "Character": "題",
+        "Meaning": "Chủ đề (Đề)",
+        "Onyomi": "ダイ",
+        "Kunyomi": "-",
+        "Example": "問題 (もんだい): Vấn đề; 宿題 (しゅくだい): Bài tập về nhà",
+        "LessonId": 165
+    },
+    {
+        "Character": "質",
+        "Meaning": "Chất lượng, Hỏi (Chất)",
+        "Onyomi": "シツ",
+        "Kunyomi": "-",
+        "Example": "質問 (しつもん): Câu hỏi; 質がいい (しつがいい): Chất lượng tốt",
+        "LessonId": 165
+    },
+    {
+        "Character": "問",
+        "Meaning": "Hỏi (Vấn)",
+        "Onyomi": "モン",
+        "Kunyomi": "と-う",
+        "Example": "質問 (しつもん): Câu hỏi; 問い合わせ (といあわせ): Hỏi đáp",
+        "LessonId": 165
+    },
+    {
+        "Character": "教",
+        "Meaning": "Dạy học (Giáo)",
+        "Onyomi": "キョウ",
+        "Kunyomi": "おし-える",
+        "Example": "教室 (きょうしつ): Lớp học; 教科書 (きょうかしょ): Sách giáo khoa",
+        "LessonId": 165
+    },
+    {
+        "Character": "室",
+        "Meaning": "Căn phòng (Thất)",
+        "Onyomi": "シツ",
+        "Kunyomi": "むろ",
+        "Example": "教室 (きょうしつ): Lớp học; 研究室 (けんきゅうしつ): Phòng nghiên cứu",
+        "LessonId": 165
+    },
+    {
+        "Character": "試",
+        "Meaning": "Thử nghiệm (Thí)",
+        "Onyomi": "シ",
+        "Kunyomi": "ため-す",
+        "Example": "試験 (しけん): Kỳ thi; 試合 (しあい): Trận đấu",
+        "LessonId": 165
+    },
+    {
+        "Character": "験",
+        "Meaning": "Kiểm tra (Nghiệm)",
+        "Onyomi": "ケン",
+        "Kunyomi": "-",
+        "Example": "試験 (しけん): Kỳ thi; 経験 (けいけん): Kinh nghiệm",
+        "LessonId": 165
+    },
+    {
+        "Character": "答",
+        "Meaning": "Trả lời (Đáp)",
+        "Onyomi": "トウ",
+        "Kunyomi": "こた-える",
+        "Example": "答え (こたえ): Câu trả lời; 解答 (かいとう): Giải đáp",
+        "LessonId": 165
+    },
+    {
+        "Character": "考",
+        "Meaning": "Suy nghĩ (Khảo)",
+        "Onyomi": "コウ",
+        "Kunyomi": "かんが-える",
+        "Example": "考える (かんがえる): Suy nghĩ",
+        "LessonId": 165
+    },
+    {
+        "Character": "正",
+        "Meaning": "Đúng (Chính)",
+        "Onyomi": "セイ, ショウ",
+        "Kunyomi": "ただ-しい",
+        "Example": "正しい (ただしい): Đúng; 正解 (せいかい): Đáp án đúng",
+        "LessonId": 165
+    },
+    {
+        "Character": "丸",
+        "Meaning": "Tròn (Hoàn)",
+        "Onyomi": "ガン",
+        "Kunyomi": "まる",
+        "Example": "丸 (まる): Hình tròn; 丸い (まるい): Tròn",
+        "LessonId": 165
+    },
+    {
+        "Character": "不",
+        "Meaning": "Không (Bất)",
+        "Onyomi": "フ, ブ",
+        "Kunyomi": "-",
+        "Example": "不便 (ふべん): Bất tiện; 不足 (ふそく): Thiếu thốn",
+        "LessonId": 165
+    },
+    {
+        "Character": "同",
+        "Meaning": "Giống nhau (Đồng)",
+        "Onyomi": "ドウ",
+        "Kunyomi": "おな-じ",
+        "Example": "同じ (おなじ): Giống; 同時 (どうじ): Đồng thời",
+        "LessonId": 165
+    },
+    {
+        "Character": "貸",
+        "Meaning": "Cho vay (Thải)",
+        "Onyomi": "タイ",
+        "Kunyomi": "か-す",
+        "Example": "貸す (かす): Cho mượn; 貸し出し (かしだし): Cho vay",
+        "LessonId": 165
+    },
+    {
+        "Character": "借",
+        "Meaning": "Mượn (Tá)",
+        "Onyomi": "シャク",
+        "Kunyomi": "か-りる",
+        "Example": "借りる (かりる): Mượn; 借金 (しゃっきん): Tiền nợ",
+        "LessonId": 165
+    },
+    {
+        "Character": "返",
+        "Meaning": "Trả lại (Phản)",
+        "Onyomi": "ヘン",
+        "Kunyomi": "かえ-す",
+        "Example": "返す (かえす): Trả lại; 返事 (ヘんじ): Trả lời",
+        "LessonId": 165
+    },
+    {
+        "Character": "冊",
+        "Meaning": "Quyển (Sách)",
+        "Onyomi": "サツ",
+        "Kunyomi": "-",
+        "Example": "一冊 (いっさつ): Một quyển; 冊数 (さっすう): Số lượng quyển",
+        "LessonId": 165
+    },
+    {
+        "Character": "歴",
+        "Meaning": "Lịch sử (Lịch)",
+        "Onyomi": "レキ",
+        "Kunyomi": "-",
+        "Example": "歴史 (れきし): Lịch sử",
+        "LessonId": 165
+    },
+    {
+        "Character": "史",
+        "Meaning": "Lịch sử (Sử)",
+        "Onyomi": "シ",
+        "Kunyomi": "-",
+        "Example": "歴史 (れきし): Lịch sử",
+        "LessonId": 165
+    },
+    {
+        "Character": "図",
+        "Meaning": "Bản đồ (Đồ)",
+        "Onyomi": "ズ, ト",
+        "Kunyomi": "はか-る",
+        "Example": "図書館 (としょかん): Thư viện; 地図 (ちず): Bản đồ",
+        "LessonId": 165
+    }
+]

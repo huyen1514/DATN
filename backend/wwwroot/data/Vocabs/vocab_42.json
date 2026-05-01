@@ -4,7 +4,7 @@
         "Reading": "つつみます",
         "Meaning": "bọc, gói",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>風呂敷<rt>ふろしき</rt></ruby>で <ruby>荷物<rt>にもつ</rt></ruby>を <ruby>包<rt>つつ</rt></ruby>みます。\n(Tôi dùng vải bọc để gói hành lý.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "わかします",
         "Meaning": "đun sôi",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>やかん<rt></rt></ruby>で お<ruby>湯<rt>ゆ</rt></ruby>を <ruby>沸<rt>わ</rt></ruby>かします。\n(Đun sôi nước bằng ấm.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "まぜます",
         "Meaning": "trộn, khuấy",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>材料<rt>ざいりょう</rt></ruby>を よく <ruby>混<rt>ま</rt></ruby>ぜて ください。\n(Hãy trộn kỹ các nguyên liệu.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "けいさんします",
         "Meaning": "tính toán, làm tính",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>計算<rt>けいさん</rt></ruby>するのに、<ruby>計算機<rt>けいさんき</rt></ruby>を <ruby>使<rt>つか</rt></ruby>います。\n(Tôi dùng máy tính để tính toán.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "あつい",
         "Meaning": "dày",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "この <ruby>辞書<rt>じしょ</rt></ruby>は とても <ruby>厚<rt>あつ</rt></ruby>いです。\n(Cuốn từ điển này rất dày.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "うすい",
         "Meaning": "mỏng",
         "PartOfSpeech": "Tính từ đuôi い",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "この <ruby>紙<rt>かみ</rt></ruby>は <ruby>薄<rt>うす</rt></ruby>いです。\n(Tờ giấy này mỏng.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "べんごし",
         "Meaning": "luật sư",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>将来<rt>しょうらい</rt></ruby> <ruby>弁護士<rt>べんごし</rt></ruby>に なりたいです。\n(Tương lai tôi muốn trở thành luật sư.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "おんがくか",
         "Meaning": "nhạc sĩ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "ベートーベンは <ruby>有名<rt>ゆうめい</rt></ruby>な <ruby>音楽家<rt>おんがくか</rt></ruby>です。\n(Beethoven là một nhạc sĩ nổi tiếng.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "こどもたち",
         "Meaning": "trẻ em, trẻ con, bọn trẻ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>子どもたち<rt></rt></ruby>の <ruby>教育<rt>きょういく</rt></ruby>の ために、お<ruby>金<rt>かね</rt></ruby>が <ruby>要<rt>い</rt></ruby>ります。\n(Cần tiền cho việc học hành của con cái.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "ふたり",
         "Meaning": "hai người, cặp, đôi",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>二人<rt>ふたり</rt></ruby>で <ruby>旅行<rt>りょこう</rt></ruby>に <ruby>行<rt>い</rt></ruby>きます。\n(Hai người cùng đi du lịch.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "きょういく",
         "Meaning": "giáo dục, việc học hành",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>教育<rt>きょういく</rt></ruby>について <ruby>調<rt>しら</rt></ruby>べて います。\n(Tôi đang tìm hiểu về giáo dục Nhật Bản.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "れきし",
         "Meaning": "lịch sử",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>歴史<rt>れきし</rt></ruby>に <ruby>興味<rt>きょうみ</rt></ruby>が あります。\n(Tôi có hứng thú với lịch sử Nhật Bản.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "ぶんか",
         "Meaning": "văn hóa",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>外国<rt>がいこく</rt></ruby>の <ruby>文化<rt>ぶんか</rt></ruby>を <ruby>知<rt>し</rt></ruby>りたいです。\n(Tôi muốn biết về văn hóa nước ngoài.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "しゃかい",
         "Meaning": "xã hội",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>将来<rt>しょうらい</rt></ruby> <ruby>社会<rt>しゃかい</rt></ruby>の <ruby>役<rt>やく</rt></ruby>に <ruby>立<rt>た</rt></ruby>ちたいです。\n(Tương lai tôi muốn giúp ích cho xã hội.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "ほうりつ",
         "Meaning": "pháp luật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>法律<rt>ほうりつ</rt></ruby>を <ruby>守<rt>まも</rt></ruby>らなければ なりません。\n(Phải tuân thủ pháp luật.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "せんそう",
         "Meaning": "chiến tranh",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>戦争<rt>せんそう</rt></ruby>は なくなって ほしいです。\n(Tôi muốn chiến tranh chấm dứt.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "へいわ",
         "Meaning": "hòa bình",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>世界<rt>せかい</rt></ruby>の <ruby>平和<rt>へいわ</rt></ruby>の ために <ruby>働<rt>はたら</rt></ruby>きます。\n(Làm việc vì nền hòa bình thế giới.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "もくてき",
         "Meaning": "mục đích",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>へ <ruby>来<rt>き</rt></ruby>た <ruby>目的<rt>もくてき</rt></ruby>は <ruby>勉強<rt>べんきょう</rt></ruby>です。\n(Mục đích đến Nhật của tôi là để học.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "あんぜん",
         "Meaning": "an toàn",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>安全<rt>あんぜん</rt></ruby>が <ruby>一番<rt>いちばん</rt></ruby> <ruby>大切<rt>たいせつ</rt></ruby>です。\n(An toàn là quan trọng nhất.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "ろんぶん",
         "Meaning": "luận văn, bài báo học thuật",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>卒業論文<rt>そつぎょうろんぶん</rt></ruby>を <ruby>書<rt>か</rt></ruby>いて います。\n(Tôi đang viết luận văn tốt nghiệp.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "かんけい",
         "Meaning": "quan hệ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>仕事<rt>しごと</rt></ruby>に <ruby>関係<rt>かんけい</rt></ruby>が あります。\n(Có liên quan đến công việc.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "ミキサー",
         "Meaning": "máy trộn (mixer)",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>ミキサー<rt></rt></ruby>で ジュースを <ruby>作<rt>つく</rt></ruby>ります。\n(Dùng máy xay để làm nước trái cây.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "やかん",
         "Meaning": "cái ấm nước",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>やかん<rt></rt></ruby>で お<ruby>湯<rt>ゆ</rt></ruby>を <ruby>沸<rt>わ</rt></ruby>かします。\n(Đun nước sôi bằng ấm.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "せんぬき",
         "Meaning": "cái mở nắp chai",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>栓抜<rt>せんぬ</rt></ruby>きで ビールの <ruby>蓋<rt>ふた</rt></ruby>を あけます。\n(Dùng cái mở nắp chai để mở nắp bia.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "かんきり",
         "Meaning": "cái mở đồ hộp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>缶切<rt>かんき</rt></ruby>りで <ruby>缶詰<rt>かんづめ</rt></ruby>を あけます。\n(Dùng cái mở đồ hộp để mở hộp.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "かんづめ",
         "Meaning": "đồ hộp",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>缶詰<rt>かんづめ</rt></ruby>を たくさん <ruby>買<rt>か</rt></ruby>いました。\n(Tôi đã mua rất nhiều đồ hộp.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "ふろしき",
         "Meaning": "tấm vải để gói đồ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>風呂敷<rt>ふろしき</rt></ruby>で <ruby>贈<rt>おく</rt></ruby>り<ruby>物<rt>もの</rt></ruby>を <ruby>包<rt>つつ</rt></ruby>みます。\n(Dùng vải bọc để gói quà.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "そろばん",
         "Meaning": "bàn tính",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>昔<rt>むかし</rt></ruby>は <ruby>そろばん<rt></rt></ruby>を <ruby>使<rt>つか</rt></ruby>っていました。\n(Ngày xưa người ta đã sử dụng bàn tính.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "たいおんけい",
         "Meaning": "máy đo nhiệt độ cơ thể",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 68,
+        "LessonId": 206,
         "Example": "<ruby>体温計<rt>たいおんけい</rt></ruby>で <ruby>熱<rt>ねつ</rt></ruby>を <ruby>測<rt>はか</rt></ruby>ります。\n(Dùng nhiệt kế để đo thân nhiệt.)"
     }
 ]

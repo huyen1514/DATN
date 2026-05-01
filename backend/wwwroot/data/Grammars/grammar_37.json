@@ -4,34 +4,34 @@
         "Structure": "Nhóm 1: u -> a + れます | Nhóm 2: ます -> られます | Nhóm 3: きます -> こられます, します -> されます",
         "Meaning": "Dùng để diễn tả một hành động mà chủ thể bị tác động bởi một đối tượng khác. Trong câu bị động, người nhận hành động trở thành chủ ngữ và thường đi với trợ từ 「は」, còn người thực hiện hành động đi với trợ từ 「に」.",
         "Example": "<ruby>私<rt>わたし</rt></ruby>は <ruby>先生<rt>せんせい</rt></ruby>に <ruby>褒<rt>ほ</rt></ruby>められました。\n(Tôi đã được thầy giáo khen.)",
-        "LessonId": 88
+        "LessonId": 182
     },
     {
         "GrammarName": "Bị động đối với vật sở hữu",
         "Structure": "N1 は N2 に [Danh từ] を V-(bị động) ます",
         "Meaning": "Dùng để diễn tả việc N1 gặp phiền toái hoặc cảm thấy khó chịu khi N2 thực hiện một hành động nào đó đối với đồ vật hoặc bộ phận cơ thể của N1.",
         "Example": "<ruby>私<rt>わたし</rt></ruby>は <ruby>誰<rt>だれ</rt></ruby>かに <ruby>足<rt>あし</rt></ruby>を <ruby>踏<rt>ふ</rt></ruby>まれました。\n(Tôi đã bị ai đó dẫm vào chân.)",
-        "LessonId": 88
+        "LessonId": 182
     },
     {
         "GrammarName": "Bị động khi không cần xác định người thực hiện hành động",
         "Structure": "N が/は V-(bị động) ます",
         "Meaning": "Dùng khi nói về một sự việc khách quan, một sự kiện xã hội, hội nghị hoặc các công trình xây dựng mà người thực hiện hành động không quan trọng bằng bản thân sự việc đó.",
         "Example": "20<ruby>世紀<rt>せいき</rt></ruby>に <ruby>多<rt>おお</rt></ruby>くの <ruby>発明<rt>はつめい</rt></ruby>が されました。\n(Nhiều phát minh đã được thực hiện vào thế kỷ 20.)",
-        "LessonId": 88
+        "LessonId": 182
     },
     {
         "GrammarName": "Bị động với によって (Bởi...)",
         "Structure": "N1 は N2 によって V-(bị động) ます",
         "Meaning": "Dùng để biểu thị người đã sáng tạo ra một công trình nghệ thuật, một phát minh hoặc một khám phá mang tính lịch sử. Không dùng 「に」 mà dùng 「によって」 để nhấn mạnh tác giả.",
         "Example": "「<ruby>源氏物語<rt>げんじものがたり</rt></ruby>」は <ruby>紫式部<rt>むらさきしきぶ</rt></ruby>に よって <ruby>書<rt>か</rt></ruby>かれました。\n(Tác phẩm \"Chuyện kể Genji\" được viết bởi Murasaki Shikibu.)",
-        "LessonId": 88
+        "LessonId": 182
     },
     {
         "GrammarName": "Bị động của vật liệu và nguyên liệu (から / で)",
         "Structure": "N から/で 作られます",
         "Meaning": "Dùng 「で」 khi nguyên liệu làm ra vật đó vẫn còn nhận ra được bằng mắt thường. Dùng 「から」 khi nguyên liệu đã thay đổi hoàn toàn về tính chất và không còn nhận ra hình dáng ban đầu.",
         "Example": "お<ruby>酒<rt>さけ</rt></ruby>は <ruby>米<rt>こめ</rt></ruby>から <ruby>造<rt>つく</rt></ruby>られます。\n(Rượu được làm từ gạo.)",
-        "LessonId": 88
+        "LessonId": 182
     }
 ]

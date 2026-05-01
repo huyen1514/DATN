@@ -4,34 +4,34 @@
         "Structure": "[Động từ / Tính từ / Danh từ] thể た + ら",
         "Meaning": "Mẫu câu này dùng để biểu thị một điều kiện giả định. Mệnh đề sau sẽ là hành động hoặc trạng thái xảy ra nếu điều kiện ở mệnh đề trước được thỏa mãn.\n- Cách chia: Chia về thể quá khứ (thể た) rồi thêm 「ら」.\n- Động từ: Vたら\n- Tính từ đuôi い: ～かったら\n- Tính từ đuôi な / Danh từ: ～だったら",
         "Example": "あめが ふったら, 出かけません。\nー安かったら, かいます。\n(Nếu trời mưa, tôi sẽ không đi ra ngoài.\n-Nếu rẻ, tôi sẽ mua.)",
-        "LessonId": 54
+        "LessonId": 122
     },
     {
         "GrammarName": "Hành động sau khi xong việc gì đó: ～たら (Sau khi...)",
         "Structure": "Động từ 1 thể た + ら, Động từ 2",
         "Meaning": "Ngoài nghĩa 'Nếu', mẫu câu này còn dùng để diễn tả một hành động chắc chắn sẽ xảy ra trong tương lai. Sau khi hành động 1 kết thúc thì hành động 2 sẽ được thực hiện ngay lập tức.",
         "Example": "10じに なったら, 出かけましょう。\nーうちへ かえったら, すぐ しゃわーを あびます。\n(Sau khi đến 10 giờ, chúng ta cùng đi nhé.\n-Sau khi về nhà, tôi sẽ tắm ngay lập tức.)",
-        "LessonId": 54
+        "LessonId": 122
     },
     {
         "GrammarName": "Điều kiện tương phản: ～ても (Mặc dù... / Dù...)",
         "Structure": "[Động từ / Tính từ / Danh từ] thể て + も",
         "Meaning": "Dùng để diễn tả một kết quả trái ngược với kỳ vọng thông thường từ một điều kiện cho trước. Dù điều kiện ở mệnh đề trước có xảy ra thì mệnh đề sau vẫn không thay đổi.\n- Động từ: Vても\n- Tính từ đuôi い: Bỏ [い] thêm [くても]\n- Tính từ đuôi な / Danh từ: Thay [です] bằng [でも]",
         "Example": "あめが ふっても, せんたくします。\nー安くても, 買いません。\n(Dù trời mưa, tôi vẫn giặt đồ.\n-Dù rẻ, tôi cũng không mua.)",
-        "LessonId": 54
+        "LessonId": 122
     },
     {
         "GrammarName": "Cách dùng phó từ nhấn mạnh: もし và いくら",
         "Structure": "もし ~ たら / いくら ~ ても",
         "Meaning": "Để làm rõ hơn ý nghĩa của mẫu câu giả định, người ta thường thêm các phó từ vào đầu câu:\n- 「もし」: Dùng để nhấn mạnh giả định 'Nếu', thường đi với 「～たら」.\n- 「いくら」: Dùng để nhấn mạnh mức độ 'Dù cho bao nhiêu đi nữa', luôn đi với 「～ても」.",
         "Example": "もし 1おくえん あったら, なにを したいですか。\nーいくら かんがえても, わかりません。\n(Nếu có 100 triệu Yên, bạn muốn làm gì?\n-Dù có suy nghĩ bao nhiêu đi nữa, tôi vẫn không hiểu.)",
-        "LessonId": 54
+        "LessonId": 122
     },
     {
         "GrammarName": "Sử dụng Danh từ làm chủ đề trong câu điều kiện",
         "Structure": "Danh từ は",
         "Meaning": "Trong các câu điều kiện hoặc tương phản, nếu danh từ đã được nhắc tới trước đó hoặc người nói muốn đưa nó lên làm chủ đề để so sánh, chúng ta sử dụng trợ từ 「は」.",
         "Example": "お酒を のんだら, 運転してはいけません。\n(Nếu đã uống rượu thì không được lái xe.)",
-        "LessonId": 54
+        "LessonId": 122
     }
 ]

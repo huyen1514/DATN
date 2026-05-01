@@ -1,0 +1,51 @@
+[
+    {
+        "GrammarName": "72 〜いただく / 〜くださる (Kính ngữ)",
+        "Structure": "お + V-ます (bỏ ます) / ご + N + いただく / くださる",
+        "Meaning": "Là cách nói lịch sự của '〜もらう' và '〜くれる'[cite: 2].",
+        "Example": "本日はお忙しい中、お集まりいただき、たいへん感謝しております。\n(Hôm nay, trong lúc bận rộn mà mọi người vẫn tập trung đông đủ thế này, tôi xin chân thành cảm ơn[cite: 2].)",
+        "LessonId": 287
+    },
+    {
+        "GrammarName": "73 〜てます / 〜ときます / 〜ちゃいます (Lịch sự)",
+        "Structure": "V-てます / V-ときます / V-ちゃいます",
+        "Meaning": "Khi nói một cách lịch sự như là 'お待ちしてます' thì '~てます ・ 〜ときます ・ 〜ちゃいます' cũng được sử dụng[cite: 2].",
+        "Example": "今、会議に出てますよ。\n(Bây giờ, họ đang họp đấy[cite: 2].)",
+        "LessonId": 287
+    },
+    {
+        "GrammarName": "74 Khiêm nhường ngữ đặc biệt (存じ上げる...)",
+        "Structure": "Sử dụng các động từ khiêm nhường ngữ đặc biệt (お目にかかる, 存じ上げる...)",
+        "Meaning": "Sử dụng khi nói về hành động của mình đồng thời bày tỏ sự tôn trọng đối phương[cite: 2].",
+        "Example": "うちの営業部の田中をご存知ですか。ー はい、よく存じ上げています。\n(Anh có biết anh Tanaka ở bộ phận kinh doanh của chúng tôi không? ー Vâng, tôi biết rất rõ[cite: 2].)",
+        "LessonId": 287
+    },
+    {
+        "GrammarName": "75 〜です (Tôn kính ngữ của 〜ている)",
+        "Structure": "お + V-ます (bỏ ます) / ご + N + です",
+        "Meaning": "Được dùng khi nói '〜ている' đối với người mình tôn trọng. Ngoài ra nó còn dùng với những danh từ như '滞在 ・ 専攻 ・ 研究 ・ 担当 ・ 活躍'[cite: 2].",
+        "Example": "山川さん、保険証をお持ちですか。\n(Anh Yamakawa có mang theo thẻ bảo hiểm không?[cite: 2])",
+        "LessonId": 287
+    },
+    {
+        "GrammarName": "76 〜でしょうか",
+        "Structure": "Po / PI + でしょうか [なA / N bỏ だ]",
+        "Meaning": "Sử dụng khi hỏi hoặc nhờ vả một cách lịch sự[cite: 2].",
+        "Example": "山に登るとき、何が気をつけることがありますでしょうか。\n(Khi leo núi thì có điều gì cần phải chú ý không ạ?[cite: 2])",
+        "LessonId": 287
+    },
+    {
+        "GrammarName": "77 〜いらっしゃる",
+        "Structure": "V-て / なAで / Nで + いらっしゃる",
+        "Meaning": "Sử dụng khi nói '〜ている' đối với người mình tôn trọng. Cũng có khi được dùng thay cho 'です'[cite: 2].",
+        "Example": "外国に住んでいらっしゃる方にアンケートをお願いしました。\n(Chúng tôi đã yêu cầu làm bảng khảo sát đối với những người đang sống ở nước ngoài[cite: 2].)",
+        "LessonId": 287
+    },
+    {
+        "GrammarName": "78 〜せていただく / 〜せてくださる",
+        "Structure": "V-させる + て + いただく / くださる",
+        "Meaning": "Sử dụng khi nói '〜させてもらう' và '〜させてくれる' một cách lịch sự[cite: 2].",
+        "Example": "出張に会社の車を使わせていただいてもかまいませんか。\n(Tôi có thể xin phép sử dụng xe của công ty để đi công tác được không ạ?[cite: 2])",
+        "LessonId": 287
+    }
+]

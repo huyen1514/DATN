@@ -4,34 +4,34 @@
         "Structure": "V-masu (bỏ ます) / A-i (bỏ い) / A-na (bỏ な) + すぎます",
         "Meaning": "Diễn tả sự vượt quá giới hạn, mức độ cần thiết của một hành động hoặc trạng thái. Thường mang nghĩa tiêu cực, không tốt.",
         "Example": "ゆうべ お<ruby>酒<rt>さけ</rt></ruby>を <ruby>飲<rt>の</rt></ruby>みすぎました。\n(Tối qua tôi đã uống quá nhiều rượu.)",
-        "LessonId": 94
+        "LessonId": 217
     },
     {
         "GrammarName": "Cấu trúc ～やすいです (Dễ làm việc gì đó)",
         "Structure": "V-masu (bỏ ます) + やすいです",
         "Meaning": "Diễn tả việc thực hiện một hành động nào đó là dễ dàng, hoặc một sự vật có đặc tính dễ xảy ra một trạng thái nào đó.",
         "Example": "この <ruby>辞書<rt>じしょ</rt></ruby>は <ruby>使<rt>つか</rt></ruby>いやすいです。\n(Cuốn từ điển này rất dễ sử dụng.)",
-        "LessonId": 94
+        "LessonId": 217
     },
     {
         "GrammarName": "Cấu trúc ～にくいです (Khó làm việc gì đó)",
         "Structure": "V-masu (bỏ ます) + にくいです",
         "Meaning": "Diễn tả việc thực hiện một hành động nào đó là khó khăn, hoặc một sự vật có đặc tính khó xảy ra một trạng thái nào đó.",
         "Example": "この <ruby>薬<rt>くすり</rt></ruby>は <ruby>飲<rt>の</rt></ruby>みにくいです。\n(Thuốc này rất khó uống.)",
-        "LessonId": 94
+        "LessonId": 217
     },
     {
         "GrammarName": "Cấu trúc làm thay đổi trạng thái (Làm cho...)",
         "Structure": "A-i (-> く) / A-na (-> に) / N (-> に) + します",
         "Meaning": "Diễn tả việc ai đó làm thay đổi trạng thái của một đối tượng nào đó dựa trên ý chí của mình. Khác với cấu trúc 「～なります」 (tự thay đổi).",
         "Example": "<ruby>音<rt>おと</rt></ruby>を <ruby>大<rt>おお</rt></ruby>きく します。\n(Tôi sẽ vặn âm thanh to lên.)",
-        "LessonId": 94
+        "LessonId": 217
     },
     {
         "GrammarName": "Cấu trúc N に します (Chọn/Quyết định chọn...)",
         "Structure": "Danh từ + に します",
         "Meaning": "Dùng để diễn tả việc đưa ra quyết định hoặc lựa chọn một cái gì đó trong số nhiều phương án (ví dụ khi gọi món ăn ở nhà hàng).",
         "Example": "<ruby>晩<rt>ばん</rt></ruby>ごはんは <ruby>カレー<rt></rt></ruby>に します。\n(Bữa tối tôi chọn món cà ri.)",
-        "LessonId": 94
+        "LessonId": 217
     }
 ]

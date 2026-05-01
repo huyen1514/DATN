@@ -1,0 +1,65 @@
+[
+    {
+        "GrammarName": "〜よう(に) / 〜ような",
+        "Structure": "N + の / V-る / V-た / V-ている + ようだ / ように / ような + N",
+        "Meaning": "Sử dụng khi giải thích trạng thái, tình huống bằng cách ví nó giống như là một cái gì đó khác[cite: 2].",
+        "Example": "あのえんぴつのような形をしている建物は、電話会社のビルです。\n(Tòa nhà có hình dáng giống như cái bút chì kia là tòa nhà của công ty điện thoại[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "〜はもちろん",
+        "Structure": "N + はもちろん + N + も",
+        "Meaning": "Sử dụng khi muốn nói rằng “không chỉ A mà B cũng”, nhấn mạnh việc đương nhiên ở vế trước[cite: 2].",
+        "Example": "山形はスキーはもちろん、温泉もいいのでたいへん人気があります。\n(Yamagata thì không chỉ trượt tuyết mà suối nước nóng cũng tuyệt nên rất được yêu thích[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "〜ほど 〜ない",
+        "Structure": "N / V-る / V-た / V-ている / V-ていた + ほど 〜ない",
+        "Meaning": "Sử dụng khi muốn nói đối tượng A không đạt đến mức độ của đối tượng B[cite: 2].",
+        "Example": "今年の冬は去年ほど寒くないですね。\n(Mùa đông năm nay không lạnh bằng năm ngoái nhỉ[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "〜かわりに",
+        "Structure": "N + の / V-る / V-た / V-ない + かわりに",
+        "Meaning": "Sử dụng khi nói rằng làm việc khác, sử dụng cái khác, người khác làm thay; hoặc đưa ra điều kiện trao đổi[cite: 2].",
+        "Example": "母の帰りが遅くなる日は、母のかわりに私が夕食を作ることになっている。\n(Vào những ngày mẹ về muộn, tôi sẽ thay mẹ nấu bữa tối[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "〜ずに",
+        "Structure": "V-ない + ずに (Lưu ý: する→せずに, 来る→来ずに)",
+        "Meaning": "Sử dụng với ý nghĩa giống như “〜ないで” (làm gì đó mà không...)[cite: 2].",
+        "Example": "かさを持たずに出かけて、雨に降られてしまった。\n(Tôi đã ra ngoài mà không mang theo ô nên đã bị dính mưa[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "〜たまま",
+        "Structure": "V-た / N + の / Aい / なA + な + まま",
+        "Meaning": "Sử dụng khi nói một trạng thái nào đó vẫn đang tiếp tục không thay đổi, hoặc việc lẽ ra phải làm sau đó lại không làm[cite: 2].",
+        "Example": "部屋の電気をつけたまま寝てしまった。\n(Tôi đã ngủ thiếp đi trong khi vẫn để đèn phòng bật[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "V-ます (bỏ ます) + , (thay cho 〜て)",
+        "Structure": "V-ます (bỏ ます) + ,",
+        "Meaning": "Sử dụng thể ます để nối các vế câu thay cho “〜て”, thường dùng trong văn viết hoặc các hướng dẫn trang trọng[cite: 2].",
+        "Example": "アンケートを実施し、結果をまとめて発表する。\n(Thực hiện khảo sát, tổng hợp kết quả rồi công bố[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "〜ところ(を/へ/に/で)",
+        "Structure": "V-ている / V-た / V-ようとした + ところ + (Trợ từ)",
+        "Meaning": "Sử dụng khi nói về một hành động đang xảy ra đúng ngay lúc đó hoặc trong hoàn cảnh đó. Trợ từ đi sau thay đổi theo động từ chính của câu[cite: 2].",
+        "Example": "部長がお客さんと話をしているところに声をかけて、あとで注意されてしまった。\n(Tôi đã gọi trưởng phòng đúng lúc ông ấy đang nói chuyện với khách nên sau đó đã bị nhắc nhở[cite: 2].)",
+        "LessonId": 272
+    },
+    {
+        "GrammarName": "〜きる / 〜きれない",
+        "Structure": "V-ます (bỏ ます) + きる / きれない",
+        "Meaning": "“〜きる” dùng để nói rằng làm gì đó hết toàn bộ hoặc đến cùng. “〜きれない” nghĩa là quá nhiều không thể làm hết hoặc hoàn thành toàn bộ[cite: 2].",
+        "Example": "この目薬は2週間で使いきってください。\n(Hãy dùng hết thuốc nhỏ mắt này trong vòng 2 tuần[cite: 2].)",
+        "LessonId": 272
+    }
+]

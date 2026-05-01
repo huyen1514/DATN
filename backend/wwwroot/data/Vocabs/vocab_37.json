@@ -4,7 +4,7 @@
         "Reading": "ほめます",
         "Meaning": "khen",
         "PartOfSpeech": "Động từ nhóm 2",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "わたしは <ruby>先生<rt>せんせい</rt></ruby>に <ruby>褒<rt>ほ</rt></ruby>められました。\n(Tôi đã được thầy giáo khen.)"
     },
     {
@@ -12,7 +12,7 @@
         "Reading": "しかります",
         "Meaning": "mắng",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>小<rt>ちい</rt></ruby>さい とき、よく <ruby>母<rt>はは</rt></ruby>に しかられました。\n(Hồi nhỏ tôi thường bị mẹ mắng.)"
     },
     {
@@ -20,7 +20,7 @@
         "Reading": "さそいます",
         "Meaning": "mời, rủ",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>課長<rt>かちょう</rt></ruby>に <ruby>食事<rt>しょくじ</rt></ruby>に <ruby>誘<rt>さそ</rt></ruby>われました。\n(Tôi đã được trưởng phòng rủ đi ăn.)"
     },
     {
@@ -28,7 +28,7 @@
         "Reading": "おこします",
         "Meaning": "đánh thức",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>朝<rt>あさ</rt></ruby> <ruby>母<rt>はは</rt></ruby>に <ruby>起<rt>お</rt></ruby>こされました。\n(Buổi sáng tôi bị mẹ đánh thức.)"
     },
     {
@@ -36,7 +36,7 @@
         "Reading": "しょうたいします",
         "Meaning": "mời (dự tiệc, đám cưới)",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>友達<rt>ともだち</rt></ruby>の <ruby>結婚式<rt>けっこんしき</rt></ruby>に <ruby>招待<rt>しょうたい</rt></ruby>されました。\n(Tôi đã được mời dự đám cưới của bạn.)"
     },
     {
@@ -44,7 +44,7 @@
         "Reading": "たのみます",
         "Meaning": "nhờ",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>母<rt>はは</rt></ruby>に <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を <ruby>頼<rt>たの</rt></ruby>まれました。\n(Tôi đã được mẹ nhờ đi mua đồ.)"
     },
     {
@@ -52,7 +52,7 @@
         "Reading": "ちゅういします",
         "Meaning": "chú ý, nhắc nhở",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>部長<rt>ぶちょう</rt></ruby>に <ruby>注意<rt>ちゅうい</rt></ruby>されました。\n(Tôi đã bị trưởng phòng nhắc nhở.)"
     },
     {
@@ -60,7 +60,7 @@
         "Reading": "とります",
         "Meaning": "ăn trộm, lấy cắp",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>泥棒<rt>どろぼう</rt></ruby>に <ruby>財布<rt>さいふ</rt></ruby>を とられました。\n(Tôi bị kẻ trộm lấy mất ví.)"
     },
     {
@@ -68,7 +68,7 @@
         "Reading": "ふみます",
         "Meaning": "giẫm, giẫm lên",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>電車<rt>でんしゃ</rt></ruby>の <ruby>中<rt>なか</rt></ruby>で <ruby>足<rt>あし</rt></ruby>を <ruby>踏<rt>ふ</rt></ruby>まれました。\n(Tôi bị giẫm vào chân trên tàu điện.)"
     },
     {
@@ -76,7 +76,7 @@
         "Reading": "こわします",
         "Meaning": "phá, làm hỏng",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>弟<rt>おとうと</rt></ruby>に <ruby>時計<rt>とけい</rt></ruby>を <ruby>壊<rt>こわ</rt></ruby>されました。\n(Tôi bị em trai làm hỏng đồng hồ.)"
     },
     {
@@ -84,7 +84,7 @@
         "Reading": "よごします",
         "Meaning": "làm bẩn",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>子供<rt>こども</rt></ruby>に <ruby>服<rt>ふく</rt></ruby>を <ruby>汚<rt>よご</rt></ruby>されました。\n(Tôi bị con làm bẩn quần áo.)"
     },
     {
@@ -92,7 +92,7 @@
         "Reading": "おこないます",
         "Meaning": "thực hiện, tiến hành, tổ chức",
         "PartOfSpeech": "Động từ nhóm 1",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>会議<rt>かいぎ</rt></ruby>は <ruby>神戸<rt>こうべ</rt></ruby>で <ruby>行<rt>おこな</rt></ruby>われました。\n(Hội nghị đã được tổ chức ở Kobe.)"
     },
     {
@@ -100,7 +100,7 @@
         "Reading": "ゆしゅつします",
         "Meaning": "xuất khẩu",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>車<rt>くるま</rt></ruby>は <ruby>世界中<rt>せかいじゅう</rt></ruby>へ <ruby>輸出<rt>ゆしゅつ</rt></ruby>されています。\n(Ô tô của Nhật được xuất khẩu đi khắp thế giới.)"
     },
     {
@@ -108,7 +108,7 @@
         "Reading": "ゆにゅうします",
         "Meaning": "nhập khẩu",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>石油<rt>せきゆ</rt></ruby>は サウジアラビアから <ruby>輸入<rt>ゆにゅう</rt></ruby>されています。\n(Dầu mỏ được nhập khẩu từ Ả-rập Xê-út.)"
     },
     {
@@ -116,7 +116,7 @@
         "Reading": "ほんやくします",
         "Meaning": "dịch (sách, tài liệu)",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "この <ruby>小説<rt>しょうせつ</rt></ruby>は <ruby>多<rt>おお</rt></ruby>くの <ruby>国<rt>くに</rt></ruby>の <ruby>言葉<rt>ことば</rt></ruby>に <ruby>翻訳<rt>ほんやく</rt></ruby>されています。\n(Cuốn tiểu thuyết này đang được dịch ra ngôn ngữ của nhiều nước.)"
     },
     {
@@ -124,7 +124,7 @@
         "Reading": "はつめいします",
         "Meaning": "phát minh",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>飛行機<rt>ひこうき</rt></ruby>は ライト<ruby>兄弟<rt>きょうだい</rt></ruby>に よって <ruby>発明<rt>はつめい</rt></ruby>されました。\n(Máy bay do anh em nhà Wright phát minh ra.)"
     },
     {
@@ -132,7 +132,7 @@
         "Reading": "はっけんします",
         "Meaning": "tìm thấy, khám phá",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>新<rt>あたら</rt></ruby>しい <ruby>星<rt>ほし</rt></ruby>が <ruby>発見<rt>はっけん</rt></ruby>されました。\n(Một ngôi sao mới đã được tìm thấy.)"
     },
     {
@@ -140,7 +140,7 @@
         "Reading": "せっけいします",
         "Meaning": "thiết kế",
         "PartOfSpeech": "Động từ nhóm 3",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "イタリアの <ruby>建築家<rt>けんちくか</rt></ruby>に よって <ruby>設計<rt>せっけい</rt></ruby>されました。\n(Nó được thiết kế bởi một kiến trúc sư người Ý.)"
     },
     {
@@ -148,7 +148,7 @@
         "Reading": "こめ",
         "Meaning": "gạo",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "お<ruby>酒<rt>さけ</rt></ruby>の <ruby>原料<rt>げんりょう</rt></ruby>は <ruby>米<rt>こめ</rt></ruby>です。\n(Nguyên liệu của rượu là gạo.)"
     },
     {
@@ -156,7 +156,7 @@
         "Reading": "むぎ",
         "Meaning": "lúa mạch",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>麦<rt>むぎ</rt></ruby>から ビールが <ruby>造<rt>つく</rt></ruby>られます。\n(Bia được làm từ lúa mạch.)"
     },
     {
@@ -164,7 +164,7 @@
         "Reading": "せきゆ",
         "Meaning": "dầu mỏ",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>石油<rt>せきゆ</rt></ruby>は <ruby>大切<rt>たいせつ</rt></ruby>な <ruby>資源<rt>しげん</rt></ruby>です。\n(Dầu mỏ là tài nguyên quan trọng.)"
     },
     {
@@ -172,7 +172,7 @@
         "Reading": "げんりょう",
         "Meaning": "nguyên liệu",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "パンの <ruby>原料<rt>げんりょう</rt></ruby>は <ruby>小麦粉<rt>こむぎこ</rt></ruby>です。\n(Nguyên liệu của bánh mì là bột mì.)"
     },
     {
@@ -180,7 +180,7 @@
         "Reading": "デート",
         "Meaning": "cuộc hẹn hò",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>明日<rt>あした</rt></ruby> <ruby>彼女<rt>かのじょ</rt></ruby>と デートを します。\n(Ngày mai tôi sẽ đi hẹn hò với bạn gái.)"
     },
     {
@@ -188,7 +188,7 @@
         "Reading": "どろぼう",
         "Meaning": "kẻ trộm",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>泥棒<rt>どろぼう</rt></ruby>が <ruby>逃<rt>に</rt></ruby>げました。\n(Kẻ trộm đã bỏ chạy.)"
     },
     {
@@ -196,7 +196,7 @@
         "Reading": "けいかん",
         "Meaning": "cảnh sát",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>警官<rt>けいかん</rt></ruby>に <ruby>道<rt>みち</rt></ruby>を <ruby>聞<rt>き</rt></ruby>きました。\n(Tôi đã hỏi đường anh cảnh sát.)"
     },
     {
@@ -204,7 +204,7 @@
         "Reading": "けんちくか",
         "Meaning": "kiến trúc sư",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>将来<rt>しょうらい</rt></ruby> <ruby>建築家<rt>けんちくか</rt></ruby>に なりたいです。\n(Tương lai tôi muốn trở thành kiến trúc sư.)"
     },
     {
@@ -212,7 +212,7 @@
         "Reading": "かがくしゃ",
         "Meaning": "nhà khoa học",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>有名<rt>ゆうめい</rt></ruby>な <ruby>科学者<rt>かがくしゃ</rt></ruby>に <ruby>会<rt>あ</rt></ruby>いたいです。\n(Tôi muốn gặp nhà khoa học nổi tiếng.)"
     },
     {
@@ -220,7 +220,7 @@
         "Reading": "まんが",
         "Meaning": "truyện tranh",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>漫画<rt>まんが</rt></ruby>は <ruby>世界中<rt>せかいじゅう</rt></ruby>で <ruby>読<rt>よ</rt></ruby>まれています。\n(Truyện tranh Nhật Bản được đọc trên khắp thế giới.)"
     },
     {
@@ -228,7 +228,7 @@
         "Reading": "せかいじゅう",
         "Meaning": "khắp thế giới, toàn thế giới",
         "PartOfSpeech": "Danh từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>世界中<rt>せかいじゅう</rt></ruby>を <ruby>旅行<rt>りょこう</rt></ruby>したいです。\n(Tôi muốn đi du lịch khắp thế giới.)"
     },
     {
@@ -236,7 +236,7 @@
         "Reading": "~じゅう",
         "Meaning": "khắp, toàn",
         "PartOfSpeech": "Hậu tố",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>日本中<rt>にほんじゅう</rt></ruby>を <ruby>回<rt>まわ</rt></ruby>りたいです。\n(Tôi muốn đi quanh khắp Nhật Bản.)"
     },
     {
@@ -244,7 +244,7 @@
         "Reading": "によって",
         "Meaning": "do, bởi",
         "PartOfSpeech": "Trợ từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>源氏物語<rt>げんじものがたり</rt></ruby>は <ruby>紫式部<rt>むらさきしきぶ</rt></ruby>に よって <ruby>書<rt>か</rt></ruby>かれました。\n(Chuyện Genji do bà Murasaki Shikibu viết.)"
     },
     {
@@ -252,7 +252,7 @@
         "Reading": "よかったですね",
         "Meaning": "May nhỉ, tốt quá nhỉ",
         "PartOfSpeech": "Cụm từ",
-        "LessonId": 63,
+        "LessonId": 181,
         "Example": "<ruby>財布<rt>さいふ</rt></ruby>が <ruby>見<rt>み</rt></ruby>つかって、よかったですね。\n(Tìm thấy ví rồi, may quá nhỉ.)"
     }
 ]
