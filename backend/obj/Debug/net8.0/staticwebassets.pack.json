@@ -1073,8 +1073,24 @@
       "PackagePath": "staticwebassets/data/Vocabs/vocab_9_n3.json"
     },
     {
+      "Id": "/app/wwwroot/uploads/audio/0b8e4bc9-7aa5-4c0e-9dd0-22f1e8b58e11.mp3",
+      "PackagePath": "staticwebassets/uploads/audio/0b8e4bc9-7aa5-4c0e-9dd0-22f1e8b58e11.mp3"
+    },
+    {
+      "Id": "/app/wwwroot/uploads/audio/a91297ce-b192-4850-9efb-5ca444038734.mp3",
+      "PackagePath": "staticwebassets/uploads/audio/a91297ce-b192-4850-9efb-5ca444038734.mp3"
+    },
+    {
+      "Id": "/app/wwwroot/uploads/audio/a9d40dc9-7780-4671-bb43-3a4279661680.mp3",
+      "PackagePath": "staticwebassets/uploads/audio/a9d40dc9-7780-4671-bb43-3a4279661680.mp3"
+    },
+    {
       "Id": "/app/wwwroot/uploads/audio/d1d1299f-462c-4d81-abf2-eba6bb8a131d.mp3",
       "PackagePath": "staticwebassets/uploads/audio/d1d1299f-462c-4d81-abf2-eba6bb8a131d.mp3"
+    },
+    {
+      "Id": "/app/wwwroot/uploads/audio/db5a4c72-57dd-46ea-8cbc-8f84a6435dfc.mp3",
+      "PackagePath": "staticwebassets/uploads/audio/db5a4c72-57dd-46ea-8cbc-8f84a6435dfc.mp3"
     },
     {
       "Id": "/app/wwwroot/uploads/audio/n3_bai10_q1.mp3",
@@ -1971,6 +1987,18 @@
     {
       "Id": "/app/wwwroot/uploads/audio/n5_bai9_q5.mp3",
       "PackagePath": "staticwebassets/uploads/audio/n5_bai9_q5.mp3"
+    },
+    {
+      "Id": "/app/wwwroot/uploads/images/9d32773f-0c88-4d84-9f77-816385bd5a6e.png",
+      "PackagePath": "staticwebassets/uploads/images/9d32773f-0c88-4d84-9f77-816385bd5a6e.png"
+    },
+    {
+      "Id": "/app/wwwroot/uploads/images/a1706769-c3a0-4750-8d34-0fa6cdcf9ccc.png",
+      "PackagePath": "staticwebassets/uploads/images/a1706769-c3a0-4750-8d34-0fa6cdcf9ccc.png"
+    },
+    {
+      "Id": "/app/wwwroot/uploads/images/c62c4494-20dd-44ea-b70e-475d253c1f8d.png",
+      "PackagePath": "staticwebassets/uploads/images/c62c4494-20dd-44ea-b70e-475d253c1f8d.png"
     },
     {
       "Id": "/app/wwwroot/uploads/images/listenings/n3_bai10_q1.jpg",

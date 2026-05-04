@@ -16,9 +16,23 @@ namespace backend.DTOs.Exam
         // SỬA TÊN: Đồng bộ với tên property trong model ExamResult (AmountCorrectAnswers)
         public int AmountCorrectAnswers { get; set; }
         public int TotalQuestion { get; set; }
+        public int Duration { get; set; }
         public DateTime CompletedAt { get; set; }
         
+        public ExamInfoDto? Exam { get; set; }
+        public List<ExamQuestionAdminDto> Questions { get; set; } = new();
+        public Dictionary<int, string?> Answers { get; set; } = new();
         public List<QuestionResultDto> Details { get; set; } = new();
+    }
+
+    public class ExamInfoDto
+    {
+        public string ExamName { get; set; } = string.Empty;
+        public int? PassScaledTotal { get; set; }
+        public int? PassScaledVocabularyGrammar { get; set; }
+        public int? PassScaledReading { get; set; }
+        public int? PassScaledListening { get; set; }
+        public int? PassScaledVocabularyGrammarReading { get; set; }
     }
 
     public class QuestionResultDto

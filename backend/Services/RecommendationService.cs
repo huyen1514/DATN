@@ -1,6 +1,7 @@
 using DTOs.Recommendation;
 using Models;
 using Repositories;
+using System.Text.Json;
 
 namespace Services
 {
@@ -12,9 +13,7 @@ namespace Services
         {
             ["N5"] = 1,
             ["N4"] = 2,
-            ["N3"] = 3,
-            ["N2"] = 4,
-            ["N1"] = 5
+            ["N3"] = 3
         };
 
         private static readonly Dictionary<string, string> AprioriSkillMap = new(StringComparer.OrdinalIgnoreCase)
@@ -33,11 +32,16 @@ namespace Services
 
         private readonly IUserProgressRepository _userProgressRepository;
         private readonly ILessonRepository _lessonRepository;
+        private readonly GeminiRecommendationService _geminiService;
 
-        public RecommendationService(IUserProgressRepository userProgressRepository, ILessonRepository lessonRepository)
+        public RecommendationService(
+            IUserProgressRepository userProgressRepository, 
+            ILessonRepository lessonRepository,
+            GeminiRecommendationService geminiService)
         {
             _userProgressRepository = userProgressRepository;
             _lessonRepository = lessonRepository;
+            _geminiService = geminiService;
         }
 
         public async Task<RecommendationResponse> GetRecommendationsAsync(int userId)
@@ -56,8 +60,9 @@ namespace Services
                 {
                     UserId = userId,
                     AverageScore = 0,
-                    SimulatedKMeansCluster = "NoLessons",
-                    SimulatedAprioriRule = "No lessons available in the system."
+                    SimulatedKMeansCluster = "Chưa có dữ liệu",
+                    SimulatedAprioriRule = "Hệ thống chưa có bài học nào.",
+                    Lessons = new List<RecommendedLessonResponse>()
                 };
             }
 
@@ -95,7 +100,6 @@ namespace Services
             int targetLevelRank;
             string primarySkill;
 
-            // Simulated KMeans: group the learner into a simple cluster from score distribution.
             if (averageScore < 50 || lowScoreCount >= Math.Max(1, validProgresses.Count / 2))
             {
                 cluster = "NeedsFoundation";
@@ -115,7 +119,6 @@ namespace Services
                 primarySkill = weakSkill;
             }
 
-            // Simulated Apriori: map a skill to the skill that usually supports it.
             var aprioriRule = $"{primarySkill} -> {relatedSkill}";
 
             var studiedLessonIds = validProgresses
@@ -126,36 +129,68 @@ namespace Services
                 .Where(x => !studiedLessonIds.Contains(x.LessonId))
                 .ToList();
 
-            var candidateLessons = cluster switch
-            {
-                "NeedsFoundation" => unseenLessons.Where(x => GetLevelRank(x.Level?.LevelName) <= currentLevelRank).ToList(),
-                "HighPerformer" => unseenLessons.Where(x => GetLevelRank(x.Level?.LevelName) >= currentLevelRank).ToList(),
-                _ => unseenLessons
-            };
+            List<RecommendedLessonResponse> finalRecommendations = new();
+            bool isAiUsed = false;
 
-            if (candidateLessons.Count == 0)
+            if (unseenLessons.Count > 0)
             {
-                candidateLessons = unseenLessons;
+                var candidateLessonsForAi = unseenLessons
+                    .OrderBy(x => Math.Abs(GetLevelRank(x.Level?.LevelName) - targetLevelRank))
+                    .Take(15)
+                    .Select(x => new { x.LessonId, x.LessonName, x.SkillType, LevelName = x.Level?.LevelName })
+                    .ToList();
+
+                string unseenLessonsJson = JsonSerializer.Serialize(candidateLessonsForAi);
+
+                try
+                {
+                    var aiResults = await _geminiService.GetAiRecommendations((decimal)averageScore, weakSkill, unseenLessonsJson);
+                    
+                    if (aiResults != null && aiResults.Count > 0)
+                    {
+                        finalRecommendations = aiResults;
+                        isAiUsed = true;
+                    }
+                }
+                catch
+                {
+                    // Fallback to rule-based logic
+                }
             }
 
-            var recommendedLessons = candidateLessons
-                .OrderBy(x => GetSkillPriority(x.SkillType, primarySkill, relatedSkill))
-                .ThenBy(x => Math.Abs(GetLevelRank(x.Level?.LevelName) - targetLevelRank))
-                .ThenBy(x => x.LessonId)
-                .Take(DefaultRecommendationCount)
-                .Select(x => new RecommendedLessonResponse
-                {
-                    LessonId = x.LessonId,
-                    LessonName = x.LessonName,
-                    SkillType = x.SkillType,
-                    LevelName = x.Level?.LevelName ?? string.Empty,
-                    RecommendationReason = BuildReason(cluster, primarySkill, relatedSkill, x)
-                })
-                .ToList();
-
-            if (recommendedLessons.Count == 0)
+            if (finalRecommendations.Count == 0)
             {
-                recommendedLessons = validProgresses
+                var candidateLessons = cluster switch
+                {
+                    "NeedsFoundation" => unseenLessons.Where(x => GetLevelRank(x.Level?.LevelName) <= currentLevelRank).ToList(),
+                    "HighPerformer" => unseenLessons.Where(x => GetLevelRank(x.Level?.LevelName) >= currentLevelRank).ToList(),
+                    _ => unseenLessons
+                };
+
+                if (candidateLessons.Count == 0)
+                {
+                    candidateLessons = unseenLessons;
+                }
+
+                finalRecommendations = candidateLessons
+                    .OrderBy(x => GetSkillPriority(x.SkillType, primarySkill, relatedSkill))
+                    .ThenBy(x => Math.Abs(GetLevelRank(x.Level?.LevelName) - targetLevelRank))
+                    .ThenBy(x => x.LessonId)
+                    .Take(DefaultRecommendationCount)
+                    .Select(x => new RecommendedLessonResponse
+                    {
+                        LessonId = x.LessonId,
+                        LessonName = x.LessonName,
+                        SkillType = x.SkillType,
+                        LevelName = x.Level?.LevelName ?? string.Empty,
+                        RecommendationReason = BuildReason(cluster, primarySkill, relatedSkill, x)
+                    })
+                    .ToList();
+            }
+
+            if (finalRecommendations.Count == 0)
+            {
+                finalRecommendations = validProgresses
                     .OrderBy(x => x.Score)
                     .Take(DefaultRecommendationCount)
                     .Select(x => lessonMap[x.LessonId])
@@ -165,18 +200,26 @@ namespace Services
                         LessonName = x.LessonName,
                         SkillType = x.SkillType,
                         LevelName = x.Level?.LevelName ?? string.Empty,
-                        RecommendationReason = "No new lesson is available, so the system suggests reviewing weak lessons."
+                        RecommendationReason = "Chưa có bài học mới, hệ thống đề xuất ôn tập lại các bài cũ bị điểm thấp."
                     })
                     .ToList();
             }
+
+            string displayCluster = cluster switch
+            {
+                "NeedsFoundation" => "Cần củng cố nền tảng",
+                "HighPerformer" => "Học viên xuất sắc",
+                "BalancedLearner" => "Phát triển đồng đều",
+                _ => cluster
+            };
 
             return new RecommendationResponse
             {
                 UserId = userId,
                 AverageScore = averageScore,
-                SimulatedKMeansCluster = cluster,
+                SimulatedKMeansCluster = isAiUsed ? $"AI Cá nhân hóa ({displayCluster})" : displayCluster,
                 SimulatedAprioriRule = aprioriRule,
-                Lessons = recommendedLessons
+                Lessons = finalRecommendations
             };
         }
 
@@ -192,7 +235,7 @@ namespace Services
                     LessonName = x.LessonName,
                     SkillType = x.SkillType,
                     LevelName = x.Level?.LevelName ?? string.Empty,
-                    RecommendationReason = "New learner flow: start from the easiest available lessons."
+                    RecommendationReason = "Hành trình mới: Bắt đầu từ những bài học cơ bản nhất."
                 })
                 .ToList();
 
@@ -200,8 +243,8 @@ namespace Services
             {
                 UserId = userId,
                 AverageScore = 0,
-                SimulatedKMeansCluster = "NewLearner",
-                SimulatedAprioriRule = "No progress yet, so the system starts from the basic lessons.",
+                SimulatedKMeansCluster = "Người học mới",
+                SimulatedAprioriRule = "Chưa có dữ liệu tiến độ, hệ thống bắt đầu từ cấp độ cơ bản.",
                 Lessons = firstLessons
             };
         }
@@ -251,9 +294,9 @@ namespace Services
         {
             return cluster switch
             {
-                "NeedsFoundation" => $"The learner needs reinforcement, so prioritize easier {primarySkill} or related {relatedSkill} lessons.",
-                "HighPerformer" => $"The learner is performing well, so suggest a harder lesson around {primarySkill} and {relatedSkill}.",
-                _ => $"The learner is stable, so continue with {primarySkill} and supporting {relatedSkill} lessons."
+                "NeedsFoundation" => $"Bạn cần củng cố kiến thức, nên hệ thống ưu tiên các bài học dễ hơn về {primarySkill} hoặc kỹ năng bổ trợ {relatedSkill}.",
+                "HighPerformer" => $"Bạn đang làm rất tốt, hệ thống đề xuất thử thách với bài học khó hơn về {primarySkill} và {relatedSkill}.",
+                _ => $"Tiến độ của bạn đang ổn định, hãy tiếp tục phát huy với {primarySkill} và {relatedSkill}."
             };
         }
 

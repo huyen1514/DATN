@@ -86,11 +86,44 @@ namespace Services
 
         public async Task<bool> DeleteExamAsync(int id)
         {
-            var rowsAffected = await _context.Exams
-                .Where(x => x.ExamId == id)
-                .ExecuteDeleteAsync();
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                // 1. Xóa Bookmarks
+                await _context.Bookmarks.Where(b => b.ItemId == id && b.Type == "Exam").ExecuteDeleteAsync();
 
-            return rowsAffected > 0;
+                // 2. Xóa ExamResults
+                await _context.ExamResults.Where(r => r.ExamId == id).ExecuteDeleteAsync();
+
+                // 3. Xóa UserExams
+                await _context.UserExams.Where(u => u.ExamId == id).ExecuteDeleteAsync();
+
+                // 4. Xóa Payments
+                await _context.Payments.Where(p => p.ExamId == id).ExecuteDeleteAsync();
+
+                // 5. Xóa ExamSessionAnswers (Xóa tất cả câu trả lời liên quan đến các câu hỏi của đề thi này)
+                await _context.ExamSessionAnswers.Where(a => a.Question != null && a.Question.ExamId == id).ExecuteDeleteAsync();
+
+                // 6. Xóa ExamSessions liên quan đến đề thi này
+                await _context.ExamSessions.Where(s => s.ExamId == id).ExecuteDeleteAsync();
+
+                // 7. Xóa ExamQuestions (câu hỏi)
+                await _context.ExamQuestions.Where(q => q.ExamId == id).ExecuteDeleteAsync();
+
+                // 8. Xóa QuestionGroups (đoạn văn)
+                await _context.QuestionGroups.Where(g => g.ExamId == id).ExecuteDeleteAsync();
+
+                // 9. Cuối cùng xóa Exam
+                var rowsAffected = await _context.Exams.Where(e => e.ExamId == id).ExecuteDeleteAsync();
+
+                await transaction.CommitAsync();
+                return rowsAffected > 0;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
         public async Task<ExamResponseDto?> CreateExamAsync(ExamCreateDto createData)

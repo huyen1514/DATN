@@ -73,11 +73,6 @@
 /app/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
 /app/bin/Debug/net8.0/System.Security.Permissions.dll
 /app/bin/Debug/net8.0/System.Windows.Extensions.dll
-/app/bin/Debug/net8.0/UglyToad.PdfPig.dll
-/app/bin/Debug/net8.0/UglyToad.PdfPig.Core.dll
-/app/bin/Debug/net8.0/UglyToad.PdfPig.Fonts.dll
-/app/bin/Debug/net8.0/UglyToad.PdfPig.Tokenization.dll
-/app/bin/Debug/net8.0/UglyToad.PdfPig.Tokens.dll
 /app/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
 /app/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
 /app/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -225,11 +220,6 @@ D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/System.Runtime.Caching.dll
 D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
 D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/System.Security.Permissions.dll
 D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/System.Windows.Extensions.dll
-D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/UglyToad.PdfPig.dll
-D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/UglyToad.PdfPig.Core.dll
-D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/UglyToad.PdfPig.Fonts.dll
-D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/UglyToad.PdfPig.Tokenization.dll
-D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/UglyToad.PdfPig.Tokens.dll
 D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/cs/Microsoft.CodeAnalysis.resources.dll
 D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/de/Microsoft.CodeAnalysis.resources.dll
 D:/DATN/JapaneseLearning/backend/bin/Debug/net8.0/es/Microsoft.CodeAnalysis.resources.dll

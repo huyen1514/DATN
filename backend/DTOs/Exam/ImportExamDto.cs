@@ -73,9 +73,6 @@ namespace backend.DTOs.Exam
         [JsonPropertyName("reading_passage")]
         public string? ReadingPassage { get; set; }
 
-        [JsonPropertyName("audio_url")]
-        public string? AudioUrl { get; set; }
-
         [JsonPropertyName("questions")]
         public List<ImportQuestionDto> Questions { get; set; } = new();
     }
@@ -94,8 +91,11 @@ namespace backend.DTOs.Exam
         [JsonPropertyName("explanation")]
         public string? Explanation { get; set; }
 
-        [JsonPropertyName("attachment")]
-        public string? Attachment { get; set; } 
+        [JsonPropertyName("attachments")]
+        public List<string> Attachments { get; set; } = new();
+
+        [JsonPropertyName("audio_url")]
+        public string? AudioUrl { get; set; }
     }
 
     public class OptionDto

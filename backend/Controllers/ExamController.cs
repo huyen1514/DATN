@@ -3,6 +3,7 @@ using backend.DTOs.Exam;
 using Services;
 using System.Security.Claims;
 using System.Text.Json;
+using System.IO;
 
 namespace Controllers
 {
@@ -28,7 +29,7 @@ namespace Controllers
             return Ok(new { Data = exams, Total = totalRecords, Page = page, PageSize = pageSize });
         }
 
-        // BỔ SUNG: API lấy chi tiết 1 đề thi
+        // API lấy chi tiết 1 đề thi
         [HttpGet("{id}")]
         public async Task<IActionResult> GetExamById(int id)
         {
@@ -82,7 +83,7 @@ namespace Controllers
         // ==========================================
         
         /// <summary>
-        /// Upload file .json chứa cấu trúc đề thi theo format ImportExamRequest.
+        /// Upload file .json, LƯU VÀO SERVER, và import vào Database.
         /// </summary>
         [HttpPost("import-json")]
         public async Task<IActionResult> ImportFromJson(
@@ -106,9 +107,24 @@ namespace Controllers
 
             try
             {
-                using var stream = file.OpenReadStream();
-                using var reader = new StreamReader(stream);
-                var jsonContent = await reader.ReadToEndAsync();
+                // 1. LƯU FILE VÀO THƯ MỤC WWWROOT (HỖ TRỢ DOCKER)
+                string saveDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "data", "Exams");
+                if (!Directory.Exists(saveDirectory))
+                {
+                    Directory.CreateDirectory(saveDirectory);
+                }
+                
+                // Lấy tên file gốc
+                string fileName = file.FileName;
+                string filePath = Path.Combine(saveDirectory, fileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
+
+                // 2. ĐỌC NỘI DUNG FILE VỪA LƯU ĐỂ IMPORT VÀO DATABASE
+                string jsonContent = await System.IO.File.ReadAllTextAsync(filePath);
 
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var request = JsonSerializer.Deserialize<ImportExamRequest>(jsonContent, options);
@@ -116,11 +132,17 @@ namespace Controllers
                 if (request == null)
                     return BadRequest(new { Message = "Không thể đọc nội dung file JSON." });
 
+                // 3. GỌI SERVICE ĐỂ LƯU VÀO DB
                 var (success, message, examId) = await importService.ImportAsync(request, createdByUserId);
 
-                if (!success) return BadRequest(new { Message = message });
+                if (!success) 
+                {
+                    // Tùy chọn: Xóa file vật lý vừa lưu nếu import vào DB thất bại để tránh rác server
+                    // System.IO.File.Delete(filePath);
+                    return BadRequest(new { Message = message });
+                }
 
-                return Ok(new { Message = message, ExamId = examId });
+                return Ok(new { Message = message, ExamId = examId, SavedFilePath = filePath });
             }
             catch (JsonException ex)
             {
@@ -165,107 +187,72 @@ namespace Controllers
                 return StatusCode(500, new { Message = $"Lỗi hệ thống: {ex.Message} - {ex.InnerException?.Message}\n{ex.StackTrace}" });
             }
         }
-
         // ==========================================
-        // IMPORT ĐỀ THI TỪ FILE PDF
+        // UPLOAD MEDIA (AUDIO/IMAGE) CHO CÂU HỎI
         // ==========================================
-        [HttpPost("import-pdf")]
-        public async Task<IActionResult> ImportFromPdf(
-            IFormFile file,
-            [FromQuery] bool dryRun,
-            [FromServices] ExamPdfImportService pdfService,
-            [FromServices] ExamJsonImportService jsonImportService)
+        [HttpPost("upload-media")]
+        public async Task<IActionResult> UploadMedia(
+            [FromForm] IFormFile file,
+            [FromForm] int questionId,
+            [FromServices] Data.AppDbContext context,
+            [FromServices] IWebHostEnvironment env)
         {
             if (file == null || file.Length == 0)
                 return BadRequest(new { Message = "Không có file nào được tải lên." });
 
+            var question = await context.ExamQuestions.FindAsync(questionId);
+            if (question == null)
+                return NotFound(new { Message = "Không tìm thấy câu hỏi với ID cung cấp." });
+
             var extension = Path.GetExtension(file.FileName).ToLower();
-            if (extension != ".pdf")
-                return BadRequest(new { Message = "Chỉ chấp nhận file .pdf" });
+            string[] audioExts = { ".mp3", ".wav", ".m4a", ".ogg" };
+            string[] imageExts = { ".jpg", ".jpeg", ".png", ".webp", ".gif" };
 
-            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            int createdByUserId = 1;
-            if (!string.IsNullOrEmpty(userIdClaim) && int.TryParse(userIdClaim, out int uid))
+            string folderName = "";
+            bool isAudio = audioExts.Contains(extension);
+            bool isImage = imageExts.Contains(extension);
+
+            if (isAudio) folderName = "audio";
+            else if (isImage) folderName = "images";
+            else return BadRequest(new { Message = "Định dạng file không được hỗ trợ." });
+
+            // Sinh UUID để không bị trùng tên
+            string newFileName = Guid.NewGuid().ToString() + extension;
+            string webRootPath = env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot");
+            string saveDirectory = Path.Combine(webRootPath, "uploads", folderName);
+
+            if (!Directory.Exists(saveDirectory))
             {
-                createdByUserId = uid;
+                Directory.CreateDirectory(saveDirectory);
             }
 
-            try
+            string filePath = Path.Combine(saveDirectory, newFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
-                using var stream = file.OpenReadStream();
-                var (request, warnings) = pdfService.Parse(stream, file.FileName);
-
-                if (request == null)
-                    return BadRequest(new { Message = "Không thể parse PDF.", Warnings = warnings });
-
-                if (dryRun)
-                {
-                    return Ok(new { Message = "Tạo JSON Draft thành công.", Draft = request, Warnings = warnings });
-                }
-
-                var (success, message, examId) = await jsonImportService.ImportAsync(request, createdByUserId);
-
-                return Ok(new { Message = message, ExamId = examId, Warnings = warnings });
+                await file.CopyToAsync(fileStream);
             }
-            catch (Exception ex)
+
+            string relativeUrl = $"/uploads/{folderName}/{newFileName}";
+
+            if (isAudio)
             {
-                return StatusCode(500, new { Message = $"Lỗi server: {ex.Message}" });
+                question.AudioUrl = relativeUrl;
             }
+            else
+            {
+                question.ImageUrl = relativeUrl;
+            }
+
+            await context.SaveChangesAsync();
+
+            return Ok(new 
+            { 
+                Message = "Tải file thành công.", 
+                Url = relativeUrl, 
+                Type = isAudio ? "audio" : "image" 
+            });
         }
 
-        [HttpPost("import-pdf-with-answer-key")]
-        public async Task<IActionResult> ImportFromPdfWithAnswerKey(
-            IFormFile questionFile,
-            IFormFile answerKeyFile,
-            [FromQuery] bool dryRun,
-            [FromServices] ExamPdfImportService pdfService,
-            [FromServices] ExamJsonImportService jsonImportService)
-        {
-            if (questionFile == null || questionFile.Length == 0)
-                return BadRequest(new { Message = "Không có file câu hỏi nào được tải lên." });
-            if (answerKeyFile == null || answerKeyFile.Length == 0)
-                return BadRequest(new { Message = "Không có file đáp án nào được tải lên." });
-
-            var extension = Path.GetExtension(questionFile.FileName).ToLower();
-            if (extension != ".pdf")
-                return BadRequest(new { Message = "File câu hỏi phải là .pdf" });
-
-            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            int createdByUserId = 1;
-            if (!string.IsNullOrEmpty(userIdClaim) && int.TryParse(userIdClaim, out int uid))
-            {
-                createdByUserId = uid;
-            }
-
-            try
-            {
-                using var qStream = questionFile.OpenReadStream();
-                var (request, warnings) = pdfService.Parse(qStream, questionFile.FileName);
-
-                if (request == null)
-                    return BadRequest(new { Message = "Không thể parse PDF câu hỏi.", Warnings = warnings });
-
-                using var aStream = answerKeyFile.OpenReadStream();
-                var answerMap = Path.GetExtension(answerKeyFile.FileName).ToLower() == ".pdf" 
-                    ? pdfService.ParseAnswerKeyFromPdf(aStream)
-                    : pdfService.ParseAnswerKeyFromText(await new StreamReader(aStream).ReadToEndAsync());
-
-                var updated = pdfService.ApplyAnswerKey(request, answerMap, warnings);
-                warnings.Add($"Đã áp dụng đáp án cho {updated} câu hỏi.");
-
-                if (dryRun)
-                {
-                    return Ok(new { Message = "Tạo JSON Draft thành công.", Draft = request, Warnings = warnings });
-                }
-
-                var (success, message, examId) = await jsonImportService.ImportAsync(request, createdByUserId);
-
-                return Ok(new { Message = message, ExamId = examId, Warnings = warnings });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { Message = $"Lỗi server: {ex.Message}" });
-            }
-        }
     }
 }

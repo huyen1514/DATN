@@ -37,6 +37,15 @@ namespace Controllers
             return Ok(results);
         }
 
+        [HttpGet("{examResultId}")]
+        public async Task<IActionResult> GetResult(int examResultId)
+        {
+            var result = await _examResultService.ReviewExamAsync(examResultId);
+            if (result == null) return NotFound(new { Message = "Không tìm thấy kết quả" });
+            
+            return Ok(result);
+        }
+
         // API riêng để xem lại chi tiết 1 bài thi (Load SnapshotJson)
         [HttpGet("review/{examResultId}")]
         public async Task<IActionResult> ReviewExam(int examResultId)

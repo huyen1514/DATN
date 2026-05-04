@@ -35,6 +35,7 @@ namespace Models
         public AnswerOption CorrectAnswer {get; set;}
 
         public string? ImageUrl {get; set;}
+        public string? AudioUrl {get; set;}
 
         [Required]
         public ExamSectionType Section { get; set; }

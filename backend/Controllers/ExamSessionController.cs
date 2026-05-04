@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using backend.DTOs.Exam;
 using System.Security.Claims;
 using Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/exam-sessions")]
     public class ExamSessionController : ControllerBase
@@ -25,7 +27,8 @@ namespace Controllers
                 return Unauthorized(new { Message = "Vui lòng đăng nhập để thi" });
             }
 
-            var (success, message, data, statusCode) = await _examSessionService.StartSessionAsync(request, userId);
+            bool isAdmin = User.IsInRole("Admin");
+            var (success, message, data, statusCode) = await _examSessionService.StartSessionAsync(request, userId, isAdmin);
 
             if (!success)
             {

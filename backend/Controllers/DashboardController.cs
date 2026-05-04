@@ -27,5 +27,12 @@ namespace Controllers
                 return NotFound(ex.Message);
             }
         }
+
+        [HttpGet("admin")]
+        public async Task<IActionResult> GetAdminDashboard()
+        {
+            var stats = await _dashboardService.GetAdminDashboardStatsAsync();
+            return Ok(stats);
+        }
     }
 }

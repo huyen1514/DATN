@@ -30,3 +30,4 @@ namespace backend.DTOs.Exam
         public string ExamName { get; set; } = string.Empty;
     }
 }
+    

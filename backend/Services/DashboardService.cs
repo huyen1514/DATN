@@ -1,4 +1,6 @@
+using Data;
 using DTOs.Dashboard;
+using Microsoft.EntityFrameworkCore;
 using Repositories;
 using System;
 using System.Collections.Generic;
@@ -10,10 +12,12 @@ namespace Services
     public class DashboardService : IDashboardService
     {
         private readonly IUserProgressRepository _userProgressRepository;
+        private readonly AppDbContext _context;
 
-        public DashboardService(IUserProgressRepository userProgressRepository)
+        public DashboardService(IUserProgressRepository userProgressRepository, AppDbContext context)
         {
             _userProgressRepository = userProgressRepository;
+            _context = context;
         }
 
         public async Task<DashboardResponse> GetDashboardAsync(int userId)
@@ -62,6 +66,24 @@ namespace Services
                 TotalLessonsLearned = totalLessons,
                 CompletedLessons = completedLessons,
                 AverageScore = averageScore
+            };
+        }
+
+        public async Task<AdminDashboardStats> GetAdminDashboardStatsAsync()
+        {
+            return new AdminDashboardStats
+            {
+                Levels = await _context.Levels.CountAsync(),
+                Lessons = await _context.Lessons.CountAsync(),
+                Kanjis = await _context.Kanjis.CountAsync(),
+                Grammars = await _context.Grammars.CountAsync(),
+                Vocabularies = await _context.Vocabularies.CountAsync(),
+                Listenings = await _context.Listenings.CountAsync(),
+                Readings = await _context.ReadingPassages.CountAsync(),
+                Exams = await _context.Exams.CountAsync(),
+                Users = await _context.Users.CountAsync(),
+                Folders = await _context.Folders.CountAsync(),
+                Decks = await _context.Decks.CountAsync()
             };
         }
     }

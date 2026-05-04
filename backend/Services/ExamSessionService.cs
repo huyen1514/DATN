@@ -14,17 +14,20 @@ namespace Services
             _context = context;
         }
 
-        public async Task<(bool Success, string Message, SessionResponseDto? Data, int StatusCode)> StartSessionAsync(StartSessionRequest request, int userId)
+        public async Task<(bool Success, string Message, SessionResponseDto? Data, int StatusCode)> StartSessionAsync(StartSessionRequest request, int userId, bool isAdmin = false)
         {
             var exam = await _context.Exams.FindAsync(request.ExamId);
             if (exam == null || !exam.IsActive) 
                 return (false, "Đề thi không tồn tại hoặc đã bị ẩn", null, 404);
 
-            var hasAccess = await _context.UserExams
-                .AnyAsync(ue => ue.UserId == userId && ue.ExamId == request.ExamId);
-            
-            if (!hasAccess) 
-                return (false, "Bạn chưa thanh toán/mở khóa đề thi này", null, 403);
+            if (!isAdmin)
+            {
+                var hasAccess = await _context.UserExams
+                    .AnyAsync(ue => ue.UserId == userId && ue.ExamId == request.ExamId);
+                
+                if (!hasAccess) 
+                    return (false, "Bạn chưa thanh toán/mở khóa đề thi này", null, 403);
+            }
 
             var session = new ExamSession {
                 UserId = userId,

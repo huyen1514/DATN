@@ -73,7 +73,7 @@ namespace Controllers
                     {
                         d.DeckId,
                         d.Title
-                    })
+                    }).ToList()
                 })
                 .ToListAsync();
 
@@ -99,7 +99,7 @@ namespace Controllers
                     {
                         d.DeckId,
                         d.Title
-                    })
+                    }).ToList()
                 })
                 .FirstOrDefaultAsync();
 
@@ -145,6 +145,12 @@ namespace Controllers
 
             if (folder == null)
                 return NotFound("Không tìm thấy folder");
+
+            var decks = await _context.Decks.Where(d => d.FolderId == id).ToListAsync();
+            if (decks.Any())
+            {
+                _context.Decks.RemoveRange(decks);
+            }
 
             _context.Folders.Remove(folder);
             await _context.SaveChangesAsync();

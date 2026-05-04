@@ -1,6 +1,7 @@
 using DTOs.Progress;
 using Models;
 using Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Services
 {
@@ -29,8 +30,19 @@ namespace Services
                     LastAccessed = DateTime.UtcNow,
                     Completed = false
                 };
-                await _progressRepository.AddUserProgressAsync(userProgress);
-                await _progressRepository.SaveChangesAsync(); 
+                
+                try
+                {
+                    await _progressRepository.AddUserProgressAsync(userProgress);
+                    await _progressRepository.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    // Race condition: luồng khác đã tạo bản ghi trước. 
+                    // Load lại bản ghi vừa được tạo đó để tiếp tục xử lý PartProgress.
+                    userProgress = await _progressRepository.GetUserProgressWithPartsAsync(request.UserId, request.LessonId);
+                    if (userProgress == null) throw; 
+                }
             }
 
             userProgress.LastAccessed = DateTime.UtcNow;
@@ -59,7 +71,15 @@ namespace Services
                 }
             }
 
-            await _progressRepository.SaveChangesAsync();
+            try
+            {
+                await _progressRepository.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                // Bắt lỗi vi phạm khóa (Duplicate Key) trong trường hợp 2 luồng cùng chèn LessonProgress.
+                // Trả về kết quả 200 OK thay vì văng lỗi 500.
+            }
 
             var finalProgress = await _progressRepository.GetUserProgressWithPartsAsync(request.UserId, request.LessonId);
             return MapToResponse(finalProgress!);

@@ -12,7 +12,6 @@ namespace backend.DTOs.Exam
     {
         public int QuestionGroupId { get; set; }
         public string? Passage { get; set; }
-        public string? AudioUrl { get; set; }
         public List<QuestionDto> Questions { get; set; } = new();
     }
 
@@ -27,5 +26,7 @@ namespace backend.DTOs.Exam
         public int MondaiNumber { get; set; }
         public string? ImageUrl { get; set; }
         public string? Instruction { get; set; }
+        public string? AudioUrl { get; set; }
+        public string Section { get; set; } = string.Empty;
     }
 }

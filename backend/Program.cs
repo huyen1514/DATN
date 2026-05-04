@@ -30,7 +30,6 @@ builder.Services.AddScoped<GrammarImportService>();
 builder.Services.AddScoped<KanjiImportService>();
 builder.Services.AddScoped<ReadImportService>();
 builder.Services.AddScoped<ListenImportService>();
-builder.Services.AddScoped<ExamPdfImportService>();
 builder.Services.AddScoped<ExamJsonImportService>();
 builder.Services.AddScoped<EmailService>();
 
@@ -49,6 +48,12 @@ builder.Services.AddScoped<IExamSessionAnswerRepository, ExamSessionAnswerReposi
 builder.Services.AddScoped<IProgressService, ProgressService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IRecommendationService, RecommendationService>();
+
+// =====================================================================
+// [THÊM MỚI] Đăng ký Gemini AI Service có sử dụng HttpClient
+// =====================================================================
+builder.Services.AddHttpClient<GeminiRecommendationService>();
+
 builder.Services.AddScoped<IBookmarkService, BookmarkService>();
 builder.Services.AddScoped<IExamService, ExamService>();
 builder.Services.AddScoped<IExamQuestionService, ExamQuestionService>();
@@ -267,7 +272,6 @@ using (var scope = app.Services.CreateScope())
             .ToDictionaryAsync(level => level.LevelName, level => level);
 
         // --- BẮT ĐẦU PHẦN ĐÃ SỬA ---
-        // Thay vì dùng string[] skills chung cho mọi level, ta định nghĩa chi tiết cho từng Level và từng Skill
         var lessonSeeds = new[]
         {
             new 
@@ -316,7 +320,6 @@ using (var scope = app.Services.CreateScope())
         {
             var level = levelsByName[levelSeed.LevelName];
 
-            // Duyệt qua từng cấu hình kỹ năng (SkillConfig) thay vì mảng skills chung
             foreach (var skillConfig in levelSeed.SkillConfigs)
             {
                 for (var lessonNumber = skillConfig.Start; lessonNumber <= skillConfig.End; lessonNumber++)

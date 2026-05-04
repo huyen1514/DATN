@@ -34,7 +34,7 @@ namespace Services
                     Passage = q.QuestionGroup != null ? q.QuestionGroup.Passage : null,
                     Instruction = q.Instruction,
                     Explanation = q.Explanation,
-                    AudioUrl = q.QuestionGroup != null ? q.QuestionGroup.AudioUrl : null,
+                    AudioUrl = q.AudioUrl ?? (q.QuestionGroup != null ? q.QuestionGroup.AudioUrl : null), // Ưu tiên audio riêng của câu hỏi
                     ImageUrl = q.ImageUrl,
                     ExamId = q.ExamId,
                     UserId = q.CreatedByUserId,
@@ -82,6 +82,7 @@ namespace Services
                 Instruction = dto.Instruction,
                 Explanation = dto.Explanation,
                 ImageUrl = dto.ImageUrl,
+                AudioUrl = dto.AudioUrl, // Lưu audio riêng của câu hỏi
                 ExamId = dto.ExamId,
                 CreatedByUserId = dto.UserId,
                 QuestionGroupId = group?.QuestionGroupId,
@@ -127,7 +128,6 @@ namespace Services
                 .Select(g => new QuestionGroupDto {
                     QuestionGroupId = g.Key ?? 0,
                     Passage = g.First().QuestionGroup?.Passage,
-                    AudioUrl = g.First().QuestionGroup?.AudioUrl,
                     Questions = g.Select(q => new QuestionDto {
                         ExamQuestionId = q.ExamQuestionId,
                         Question = q.Question,
@@ -137,7 +137,9 @@ namespace Services
                         OptionD = q.OptionD,
                         MondaiNumber = q.MondaiNumber,
                         ImageUrl = q.ImageUrl,
-                        Instruction = q.Instruction
+                        Instruction = q.Instruction,
+                        AudioUrl = q.AudioUrl ?? (q.QuestionGroup != null ? q.QuestionGroup.AudioUrl : null), // Ưu tiên audio riêng, fallback về Group
+                        Section = q.Section.ToString()
                     }).ToList()
                 }).ToList();
 
@@ -168,6 +170,7 @@ namespace Services
             existing.Instruction = dto.Instruction;
             existing.Explanation = dto.Explanation;
             existing.ImageUrl = dto.ImageUrl;
+            existing.AudioUrl = dto.AudioUrl; // Cập nhật audio riêng
             existing.ExamId = dto.ExamId;
             existing.CreatedByUserId = dto.UserId;
             

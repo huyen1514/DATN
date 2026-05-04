@@ -1,133 +1,161 @@
 {
-  "testInfo": {
+  "test_info": {
+    "test_id": "jlpt_n5_01",
     "title": "JLPT N5 - Đề mẫu 01",
     "level": "N5",
-    "totalDurationMinutes": 105,
-    "passMarks": {
+    "total_duration_minutes": 105,
+    "pass_marks": {
       "total": 80,
-      "vocabularyGrammar": 38,
+      "vocabulary_grammar": 38,
       "reading": 19,
       "listening": 19,
-      "vocabularyGrammarReading": 0
+      "vocabulary_grammar_reading": 0
     }
   },
   "sections": [
     {
-      "sectionId": "sec_vocab",
-      "sectionName": "Vocabulary",
-      "jpName": "文字・語彙",
-      "mondaiList": [
+      "section_id": "sec_vocab",
+      "section_name": "Từ vựng",
+      "jp_name": "文字・語彙",
+      "mondai_list": [
         {
-          "mondaiNumber": 1,
+          "mondai_id": "m1",
+          "mondai_number": 1,
           "instruction": "＿＿の ことばは ひらがなで どう かきますか。",
-          "vnInstruction": "Từ gạch chân viết bằng Hiragana như thế nào?",
+          "vn_instruction": "Từ gạch chân viết bằng Hiragana như thế nào?",
           "questions": [
             {
+              "question_id": "q1",
+              "number": 1,
               "content": "この　花は　とても　きれいです。",
               "options": [
-                { "id": 1, "text": "はな" },
-                { "id": 2, "text": "はに" },
-                { "id": 3, "text": "かな" },
-                { "id": 4, "text": "かに" }
+                { "option_id": 1, "text": "はな" },
+                { "option_id": 2, "text": "はに" },
+                { "option_id": 3, "text": "かな" },
+                { "option_id": 4, "text": "かに" }
               ],
-              "correctOption": "A",
-              "explanation": "花（はな）= hoa"
+              "correct_option_id": 1,
+              "explanation": "花（はな）= hoa",
+              "attachments": [],
+              "audio_url": null
             },
             {
+              "question_id": "q2",
+              "number": 2,
               "content": "毎朝　六時に　おきます。",
               "options": [
-                { "id": 1, "text": "まいあさ" },
-                { "id": 2, "text": "まいちょう" },
-                { "id": 3, "text": "めいあさ" },
-                { "id": 4, "text": "めいちょう" }
+                { "option_id": 1, "text": "まいあさ" },
+                { "option_id": 2, "text": "まいちょう" },
+                { "option_id": 3, "text": "めいあさ" },
+                { "option_id": 4, "text": "めいちょう" }
               ],
-              "correctOption": "A",
-              "explanation": "毎朝（まいあさ）= mỗi buổi sáng"
+              "correct_option_id": 1,
+              "explanation": "毎朝（まいあさ）= mỗi buổi sáng",
+              "attachments": [],
+              "audio_url": null
             }
           ]
         }
       ]
     },
     {
-      "sectionId": "sec_grammar",
-      "sectionName": "Grammar",
-      "jpName": "文法",
-      "mondaiList": [
+      "section_id": "sec_grammar",
+      "section_name": "Ngữ pháp",
+      "jp_name": "文法",
+      "mondai_list": [
         {
-          "mondaiNumber": 2,
+          "mondai_id": "m2",
+          "mondai_number": 2,
           "instruction": "（　）に　何を　入れますか。",
-          "vnInstruction": "Điền gì vào chỗ trống?",
+          "vn_instruction": "Điền gì vào chỗ trống?",
           "questions": [
             {
+              "question_id": "q3",
+              "number": 3,
               "content": "わたしは　がくせい（　）です。",
               "options": [
-                { "id": 1, "text": "は" },
-                { "id": 2, "text": "が" },
-                { "id": 3, "text": "を" },
-                { "id": 4, "text": "に" }
+                { "option_id": 1, "text": "は" },
+                { "option_id": 2, "text": "が" },
+                { "option_id": 3, "text": "を" },
+                { "option_id": 4, "text": "に" }
               ],
-              "correctOption": "A"
+              "correct_option_id": 1,
+              "attachments": [],
+              "audio_url": null
             },
             {
+              "question_id": "q4",
+              "number": 4,
               "content": "きのう　えいがを（　）。",
               "options": [
-                { "id": 1, "text": "みます" },
-                { "id": 2, "text": "みました" },
-                { "id": 3, "text": "みる" },
-                { "id": 4, "text": "みて" }
+                { "option_id": 1, "text": "みます" },
+                { "option_id": 2, "text": "みました" },
+                { "option_id": 3, "text": "みる" },
+                { "option_id": 4, "text": "みて" }
               ],
-              "correctOption": "B"
+              "correct_option_id": 2,
+              "attachments": [],
+              "audio_url": null
             }
           ]
         }
       ]
     },
     {
-      "sectionId": "sec_reading",
-      "sectionName": "Reading",
-      "jpName": "読解",
-      "mondaiList": [
+      "section_id": "sec_reading",
+      "section_name": "Đọc hiểu",
+      "jp_name": "読解",
+      "mondai_list": [
         {
-          "mondaiNumber": 3,
+          "mondai_id": "m3",
+          "mondai_number": 3,
           "instruction": "つぎの　ぶんしょうを　よんで、しつもんに　こたえて　ください。",
-          "vnInstruction": "Đọc đoạn văn sau và trả lời câu hỏi.",
-          "readingPassage": "きのう　わたしは　ともだちと　こうえんに　いきました。こうえんで　おべんとうを　たべました。とても　たのしかったです。",
+          "vn_instruction": "Đọc đoạn văn sau và trả lời câu hỏi.",
+          "reading_passage": "きのう　わたしは　ともだちと　こうえんに　いきました。こうえんで　おべんとうを　たべました。とても　たのしかったです。",
           "questions": [
             {
+              "question_id": "q5",
+              "number": 5,
               "content": "きのう　どこに　いきましたか。",
               "options": [
-                { "id": 1, "text": "がっこう" },
-                { "id": 2, "text": "こうえん" },
-                { "id": 3, "text": "うち" },
-                { "id": 4, "text": "えき" }
+                { "option_id": 1, "text": "がっこう" },
+                { "option_id": 2, "text": "こうえん" },
+                { "option_id": 3, "text": "うち" },
+                { "option_id": 4, "text": "えき" }
               ],
-              "correctOption": "B",
-              "explanation": "Đoạn văn nói: こうえんに いきました (đi công viên)"
+              "correct_option_id": 2,
+              "explanation": "Đoạn văn nói: こうえんに いきました (đi công viên)",
+              "attachments": [],
+              "audio_url": null
             }
           ]
         }
       ]
     },
     {
-      "sectionId": "sec_listening",
-      "sectionName": "Listening",
-      "jpName": "聴解",
-      "mondaiList": [
+      "section_id": "sec_listening",
+      "section_name": "Nghe hiểu",
+      "jp_name": "聴解",
+      "mondai_list": [
         {
-          "mondaiNumber": 4,
+          "mondai_id": "m4",
+          "mondai_number": 4,
           "instruction": "もんだいを　きいて、ただしい　こたえを　えらんで　ください。",
-          "vnInstruction": "Nghe câu hỏi và chọn đáp án đúng.",
-          "audioUrl": "/uploads/audio/n5_sample_listening_01.mp3",
+          "vn_instruction": "Nghe câu hỏi và chọn đáp án đúng.",
           "questions": [
             {
+              "question_id": "q6",
+              "number": 6,
               "content": "おとこの　ひとは　なにを　かいましたか。",
               "options": [
-                { "id": 1, "text": "ほん" },
-                { "id": 2, "text": "ノート" },
-                { "id": 3, "text": "えんぴつ" },
-                { "id": 4, "text": "かばん" }
+                { "option_id": 1, "text": "ほん" },
+                { "option_id": 2, "text": "ノート" },
+                { "option_id": 3, "text": "えんぴつ" },
+                { "option_id": 4, "text": "かばん" }
               ],
-              "correctOption": "A"
+              "correct_option_id": 1,
+              "attachments": [],
+              "audio_url": "/uploads/audio/n5_sample_listening_01.mp3"
             }
           ]
         }
