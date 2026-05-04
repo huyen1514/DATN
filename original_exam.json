@@ -1,0 +1,249 @@
+﻿{
+  "test_info": {
+    "title": "Đề thi thử JLPT N5 - Full 91 Câu",
+    "level": "N5",
+    "total_duration_minutes": 105,
+    "pass_marks": {
+      "total": 80,
+      "vocabulary_grammar": 38,
+      "reading": 38,
+      "listening": 19
+    }
+  },
+  "sections": [
+    {
+      "section_id": "sec_vocab",
+      "section_name": "Từ vựng (Moji-Goi)",
+      "jp_name": "文字・語彙",
+      "mondai_list": [
+        {
+          "mondai_number": 1,
+          "instruction": "つぎのことばの読み方として最もよいものを、１・２・３・４から一つえらびなさい。",
+          "vn_instruction": "Chọn cách đọc đúng cho từ Kanji (12 câu)",
+          "questions": [
+            { "id": 1, "content": "【山】にのぼります。", "options": ["1. やま", "2. かわ", "3. うみ", "4. そら"], "correct_option_id": 1, "explanation": "山 (Sơn): Núi." },
+            { "id": 2, "content": "【千円】かしてください。", "options": ["1. ぜんえん", "2. せんえん", "3. ちえん", "4. せんねん"], "correct_option_id": 2, "explanation": "千円: 1000 Yên." },
+            { "id": 3, "content": "【名前】を書いてください。", "options": ["1. なまえ", "2. めいし", "3. なせん", "4. みょうじ"], "correct_option_id": 1, "explanation": "名前: Tên." },
+            { "id": 4, "content": "【半分】食べました。", "options": ["1. はんぶん", "2. ほんぶん", "3. はんぷん", "4. ほんぷん"], "correct_option_id": 1, "explanation": "半分: Một nửa." },
+            { "id": 5, "content": "【白い】シャツです。", "options": ["1. あかい", "2. くろい", "3. しろい", "4. あおい"], "correct_option_id": 3, "explanation": "白い: Trắng." },
+            { "id": 6, "content": "【父】は会社員です。", "options": ["1. はは", "2. ちち", "3. あに", "4. あね"], "correct_option_id": 2, "explanation": "父: Bố (của mình)." },
+            { "id": 7, "content": "【外】にだれかいます。", "options": ["1. なか", "2. そと", "3. よこ", "4. うえ"], "correct_option_id": 2, "explanation": "外: Bên ngoài." },
+            { "id": 8, "content": "【先生】に聞きました。", "options": ["1. せいせん", "2. せんせい", "3. せんせ", "4. せせい"], "correct_option_id": 2, "explanation": "先生: Giáo viên." },
+            { "id": 9, "content": "【電車の】中で本を読みます。", "options": ["1. てんしゃ", "2. でんしゃ", "3. てんしゃん", "4. でんしゃん"], "correct_option_id": 2, "explanation": "電車: Tàu điện." },
+            { "id": 10, "content": "【今日】は月曜日です。", "options": ["1. きのう", "2. あした", "3. きょう", "4. あさって"], "correct_option_id": 3, "explanation": "今日: Hôm nay." },
+            { "id": 11, "content": "【北】の方へ行きます。", "options": ["1. みなみ", "2. にし", "3. ひがし", "4. きた"], "correct_option_id": 4, "explanation": "北: Phía Bắc." },
+            { "id": 12, "content": "【話して】ください。", "options": ["1. はなして", "2. きいて", "3. かいて", "4. よんで"], "correct_option_id": 1, "explanation": "話して: Hãy nói." }
+          ]
+        },
+        {
+          "mondai_number": 2,
+          "instruction": "つぎのことばを漢字で書くとき、最もよいものを一つえらびなさい。",
+          "vn_instruction": "Chọn cách viết Kanji đúng (8 câu)",
+          "questions": [
+            { "id": 13, "content": "あそこに【おとこ】の子がいます。", "options": ["1. 男", "2. 女", "3. 子", "4. 人"], "correct_option_id": 1 },
+            { "id": 14, "content": "【みず】を飲みます。", "options": ["1. 木", "2. 水", "3. 火", "4. 土"], "correct_option_id": 2 },
+            { "id": 15, "content": "【はな】がきれいです。", "options": ["1. 花", "2. 草", "3. 葉", "4. 竹"], "correct_option_id": 1 },
+            { "id": 16, "content": "【よにん】で遊びました。", "options": ["1. 四人", "2. 三人", "3. 五人", "4. 六人"], "correct_option_id": 1 },
+            { "id": 17, "content": "【なか】に入ってください。", "options": ["1. 中", "2. 上", "3. 下", "4. 右"], "correct_option_id": 1 },
+            { "id": 18, "content": "【ごぜん】十時です。", "options": ["1. 午後", "2. 午前", "3. 前午", "4. 後午"], "correct_option_id": 2 },
+            { "id": 19, "content": "【にほん】に行きたいです。", "options": ["1. 日本", "2. 本日", "3. 日体", "4. 日元"], "correct_option_id": 1 },
+            { "id": 20, "content": "カメラを【かい】ました。", "options": ["1. 買い", "2. 貝い", "3. 具い", "4. 取い"], "correct_option_id": 1 }
+          ]
+        },
+        {
+          "mondai_number": 3,
+          "instruction": "（　）になにを入れますか。",
+          "vn_instruction": "Điền từ theo mạch văn (10 câu)",
+          "questions": [
+            { "id": 21, "content": "おなかがすきました。（　）を食べましょう。", "options": ["1. ごはん", "2. おちゃ", "3. ニュース", "4. シャワー"], "correct_option_id": 1 },
+            { "id": 22, "content": "あめがふっていますから、（　）をさします。", "options": ["1. くつ", "2. かさ", "3. かばん", "4. ふく"], "correct_option_id": 2 },
+            { "id": 23, "content": "エレベーターが（　）ですから、かいだんで行きましょう。", "options": ["1. ひま", "2. じょうず", "3. へた", "4. いそがしい"], "correct_option_id": 4, "note": "Dùng nghĩa logic: Thang máy bận/đông." },
+            { "id": 24, "content": "このりょうりは（　）ないです。", "options": ["1. おいしく", "2. きれいに", "3. じょうずに", "4. しずかに"], "correct_option_id": 1 },
+            { "id": 25, "content": "毎朝、パンを（　）食べます。", "options": ["1. 二つ", "2. 二枚", "3. 二本", "4. 二台"], "correct_option_id": 2, "explanation": "枚 (mai): Đếm vật mỏng như lát bánh mì." },
+            { "id": 26, "content": "（　）日本へ来ましたか。ー先週来ました。", "options": ["1. だれ", "2. いつ", "3. どこ", "4. なに"], "correct_option_id": 2 },
+            { "id": 27, "content": "部屋を（　）しました。", "options": ["1. あかるく", "2. あかるい", "3. あかるかった", "4. あかるければ"], "correct_option_id": 1 },
+            { "id": 28, "content": "デパートの（　）で買い物をします。", "options": ["1. ろうか", "2. うりば", "3. にわ", "4. かど"], "correct_option_id": 2 },
+            { "id": 29, "content": "このテストはとても（　）です。", "options": ["1. かんたん", "2. しんせつ", "3. にぎやか", "4. べんり"], "correct_option_id": 1 },
+            { "id": 30, "content": "（　）をあけてください。あついですから。", "options": ["1. ドア", "2. まど", "3. さいふ", "4. テレビ"], "correct_option_id": 2 }
+          ]
+        },
+        {
+          "mondai_number": 4,
+          "instruction": "つぎのことばとだいたい同じ意味の文を一つえらびなさい。",
+          "vn_instruction": "Từ đồng nghĩa (5 câu)",
+          "questions": [
+            { "id": 31, "content": "昨日は【休み】でした。", "options": ["1. 仕事へ行きました", "2. 仕事をしませんでした", "3. 会社で寝ました", "4. 忙しかったです"], "correct_option_id": 2 },
+            { "id": 32, "content": "このくつは【安くない】です。", "options": ["1. 高いです", "2. 安いです", "3. 古いです", "4. 新しいです"], "correct_option_id": 1 },
+            { "id": 33, "content": "【おじいさん】は元気です。", "options": ["1. 父の父", "2. 父の母", "3. 母の兄", "4. 母の姉"], "correct_option_id": 1 },
+            { "id": 34, "content": "【ポスト】はあそこです。", "options": ["1. 郵便局", "2. 郵便受け", "3. 銀行", "4. 駅"], "correct_option_id": 2 },
+            { "id": 35, "content": "【おととい】雨がふりました。", "options": ["1. 三日前", "2. 二日前", "3. 昨日", "4. 明日"], "correct_option_id": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "sec_grammar",
+      "section_name": "Ngữ pháp (Bunpou)",
+      "jp_name": "文法",
+      "mondai_list": [
+        {
+          "mondai_number": 1,
+          "instruction": "（　）になにを入れますか。",
+          "vn_instruction": "Ngữ pháp trong câu (16 câu)",
+          "questions": [
+            { "id": 36, "content": "私は　ベトナム（　）来ました。", "options": ["1. を", "2. に", "3. へ", "4. から"], "correct_option_id": 4 },
+            { "id": 37, "content": "机の上（　）本が　あります。", "options": ["1. は", "2. に", "3. を", "4. も"], "correct_option_id": 2 },
+            { "id": 38, "content": "母は　デパート（　）働いています。", "options": ["1. で", "2. に", "3. を", "4. へ"], "correct_option_id": 1 },
+            { "id": 39, "content": "テニス（　）好きですか。", "options": ["1. を", "2. が", "3. に", "4. は"], "correct_option_id": 2 },
+            { "id": 40, "content": "だれ（　）図書館へ行きますか。", "options": ["1. と", "2. が", "3. に", "4. も"], "correct_option_id": 1 },
+            { "id": 41, "content": "りんごを　三つ（　）買いました。", "options": ["1. は", "2. が", "3. を", "4. Ø (không điền)"], "correct_option_id": 4 },
+            { "id": 42, "content": "昨日は　暑（　）なかったです。", "options": ["1. く", "2. かった", "3. い", "4. くて"], "correct_option_id": 1 },
+            { "id": 43, "content": "ここで　写真を　（　）ください。", "options": ["1. 撮って", "2. 撮らないで", "3. 撮る", "4. 撮りたい"], "correct_option_id": 2, "note": "Logic: V-naide kudasai" },
+            { "id": 44, "content": "映画を　見（　）行きましょう。", "options": ["1. て", "2. に", "3. ながら", "4. から"], "correct_option_id": 2 },
+            { "id": 45, "content": "コーヒーと　紅茶と　（　）が　好きですか。", "options": ["1. だれ", "2. どれ", "3. どちら", "4. どこ"], "correct_option_id": 3 },
+            { "id": 46, "content": "テレビを　見（　）ごはんを　食べます。", "options": ["1. ながら", "2. てから", "3. たり", "4. あとで"], "correct_option_id": 1 },
+            { "id": 47, "content": "昨日　（　）へも　行きませんでした。", "options": ["1. どこ", "2. なに", "3. だれ", "4. いつ"], "correct_option_id": 1 },
+            { "id": 48, "content": "リーさんは　日本語が　（　）なりました。", "options": ["1. 上手な", "2. 上手で", "3. 上手に", "4. 上手だ"], "correct_option_id": 3 },
+            { "id": 49, "content": "もう　宿題を　して（　）ました。", "options": ["1. い", "2. あり", "3. おき", "4. しまい"], "correct_option_id": 4 },
+            { "id": 50, "content": "あまり　（　）ないです。", "options": ["1. 寒く", "2. 寒い", "3. 寒かった", "4. 寒くて"], "correct_option_id": 1 },
+            { "id": 51, "content": "それは　（　）の　かばんですか。－田中さんのです。", "options": ["1. だれ", "2. どこ", "3. なに", "4. いつ"], "correct_option_id": 1 }
+          ]
+        },
+        {
+          "mondai_number": 2,
+          "instruction": "つぎの文の★に入るものはどれですか。",
+          "vn_instruction": "Sắp xếp từ thành câu - Dấu sao (5 câu)",
+          "questions": [
+            { "id": 52, "content": "机の　（　）　（　）　★　（　）　あります。", "options": ["1. 上に", "2. の", "3. 辞書", "4. が"], "correct_option_id": 3, "explanation": "Đáp án: 机の 上の ★辞書が あります。" },
+            { "id": 53, "content": "私は　（　）　（　）　★　（　）　飲みます。", "options": ["1. を", "2. よく", "3. 牛乳", "4. 朝"], "correct_option_id": 3, "explanation": "Đáp án: 私は 朝 よく ★牛乳を 飲みます。" },
+            { "id": 54, "content": "昨日は　（　）　（　）　★　（　）　でした。", "options": ["1. も", "2. 雨", "3. 風", "4. も"], "correct_option_id": 2, "explanation": "Đáp án: 昨日は 雨も ★風も でした (Cả mưa cả gió)." },
+            { "id": 55, "content": "田中さんは　（　）　（　）　★　（　）　います。", "options": ["1. で", "2. 公園", "3. 走って", "4. を"], "correct_option_id": 3, "explanation": "Đáp án: 公園を 走って います。" },
+            { "id": 56, "content": "この　（　）　（　）　★　（　）　です。", "options": ["1. とても", "2. お菓子", "3. は", "4. 甘い"], "correct_option_id": 4, "explanation": "Đáp án: この お菓子は とても ★甘い です。" }
+          ]
+        },
+        {
+          "mondai_number": 3,
+          "instruction": "文章の内容に合うものを一つえらびなさい。",
+          "vn_instruction": "Ngữ pháp trong đoạn văn (5 câu)",
+          "reading_passage": "私の名前はマリアです。先週フィリピンから（57：　）。今は東京の日本語学校（58：　）勉強しています。学校は月曜日（59：　）金曜日までです。土曜日と日曜日は学校が（60：　）。私は日本の料理が大好きですから、ときどき友達とレストランへ（61：　）。",
+          "questions": [
+            { "id": 57, "content": "57番に入るのは？", "options": ["1. 来ます", "2. 来ました", "3. 来て", "4. 来る"], "correct_option_id": 2 },
+            { "id": 58, "content": "58番に入るのは？", "options": ["1. を", "2. に", "3. で", "4. へ"], "correct_option_id": 3 },
+            { "id": 59, "content": "59番に入るのは？", "options": ["1. から", "2. まで", "3. に", "4. が"], "correct_option_id": 1 },
+            { "id": 60, "content": "60番に入るのは？", "options": ["1. あります", "2. ありません", "3. です", "4. でした"], "correct_option_id": 2 },
+            { "id": 61, "content": "61番に入るのは？", "options": ["1. 行きます", "2. 行かない", "3. 行きたい", "4. 行った"], "correct_option_id": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "sec_reading",
+      "section_name": "Đọc hiểu (Dokkai)",
+      "jp_name": "読解",
+      "mondai_list": [
+        {
+          "mondai_number": 4,
+          "instruction": "つぎの文章を読んで、質問に答えなさい。",
+          "vn_instruction": "Đọc đoạn văn ngắn (3 câu)",
+          "questions": [
+            {
+              "id": 62,
+              "reading_passage": "李さんのアパートは駅から近いです。歩いて５分です。部屋は二つあります。きれいです。でも、家賃が高いです。",
+              "content": "李さんのアパートはどうですか。",
+              "options": ["1. 駅から遠い", "2. 部屋が一つしかない", "3. 家賃が安い", "4. 駅から近くてきれい"],
+              "correct_option_id": 4
+            },
+            {
+              "id": 63,
+              "reading_passage": "今日は私の誕生日です。友達が家に来ました。みんなでケーキを食べました。プレゼントをもらいました。とてもうれしかったです。",
+              "content": "この人は今日何をしましたか。",
+              "options": ["1. 友達の家へ行った", "2. ケーキを作った", "3. 友達とケーキを食べた", "4. プレゼントをあげた"],
+              "correct_option_id": 3
+            },
+            {
+              "id": 64,
+              "reading_passage": "机の上に手紙があります。田中さんからです。「明日、一緒に図書館へ行きませんか。十時に駅で待っています」と書いてあります。",
+              "content": "田中さんは明日、何をしますか。",
+              "options": ["1. 図書館へ行く", "2. 駅で待つ", "3. 手紙を書く", "4. 勉強する"],
+              "correct_option_id": 2
+            }
+          ]
+        },
+        {
+          "mondai_number": 5,
+          "instruction": "つぎの文章を読んで、後の問いに答えなさい。",
+          "vn_instruction": "Đọc đoạn văn trung bình (2 câu)",
+          "reading_passage": "私は先週、デパートへ行きました。新しい靴が欲しかったです。黒い靴と白い靴がありました。黒い靴は五千円でした。白い靴は八千円でした。白い靴はとてもきれいでしたが、高かったです。私は黒い靴を買いました。それから、帽子も一つ買いました。帽子は千五百円でした。",
+          "questions": [
+            { "id": 65, "content": "この人はどの靴を買いましたか。", "options": ["1. 八千円の白い靴", "2. 五千円の黒い靴", "3. 八千円の黒い靴", "4. 五千円の白い靴"], "correct_option_id": 2 },
+            { "id": 66, "content": "靴と帽子で全部でいくらでしたか。", "options": ["1. 六千五百円", "2. 九千五百円", "3. 五千円", "4. 八千円"], "correct_option_id": 1 }
+          ]
+        },
+        {
+          "mondai_number": 6,
+          "instruction": "つぎの広告（こうこく）を見て、しつもんに答えてください。",
+          "vn_instruction": "Tìm kiếm thông tin (1 câu)",
+          "reading_passage": "【日本語クラスのお知らせ】日曜日：10:00-12:00（初級）、13:00-15:00（中級）。場所：301教室。お金：無料（0円）。",
+          "questions": [
+            { "id": 67, "content": "初級のクラスは何時に始まりますか。", "options": ["1. 10時", "2. 12時", "3. 13時", "4. 15時"], "correct_option_id": 1 }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "sec_listening",
+      "section_name": "Nghe hiểu (Choukai)",
+      "jp_name": "聴解",
+      "mondai_list": [
+        {
+          "mondai_number": 1,
+          "instruction": "Nghe hiểu tình huống (7 câu)",
+          "questions": [
+            { "id": 68, "content": "Q1: 男の人は明日、何を持って行きますか。", "options": ["1. 傘", "2. お弁当", "3. 飲み物", "4. 写真"], "correct_option_id": 2 },
+            { "id": 69, "content": "Q2: 女の人はどこで男の人を待ちますか。", "options": ["1. 改札", "2. 北口", "3. 南口", "4. 本屋"], "correct_option_id": 2 },
+            { "id": 70, "content": "Q3: 二人は何時に会いますか。", "options": ["1. 7:00", "2. 7:30", "3. 8:00", "4. 8:30"], "correct_option_id": 2 },
+            { "id": 71, "content": "Q4: 男の人はこれから何をしますか。", "options": ["1. 電話する", "2. 窓を閉める", "3. 掃除する", "4. 寝る"], "correct_option_id": 2 },
+            { "id": 72, "content": "Q5: 女の人は何を注文しますか。", "options": ["1. コーヒー", "2. 紅茶", "3. ジュース", "4. 水"], "correct_option_id": 1 },
+            { "id": 73, "content": "Q6: 学生はノートをどこに出しますか。", "options": ["1. 箱の中", "2. 机の上", "3. 先生の手", "4. かばんの中"], "correct_option_id": 1 },
+            { "id": 74, "content": "Q7: 男の人はどの靴下を買いますか。", "options": ["1. 黒い長い", "2. 白い長い", "3. 黒い短い", "4. 白い短い"], "correct_option_id": 3 }
+          ]
+        },
+        {
+          "mondai_number": 2,
+          "instruction": "Nghe lấy chi tiết (6 câu)",
+          "questions": [
+            { "id": 75, "content": "Q1: 男の人は昨日、どこへ行きましたか。", "options": ["1. 海", "2. 山", "3. 川", "4. 公園"], "correct_option_id": 2 },
+            { "id": 76, "content": "Q2: 誕生日のパーティーは何曜日ですか。", "options": ["1. 金曜日", "2. 土曜日", "3. 日曜日", "4. 月曜日"], "correct_option_id": 2 },
+            { "id": 77, "content": "Q3: 男の人は何で学校へ来ますか。", "options": ["1. バス", "2. 電車", "3. 自転車", "4. 歩いて"], "correct_option_id": 3 },
+            { "id": 78, "content": "Q4: テストは何分ですか。", "options": ["1. 30分", "2. 40分", "3. 50分", "4. 60分"], "correct_option_id": 3 },
+            { "id": 79, "content": "Q5: 女の人の電話番号は何番ですか。", "options": ["1. 1234", "2. 5678", "3. 1278", "4. 4321"], "correct_option_id": 2 },
+            { "id": 80, "content": "Q6: 部屋に誰がいますか。", "options": ["1. 先生と学生", "2. 先生だけ", "3. 学生だけ", "4. 誰もいない"], "correct_option_id": 1 }
+          ]
+        },
+        {
+          "mondai_number": 3,
+          "instruction": "Nghe hiểu hành vi - Tranh nhìn (5 câu)",
+          "questions": [
+            { "id": 81, "content": "Q1: ごはんを食べる時、何と言いますか。", "options": ["1. いただきます", "2. ごちそうさま", "3. お願いします", "4. すみません"], "correct_option_id": 1 },
+            { "id": 82, "content": "Q2: 写真を撮ってほしい時、何と言いますか。", "options": ["1. 撮ってください", "2. 撮りますか", "3. 撮りました", "4. 撮りましょう"], "correct_option_id": 1 },
+            { "id": 83, "content": "Q3: 部屋に入ります。何と言いますか。", "options": ["1. 失礼します", "2. お邪魔しました", "3. さようなら", "4. ごめん"], "correct_option_id": 1 },
+            { "id": 84, "content": "Q4: 友達が重い荷物を持っています。", "options": ["1. 持ちましょうか", "2. 持ってください", "3. 持っています", "4. 持ちなさい"], "correct_option_id": 1 },
+            { "id": 85, "content": "Q5: 店から出ます。店員は何と言いますか。", "options": ["1. いらっしゃいませ", "2. ありがとうございました", "3. おやすみなさい", "4. お大事に"], "correct_option_id": 2 }
+          ]
+        },
+        {
+          "mondai_number": 4,
+          "instruction": "Phản xạ nhanh (6 câu)",
+          "questions": [
+            { "id": 86, "content": "Q1: お元気ですか。", "options": ["1. はい、元気です", "2. そうですか", "3. はじめまして", "4. いいですね"], "correct_option_id": 1 },
+            { "id": 87, "content": "Q2: お名前は何ですか。", "options": ["1. ベトナムです", "2. リンです", "3. 学生です", "4. 20歳です"], "correct_option_id": 2 },
+            { "id": 88, "content": "Q3: どこへ行きますか。", "options": ["1. 銀行へ行きます", "2. 3時です", "3. 暑いです", "4. 田中さんです"], "correct_option_id": 1 },
+            { "id": 89, "content": "Q4: 日本語は難しいですか。", "options": ["1. はい、難しいです", "2. いいえ、難しいです", "3. はい、上手です", "4. とても好きです"], "correct_option_id": 1 },
+            { "id": 90, "content": "Q5: このペン、使ってもいいですか。", "options": ["1. はい、どうぞ", "2. はい、使います", "3. いいえ、いいです", "4. わかりました"], "correct_option_id": 1 },
+            { "id": 91, "content": "Q6: 昨日はどこかへ行きましたか。", "options": ["1. どこへも行きませんでした", "2. いいえ、行きました", "3. はい、どこです", "4. 明日行きます"], "correct_option_id": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}
