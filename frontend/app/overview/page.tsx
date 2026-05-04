@@ -52,7 +52,11 @@ interface UserProgress {
 
 interface ExamResult {
   examResultId: number;
-  score: number;
+  score?: number;
+  totalScore?: number;
+  point?: number;
+  points?: number;
+  achievableScore?: number;
   totalQuestion: number;
   amountCorrectAnswers: number;
   isPassed: boolean;
@@ -75,13 +79,11 @@ interface BookmarkItem {
   createdAt: string;
 }
 
-interface TestHistoryItem {
-  testHistoryId: number;
-  userId: number;
-  score: number;
-  date: string;
-  detail: string;
-}
+// Helper function to extract score defensively from various possible API field names
+const getScoreValue = (item: any): number => {
+  if (!item) return 0;
+  return item.score ?? item.totalScore ?? item.point ?? item.points ?? item.achievableScore ?? 0;
+};
 
 interface RecommendedLesson {
   lessonId: number;
@@ -99,10 +101,15 @@ interface RecommendationResponse {
   lessons: RecommendedLesson[];
 }
 
+// CẬP NHẬT: Thêm mapping cho cả key Tiếng Việt và Tiếng Anh để tránh lỗi icon/màu sắc
 const SKILL_MAP: Record<string, { label: string; icon: any; path: string; bg: string; color: string }> = {
+  "Từ vựng": { label: "Từ vựng", icon: BookOpen, path: "/vocabulary", bg: "bg-blue-50", color: "text-blue-600" },
+  "Ngữ pháp": { label: "Ngữ pháp", icon: PenTool, path: "/grammar", bg: "bg-violet-50", color: "text-violet-600" },
+  "Kanji": { label: "Kanji", icon: Languages, path: "/kanji", bg: "bg-amber-50", color: "text-amber-600" },
+  "Đọc hiểu": { label: "Đọc hiểu", icon: FileText, path: "/reading", bg: "bg-emerald-50", color: "text-emerald-600" },
+  "Nghe hiểu": { label: "Nghe hiểu", icon: Headphones, path: "/listening", bg: "bg-rose-50", color: "text-rose-600" },
   Vocabulary: { label: "Từ vựng", icon: BookOpen, path: "/vocabulary", bg: "bg-blue-50", color: "text-blue-600" },
   Grammar: { label: "Ngữ pháp", icon: PenTool, path: "/grammar", bg: "bg-violet-50", color: "text-violet-600" },
-  Kanji: { label: "Kanji", icon: Languages, path: "/kanji", bg: "bg-amber-50", color: "text-amber-600" },
   Reading: { label: "Đọc hiểu", icon: FileText, path: "/reading", bg: "bg-emerald-50", color: "text-emerald-600" },
   Listening: { label: "Nghe hiểu", icon: Headphones, path: "/listening", bg: "bg-rose-50", color: "text-rose-600" },
 };
@@ -114,6 +121,35 @@ const GREETING = () => {
   return "Chào buổi tối";
 };
 
+// CẬP NHẬT: Hàm dịch tên Cụm (Cluster) của hệ thống AI sang Tiếng Việt
+const translateCluster = (cluster: string) => {
+  if (!cluster) return "";
+  const lower = cluster.toLowerCase();
+  if (lower.includes("needsfoundation")) return "🌱 Cần củng cố nền tảng";
+  if (lower.includes("highperformer")) return "⭐ Học viên xuất sắc";
+  if (lower.includes("balancedlearner")) return "⚖️ Học viên cân bằng";
+  if (lower.includes("newlearner")) return "👋 Học viên mới";
+  if (lower.includes("nolessons")) return "Chưa có dữ liệu";
+  return cluster;
+};
+
+// CẬP NHẬT: Hàm dịch luật kết hợp (Apriori Rule) sang Tiếng Việt
+const translateApriori = (rule: string) => {
+  if (!rule) return "";
+  const lower = rule.toLowerCase();
+
+  if (lower.includes("no progress")) return "Gợi ý các bài học cơ bản nhất để bạn bắt đầu.";
+  if (lower.includes("no lessons")) return "Hệ thống chưa có bài học nào.";
+  if (lower.includes("gemini") || lower.includes("ai") || lower.includes("llm")) return "Tự động phân tích ngữ cảnh thông minh bằng AI.";
+
+  // Dịch luật cũ: "Từ vựng -> Kanji"
+  if (rule.includes("->")) {
+    const parts = rule.split("->").map(p => p.trim());
+    return `Ưu tiên ôn ${parts[0]} và bổ trợ thêm ${parts[1]}`;
+  }
+  return rule;
+};
+
 export default function OverviewPage() {
   const [user, setUser] = useState<any>(null);
   const [levels, setLevels] = useState<Level[]>([]);
@@ -122,8 +158,8 @@ export default function OverviewPage() {
   const [dashboard, setDashboard] = useState<DashboardResponse | null>(null);
   const [recommendations, setRecommendations] = useState<RecommendationResponse | null>(null);
   const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
-  const [testHistories, setTestHistories] = useState<TestHistoryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [debugData, setDebugData] = useState<any>(null);
 
   useEffect(() => {
     const raw = localStorage.getItem("user");
@@ -144,7 +180,6 @@ export default function OverviewPage() {
 
   const loadAllData = async (userId: number) => {
     try {
-      // Gọi các API tổng hợp
       const [levelsData, examResultsData, dashboardData, recommendationsData, bookmarksData] =
         await Promise.all([
           api("/levels"),
@@ -156,25 +191,15 @@ export default function OverviewPage() {
 
       if (Array.isArray(levelsData)) setLevels(levelsData as Level[]);
       if (Array.isArray(examResultsData)) {
-          setExamResults(examResultsData as ExamResult[]);
-          // Lấy dữ liệu cho test history trực tiếp từ examResults
-          setTestHistories(examResultsData.map((e: ExamResult) => ({
-             testHistoryId: e.examResultId,
-             userId: userId,
-             score: e.score,
-             date: e.completedAt,
-             detail: "Bài thi"
-          })));
+        setExamResults(examResultsData as ExamResult[]);
+        setDebugData(examResultsData);
       }
       if (dashboardData?.userId) setDashboard(dashboardData as DashboardResponse);
       if (recommendationsData?.userId) setRecommendations(recommendationsData as RecommendationResponse);
       if (Array.isArray(bookmarksData)) setBookmarks(bookmarksData as BookmarkItem[]);
 
-      // Lấy danh sách tiến độ (Thử 2 API để tránh bị lỗi 404)
       try {
         const progressData = await api(`/progress/user/${userId}`);
-      
-        // Trực tiếp kiểm tra và set dữ liệu
         if (Array.isArray(progressData)) {
           setProgresses(progressData as UserProgress[]);
         }
@@ -191,7 +216,12 @@ export default function OverviewPage() {
 
   const defaultLevel = levels[0]?.levelName || "N5";
 
-  // BẢO VỆ MẢNG BẰNG (progresses || []) VÀ (up.parts || [])
+  const getLessonUrl = (skillType: string, levelName: string | null, lessonId: number) => {
+    const skill = SKILL_MAP[skillType] || SKILL_MAP["Từ vựng"];
+    const level = levelName || defaultLevel;
+    return `${skill.path}/${level}/${lessonId}`;
+  };
+
   const skillProgress = useMemo(() => {
     const counts: Record<string, { total: number; completed: number; inProgress: number }> = {};
     Object.keys(SKILL_MAP).forEach((key) => {
@@ -199,11 +229,11 @@ export default function OverviewPage() {
     });
 
     (progresses || []).forEach((up) => {
-      if (!up.parts || !Array.isArray(up.parts)) return; // Bỏ qua nếu parts bị null
-      
+      if (!up.parts || !Array.isArray(up.parts)) return;
+
       up.parts.forEach((part) => {
         if (!part || !counts[part.partType]) return;
-        
+
         counts[part.partType].total += 1;
         if (part.status === "Completed") counts[part.partType].completed += 1;
         if (part.status === "InProgress") counts[part.partType].inProgress += 1;
@@ -215,12 +245,11 @@ export default function OverviewPage() {
 
   const recentActivity = useMemo(() => {
     const flatParts: Array<{ lessonId: number, levelName: string, lessonName: string, partType: string, status: string, lastAccessedAt: string }> = [];
-    
+
     (progresses || []).forEach(up => {
       if (!up.parts || !Array.isArray(up.parts)) return;
 
       up.parts.forEach(part => {
-        // Chỉ lấy những phần có dữ liệu thời gian truy cập
         if (part.status !== "NotStarted") {
           flatParts.push({
             lessonId: up.lessonId,
@@ -252,12 +281,7 @@ export default function OverviewPage() {
 
   const streakDays = useMemo(() => {
     if (!progresses || progresses.length === 0) return 0;
-
-    // Lọc bỏ những object bị lỗi null ngày tháng
-    const validDates = progresses
-      .map((item) => item.lastAccessed)
-      .filter((d) => !!d);
-
+    const validDates = progresses.map((item) => item.lastAccessed).filter((d) => !!d);
     const dates = [...new Set(validDates.map((item) => new Date(item).toDateString()))].sort(
       (a, b) => new Date(b).getTime() - new Date(a).getTime()
     );
@@ -269,38 +293,38 @@ export default function OverviewPage() {
     for (let i = 0; i < dates.length; i += 1) {
       const current = new Date(dates[i]);
       current.setHours(0, 0, 0, 0);
-
       const expected = new Date(today);
       expected.setDate(expected.getDate() - i);
-
       if (current.getTime() !== expected.getTime()) break;
       streak += 1;
     }
-
     return streak;
   }, [progresses]);
 
   const examStats = useMemo(
-    () => ({
-      total: (examResults || []).length,
-      passed: (examResults || []).filter((item) => item.isPassed).length,
-      average: (examResults || []).length
-        ? Math.round((examResults || []).reduce((sum, item) => sum + item.score, 0) / examResults.length)
-        : 0,
-    }),
+    () => {
+      const results = examResults || [];
+      const total = results.length;
+      return {
+        total,
+        passed: results.filter((item) => item.isPassed).length,
+        average: total > 0
+          ? Math.round(results.reduce((sum, item) => sum + getScoreValue(item), 0) / total)
+          : 0,
+      };
+    },
     [examResults]
   );
 
   const continueLearningTarget = useMemo(() => {
     const item = recentActivity[0];
-    if (!item || !SKILL_MAP[item.partType]) return "/courses";
-    return `${SKILL_MAP[item.partType].path}/${item.levelName || defaultLevel}/${item.lessonId}`;
-  }, [defaultLevel, recentActivity]);
+    if (!item) return "/courses";
+    return getLessonUrl(item.partType, item.levelName, item.lessonId);
+  }, [recentActivity, defaultLevel]);
 
   return (
     <StudentLayout>
       <div className="mx-auto max-w-6xl pb-12">
-        {/* Header Hero */}
         <section className="relative overflow-hidden rounded-[2rem] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.22),_transparent_32%),linear-gradient(135deg,#16263d_0%,#27476d_46%,#a71f48_100%)] px-8 py-9 text-white shadow-xl shadow-slate-900/10">
           <div className="absolute -right-20 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
           <div className="absolute bottom-0 left-0 h-40 w-40 rounded-full bg-rose-300/10 blur-3xl" />
@@ -313,7 +337,7 @@ export default function OverviewPage() {
               </h1>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
                 Tiến độ học đang được gom thành một luồng rõ ràng: hệ thống lưu hoạt động học tập, tổng hợp thành dashboard,
-                rồi dựa trên dữ liệu đó để gợi ý bài tiếp theo phù hợp.
+                rồi dựa trên dữ liệu đó để AI gợi ý bài tiếp theo phù hợp.
               </p>
 
               <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -340,39 +364,52 @@ export default function OverviewPage() {
               </div>
             </div>
 
-            {/* Recommendations */}
+            {/* CẬP NHẬT GIAO DIỆN RECOMMENDATION */}
             <div className="grid gap-4 rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
               <div className="flex items-center gap-2 text-sm font-bold text-white">
                 <BrainCircuit size={18} className="text-amber-300" />
-                Gợi ý học tiếp
+                AI Gợi ý học tiếp
               </div>
 
               {recommendations?.lessons?.length ? (
                 <>
-                  <div className="rounded-2xl bg-white/10 p-4">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Phân cụm mô phỏng</p>
-                    <p className="mt-1 text-lg font-bold">{recommendations.simulatedKMeansCluster}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-white/65">{recommendations.simulatedAprioriRule}</p>
+                  <div className="relative overflow-hidden rounded-2xl border border-amber-300/20 bg-gradient-to-br from-white/10 to-white/5 p-4">
+                    <div className="absolute -right-4 -top-4 opacity-[0.03]">
+                      <BrainCircuit size={80} />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Sparkles size={14} className="text-amber-300" />
+                      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">Kết quả phân tích</p>
+                    </div>
+
+                    <p className="mt-2 text-lg font-bold text-white">
+                      {translateCluster(recommendations.simulatedKMeansCluster)}
+                    </p>
+                    <p className="mt-2 text-xs leading-relaxed text-white/65">
+                      <span className="font-semibold text-white/80">Chiến lược:</span> {translateApriori(recommendations.simulatedAprioriRule)}
+                    </p>
                   </div>
 
                   <div className="space-y-3">
                     {recommendations.lessons.slice(0, 3).map((lesson) => {
-                      const skill = SKILL_MAP[lesson.skillType] || SKILL_MAP.Vocabulary;
+                      const skill = SKILL_MAP[lesson.skillType] || SKILL_MAP["Từ vựng"];
                       return (
                         <Link
                           key={lesson.lessonId}
-                          href={`${skill.path}/${lesson.levelName || defaultLevel}/${lesson.lessonId}`}
-                          className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+                          href={getLessonUrl(lesson.skillType, lesson.levelName, lesson.lessonId)}
+                          className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10 hover:border-white/20"
                         >
                           <div className="mt-0.5 rounded-xl bg-white/10 p-2">
                             <skill.icon size={16} className="text-amber-200" />
                           </div>
                           <div className="min-w-0 flex-1">
-                            <p className="text-sm font-bold">{lesson.lessonName}</p>
-                            <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-white/45">
+                            <p className="text-sm font-bold text-white">{lesson.lessonName}</p>
+                            <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-white/50">
                               {lesson.levelName} · {skill.label}
                             </p>
-                            <p className="mt-2 text-xs leading-relaxed text-white/65">{lesson.recommendationReason}</p>
+                            <p className="mt-2 text-xs leading-relaxed text-white/70 italic border-l-2 border-white/20 pl-2">
+                              {lesson.recommendationReason}
+                            </p>
                           </div>
                           <ChevronRight size={16} className="mt-1 text-white/35" />
                         </Link>
@@ -381,8 +418,8 @@ export default function OverviewPage() {
                   </div>
                 </>
               ) : (
-                <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-5 text-sm text-white/65">
-                  Hệ thống sẽ bắt đầu gợi ý khi đã có đủ dữ liệu học tập từ tiến độ và điểm số của bạn.
+                <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-5 text-sm leading-relaxed text-white/65">
+                  Hệ thống AI sẽ bắt đầu gợi ý khi phân tích đủ dữ liệu từ tiến độ và điểm số bài thi của bạn.
                 </div>
               )}
             </div>
@@ -402,7 +439,8 @@ export default function OverviewPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-5">
-            {Object.entries(SKILL_MAP).map(([key, skill]) => {
+            {["Vocabulary", "Grammar", "Kanji", "Reading", "Listening"].map((key) => {
+              const skill = SKILL_MAP[key];
               const stats = skillProgress[key] || { total: 0, completed: 0, inProgress: 0 };
               const percent = stats.total ? Math.round((stats.completed / stats.total) * 100) : 0;
               return (
@@ -488,32 +526,52 @@ export default function OverviewPage() {
             </div>
 
             <div className="mb-5 grid grid-cols-2 gap-4">
-              <MiniMetric label="Bài test đã lưu" value={testHistories.length} />
-              <MiniMetric label="Điểm TB luyện tập" value={`${Math.round(dashboard?.averageScore ?? 0)}%`} />
+              <MiniMetric label="Bài test đã làm" value={examResults.length} />
+              <MiniMetric label="Điểm TB luyện thi" value={`${examStats.average}%`} />
             </div>
 
             <div className="space-y-3">
-              {testHistories.length === 0 ? (
+              {examResults.length === 0 ? (
                 <EmptyCard text="Chưa có lịch sử làm bài nào được lưu." />
               ) : (
-                testHistories.slice(0, 3).map((item) => (
-                  <div
-                    key={item.testHistoryId}
-                    className="rounded-2xl border border-neutral-100 bg-neutral-50/70 px-4 py-3"
-                  >
-                    <div className="flex items-center justify-between">
-                      <p className="text-sm font-bold text-jp-indigo">Bài test #{item.testHistoryId}</p>
-                      <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-jp-red">
-                        {item.score} / 180
-                      </span>
+                [...examResults]
+                  .sort((a, b) => new Date(b.completedAt).getTime() - new Date(a.completedAt).getTime())
+                  .slice(0, 3)
+                  .map((item) => (
+                    <div
+                      key={item.examResultId}
+                      className="rounded-2xl border border-neutral-100 bg-neutral-50/70 px-4 py-3"
+                    >
+                      <div className="flex items-center justify-between">
+                        <p className="text-sm font-bold text-jp-indigo">
+                          {item.exam?.examName || `Bài thi #${item.examResultId}`}
+                        </p>
+                        <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-jp-red shadow-sm">
+                          {getScoreValue(item)} / 180
+                        </span>
+                      </div>
+                      <div className="mt-2 flex items-center justify-between text-[11px] font-medium uppercase tracking-wide text-neutral-400">
+                        <span>{formatDate(item.completedAt)}</span>
+                        <span className={item.isPassed ? "text-emerald-600" : "text-jp-red"}>
+                          {item.isPassed ? "ĐẠT" : "CHƯA ĐẠT"}
+                        </span>
+                      </div>
                     </div>
-                    <p className="mt-2 text-[11px] font-medium uppercase tracking-wide text-neutral-400">
-                      {formatDate(item.date)}
-                    </p>
-                  </div>
-                ))
+                  ))
               )}
             </div>
+
+            {/* <div className="mt-4 pt-4 border-t border-dashed border-neutral-200">
+              <details className="cursor-pointer">
+                <summary className="text-[10px] text-neutral-400 hover:text-jp-red transition-colors">
+                  [DEBUG] Xem dữ liệu thô từ API (JSON)
+                </summary>
+                <div className="mt-2 max-h-40 overflow-auto rounded-lg bg-neutral-900 p-3 text-[10px] text-emerald-400 font-mono">
+                  <pre>{JSON.stringify(debugData?.slice(0, 2), null, 2)}</pre>
+                  <p className="mt-1 text-neutral-500 italic">// Chỉ hiển thị 2 bản ghi đầu tiên</p>
+                </div>
+              </details>
+            </div> */}
           </div>
         </section>
 
@@ -540,7 +598,7 @@ export default function OverviewPage() {
                   return (
                     <Link
                       key={`${item.lessonId}-${item.partType}-${index}`}
-                      href={`${skill.path}/${item.levelName || defaultLevel}/${item.lessonId}`}
+                      href={getLessonUrl(item.partType, item.levelName, item.lessonId)}
                       className="flex items-center gap-4 px-6 py-4 transition hover:bg-neutral-50"
                     >
                       <div className={`flex h-10 w-10 items-center justify-center rounded-2xl ${skill.bg} ${skill.color}`}>
@@ -579,7 +637,7 @@ export default function OverviewPage() {
               <ul className="mt-3 space-y-3 text-sm leading-relaxed text-amber-900/80">
                 <li>`Progress` lưu trạng thái học và điểm của user.</li>
                 <li>`Dashboard` gom dữ liệu đó thành các chỉ số tổng quan dễ đọc.</li>
-                <li>`Recommendation` tiếp tục dùng dữ liệu đã tổng hợp để đề xuất bài phù hợp hơn.</li>
+                <li>`Recommendation` sử dụng AI để cá nhân hóa đề xuất từ dữ liệu trên.</li>
               </ul>
             </div>
           </div>
@@ -627,23 +685,40 @@ function EmptyCard({ text }: { text: string }) {
   );
 }
 
+function ensureUTC(input: string) {
+  if (!input) return input;
+  if (input.includes("T") && !input.includes("Z") && !/[+-]\d{2}:?\d{2}$/.test(input)) {
+    return input + "Z";
+  }
+  return input;
+}
+
 function formatDate(input: string) {
   if (!input) return "";
-  return new Date(input).toLocaleDateString("vi-VN", {
+  const date = new Date(ensureUTC(input));
+
+  if (isNaN(date.getTime())) return input;
+
+  return date.toLocaleString("vi-VN", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
+    hour12: false
   });
 }
 
 function getTimeAgo(dateStr: string) {
   if (!dateStr) return "";
   const now = new Date();
-  const date = new Date(dateStr);
+  const date = new Date(ensureUTC(dateStr));
+
+  if (isNaN(date.getTime())) return "";
+
   const diff = Math.floor((now.getTime() - date.getTime()) / 1000);
 
+  if (diff < 0) return "Vừa xong";
   if (diff < 60) return "Vừa xong";
   if (diff < 3600) return `${Math.floor(diff / 60)} phút trước`;
   if (diff < 86400) return `${Math.floor(diff / 3600)} giờ trước`;

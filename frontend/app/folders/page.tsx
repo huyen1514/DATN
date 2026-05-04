@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import Link from "next/link";
 import StudentLayout from "@/components/StudentLayout";
-import { Folder, MoreVertical, Plus, Edit2, Trash2 } from "lucide-react";
+import { Folder, Plus, Edit2, Trash2, ChevronRight } from "lucide-react";
 
 export default function FoldersPage() {
     const [folders, setFolders] = useState<any[]>([]);
@@ -22,7 +22,7 @@ export default function FoldersPage() {
     useEffect(() => {
         const userStr = localStorage.getItem("user");
         if (userStr) {
-            try { setUser(JSON.parse(userStr)); } catch (e) {}
+            try { setUser(JSON.parse(userStr)); } catch (e) { }
         }
         loadFolders();
     }, []);
@@ -83,65 +83,98 @@ export default function FoldersPage() {
 
     return (
         <StudentLayout>
-            <div className="max-w-5xl mx-auto">
-                <div className="flex items-center justify-between mb-8">
+            <div className="max-w-5xl mx-auto py-8 px-4">
+                {/* Header Section */}
+                <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 border-b border-neutral-200 pb-6">
                     <div>
-                        <h1 className="text-3xl font-serif text-jp-indigo mb-2">Không Gian Học</h1>
-                        <p className="text-neutral-500 font-light">Danh sách các thư mục chứa các bộ thẻ học tập.</p>
+                        <p className="text-[#B91C1C] font-bold text-[10px] tracking-[0.2em] mb-2 uppercase flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-[#B91C1C] inline-block"></span>
+                            学習スペース
+                        </p>
+                        <h1 className="text-3xl md:text-4xl font-serif text-neutral-800 tracking-tight">Không Gian Học</h1>
                     </div>
                     <button
                         onClick={openCreateModal}
-                        className="flex items-center gap-2 px-6 py-3 bg-jp-indigo text-white rounded-full text-[11px] font-bold tracking-[0.1em] uppercase hover:bg-jp-red transition-colors shadow-lg shadow-jp-indigo/20"
+                        className="mt-6 md:mt-0 group flex items-center gap-2 px-6 py-3 bg-[#B91C1C] text-white text-xs font-bold tracking-widest uppercase hover:bg-[#991B1B] transition-all rounded-xl shadow-lg shadow-[#B91C1C]/20"
                     >
-                        <Plus size={16} /> Tạo Mới
+                        <span>Tạo Mới</span>
+                        <Plus size={18} strokeWidth={2.5} />
                     </button>
                 </div>
 
+                {/* Content Section */}
                 {isLoading ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[1, 2, 3].map(i => (
-                            <div key={i} className="bg-white/50 border border-black/5 rounded-3xl h-40 animate-pulse"></div>
+                            <div key={i} className="bg-neutral-50/80 border border-neutral-100 h-40 rounded-2xl animate-pulse"></div>
                         ))}
                     </div>
                 ) : folders.length === 0 ? (
-                    <div className="bg-white p-12 rounded-3xl border border-black/5 text-center flex flex-col items-center shadow-sm">
-                        <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                            <Folder size={32} className="text-blue-300" />
+                    <div className="py-20 text-center flex flex-col items-center">
+                        <div className="w-20 h-20 bg-neutral-50 rounded-full flex items-center justify-center mb-6">
+                            <Folder size={32} className="text-neutral-300" strokeWidth={1.5} />
                         </div>
-                        <h3 className="text-xl font-bold text-jp-indigo mb-2">Chưa có không gian nào</h3>
-                        <p className="text-neutral-500 mb-6 max-w-sm">Dữ liệu các thư mục Không gian học đang được cập nhật.</p>
-                        <button onClick={openCreateModal} className="px-8 py-3 bg-jp-red text-white rounded-full text-[11px] font-bold tracking-widest uppercase hover:bg-[#8b0000] transition-colors">
-                            THÊM THƯ MỤC KHÔNG GIAN
+                        <h3 className="text-xl font-serif text-neutral-800 mb-2">Chưa có không gian</h3>
+                        <p className="text-neutral-400 mb-8 text-sm font-light">Bắt đầu hành trình học tập bằng cách tạo thư mục đầu tiên.</p>
+                        <button
+                            onClick={openCreateModal}
+                            className="px-6 py-3 bg-[#B91C1C] text-white text-xs font-bold tracking-widest uppercase rounded-xl hover:bg-[#991B1B] shadow-lg shadow-[#B91C1C]/20 transition-all"
+                        >
+                            + Thêm không gian
                         </button>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {folders.map((f) => (
-                            <Link 
+                            <Link
                                 href={`/folders/${f.folderId}`}
-                                key={f.folderId} 
-                                className="group bg-white p-6 rounded-3xl border border-black/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden block"
+                                key={f.folderId}
+                                className="group block bg-white p-6 pl-8 border border-neutral-200 rounded-2xl hover:border-[#B91C1C]/30 hover:shadow-[0_8px_30px_rgb(185,28,28,0.06)] relative transition-all duration-300 overflow-hidden"
                             >
-                                {/* Decorative abstract shape */}
-                                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-bl-[100px] pointer-events-none"></div>
+                                {/* Thanh đỏ tươi hơn - Ngắn mặc định, Kéo dài full thẻ khi Hover */}
+                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-10 bg-[#B91C1C] rounded-r-md transition-all duration-300 group-hover:h-full group-hover:w-2 group-hover:rounded-none"></div>
 
                                 <div className="flex justify-between items-start mb-6 relative z-10">
-                                    <div className="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                                        <Folder size={20} />
+                                    <div className="w-12 h-12 bg-neutral-50 text-neutral-500 rounded-2xl flex items-center justify-center group-hover:bg-[#B91C1C]/5 group-hover:text-[#B91C1C] transition-colors duration-300">
+                                        <Folder size={22} strokeWidth={1.5} />
                                     </div>
-                                    <div className="flex gap-2">
-                                        <button onClick={(e) => openEditModal(e, f)} className="p-2 text-neutral-300 hover:text-jp-indigo transition-colors hover:bg-neutral-100 rounded-full">
-                                            <Edit2 size={16} />
+                                    <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button
+                                            onClick={(e) => openEditModal(e, f)}
+                                            className="p-2 text-neutral-400 hover:text-[#B91C1C] hover:bg-[#B91C1C]/10 rounded-xl transition-colors"
+                                            title="Sửa"
+                                        >
+                                            <Edit2 size={16} strokeWidth={2} />
                                         </button>
-                                        <button onClick={(e) => handleDelete(e, f.folderId)} className="p-2 text-neutral-300 hover:text-red-500 transition-colors hover:bg-red-50 rounded-full">
-                                            <Trash2 size={16} />
+                                        <button
+                                            onClick={(e) => handleDelete(e, f.folderId)}
+                                            className="p-2 text-neutral-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors"
+                                            title="Xóa"
+                                        >
+                                            <Trash2 size={16} strokeWidth={2} />
                                         </button>
                                     </div>
                                 </div>
-                                <h3 className="text-lg font-bold text-jp-indigo mb-1 group-hover:text-jp-red transition-colors relative z-10">{f.name}</h3>
-                                {f.description && <p className="text-xs text-neutral-500 mb-4 line-clamp-2 relative z-10">{f.description}</p>}
-                                <div className="mt-4 pt-4 border-t border-black/5 flex items-center justify-between text-xs font-bold text-neutral-400 relative z-10">
-                                    <span>{f.decks?.length || 0} BỘ THẺ</span>
+
+                                <h3 className="text-xl font-serif text-neutral-800 mb-2 line-clamp-1 relative z-10">{f.name}</h3>
+                                {f.description && (
+                                    <p className="text-sm text-neutral-500 font-light mb-6 line-clamp-2 min-h-[2.5rem] relative z-10">
+                                        {f.description}
+                                    </p>
+                                )}
+
+                                <div className="pt-4 mt-2 border-t border-neutral-100 flex items-center justify-between relative z-10">
+                                    <span className="text-[10px] font-bold text-neutral-500 tracking-[0.15em] bg-neutral-50 px-3 py-1.5 rounded-full group-hover:bg-[#B91C1C]/5 group-hover:text-[#B91C1C] transition-colors">
+                                        {f.decks?.length || 0} BỘ THẺ
+                                    </span>
+                                    <div className="w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-[#B91C1C]/5 transition-colors">
+                                        <ChevronRight size={16} className="text-neutral-300 group-hover:text-[#B91C1C] transition-colors" strokeWidth={2} />
+                                    </div>
+                                </div>
+
+                                {/* Chữ Kanji trang trí (Giữ nguyên làm nền mờ) */}
+                                <div className="absolute -bottom-4 -right-4 text-neutral-50 text-7xl font-serif font-black select-none pointer-events-none z-0 group-hover:scale-110 group-hover:text-[#B91C1C]/[0.02] transition-transform duration-500">
+                                    学
                                 </div>
                             </Link>
                         ))}
@@ -151,34 +184,43 @@ export default function FoldersPage() {
 
             {/* Modal Create/Edit */}
             {isModalOpen && (
-                <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center overflow-hidden">
-                    <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8 md:p-10 transform transition-all">
-                        <div className="w-12 h-12 bg-jp-indigo/10 rounded-full flex items-center justify-center mb-6">
-                            <Folder size={24} className="text-jp-indigo" />
+                <div className="fixed inset-0 bg-neutral-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div className="bg-white w-full max-w-md p-8 border border-neutral-100 rounded-[2rem] shadow-2xl shadow-[#B91C1C]/10 relative">
+                        <button
+                            onClick={() => setIsModalOpen(false)}
+                            className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center bg-neutral-50 text-neutral-400 hover:text-neutral-800 hover:bg-neutral-100 rounded-full transition-colors"
+                        >
+                            <span className="text-xl font-light leading-none">&times;</span>
+                        </button>
+
+                        <div className="mb-8">
+                            <p className="text-[#B91C1C] font-bold text-[10px] tracking-[0.2em] mb-2 uppercase flex items-center gap-2">
+                                {modalMode === "create" ? "新しい" : "編集"}
+                            </p>
+                            <h2 className="text-2xl font-serif text-neutral-800">
+                                {modalMode === "create" ? "Không Gian Mới" : "Chỉnh Sửa"}
+                            </h2>
                         </div>
-                        <h2 className="text-2xl font-serif text-jp-indigo mb-6">
-                            {modalMode === "create" ? "Không Gian Mới" : "Chỉnh Sửa"}
-                        </h2>
-                        
-                        <div className="space-y-4">
+
+                        <div className="space-y-5">
                             <div>
-                                <label className="block text-[11px] font-bold tracking-[0.1em] text-jp-indigo uppercase mb-2">Tên không gian</label>
+                                <label className="block text-xs font-bold tracking-widest text-neutral-500 uppercase mb-2 ml-1">Tên không gian</label>
                                 <input
                                     type="text"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    className="w-full px-5 py-3.5 bg-neutral-50/50 border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light"
-                                    placeholder="Ví dụ: Tiếng Nhật N5"
+                                    className="w-full px-5 py-3.5 bg-neutral-50 border border-neutral-100 rounded-2xl outline-none focus:border-[#B91C1C] focus:bg-white transition-all text-neutral-800 text-base font-medium placeholder:text-neutral-300 placeholder:font-sans placeholder:font-normal"
+                                    placeholder="Nhập tên không gian học..."
                                     autoFocus
                                 />
                             </div>
                             <div>
-                                <label className="block text-[11px] font-bold tracking-[0.1em] text-jp-indigo uppercase mb-2">Mô tả (Tùy chọn)</label>
+                                <label className="block text-xs font-bold tracking-widest text-neutral-500 uppercase mb-2 ml-1">Mô tả (Tùy chọn)</label>
                                 <textarea
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
-                                    className="w-full px-5 py-3.5 bg-neutral-50/50 border border-neutral-200 rounded-xl outline-none focus:border-jp-indigo focus:ring-1 focus:ring-jp-indigo transition-all font-light resize-none h-24"
-                                    placeholder="Ghi chú ngắn về Không gian học này..."
+                                    className="w-full px-5 py-3.5 bg-neutral-50 border border-neutral-100 rounded-2xl outline-none focus:border-[#B91C1C] focus:bg-white transition-all text-neutral-600 font-light resize-none h-24 placeholder:text-neutral-300"
+                                    placeholder="Thêm ghi chú ngắn..."
                                 />
                             </div>
                         </div>
@@ -186,16 +228,16 @@ export default function FoldersPage() {
                         <div className="flex gap-3 mt-8">
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="flex-1 py-3.5 px-4 bg-white border border-neutral-200 text-neutral-500 rounded-xl font-bold text-[11px] tracking-[0.1em] uppercase hover:bg-neutral-50 transition-colors"
+                                className="flex-1 py-3.5 bg-white border border-neutral-200 text-neutral-500 text-xs font-bold tracking-widest uppercase hover:bg-neutral-50 rounded-xl transition-colors"
                             >
                                 Hủy
                             </button>
                             <button
                                 disabled={isSaving || !name.trim()}
                                 onClick={handleSave}
-                                className="flex-1 py-3.5 px-4 bg-jp-indigo text-white rounded-xl font-bold text-[11px] tracking-[0.1em] uppercase hover:bg-[#1a2333] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="flex-1 py-3.5 bg-[#B91C1C] text-white text-xs font-bold tracking-widest uppercase hover:bg-[#991B1B] rounded-xl transition-colors disabled:opacity-50 disabled:bg-neutral-300"
                             >
-                                {isSaving ? "Đang lưu..." : modalMode === "create" ? "Tạo mới" : "Lưu thay đổi"}
+                                {isSaving ? "Đang lưu..." : modalMode === "create" ? "Tạo" : "Lưu"}
                             </button>
                         </div>
                     </div>

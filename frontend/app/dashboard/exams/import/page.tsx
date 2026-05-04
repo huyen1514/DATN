@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminLayout from "@/components/AdminLayout";
-import { api, uploadExamPdf, uploadExamPdfWithAnswerKey } from "@/lib/api";
-import { AlertTriangle, ClipboardList, FileJson, FileText, Loader2, Upload, X, CheckCircle, Info, ArrowRight, Layers } from "lucide-react";
+import { api } from "@/lib/api";
+import { AlertTriangle, FileJson, Loader2, Upload, X, CheckCircle, Info, ArrowRight, Layers } from "lucide-react";
 
 type ImportExamRequest = {
   test_info: {
@@ -64,13 +64,9 @@ export default function ImportExamPage() {
 
   const [raw, setRaw] = useState<string>("");
   const [jsonFileName, setJsonFileName] = useState<string | null>(null);
-  const [pdfFile, setPdfFile] = useState<File | null>(null);
-  const [answerKeyFile, setAnswerKeyFile] = useState<File | null>(null);
   const [error, setError] = useState<string>("");
   const [warnings, setWarnings] = useState<string[]>([]);
   const [isImporting, setIsImporting] = useState(false);
-  const [isImportingPdf, setIsImportingPdf] = useState(false);
-  const [isPreviewingPdf, setIsPreviewingPdf] = useState(false);
   const [lastCreatedExamId, setLastCreatedExamId] = useState<number | null>(null);
 
   const parsed = useMemo(() => {
@@ -131,67 +127,6 @@ export default function ImportExamPage() {
     }
   };
 
-  const handleImportPdf = async () => {
-    if (!pdfFile) { setError("Vui lòng chọn file PDF."); return; }
-    setLastCreatedExamId(null);
-    setWarnings([]);
-    setError("");
-    setIsImportingPdf(true);
-    try {
-      const res = answerKeyFile
-        ? await uploadExamPdfWithAnswerKey(pdfFile, answerKeyFile, false)
-        : await uploadExamPdf(pdfFile, false);
-      if (res?.value?.examId) {
-        setLastCreatedExamId(res.value.examId);
-        setWarnings(Array.isArray(res.warnings) ? res.warnings : []);
-      } else if (res?.examId) {
-        setLastCreatedExamId(res.examId);
-        setWarnings(Array.isArray(res.warnings) ? res.warnings : []);
-      } else if (res?.error) {
-        setError(res.error);
-      } else if (res?.message) {
-        setError(res.message);
-        setWarnings(Array.isArray(res.warnings) ? res.warnings : []);
-      } else {
-        setError("Import PDF thất bại.");
-      }
-    } catch {
-      setError("Có lỗi xảy ra khi import PDF.");
-    } finally {
-      setIsImportingPdf(false);
-    }
-  };
-
-  const handlePreviewPdfToJson = async () => {
-    if (!pdfFile) { setError("Vui lòng chọn file PDF."); return; }
-    setLastCreatedExamId(null);
-    setWarnings([]);
-    setError("");
-    setIsPreviewingPdf(true);
-    try {
-      const res = answerKeyFile
-        ? await uploadExamPdfWithAnswerKey(pdfFile, answerKeyFile, true)
-        : await uploadExamPdf(pdfFile, true);
-
-      const draft = res?.Draft ?? res?.draft;
-      if (draft) {
-        setRaw(JSON.stringify(draft, null, 2));
-        setWarnings(Array.isArray(res.warnings) ? res.warnings : []);
-        setJsonFileName("(draft từ PDF)");
-      } else if (res?.error) {
-        setError(res.error);
-      } else if (res?.message) {
-        setError(res.message);
-        setWarnings(Array.isArray(res.warnings) ? res.warnings : []);
-      } else {
-        setError("Không thể tạo draft JSON từ PDF.");
-      }
-    } catch {
-      setError("Có lỗi xảy ra khi preview PDF.");
-    } finally {
-      setIsPreviewingPdf(false);
-    }
-  };
 
   return (
     <AdminLayout>
@@ -201,7 +136,7 @@ export default function ImportExamPage() {
             <div className="bg-orange-500 text-white p-2 rounded-xl"><Upload size={24} /></div>
             Import Đề Thi JLPT
           </h1>
-          <p className="text-neutral-400 text-sm mt-2 font-medium">Hỗ trợ nhập liệu từ file JSON chuẩn hoặc phân tách tự động từ file PDF</p>
+          <p className="text-neutral-400 text-sm mt-2 font-medium">Hỗ trợ nhập liệu từ file JSON chuẩn.</p>
         </div>
 
         {error && (
@@ -240,76 +175,17 @@ export default function ImportExamPage() {
               <p className="font-bold opacity-70">Đề thi mới đã được tạo với ID: <span className="text-jp-indigo font-black">#{lastCreatedExamId}</span></p>
             </div>
             <div className="flex gap-3">
-               <button onClick={() => router.push(`/dashboard/exams`)} className="px-6 py-3 bg-white border-2 border-emerald-100 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-emerald-100 transition-all">Quản lý</button>
-               <button onClick={() => window.open(`/exams/${lastCreatedExamId}`, '_blank')} className="px-6 py-3 bg-emerald-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:opacity-90 shadow-lg shadow-emerald-500/20 flex items-center gap-2">Xem thử <ArrowRight size={14} /></button>
+               <button onClick={() => router.push(`/dashboard/exams/${lastCreatedExamId}/questions`)} className="px-6 py-3 bg-white border-2 border-emerald-100 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-emerald-100 transition-all flex items-center gap-2">
+                 Quản lý câu hỏi <ArrowRight size={14} />
+               </button>
+               <button onClick={() => window.open(`/exams/${lastCreatedExamId}`, '_blank')} className="px-6 py-3 bg-emerald-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:opacity-90 shadow-lg shadow-emerald-500/20 flex items-center gap-2">Xem thử</button>
             </div>
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Method 1: PDF */}
-          <div className="lg:col-span-5 space-y-8">
-             <div className="bg-white border border-black/5 rounded-[2.5rem] shadow-xl shadow-black/[0.02] overflow-hidden">
-                <div className="p-8 border-b border-black/5 flex items-center justify-between bg-neutral-50/30">
-                   <div className="flex items-center gap-3">
-                      <div className="bg-violet-500 text-white p-2 rounded-xl"><FileText size={20} /></div>
-                      <span className="text-sm font-black uppercase tracking-widest text-jp-indigo">Nhập từ PDF</span>
-                   </div>
-                </div>
-                <div className="p-8 space-y-6">
-                   <div className="space-y-4">
-                      <div className="p-6 bg-neutral-50 border-2 border-dashed border-neutral-200 rounded-[2rem] flex flex-col items-center text-center group hover:border-jp-indigo transition-all">
-                         <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-neutral-300 mb-3 group-hover:scale-110 group-hover:text-jp-indigo transition-all shadow-sm">
-                            <FileText size={24} />
-                         </div>
-                         <p className="text-xs font-black text-neutral-400 uppercase tracking-widest mb-1">{pdfFile ? pdfFile.name : 'Chọn File Đề Thi (PDF)'}</p>
-                         <label className="cursor-pointer text-[10px] font-black text-jp-indigo hover:text-jp-red transition-colors underline uppercase tracking-widest">
-                           {pdfFile ? 'Thay đổi file' : 'Duyệt file trên máy'}
-                           <input type="file" accept=".pdf" className="hidden" onChange={(e) => setPdfFile(e.target.files?.[0] || null)} />
-                         </label>
-                      </div>
-
-                      <div className="p-6 bg-neutral-50 border-2 border-dashed border-neutral-200 rounded-[2rem] flex flex-col items-center text-center group hover:border-emerald-500 transition-all">
-                         <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-neutral-300 mb-3 group-hover:scale-110 group-hover:text-emerald-500 transition-all shadow-sm">
-                            <CheckCircle size={24} />
-                         </div>
-                         <p className="text-xs font-black text-neutral-400 uppercase tracking-widest mb-1">{answerKeyFile ? answerKeyFile.name : 'Chọn Answer Key (Tùy chọn)'}</p>
-                         <label className="cursor-pointer text-[10px] font-black text-emerald-600 hover:text-jp-red transition-colors underline uppercase tracking-widest">
-                           {answerKeyFile ? 'Thay đổi file' : 'Duyệt file đáp án'}
-                           <input type="file" accept=".pdf,.txt" className="hidden" onChange={(e) => setAnswerKeyFile(e.target.files?.[0] || null)} />
-                         </label>
-                      </div>
-                   </div>
-
-                   <div className="space-y-3">
-                      <button 
-                        onClick={handlePreviewPdfToJson} 
-                        disabled={isPreviewingPdf || !pdfFile}
-                        className="w-full py-4 rounded-2xl bg-white border-2 border-jp-indigo/10 text-jp-indigo font-black text-xs uppercase tracking-widest hover:bg-neutral-50 disabled:opacity-50 transition-all flex items-center justify-center gap-3"
-                      >
-                        {isPreviewingPdf ? <Loader2 size={16} className="animate-spin" /> : <FileJson size={18} />}
-                        {isPreviewingPdf ? "Đang xử lý..." : "Chuyển sang JSON Draft"}
-                      </button>
-                      <button 
-                        onClick={handleImportPdf} 
-                        disabled={isImportingPdf || !pdfFile}
-                        className="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-black text-xs uppercase tracking-widest hover:opacity-90 shadow-xl shadow-violet-500/20 disabled:opacity-50 transition-all flex items-center justify-center gap-3"
-                      >
-                        {isImportingPdf ? <Loader2 size={16} className="animate-spin" /> : <Upload size={18} />}
-                        {isImportingPdf ? "Đang Import..." : "Import PDF Trực Tiếp"}
-                      </button>
-                   </div>
-                   
-                   <div className="flex items-start gap-3 p-4 bg-blue-50 rounded-2xl text-[10px] font-bold text-blue-600 leading-relaxed">
-                      <Info size={14} className="shrink-0" />
-                      Hệ thống sử dụng AI để nhận diện cấu trúc đề thi. Để có độ chính xác cao nhất, hãy dùng tính năng &quot;Draft&quot; để kiểm tra dữ liệu trước khi lưu.
-                   </div>
-                </div>
-             </div>
-          </div>
-
-          {/* Method 2: JSON Editor */}
-          <div className="lg:col-span-7 space-y-6">
+        <div className="grid grid-cols-1 gap-8">
+          {/* JSON Editor */}
+          <div className="space-y-6">
              <div className="bg-white border border-black/5 rounded-[2.5rem] shadow-xl shadow-black/[0.02] overflow-hidden flex flex-col h-full">
                 <div className="p-8 border-b border-black/5 flex items-center justify-between bg-neutral-50/30">
                    <div className="flex items-center gap-3">
@@ -372,6 +248,51 @@ export default function ImportExamPage() {
                         <span className="text-[10px] font-black uppercase tracking-widest">{isImporting ? 'Đang xử lý...' : 'Publish Ngay'}</span>
                       </button>
                    </div>
+
+                     {/* Xem trước nội dung */}
+                     {parsed.req?.sections && parsed.req.sections.length > 0 && (
+                       <div className="mt-8 bg-neutral-50 rounded-3xl p-6 border border-black/5 max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-black/10">
+                         <div className="flex items-center gap-2 mb-4 sticky top-0 bg-neutral-50 pb-2 z-10">
+                            <FileJson size={14} className="text-jp-indigo" />
+                            <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Xem trước Cấu trúc</span>
+                         </div>
+                         <div className="space-y-6">
+                            {parsed.req.sections.map((section, sIdx) => (
+                              <div key={sIdx} className="space-y-3">
+                                 <div className="bg-jp-indigo/5 p-3 rounded-xl">
+                                   <h3 className="text-xs font-black text-jp-indigo uppercase tracking-widest">
+                                     Phần {sIdx + 1}: {section.section_name} {section.jp_name ? `(${section.jp_name})` : ''}
+                                   </h3>
+                                 </div>
+                                 <div className="pl-4 space-y-4 border-l-2 border-black/5 ml-4">
+                                    {section.mondai_list?.map((mondai, mIdx) => (
+                                      <div key={mIdx} className="space-y-2">
+                                        <h4 className="text-[11px] font-bold text-neutral-600">
+                                          Mondai {mondai.mondai_number}: <span className="opacity-70">{mondai.instruction || 'Không có hướng dẫn'}</span>
+                                        </h4>
+                                        <div className="pl-4 space-y-2">
+                                          {mondai.questions?.map((q, qIdx) => (
+                                            <div key={qIdx} className="bg-white p-3 rounded-xl border border-black/5 shadow-sm">
+                                              <p className="text-[11px] font-bold text-neutral-800 mb-2">Câu {q.number}: {q.content}</p>
+                                              <div className="grid grid-cols-2 gap-2">
+                                                {q.options?.map((opt, oIdx) => (
+                                                  <div key={oIdx} className={`text-[10px] p-2 rounded-lg ${opt.option_id === q.correct_option_id ? 'bg-emerald-50 text-emerald-700 font-bold border border-emerald-100' : 'bg-neutral-50 text-neutral-500'}`}>
+                                                    {opt.text}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </div>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    ))}
+                                 </div>
+                              </div>
+                            ))}
+                         </div>
+                       </div>
+                     )}
+
                 </div>
              </div>
           </div>

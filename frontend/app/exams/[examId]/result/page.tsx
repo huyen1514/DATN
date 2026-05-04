@@ -28,6 +28,7 @@ interface ExamResultView {
 }
 
 function clamp(n: number, min: number, max: number) {
+  if (isNaN(n)) return min;
   return Math.min(max, Math.max(min, n));
 }
 
@@ -82,22 +83,22 @@ function ExamResultInner() {
         const o = JSON.parse(raw);
 
         const passInfo = {
-          score: Number(o.score || 0),
+          score: Number(o.score) || 0,
           passScaledTotal: o.passScaledTotal ?? 90,
           passScaledVocabularyGrammarReading: o.passScaledVocabularyGrammarReading ?? null,
           passScaledVocabularyGrammar: o.passScaledVocabularyGrammar ?? 0,
           passScaledReading: o.passScaledReading ?? 0,
           passScaledListening: o.passScaledListening ?? 0,
-          vocabularyGrammarScore: Number(o.vocabularyGrammarScore || 0),
-          readingScore: Number(o.readingScore || 0),
-          listeningScore: Number(o.listeningScore || 0),
+          vocabularyGrammarScore: Number(o.vocabularyGrammarScore) || 0,
+          readingScore: Number(o.readingScore) || 0,
+          listeningScore: Number(o.listeningScore) || 0,
         };
 
         setResult({
           examName: o.examName,
-          totalQuestion: o.totalQuestion,
-          correctCount: o.correctCount,
-          duration: o.duration,
+          totalQuestion: Number(o.totalQuestion) || 0,
+          correctCount: Number(o.correctCount) || 0,
+          duration: Number(o.duration) || 0,
           answers: o.answers ?? {},
           questions: o.questions ?? [],
           isPassed: checkIsPassed(passInfo),
@@ -110,35 +111,39 @@ function ExamResultInner() {
     async function load() {
       if (rid) {
         try {
+          // Gọi trực tiếp hàm api() thay vì api.get()
           const data = await api(`/exam-results/${rid}`);
           if (cancelled) return;
-          if (data?.examResultId != null && data.exam) {
 
+          if (data && data.exam) {
             const passInfo = {
-              score: Number(data.score),
+              score: Number(data.score) || 0,
               passScaledTotal: data.exam.passScaledTotal ?? 90,
               passScaledVocabularyGrammarReading: data.exam.passScaledVocabularyGrammarReading ?? null,
               passScaledVocabularyGrammar: data.exam.passScaledVocabularyGrammar ?? 0,
               passScaledReading: data.exam.passScaledReading ?? 0,
               passScaledListening: data.exam.passScaledListening ?? 0,
-              vocabularyGrammarScore: Number(data.vocabularyGrammarScore ?? 0),
-              readingScore: Number(data.readingScore ?? 0),
-              listeningScore: Number(data.listeningScore ?? 0),
+              vocabularyGrammarScore: Number(data.vocabularyGrammarScore) || 0,
+              readingScore: Number(data.readingScore) || 0,
+              listeningScore: Number(data.listeningScore) || 0,
             };
 
             setResult({
               examName: data.exam.examName,
-              totalQuestion: data.totalQuestion,
-              correctCount: data.amountCorrectAnswers,
-              duration: data.duration,
-              answers: {},
-              questions: [],
+              totalQuestion: Number(data.totalQuestion) || 0,
+              correctCount: Number(data.amountCorrectAnswers) || 0,
+              duration: Number(data.duration) || 0,
+              // Cập nhật: Không để trống answers và questions
+              answers: data.answers || {},
+              questions: data.questions || [],
               isPassed: checkIsPassed(passInfo),
               ...passInfo
             });
             return;
           }
-        } catch (e) { console.error(e); }
+        } catch (e) {
+          console.error("Error loading exam results:", e);
+        }
       }
       if (!applySession()) router.push("/exams");
     }
@@ -158,10 +163,10 @@ function ExamResultInner() {
     );
   }
 
-  const wrongCount = result.totalQuestion - result.correctCount;
-  const scoreProgress = clamp(result.score / 180, 0, 1);
+  const wrongCount = (Number(result.totalQuestion) || 0) - (Number(result.correctCount) || 0);
+  const scoreProgress = clamp((Number(result.score) || 0) / 180, 0, 1);
   const circumference = 2 * Math.PI * 52;
-  const dash = scoreProgress * circumference;
+  const dash = (scoreProgress || 0) * circumference;
 
   const isN1N2N3 = !result.passScaledVocabularyGrammarReading || result.passScaledVocabularyGrammarReading === 0;
 
@@ -200,7 +205,7 @@ function ExamResultInner() {
           <button
             onClick={() => setActiveTab("review")}
             disabled={!result.questions || result.questions.length === 0}
-            className={`flex items-center gap-2 px-8 py-3.5 rounded-2xl font-black text-xs uppercase tracking-widest transition-all disabled:opacity-30
+            className={`flex items-center gap-2 px-8 py-3.5 rounded-2xl font-black text-xs uppercase tracking-widest transition-all disabled:opacity-30 disabled:cursor-not-allowed
               ${activeTab === "review" ? "bg-jp-indigo text-white shadow-xl shadow-jp-indigo/20 scale-105" : "bg-white text-neutral-400 hover:text-jp-indigo"}
             `}
           >
@@ -228,13 +233,16 @@ function ExamResultInner() {
                     />
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <span className="text-5xl font-black text-jp-indigo leading-none">{result.score}</span>
+                    <span className="text-5xl font-black text-jp-indigo leading-none">
+                      {/* Fix NaN display */}
+                      {isNaN(result.score) ? 0 : result.score}
+                    </span>
                     <span className="text-xs font-bold text-neutral-300 mt-2">THANG 180</span>
                   </div>
                 </div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-50 rounded-xl border border-black/5">
                   <Target size={14} className="text-jp-indigo" />
-                  <span className="text-xs font-bold text-neutral-500">Mục tiêu đạt: <span className="text-jp-indigo font-black">{result.passScaledTotal}</span></span>
+                  <span className="text-xs font-bold text-neutral-500">Mục tiêu đạt: <span className="text-jp-indigo font-black">{result.passScaledTotal || 0}</span></span>
                 </div>
               </div>
 
@@ -243,13 +251,13 @@ function ExamResultInner() {
                 {isN1N2N3 ? (
                   <>
                     {[
-                      { label: "Kiến thức ngôn ngữ (Từ vựng/Ngữ pháp)", score: result.vocabularyGrammarScore, pass: result.passScaledVocabularyGrammar, color: "bg-blue-500", icon: BookOpen },
-                      { label: "Đọc hiểu", score: result.readingScore, pass: result.passScaledReading, color: "bg-emerald-500", icon: BarChart3 },
-                      { label: "Nghe hiểu", score: result.listeningScore, pass: result.passScaledListening, color: "bg-orange-500", icon: Target }
+                      { label: "Kiến thức ngôn ngữ (Từ vựng/Ngữ pháp)", score: result.vocabularyGrammarScore || 0, pass: result.passScaledVocabularyGrammar || 0, color: "bg-blue-500", icon: BookOpen },
+                      { label: "Đọc hiểu", score: result.readingScore || 0, pass: result.passScaledReading || 0, color: "bg-emerald-500", icon: BarChart3 },
+                      { label: "Nghe hiểu", score: result.listeningScore || 0, pass: result.passScaledListening || 0, color: "bg-orange-500", icon: Target }
                     ].map((s, i) => (
                       <div key={i} className="bg-white p-6 rounded-[2rem] border border-black/5 shadow-sm flex items-center gap-6 relative overflow-hidden">
                         {s.score < s.pass && <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-500" />}
-                        <div className={`w-14 h-14 rounded-2xl ${s.color.replace('bg-', 'bg-')}/10 ${s.color.replace('bg-', 'text-')} flex items-center justify-center shrink-0`}>
+                        <div className={`w-14 h-14 rounded-2xl ${s.color.replace("bg-", "bg-")}/10 ${s.color.replace("bg-", "text-")} flex items-center justify-center shrink-0`}>
                           <s.icon size={24} />
                         </div>
                         <div className="flex-1">
@@ -270,39 +278,39 @@ function ExamResultInner() {
                 ) : (
                   <>
                     <div className="bg-white p-6 rounded-[2rem] border border-black/5 shadow-sm flex items-center gap-6 relative overflow-hidden">
-                      {result.vocabularyGrammarScore < (result.passScaledVocabularyGrammarReading as number) && <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-500" />}
+                      {(result.vocabularyGrammarScore || 0) < ((result.passScaledVocabularyGrammarReading as number) || 0) && <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-500" />}
                       <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-500 flex items-center justify-center shrink-0">
                         <BookOpen size={24} />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-xs font-black uppercase tracking-widest text-neutral-400">Từ vựng + Ngữ pháp + Đọc</span>
-                          <span className={`text-sm font-black ${result.vocabularyGrammarScore < (result.passScaledVocabularyGrammarReading as number) ? "text-red-500" : "text-jp-indigo"}`}>{result.vocabularyGrammarScore} / 120</span>
+                          <span className={`text-sm font-black ${(result.vocabularyGrammarScore || 0) < ((result.passScaledVocabularyGrammarReading as number) || 0) ? "text-red-500" : "text-jp-indigo"}`}>{result.vocabularyGrammarScore || 0} / 120</span>
                         </div>
                         <div className="h-2 w-full bg-neutral-100 rounded-full overflow-hidden">
-                          <div className={`h-full ${result.vocabularyGrammarScore < (result.passScaledVocabularyGrammarReading as number) ? "bg-red-500" : "bg-blue-500"} rounded-full`} style={{ width: `${(result.vocabularyGrammarScore / 120) * 100}%` }} />
+                          <div className={`h-full ${(result.vocabularyGrammarScore || 0) < ((result.passScaledVocabularyGrammarReading as number) || 0) ? "bg-red-500" : "bg-blue-500"} rounded-full`} style={{ width: `${((result.vocabularyGrammarScore || 0) / 120) * 100}%` }} />
                         </div>
                         <p className="text-[10px] font-bold text-neutral-400 mt-2">
-                          Ngưỡng liệt: {result.passScaledVocabularyGrammarReading} điểm
+                          Ngưỡng liệt: {result.passScaledVocabularyGrammarReading || 0} điểm
                         </p>
                       </div>
                     </div>
 
                     <div className="bg-white p-6 rounded-[2rem] border border-black/5 shadow-sm flex items-center gap-6 relative overflow-hidden">
-                      {result.listeningScore < result.passScaledListening && <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-500" />}
+                      {(result.listeningScore || 0) < (result.passScaledListening || 0) && <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-500" />}
                       <div className="w-14 h-14 rounded-2xl bg-orange-50 text-orange-500 flex items-center justify-center shrink-0">
                         <Target size={24} />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-xs font-black uppercase tracking-widest text-neutral-400">Nghe hiểu</span>
-                          <span className={`text-sm font-black ${result.listeningScore < result.passScaledListening ? "text-red-500" : "text-jp-indigo"}`}>{result.listeningScore} / 60</span>
+                          <span className={`text-sm font-black ${(result.listeningScore || 0) < (result.passScaledListening || 0) ? "text-red-500" : "text-jp-indigo"}`}>{result.listeningScore || 0} / 60</span>
                         </div>
                         <div className="h-2 w-full bg-neutral-100 rounded-full overflow-hidden">
-                          <div className={`h-full ${result.listeningScore < result.passScaledListening ? "bg-red-500" : "bg-orange-500"} rounded-full`} style={{ width: `${(result.listeningScore / 60) * 100}%` }} />
+                          <div className={`h-full ${(result.listeningScore || 0) < (result.passScaledListening || 0) ? "bg-red-500" : "bg-orange-500"} rounded-full`} style={{ width: `${((result.listeningScore || 0) / 60) * 100}%` }} />
                         </div>
                         <p className="text-[10px] font-bold text-neutral-400 mt-2">
-                          Ngưỡng liệt: {result.passScaledListening} điểm
+                          Ngưỡng liệt: {result.passScaledListening || 0} điểm
                         </p>
                       </div>
                     </div>
@@ -314,10 +322,10 @@ function ExamResultInner() {
             {/* Bottom Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
               {[
-                { label: "Câu đúng", value: result.correctCount, icon: CheckCircle2, color: "text-emerald-500", bg: "bg-emerald-50" },
-                { label: "Câu sai", value: wrongCount, icon: XCircle, color: "text-red-500", bg: "bg-red-50" },
-                { label: "Thời gian", value: `${Math.floor(result.duration / 60)}p`, icon: Clock, color: "text-blue-500", bg: "bg-blue-50" },
-                { label: "Độ chính xác", value: `${Math.round((result.correctCount / result.totalQuestion) * 100)}%`, icon: Target, color: "text-jp-indigo", bg: "bg-neutral-50" }
+                { label: "Câu đúng", value: result.correctCount || 0, icon: CheckCircle2, color: "text-emerald-500", bg: "bg-emerald-50" },
+                { label: "Câu sai", value: wrongCount || 0, icon: XCircle, color: "text-red-500", bg: "bg-red-50" },
+                { label: "Thời gian", value: `${Math.floor((result.duration || 0) / 60)}p`, icon: Clock, color: "text-blue-500", bg: "bg-blue-50" },
+                { label: "Độ chính xác", value: `${(result.totalQuestion || 0) > 0 ? Math.round(((result.correctCount || 0) / result.totalQuestion) * 100) : 0}%`, icon: Target, color: "text-jp-indigo", bg: "bg-neutral-50" }
               ].map((s, i) => (
                 <div key={i} className={`${s.bg} rounded-[2rem] p-6 text-center border border-black/5`}>
                   <s.icon size={20} className={`${s.color} mx-auto mb-3`} />

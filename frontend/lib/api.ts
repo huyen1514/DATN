@@ -15,7 +15,7 @@ export const resolveMediaUrl = (url?: string | null): string | undefined => {
   return url;
 };
 
-export const api = async (url: string, method = "GET", body?: unknown): Promise<any> => {
+export const api = async (url: string, method = "GET", body?: unknown, signal?: AbortSignal): Promise<any> => {
   const token = localStorage.getItem("token");
 
   const res = await fetch(API_URL + url, {
@@ -24,7 +24,8 @@ export const api = async (url: string, method = "GET", body?: unknown): Promise<
       "Content-Type": "application/json",
       Authorization: token ? `Bearer ${token}` : ""
     },
-    body: body ? JSON.stringify(body) : undefined
+    body: body ? JSON.stringify(body) : undefined,
+    signal
   });
 
   const text = await res.text();
@@ -77,12 +78,13 @@ export const uploadImage = async (file: File) => {
   return await res.json();
 };
 
-export const uploadExamPdf = async (file: File, dryRun = false) => {
+export const uploadExamQuestionMedia = async (file: File, questionId: number) => {
   const token = localStorage.getItem("token");
   const formData = new FormData();
   formData.append("file", file);
+  formData.append("questionId", questionId.toString());
 
-  const res = await fetch(API_URL + `/exams/import-pdf?dryRun=${dryRun ? "true" : "false"}`, {
+  const res = await fetch(API_URL + "/exams/upload-media", {
     method: "POST",
     headers: {
       Authorization: token ? `Bearer ${token}` : ""
@@ -90,38 +92,10 @@ export const uploadExamPdf = async (file: File, dryRun = false) => {
     body: formData
   });
 
-  const text = await res.text();
-  try {
-    return JSON.parse(text);
-  } catch {
-    return res.ok ? { message: text } : { error: text };
-  }
-};
-
-export const uploadExamPdfWithAnswerKey = async (
-  questionFile: File,
-  answerKeyFile?: File | null,
-  dryRun = false
-) => {
-  const token = localStorage.getItem("token");
-  const formData = new FormData();
-  formData.append("questionFile", questionFile);
-  if (answerKeyFile) {
-    formData.append("answerKeyFile", answerKeyFile);
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(errorText || "Upload media failed");
   }
 
-  const res = await fetch(API_URL + `/exams/import-pdf-with-answer-key?dryRun=${dryRun ? "true" : "false"}`, {
-    method: "POST",
-    headers: {
-      Authorization: token ? `Bearer ${token}` : ""
-    },
-    body: formData
-  });
-
-  const text = await res.text();
-  try {
-    return JSON.parse(text);
-  } catch {
-    return res.ok ? { message: text } : { error: text };
-  }
+  return await res.json();
 };

@@ -1,33 +1,27 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Geist, Geist_Mono, Noto_Serif, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/geist-latin-wght-normal.woff2",
+const geistSans = Geist({
   variable: "--font-geist-sans",
-  weight: "100 900",
-  display: "swap",
+  subsets: ["latin"],
 });
 
-const geistMono = localFont({
-  src: "./fonts/geist-mono-latin-wght-normal.woff2",
+const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  weight: "100 900",
-  display: "swap",
+  subsets: ["latin"],
 });
 
-const notoSerif = localFont({
-  src: "./fonts/noto-serif-vietnamese-wght-normal.woff2",
-  variable: "--font-noto-serif-jp",
-  weight: "100 900",
-  display: "swap",
+const notoSerif = Noto_Serif({
+  variable: "--font-noto-serif-vi",
+  subsets: ["vietnamese"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const notoSerifJP = localFont({
-  src: "./fonts/noto-serif-jp-japanese-wght-normal.woff2",
+const notoSerifJP = Noto_Serif_JP({
   variable: "--font-noto-serif-japanese",
-  weight: "200 900",
-  display: "swap",
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {

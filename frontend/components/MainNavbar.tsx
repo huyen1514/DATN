@@ -130,12 +130,28 @@ export default function MainNavbar() {
             )
           ))}
 
-          <Link
-            href="/flashcards/prebuilt"
-            className="whitespace-nowrap px-3 py-2 text-[13px] font-bold tracking-wide text-slate-600 transition-colors hover:text-[#c62828]"
-          >
-            FLASHCARD
-          </Link>
+          <div className="group relative">
+            <button className="flex items-center gap-1 whitespace-nowrap px-2 py-2 text-[13px] font-bold tracking-wide text-slate-600 transition-colors hover:text-[#c62828]">
+              FLASHCARD
+              <ChevronDown size={14} className="transition-transform duration-300 group-hover:rotate-180 opacity-50" />
+            </button>
+            <div className="absolute left-1/2 top-full min-w-[130px] -translate-x-1/2 pt-3 opacity-0 invisible transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-1.5 shadow-2xl shadow-slate-200/40">
+                <Link
+                  href="/flashcards/prebuilt"
+                  className="block rounded-xl px-4 py-2.5 text-center text-xs font-bold text-slate-600 transition-all hover:bg-red-50 hover:text-[#c62828] uppercase"
+                >
+                  HỆ THỐNG
+                </Link>
+                <Link
+                  href="/folders"
+                  className="block rounded-xl px-4 py-2.5 text-center text-xs font-bold text-slate-600 transition-all hover:bg-red-50 hover:text-[#c62828] uppercase"
+                >
+                  CỦA TÔI
+                </Link>
+              </div>
+            </div>
+          </div>
         </nav>
 
         {/* AUTH SECTION - shrink-0 */}

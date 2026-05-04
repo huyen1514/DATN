@@ -158,7 +158,7 @@ export default function TakeExamPage() {
           await api(`/exam-sessions/auto-save`, "POST", {
             sessionId,
             questionId,
-            selectedOption: answerIdx.toString()
+            selectedOption: answerIdx
           });
         } catch (err) { console.error("Auto save failed", err); }
       }, 1000);

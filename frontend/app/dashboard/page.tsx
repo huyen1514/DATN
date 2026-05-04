@@ -47,33 +47,19 @@ export default function AdminDashboard() {
 
   const loadStats = async () => {
     try {
-      const [levels, lessons, kanjis, grammars, vocabularies, listenings, readings, exams, users, folders, decks] =
-        await Promise.all([
-          api("/levels"),
-          api("/lessons"),
-          api("/kanjis"),
-          api("/grammars"),
-          api("/vocabularies"),
-          api("/listenings"),
-          api("/readings"),
-          api("/exams"),
-          api("/users"),
-          api("/folders"),
-          api("/decks"),
-        ]);
-
+      const data = await api("/dashboard/admin");
       setStats({
-        levels: Array.isArray(levels) ? levels.length : 0,
-        lessons: Array.isArray(lessons) ? lessons.length : 0,
-        kanjis: Array.isArray(kanjis) ? kanjis.length : 0,
-        grammars: Array.isArray(grammars) ? grammars.length : 0,
-        vocabularies: Array.isArray(vocabularies) ? vocabularies.length : 0,
-        listenings: Array.isArray(listenings) ? listenings.length : 0,
-        readings: Array.isArray(readings) ? readings.length : 0,
-        exams: Array.isArray(exams) ? exams.length : 0,
-        users: Array.isArray(users) ? users.length : 0,
-        folders: Array.isArray(folders) ? folders.length : 0,
-        decks: Array.isArray(decks) ? decks.length : 0,
+        levels: data.levels || 0,
+        lessons: data.lessons || 0,
+        kanjis: data.kanjis || 0,
+        grammars: data.grammars || 0,
+        vocabularies: data.vocabularies || 0,
+        listenings: data.listenings || 0,
+        readings: data.readings || 0,
+        exams: data.exams || 0,
+        users: data.users || 0,
+        folders: data.folders || 0,
+        decks: data.decks || 0,
       });
     } catch (e) {
       console.error(e);

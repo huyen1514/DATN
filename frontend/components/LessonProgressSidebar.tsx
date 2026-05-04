@@ -128,11 +128,11 @@ export default function LessonProgressSidebar({ lessonId, userId, levelName }: P
                 {part.label}
               </span>
               <div className="flex items-center gap-2">
-                {currentProgress?.score != null && (
+                {/* {currentProgress?.score != null && (
                   <span className="text-xs text-gray-500 font-mono bg-gray-100 px-2 py-1 rounded">
-                    {currentProgress.score}đ
+                    {currentProgress.score}
                   </span>
-                )}
+                )} */}
                 {getStatusIcon(status)}
               </div>
             </Link>

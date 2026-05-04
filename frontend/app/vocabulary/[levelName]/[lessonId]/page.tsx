@@ -175,8 +175,10 @@ export default function VocabularyDetailPage() {
     }
   }, [lessonId]);
 
-  const updateStatus = useCallback(async (status: string, targetUserId: number | null = userId) => {
-    if (!targetUserId) return;
+  const updateStatus = useCallback(async (status: string, targetUserId: number | null = userId, signal?: AbortSignal) => {
+    // Guard clause: Tránh gọi API khi thiếu thông tin quan trọng
+    if (!targetUserId || !lessonId) return;
+
     try {
       await api("/progress/upsert", "POST", {
         userId: targetUserId,
@@ -184,13 +186,17 @@ export default function VocabularyDetailPage() {
         partType: "Vocabulary",
         status,
         score: 0
-      });
-    } catch (e) {
+      }, signal);
+    } catch (e: any) {
+      // Bắt lỗi AbortError để không in lỗi đỏ lên console khi request bị hủy
+      if (e.name === 'AbortError') return;
       console.error("Could not update progress", e);
     }
   }, [lessonId, userId]);
 
   useEffect(() => {
+    const controller = new AbortController();
+
     // 1. Luôn tải dữ liệu bài học công khai
     void loadData();
 
@@ -212,14 +218,16 @@ export default function VocabularyDetailPage() {
       void fetchProgress(currentUserId);
 
       // Chỉ gửi trạng thái InProgress 1 lần duy nhất khi vào trang
+      // Sử dụng signal để có thể hủy request nếu component unmount hoặc effect chạy lại
       if (!hasUpdatedProgress.current) {
-        void updateStatus("InProgress", currentUserId);
+        void updateStatus("InProgress", currentUserId, controller.signal);
         hasUpdatedProgress.current = true;
       }
     }
 
     // Reset flag khi lessonId thay đổi để cập nhật tiến độ bài mới
     return () => {
+      controller.abort();
       hasUpdatedProgress.current = false;
     };
   }, [lessonId, levelName, loadData, loadBookmarks, fetchProgress, updateStatus]);
@@ -360,7 +368,7 @@ export default function VocabularyDetailPage() {
                 size={18}
                 className={hasBookmark(lessonId, "Lesson") ? "fill-amber-500 text-amber-500" : ""}
               />
-              {hasBookmark(lessonId, "Lesson") ? "Đã lưu" : `Lưu ${lessonName || lessonId}`}
+              {hasBookmark(lessonId, "Lesson") ? "Đã lưu" : `Lưu`}
             </button>
           </div>
 

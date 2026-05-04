@@ -8,6 +8,11 @@ import { ClipboardList, Plus, Edit2, Trash2, Search, X, Clock, Upload, DollarSig
 
 interface Level { levelId: number; levelName: string; }
 interface Exam {
+  passScaledListening: number;
+  passScaledReading: number;
+  passScaledVocabularyGrammar: number;
+  passScaledTotal: number;
+  levelId: number;
   examId: number;
   examName: string;
   duration: number;
@@ -85,7 +90,7 @@ export default function AdminExams() {
       passScaledVocabularyGrammar: exam.passScaledVocabularyGrammar || 0,
       passScaledReading: exam.passScaledReading || 0,
       passScaledListening: exam.passScaledListening || 0,
-      passScaledVocabularyGrammarReading: exam.passScaledVocabularyGrammarReading || null
+      passScaledVocabularyGrammarReading: exam.passScaledVocabularyGrammar || null
     });
     setEditId(exam.examId); setError(""); setIsModalOpen(true);
   };

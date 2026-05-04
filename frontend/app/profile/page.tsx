@@ -17,6 +17,7 @@ import {
   XCircle,
 } from "lucide-react";
 
+// --- Interfaces ---
 interface UserProfile {
   userId: number;
   userName: string;
@@ -28,7 +29,11 @@ interface UserProfile {
 
 interface ExamResult {
   examResultId: number;
-  score: number;
+  score?: number;
+  totalScore?: number;
+  point?: number;
+  points?: number;
+  achievableScore?: number;
   totalQuestion: number;
   amountCorrectAnswers: number;
   isPassed: boolean;
@@ -46,6 +51,11 @@ interface BookmarkItem {
   createdAt: string;
 }
 
+// --- Helpers ---
+const getScoreValue = (item: any): number => {
+  if (!item) return 0;
+  return item.score ?? item.totalScore ?? item.point ?? item.points ?? item.achievableScore ?? 0;
+};
 function getBookmarkTypeLabel(type: string) {
   const normalized = (type || "").toLowerCase();
   if (normalized === "lesson") return "Bài học";
@@ -54,21 +64,38 @@ function getBookmarkTypeLabel(type: string) {
   return type || "Khác";
 }
 
-interface TestHistoryItem {
-  testHistoryId: number;
-  userId: number;
-  score: number;
-  date: string;
-  detail: string;
+// Hàm bổ trợ để đảm bảo chuỗi thời gian từ backend luôn được hiểu là UTC nếu thiếu 'Z'
+function ensureUTC(input: string) {
+  if (!input) return input;
+  if (input.includes("T") && !input.includes("Z") && !/[+-]\d{2}:?\d{2}$/.test(input)) {
+    return input + "Z";
+  }
+  return input;
+}
+
+function formatDate(input: string) {
+  if (!input) return "N/A";
+  const date = new Date(ensureUTC(input));
+  
+  if (isNaN(date.getTime())) return input;
+
+  return date.toLocaleString("vi-VN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  });
 }
 
 export default function ProfilePage() {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [examResults, setExamResults] = useState<ExamResult[]>([]);
   const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
-  const [testHistories, setTestHistories] = useState<TestHistoryItem[]>([]);
   const [expandedHistoryId, setExpandedHistoryId] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [debugData, setDebugData] = useState<any>(null);
 
   useEffect(() => {
     void loadProfile();
@@ -87,16 +114,10 @@ export default function ProfilePage() {
       ]);
 
       if (Array.isArray(results)) {
-          setExamResults(results as ExamResult[]);
-          setTestHistories(results.map((e: ExamResult) => ({
-             testHistoryId: e.examResultId,
-             userId: userData.userId,
-             score: e.score,
-             date: e.completedAt,
-             detail: "Bài thi JLPT"
-          })));
+        setExamResults(results);
+        setDebugData(results);
       }
-      if (Array.isArray(bookmarkData)) setBookmarks(bookmarkData as BookmarkItem[]);
+      if (Array.isArray(bookmarkData)) setBookmarks(bookmarkData);
     } catch (e) {
       console.error(e);
     } finally {
@@ -104,37 +125,39 @@ export default function ProfilePage() {
     }
   };
 
+  // FIX NaN: Đảm bảo kiểm tra độ dài mảng trước khi chia
   const stats = useMemo(
-    () => ({
-      totalExams: examResults.length,
-      passed: examResults.filter((item) => item.isPassed).length,
-      averageExamScore: examResults.length
-        ? Math.round(examResults.reduce((sum, item) => sum + item.score, 0) / examResults.length)
-        : 0,
-      averagePracticeScore: testHistories.length
-        ? Math.round(testHistories.reduce((sum, item) => sum + Number(item.score), 0) / testHistories.length)
-        : 0,
-      lessonBookmarks: bookmarks.filter((item) => item.type.toLowerCase() === "lesson").length,
-      vocabularyBookmarks: bookmarks.filter((item) => item.type.toLowerCase() === "vocabulary").length,
-    }),
-    [bookmarks, examResults, testHistories]
+    () => {
+      const totalExams = examResults.length;
+
+      return {
+        totalExams,
+        passed: examResults.filter((item) => item.isPassed).length,
+        averageExamScore: totalExams > 0
+          ? Math.round(examResults.reduce((sum, item) => sum + getScoreValue(item), 0) / totalExams)
+          : 0,
+        averagePracticeScore: totalExams > 0
+          ? Math.round(examResults.reduce((sum, item) => sum + getScoreValue(item), 0) / totalExams)
+          : 0,
+        lessonBookmarks: bookmarks.filter((item) => (item.type || "").toLowerCase() === "lesson").length,
+        vocabularyBookmarks: bookmarks.filter((item) => (item.type || "").toLowerCase() === "vocabulary").length,
+      };
+    },
+    [bookmarks, examResults]
   );
 
   const parsedDetails = useMemo(() => {
     const map = new Map<number, any>();
-    testHistories.forEach((item) => {
-      try {
-        map.set(item.testHistoryId, JSON.parse(item.detail));
-      } catch {
-        map.set(item.testHistoryId, null);
-      }
+    examResults.forEach((item) => {
+      // Logic để parse detail nếu cần, ở đây sử dụng placeholder
+      map.set(item.examResultId, null);
     });
     return map;
-  }, [testHistories]);
+  }, [examResults]);
 
   return (
     <StudentLayout>
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl px-4 md:px-0">
         <div className="mb-8">
           <h1 className="flex items-center gap-3 text-3xl font-serif text-jp-indigo">
             <UserCircle size={28} className="text-jp-red" />
@@ -182,37 +205,34 @@ export default function ProfilePage() {
                   </h3>
                 </div>
 
-                {testHistories.length === 0 ? (
+                {examResults.length === 0 ? (
                   <div className="p-12 text-center text-neutral-500">Chưa có bài test nào được lưu.</div>
                 ) : (
                   <div className="divide-y divide-black/5">
-                    {testHistories.map((item) => {
-                      const parsed = parsedDetails.get(item.testHistoryId);
-                      const answers = Array.isArray(parsed?.answers) ? parsed.answers : [];
-                      const questions = Array.isArray(parsed?.questions) ? parsed.questions : [];
-                      const isOpen = expandedHistoryId === item.testHistoryId;
+                    {examResults.slice(0, 5).map((item) => {
+                      const isOpen = expandedHistoryId === item.examResultId;
 
                       return (
-                        <div key={item.testHistoryId} className="px-6 py-4">
+                        <div key={item.examResultId} className="px-6 py-4">
                           <button
                             type="button"
-                            onClick={() => setExpandedHistoryId(isOpen ? null : item.testHistoryId)}
+                            onClick={() => setExpandedHistoryId(isOpen ? null : item.examResultId)}
                             className="flex w-full items-center justify-between gap-4 text-left"
                           >
                             <div>
-                              <p className="text-sm font-bold text-jp-indigo">Bài test #{item.testHistoryId}</p>
+                              <p className="text-sm font-bold text-jp-indigo">Bài thi #{item.examResultId}</p>
                               <div className="mt-1 flex flex-wrap items-center gap-3 text-[11px] text-neutral-400">
                                 <span className="flex items-center gap-1">
                                   <Calendar size={12} />
-                                  {formatDate(item.date)}
+                                  {formatDate(item.completedAt)}
                                 </span>
-                                <span>{answers.length || questions.length} câu</span>
+                                <span>{item.amountCorrectAnswers}/{item.totalQuestion} câu đúng</span>
                               </div>
                             </div>
 
                             <div className="flex items-center gap-3">
                               <span className="rounded-full bg-rose-50 px-3 py-1 text-xs font-bold text-jp-red">
-                                {item.score} / 180
+                                {getScoreValue(item)} / 180
                               </span>
                               <ChevronDown
                                 size={18}
@@ -223,40 +243,18 @@ export default function ProfilePage() {
 
                           {isOpen && (
                             <div className="mt-4 rounded-2xl bg-neutral-50 p-4">
-                              {questions.length > 0 ? (
-                                <div className="space-y-3">
-                                  {questions.slice(0, 5).map((question: any, index: number) => {
-                                    const selected = parsed?.answers?.[question.examQuestionId];
-                                    const correct = question.correctAnswer;
-                                    const isCorrect = selected === correct;
-
-                                    return (
-                                      <div key={question.examQuestionId || index} className="rounded-2xl border border-white bg-white p-4">
-                                        <p className="text-sm font-semibold text-jp-indigo">{question.questionText || `Câu ${index + 1}`}</p>
-                                        <div className="mt-2 flex flex-wrap gap-2 text-xs">
-                                          <span className="rounded-full bg-neutral-100 px-2.5 py-1 text-neutral-500">
-                                            Chọn: {selected || "Chưa trả lời"}
-                                          </span>
-                                          <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-emerald-600">
-                                            Đáp án: {correct || "-"}
-                                          </span>
-                                          <span
-                                            className={`rounded-full px-2.5 py-1 font-bold ${
-                                              isCorrect ? "bg-emerald-50 text-emerald-600" : "bg-red-50 text-red-500"
-                                            }`}
-                                          >
-                                            {isCorrect ? "Đúng" : "Sai"}
-                                          </span>
-                                        </div>
-                                      </div>
-                                    );
-                                  })}
+                              <div className="grid grid-cols-2 gap-4 text-xs">
+                                <div className="rounded-xl bg-white p-3 border border-black/5">
+                                  <p className="text-neutral-400 uppercase font-bold text-[9px]">Kết quả</p>
+                                  <p className={`mt-1 font-bold ${item.isPassed ? "text-emerald-600" : "text-jp-red"}`}>
+                                    {item.isPassed ? "ĐẠT" : "KHÔNG ĐẠT"}
+                                  </p>
                                 </div>
-                              ) : (
-                                <pre className="overflow-x-auto whitespace-pre-wrap text-xs leading-relaxed text-neutral-600">
-                                  {item.detail}
-                                </pre>
-                              )}
+                                <div className="rounded-xl bg-white p-3 border border-black/5">
+                                  <p className="text-neutral-400 uppercase font-bold text-[9px]">Thời gian làm bài</p>
+                                  <p className="mt-1 font-bold text-jp-indigo">{Math.floor(item.duration / 60)} phút</p>
+                                </div>
+                              </div>
                             </div>
                           )}
                         </div>
@@ -264,6 +262,18 @@ export default function ProfilePage() {
                     })}
                   </div>
                 )}
+
+                {/* Debugging UI */}
+                <div className="px-6 py-4 border-t border-dashed border-neutral-100">
+                  <details className="cursor-pointer">
+                    <summary className="text-[10px] text-neutral-400 hover:text-jp-red">
+                      [DEBUG] Xem JSON thô
+                    </summary>
+                    <div className="mt-2 max-h-40 overflow-auto rounded-lg bg-neutral-900 p-3 text-[10px] text-emerald-400 font-mono">
+                      <pre>{JSON.stringify(debugData?.slice(0, 1), null, 2)}</pre>
+                    </div>
+                  </details>
+                </div>
               </div>
 
               <div className="space-y-6">
@@ -292,13 +302,13 @@ export default function ProfilePage() {
                             className="rounded-2xl border border-neutral-100 bg-neutral-50 px-4 py-3"
                           >
                             <div className="flex items-start justify-between gap-4">
-                              <div>
-                                <p className="text-sm font-bold text-jp-indigo">{item.itemName || `Item ${item.itemId}`}</p>
+                              <div className="min-w-0 flex-1">
+                                <p className="text-sm font-bold text-jp-indigo truncate">{item.itemName || `Item ${item.itemId}`}</p>
                                 <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-neutral-400">
                                   {getBookmarkTypeLabel(item.type)} · {formatDate(item.createdAt)}
                                 </p>
                               </div>
-                              <BookMarked size={16} className="text-amber-500" />
+                              <BookMarked size={16} className="text-amber-500 shrink-0" />
                             </div>
                           </div>
                         ))
@@ -323,35 +333,31 @@ export default function ProfilePage() {
                           key={result.examResultId}
                           className="flex items-center justify-between rounded-2xl border border-neutral-100 bg-neutral-50 px-4 py-3"
                         >
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 overflow-hidden">
                             <div
-                              className={`flex h-10 w-10 items-center justify-center rounded-2xl ${
-                                result.isPassed ? "bg-emerald-50 text-emerald-600" : "bg-red-50 text-red-500"
-                              }`}
+                              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl ${result.isPassed ? "bg-emerald-50 text-emerald-600" : "bg-red-50 text-red-500"
+                                }`}
                             >
                               {result.isPassed ? <CheckCircle2 size={18} /> : <XCircle size={18} />}
                             </div>
-                            <div>
-                              <p className="text-sm font-bold text-jp-indigo">{result.exam?.examName || "Đề thi"}</p>
-                              <div className="mt-1 flex flex-wrap items-center gap-3 text-[11px] text-neutral-400">
+                            <div className="min-w-0">
+                              <p className="text-sm font-bold text-jp-indigo truncate">{result.exam?.examName || "Đề thi"}</p>
+                              <div className="mt-1 flex flex-wrap items-center gap-2 text-[10px] text-neutral-400">
                                 <span className="flex items-center gap-1">
-                                  <Calendar size={12} />
+                                  <Calendar size={10} />
                                   {formatDate(result.completedAt)}
                                 </span>
                                 <span className="flex items-center gap-1">
-                                  <Clock size={12} />
-                                  {Math.floor(result.duration / 60)} phút {result.duration % 60} giây
+                                  <Clock size={10} />
+                                  {Math.floor(result.duration / 60)}p
                                 </span>
                               </div>
                             </div>
                           </div>
 
-                          <div className="text-right">
-                            <p className={`text-lg font-bold ${result.isPassed ? "text-emerald-600" : "text-red-500"}`}>
-                              {result.score} / 180
-                            </p>
-                            <p className="text-xs text-neutral-400">
-                              {result.amountCorrectAnswers}/{result.totalQuestion} câu đúng
+                          <div className="text-right shrink-0">
+                            <p className={`text-sm font-bold ${result.isPassed ? "text-emerald-600" : "text-red-500"}`}>
+                              {getScoreValue(result)}/180
                             </p>
                           </div>
                         </div>
@@ -379,6 +385,8 @@ export default function ProfilePage() {
   );
 }
 
+// --- Components ---
+// FIX: Render Icon dưới dạng Component JSX <Icon />
 function ProfileInfo({
   icon: Icon,
   label,
@@ -427,14 +435,4 @@ function QuickSummary({ label, value }: { label: string; value: string | number 
       <p className="mt-2 text-2xl font-bold text-jp-indigo">{value}</p>
     </div>
   );
-}
-
-function formatDate(input: string) {
-  return new Date(input).toLocaleDateString("vi-VN", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
 }

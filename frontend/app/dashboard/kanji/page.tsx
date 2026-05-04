@@ -161,6 +161,9 @@ export default function AdminKanji() {
                   <th className="px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase">ID</th>
                   <th className="px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase">Chữ Hán</th>
                   <th className="px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase">Nghĩa</th>
+                  <th className="px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase">Âm Onyomi</th>
+                  <th className="px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase">Âm Kunyomi</th>
+                  <th className="px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase">Ví dụ</th>
                   <th className="px-6 py-3 text-[11px] font-bold text-neutral-400 uppercase">Bài học</th>
                   <th className="px-6 py-3 text-right text-[11px] font-bold text-neutral-400 uppercase">Thao tác</th>
                 </tr>
@@ -171,6 +174,9 @@ export default function AdminKanji() {
                     <td className="px-6 py-4 text-sm font-medium text-neutral-400">{k.kanjiId}</td>
                     <td className="px-6 py-4 text-3xl font-serif text-jp-red">{k.character}</td>
                     <td className="px-6 py-4 text-sm font-medium text-jp-indigo">{k.meaning}</td>
+                    <td className="px-6 py-4 text-sm font-medium text-neutral-400">{k.onyomi}</td>
+                    <td className="px-6 py-4 text-sm font-medium text-neutral-400">{k.kunyomi}</td>
+                    <td className="px-6 py-4 text-sm font-medium text-neutral-400">{k.example}</td>
                     <td className="px-6 py-4 text-xs font-bold text-blue-600">
                       {k.lesson ? `${k.lesson.lessonName} - ${formatLevelName(k.lesson.levelId)}` : `Bài ${k.lessonId}`}
                     </td>
