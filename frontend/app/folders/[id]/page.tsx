@@ -256,7 +256,7 @@ export default function FolderDetailPage() {
                                 onClick={handleSave}
                                 className="flex-1 py-3.5 bg-[#B91C1C] text-white text-xs font-bold tracking-widest uppercase hover:bg-[#991B1B] rounded-xl transition-colors disabled:opacity-50 disabled:bg-neutral-300"
                             >
-                                {isSaving ? "Đang lưu..." : modalMode === "create" ? "Tạo Mới" : "Lưu Xong"}
+                                {isSaving ? "Đang lưu..." : modalMode === "create" ? "Tạo Mới" : "Lưu"}
                             </button>
                         </div>
                     </div>

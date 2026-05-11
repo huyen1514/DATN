@@ -17,8 +17,10 @@ namespace Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Vocabulary model)
+        public async Task<IActionResult> Create([FromBody] Vocabulary model)
         {
+            Console.WriteLine($"[Vocabulary Create] AudioUrl received: '{model.AudioUrl}'");
+
             var lessonExists = await _context.Lessons.AnyAsync(x => x.LessonId == model.LessonId);
             if (!lessonExists)
                 return BadRequest("Lesson không tồn tại");
@@ -27,6 +29,7 @@ namespace Controllers
             _context.Vocabularies.Add(model);
             await _context.SaveChangesAsync();
 
+            Console.WriteLine($"[Vocabulary Create] Saved ID={model.VocabularyId}, AudioUrl='{model.AudioUrl}'");
             return Ok(model);
         }
 
@@ -86,8 +89,10 @@ namespace Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Vocabulary model)
+        public async Task<IActionResult> Update(int id, [FromBody] Vocabulary model)
         {
+            Console.WriteLine($"[Vocabulary Update] ID={id}, AudioUrl received: '{model.AudioUrl}'");
+
             var vocabulary = await _context.Vocabularies.FindAsync(id);
             if (vocabulary == null)
                 return NotFound("Không tìm thấy từ vựng");
@@ -103,9 +108,11 @@ namespace Controllers
             vocabulary.PartOfSpeech = model.PartOfSpeech;
             vocabulary.AudioUrl = model.AudioUrl;
             vocabulary.LessonId = model.LessonId;
-            vocabulary.UpdatedAt = DateTime.UtcNow; // Cập nhật thời gian chỉnh sửa
+            vocabulary.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
+
+            Console.WriteLine($"[Vocabulary Update] Saved ID={id}, AudioUrl='{vocabulary.AudioUrl}'");
             return Ok(vocabulary);
         }
 

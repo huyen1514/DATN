@@ -14,6 +14,15 @@ namespace Controllers
             _environment = environment;
         }
 
+        /// <summary>
+        /// Lấy thư mục uploads: ưu tiên UPLOADS_PATH (Docker), fallback về wwwroot/uploads
+        /// </summary>
+        private string GetUploadsRoot()
+        {
+            return Environment.GetEnvironmentVariable("UPLOADS_PATH")
+                ?? Path.Combine(_environment.WebRootPath ?? Path.Combine(_environment.ContentRootPath, "wwwroot"), "uploads");
+        }
+
         [HttpPost("audio")]
         public async Task<IActionResult> UploadAudio(IFormFile file)
         {
@@ -28,8 +37,7 @@ namespace Controllers
 
             try
             {
-                string webRootPath = _environment.WebRootPath ?? Path.Combine(_environment.ContentRootPath, "wwwroot");
-                string uploadsFolder = Path.Combine(webRootPath, "uploads", "audio");
+                string uploadsFolder = Path.Combine(GetUploadsRoot(), "audio");
                 
                 if (!Directory.Exists(uploadsFolder))
                 {
@@ -69,8 +77,7 @@ namespace Controllers
 
             try
             {
-                string webRootPath = _environment.WebRootPath ?? Path.Combine(_environment.ContentRootPath, "wwwroot");
-                string uploadsFolder = Path.Combine(webRootPath, "uploads", "images");
+                string uploadsFolder = Path.Combine(GetUploadsRoot(), "images");
                 
                 if (!Directory.Exists(uploadsFolder))
                 {

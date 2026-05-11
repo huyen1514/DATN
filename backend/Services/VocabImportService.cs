@@ -96,7 +96,11 @@ namespace Services
             target.Meaning = source.Meaning;
             target.Example = source.Example;
             target.PartOfSpeech = source.PartOfSpeech;
-            target.AudioUrl = source.AudioUrl;
+            // CHỈ ghi đè AudioUrl nếu JSON có giá trị mới, giữ lại giá trị cũ nếu JSON không có
+            if (!string.IsNullOrWhiteSpace(source.AudioUrl))
+            {
+                target.AudioUrl = source.AudioUrl;
+            }
             target.UpdatedAt = DateTime.UtcNow;
         }
 

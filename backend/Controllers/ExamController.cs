@@ -218,8 +218,9 @@ namespace Controllers
 
             // Sinh UUID để không bị trùng tên
             string newFileName = Guid.NewGuid().ToString() + extension;
-            string webRootPath = env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot");
-            string saveDirectory = Path.Combine(webRootPath, "uploads", folderName);
+            string uploadsRoot = Environment.GetEnvironmentVariable("UPLOADS_PATH")
+                ?? Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "uploads");
+            string saveDirectory = Path.Combine(uploadsRoot, folderName);
 
             if (!Directory.Exists(saveDirectory))
             {

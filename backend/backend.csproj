@@ -27,6 +27,15 @@
     <Watch Include="wwwroot\data\Readings\**\*.json" />
     <Watch Include="wwwroot\data\Kanjis\**\*.json" />
     <Watch Include="wwwroot\data\Listenings\**\*.json" />
+
+    <!-- Loại trừ thư mục uploads khỏi dotnet watch để tránh restart khi upload file -->
+    <Watch Remove="wwwroot\uploads\**" />
+
+    <!-- Không đưa file upload vào Content/Build để tránh trigger rebuild -->
+    <Content Remove="wwwroot\uploads\**" />
+    <None Include="wwwroot\uploads\**">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -167,13 +167,20 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
-var webRootPath = app.Environment.WebRootPath
-    ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot");
-var uploadsPath = Path.Combine(webRootPath, "uploads");
+// Uploads path: dùng biến UPLOADS_PATH nếu có (Docker), ngược lại dùng wwwroot/uploads
+var uploadsPath = Environment.GetEnvironmentVariable("UPLOADS_PATH")
+    ?? Path.Combine(app.Environment.WebRootPath ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot"), "uploads");
 
 if (!Directory.Exists(uploadsPath))
 {
     Directory.CreateDirectory(uploadsPath);
+}
+
+// Copy seed images từ wwwroot/uploads sang uploads path (chỉ lần đầu)
+var webRootUploads = Path.Combine(app.Environment.WebRootPath ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot"), "uploads");
+if (uploadsPath != webRootUploads && Directory.Exists(webRootUploads))
+{
+    CopySeedFiles(webRootUploads, uploadsPath);
 }
 
 app.UseStaticFiles(new StaticFileOptions
@@ -431,3 +438,27 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
+
+// Helper: Copy file ảnh seed từ wwwroot/uploads sang thư mục uploads bên ngoài (chỉ copy file chưa tồn tại)
+static void CopySeedFiles(string source, string destination)
+{
+    foreach (var dirPath in Directory.GetDirectories(source, "*", SearchOption.AllDirectories))
+    {
+        var relativePath = Path.GetRelativePath(source, dirPath);
+        var destDir = Path.Combine(destination, relativePath);
+        if (!Directory.Exists(destDir))
+        {
+            Directory.CreateDirectory(destDir);
+        }
+    }
+
+    foreach (var filePath in Directory.GetFiles(source, "*.*", SearchOption.AllDirectories))
+    {
+        var relativePath = Path.GetRelativePath(source, filePath);
+        var destFile = Path.Combine(destination, relativePath);
+        if (!File.Exists(destFile))
+        {
+            File.Copy(filePath, destFile);
+        }
+    }
+}
