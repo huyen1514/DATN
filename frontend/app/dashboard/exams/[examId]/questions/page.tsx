@@ -89,7 +89,13 @@ export default function ManageExamQuestionsPage() {
             <div className="bg-emerald-500 text-white p-2 rounded-xl"><Upload size={24} /></div>
             Quản lý Media Câu hỏi (Đề #{examId})
           </h1>
-          <p className="text-neutral-400 text-sm mt-2 font-medium">Bổ sung âm thanh và hình ảnh cho từng câu hỏi</p>
+          <p className="text-neutral-400 text-sm mt-2 font-medium">Bổ sung âm thanh và hình ảnh cho từng câu hỏi.</p>
+          <div className="mt-3 bg-blue-50 border border-blue-100 p-4 rounded-xl flex gap-3 items-start">
+            <AlertTriangle size={20} className="text-blue-500 shrink-0" />
+            <p className="text-xs text-blue-800 font-medium leading-relaxed">
+              <strong>Lưu ý phần Nghe Hiểu (Phần 3):</strong> Hiện tại hệ thống sẽ gộp chung 1 file nghe cho toàn bộ các Mondai và câu hỏi trong phần nghe. Bạn <strong>chỉ cần tải file âm thanh lên Câu hỏi đầu tiên</strong> của Phần 3. File này sẽ được phát xuyên suốt cả phần nghe của thí sinh.
+            </p>
+          </div>
         </div>
 
         {error && (
@@ -105,7 +111,11 @@ export default function ManageExamQuestionsPage() {
           </div>
         ) : (
           <div className="space-y-6">
-            {questions.map((q) => (
+            {questions.map((q, index) => {
+              const firstListeningIndex = questions.findIndex(x => x.section === 3);
+              const showAudioUpload = q.section !== 3 || index === firstListeningIndex;
+
+              return (
               <div key={q.examQuestionId} className="bg-white border border-black/5 rounded-[2rem] p-6 shadow-xl shadow-black/[0.02]">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 space-y-2">
@@ -140,22 +150,24 @@ export default function ManageExamQuestionsPage() {
 
                   <div className="flex flex-col gap-3 min-w-[200px]">
                     {/* Audio Upload */}
-                    <div className="p-3 bg-neutral-50 border border-black/5 rounded-xl space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-600">
-                          <Music size={14} className="text-violet-500" /> Âm thanh
+                    {showAudioUpload && (
+                      <div className="p-3 bg-neutral-50 border border-black/5 rounded-xl space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-600">
+                            <Music size={14} className="text-violet-500" /> {q.section === 3 ? "Nghe chung (Phần 3)" : "Âm thanh"}
+                          </div>
+                          {q.audioUrl && <CheckCircle size={14} className="text-emerald-500" />}
                         </div>
-                        {q.audioUrl && <CheckCircle size={14} className="text-emerald-500" />}
+                        {q.audioUrl && (
+                          <audio controls src={resolveMediaUrl(q.audioUrl)} className="h-8 w-full" />
+                        )}
+                        <label className={`block text-center cursor-pointer px-3 py-2 border border-dashed rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${uploadingId === q.examQuestionId ? 'bg-neutral-100 text-neutral-400 pointer-events-none' : 'border-violet-200 text-violet-600 hover:bg-violet-50'}`}>
+                          {uploadingId === q.examQuestionId ? <Loader2 size={12} className="animate-spin inline mr-1" /> : <Upload size={12} className="inline mr-1" />}
+                          {uploadingId === q.examQuestionId ? "Đang tải..." : "Tải MP3"}
+                          <input type="file" accept="audio/*" className="hidden" onChange={(e) => handleUploadMedia(e.target.files?.[0] || null, q.examQuestionId)} />
+                        </label>
                       </div>
-                      {q.audioUrl && (
-                        <audio controls src={resolveMediaUrl(q.audioUrl)} className="h-8 w-full" />
-                      )}
-                      <label className={`block text-center cursor-pointer px-3 py-2 border border-dashed rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${uploadingId === q.examQuestionId ? 'bg-neutral-100 text-neutral-400 pointer-events-none' : 'border-violet-200 text-violet-600 hover:bg-violet-50'}`}>
-                        {uploadingId === q.examQuestionId ? <Loader2 size={12} className="animate-spin inline mr-1" /> : <Upload size={12} className="inline mr-1" />}
-                        {uploadingId === q.examQuestionId ? "Đang tải..." : "Tải MP3"}
-                        <input type="file" accept="audio/*" className="hidden" onChange={(e) => handleUploadMedia(e.target.files?.[0] || null, q.examQuestionId)} />
-                      </label>
-                    </div>
+                    )}
 
                     {/* Image Upload */}
                     <div className="p-3 bg-neutral-50 border border-black/5 rounded-xl space-y-2">
@@ -178,7 +190,7 @@ export default function ManageExamQuestionsPage() {
                   </div>
                 </div>
               </div>
-            ))}
+            )})}
             
             {questions.length === 0 && (
               <div className="text-center p-20 text-neutral-400 font-bold">Không có câu hỏi nào.</div>

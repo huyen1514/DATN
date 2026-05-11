@@ -59,7 +59,12 @@ export default function AdminExamQuestions() {
           return a.mondaiNumber - b.mondaiNumber;
         }));
       }
-      if (Array.isArray(eData)) setExams(eData);
+      
+      if (eData && Array.isArray(eData.data)) {
+        setExams(eData.data);
+      } else if (Array.isArray(eData)) {
+        setExams(eData);
+      }
     } catch (e) { console.error(e); }
     finally { setIsLoading(false); }
   };
@@ -279,19 +284,22 @@ export default function AdminExamQuestions() {
                   </div>
 
                   {/* Upload Audio */}
-                  <div className="bg-cyan-50/50 p-5 rounded-2xl border border-cyan-100">
-                    <label className="block text-[11px] font-bold tracking-wider text-cyan-800 uppercase mb-3 flex items-center gap-2">
-                      <Headphones size={14} /> Tệp âm thanh (Nghe hiểu)
-                    </label>
-                    <input type="file" accept="audio/*" onChange={(e) => setSelectedAudioFile(e.target.files?.[0] || null)} className="hidden" id="exam-audio-upload" />
-                    <label htmlFor="exam-audio-upload" className="flex items-center justify-center gap-3 px-4 py-4 border-2 border-dashed border-cyan-200 bg-white rounded-xl text-sm text-cyan-700 cursor-pointer hover:border-cyan-400 hover:bg-cyan-50 transition-all mb-3 group">
-                      <Upload size={18} className="text-cyan-400 group-hover:text-cyan-600 transition-colors" />
-                      {selectedAudioFile ? <span className="font-bold truncate">{selectedAudioFile.name}</span> : <span className="font-medium">{form.audioUrl ? "Thay đổi File Audio" : "Chọn tệp MP3 tải lên"}</span>}
-                    </label>
-                    {(selectedAudioFile || (form.audioUrl && form.audioUrl.trim() !== '')) && (
-                      <audio controls src={selectedAudioFile ? URL.createObjectURL(selectedAudioFile) : resolveUrl(form.audioUrl)} className="w-full h-10 rounded-lg" />
-                    )}
-                  </div>
+                  {form.section === 3 && (
+                    <div className="bg-cyan-50/50 p-5 rounded-2xl border border-cyan-100 mb-6">
+                      <label className="block text-[11px] font-bold tracking-wider text-cyan-800 uppercase mb-3 flex items-center gap-2">
+                        <Headphones size={14} /> Tệp âm thanh chung (Nghe hiểu)
+                      </label>
+                      <p className="text-[10px] text-cyan-600 mb-3 font-medium">Bạn chỉ cần tải âm thanh lên cho Câu hỏi đầu tiên của phần nghe. File này sẽ tự động phát chung cho tất cả các câu hỏi khác.</p>
+                      <input type="file" accept="audio/*" onChange={(e) => setSelectedAudioFile(e.target.files?.[0] || null)} className="hidden" id="exam-audio-upload" />
+                      <label htmlFor="exam-audio-upload" className="flex items-center justify-center gap-3 px-4 py-4 border-2 border-dashed border-cyan-200 bg-white rounded-xl text-sm text-cyan-700 cursor-pointer hover:border-cyan-400 hover:bg-cyan-50 transition-all mb-3 group">
+                        <Upload size={18} className="text-cyan-400 group-hover:text-cyan-600 transition-colors" />
+                        {selectedAudioFile ? <span className="font-bold truncate">{selectedAudioFile.name}</span> : <span className="font-medium">{form.audioUrl ? "Thay đổi File Audio" : "Chọn tệp MP3 tải lên"}</span>}
+                      </label>
+                      {(selectedAudioFile || (form.audioUrl && form.audioUrl.trim() !== '')) && (
+                        <audio controls src={selectedAudioFile ? URL.createObjectURL(selectedAudioFile) : resolveUrl(form.audioUrl)} className="w-full h-10 rounded-lg" />
+                      )}
+                    </div>
+                  )}
 
                   {/* Upload Ảnh */}
                   <div>

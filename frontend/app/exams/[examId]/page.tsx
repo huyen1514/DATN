@@ -90,6 +90,11 @@ export default function TakeExamPage() {
     return sectionedQuestions[currentSection] || [];
   }, [sectionedQuestions, currentSection]);
 
+  // Global Audio Source for the current section
+  const currentSectionAudioUrl = useMemo(() => {
+    return currentQuestions.find(q => q.audioUrl)?.audioUrl;
+  }, [currentQuestions]);
+
   useEffect(() => { loadExam(); }, [examId]);
 
   useEffect(() => {
@@ -171,13 +176,12 @@ export default function TakeExamPage() {
   };
 
   const handlePlayAudio = () => {
-    const current = currentQuestions[currentIndex];
-    if (!audioRef.current || !current?.audioUrl) return;
-    if (playedAudios[current.audioUrl]) return;
+    if (!audioRef.current || !currentSectionAudioUrl) return;
+    if (playedAudios[currentSectionAudioUrl]) return;
 
     audioRef.current.play().catch(e => console.error("Audio error", e));
     setIsPlaying(true);
-    setPlayedAudios(prev => ({ ...prev, [current.audioUrl!]: true }));
+    setPlayedAudios(prev => ({ ...prev, [currentSectionAudioUrl]: true }));
   };
 
   const handleAudioEnded = () => { setIsPlaying(false); };
@@ -403,6 +407,36 @@ export default function TakeExamPage() {
 
         {/* Content View (Không còn footer, mở rộng full không gian) */}
         <main className="flex-1 flex flex-col overflow-hidden relative">
+          
+          {/* Global Audio Player for the Section (e.g. Listening) */}
+          {currentSectionAudioUrl && (
+            <div className="bg-white border-b border-slate-200 px-6 py-4 shrink-0 flex flex-col sm:flex-row items-center gap-5 shadow-sm z-10">
+              <audio ref={audioRef} src={resolveMediaUrl(currentSectionAudioUrl)} onEnded={handleAudioEnded} className="hidden" />
+              <button
+                onClick={handlePlayAudio}
+                disabled={playedAudios[currentSectionAudioUrl] && !isPlaying}
+                className={`w-12 h-12 shrink-0 flex items-center justify-center rounded-full text-white transition-all
+                      ${isPlaying ? 'bg-orange-500 animate-pulse' :
+                    playedAudios[currentSectionAudioUrl] ? 'bg-slate-300' : 'bg-jp-indigo hover:bg-jp-indigo/90'}
+                    `}
+              >
+                {isPlaying ? <Pause size={20} /> : <Play size={20} className="ml-1" />}
+              </button>
+              <div className="flex-1 text-center sm:text-left">
+                <h4 className="text-sm font-bold text-slate-800 mb-0.5">File nghe toàn phần (Listening)</h4>
+                <p className={`text-[11px] font-medium ${playedAudios[currentSectionAudioUrl] && !isPlaying ? 'text-red-500' : 'text-slate-500'}`}>
+                  {isPlaying ? 'Đang phát...' :
+                    playedAudios[currentSectionAudioUrl] ? 'Đã phát xong (Chỉ được nghe 1 lần)' : 'Nhấn để nghe (Chỉ nghe được 1 lần duy nhất!)'}
+                </p>
+              </div>
+              <div className="bg-slate-50 px-3 py-2 rounded-lg border border-slate-200 flex items-center gap-2">
+                <Volume2 size={16} className="text-slate-400" />
+                <input type="range" min="0" max="1" step="0.1" value={volume} onChange={(e) => {
+                  const v = parseFloat(e.target.value); setVolume(v); if (audioRef.current) audioRef.current.volume = v;
+                }} className="w-20 h-1 bg-slate-200 rounded-full appearance-none cursor-pointer" />
+              </div>
+            </div>
+          )}
 
           <div className="flex-1 flex overflow-hidden">
             {/* Reading Passage Split View */}
@@ -432,35 +466,7 @@ export default function TakeExamPage() {
                   </div>
                 )}
 
-                {/* Audio Player (Listening Section) */}
-                {currentQuestion?.audioUrl && (
-                  <div className="mb-6 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row items-center gap-5">
-                    <audio ref={audioRef} src={resolveMediaUrl(currentQuestion.audioUrl)} onEnded={handleAudioEnded} className="hidden" />
-                    <button
-                      onClick={handlePlayAudio}
-                      disabled={playedAudios[currentQuestion.audioUrl!] && !isPlaying}
-                      className={`w-12 h-12 shrink-0 flex items-center justify-center rounded-full text-white transition-all
-                            ${isPlaying ? 'bg-orange-500 animate-pulse' :
-                          playedAudios[currentQuestion.audioUrl!] ? 'bg-slate-300' : 'bg-jp-indigo hover:bg-jp-indigo/90'}
-                          `}
-                    >
-                      {isPlaying ? <Pause size={20} /> : <Play size={20} className="ml-1" />}
-                    </button>
-                    <div className="flex-1 text-center sm:text-left">
-                      <h4 className="text-sm font-bold text-slate-800 mb-0.5">Bài nghe</h4>
-                      <p className={`text-[11px] font-medium ${playedAudios[currentQuestion.audioUrl!] && !isPlaying ? 'text-red-500' : 'text-slate-500'}`}>
-                        {isPlaying ? 'Đang phát...' :
-                          playedAudios[currentQuestion.audioUrl!] ? 'Đã phát xong (Chỉ được nghe 1 lần)' : 'Nhấn để nghe (Chỉ nghe được 1 lần duy nhất!)'}
-                      </p>
-                    </div>
-                    <div className="bg-slate-50 px-3 py-2 rounded-lg border border-slate-200 flex items-center gap-2">
-                      <Volume2 size={16} className="text-slate-400" />
-                      <input type="range" min="0" max="1" step="0.1" value={volume} onChange={(e) => {
-                        const v = parseFloat(e.target.value); setVolume(v); if (audioRef.current) audioRef.current.volume = v;
-                      }} className="w-20 h-1 bg-slate-200 rounded-full appearance-none cursor-pointer" />
-                    </div>
-                  </div>
-                )}
+
 
                 {/* Question Header */}
                 <div className="mb-4">

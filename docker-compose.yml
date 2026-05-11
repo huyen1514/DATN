@@ -30,15 +30,20 @@ services:
       - "5135:5135"
     volumes:
       - ./backend:/app
-      # - uploads_data:/app/wwwroot/uploads
+      # Uploads nằm ngoài /app để dotnet watch không scan → không crash/restart
+      - uploads_data:/data/uploads
     working_dir: /app
-    command: dotnet watch run --urls "http://0.0.0.0:5135" -- --seed
+    # Không dùng --seed mặc định để restart nhanh hơn.
+    # Lần đầu hoặc khi cần seed lại: docker compose run --rm backend dotnet run -- --seed
+    command: dotnet watch run --urls "http://0.0.0.0:5135"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: "5135"
       ConnectionStrings__DefaultConnection: Server=db;Database=JapaneseLearningDB;User Id=sa;Password=${DB_PASSWORD};TrustServerCertificate=True
       Jwt__Key: ${JWT_SECRET}
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      # Lưu uploads ra ngoài thư mục project để dotnet watch không theo dõi
+      UPLOADS_PATH: "/data/uploads"
     depends_on:
       db:
         condition: service_healthy
