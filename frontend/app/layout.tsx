@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif, Noto_Serif_JP } from "next/font/google";
+import { Inter, Noto_Serif, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin", "vietnamese"],
 });
 
 const notoSerif = Noto_Serif({
@@ -37,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="vi"
-      className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${notoSerifJP.variable} h-full antialiased`}
+      className={`${inter.variable} ${notoSerif.variable} ${notoSerifJP.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>

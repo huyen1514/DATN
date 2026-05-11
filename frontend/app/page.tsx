@@ -84,7 +84,7 @@ export default function HomePage() {
                     <p className="text-sm font-bold text-neutral-900">Thi đỗ JLPT N3</p>
                   </div>
                 </div>
-                <span className="text-xs font-bold text-jp-red bg-jp-red/5 px-2 py-1 rounded-md">85%</span>
+                {/* <span className="text-xs font-bold text-jp-red bg-jp-red/5 px-2 py-1 rounded-md">85%</span> */}
               </div>
               <div className="w-full bg-neutral-100 h-1.5 rounded-full overflow-hidden">
                 <div className="bg-gradient-to-r from-jp-red to-rose-400 w-[85%] h-full rounded-full relative">
@@ -226,8 +226,8 @@ export default function HomePage() {
           <div>
             <h4 className="font-bold mb-6 tracking-widest uppercase text-xs text-neutral-900">Học Tập</h4>
             <ul className="space-y-4 text-neutral-500 text-sm font-light">
-              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Từ vựng (N5-N1)</a></li>
-              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Ngữ pháp (N5-N1)</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Từ vựng (N5-N3)</a></li>
+              <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Ngữ pháp (N5-N3)</a></li>
               <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Luyện thi JLPT</a></li>
               <li><a href="#" className="hover:text-jp-red transition-colors inline-block">Podcast Tiếng Nhật</a></li>
             </ul>

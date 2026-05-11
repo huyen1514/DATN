@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
-import { uploadAudio, api } from "@/lib/api";
+import { uploadAudio, api, resolveMediaUrl } from "@/lib/api";
 import AdminLayout from "@/components/AdminLayout";
-import { BookA, Plus, Edit2, Trash2, Search, X, Upload, AudioLines } from "lucide-react";
+import { BookA, Plus, Edit2, Trash2, Search, X, Upload, AudioLines, Volume2, Loader2 } from "lucide-react";
 
 interface Level { levelId: number; levelName: string; }
 interface Lesson {
@@ -39,7 +39,7 @@ export default function AdminVocabulary() {
   const [modalMode, setModalMode] = useState<"create" | "edit">("create");
   const [editId, setEditId] = useState<number | null>(null);
   const [form, setForm] = useState({ word: "", reading: "", meaning: "", example: "", partOfSpeech: "", audioUrl: "", lessonId: 0 });
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isUploadingAudio, setIsUploadingAudio] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -73,15 +73,29 @@ export default function AdminVocabulary() {
   const openCreate = () => {
     setModalMode("create");
     setForm({ word: "", reading: "", meaning: "", example: "", partOfSpeech: "", audioUrl: "", lessonId: vocabLessons[0]?.lessonId || 0 });
-    setSelectedFile(null);
     setEditId(null); setError(""); setIsModalOpen(true);
   };
 
   const openEdit = (v: Vocabulary) => {
     setModalMode("edit");
     setForm({ word: v.word, reading: v.reading, meaning: v.meaning, example: v.example || "", partOfSpeech: v.partOfSpeech || "", audioUrl: v.audioUrl || "", lessonId: v.lessonId });
-    setSelectedFile(null);
     setEditId(v.vocabularyId); setError(""); setIsModalOpen(true);
+  };
+
+  const handleAudioFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setIsUploadingAudio(true);
+    setError("");
+    try {
+      const uploadRes = await uploadAudio(file);
+      setForm(prev => ({ ...prev, audioUrl: uploadRes.url }));
+    } catch (err: any) {
+      setError("Lỗi khi tải file audio: " + (err.message || "Upload thất bại"));
+    } finally {
+      setIsUploadingAudio(false);
+      e.target.value = "";
+    }
   };
 
   const handleSave = async () => {
@@ -89,24 +103,22 @@ export default function AdminVocabulary() {
       setError("Vui lòng nhập đầy đủ thông tin và chọn Bài học");
       return;
     }
+    if (isUploadingAudio) {
+      setError("Vui lòng đợi tải file audio xong");
+      return;
+    }
     setIsSaving(true); setError("");
     try {
-      let finalAudioUrl = form.audioUrl;
-
-      if (selectedFile) {
-        try {
-          const uploadRes = await uploadAudio(selectedFile);
-          finalAudioUrl = uploadRes.url;
-        } catch (e: any) {
-          setError("Lỗi khi tải file audio: " + e.message);
-          setIsSaving(false);
-          return;
-        }
-      }
-
-      const postBody = { ...form, audioUrl: finalAudioUrl };
+      const postBody = { ...form };
+      console.log("[Vocabulary Save] Sending body:", JSON.stringify(postBody));
       const res = modalMode === "create" ? await api("/vocabularies", "POST", postBody) : await api(`/vocabularies/${editId}`, "PUT", postBody);
-      if (res?.error || res?.title) { setError(res.error || res.title); setIsSaving(false); return; }
+      console.log("[Vocabulary Save] Response:", JSON.stringify(res));
+      if (res?.error || res?.title || res?.errors) {
+        const errMsg = res.error || res.title || JSON.stringify(res.errors);
+        setError(errMsg);
+        setIsSaving(false);
+        return;
+      }
       setIsModalOpen(false); loadData();
     } catch (e) { setError("Có lỗi xảy ra"); }
     finally { setIsSaving(false); }
@@ -266,35 +278,50 @@ export default function AdminVocabulary() {
               </div>
               <div>
                 <label className="block text-[11px] font-bold tracking-wider text-jp-indigo uppercase mb-2">Tải tệp âm thanh (.mp3)</label>
-                <div className="flex gap-2">
-                  <div className="relative flex-1">
-                    <input
-                      type="file"
-                      accept="audio/*"
-                      onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
-                      className="hidden"
-                      id="audio-upload"
-                    />
-                    <label
-                      htmlFor="audio-upload"
-                      className="flex items-center gap-3 px-4 py-3 border-2 border-dashed border-neutral-200 rounded-xl text-sm text-neutral-500 cursor-pointer hover:border-jp-indigo/30 hover:bg-jp-indigo/5 transition-all w-full"
-                    >
-                      <Upload size={16} className="text-neutral-400" />
-                      {selectedFile ? (
-                        <span className="text-jp-indigo font-medium truncate">{selectedFile.name}</span>
-                      ) : (
+                <div className="relative">
+                  <input
+                    type="file"
+                    accept="audio/mp3, audio/mpeg, audio/wav, audio/m4a, audio/ogg"
+                    onChange={handleAudioFileChange}
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer disabled:cursor-not-allowed"
+                    id="audio-upload"
+                    disabled={isSaving || isUploadingAudio}
+                  />
+                  <div className={`w-full px-4 py-3 border-2 border-dashed rounded-xl flex items-center gap-3 transition-colors ${
+                    isUploadingAudio
+                      ? 'border-jp-indigo/50 bg-jp-indigo/5'
+                      : 'border-neutral-200 hover:border-jp-indigo/30 hover:bg-jp-indigo/5'
+                  }`}>
+                    {isUploadingAudio ? (
+                      <div className="flex items-center gap-2 text-jp-indigo font-medium text-sm">
+                        <Loader2 size={16} className="animate-spin" />
+                        Đang tải lên...
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-2 text-neutral-500 text-sm">
+                        <Upload size={16} />
                         <span>{form.audioUrl ? "Chọn tệp khác để thay thế" : "Nhấn để chọn tệp .mp3"}</span>
-                      )}
-                    </label>
+                      </div>
+                    )}
                   </div>
-                  {form.audioUrl && !selectedFile && (
-                    <div className="flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-600 rounded-xl border border-emerald-100 italic text-[10px]">
-                      <AudioLines size={12} /> Đã có file
-                    </div>
-                  )}
                 </div>
-                {form.audioUrl && (
-                  <p className="mt-2 text-[10px] text-neutral-400 truncate">Link hiện tại: {form.audioUrl}</p>
+                {form.audioUrl && !isUploadingAudio && (
+                  <div className="mt-3 flex items-center justify-between gap-3 bg-neutral-50 border border-neutral-100 p-3 rounded-xl">
+                    <div className="flex items-center gap-3 flex-1 overflow-hidden">
+                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-emerald-600 shadow-sm shrink-0">
+                        <Volume2 size={14} />
+                      </div>
+                      <audio src={resolveMediaUrl(form.audioUrl)} controls className="h-8 flex-1 max-w-[250px]" />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setForm(prev => ({ ...prev, audioUrl: "" }))}
+                      className="p-1.5 text-neutral-400 hover:bg-red-50 hover:text-red-500 rounded-lg transition-colors shrink-0"
+                      title="Xóa âm thanh"
+                    >
+                      <X size={16} />
+                    </button>
+                  </div>
                 )}
               </div>
             </div>
