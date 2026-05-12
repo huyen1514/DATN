@@ -153,6 +153,121 @@ namespace Controllers
             return Ok(new { Message = "Đã xoá payment" });
         }
 
+        // --- ADMIN API ---
+
+        [HttpGet("admin/all")]
+        public async Task<IActionResult> AdminGetAll(
+            [FromQuery] PaymentStatus? status,
+            [FromQuery] string? search,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 20)
+        {
+            var query = _context.Payments
+                .Include(p => p.User)
+                .Include(p => p.Exam)
+                .AsNoTracking()
+                .AsQueryable();
+
+            if (status.HasValue)
+            {
+                query = query.Where(x => x.PaymentStatus == status.Value);
+            }
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                search = search.ToLower();
+                query = query.Where(x => x.User.Email.ToLower().Contains(search) || 
+                                         x.User.UserName.ToLower().Contains(search) ||
+                                         x.TransactionId.ToLower().Contains(search));
+            }
+
+            var totalRecords = await query.CountAsync();
+
+            var payments = await query
+                .OrderByDescending(x => x.CreatedAt)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(x => new 
+                {
+                    paymentId = x.PaymentId,
+                    amount = x.Amount,
+                    paymentMethod = x.PaymentMethod.ToString(),
+                    paymentStatus = x.PaymentStatus.ToString(),
+                    transactionId = x.TransactionId,
+                    createdAt = x.CreatedAt,
+                    paymentDate = x.PaymentDate,
+                    user = new { x.User.UserId, x.User.UserName, x.User.Email },
+                    exam = new { x.Exam.ExamId, x.Exam.ExamName }
+                })
+                .ToListAsync();
+
+            return Ok(new { data = payments, total = totalRecords, page, pageSize });
+        }
+
+        [HttpGet("admin/statistics")]
+        public async Task<IActionResult> AdminGetStatistics()
+        {
+            var today = DateTime.UtcNow.Date;
+            var startOfMonth = new DateTime(today.Year, today.Month, 1);
+
+            var totalRevenue = await _context.Payments
+                .Where(x => x.PaymentStatus == PaymentStatus.Success)
+                .SumAsync(x => x.Amount);
+
+            var monthlyRevenue = await _context.Payments
+                .Where(x => x.PaymentStatus == PaymentStatus.Success && x.PaymentDate >= startOfMonth)
+                .SumAsync(x => x.Amount);
+
+            var totalTransactions = await _context.Payments.CountAsync();
+            var successTransactions = await _context.Payments.CountAsync(x => x.PaymentStatus == PaymentStatus.Success);
+            var pendingTransactions = await _context.Payments.CountAsync(x => x.PaymentStatus == PaymentStatus.Pending);
+            var failedTransactions = await _context.Payments.CountAsync(x => x.PaymentStatus == PaymentStatus.Failed);
+
+            return Ok(new 
+            {
+                totalRevenue,
+                monthlyRevenue,
+                totalTransactions,
+                successTransactions,
+                pendingTransactions,
+                failedTransactions
+            });
+        }
+
+        [HttpPut("admin/resolve-payment/{id}")]
+        public async Task<IActionResult> AdminResolvePayment(int id)
+        {
+            var payment = await _context.Payments.FirstOrDefaultAsync(x => x.PaymentId == id);
+            if (payment == null) return NotFound(new { message = "Không tìm thấy giao dịch" });
+
+            if (payment.PaymentStatus == PaymentStatus.Success)
+                return BadRequest(new { message = "Giao dịch này đã thành công rồi" });
+
+            // Force update to Success
+            payment.PaymentStatus = PaymentStatus.Success;
+            payment.PaymentDate = DateTime.UtcNow;
+            payment.GatewayResponse = "Resolved manually by Admin";
+
+            // Add to UserExams
+            var userExam = await _context.UserExams
+                .FirstOrDefaultAsync(x => x.UserId == payment.UserId && x.ExamId == payment.ExamId);
+            
+            if (userExam == null)
+            {
+                userExam = new UserExam
+                {
+                    UserId = payment.UserId,
+                    ExamId = payment.ExamId,
+                    PurchaseDate = DateTime.UtcNow,
+                    CreatedAt = DateTime.UtcNow
+                };
+                _context.UserExams.Add(userExam);
+            }
+
+            await _context.SaveChangesAsync();
+            return Ok(new { message = "Cập nhật thành công và đã cấp quyền đề thi cho User." });
+        }
+
         // 6. Webhook / IPN xử lý kết quả trả về từ Gateway
         [HttpPost("confirm-and-unlock")]
         public async Task<IActionResult> ConfirmAndUnlock([FromBody] ConfirmPaymentRequestDto request)
