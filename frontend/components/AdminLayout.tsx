@@ -21,6 +21,7 @@ import {
   ChevronLeft,
   Shield,
   Home,
+  Wallet,
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -105,6 +106,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       label: "Hệ thống",
       items: [
         { label: "Người dùng", icon: Users, href: "/dashboard/users" },
+      ],
+    },
+    {
+      label: "Tài chính",
+      items: [
+        { label: "Thanh toán", icon: Wallet, href: "/dashboard/payments" },
       ],
     },
   ];
