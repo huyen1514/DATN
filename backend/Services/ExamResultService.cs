@@ -28,15 +28,25 @@ namespace Services
             if (session.Status == SessionStatus.Submitted) 
                 return (false, "Bài thi này đã được nộp trước đó", null);
 
-            int vocabGrammarScore = 0;
-            int readingScore = 0;
-            int listeningScore = 0;
+            int vocabGrammarCorrect = 0;
+            int readingCorrect = 0;
+            int listeningCorrect = 0;
+            int vocabGrammarTotal = 0;
+            int readingTotal = 0;
+            int listeningTotal = 0;
             int correctCount = 0;
             
             var details = new List<QuestionResultDto>();
 
             foreach (var q in session.Exam.Questions)
             {
+                if (q.Section == ExamSectionType.Vocabulary || q.Section == ExamSectionType.Grammar) 
+                    vocabGrammarTotal++;
+                else if (q.Section == ExamSectionType.Reading) 
+                    readingTotal++;
+                else if (q.Section == ExamSectionType.Listening) 
+                    listeningTotal++;
+
                 var ans = session.Answers.FirstOrDefault(a => a.QuestionId == q.ExamQuestionId);
                 bool isCorrect = ans != null && ans.SelectedOption != null && ans.SelectedOption == q.CorrectAnswer;
 
@@ -44,11 +54,11 @@ namespace Services
                 {
                     correctCount++;
                     if (q.Section == ExamSectionType.Vocabulary || q.Section == ExamSectionType.Grammar) 
-                        vocabGrammarScore++;
+                        vocabGrammarCorrect++;
                     else if (q.Section == ExamSectionType.Reading) 
-                        readingScore++;
+                        readingCorrect++;
                     else if (q.Section == ExamSectionType.Listening) 
-                        listeningScore++;
+                        listeningCorrect++;
                 }
 
                 details.Add(new QuestionResultDto 
@@ -61,10 +71,34 @@ namespace Services
                 });
             }
 
-            int minScore = session.Exam.MinimumSectionScore ?? 19;
-            bool hasParalysis = vocabGrammarScore < minScore || readingScore < minScore || listeningScore < minScore;
+            int vocabGrammarScore = 0;
+            int readingScore = 0;
+            int listeningScore = listeningTotal > 0 ? (int)Math.Round((double)listeningCorrect / listeningTotal * 60) : 0;
+            int score = 0;
+            bool isPassed = false;
             
-            bool isPassed = !hasParalysis && correctCount >= (session.Exam.PassScaledTotal ?? 0);
+            bool isOfficialTwoPart = session.Exam.PassScaledVocabularyGrammarReading != null;
+            if (isOfficialTwoPart)
+            {
+                int vgrTotal = vocabGrammarTotal + readingTotal;
+                int vgrCorrect = vocabGrammarCorrect + readingCorrect;
+                int vocabularyGrammarReadingScore = vgrTotal > 0 ? (int)Math.Round((double)vgrCorrect / vgrTotal * 120) : 0;
+                vocabGrammarScore = vocabularyGrammarReadingScore;
+                score = vocabularyGrammarReadingScore + listeningScore;
+                
+                int passScaledVGR = session.Exam.PassScaledVocabularyGrammarReading ?? 0;
+                isPassed = score >= (session.Exam.PassScaledTotal ?? 0) && vocabularyGrammarReadingScore >= passScaledVGR && listeningScore >= (session.Exam.PassScaledListening ?? 0);
+            }
+            else
+            {
+                vocabGrammarScore = vocabGrammarTotal > 0 ? (int)Math.Round((double)vocabGrammarCorrect / vocabGrammarTotal * 60) : 0;
+                readingScore = readingTotal > 0 ? (int)Math.Round((double)readingCorrect / readingTotal * 60) : 0;
+                score = vocabGrammarScore + readingScore + listeningScore;
+
+                int passScaledVG = session.Exam.PassScaledVocabularyGrammar ?? 0;
+                int passScaledR = session.Exam.PassScaledReading ?? 0;
+                isPassed = score >= (session.Exam.PassScaledTotal ?? 0) && vocabGrammarScore >= passScaledVG && readingScore >= passScaledR && listeningScore >= (session.Exam.PassScaledListening ?? 0);
+            }
 
             string snapshotJson = JsonSerializer.Serialize(details);
             var durationUsed = (int)(DateTime.UtcNow - session.StartTime).TotalSeconds;
@@ -73,11 +107,11 @@ namespace Services
             {
                 ExamId = session.ExamId,
                 UserId = session.UserId,
-                Score = correctCount,
+                Score = score,
                 VocabularyGrammarScore = vocabGrammarScore,
                 ReadingScore = readingScore,
                 ListeningScore = listeningScore,
-                HasParalysisScore = hasParalysis,
+                HasParalysisScore = !isPassed,
                 AmountCorrectAnswers = correctCount,
                 TotalQuestion = session.Exam.Questions.Count,
                 IsPassed = isPassed,
