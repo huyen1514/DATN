@@ -39,6 +39,11 @@ export default function AdminKanji() {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 50;
+
+  useEffect(() => { setCurrentPage(1); }, [search, filterLesson]);
+
   useEffect(() => { loadData(); }, []);
 
   const loadData = async () => {
@@ -117,6 +122,14 @@ export default function AdminKanji() {
     return matchSearch && matchLesson;
   });
 
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const currentItems = filtered.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+
+  const handlePageChange = (p: number) => {
+    setCurrentPage(p);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <AdminLayout>
       <div className="max-w-6xl mx-auto">
@@ -155,6 +168,7 @@ export default function AdminKanji() {
               <p className="text-neutral-500">Chưa có kanji nào</p>
             </div>
           ) : (
+          <>
             <table className="w-full text-left">
               <thead>
                 <tr className="bg-neutral-50 border-b border-black/5">
@@ -169,7 +183,7 @@ export default function AdminKanji() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-black/5">
-                {filtered.map((k) => (
+                {currentItems.map((k) => (
                   <tr key={k.kanjiId} className="hover:bg-neutral-50/50 transition-colors">
                     <td className="px-6 py-4 text-sm font-medium text-neutral-400">{k.kanjiId}</td>
                     <td className="px-6 py-4 text-3xl font-serif text-jp-red">{k.character}</td>
@@ -188,6 +202,40 @@ export default function AdminKanji() {
                 ))}
               </tbody>
             </table>
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 p-4 border-t border-black/5 bg-white">
+                <button
+                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Trước
+                </button>
+                <div className="flex items-center gap-1 mx-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
+                        currentPage === page
+                          ? "bg-jp-indigo text-white"
+                          : "text-neutral-500 hover:bg-neutral-100"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Sau
+                </button>
+              </div>
+            )}
+          </>
           )}
         </div>
       </div>

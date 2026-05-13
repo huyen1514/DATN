@@ -130,7 +130,7 @@ export default function AdminExams() {
           </div>
           <div className="flex items-center gap-3">
             <Link href="/dashboard/exams/import" className="flex items-center gap-2 px-6 py-3 bg-white border-2 border-black/5 text-jp-indigo rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-neutral-50 transition-all shadow-sm">
-              <Upload size={16} /> Import JSON/PDF
+              <Upload size={16} /> Import JSON
             </Link>
             <button onClick={openCreate} className="flex items-center gap-2 px-6 py-3 bg-jp-indigo text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-jp-red transition-all shadow-xl shadow-jp-indigo/20">
               <Plus size={16} /> Thêm đề thi mới
@@ -293,7 +293,7 @@ export default function AdminExams() {
                   <div>
                     <label className="block text-[10px] font-black text-neutral-400 uppercase tracking-widest mb-2 px-1">Giá sở hữu (VNĐ)</label>
                     <div className="relative">
-                      <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-emerald-500" size={16} />
+                      {/* <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-emerald-500" size={16} /> */}
                       <input type="number" value={form.price} onChange={(e) => setForm({ ...form, price: parseInt(e.target.value) || 0 })}
                         className="w-full pl-12 pr-5 py-3.5 bg-neutral-50 border-2 border-transparent rounded-2xl outline-none focus:bg-white focus:border-jp-indigo transition-all font-bold text-emerald-600" />
                     </div>

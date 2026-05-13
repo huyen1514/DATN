@@ -117,13 +117,13 @@ function ExamResultInner() {
 
           if (data && data.exam) {
             const passInfo = {
-              score: Number(data.score) || 0,
+              score: Number(data.totalScore) || 0,
               passScaledTotal: data.exam.passScaledTotal ?? 90,
               passScaledVocabularyGrammarReading: data.exam.passScaledVocabularyGrammarReading ?? null,
               passScaledVocabularyGrammar: data.exam.passScaledVocabularyGrammar ?? 0,
               passScaledReading: data.exam.passScaledReading ?? 0,
               passScaledListening: data.exam.passScaledListening ?? 0,
-              vocabularyGrammarScore: Number(data.vocabularyGrammarScore) || 0,
+              vocabularyGrammarScore: Number(data.vocabGrammarScore) || 0,
               readingScore: Number(data.readingScore) || 0,
               listeningScore: Number(data.listeningScore) || 0,
             };

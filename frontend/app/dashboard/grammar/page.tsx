@@ -30,6 +30,11 @@ export default function AdminGrammar() {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 50;
+
+  useEffect(() => { setCurrentPage(1); }, [search, filterLesson]);
+
   useEffect(() => { loadData(); }, []);
 
   const loadData = async () => {
@@ -88,6 +93,14 @@ export default function AdminGrammar() {
     return matchSearch && matchLesson;
   });
 
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const currentItems = filtered.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+
+  const handlePageChange = (p: number) => {
+    setCurrentPage(p);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <AdminLayout>
       <div className="max-w-6xl mx-auto">
@@ -127,6 +140,7 @@ export default function AdminGrammar() {
           {isLoading ? <div className="p-8 text-center text-neutral-400">Đang tải...</div> : filtered.length === 0 ? (
             <div className="p-12 text-center"><PenTool size={48} className="mx-auto text-neutral-200 mb-4" /><p className="text-neutral-500">Chưa có ngữ pháp nào</p></div>
           ) : (
+          <>
             <table className="w-full">
               <thead>
                 <tr className="border-b border-black/5 bg-neutral-50/50">
@@ -139,7 +153,7 @@ export default function AdminGrammar() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-black/5">
-                {filtered.map(g => (
+                {currentItems.map(g => (
                   <tr key={g.grammarId} className="hover:bg-neutral-50/50 transition-colors">
                     <td className="px-6 py-4 text-sm text-neutral-500">{g.grammarId}</td>
                     <td className="px-6 py-4 text-sm font-bold text-jp-indigo">{g.grammarName}</td>
@@ -160,6 +174,40 @@ export default function AdminGrammar() {
                 ))}
               </tbody>
             </table>
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 p-4 border-t border-black/5 bg-white">
+                <button
+                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Trước
+                </button>
+                <div className="flex items-center gap-1 mx-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
+                        currentPage === page
+                          ? "bg-jp-indigo text-white"
+                          : "text-neutral-500 hover:bg-neutral-100"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Sau
+                </button>
+              </div>
+            )}
+          </>
           )}
         </div>
       </div>

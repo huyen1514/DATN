@@ -36,6 +36,11 @@ export default function AdminLessons() {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 50;
+
+  useEffect(() => { setCurrentPage(1); }, [search, filterLevel, filterSkillType]);
+
   useEffect(() => { loadData(); }, []);
 
   const loadData = async () => {
@@ -112,6 +117,14 @@ export default function AdminLessons() {
     return matchSearch && matchLevel && matchSkill;
   });
 
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const currentItems = filtered.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+
+  const handlePageChange = (p: number) => {
+    setCurrentPage(p);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <AdminLayout>
       <div className="max-w-6xl mx-auto">
@@ -159,6 +172,7 @@ export default function AdminLessons() {
               <p className="text-neutral-500">Chưa có bài học nào</p>
             </div>
           ) : (
+          <>
             <table className="w-full">
               <thead>
                 <tr className="border-b border-black/5 bg-neutral-50/50">
@@ -171,7 +185,7 @@ export default function AdminLessons() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-black/5">
-                {filtered.map((lesson) => (
+                {currentItems.map((lesson) => (
                   <tr key={lesson.lessonId} className="hover:bg-neutral-50/50 transition-colors">
                     <td className="px-6 py-4 text-sm text-neutral-500">{lesson.lessonId}</td>
                     <td className="px-6 py-4"><span className="text-sm font-bold text-jp-indigo">{lesson.lessonName}</span></td>
@@ -196,6 +210,40 @@ export default function AdminLessons() {
                 ))}
               </tbody>
             </table>
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 p-4 border-t border-black/5 bg-white">
+                <button
+                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Trước
+                </button>
+                <div className="flex items-center gap-1 mx-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
+                        currentPage === page
+                          ? "bg-jp-indigo text-white"
+                          : "text-neutral-500 hover:bg-neutral-100"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Sau
+                </button>
+              </div>
+            )}
+          </>
           )}
         </div>
       </div>

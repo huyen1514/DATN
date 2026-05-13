@@ -56,6 +56,11 @@ export default function AdminReading() {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState("");
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 50;
+
+  useEffect(() => { setCurrentPage(1); }, [search, filterLesson]);
+
   useEffect(() => { loadData(); }, []);
 
   const loadData = async () => {
@@ -174,6 +179,14 @@ export default function AdminReading() {
     return matchSearch && matchLesson;
   });
 
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const currentItems = filtered.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+
+  const handlePageChange = (p: number) => {
+    setCurrentPage(p);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <AdminLayout>
       <div className="max-w-6xl mx-auto pb-10">
@@ -220,8 +233,9 @@ export default function AdminReading() {
               <p className="text-neutral-500">Chưa có bài đọc nào</p>
             </div>
           ) : (
+          <>
             <div className="divide-y divide-black/5">
-              {filtered.map(item => (
+              {currentItems.map(item => (
                 <div key={item.passageId} className="p-6 hover:bg-neutral-50/50 transition-colors">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -255,6 +269,40 @@ export default function AdminReading() {
                 </div>
               ))}
             </div>
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 p-4 border-t border-black/5 bg-white">
+                <button
+                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Trước
+                </button>
+                <div className="flex items-center gap-1 mx-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
+                        currentPage === page
+                          ? "bg-jp-indigo text-white"
+                          : "text-neutral-500 hover:bg-neutral-100"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-1.5 text-sm font-medium text-jp-indigo bg-neutral-50 rounded-lg hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Sau
+                </button>
+              </div>
+            )}
+          </>
           )}
         </div>
       </div>
